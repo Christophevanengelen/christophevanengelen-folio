@@ -93,6 +93,43 @@
       .to('.hero-meta', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 1.55);
   }
 
+  /* ── Homepage portrait entrance — cinematic reveal, fires once on load */
+  const portraitImg = document.querySelector('.cve-portrait-img');
+  if (portraitImg) {
+    const portraitMark = document.querySelector('.cve-portrait-mark');
+    const portraitGlow = document.querySelector('.cve-portrait-glow');
+    const heroEyebrow  = document.querySelector('.hero .eyebrow');
+    const heroH1Home   = document.querySelector('.hero h1');
+    const heroLead     = document.querySelector('.hero .lead');
+    const heroCtas     = document.querySelector('.hero-ctas');
+    const metaBlock    = document.querySelector('.meta-block');
+
+    /* Initial: hidden states before the curtain rises */
+    gsap.set(portraitImg, { y: 80, opacity: 0 });
+    if (portraitGlow) gsap.set(portraitGlow, { scale: 0.50, opacity: 0 });
+    if (portraitMark) gsap.set(portraitMark, { x: 100, opacity: 0 });
+    [heroEyebrow, heroH1Home, heroLead, heroCtas, metaBlock].filter(Boolean).forEach(el => {
+      gsap.set(el, { y: 32, opacity: 0 });
+    });
+
+    const pTl = gsap.timeline({ delay: 0.14 });
+
+    /* 1 — Glow blooms up from the ground first — sets the mood */
+    if (portraitGlow) pTl.to(portraitGlow, { scale: 1, opacity: 1, duration: 2.4, ease: 'power2.out' }, 0);
+
+    /* 2 — Portrait rises: the main event */
+    pTl.to(portraitImg, { y: 0, opacity: 1, duration: 1.6, ease: 'power3.out' }, 0.18);
+
+    /* 3 — Text staircase left-to-right */
+    const textEls = [heroEyebrow, heroH1Home, heroLead, heroCtas, metaBlock].filter(Boolean);
+    textEls.forEach((el, i) => {
+      pTl.to(el, { y: 0, opacity: 1, duration: 0.88, ease: 'power2.out' }, 0.28 + i * 0.13);
+    });
+
+    /* 4 — 2026 watermark drifts in last — phantom typographic depth */
+    if (portraitMark) pTl.to(portraitMark, { x: 0, opacity: 0.13, duration: 2.2, ease: 'power2.out' }, 0.60);
+  }
+
   /* ── Hero parallax (bg image moves slower than content) */
   if (document.querySelector('.hero-cinema .hero-bg img')) {
     gsap.to('.hero-cinema .hero-bg img', {
