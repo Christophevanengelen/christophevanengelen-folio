@@ -744,11 +744,22 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
   .case-grid { grid-template-columns: 1fr; }
   footer .row { grid-template-columns: 1fr; }
   section { padding: 70px 0; }
-  h1 { font-size: 50px; }
+  h1 { font-size: clamp(36px, 7vw, 50px); }
 }
 @media (max-width: 560px) {
   .stats, .pains, .roadmap, .stakeholders, .diamond-legend { grid-template-columns: 1fr; }
   nav.top .meta .back-link { display: none; }
+  section { padding: 56px 0; }
+  h2 { font-size: clamp(28px, 7.5vw, 44px); }
+  .lead { font-size: 15px; }
+  footer .row { gap: 32px; }
+}
+@media (max-width: 420px) {
+  nav.top .row { padding: 14px 16px; }
+  nav.top .brand { font-size: 13px; gap: 10px; }
+  .lang-switch .lang-btn { padding: 6px 9px; font-size: 10px; }
+  section { padding: 48px 0; }
+  .container { padding: 0 16px; }
 }
 
 /* =================================================================
