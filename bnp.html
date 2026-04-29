@@ -66,18 +66,22 @@
   }
   .hcx__client {
     grid-column: 1 / 2; grid-row: 1 / 2;
-    display: flex; flex-direction: column; gap: 8px;
+    display: flex; flex-direction: column; gap: 14px;
     font-family: "Manrope", sans-serif;
     align-self: start;
   }
-  .hcx__client-tag {
-    font-size: 10px; font-weight: 700; letter-spacing: .35em; text-transform: uppercase;
-    color: #C76941; display: inline-flex; align-items: center; gap: 12px;
+  .hcx__logo {
+    height: 32px; width: auto;
+    display: block;
+    filter: brightness(0) invert(1) drop-shadow(0 1px 8px rgba(10,18,32,0.4));
+    opacity: 0.95;
   }
-  .hcx__client-tag::before { content: ""; width: 28px; height: 1px; background: #C76941; }
-  .hcx__client-name {
-    font-size: 14px; font-weight: 700; letter-spacing: .22em; color: #F2EBDB;
+  .hcx__client-period {
+    font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+    color: rgba(242,235,219,0.72);
+    display: inline-flex; align-items: center; gap: 12px;
   }
+  .hcx__client-period::before { content: ""; width: 24px; height: 1px; background: #C76941; }
   .hcx__period {
     grid-column: 2 / 3; grid-row: 1 / 2;
     align-self: start; justify-self: end; text-align: right;
@@ -844,12 +848,11 @@
   <div class="hcx__grain"></div>
   <div class="hcx__grid">
     <div class="hcx__client">
-      <span class="hcx__client-tag">Client</span>
-      <span class="hcx__client-name">BNP PARIBAS FORTIS</span>
+      <img class="hcx__logo" src="public/img/bnp-logo.svg" alt="BNP Paribas Fortis" />
+      <span class="hcx__client-period">2018 — 2019</span>
     </div>
     <div class="hcx__period">
-      <span>Brussels · 12 mois</span>
-      <strong>2018 — 2019</strong>
+      <span data-i18n="bnp.hero.location">Bruxelles</span>
     </div>
     <div class="hcx__head">
       <span class="hcx__eyebrow" data-i18n="bnp.hero.eyebrow">Étude de cas Service Design</span>
@@ -1553,7 +1556,7 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=sprintCD"></script>
+<script src="assets/i18n.js?v=heroclean"></script>
 <script src="assets/theme.js?v=cinema"></script>
 <script src="assets/motion.js?v=portal3"></script>
 <script src="assets/deck.js?v=deck1"></script>

@@ -123,10 +123,11 @@
     },
     'bnp.hero.metaRole': { fr: 'Service Designer · Freelance', nl: 'Service Designer · Freelance', en: 'Service Designer · Freelance' },
     'bnp.hero.metaWhere': {
-      fr: 'BNP Paribas Fortis · Bruxelles · Fév 2018 → Jan 2019',
-      nl: 'BNP Paribas Fortis · Brussel · Feb 2018 → Jan 2019',
-      en: 'BNP Paribas Fortis · Brussels · Feb 2018 → Jan 2019'
+      fr: '12 mois · cadrage stratégique upstream',
+      nl: '12 maanden · upstream strategisch kaderwerk',
+      en: '12 months · upstream strategic framing'
     },
+    'bnp.hero.location': { fr: 'Bruxelles', nl: 'Brussel', en: 'Brussels' },
     'bnp.hero.cap': { fr: 'Vision canal · Concept Report · Slide 02', nl: 'Kanaalvisie · Concept Report · Slide 02', en: 'Channel vision · Concept Report · Slide 02' },
 
     /* ============== CHAPTER DIVIDERS (NEW — cinematic 3-act structure) ============== */
