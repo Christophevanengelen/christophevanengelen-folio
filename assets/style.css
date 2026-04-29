@@ -84,6 +84,7 @@ section.hero {
   padding: 56px 0 0;          /* 56px = fixed nav height clearance */
   min-height: 100vh;
   position: relative;
+  overflow: hidden;            /* portrait stays inside — no bottom bleed */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -546,11 +547,10 @@ section.luminus-phase { padding: 90px 0; }
   position: relative;
   display: flex; align-items: flex-end; justify-content: flex-end;
   width: 100%;
-  align-self: stretch;           /* fills full grid row height */
-  min-height: calc(100vh - 56px);
-  margin-bottom: -60px;          /* slight bottom bleed below section */
+  align-self: stretch;           /* fills full grid row — no explicit height needed */
+  margin-bottom: 0;              /* flush with hero zone bottom — no overflow */
   margin-right: calc(-28px - clamp(0px, (100vw - 1240px) / 2, 80px));
-  margin-top: -56px;             /* bleed up to nav — fills full viewport */
+  margin-top: -56px;             /* bleeds up to viewport top (nav is above, fixed) */
 }
 /* Bottom fade — seamlessly blends portrait feet into section floor */
 .cve-portrait-wrap::after {
@@ -599,7 +599,7 @@ section.luminus-phase { padding: 90px 0; }
   display: block;
   width: auto;
   height: auto;
-  max-height: calc(100vh + 60px);
+  max-height: calc(100vh - 56px); /* hero content height — portrait never taller */
   max-width: 100%;
   object-fit: contain;
   filter:
