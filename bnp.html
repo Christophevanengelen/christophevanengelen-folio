@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=sprintI">
+<link rel="stylesheet" href="assets/style.css?v=sprintJ">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -1579,48 +1579,34 @@
   </div>
 </section>
 
-<!-- Q&A teaser -->
-<section id="qa" data-section-num="05">
-  <div class="container">
-    <span class="eyebrow" data-i18n="bnp.qa.eyebrow">Bridge to Luminus · over to you</span>
-    <h2 data-i18n-html="bnp.qa.h2">Et chez <span class="accent">vous ?</span></h2>
-    <p class="lead" style="margin-top: 22px; max-width: 65ch;" data-i18n="bnp.qa.lead">Quatre fils que j'aimerais tirer en live, sur les ponts entre BNP et vos enjeux.</p>
-    <div class="qa">
-      <div class="q" data-i18n-html="bnp.qa.q1"></div>
-      <div class="q" data-i18n-html="bnp.qa.q2"></div>
-      <div class="q" data-i18n-html="bnp.qa.q3"></div>
-      <div class="q" data-i18n-html="bnp.qa.q4"></div>
-    </div>
+<!-- FIN ROYALE — onboarding intelligent : closing line + two refined paths (CVE 2026-04-30 s2) -->
+<section class="fin-royale">
+  <div class="fin-royale__close">
+    <p class="fin-royale__line" data-i18n="bnp.fin.line">La donnée vaut ce qu'on en fait.</p>
   </div>
+  <div class="fin-royale__paths">
+    <a href="luminus.html" class="fin-royale__path">
+      <span class="fin-royale__path-eyebrow" data-i18n="bnp.fin.next.eyebrow">Et après ?</span>
+      <h3 class="fin-royale__path-title" data-i18n="bnp.fin.next.title">Comment j'aborderais Luminus.</h3>
+      <span class="fin-royale__path-arrow" aria-hidden="true">→</span>
+    </a>
+    <a href="mailto:vanengelenchristophe@gmail.com" class="fin-royale__path">
+      <span class="fin-royale__path-eyebrow" data-i18n="bnp.fin.contact.eyebrow">Une conversation ?</span>
+      <h3 class="fin-royale__path-title">vanengelenchristophe@gmail.com</h3>
+      <span class="fin-royale__path-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+  <div class="fin-royale__signature" data-i18n="bnp.fin.signature">Christophe van Engelen · Service Designer · Bruxelles</div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div>
-        <h3 data-i18n="footer.thanks">Thank you.</h3>
-        <p data-i18n="footer.lookForward">I'm looking forward to the conversation.</p>
-      </div>
-      <div>
-        <div class="label" data-i18n="footer.contact">Contact</div>
-        <p>Christophe van Engelen</p>
-        <p><a href="mailto:vanengelenchristophe@gmail.com">vanengelenchristophe@gmail.com</a></p>
-        <p><a href="tel:+32486718778">+32 486 71 87 78</a></p>
-      </div>
-      <div>
-        <div class="label" data-i18n="footer.for">For</div>
-        <p data-i18n="footer.forCompany">Luminus</p>
-        <p data-i18n="footer.forSubtitle">Service Designer interview</p>
-        <p data-i18n="footer.forDate">April / May 2026</p>
-      </div>
-    </div>
-    <div class="sig" data-i18n="footer.copy">
-      © Christophe van Engelen, 2026. Original artefacts © BNP Paribas Fortis 2017-2018, used here for portfolio illustration.
-    </div>
+<footer class="footer-mini">
+  <div class="footer-mini__inner">
+    <span class="footer-mini__for" data-i18n="footer.forContext">Pour Luminus · entretien Service Designer · avril–mai 2026</span>
+    <span class="footer-mini__copy" data-i18n="footer.copy">© Christophe van Engelen, 2026. Artefacts originaux © BNP Paribas Fortis 2017-2018.</span>
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=R6"></script>
+<script src="assets/i18n.js?v=R7"></script>
 <script src="assets/theme.js?v=cinema"></script>
 <script src="assets/motion.js?v=portal5"></script>
 <script src="assets/deck.js?v=deck1"></script>

@@ -147,6 +147,31 @@
       en: 'A data asymmetry · a design thinking process · a first payment.'
     },
 
+    /* ============== FIN ROYALE — onboarding intelligent (NEW 2026-04-30 s2) ============== */
+    'bnp.fin.line': {
+      fr: 'La donnée vaut ce qu\'on en fait.',
+      nl: 'Data is wat je ervan maakt.',
+      en: 'Data is worth what you make of it.'
+    },
+    'bnp.fin.next.eyebrow': { fr: 'Et après ?', nl: 'Wat daarna?', en: 'What\'s next?' },
+    'bnp.fin.next.title': {
+      fr: 'Comment j\'aborderais Luminus.',
+      nl: 'Hoe ik Luminus zou aanpakken.',
+      en: 'How I\'d approach Luminus.'
+    },
+    'bnp.fin.contact.eyebrow': { fr: 'Une conversation ?', nl: 'Een gesprek?', en: 'A conversation?' },
+    'bnp.fin.signature': {
+      fr: 'Christophe van Engelen · Service Designer · Bruxelles',
+      nl: 'Christophe van Engelen · Service Designer · Brussel',
+      en: 'Christophe van Engelen · Service Designer · Brussels'
+    },
+    'footer.forContext': {
+      fr: 'Pour Luminus · entretien Service Designer · avril–mai 2026',
+      nl: 'Voor Luminus · Service Designer-gesprek · april–mei 2026',
+      en: 'For Luminus · Service Designer interview · April–May 2026'
+    },
+    /* footer.copy already defined globally above (line 26) — single source of truth */
+
     /* ============== CHAPTER S — Situation (NEW 2026-04-30 s2 — STAR 4 acts) ============== */
     'bnp.chapS.label': { fr: 'Situation · L\'observation', nl: 'Situation · De observatie', en: 'Situation · Observation' },
     'bnp.chapS.title': { fr: 'L\'observation.', nl: 'De observatie.', en: 'Observation.' },

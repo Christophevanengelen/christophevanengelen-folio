@@ -926,6 +926,144 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
   100% { transform: translateY(40px); opacity: 0; }
 }
 
+/* ── Fin Royale — refined diptych close (peak-end + 2 paths) */
+.fin-royale {
+  position: relative;
+  background: var(--bg);
+  padding: clamp(80px, 14vh, 160px) clamp(28px, 6vw, 100px) clamp(60px, 8vh, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(60px, 8vh, 100px);
+  overflow: hidden;
+}
+.fin-royale::before {
+  content: ""; position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--amber), transparent);
+  opacity: 0.35;
+}
+.fin-royale__close {
+  max-width: 70ch;
+  margin: 0 auto;
+  text-align: center;
+}
+.fin-royale__line {
+  font-family: var(--display);
+  font-weight: 200;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--fg);
+  margin: 0;
+}
+.fin-royale__paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.fin-royale__path {
+  position: relative;
+  display: block;
+  padding: clamp(36px, 4vw, 56px) clamp(28px, 3vw, 44px);
+  padding-bottom: clamp(72px, 7vw, 96px);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  background: var(--bg);
+  transition: border-color 360ms cubic-bezier(.2,.8,.2,1),
+              transform    360ms cubic-bezier(.2,.8,.2,1),
+              background   360ms cubic-bezier(.2,.8,.2,1);
+  min-height: 200px;
+}
+.fin-royale__path:hover,
+.fin-royale__path:focus-visible {
+  border-color: var(--amber);
+  transform: translateY(-3px);
+  background: color-mix(in srgb, var(--bg) 96%, var(--amber));
+}
+.fin-royale__path-eyebrow {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+.fin-royale__path-title {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+  margin: 0;
+  word-break: break-word;
+}
+.fin-royale__path-arrow {
+  position: absolute;
+  bottom: clamp(28px, 3vw, 40px);
+  right: clamp(28px, 3vw, 44px);
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--amber);
+  transition: transform 360ms cubic-bezier(.2,.8,.2,1);
+}
+.fin-royale__path:hover .fin-royale__path-arrow,
+.fin-royale__path:focus-visible .fin-royale__path-arrow {
+  transform: translateX(8px);
+}
+.fin-royale__signature {
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+@media (max-width: 768px) {
+  .fin-royale__paths { grid-template-columns: 1fr; }
+  .fin-royale__path { min-height: 180px; }
+}
+@media (max-width: 480px) {
+  .fin-royale__path-title { font-size: 18px; }
+}
+
+/* ── Footer mini — 1 line, refined */
+.footer-mini {
+  background: var(--bg);
+  padding: clamp(20px, 3vh, 32px) clamp(28px, 5vw, 80px);
+  border-top: 1px solid var(--border);
+}
+.footer-mini__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.footer-mini__for,
+.footer-mini__copy {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+@media (max-width: 600px) {
+  .footer-mini__inner { flex-direction: column; align-items: flex-start; }
+}
+
 /* ── Star Bridge — jaquette → histoire (typographic synopsis moment) */
 .star-bridge {
   position: relative;
