@@ -1,0 +1,23 @@
+{
+  "id": "concept-report",
+  "name": {
+    "fr": "Concept Report BNP — Enterprise Intelligence",
+    "nl": "Concept Report BNP — Enterprise Intelligence",
+    "en": "Concept Report BNP — Enterprise Intelligence"
+  },
+  "year": 2017,
+  "yearLabel": {
+    "fr": "juin 2017",
+    "nl": "juni 2017",
+    "en": "June 2017"
+  },
+  "totalPages": 86,
+  "format": "p-{N:02}.jpg",
+  "pageWidth": 1600,
+  "pageHeight": 900,
+  "credit": {
+    "fr": "Artefact d'archive · livré à BNP Paribas Fortis",
+    "nl": "Archiefartefact · geleverd aan BNP Paribas Fortis",
+    "en": "Archive artefact · delivered to BNP Paribas Fortis"
+  }
+}

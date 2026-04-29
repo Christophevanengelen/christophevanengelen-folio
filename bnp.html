@@ -1,0 +1,1562 @@
+<!doctype html>
+<html lang="fr" class="theme-dark" data-title-key="bnp.title" data-desc-key="bnp.metaDesc">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enterprise Intelligence · BNP Paribas Fortis · Service Design Case Study</title>
+<meta name="description" content="A service design case study turning a bank's transactional data into a paying service for SME merchants." />
+<link rel="canonical" href="https://christophevanengelen.be/bnp.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Christophe van Engelen" />
+<meta property="og:url" content="https://christophevanengelen.be/bnp.html" />
+<meta property="og:title" content="Enterprise Intelligence · BNP Paribas Fortis · Case study" />
+<meta property="og:description" content="A bank sat on 30% of card flows in Belgium and couldn't sell to its own SMEs. I turned that asymmetry into a service Léonidas would actually pay for. +80% revenue. +€34k. Same six months." />
+<meta property="og:image" content="https://christophevanengelen.be/public/img/og-cover.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Christophe van Engelen · BNP Paribas Fortis case study. +80% revenue at Léonidas Wolluwé." />
+<meta property="og:locale" content="fr_BE" />
+<meta property="og:locale:alternate" content="nl_BE" />
+<meta property="og:locale:alternate" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Enterprise Intelligence · BNP Paribas Fortis case study" />
+<meta name="twitter:description" content="From discovery to a brand-name SME saying yes. +80% revenue at Léonidas Wolluwé from one strategic move." />
+<meta name="twitter:image" content="https://christophevanengelen.be/public/img/og-cover.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=sprintC">
+<script>
+  (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
+</script>
+<!-- Cinematic stack: Lenis (smooth scroll) + GSAP + ScrollTrigger -->
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     HERO 2026 — bento cinematic, inline styles guaranteed cache-bust
+     ═══════════════════════════════════════════════════════════════════ -->
+<style>
+  .hcx { position: relative; height: 100vh; min-height: 720px; width: 100%; overflow: hidden; background: #0A1220; }
+  .hcx__bg { position: absolute; inset: 0; z-index: 0; }
+  .hcx__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; filter: saturate(0.88) contrast(1.10) brightness(0.78); transform: scale(1.04); will-change: transform; }
+  .hcx__veil {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(10,18,32,0.42) 0%, rgba(10,18,32,0.10) 30%, rgba(10,18,32,0.92) 75%, rgba(10,18,32,1) 100%),
+      linear-gradient(90deg, rgba(10,18,32,0.95) 0%, rgba(10,18,32,0.30) 50%, rgba(10,18,32,0.05) 100%),
+      radial-gradient(ellipse at 22% 78%, rgba(10,18,32,0.65) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 78%, rgba(10,18,32,0.45) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 0%, rgba(199,105,65,0.14) 0%, transparent 55%);
+  }
+  .hcx__grain {
+    position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.92  0 0 0 0 0.85  0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.45; mix-blend-mode: overlay;
+  }
+  .hcx__grid {
+    position: absolute; inset: 0; z-index: 3;
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 0;
+    padding: 120px 56px 56px 56px;
+    color: #F2EBDB;
+  }
+  .hcx__client {
+    grid-column: 1 / 2; grid-row: 1 / 2;
+    display: flex; flex-direction: column; gap: 8px;
+    font-family: "Manrope", sans-serif;
+    align-self: start;
+  }
+  .hcx__client-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: .35em; text-transform: uppercase;
+    color: #C76941; display: inline-flex; align-items: center; gap: 12px;
+  }
+  .hcx__client-tag::before { content: ""; width: 28px; height: 1px; background: #C76941; }
+  .hcx__client-name {
+    font-size: 14px; font-weight: 700; letter-spacing: .22em; color: #F2EBDB;
+  }
+  .hcx__period {
+    grid-column: 2 / 3; grid-row: 1 / 2;
+    align-self: start; justify-self: end; text-align: right;
+    font-family: "Manrope", sans-serif;
+    font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+    color: rgba(242,235,219,0.62);
+  }
+  .hcx__period strong { display: block; color: #F2EBDB; font-weight: 700; font-size: 14px; letter-spacing: .12em; margin-top: 4px; }
+
+  .hcx__head {
+    grid-column: 1 / 2; grid-row: 2 / 4;
+    align-self: end;
+    display: flex; flex-direction: column; gap: 28px;
+    max-width: 900px;
+  }
+  .hcx__eyebrow {
+    font-family: "Manrope", sans-serif;
+    font-size: 11px; font-weight: 600; letter-spacing: .35em; text-transform: uppercase;
+    color: #C76941;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .hcx__eyebrow::before { content: ""; width: 24px; height: 1px; background: #C76941; }
+  .hcx__h1 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 200; font-size: clamp(72px, 11vw, 168px); line-height: 0.92; letter-spacing: -0.05em;
+    margin: 0; color: #F2EBDB;
+    display: flex; flex-direction: column;
+    text-shadow: 0 2px 32px rgba(10, 18, 32, 0.55), 0 1px 4px rgba(10, 18, 32, 0.35);
+  }
+  .hcx__h1 .hcx__hl1 { display: block; }
+  .hcx__h1 .hcx__hl2 {
+    display: block; font-style: normal; font-weight: 800;
+    color: #C76941;
+    font-family: "Manrope", -apple-system, sans-serif;
+    letter-spacing: -0.055em;
+  }
+  .hcx__lead {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(17px, 1.45vw, 20px); line-height: 1.55;
+    color: rgba(242,235,219,0.92); max-width: 58ch; margin: 0; font-weight: 300;
+    text-shadow: 0 1px 16px rgba(10, 18, 32, 0.7), 0 1px 3px rgba(10, 18, 32, 0.4);
+  }
+  .hcx__role {
+    font-family: "Manrope", sans-serif;
+    border-left: 2px solid #C76941; padding-left: 18px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .hcx__role-label {
+    font-size: 10px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase;
+    color: rgba(242,235,219,0.55);
+  }
+  .hcx__role-where { font-size: 14px; font-weight: 600; color: #F2EBDB; }
+
+  /* Right column: stat bento — teasers of the result */
+  .hcx__bento {
+    grid-column: 2 / 3; grid-row: 2 / 4;
+    align-self: end; justify-self: end;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: rgba(242,235,219,0.16);
+    border: 1px solid rgba(242,235,219,0.16);
+    border-radius: 6px;
+    overflow: hidden;
+    width: min(440px, 100%);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+  }
+  .hcx__bento-cell {
+    background: rgba(10,18,32,0.42);
+    padding: 24px 24px 22px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .hcx__bento-cell:hover { background: rgba(10,18,32,0.55); }
+  .hcx__bento-num {
+    font-family: "Manrope", sans-serif;
+    font-weight: 300; font-size: 44px; line-height: 1; letter-spacing: -0.05em;
+    color: #F2EBDB;
+  }
+  .hcx__bento-cell:nth-child(1) .hcx__bento-num,
+  .hcx__bento-cell:nth-child(2) .hcx__bento-num { color: #C76941; font-weight: 700; }
+  .hcx__bento-lab {
+    font-family: "Manrope", sans-serif;
+    font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+    color: rgba(242,235,219,0.62);
+  }
+  .hcx__bento-cell--full { grid-column: 1 / -1; }
+
+  .hcx__scroll {
+    position: absolute; bottom: 28px; left: 56px; z-index: 4;
+    display: flex; align-items: center; gap: 14px;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase;
+    color: rgba(242,235,219,0.7);
+  }
+  .hcx__scroll-line {
+    position: relative; width: 60px; height: 1px;
+    background: rgba(242,235,219,0.25); overflow: hidden;
+  }
+  .hcx__scroll-line::after {
+    content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 18px;
+    background: #C76941;
+    animation: hcx-scroll-pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes hcx-scroll-pulse {
+    0%   { transform: translateX(-18px); }
+    50%  { transform: translateX(60px); }
+    100% { transform: translateX(60px); }
+  }
+
+  @media (max-width: 1100px) {
+    .hcx__grid { grid-template-columns: 1fr; padding: 100px 32px 56px 32px; }
+    .hcx__period { grid-column: 1 / 2; grid-row: 1 / 2; justify-self: start; text-align: left; margin-top: 12px; }
+    .hcx__client { padding-bottom: 12px; }
+    .hcx__head { grid-column: 1; grid-row: 2; }
+    .hcx__bento { grid-column: 1; grid-row: 3; justify-self: stretch; width: 100%; margin-top: 36px; }
+  }
+  @media (max-width: 600px) {
+    .hcx__bento { grid-template-columns: 1fr; }
+    .hcx__h1 { font-size: clamp(56px, 18vw, 96px); }
+  }
+
+  /* ──────────────────────────────────────────────────────────
+     Scroll narrative — horizontal pin sections (Apple-style)
+     ────────────────────────────────────────────────────────── */
+  section[data-h-pin] {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+    perspective: 1800px;            /* 3D depth for the carousel-from-back effect */
+    perspective-origin: center center;
+  }
+  .h-panel-inner {
+    transform-style: preserve-3d;
+    will-change: transform, opacity, filter;
+  }
+  section[data-h-pin].h-active { will-change: transform; }
+  .h-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    height: 100vh;
+    will-change: transform;
+  }
+  .h-panel {
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 6vh 6vw;
+    position: relative;
+    overflow: hidden;
+  }
+  .h-panel-inner {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: clamp(40px, 6vw, 100px);
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .h-panel--01 { background: linear-gradient(180deg, transparent, rgba(10,18,32,0.04)); }
+  .h-panel--02 { background: linear-gradient(180deg, transparent, rgba(199,105,65,0.025)); }
+  .h-panel--03 { background: linear-gradient(180deg, transparent, rgba(199,105,65,0.06)); }
+  /* Steps section: 6 panels with subtle hue progression */
+  .h-panel-step.h-panel--01 { background: linear-gradient(180deg, transparent, rgba(10,18,32,0.03)); }
+  .h-panel-step.h-panel--02 { background: linear-gradient(180deg, transparent, rgba(10,18,32,0.04)); }
+  .h-panel-step.h-panel--03 { background: linear-gradient(180deg, transparent, rgba(199,105,65,0.020)); }
+  .h-panel-step.h-panel--04 { background: linear-gradient(180deg, transparent, rgba(199,105,65,0.030)); }
+  .h-panel-step.h-panel--05 { background: linear-gradient(180deg, transparent, rgba(199,105,65,0.045)); }
+  .h-panel-step.h-panel--06 { background: linear-gradient(180deg, transparent, rgba(199,105,65,0.060)); }
+
+  /* Pull-quote hero — respiration entre actes */
+  .pq-hero {
+    padding: clamp(80px, 14vh, 160px) 0;
+    background: linear-gradient(180deg, transparent, rgba(10, 18, 32, 0.025), transparent);
+    text-align: center;
+  }
+  .pq-hero--accent {
+    background: linear-gradient(180deg, transparent, rgba(199, 105, 65, 0.05), transparent);
+  }
+  .pq-content {
+    max-width: 70ch;
+    margin: 0 auto;
+  }
+  .pq-eyebrow {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.20em; text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 32px;
+    padding: 6px 16px;
+    border: 1px solid rgba(199, 105, 65, 0.30);
+    border-radius: 999px;
+  }
+  .pq-quote {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(28px, 3.5vw, 48px);
+    line-height: 1.18;
+    letter-spacing: -0.018em;
+    color: var(--fg);
+    margin: 0;
+    quotes: "\201C" "\201D";
+  }
+  .pq-quote::before { content: open-quote; color: var(--amber); margin-right: 4px; }
+  .pq-quote::after { content: close-quote; color: var(--amber); margin-left: 4px; }
+  .pq-quote .accent { color: var(--amber); font-weight: 500; }
+  @media (max-width: 720px) {
+    .pq-hero { padding: 60px 0; }
+    .pq-quote { font-size: clamp(22px, 6vw, 32px); }
+  }
+
+  /* 6 barrières — voix Jean-Paul, typographic watermark visual */
+  .h-panel-barrier { background: linear-gradient(180deg, transparent, rgba(10,18,32,0.025)); }
+  .h-panel-barrier .h-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(34px, 4.5vw, 64px);
+    line-height: 1.12;
+    letter-spacing: -0.020em;
+  }
+  .h-panel-barrier .h-deliv {
+    border-top: 1px solid rgba(199, 105, 65, 0.30);
+    color: var(--amber);
+  }
+  .barrier-watermark {
+    position: relative;
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: flex-start; justify-content: center;
+    gap: 8px;
+    padding: clamp(20px, 3vw, 40px);
+    user-select: none;
+    overflow: hidden;
+  }
+  .barrier-num {
+    font-family: var(--display); font-weight: 200;
+    font-size: clamp(180px, 24vw, 380px);
+    line-height: 0.85; letter-spacing: -0.06em;
+    color: var(--amber);
+    opacity: 0.16;
+  }
+  .barrier-theme {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(40px, 5.4vw, 88px);
+    line-height: 1; letter-spacing: -0.025em;
+    color: var(--fg);
+    text-transform: uppercase;
+    margin-top: -0.45em;
+    position: relative;
+  }
+
+  /* Deliverable line in step panels */
+  .h-deliv {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(10, 18, 32, 0.10);
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--amber);
+    line-height: 1.5;
+  }
+
+  /* Figure caption under panel image */
+  .h-fig-cap {
+    margin-top: 14px;
+    font-family: var(--sans);
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--fg-muted);
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* ──────────────────────────────────────────────────────────
+     Custom illustration : 47 → 3 morph (STAR Panel 02 visual)
+     ────────────────────────────────────────────────────────── */
+  .act-canvas {
+    position: relative;
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: clamp(24px, 4vw, 48px);
+    border-radius: 8px;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(199,105,65,0.06), transparent 60%),
+      linear-gradient(180deg, rgba(10,18,32,0.02), rgba(199,105,65,0.04));
+    border: 1px solid rgba(10,18,32,0.06);
+    overflow: hidden;
+  }
+  .act-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    margin-bottom: clamp(20px, 3vh, 32px);
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--amber);
+  }
+  .act-eyebrow-line {
+    display: inline-block;
+    width: 28px; height: 1px;
+    background: var(--amber);
+  }
+  .act-headline {
+    display: flex; align-items: baseline; gap: clamp(20px, 3vw, 36px);
+    font-family: var(--display);
+    line-height: 0.9;
+    font-size: clamp(110px, 14vw, 220px);
+    letter-spacing: -0.05em;
+  }
+  .act-from {
+    color: rgba(10, 18, 32, 0.16);
+    font-weight: 200;
+    position: relative;
+  }
+  .act-from::after {
+    content: ""; position: absolute;
+    left: -6%; right: -6%; top: 52%;
+    height: 4px;
+    background: var(--amber);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 850ms cubic-bezier(.65,0,.35,1) 350ms;
+  }
+  .h-panel.h-in-view .act-from::after { transform: scaleX(1); }
+  .act-arrow {
+    display: inline-flex; align-items: center;
+    width: clamp(48px, 6vw, 80px); height: 16px;
+    color: var(--amber);
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 600ms ease 1100ms, transform 700ms cubic-bezier(.2,.8,.2,1) 1100ms;
+  }
+  .act-arrow svg { width: 100%; height: 100%; display: block; }
+  .h-panel.h-in-view .act-arrow { opacity: 1; transform: translateX(0); }
+  .act-to {
+    color: var(--amber);
+    font-weight: 800;
+    transform: scale(0.4);
+    opacity: 0;
+    transform-origin: left center;
+    transition: transform 700ms cubic-bezier(.2,.8,.2,1) 1300ms, opacity 500ms ease 1300ms;
+  }
+  .h-panel.h-in-view .act-to { transform: scale(1); opacity: 1; }
+  .act-caption {
+    margin-top: clamp(24px, 3.5vh, 40px);
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(16px, 1.4vw, 19px);
+    line-height: 1.4; color: var(--fg);
+    text-align: center;
+    max-width: 32ch;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 600ms ease 1700ms, transform 600ms cubic-bezier(.2,.8,.2,1) 1700ms;
+  }
+  .act-caption strong.accent { color: var(--amber); font-weight: 700; }
+  .h-panel.h-in-view .act-caption { opacity: 1; transform: translateY(0); }
+  .act-timeline {
+    display: flex; gap: clamp(8px, 1.2vw, 16px);
+    margin-top: clamp(28px, 4vh, 48px);
+    flex-wrap: wrap; justify-content: center;
+  }
+  .act-tick {
+    font-family: var(--sans);
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(10, 18, 32, 0.42);
+    padding: 6px 14px;
+    border: 1px solid rgba(10, 18, 32, 0.10);
+    border-radius: 999px;
+    transition: background 320ms ease, color 320ms ease, border-color 320ms ease;
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  .act-tick:nth-of-type(1) { transition: opacity 600ms ease 1900ms, transform 600ms cubic-bezier(.2,.8,.2,1) 1900ms, background 320ms ease, color 320ms ease, border-color 320ms ease; }
+  .act-tick:nth-of-type(2) { transition: opacity 600ms ease 2050ms, transform 600ms cubic-bezier(.2,.8,.2,1) 2050ms, background 320ms ease, color 320ms ease, border-color 320ms ease; }
+  .act-tick:nth-of-type(3) { transition: opacity 600ms ease 2200ms, transform 600ms cubic-bezier(.2,.8,.2,1) 2200ms, background 320ms ease, color 320ms ease, border-color 320ms ease; }
+  .h-panel.h-in-view .act-tick { opacity: 1; transform: translateY(0); }
+  .act-tick.is-current {
+    background: var(--amber);
+    color: #F8F4EC;
+    border-color: var(--amber);
+  }
+  .act-canvas::after {
+    /* subtle decorative noise layer for premium feel */
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 70% 80%, rgba(199,105,65,0.06), transparent 50%);
+    pointer-events: none;
+  }
+
+  .h-eyebrow {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 22px;
+  }
+  .h-title {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(40px, 5.4vw, 80px);
+    line-height: 1.04; letter-spacing: -0.025em;
+    margin: 0 0 26px; color: var(--fg);
+  }
+  .h-title .accent { color: var(--amber); font-weight: 800; }
+  .h-lead {
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.55; letter-spacing: -0.005em;
+    color: var(--fg); margin: 0 0 32px; max-width: 60ch;
+  }
+  .h-points {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .h-points li {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(14px, 1.05vw, 16px);
+    line-height: 1.5; color: var(--fg-muted);
+    padding-left: 24px; position: relative;
+  }
+  .h-points li::before {
+    content: ""; position: absolute; left: 0; top: 9px;
+    width: 14px; height: 1px; background: var(--amber);
+  }
+  .h-points li strong { color: var(--fg); font-weight: 600; }
+  .h-points li strong.accent { color: var(--amber); font-weight: 700; }
+
+  .h-panel-visual {
+    position: relative;
+    height: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .h-fig-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 10;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.18), 0 0 0 1px rgba(199, 105, 65, 0.08);
+  }
+  .h-fig {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+
+  .h-progress {
+    position: absolute;
+    top: clamp(20px, 3vh, 32px);
+    right: clamp(20px, 3vw, 36px);
+    display: flex; gap: 10px;
+    z-index: 5;
+  }
+  .h-dot {
+    width: 28px; height: 2px;
+    background: rgba(10, 18, 32, 0.18);
+    transition: background 320ms ease, transform 320ms ease, width 320ms ease;
+  }
+  .h-dot.is-active { background: var(--amber); width: 44px; }
+  .h-dot.is-past { background: rgba(199, 105, 65, 0.55); }
+
+  .h-section-label {
+    position: absolute;
+    bottom: clamp(20px, 3vh, 32px);
+    left: 50%; transform: translateX(-50%);
+    font-family: var(--sans); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--fg-muted);
+    z-index: 5;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .h-section-label::before,
+  .h-section-label::after {
+    content: ""; width: 28px; height: 1px;
+    background: rgba(10, 18, 32, 0.18);
+  }
+
+  /* Mobile / reduced-motion fallback : vertical stack */
+  @media (max-width: 900px) {
+    section[data-h-pin], section[data-h-pin].h-stack { overflow: visible; }
+    .h-stack .h-track,
+    section[data-h-pin] .h-track {
+      display: block; width: 100%; height: auto;
+      transform: none !important;
+    }
+    .h-stack .h-panel,
+    section[data-h-pin] .h-panel {
+      width: 100%; flex: none;
+      min-height: auto; height: auto;
+      padding: 60px 24px;
+    }
+    .h-stack .h-panel-inner,
+    section[data-h-pin] .h-panel-inner {
+      grid-template-columns: 1fr;
+    }
+    .h-stack .h-fig-wrap,
+    section[data-h-pin] .h-fig-wrap {
+      max-width: 100%; aspect-ratio: 16 / 10;
+    }
+    .h-progress { display: none; }
+    .h-section-label { position: static; transform: none; margin: 24px auto 0; display: flex; justify-content: center; }
+  }
+
+  /* ──────────────────────────────────────────────────────────
+     Deck flipper — click any [data-deck] figure to browse source deck
+     ────────────────────────────────────────────────────────── */
+  .has-deck-cta { position: relative; cursor: zoom-in; }
+  .has-deck-cta::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, transparent 60%, rgba(10,18,32,0.55) 100%);
+    opacity: 0; transition: opacity 220ms ease;
+    z-index: 1;
+  }
+  .has-deck-cta:hover::before { opacity: 1; }
+  .deck-cta {
+    position: absolute; bottom: 14px; left: 14px; z-index: 2;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 12px; border-radius: 6px;
+    background: rgba(10,18,32,0.84); color: #F8F4EC;
+    font-family: var(--sans); font-size: 11px; font-weight: 600;
+    letter-spacing: .12em; text-transform: uppercase;
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(199, 105, 65, 0.28);
+    opacity: 0; transform: translateY(6px);
+    transition: opacity 240ms ease, transform 240ms ease;
+    pointer-events: none;
+  }
+  .has-deck-cta:hover .deck-cta,
+  .has-deck-cta:focus-within .deck-cta {
+    opacity: 1; transform: translateY(0);
+  }
+  .has-deck-cta:hover .cap { color: var(--amber); }
+
+  /* Modal scaffold */
+  .deck-flipper {
+    position: fixed; inset: 0; z-index: 9999;
+    display: none; align-items: stretch; justify-content: stretch;
+  }
+  .deck-flipper.is-open { display: flex; }
+  .deck-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(6, 10, 18, 0.92);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+    animation: deckFade 220ms ease both;
+  }
+  .deck-shell {
+    position: relative; z-index: 1;
+    width: 100%; height: 100%;
+    display: grid; grid-template-rows: auto 1fr auto;
+    color: #F8F4EC;
+    animation: deckRise 320ms cubic-bezier(.2,.8,.2,1) both;
+  }
+  @keyframes deckFade { from { opacity: 0 } to { opacity: 1 } }
+  @keyframes deckRise { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: translateY(0) } }
+  .deck-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 28px; gap: 18px;
+    border-bottom: 1px solid rgba(248, 244, 236, 0.08);
+  }
+  .deck-head-l { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .deck-name {
+    font-family: var(--display); font-weight: 600; font-size: 14px;
+    letter-spacing: -.005em; line-height: 1.2;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .deck-credit {
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(248, 244, 236, 0.55);
+  }
+  .deck-head-r { display: flex; align-items: center; gap: 16px; }
+  .deck-counter {
+    font-family: var(--sans); font-variant-numeric: tabular-nums;
+    font-size: 12px; font-weight: 700; letter-spacing: .12em;
+    color: var(--amber);
+  }
+  .deck-close {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: transparent; color: #F8F4EC;
+    border: 1px solid rgba(248, 244, 236, 0.18);
+    cursor: pointer; transition: background 160ms ease, border-color 160ms ease;
+  }
+  .deck-close:hover { background: rgba(248, 244, 236, 0.08); border-color: rgba(199, 105, 65, 0.5); }
+
+  .deck-stage {
+    position: relative; display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center; gap: 12px;
+    padding: 24px 28px; min-height: 0;
+  }
+  .deck-stage-img-wrap {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    height: 100%; min-height: 0;
+  }
+  .deck-stage-img {
+    max-width: 100%; max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(248, 244, 236, 0.06);
+    opacity: 0; transition: opacity 280ms ease;
+  }
+  .deck-stage-img.is-loaded { opacity: 1; }
+  .deck-loading {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    display: none;
+  }
+  .deck-loading.is-on { display: block; }
+  .deck-loading span {
+    display: block; width: 28px; height: 28px; border-radius: 50%;
+    border: 2px solid rgba(248, 244, 236, 0.16);
+    border-top-color: var(--amber);
+    animation: deckSpin 800ms linear infinite;
+  }
+  @keyframes deckSpin { to { transform: rotate(360deg) } }
+
+  .deck-nav {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(248, 244, 236, 0.06);
+    color: #F8F4EC;
+    border: 1px solid rgba(248, 244, 236, 0.12);
+    cursor: pointer;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+  }
+  .deck-nav:hover {
+    background: rgba(199, 105, 65, 0.18);
+    border-color: var(--amber);
+    transform: scale(1.04);
+  }
+  .deck-nav:disabled { opacity: 0.28; cursor: not-allowed; transform: none; }
+  .deck-nav:disabled:hover { background: rgba(248, 244, 236, 0.06); border-color: rgba(248, 244, 236, 0.12); }
+
+  .deck-foot {
+    padding: 14px 28px 22px;
+    display: flex; flex-direction: column; gap: 10px;
+    border-top: 1px solid rgba(248, 244, 236, 0.08);
+  }
+  .deck-track {
+    height: 2px; background: rgba(248, 244, 236, 0.10);
+    border-radius: 2px; overflow: hidden;
+  }
+  .deck-track-fill {
+    height: 100%; background: var(--amber);
+    width: 0%; transition: width 320ms cubic-bezier(.2,.8,.2,1);
+  }
+  .deck-hint {
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(248, 244, 236, 0.42); text-align: center;
+  }
+  .deck-hint::before {
+    content: "← → " attr(data-hint-nav) " · Esc " attr(data-hint-close);
+  }
+
+  @media (max-width: 720px) {
+    .deck-head { padding: 12px 16px; }
+    .deck-stage { padding: 14px 12px; gap: 6px; }
+    .deck-nav { width: 40px; height: 40px; }
+    .deck-foot { padding: 10px 14px 16px; }
+    .deck-name { font-size: 12px; }
+  }
+
+  /* At a glance — sizing strip below lead */
+  .glance-sizing {
+    margin-top: 16px; max-width: 70ch;
+    font-family: var(--sans); font-size: 12px; font-weight: 600;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--fg-muted);
+    line-height: 1.8;
+  }
+  .glance-sizing .dot { color: var(--amber); margin: 0 6px; font-weight: 800; }
+
+  /* Role section — resolved tension narrative */
+  .role-tension {
+    margin-top: 70px; padding-top: 40px; border-top: 1px solid var(--border);
+    max-width: 78ch;
+  }
+  .role-tension-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 700;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--amber);
+    margin-bottom: 16px;
+  }
+  .role-tension-h {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(24px, 2.6vw, 32px); line-height: 1.18;
+    letter-spacing: -.012em; margin: 0 0 22px;
+  }
+  .role-tension-p {
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(17px, 1.4vw, 19px); line-height: 1.6;
+    color: var(--fg); letter-spacing: -.005em; margin: 0;
+  }
+  .role-tension-p em { font-style: normal; color: var(--amber); font-weight: 500; }
+
+  /* Lessons learned — quiet, confessional encart between Result and Bridge */
+  #lessons { padding-top: clamp(80px, 12vw, 140px); padding-bottom: clamp(80px, 12vw, 140px); }
+  .lessons-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    margin-top: 48px; border-top: 1px solid var(--border); padding-top: 40px;
+  }
+  .lesson-card { position: relative; padding: 0 8px 4px 0; }
+  .lesson-card + .lesson-card { padding-left: 28px; border-left: 1px solid var(--border); }
+  .lesson-num {
+    font-family: var(--display); font-weight: 200; font-size: 56px;
+    line-height: 1; color: var(--amber); letter-spacing: -.04em;
+    margin-bottom: 20px; opacity: .82;
+  }
+  .lesson-claim {
+    font-family: var(--display); font-weight: 600; font-size: 22px;
+    letter-spacing: -.012em; line-height: 1.25; color: var(--fg);
+    margin: 0 0 14px;
+  }
+  .lesson-body {
+    font-family: var(--display); font-weight: 300; font-size: 16px;
+    line-height: 1.65; color: var(--fg-muted); letter-spacing: -.005em;
+    margin: 0;
+  }
+  @media (max-width: 900px) {
+    .lessons-grid { grid-template-columns: 1fr; gap: 32px; padding-top: 28px; }
+    .lesson-card + .lesson-card { padding-left: 0; border-left: 0; padding-top: 32px; border-top: 1px solid var(--border); }
+    .lesson-num { font-size: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="row">
+    <a class="brand" href="index.html">
+      <span class="dot"></span>
+      <span data-i18n="nav.brand">Christophe van Engelen</span>
+    </a>
+    <div class="meta">
+      <a class="back-link" href="index.html" data-i18n="nav.back">← Back to portfolio</a>
+      <span class="pill" data-i18n="bnp.nav.pill1">Service Design · Case Study</span>
+      <span class="pill" data-i18n="bnp.nav.pill2">For Luminus · 2026</span>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button data-lang-btn="fr" class="lang-btn">FR</button>
+        <button data-lang-btn="nl" class="lang-btn">NL</button>
+        <button data-lang-btn="en" class="lang-btn">EN</button>
+      </div>
+      <button class="toggle" id="themeToggle" aria-label="Toggle dark / light mode" title="Toggle dark / light mode">
+        <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO 2026 — Bento cinematic (Apple/Notion/Linear pattern) -->
+<section class="hcx">
+  <div class="hcx__bg">
+    <img src="public/img/hero-bnp-bg.jpg?v=bnp-hq-bxl" alt="BNP Paribas Fortis HQ — Montagne du Parc, Brussels" />
+  </div>
+  <div class="hcx__veil"></div>
+  <div class="hcx__grain"></div>
+  <div class="hcx__grid">
+    <div class="hcx__client">
+      <span class="hcx__client-tag">Client</span>
+      <span class="hcx__client-name">BNP PARIBAS FORTIS</span>
+    </div>
+    <div class="hcx__period">
+      <span>Brussels · 12 mois</span>
+      <strong>2018 — 2019</strong>
+    </div>
+    <div class="hcx__head">
+      <span class="hcx__eyebrow" data-i18n="bnp.hero.eyebrow">Étude de cas Service Design</span>
+      <h1 class="hcx__h1">
+        <span class="hcx__hl1" data-i18n="bnp.hero.h1.start">Enterprise</span>
+        <span class="hcx__hl2" data-i18n="bnp.hero.h1.alt">Intelligence.</span>
+      </h1>
+      <p class="hcx__lead" data-i18n="bnp.hero.lead">Une banque assise sur 30% des flux carte du pays voulait vendre quelque chose à ses propres clients PME. J'ai transformé cette asymétrie en service que les commerçants acceptent de payer.</p>
+      <div class="hcx__role">
+        <span class="hcx__role-label" data-i18n="bnp.hero.metaRole">Service Designer · Freelance</span>
+        <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">BNP Paribas Fortis · Bruxelles · Fév 2018 → Jan 2019</span>
+      </div>
+    </div>
+    <div class="hcx__bento">
+      <div class="hcx__bento-cell">
+        <span class="hcx__bento-num">+80%</span>
+        <span class="hcx__bento-lab" data-i18n="bnp.glance.s3.label">Revenu Léonidas</span>
+      </div>
+      <div class="hcx__bento-cell">
+        <span class="hcx__bento-num">+€34k</span>
+        <span class="hcx__bento-lab">6 mois · même data</span>
+      </div>
+      <div class="hcx__bento-cell">
+        <span class="hcx__bento-num">35%</span>
+        <span class="hcx__bento-lab">Part de marché · vs 10%</span>
+      </div>
+      <div class="hcx__bento-cell">
+        <span class="hcx__bento-num">1 500</span>
+        <span class="hcx__bento-lab" data-i18n="bnp.glance.s4.label">PME pilote MVP</span>
+      </div>
+    </div>
+  </div>
+  <div class="hcx__scroll">
+    <span>Scroll · l'histoire</span>
+    <span class="hcx__scroll-line"></span>
+  </div>
+</section>
+
+<!-- STAR — vertical → pin → horizontal → release. Apple-style narrative. -->
+<section id="star" data-h-pin>
+  <div class="h-progress" aria-hidden="true">
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+  </div>
+  <span class="h-section-label" data-i18n="bnp.star.label">STAR · l'histoire en trois temps</span>
+  <div class="h-track">
+
+    <!-- PANEL 01 — La situation -->
+    <div class="h-panel h-panel--01">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.star.s1.eyebrow">01 · La situation</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n-html="bnp.star.s1.title">30 % des flux ne devenaient<br>jamais une <span class="accent">décision.</span></h2>
+          <p class="h-lead h-reveal" data-i18n="bnp.star.s1.lead">BNP voyait passer chaque semaine des données de cartes consommateurs qui valaient de l'or pour les commerçants. Personne ne les transformait en service. Tout restait au passif de la banque.</p>
+          <ul class="h-points h-reveal">
+            <li data-i18n-html="bnp.star.s1.p1">L'asymétrie : <strong>BNP voyait. Les PME ignoraient.</strong></li>
+            <li data-i18n-html="bnp.star.s1.p2">L'enjeu : sans playbook B2B, BNP risquait de céder l'acquéring de 1 500 PME en 18 mois.</li>
+            <li data-i18n-html="bnp.star.s1.p3">Six commerçants, six objections. La même au fond : <em>« Pas la donnée. La décision. »</em></li>
+          </ul>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="h-fig-wrap" data-deck="concept-report" data-deck-page="3" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+            <img class="h-fig" src="public/decks/concept-report/p-03.jpg" alt="From transactional to insightful pyramid" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 02 — L'action -->
+    <div class="h-panel h-panel--02">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.star.s2.eyebrow">02 · L'action</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n-html="bnp.star.s2.title">Pas un dashboard. Un<br>service qui <span class="accent">décide pour eux.</span></h2>
+          <p class="h-lead h-reveal" data-i18n="bnp.star.s2.lead">J'ai cadré un MVP sur trois lectures coachées par graphique, pas quarante-sept indicateurs. La donnée ne s'achète pas. La décision si.</p>
+          <ul class="h-points h-reveal">
+            <li data-i18n-html="bnp.star.s2.p1">Semaine 6. IT voulait démarrer le build. <strong class="accent">J'ai bloqué.</strong> Pas avant le service blueprint.</li>
+            <li data-i18n-html="bnp.star.s2.p2">Semaine 9. IT proposait 47 indicateurs. <strong class="accent">J'ai dit non.</strong> Trois lectures coachées par graphique.</li>
+            <li data-i18n-html="bnp.star.s2.p3">Atelier. Marketing × IT recalibrés sur le commerçant : <em>« Que doit-il décider lundi matin ? »</em> Trois objectifs sont sortis. Les deux équipes ont co-signé.</li>
+          </ul>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="act-canvas" aria-hidden="true">
+            <div class="act-eyebrow"><span class="act-eyebrow-line"></span><span data-i18n="bnp.star.s2.act.eyebrow">Semaine 9 · MVP scope</span></div>
+            <div class="act-headline">
+              <span class="act-from">47</span>
+              <span class="act-arrow">
+                <svg viewBox="0 0 80 16" preserveAspectRatio="xMidYMid meet"><path d="M2 8 L74 8 M64 2 L74 8 L64 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="act-to">3</span>
+            </div>
+            <div class="act-caption" data-i18n-html="bnp.star.s2.act.caption">indicateurs <strong class="accent">→</strong> lectures coachées par graphique</div>
+            <div class="act-timeline">
+              <span class="act-tick" data-i18n="bnp.star.s2.act.t1">Sem. 6 · Bloqué</span>
+              <span class="act-tick is-current" data-i18n="bnp.star.s2.act.t2">Sem. 9 · 47 → 3</span>
+              <span class="act-tick" data-i18n="bnp.star.s2.act.t3">Atelier · Recalibré</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 03 — La traction (climax delay : pré-vente teasée, +80% gardé pour Result) -->
+    <div class="h-panel h-panel--03">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.star.s3.eyebrow">03 · La traction</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n-html="bnp.star.s3.title">Une PME a signé<br>une <span class="accent">prévente.</span></h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.star.s3.lead">Léonidas Woluwé Saint-Pierre a signé une intention d'achat sur le prototype final. <strong class="accent">Avant le build.</strong> Le dashboard avait rendu visible un insight que la donnée brute cachait.</p>
+          <ul class="h-points h-reveal">
+            <li data-i18n-html="bnp.star.s3.p1">Le sponsor avait sa <strong class="accent">preuve de traction</strong>. Mon mandat se terminait là. La suite, je l'ai laissée à l'équipe.</li>
+            <li data-i18n-html="bnp.star.s3.p2"><strong class="accent">+80 % de revenu</strong> entre Wolluwé Saint-Pierre et Ixelles sur six mois, mêmes flux Bancontact, simplement lus différemment. Ce que le prototype a montré.</li>
+            <li data-i18n-html="bnp.star.s3.p3">Triple-Win signé Corporate Banking, IT, Legal et Marketing. <strong>Une seule promesse, trois oui simultanés.</strong></li>
+          </ul>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="h-fig-wrap" data-deck="concept-report" data-deck-page="57" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+            <img class="h-fig" src="public/decks/concept-report/p-57.jpg" alt="Léonidas Period Comparison" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AT A GLANCE -->
+<section>
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.glance.eyebrow">At a glance</span>
+    <h2 data-i18n-html="bnp.glance.h2">The headline numbers, before the story.</h2>
+    <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n="bnp.glance.lead">
+      A 12-month engagement at the intersection of service design, business strategy and decision support.
+    </p>
+    <p class="glance-sizing" data-i18n-html="bnp.glance.sizing">12 months <span class="dot">·</span> 4 internal functions <span class="dot">·</span> 6 SMEs tested <span class="dot">·</span> 1 pilot client</p>
+    <div class="stats" style="margin-top: 50px;">
+      <div class="stat">
+        <div class="num">30%</div>
+        <div class="label" data-i18n="bnp.glance.s1.label">Consumer card flows</div>
+        <div class="desc" data-i18n="bnp.glance.s1.desc">BNP saw them. They never reached SME value.</div>
+      </div>
+      <div class="stat">
+        <div class="num">9</div>
+        <div class="label" data-i18n="bnp.glance.s2.label">B2B personas designed</div>
+        <div class="desc" data-i18n="bnp.glance.s2.desc">From liberal pros to corporate banking SMEs.</div>
+      </div>
+      <div class="stat">
+        <div class="num">1</div>
+        <div class="label" data-i18n="bnp.glance.s3.label">Pilot client signed</div>
+        <div class="desc" data-i18n="bnp.glance.s3.desc">A real shopkeeper said yes. Léonidas Wolluwé.</div>
+      </div>
+      <div class="stat">
+        <div class="num">1,500</div>
+        <div class="label" data-i18n="bnp.glance.s4.label">Corporate Banking SMEs</div>
+        <div class="desc" data-i18n="bnp.glance.s4.desc">Pilot population scoped &amp; de-risked for MVP.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER I — divider -->
+<section class="chapter-divider" data-chapter="01">
+  <div class="chapter-roman" aria-hidden="true">01</div>
+  <div class="chapter-meta">
+    <span class="chapter-label" data-i18n="bnp.chap1.label">Acte I</span>
+    <h2 class="chapter-title" data-i18n="bnp.chap1.title">Le problème</h2>
+    <p class="chapter-lead" data-i18n="bnp.chap1.lead">Une asymétrie stratégique. La banque voyait, les PME ignoraient.</p>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section id="problem" data-section-num="01">
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.problem.eyebrow">The Problem · 1 of 3</span>
+    <h2 data-i18n-html="bnp.problem.h2">What problem were we trying to solve?</h2>
+    <p class="lead" style="margin-top: 22px;" data-i18n-html="bnp.problem.p1"></p>
+    <p class="lead" style="margin-top: 0;" data-i18n-html="bnp.problem.p2"></p>
+
+    <div class="two media-right" style="margin-top: 70px;">
+      <div>
+        <h3 style="margin-bottom: 18px;" data-i18n-html="bnp.problem.shiftH3">From transactional to insightful.</h3>
+        <p style="color: var(--fg-muted)" data-i18n-html="bnp.problem.shiftP1"></p>
+        <p style="color: var(--fg-muted)" data-i18n-html="bnp.problem.shiftP2"></p>
+      </div>
+      <div class="figure" data-deck="concept-report" data-deck-page="3" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+        <img src="public/decks/concept-report/p-03.jpg" alt="From transactional to insightful · Channel evolution pyramid" />
+        <div class="cap" data-i18n="bnp.problem.shiftCap">From transactional → insightful · Channel evolution pyramid</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 style="text-align: center; max-width: 22ch; margin: 0 auto 6px;" data-i18n-html="bnp.barriers.h3">Six real barriers we surfaced in research.</h3>
+    <p style="text-align: center; color: var(--fg-muted); max-width: 60ch; margin: 0 auto;" data-i18n="bnp.barriers.intro">
+      Not generic friction. These are the exact concerns merchants raised in interviews. They became the design constraints for the MVP.
+    </p>
+  </div>
+</section>
+
+<!-- 6 BARRIÈRES — voix unifiée Jean-Paul, horizontal pin section -->
+<section id="barriers" data-h-pin>
+  <div class="h-progress" aria-hidden="true">
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+  </div>
+  <span class="h-section-label" data-i18n="bnp.barriers.label">Jean-Paul, CEO multi-shops · six barrières en interviews</span>
+  <div class="h-track">
+
+    <!-- BARRIÈRE 01 — Utilité -->
+    <div class="h-panel h-panel-barrier h-panel--01">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.barriers.b1.eyebrow">Barrière 01</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.barriers.b1.h">"What would I actually do with this?"</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.barriers.b1.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.barriers.b1.constraint">Became design rule : no data exploration. Every screen opens on a possible decision.</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="barrier-watermark"><span class="barrier-num">01</span><span class="barrier-theme" data-i18n="bnp.barriers.b1.theme">Utilité</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRIÈRE 02 — Fiabilité -->
+    <div class="h-panel h-panel-barrier h-panel--02">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.barriers.b2.eyebrow">Barrière 02</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.barriers.b2.h">"Can I trust these numbers?"</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.barriers.b2.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.barriers.b2.constraint">Became rule : every number comes with its source and confidence interval.</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="barrier-watermark"><span class="barrier-num">02</span><span class="barrier-theme" data-i18n="bnp.barriers.b2.theme">Fiabilité</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRIÈRE 03 — Pertinence -->
+    <div class="h-panel h-panel-barrier h-panel--03">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.barriers.b3.eyebrow">Barrière 03</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.barriers.b3.h">"Who am I being compared to?"</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.barriers.b3.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.barriers.b3.constraint">Became rule : the merchant picks the comparison sector from 12 configurable verticals.</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="barrier-watermark"><span class="barrier-num">03</span><span class="barrier-theme" data-i18n="bnp.barriers.b3.theme">Pertinence</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRIÈRE 04 — Segmentation -->
+    <div class="h-panel h-panel-barrier h-panel--04">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.barriers.b4.eyebrow">Barrière 04</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.barriers.b4.h">"I get statistics, but no clients."</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.barriers.b4.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.barriers.b4.constraint">Became Marketing tout-boîte axis : targeted campaigns by source-commune, anonymous by design. GDPR built-in.</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="barrier-watermark"><span class="barrier-num">04</span><span class="barrier-theme" data-i18n="bnp.barriers.b4.theme">Segmentation</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRIÈRE 05 — Produits -->
+    <div class="h-panel h-panel-barrier h-panel--05">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.barriers.b5.eyebrow">Barrière 05</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.barriers.b5.h">"What about my products?"</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.barriers.b5.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.barriers.b5.constraint">Out of MVP scope. Logged as roadmap phase 2 — future POS systems integration.</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="barrier-watermark"><span class="barrier-num">05</span><span class="barrier-theme" data-i18n="bnp.barriers.b5.theme">Produits</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRIÈRE 06 — ROI -->
+    <div class="h-panel h-panel-barrier h-panel--06">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.barriers.b6.eyebrow">Barrière 06</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.barriers.b6.h">"What's the ROI for me?"</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.barriers.b6.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.barriers.b6.constraint">Became central to Triple-Win : merchant gains in decisions, bank creates a B2B revenue line, cardholder keeps privacy.</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="barrier-watermark"><span class="barrier-num">06</span><span class="barrier-theme" data-i18n="bnp.barriers.b6.theme">ROI</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PULL-QUOTE 1 · respiration entre Acte I et Acte II -->
+<section class="pq-hero">
+  <div class="container">
+    <div class="pq-content">
+      <span class="pq-eyebrow" data-i18n="bnp.pq1.eyebrow">Concept Report · mars 2018</span>
+      <blockquote class="pq-quote" data-i18n-html="bnp.pq1.quote">Pas de système exploratoire de métriques. <span class="accent">Des rapports orientés objectifs, avec des outcomes actionnables.</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER II — divider -->
+<section class="chapter-divider" data-chapter="02">
+  <div class="chapter-roman" aria-hidden="true">02</div>
+  <div class="chapter-meta">
+    <span class="chapter-label" data-i18n="bnp.chap2.label">Acte II</span>
+    <h2 class="chapter-title" data-i18n="bnp.chap2.title">L'action</h2>
+    <p class="chapter-lead" data-i18n="bnp.chap2.lead">Cadrer un service, pas une feature. Six mouvements, un Triple-Win.</p>
+  </div>
+</section>
+
+<!-- THE ROLE -->
+<section id="role" data-section-num="02">
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.role.eyebrow">My Role · 2 of 3</span>
+    <h2 data-i18n-html="bnp.role.h2">What role did I play in the process?</h2>
+    <p class="lead" style="margin-top: 22px; max-width: 65ch;" data-i18n-html="bnp.role.lead"></p>
+
+    <hr>
+
+    <div class="two">
+      <div>
+        <h3 data-i18n="bnp.role.roomH3">The room I was in.</h3>
+        <p style="color: var(--fg-muted)" data-i18n="bnp.role.roomP">A senior service designer in a programme spanning four functions of the bank.</p>
+      </div>
+      <div class="figure" data-deck="concept-report" data-deck-page="37" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+        <img src="public/decks/concept-report/p-37.jpg" alt="In-house workshop · sticky-note synthesis MVP scope" />
+        <div class="cap" data-i18n="bnp.role.roomCap">In-house workshop · Dashboard KPI principles · sticky-note synthesis</div>
+      </div>
+    </div>
+
+    <div class="stakeholders">
+      <div class="stake"><div class="role" data-i18n="bnp.role.st1.role">Sponsor</div><h5 data-i18n="bnp.role.st1.h">Executive Sponsor</h5><p data-i18n="bnp.role.st1.p">Innovation &amp; Acquiring strategy.</p></div>
+      <div class="stake"><div class="role" data-i18n="bnp.role.st2.role">Business</div><h5 data-i18n="bnp.role.st2.h">Corporate Banking</h5><p data-i18n="bnp.role.st2.p">The 1,500-client pilot population.</p></div>
+      <div class="stake"><div class="role" data-i18n="bnp.role.st3.role">Build</div><h5 data-i18n="bnp.role.st3.h">IT &amp; Data</h5><p data-i18n="bnp.role.st3.p">POS data pipeline, Spotfire dashboards, EBB integration.</p></div>
+      <div class="stake"><div class="role" data-i18n="bnp.role.st4.role">Guardrail</div><h5 data-i18n="bnp.role.st4.h">Legal &amp; Compliance</h5><p data-i18n="bnp.role.st4.p">GDPR scoping, contract terms, residual risk.</p></div>
+      <div class="stake"><div class="role" data-i18n="bnp.role.st5.role">Commercial</div><h5 data-i18n="bnp.role.st5.h">Marketing</h5><p data-i18n="bnp.role.st5.p">Pricing tiers, go-to-market for the MVP cohort.</p></div>
+      <div class="stake"><div class="role" data-i18n="bnp.role.st6.role">Voice</div><h5 data-i18n="bnp.role.st6.h">SME Merchants</h5><p data-i18n="bnp.role.st6.p">Liberal pros, retailers, multi-shop owners.</p></div>
+    </div>
+
+    <div class="role-tension">
+      <div class="role-tension-label" data-i18n="bnp.role.tension.label">A resolved tension</div>
+      <h3 class="role-tension-h" data-i18n="bnp.role.tension.h">Marketing × IT, recalibrated on the shopkeeper.</h3>
+      <p class="role-tension-p" data-i18n-html="bnp.role.tension.p"></p>
+    </div>
+  </div>
+</section>
+
+<!-- PULL-QUOTE 2 · respiration entre Acte II et Acte III -->
+<section class="pq-hero pq-hero--accent">
+  <div class="container">
+    <div class="pq-content">
+      <span class="pq-eyebrow" data-i18n="bnp.pq2.eyebrow">Concept Report · mars 2018</span>
+      <blockquote class="pq-quote" data-i18n-html="bnp.pq2.quote">Un dashboard, ce n'est pas pousser de la donnée. <span class="accent">C'est raconter une histoire</span> qui aide le commerçant à décider.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- THE STEPS — 6-panel horizontal storyboard (vertical → pin → horizontal → release) -->
+<section id="steps" data-section-num="03" data-h-pin>
+  <div class="h-progress" aria-hidden="true">
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+    <span class="h-dot"></span>
+  </div>
+  <span class="h-section-label" data-i18n="bnp.steps.label">Six décisions, six livrables</span>
+  <div class="h-track">
+
+    <!-- STEP 01 — DISCOVER -->
+    <div class="h-panel h-panel-step h-panel--01">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.steps.s1.eyebrow">Step 01 · DISCOVER</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.steps.s1.h">Persona research &amp; B2B segmentation</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.steps.s1.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.steps.s1.deliv">Deliverable · 9-persona library · Levels of Interest matrix</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="h-fig-wrap" data-deck="concept-report" data-deck-page="34" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+            <img class="h-fig" src="public/decks/concept-report/p-34.jpg" alt="Data exploration → Goal-oriented pivot diagram" />
+          </div>
+          <div class="h-fig-cap" data-i18n="bnp.steps.s1.cap">9 B2B personas · Provisional research-backed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 02 — DEFINE -->
+    <div class="h-panel h-panel-step h-panel--02">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.steps.s2.eyebrow">Step 02 · DEFINE</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.steps.s2.h">Value Proposition Canvas</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.steps.s2.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.steps.s2.deliv">Deliverable · VPC · Pains / Gains / Jobs → MVP features</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="h-fig-wrap" data-deck="concept-report" data-deck-page="32" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+            <img class="h-fig" src="public/decks/concept-report/p-32.jpg" alt="Value Proposition Canvas" />
+          </div>
+          <div class="h-fig-cap" data-i18n="bnp.steps.s2.cap">VPC · Needs · Wants · Fears → MVP offer</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 03 — DEFINE -->
+    <div class="h-panel h-panel-step h-panel--03">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.steps.s3.eyebrow">Step 03 · DEFINE</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.steps.s3.h">Lean Canvas &amp; MVP framing</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.steps.s3.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.steps.s3.deliv">Deliverable · Lean Canvas · MVP scope · 4 data lenses</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="h-fig-wrap" data-deck="concept-report" data-deck-page="33" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+            <img class="h-fig" src="public/decks/concept-report/p-33.jpg" alt="Lean Canvas" />
+          </div>
+          <div class="h-fig-cap" data-i18n="bnp.steps.s3.cap">Lean Canvas · Enterprise Intelligence MVP</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 04 — DEVELOP (courage scene #1) -->
+    <div class="h-panel h-panel-step h-panel--04">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.steps.s4.eyebrow">Step 04 · DEVELOP</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.steps.s4.h">Service blueprint &amp; customer journeys</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.steps.s4.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.steps.s4.deliv">Deliverable · 5 journey blueprints · Onboarding flow redesign</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="h-fig-wrap" data-deck="concept-report" data-deck-page="75" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+            <img class="h-fig" src="public/decks/concept-report/p-75.jpg" alt="As-is journey · 16 steps non-EBB user" />
+          </div>
+          <div class="h-fig-cap" data-i18n="bnp.steps.s4.cap">As-is journey · Unregistered SME · 15 steps · 1-3 days</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 05 — DEVELOP (courage scene #2) -->
+    <div class="h-panel h-panel-step h-panel--05">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.steps.s5.eyebrow">Step 05 · DEVELOP</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.steps.s5.h">Concept &amp; dashboard prototypes</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.steps.s5.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.steps.s5.deliv">Deliverable · Goals 1·2·3 · Wireframes · POC dashboards</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="h-fig-wrap" data-deck="concept-report" data-deck-page="42" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+            <img class="h-fig" src="public/decks/concept-report/p-42.jpg" alt="Dashboard KPI Principles · hero mockup" />
+          </div>
+          <div class="h-fig-cap" data-i18n="bnp.steps.s5.cap">POC dashboard · POS Turnover module · Spotfire prototype</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 06 — DELIVER -->
+    <div class="h-panel h-panel-step h-panel--06">
+      <div class="h-panel-inner">
+        <div class="h-panel-text">
+          <span class="h-eyebrow h-reveal" data-i18n="bnp.steps.s6.eyebrow">Step 06 · DELIVER</span>
+          <h2 class="h-title h-reveal h-parallax-slow" data-i18n="bnp.steps.s6.h">Roadmap &amp; executive decision pack</h2>
+          <p class="h-lead h-reveal" data-i18n-html="bnp.steps.s6.p"></p>
+          <div class="h-deliv h-reveal" data-i18n="bnp.steps.s6.deliv">Deliverable · Roadmap · Risk register · Decision pack</div>
+        </div>
+        <div class="h-panel-visual h-reveal h-parallax-fast">
+          <div class="h-fig-wrap" data-deck="concept-report" data-deck-page="53" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+            <img class="h-fig" src="public/decks/concept-report/p-53.jpg" alt="Time selection principle" />
+          </div>
+          <div class="h-fig-cap" data-i18n="bnp.steps.s6.cap">Time selection principle · Staged comparison frame</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ROADMAP — what came next (vertical, 4 quarters) -->
+<section id="roadmap">
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.roadmap.eyebrow">What came next</span>
+    <h3 data-i18n="bnp.roadmap.h3">The roadmap, in four moves.</h3>
+    <p class="lead" style="margin-top: 18px; max-width: 60ch;" data-i18n="bnp.roadmap.lead">From de-risking the MVP to the strategic 2020 acquiring goal.</p>
+    <div class="roadmap">
+      <div class="rm">
+        <div class="when" data-i18n="bnp.roadmap.r1.when">Q1 2018 · Now</div>
+        <h5 data-i18n="bnp.roadmap.r1.h">MVP scope locked</h5>
+        <p data-i18n="bnp.roadmap.r1.p">Concept validated, 4 data lenses, pilot population at 1,500 SMEs.</p>
+      </div>
+      <div class="rm">
+        <div class="when" data-i18n="bnp.roadmap.r2.when">Q2 2018 · Pilot</div>
+        <h5 data-i18n="bnp.roadmap.r2.h">Acquiring offer for large retailers</h5>
+        <p data-i18n="bnp.roadmap.r2.p">Corporate Banking can offer acquiring; merchants keep their terminals.</p>
+      </div>
+      <div class="rm">
+        <div class="when" data-i18n="bnp.roadmap.r3.when">2019 · Build</div>
+        <h5 data-i18n="bnp.roadmap.r3.h">Live onboarding via EBB</h5>
+        <p data-i18n="bnp.roadmap.r3.p">Tool deployed via Easy Banking Business with daily data refresh.</p>
+      </div>
+      <div class="rm">
+        <div class="when" data-i18n="bnp.roadmap.r4.when">2020 · Goal</div>
+        <h5 data-i18n="bnp.roadmap.r4.h">From 7% → 20% acquirer share</h5>
+        <p data-i18n="bnp.roadmap.r4.p">Full acquirer presence. Enterprise Intelligence as the differentiator.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER III — divider -->
+<section class="chapter-divider" data-chapter="03">
+  <div class="chapter-roman" aria-hidden="true">03</div>
+  <div class="chapter-meta">
+    <span class="chapter-label" data-i18n="bnp.chap3.label">Acte III</span>
+    <h2 class="chapter-title" data-i18n="bnp.chap3.title">Le résultat</h2>
+    <p class="chapter-lead" data-i18n="bnp.chap3.lead">Léonidas dit oui. Six mois, mêmes données, +80% de revenu.</p>
+  </div>
+</section>
+
+<!-- LEONIDAS RESULT -->
+<section id="result" data-section-num="04">
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.result.eyebrow">The Result</span>
+    <h2 data-i18n-html="bnp.result.h2">From concept to a real PME saying yes.</h2>
+
+    <div class="triwin">
+      <div class="lead-cell">
+        <h3 data-i18n-html="bnp.tw.h3">The Triple-Win frame.</h3>
+        <p data-i18n="bnp.tw.p">Every design choice was scored against this triangle.</p>
+        <svg class="triwin-svg" viewBox="0 0 220 200" aria-hidden="true">
+          <defs>
+            <filter id="tw-glow"><feGaussianBlur stdDeviation="1.2"/></filter>
+          </defs>
+          <line class="tw-edge tw-edge-1" x1="110" y1="32" x2="36" y2="160" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <line class="tw-edge tw-edge-2" x1="36" y1="160" x2="184" y2="160" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <line class="tw-edge tw-edge-3" x1="184" y1="160" x2="110" y2="32" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <circle class="tw-node tw-node-1" cx="110" cy="32" r="6" fill="currentColor"/>
+          <circle class="tw-node tw-node-2" cx="36" cy="160" r="6" fill="currentColor"/>
+          <circle class="tw-node tw-node-3" cx="184" cy="160" r="6" fill="currentColor"/>
+          <text class="tw-label tw-label-1" x="110" y="22" text-anchor="middle" font-family="Manrope" font-weight="600" font-size="10" fill="currentColor">BANK</text>
+          <text class="tw-label tw-label-2" x="36" y="178" text-anchor="middle" font-family="Manrope" font-weight="600" font-size="10" fill="currentColor">RETAILER</text>
+          <text class="tw-label tw-label-3" x="184" y="178" text-anchor="middle" font-family="Manrope" font-weight="600" font-size="10" fill="currentColor">CARDHOLDER</text>
+        </svg>
+      </div>
+      <div class="win">
+        <div class="who" data-i18n="bnp.tw.w1.who">The Bank</div>
+        <h5 data-i18n="bnp.tw.w1.h">BNP Paribas Fortis</h5>
+        <p data-i18n="bnp.tw.w1.p">A new B2B revenue line that turns existing transaction data into a defensible service.</p>
+      </div>
+      <div class="win">
+        <div class="who" data-i18n="bnp.tw.w2.who">The Retailer</div>
+        <h5 data-i18n="bnp.tw.w2.h">SME Merchant</h5>
+        <p data-i18n="bnp.tw.w2.p">Decisions, not dashboards.</p>
+      </div>
+      <div class="win">
+        <div class="who" data-i18n="bnp.tw.w3.who">The Cardholder</div>
+        <h5 data-i18n="bnp.tw.w3.h">End Consumer</h5>
+        <p data-i18n="bnp.tw.w3.p">Privacy preserved: stats only, no personal data.</p>
+      </div>
+    </div>
+
+    <div class="leo">
+      <div>
+        <p class="lead" style="margin-top: 18px;" data-i18n-html="bnp.leo.lead1"></p>
+        <p class="lead" data-i18n-html="bnp.leo.lead2"></p>
+
+        <div class="stats-leo">
+          <div class="stat-leo"><div class="num">+80%</div><div class="label" data-i18n="bnp.leo.s1">Revenue increase</div></div>
+          <div class="stat-leo"><div class="num">+€34k</div><div class="label" data-i18n="bnp.leo.s2">Six months</div></div>
+          <div class="stat-leo"><div class="num">+10%</div><div class="label" data-i18n="bnp.leo.s3">Avg basket size</div></div>
+          <div class="stat-leo"><div class="num">+75%</div><div class="label" data-i18n="bnp.leo.s4">Maintained customers</div></div>
+        </div>
+
+        <blockquote>
+          <span data-i18n-html="bnp.leo.quote"></span>
+          <span class="src" data-i18n="bnp.leo.src">Concept Report · Goal 2 · Jan → June 2017</span>
+        </blockquote>
+      </div>
+
+      <div class="leo-figs">
+        <div class="figure" data-deck="concept-report" data-deck-page="56" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+          <img src="public/decks/concept-report/p-56.jpg" alt="Léonidas Shop Comparison" />
+          <div class="cap" data-i18n="bnp.leo.cap1">Shop Comparison · Wolluwé SP vs Ixelles · Concept Report · p54</div>
+        </div>
+        <div class="figure" data-deck="concept-report" data-deck-page="57" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+          <img src="public/decks/concept-report/p-57.jpg" alt="Léonidas Period Comparison" />
+          <div class="cap" data-i18n="bnp.leo.cap2">Period Comparison · +80% revenue · +10% basket · Concept Report · p57</div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="two media-right">
+      <div>
+        <h3 data-i18n-html="bnp.beyond.h3">What the project delivered beyond the pilot.</h3>
+        <p class="lead" style="margin-top: 18px;" data-i18n-html="bnp.beyond.summary">Beyond the figure : an MVP signed off by Corporate Banking, IT, Legal and Marketing, de-risked on GDPR and data quality. And a 9-persona B2B library that outlived the project.</p>
+      </div>
+      <div class="figure" data-deck="concept-report" data-deck-page="24" tabindex="0" role="button" aria-label="Browse source deck at this slide">
+        <img src="public/decks/concept-report/p-24.jpg" alt="Why our data are relevant" />
+        <div class="cap" data-i18n="bnp.beyond.cap">Why our data are relevant · Unique BNP value intersection</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LESSONS LEARNED — what I'd do differently (between Result and Bridge) -->
+<section id="lessons" data-section-num="04b">
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.lessons.eyebrow">Si je refaisais le projet</span>
+    <h2 data-i18n-html="bnp.lessons.h2">Ce que je referais <span class="accent">différemment.</span></h2>
+    <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n="bnp.lessons.lead">Sept ans après, le projet a tenu sa promesse. Mais trois choix mériteraient d'être refaits autrement. Les voici, en clair.</p>
+
+    <div class="lessons-grid">
+      <div class="lesson-card">
+        <div class="lesson-num">01</div>
+        <h3 class="lesson-claim" data-i18n="bnp.lessons.l1.h">Mettre un prix sur la table dès la semaine 8.</h3>
+        <p class="lesson-body" data-i18n="bnp.lessons.l1.p">On a validé l'envie. Pas le portefeuille. La déclaration d'intention de Léonidas est venue à la fin. Aujourd'hui, je teste un montant en € par mois à mi-projet, pas en clôture.</p>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-num">02</div>
+        <h3 class="lesson-claim" data-i18n="bnp.lessons.l2.h">Élargir l'échantillon avant de figer la promesse.</h3>
+        <p class="lesson-body" data-i18n="bnp.lessons.l2.p">Six PME testeurs, un seul secteur. Le signal Léonidas était fort, mais mono-vertical. Aujourd'hui, je pousse pour douze testeurs en trois verticales avant de bétonner la value prop.</p>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-num">03</div>
+        <h3 class="lesson-claim" data-i18n="bnp.lessons.l3.h">Auditer la qualité de la donnée avant d'écrire le service.</h3>
+        <p class="lesson-body" data-i18n="bnp.lessons.l3.p">J'ai découvert mi-parcours que toutes les catégories transactionnelles n'étaient pas également propres. Aujourd'hui, je commande un audit qualité avant la value prop. Le même piège existe côté énergie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIDGE TO LUMINUS — divider -->
+<section class="chapter-divider chapter-bridge" data-chapter="→">
+  <div class="chapter-roman" aria-hidden="true">→</div>
+  <div class="chapter-meta">
+    <span class="chapter-label" data-i18n="bnp.chapBridge.label">Pont</span>
+    <h2 class="chapter-title" data-i18n="bnp.chapBridge.title">Vers Luminus.</h2>
+    <p class="chapter-lead" data-i18n="bnp.chapBridge.lead">Là où ce playbook bancaire rencontre la donnée énergétique.</p>
+  </div>
+</section>
+
+<!-- Q&A teaser -->
+<section id="qa" data-section-num="05">
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.qa.eyebrow">Bridge to Luminus · over to you</span>
+    <h2 data-i18n-html="bnp.qa.h2">Where this case connects to your roadmap.</h2>
+    <p class="lead" style="margin-top: 22px; max-width: 65ch;" data-i18n="bnp.qa.lead">Four threads I'd love to pull on live.</p>
+    <div class="qa">
+      <div class="q" data-i18n-html="bnp.qa.q1"></div>
+      <div class="q" data-i18n-html="bnp.qa.q2"></div>
+      <div class="q" data-i18n-html="bnp.qa.q3"></div>
+      <div class="q" data-i18n-html="bnp.qa.q4"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div>
+        <h3 data-i18n="footer.thanks">Thank you.</h3>
+        <p data-i18n="footer.lookForward">I'm looking forward to the conversation.</p>
+      </div>
+      <div>
+        <div class="label" data-i18n="footer.contact">Contact</div>
+        <p>Christophe van Engelen</p>
+        <p><a href="mailto:vanengelenchristophe@gmail.com">vanengelenchristophe@gmail.com</a></p>
+        <p><a href="tel:+32486718778">+32 486 71 87 78</a></p>
+      </div>
+      <div>
+        <div class="label" data-i18n="footer.for">For</div>
+        <p data-i18n="footer.forCompany">Luminus</p>
+        <p data-i18n="footer.forSubtitle">Service Designer interview</p>
+        <p data-i18n="footer.forDate">April / May 2026</p>
+      </div>
+    </div>
+    <div class="sig" data-i18n="footer.copy">
+      © Christophe van Engelen, 2026. Original artefacts © BNP Paribas Fortis 2017-2018, used here for portfolio illustration.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/i18n.js?v=sprintCD"></script>
+<script src="assets/theme.js?v=cinema"></script>
+<script src="assets/motion.js?v=portal2"></script>
+<script src="assets/deck.js?v=deck1"></script>
+<script src="assets/scroll-narrative.js?v=depth"></script>
+</body>
+</html>

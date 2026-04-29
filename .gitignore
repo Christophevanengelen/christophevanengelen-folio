@@ -1,0 +1,25 @@
+# Vercel
+.vercel/
+
+# Analysis dumps (internal — text extracts of BNP source documents, not for public)
+_analysis/
+
+# Local dev
+*.log
+*.tmp
+.DS_Store
+.AppleDouble
+.LSOverride
+node_modules/
+dist/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Env
+.env
+.env.local
+.env.*.local

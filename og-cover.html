@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>OG cover · CVE Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A1220;
+    --paper: #F2EBDB;
+    --copper: #C76941;
+    --copper-deep: #9E4F2D;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card {
+    width: 1200px; height: 630px;
+    background: var(--bg);
+    color: var(--paper);
+    font-family: "Manrope", -apple-system, sans-serif;
+    position: relative; overflow: hidden;
+    padding: 70px 80px;
+    display: grid; grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: stretch;
+  }
+  .dot {
+    position: absolute; top: 70px; left: 80px;
+    width: 14px; height: 14px; border-radius: 99px; background: var(--copper);
+    box-shadow: 0 0 0 8px rgba(199,105,65,0.18);
+  }
+  .left {
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding-top: 40px;
+  }
+  .meta {
+    font-size: 14px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--copper);
+  }
+  .meta::before {
+    content: ""; display: inline-block; width: 28px; height: 1px;
+    background: var(--copper); vertical-align: middle; margin-right: 12px;
+    transform: translateY(-2px);
+  }
+  h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 96px; line-height: 0.98; font-weight: 300;
+    letter-spacing: -.045em;
+    margin: 18px 0 0;
+  }
+  h1 em {
+    font-style: normal; font-weight: 800; color: var(--copper);
+    letter-spacing: -.05em;
+  }
+  .who {
+    margin-top: 42px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px; line-height: 1.4; color: var(--paper);
+    border-left: 2px solid var(--copper); padding-left: 18px;
+    max-width: 500px;
+  }
+  .who strong { display: block; font-weight: 700; margin-bottom: 4px; font-size: 20px; }
+  .who span { color: rgba(242,235,219,0.6); font-size: 15px; }
+
+  .right {
+    display: flex; flex-direction: column; justify-content: center;
+    align-items: stretch;
+    border-left: 1px solid rgba(242,235,219,0.10);
+    padding-left: 50px;
+    gap: 22px;
+  }
+  .stat {
+    border-left: 2px solid var(--copper); padding-left: 18px;
+  }
+  .stat .num {
+    font-family: "Manrope", sans-serif;
+    font-size: 78px; font-weight: 200; line-height: 1;
+    color: var(--paper); letter-spacing: -.05em;
+  }
+  .stat .num em {
+    font-style: normal; font-weight: 800; color: var(--copper);
+  }
+  .stat .label {
+    margin-top: 6px;
+    font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(242,235,219,0.55);
+  }
+  .footer-meta {
+    position: absolute; bottom: 70px; left: 80px;
+    font-family: "Inter", sans-serif; font-size: 13px;
+    color: rgba(242,235,219,0.45); letter-spacing: .04em;
+  }
+  .footer-meta .copper { color: var(--copper); font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="dot"></span>
+    <div class="left">
+      <div>
+        <div class="meta">Service Design · Case Study</div>
+        <h1>Service design<br>that <em>decides.</em></h1>
+      </div>
+      <div class="who">
+        <strong>Christophe van Engelen</strong>
+        <span>Service Designer · Freelance · Brussels · 2026</span>
+      </div>
+    </div>
+    <div class="right">
+      <div class="stat">
+        <div class="num"><em>+80%</em></div>
+        <div class="label">Léonidas revenue · 6 months</div>
+      </div>
+      <div class="stat">
+        <div class="num">35%</div>
+        <div class="label">Market share · vs 10% sister shop</div>
+      </div>
+      <div class="stat">
+        <div class="num">+€34k</div>
+        <div class="label">Same data · one variable</div>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span class="copper">christophevanengelen.be</span>  ·  BNP Paribas Fortis · 2018–2019
+    </div>
+  </div>
+</body>
+</html>

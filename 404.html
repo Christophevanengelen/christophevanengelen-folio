@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr" class="theme-dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Page introuvable · Christophe van Engelen</title>
+<meta name="description" content="Cette page n'existe pas. Retour au portfolio." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script>
+  (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
+</script>
+<style>
+  .nf {
+    min-height: 80vh; display: grid; place-items: center; text-align: center;
+    padding: 80px 28px;
+  }
+  .nf .code {
+    font-family: var(--display); font-weight: 200;
+    font-size: clamp(120px, 22vw, 240px); color: var(--amber);
+    line-height: 1; letter-spacing: -.06em; margin: 0 0 12px;
+  }
+  .nf h1 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 18px; }
+  .nf p { color: var(--fg-muted); max-width: 50ch; margin: 0 auto 30px; }
+</style>
+</head>
+<body>
+<div class="nf">
+  <div>
+    <div class="code">404</div>
+    <h1>Cette page n'existe pas (encore).</h1>
+    <p>Le lien était peut-être bon il y a un mois. Plus maintenant. Le portfolio est juste là.</p>
+    <a class="btn-primary" href="/">← Retour au portfolio</a>
+  </div>
+</div>
+</body>
+</html>
