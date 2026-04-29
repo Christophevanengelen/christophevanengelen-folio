@@ -210,12 +210,18 @@
     position: relative;
     overflow: hidden;
     background: var(--bg);
-    perspective: 1800px;            /* 3D depth for the carousel-from-back effect */
-    perspective-origin: center center;
+    perspective: 1400px;            /* 1800 → 1400 : closer perspective, more pronounced 3D */
+    perspective-origin: center 55%;
   }
   .h-panel-inner {
     transform-style: preserve-3d;
     will-change: transform, opacity, filter;
+    backface-visibility: hidden;
+  }
+  /* Centered panels get a subtle drop-shadow that emphasizes the front-plane
+     position. Blur drops as panel rotates back to flat. */
+  .h-panel.h-in-view .h-panel-inner {
+    filter: drop-shadow(0 24px 48px rgba(10, 18, 32, 0.18));
   }
   section[data-h-pin].h-active { will-change: transform; }
   .h-track {
@@ -1668,6 +1674,6 @@
 <script src="assets/theme.js?v=cinema"></script>
 <script src="assets/motion.js?v=portal3"></script>
 <script src="assets/deck.js?v=deck1"></script>
-<script src="assets/scroll-narrative.js?v=depth2"></script>
+<script src="assets/scroll-narrative.js?v=fielded"></script>
 </body>
 </html>

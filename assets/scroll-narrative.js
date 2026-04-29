@@ -57,15 +57,15 @@
         start: 'top top',
         end: () => `+=${getDistance()}`,
         pin: true,
-        scrub: 0.7,                  /* tighter response to wheel/thumb */
+        scrub: 0.55,                 /* 0.7 → 0.55 : more responsive to thumb */
         invalidateOnRefresh: true,
         anticipatePin: 1,
         snap: tot > 1 ? {
           snapTo: 1 / (tot - 1),
-          duration: { min: 0.18, max: 0.42 },
-          delay: 0.12,               /* wait for user to finish their gesture */
-          ease: 'power1.inOut',      /* softer, less mathematical */
-          directional: true,         /* follow scroll direction, no rubber-band */
+          duration: { min: 0.16, max: 0.36 },
+          delay: 0.08,               /* 0.12 → 0.08 : auto-guided feel */
+          ease: 'power2.out',        /* magnetic landing */
+          directional: true,
           inertia: false,
         } : undefined,
       },
@@ -111,38 +111,42 @@
 
       if (isFirst) {
         /* Panel 1 : initial full state, no entrance animation */
-        gsap.set(inner, { scale: 1, opacity: 1, filter: 'blur(0px)' });
+        gsap.set(inner, { scale: 1, opacity: 1, filter: 'blur(0px)', z: 0, rotationY: 0 });
       } else {
-        /* Entering : back → front (panels 2+) */
+        /* Entering : depth-field 3D — panel comes from far back, rotates
+           subtly into frontal alignment, focuses (blur clears).
+           Inner uses translateZ + slight rotateY for the "field effect 3D" feel
+           CVE 2026-04-30 night spec : "super classe". */
         gsap.fromTo(inner,
-          { scale: 0.78, opacity: 0.32, filter: 'blur(2px)' },
+          { scale: 0.62, opacity: 0.18, filter: 'blur(3.5px)', z: -360, rotationY: -6 },
           {
-            scale: 1, opacity: 1, filter: 'blur(0px)',
-            ease: 'sine.out',
+            scale: 1, opacity: 1, filter: 'blur(0px)', z: 0, rotationY: 0,
+            ease: 'power3.out',
             scrollTrigger: {
               trigger: panel,
               containerAnimation: tween,
               start: 'left right',
               end: 'left center',
-              scrub: 0.8,
+              scrub: 0.7,
               invalidateOnRefresh: true,
             },
           });
       }
 
       if (!isLast) {
-        /* Leaving : front → back (subtle, lets the next panel emerge cleanly) */
+        /* Leaving : recedes back into depth, mirrors the entrance for visual
+           symmetry. Front → far back with rotateY in opposite direction. */
         gsap.fromTo(inner,
-          { scale: 1, opacity: 1, filter: 'blur(0px)' },
+          { scale: 1, opacity: 1, filter: 'blur(0px)', z: 0, rotationY: 0 },
           {
-            scale: 0.88, opacity: 0.55, filter: 'blur(1.5px)',
-            ease: 'sine.in',
+            scale: 0.74, opacity: 0.30, filter: 'blur(2.5px)', z: -240, rotationY: 6,
+            ease: 'power3.in',
             scrollTrigger: {
               trigger: panel,
               containerAnimation: tween,
               start: 'right center',
               end: 'right left',
-              scrub: 0.8,
+              scrub: 0.7,
               invalidateOnRefresh: true,
             },
           });
