@@ -128,6 +128,58 @@
 
     /* 4 — 2026 watermark drifts in last — phantom typographic depth */
     if (portraitMark) pTl.to(portraitMark, { x: 0, opacity: 0.13, duration: 2.2, ease: 'power2.out' }, 0.60);
+
+    /* ── Multi-layer scroll parallax — Awwwards depth feel.
+          Each layer moves at a different speed creating true z-axis depth.
+          Portrait   : 18% of scroll speed  (deepest — barely moves)
+          Mark       : 25% of scroll speed  (behind portrait)
+          Glow       : 12% of scroll speed  (anchored to ground)
+          Text col   : 8% of scroll speed   (closest — snappiest) */
+    const heroEl = document.querySelector('.hero');
+    if (heroEl) {
+      /* Portrait — floats in the background */
+      gsap.to(portraitImg, {
+        y: '-18vh', ease: 'none', overwrite: 'auto',
+        scrollTrigger: {
+          trigger: heroEl, start: 'top top', end: 'bottom top',
+          scrub: 1.0, invalidateOnRefresh: true,
+        },
+      });
+
+      /* Glow — anchored to floor, barely moves */
+      if (portraitGlow) {
+        gsap.to(portraitGlow, {
+          y: '-10vh', ease: 'none',
+          scrollTrigger: {
+            trigger: heroEl, start: 'top top', end: 'bottom top',
+            scrub: 1.2, invalidateOnRefresh: true,
+          },
+        });
+      }
+
+      /* 2026 mark — intermediate depth */
+      if (portraitMark) {
+        gsap.to(portraitMark, {
+          y: '-22vh', ease: 'none', overwrite: 'auto',
+          scrollTrigger: {
+            trigger: heroEl, start: 'top top', end: 'bottom top',
+            scrub: 0.9, invalidateOnRefresh: true,
+          },
+        });
+      }
+
+      /* Text column — closest to viewer, moves the most */
+      const heroTextCol = heroEl.querySelector('.grid > div:first-child');
+      if (heroTextCol) {
+        gsap.to(heroTextCol, {
+          y: '-8vh', ease: 'none',
+          scrollTrigger: {
+            trigger: heroEl, start: 'top top', end: 'bottom top',
+            scrub: 0.7, invalidateOnRefresh: true,
+          },
+        });
+      }
+    }
   }
 
   /* ── Hero parallax (bg image moves slower than content) */
