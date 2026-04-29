@@ -184,7 +184,7 @@ a:hover { color: var(--fg); }
 hr { border: 0; height: 1px; background: var(--border); margin: 60px 0; }
 
 /* hero */
-.hero .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: end; }
+.hero .grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 50px; align-items: end; }
 .hero h1 .alt { color: var(--amber); }
 .hero .meta-block {
   display: flex; gap: 28px; margin-top: 44px; align-items: center;
@@ -538,9 +538,10 @@ section.luminus-phase { padding: 90px 0; }
   display: flex; align-items: flex-end; justify-content: flex-end;
   width: 100%;
   height: 100%;
-  min-height: 88vh;
-  margin-bottom: -110px;        /* let portrait bleed below into next section */
-  margin-right: -28px;          /* extend past container right edge */
+  min-height: 100vh;             /* 88vh → 100vh : portrait fills full viewport height */
+  margin-bottom: -110px;
+  margin-right: -28px;
+  margin-top: -120px;            /* bleed up into nav for visual dominance */
 }
 .cve-portrait-glow {
   position: absolute;
@@ -557,11 +558,11 @@ section.luminus-phase { padding: 90px 0; }
 }
 .cve-portrait-mark {
   position: absolute;
-  bottom: 6%; right: 6%;
+  bottom: 8%; right: 4%;
   z-index: 0;
   font-family: var(--display);
   font-weight: 200;
-  font-size: clamp(180px, 28vw, 380px);
+  font-size: clamp(220px, 34vw, 460px);   /* 28vw → 34vw : matches portrait scale */
   line-height: 0.85;
   letter-spacing: -0.06em;
   color: var(--amber);
@@ -575,7 +576,7 @@ section.luminus-phase { padding: 90px 0; }
   display: block;
   width: auto;
   height: auto;
-  max-height: calc(100vh + 80px);
+  max-height: calc(108vh + 100px);   /* 100vh+80 → 108vh+100 : plus dominant */
   max-width: 100%;
   object-fit: contain;
   filter: drop-shadow(0 40px 80px rgba(10,18,32,0.65));
