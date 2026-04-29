@@ -146,11 +146,11 @@
       en: 'Frame a service, not a feature. Six moves, one Triple-Win.'
     },
     'bnp.chap3.label': { fr: 'Acte III', nl: 'Akte III', en: 'Act III' },
-    'bnp.chap3.title': { fr: 'Le résultat.', nl: 'Het resultaat.', en: 'The result.' },
+    'bnp.chap3.title': { fr: 'L\'épreuve du marché.', nl: 'De markttoets.', en: 'The market test.' },
     'bnp.chap3.lead': {
-      fr: 'Léonidas dit oui. Six mois, mêmes données, +80 % de revenu.',
-      nl: 'Léonidas zegt ja. Zes maanden, dezelfde data, +80 % omzet.',
-      en: 'Léonidas says yes. Six months, same data, +80% revenue.'
+      fr: 'Le concept est de-risked. Mais est-ce qu\'un vrai client paierait pour ça ?',
+      nl: 'Het concept is gederisicood. Maar zou een echte klant er voor betalen ?',
+      en: 'The concept is de-risked. But would a real client actually pay for it ?'
     },
     'bnp.chapBridge.label': { fr: 'Pont', nl: 'Brug', en: 'Bridge' },
     'bnp.chapBridge.title': { fr: 'Vers Luminus.', nl: 'Naar Luminus.', en: 'To Luminus.' },
@@ -161,10 +161,44 @@
     },
 
     /* ============== STAR TL;DR STRIP (NEW) ============== */
-    /* STAR — 3 panneaux pleine page (vertical → pin → horizontal → release).
-       Story strate : panel 1 plante l'asymétrie + stakes, panel 2 montre la décision,
-       panel 3 ouvre sur une PME qui a dit oui (le +80% est le climax du panel 3,
-       il n'apparaît plus avant pour préserver le punch). */
+    /* LE BRIEF + LE CATALYSEUR — 2 sections vertical, ouvrent l'histoire sans
+       spoilers. Le climax (Léonidas + chiffres) est réservé à la section Result.
+       CVE 2026-04-30 night spec : "découvrir les choses petit à petit". */
+    'bnp.brief.eyebrow': { fr: 'Le brief', nl: 'De opdracht', en: 'The brief' },
+    'bnp.brief.title': {
+      fr: '30 % des flux ne devenaient<br><span class="accent">jamais une décision.</span>',
+      nl: '30 % van de flows werden<br><span class="accent">nooit een beslissing.</span>',
+      en: '30% of the flows never<br><span class="accent">became a decision.</span>'
+    },
+    'bnp.brief.lead1': {
+      fr: 'BNP voyait passer chaque semaine des données de cartes consommateurs qui valaient de l\'or pour les commerçants. Personne ne les transformait en service.',
+      nl: 'BNP zag elke week consumentenkaart-data passeren die goud waard was voor de winkeliers. Niemand zette ze om in een dienst.',
+      en: 'BNP saw consumer-card data go by every week that was gold for merchants. No one turned it into a service.'
+    },
+    'bnp.brief.lead2': {
+      fr: 'Mon mandat : un parcours design thinking pour valider — ou invalider — l\'opportunité B2B, et défendre une recommandation au sponsor exécutif.',
+      nl: 'Mijn mandaat : een design thinking-traject om de B2B-opportuniteit te valideren — of te invalideren — en een aanbeveling te verdedigen bij de executive sponsor.',
+      en: 'My mandate : a design thinking journey to validate — or invalidate — the B2B opportunity, and defend a recommendation to the executive sponsor.'
+    },
+    'bnp.brief.sizing': {
+      fr: '12 mois <span class="dot">·</span> cadrage stratégique upstream <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> Service Designer freelance',
+      nl: '12 maanden <span class="dot">·</span> upstream strategisch kaderwerk <span class="dot">·</span> 4 interne functies <span class="dot">·</span> Service Designer freelance',
+      en: '12 months <span class="dot">·</span> upstream strategic framing <span class="dot">·</span> 4 internal functions <span class="dot">·</span> freelance Service Designer'
+    },
+
+    'bnp.catalyst.eyebrow': { fr: 'Le catalyseur', nl: 'De aanleiding', en: 'The catalyst' },
+    'bnp.catalyst.title': {
+      fr: 'Marketing m\'a <span class="accent">appelé.</span>',
+      nl: 'Marketing <span class="accent">belde.</span>',
+      en: 'Marketing <span class="accent">called.</span>'
+    },
+    'bnp.catalyst.lead': {
+      fr: 'Leur POC partait dans le mur — trop « data exploration », inadapté à la cible. Ils m\'ont fait venir pour valider, ou invalider, l\'opportunité via un parcours design thinking. C\'est par là qu\'a démarré l\'enquête.',
+      nl: 'Hun POC ging de verkeerde kant op — te « data exploration », niet aangepast aan de doelgroep. Ze haalden me erbij om de opportuniteit te valideren — of te invalideren — via een design thinking-traject. Daar begon het onderzoek.',
+      en: 'Their POC was heading the wrong way — too « data exploration », a mismatch for the target. They brought me in to validate, or invalidate, the opportunity via a design thinking journey. That\'s where the investigation started.'
+    },
+
+    /* STAR keys legacy — gardés mais plus utilisés en HTML */
     'bnp.star.label': { fr: 'STAR · l\'histoire en trois temps', nl: 'STAR · het verhaal in drie tijden', en: 'STAR · the story in three beats' },
 
     'bnp.star.s1.eyebrow': { fr: '01 · La situation', nl: '01 · De situatie', en: '01 · The situation' },
@@ -594,9 +628,9 @@
 
     'bnp.steps.s1.h': { fr: 'Recherche personas et segmentation B2B', nl: 'Persona-onderzoek en B2B-segmentatie', en: 'Persona research and B2B segmentation' },
     'bnp.steps.s1.p': {
-      fr: 'Marketing m\'a appelé. Leur POC partait dans le mur : trop « data exploration », inadapté à la cible. Premier mouvement : segmenter le marché PME selon BNP, puis interviewer des commerçants susceptibles d\'acheter de la donnée. Pas pour valider une vision — pour identifier leurs problèmes réels. Le benchmark a confirmé l\'angle stratégique : <strong class="accent">BNP voit 30 % des comptes via Bancontact</strong>, position quasi-monopolistique sur la donnée transactionnelle B2B. Mes findings ont sorti la réponse : ces gens ne sont pas data scientists. <strong class="accent">J\'ai mis à table Marketing, mon département et le PM</strong> pour présenter la recherche. On a co-créé la bascule : pas de data exploration, des rapports actionnables alignés sur des objectifs métier.',
-      nl: 'Marketing belde mij. Hun POC ging de verkeerde kant op : te « data exploration », mismatch met de doelgroep. Eerste zet : de kmo-markt segmenteren zoals BNP die zag, dan merchants interviewen die mogelijk data zouden kopen. Niet om een visie te valideren — om hun reële problemen te identificeren. De benchmark bevestigde de strategische hoek : <strong class="accent">BNP ziet 30 % van de rekeningen via Bancontact</strong>, bijna-monopoliepositie op B2B-transactiedata. Mijn findings leverden het antwoord : deze mensen zijn geen data scientists. <strong class="accent">Ik bracht Marketing, mijn departement en de PM aan tafel</strong> om het onderzoek te presenteren. We co-creëerden het kantelpunt : geen data exploration, actiegerichte rapporten gericht op zakelijke doelen.',
-      en: 'Marketing called me. Their POC was heading the wrong way : too « data exploration », a mismatch for the target. First move : segment the SME market the way BNP saw it, then interview merchants likely to buy data. Not to validate a vision — to identify their real problems. The benchmark confirmed the strategic angle : <strong class="accent">BNP sees 30% of accounts via Bancontact</strong>, near-monopoly on B2B transactional data. My findings gave the answer : these people aren\'t data scientists. <strong class="accent">I sat Marketing, my department and the PM at the table</strong> to present the research. We co-created the pivot : no data exploration, actionable reports tied to business goals.'
+      fr: 'L\'enquête démarre par la cartographie. Segmenter le marché PME selon BNP, puis interviewer des commerçants susceptibles d\'acheter de la donnée. Pas pour valider une vision — pour identifier leurs problèmes réels. Le benchmark a confirmé l\'angle stratégique : <strong class="accent">BNP voit 30 % des comptes via Bancontact</strong>, position quasi-monopolistique sur la donnée transactionnelle B2B. <strong>Mes findings ont sorti la réponse : ces gens ne sont pas data scientists.</strong> Une bibliothèque de neuf personas B2B est sortie de la phase, du libéral au CPBB, avec leur niveau d\'intérêt mappé.',
+      nl: 'Het onderzoek start met cartografie. De kmo-markt segmenteren zoals BNP die zag, dan merchants interviewen die mogelijk data zouden kopen. Niet om een visie te valideren — om hun reële problemen te identificeren. De benchmark bevestigde de strategische hoek : <strong class="accent">BNP ziet 30 % van de rekeningen via Bancontact</strong>, bijna-monopoliepositie op B2B-transactiedata. <strong>Mijn findings leverden het antwoord : deze mensen zijn geen data scientists.</strong> Een bibliotheek van negen B2B-persona\'s kwam uit de fase, van vrije beroepen tot CPBB, met hun interesseniveau in kaart gebracht.',
+      en: 'The investigation starts with mapping. Segment the SME market the way BNP saw it, then interview merchants likely to buy data. Not to validate a vision — to identify their real problems. The benchmark confirmed the strategic angle : <strong class="accent">BNP sees 30% of accounts via Bancontact</strong>, near-monopoly on B2B transactional data. <strong>My findings gave the answer : these people aren\'t data scientists.</strong> A library of nine B2B personas came out of the phase, from liberal professions to CPBB, with their level of interest mapped.'
     },
     'bnp.steps.s1.deliv': { fr: 'Livrable · bibliothèque 9 personas · matrice Niveaux d\'intérêt', nl: 'Deliverable · 9-persona-bibliotheek · Interesseniveau-matrix', en: 'Deliverable · 9-persona library · Levels of Interest matrix' },
     'bnp.steps.s1.cap': { fr: '9 personas B2B · validés par recherche', nl: '9 B2B-persona\'s · onderzoeksgebaseerd', en: '9 B2B personas · research-backed' },
