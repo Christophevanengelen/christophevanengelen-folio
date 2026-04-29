@@ -98,41 +98,75 @@
 
     /* Depth-z entrance/exit — each panel emerges from the background as it
        approaches center, recedes as it leaves. Creates the "carousel from the
-       back" effect (CVE 2026-04-30 spec). Scrub-tied so it feels enchaîné. */
-    panels.forEach((panel) => {
+       back" effect (CVE 2026-04-30 spec). Scrub-tied so it feels enchaîné.
+       FIX 2026-04-30 night : panel 1 starts at full state (already at center
+       on section entry, no entrance needed); panel N exits to back. */
+    const lastIdx = panels.length - 1;
+    panels.forEach((panel, idx) => {
       const inner = panel.querySelector('.h-panel-inner');
       if (!inner) return;
-      /* Entering : back → front */
-      gsap.fromTo(inner,
-        { scale: 0.78, opacity: 0.32, filter: 'blur(2px)' },
+
+      const isFirst = idx === 0;
+      const isLast = idx === lastIdx;
+
+      if (isFirst) {
+        /* Panel 1 : initial full state, no entrance animation */
+        gsap.set(inner, { scale: 1, opacity: 1, filter: 'blur(0px)' });
+      } else {
+        /* Entering : back → front (panels 2+) */
+        gsap.fromTo(inner,
+          { scale: 0.78, opacity: 0.32, filter: 'blur(2px)' },
+          {
+            scale: 1, opacity: 1, filter: 'blur(0px)',
+            ease: 'sine.out',
+            scrollTrigger: {
+              trigger: panel,
+              containerAnimation: tween,
+              start: 'left right',
+              end: 'left center',
+              scrub: 0.8,
+              invalidateOnRefresh: true,
+            },
+          });
+      }
+
+      if (!isLast) {
+        /* Leaving : front → back (subtle, lets the next panel emerge cleanly) */
+        gsap.fromTo(inner,
+          { scale: 1, opacity: 1, filter: 'blur(0px)' },
+          {
+            scale: 0.88, opacity: 0.55, filter: 'blur(1.5px)',
+            ease: 'sine.in',
+            scrollTrigger: {
+              trigger: panel,
+              containerAnimation: tween,
+              start: 'right center',
+              end: 'right left',
+              scrub: 0.8,
+              invalidateOnRefresh: true,
+            },
+          });
+      }
+    });
+
+    /* Section entry effect : slight zoom-out (1.06 → 1) when the pinned section
+       enters viewport. Mimics "emerging from the chapter portal" — the section
+       feels like it pulls forward from depth into clarity. (reuses `track` from
+       line 43 above) */
+    if (track) {
+      gsap.fromTo(track,
+        { scale: 1.06, opacity: 0.85 },
         {
-          scale: 1, opacity: 1, filter: 'blur(0px)',
+          scale: 1, opacity: 1,
           ease: 'sine.out',
           scrollTrigger: {
-            trigger: panel,
-            containerAnimation: tween,
-            start: 'left right',
-            end: 'left center',
-            scrub: 0.8,
-            invalidateOnRefresh: true,
+            trigger: section,
+            start: 'top bottom',
+            end: 'top top',
+            scrub: 0.6,
           },
         });
-      /* Leaving : front → back (subtle, lets the next panel emerge cleanly) */
-      gsap.fromTo(inner,
-        { scale: 1, opacity: 1, filter: 'blur(0px)' },
-        {
-          scale: 0.88, opacity: 0.55, filter: 'blur(1.5px)',
-          ease: 'sine.in',
-          scrollTrigger: {
-            trigger: panel,
-            containerAnimation: tween,
-            start: 'right center',
-            end: 'right left',
-            scrub: 0.8,
-            invalidateOnRefresh: true,
-          },
-        });
-    });
+    }
 
     /* Per-panel parallax — title slow, visual fast (depth) */
     panels.forEach((panel) => {
