@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=sprintG">
+<link rel="stylesheet" href="assets/style.css?v=sprintH">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -189,6 +189,15 @@
     50%  { transform: translateX(60px); }
     100% { transform: translateX(60px); }
   }
+  /* Curiosity hook — Loewenstein information gap, quiet, italic, last before scroll cue */
+  .hcx__hook {
+    position: absolute; bottom: 78px; left: 56px; z-index: 4;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 400;
+    font-size: clamp(13px, 1.15vw, 17px); line-height: 1.48;
+    color: rgba(242,235,219,0.52);
+    max-width: 50ch; pointer-events: none;
+  }
 
   @media (max-width: 1100px) {
     .hcx__grid { grid-template-columns: 1fr; padding: 88px 32px 48px 32px; }
@@ -216,6 +225,7 @@
     .hcx__bento-num { font-size: clamp(22px, 7vw, 34px); }
     .hcx__bento-lab { font-size: 9px; letter-spacing: .18em; }
     .hcx__scroll { left: 20px; bottom: 20px; }
+    .hcx__hook { left: 20px; bottom: 62px; font-size: 12px; max-width: 36ch; }
     .hcx__role-where { font-size: 13px; }
   }
   @media (max-width: 420px) {
@@ -1014,15 +1024,34 @@
       </div>
     </div>
   </div>
+  <div class="hcx__hook" data-i18n="bnp.hero.hook">Comment une donnée bancaire est devenue un service que quelqu'un a accepté de payer.</div>
   <div class="hcx__scroll">
     <span>Scroll · l'histoire</span>
     <span class="hcx__scroll-line"></span>
   </div>
 </section>
 
-<!-- STAR — vertical → pin → horizontal → release. Apple-style narrative. -->
+<!-- BRIDGE · Jaquette → Histoire — moment typographique, synopsis avant le STAR -->
+<section class="star-bridge">
+  <div class="star-bridge__bg" aria-hidden="true">T · A · R</div>
+  <div class="star-bridge__inner">
+    <p class="star-bridge__phrase" data-i18n="bnp.bridge.phrase">Six mois. Trois actes. Un commerçant qui dit oui.</p>
+    <span class="star-bridge__sub" data-i18n="bnp.bridge.sub">Une asymétrie de données · un processus design thinking · un premier paiement.</span>
+  </div>
+</section>
+
+<!-- CHAPTER T — portail vers Act T (positionné avant le contenu T) -->
+<section class="chapter-divider" data-chapter="T">
+  <div class="chapter-roman" aria-hidden="true">T</div>
+  <div class="chapter-meta">
+    <span class="chapter-label" data-i18n="bnp.chap1.label">Task · Le défi</span>
+    <h2 class="chapter-title" data-i18n="bnp.chap1.title">Le défi.</h2>
+    <p class="chapter-lead" data-i18n="bnp.chap1.lead">Une banque assise sur 30% des flux carte du pays. Personne pour transformer ça en service.</p>
+  </div>
+</section>
+
 <!-- LE BRIEF — Setup. Pose la question, pas le résultat. Découverte progressive. -->
-<section id="brief">
+<section id="brief" data-act="T">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.brief.eyebrow">Le brief</span>
     <h2 data-i18n-html="bnp.brief.title">30 % des flux ne devenaient<br><span class="accent">jamais une décision.</span></h2>
@@ -1033,7 +1062,7 @@
 </section>
 
 <!-- LE CATALYSEUR — Inciting incident : Marketing called. Pas encore de pivot. -->
-<section id="catalyst">
+<section id="catalyst" data-act="T">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.catalyst.eyebrow">Le catalyseur</span>
     <h2 data-i18n-html="bnp.catalyst.title">Marketing m'a <span class="accent">appelé.</span></h2>
@@ -1041,18 +1070,8 @@
   </div>
 </section>
 
-<!-- CHAPTER T — divider -->
-<section class="chapter-divider" data-chapter="T">
-  <div class="chapter-roman" aria-hidden="true">T</div>
-  <div class="chapter-meta">
-    <span class="chapter-label" data-i18n="bnp.chap1.label">Task · Le défi</span>
-    <h2 class="chapter-title" data-i18n="bnp.chap1.title">Le défi.</h2>
-    <p class="chapter-lead" data-i18n="bnp.chap1.lead">Une banque assise sur 30% des flux carte du pays. Personne pour transformer ça en service.</p>
-  </div>
-</section>
-
 <!-- THE PROBLEM -->
-<section id="problem" data-section-num="01">
+<section id="problem" data-section-num="01" data-act="T">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.problem.eyebrow">The Problem · 1 of 3</span>
     <h2 data-i18n-html="bnp.problem.h2">What problem were we trying to solve?</h2>
@@ -1215,7 +1234,7 @@
 </section>
 
 <!-- THE ROLE -->
-<section id="role" data-section-num="02">
+<section id="role" data-section-num="02" data-act="A">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.role.eyebrow">My Role · 2 of 3</span>
     <h2 data-i18n-html="bnp.role.h2">What role did I play in the process?</h2>
@@ -1427,7 +1446,7 @@
 </section>
 
 <!-- LEONIDAS RESULT -->
-<section id="result" data-section-num="04">
+<section id="result" data-section-num="04" data-act="R">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.result.eyebrow">The Result</span>
     <h2 data-i18n-html="bnp.result.h2">From concept to a real PME saying yes.</h2>
@@ -1514,7 +1533,7 @@
 </section>
 
 <!-- LESSONS LEARNED — what I'd do differently (between Result and Bridge) -->
-<section id="lessons" data-section-num="04b">
+<section id="lessons" data-section-num="04b" data-act="R">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.lessons.eyebrow">Si je refaisais le projet</span>
     <h2 data-i18n-html="bnp.lessons.h2">Ce que je referais <span class="accent">différemment.</span></h2>
@@ -1591,9 +1610,9 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=R4"></script>
+<script src="assets/i18n.js?v=R5"></script>
 <script src="assets/theme.js?v=cinema"></script>
-<script src="assets/motion.js?v=portal4"></script>
+<script src="assets/motion.js?v=portal5"></script>
 <script src="assets/deck.js?v=deck1"></script>
 <script src="assets/scroll-narrative.js?v=fielded"></script>
 </body>

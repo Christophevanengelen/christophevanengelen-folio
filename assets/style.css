@@ -926,6 +926,43 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
   100% { transform: translateY(40px); opacity: 0; }
 }
 
+/* ── Star Bridge — jaquette → histoire (typographic synopsis moment) */
+.star-bridge {
+  position: relative;
+  min-height: 52vh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg);
+  text-align: center;
+  overflow: hidden;
+}
+.star-bridge__bg {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(100px, 18vw, 260px); line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--amber); opacity: 0.07;
+  pointer-events: none; user-select: none;
+}
+.star-bridge__inner {
+  position: relative; z-index: 1;
+  max-width: 70ch;
+  padding: clamp(60px, 10vh, 110px) clamp(24px, 5vw, 80px);
+}
+.star-bridge__phrase {
+  font-family: var(--display); font-weight: 200;
+  font-size: clamp(26px, 3.6vw, 52px); line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--fg);
+  margin: 0 0 24px;
+}
+.star-bridge__sub {
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--fg-muted);
+  display: block;
+}
+
 /* CHAPTER DIVIDERS — full-screen Roman + meta */
 .chapter-divider {
   min-height: 100vh;

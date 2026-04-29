@@ -196,6 +196,99 @@
     });
   }
 
+  /* ── BNP Jaquette entrance — cinématique (CVE 2026-04-30, confirmed).
+     Reading rhythm : top→bottom, left→right, breathing pauses between headline
+     weight changes. Ends on curiosity hook — Loewenstein information gap :
+     names what happened without saying how. That gap IS the scroll desire.
+     Tier 1 intensity — this is the film's opening frame, not a section reveal. */
+  const hcxSection = document.querySelector('.hcx');
+  if (hcxSection) {
+    const hcxBg      = hcxSection.querySelector('.hcx__bg img');
+    const hcxClient  = hcxSection.querySelector('.hcx__client');
+    const hcxPeriod  = hcxSection.querySelector('.hcx__period');
+    const hcxEyebrow = hcxSection.querySelector('.hcx__eyebrow');
+    const hcxHl1     = hcxSection.querySelector('.hcx__hl1');
+    const hcxHl2     = hcxSection.querySelector('.hcx__hl2');
+    const hcxLead    = hcxSection.querySelector('.hcx__lead');
+    const hcxRole    = hcxSection.querySelector('.hcx__role');
+    const hcxBentoCells = hcxSection.querySelectorAll('.hcx__bento-cell');
+    const hcxHook    = hcxSection.querySelector('.hcx__hook');
+    const hcxScroll  = hcxSection.querySelector('.hcx__scroll');
+
+    /* Set all elements invisible before curtain rises — synchronous, no flash */
+    if (hcxBg)      gsap.set(hcxBg,      { scale: 1.18 });
+    if (hcxClient)  gsap.set(hcxClient,  { opacity: 0, x: -20 });
+    if (hcxPeriod)  gsap.set(hcxPeriod,  { opacity: 0, x: 20 });
+    if (hcxEyebrow) gsap.set(hcxEyebrow, { opacity: 0, y: 16 });
+    if (hcxHl1)     gsap.set(hcxHl1,     { opacity: 0, y: 36 });
+    if (hcxHl2)     gsap.set(hcxHl2,     { opacity: 0, y: 48 });
+    if (hcxLead)    gsap.set(hcxLead,    { opacity: 0, y: 20 });
+    if (hcxRole)    gsap.set(hcxRole,    { opacity: 0, y: 18 });
+    if (hcxBentoCells.length) gsap.set(hcxBentoCells, { opacity: 0, y: 22, scale: 0.96 });
+    if (hcxHook)    gsap.set(hcxHook,    { opacity: 0, y: 12 });
+    if (hcxScroll)  gsap.set(hcxScroll,  { opacity: 0, y: 10 });
+
+    const hcxTl = gsap.timeline({ delay: 0.25 });
+
+    /* t=0.0 — BG breathes in. Majestic, slow. The world establishes. */
+    if (hcxBg)      hcxTl.to(hcxBg,      { scale: 1.04, duration: 1.60, ease: 'power3.out' }, 0);
+
+    /* t=0.3 — Client name slides from left. Context anchors. */
+    if (hcxClient)  hcxTl.to(hcxClient,  { opacity: 1, x: 0, duration: 0.70, ease: 'power2.out' }, 0.30);
+
+    /* t=0.5 — Location slides from right. World named. */
+    if (hcxPeriod)  hcxTl.to(hcxPeriod,  { opacity: 1, x: 0, duration: 0.60, ease: 'power2.out' }, 0.50);
+
+    /* t=0.8 — Eyebrow. Sets the register : service design case study. */
+    if (hcxEyebrow) hcxTl.to(hcxEyebrow, { opacity: 1, y: 0, duration: 0.60, ease: 'power2.out' }, 0.80);
+
+    /* t=1.0 — "Enterprise" weight 200 floats up. Light. Hangs. */
+    if (hcxHl1)     hcxTl.to(hcxHl1,     { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' }, 1.00);
+
+    /* t=1.2 — "Intelligence." weight 800, copper, lands heavy.
+       200ms gap vs hl1 = the beat. Not mechanical, alive. */
+    if (hcxHl2)     hcxTl.to(hcxHl2,     { opacity: 1, y: 0, duration: 1.00, ease: 'power3.out' }, 1.20);
+
+    /* ── PAUSE 500ms : headline settles, brain decodes ── */
+
+    /* t=1.7 — Lead : the promise. Why this matters. */
+    if (hcxLead)    hcxTl.to(hcxLead,    { opacity: 1, y: 0, duration: 0.80, ease: 'power2.out' }, 1.70);
+
+    /* ── PAUSE 500ms : stakes understood ── */
+
+    /* t=2.2 — Role. Authority signal : freelance, upstream, 6 months. */
+    if (hcxRole)    hcxTl.to(hcxRole,    { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 2.20);
+
+    /* t=2.6 — Bento cells stagger. 4 receipts landing, each one concrete. */
+    if (hcxBentoCells.length) {
+      hcxTl.to(hcxBentoCells, {
+        opacity: 1, y: 0, scale: 1,
+        duration: 0.60, ease: 'power2.out',
+        stagger: 0.12,
+      }, 2.60);
+    }
+
+    /* ── PAUSE 600ms : numbers land, eyebrows raise ── */
+
+    /* t=3.2 — Curiosity hook. Italic, quiet, irresistible.
+       Information gap : names the transformation without explaining it. */
+    if (hcxHook)    hcxTl.to(hcxHook,    { opacity: 1, y: 0, duration: 0.90, ease: 'power2.out' }, 3.20);
+
+    /* t=3.5 — Scroll cue last. The invitation. */
+    if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.50);
+
+    /* ── Scroll parallax : BG image drifts slower than content */
+    if (hcxBg) {
+      gsap.to(hcxBg, {
+        yPercent: 15, ease: 'none',
+        scrollTrigger: {
+          trigger: hcxSection, start: 'top top', end: 'bottom top',
+          scrub: 1.2, invalidateOnRefresh: true,
+        },
+      });
+    }
+  }
+
   /* ── Chapter dividers : ZOOM-PORTAL pattern (CVE 2026-04-30 spec).
         Pattern : user scrolls down → divider pins → numeral scales 1 → 4 (zoom-in
         effect, "entering the chapter") → meta reveals at peak → both fade out as

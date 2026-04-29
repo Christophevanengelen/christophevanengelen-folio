@@ -129,6 +129,23 @@
     },
     'bnp.hero.location': { fr: 'Bruxelles', nl: 'Brussel', en: 'Brussels' },
     'bnp.hero.cap': { fr: 'Vision canal · Concept Report · Slide 02', nl: 'Kanaalvisie · Concept Report · Slide 02', en: 'Channel vision · Concept Report · Slide 02' },
+    'bnp.hero.hook': {
+      fr: 'Comment une donnée bancaire est devenue un service que quelqu\'un a accepté de payer.',
+      nl: 'Hoe bankdata een dienst werd die iemand bereid was te betalen.',
+      en: 'How banking data became a service someone agreed to pay for.'
+    },
+
+    /* ============== BRIDGE — jaquette → histoire ============== */
+    'bnp.bridge.phrase': {
+      fr: 'Six mois. Trois actes. Un commerçant qui dit oui.',
+      nl: 'Zes maanden. Drie aktes. Een handelaar die ja zegt.',
+      en: 'Six months. Three acts. A merchant who says yes.'
+    },
+    'bnp.bridge.sub': {
+      fr: 'Une asymétrie de données · un processus design thinking · un premier paiement.',
+      nl: 'Een data-asymmetrie · een design thinking-traject · een eerste betaling.',
+      en: 'A data asymmetry · a design thinking process · a first payment.'
+    },
 
     /* ============== CHAPTER DIVIDERS (NEW — cinematic 3-act structure) ============== */
     'bnp.chap1.label': { fr: 'Task · Le défi', nl: 'Task · De uitdaging', en: 'Task · The challenge' },
