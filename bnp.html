@@ -256,6 +256,106 @@
   .h-panel-step.h-panel--05 { background: linear-gradient(180deg, transparent, rgba(199,105,65,0.045)); }
   .h-panel-step.h-panel--06 { background: linear-gradient(180deg, transparent, rgba(199,105,65,0.060)); }
 
+  /* Barriers intro slide — transition typographique avant le horizontal pin
+     CVE 2026-04-30 spec : "il faut nommer les choses, en faire un slide
+     storytelling". Background numeral + named character + scroll cue.
+     Copy × animation interlock : le grand 06 anticipe les 6 panneaux qui
+     suivent ; la flèche → invite le scroll horizontal qui arrive. */
+  .bi-slide {
+    position: relative;
+    min-height: 80vh;
+    padding: clamp(80px, 12vh, 140px) clamp(28px, 6vw, 100px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg-2) 94%, var(--amber)) 50%, var(--bg) 100%);
+    overflow: hidden;
+  }
+  .bi-num {
+    position: absolute;
+    top: 50%;
+    right: clamp(-40px, -3vw, -20px);
+    transform: translateY(-50%);
+    font-family: var(--display);
+    font-weight: 200;
+    font-size: clamp(280px, 46vw, 720px);
+    line-height: 0.78;
+    letter-spacing: -0.06em;
+    color: var(--amber);
+    opacity: 0.13;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+  .bi-content {
+    position: relative;
+    z-index: 1;
+    max-width: 64ch;
+  }
+  .bi-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.20em; text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 32px;
+  }
+  .bi-eyebrow::before {
+    content: ""; width: 28px; height: 1px;
+    background: var(--amber);
+  }
+  .bi-title {
+    font-family: var(--display);
+    font-weight: 200;
+    font-size: clamp(56px, 7.5vw, 120px);
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    margin: 0 0 32px;
+    color: var(--fg);
+  }
+  .bi-title .accent {
+    color: var(--amber);
+    font-weight: 700;
+    display: block;
+  }
+  .bi-lead {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.55;
+    color: var(--fg);
+    margin: 0 0 40px;
+    max-width: 56ch;
+  }
+  .bi-lead strong {
+    color: var(--amber);
+    font-weight: 600;
+  }
+  .bi-cue {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 12px 22px;
+    border: 1px solid rgba(199, 105, 65, 0.30);
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--amber);
+  }
+  .bi-cue-arrow {
+    display: inline-block;
+    font-size: 14px;
+    animation: biCueArrow 1.6s cubic-bezier(.65,0,.35,1) infinite;
+  }
+  @keyframes biCueArrow {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+  }
+  @media (max-width: 720px) {
+    .bi-slide { min-height: auto; padding: 60px 24px; }
+    .bi-num { font-size: clamp(180px, 50vw, 320px); right: -10vw; opacity: 0.10; }
+    .bi-title { font-size: clamp(40px, 10vw, 60px); }
+  }
+
   /* Pull-quote hero — respiration entre actes */
   .pq-hero {
     padding: clamp(80px, 14vh, 160px) 0;
@@ -1044,12 +1144,20 @@
       </div>
     </div>
 
-    <hr>
+  </div>
+</section>
 
-    <h3 style="text-align: center; max-width: 22ch; margin: 0 auto 6px;" data-i18n-html="bnp.barriers.h3">Six real barriers we surfaced in research.</h3>
-    <p style="text-align: center; color: var(--fg-muted); max-width: 60ch; margin: 0 auto;" data-i18n="bnp.barriers.intro">
-      Not generic friction. These are the exact concerns merchants raised in interviews. They became the design constraints for the MVP.
-    </p>
+<!-- BARRIÈRES INTRO SLIDE · transition typographique avant le horizontal pin -->
+<section class="bi-slide">
+  <div class="bi-num" aria-hidden="true">06</div>
+  <div class="bi-content">
+    <span class="bi-eyebrow" data-i18n="bnp.barriersIntro.eyebrow">Recherche utilisateur · interviews qualitatives</span>
+    <h2 class="bi-title" data-i18n-html="bnp.barriersIntro.title">Six voix.<br><span class="accent">Une seule conviction.</span></h2>
+    <p class="bi-lead" data-i18n-html="bnp.barriersIntro.lead">On a interviewé Jean-Paul, CEO multi-shops, et cinq autres commerçants. Six fois, la même réticence — exprimée différemment. <strong>Pas de la friction générique.</strong> Les phrases exactes qui sont sorties en interview, et qui sont devenues les six contraintes design du MVP.</p>
+    <div class="bi-cue" aria-hidden="true">
+      <span data-i18n="bnp.barriersIntro.cue">Faites défiler · les six voix prennent la parole</span>
+      <span class="bi-cue-arrow">→</span>
+    </div>
   </div>
 </section>
 
@@ -1556,7 +1664,7 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=heroclean"></script>
+<script src="assets/i18n.js?v=bislide"></script>
 <script src="assets/theme.js?v=cinema"></script>
 <script src="assets/motion.js?v=portal3"></script>
 <script src="assets/deck.js?v=deck1"></script>

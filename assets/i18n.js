@@ -391,6 +391,28 @@
       en: 'Original artefact · Discovery report · Key Driver and 6 Key Barriers'
     },
 
+    /* Barriers intro slide — transition typographique avant le horizontal pin */
+    'bnp.barriersIntro.eyebrow': {
+      fr: 'Recherche utilisateur · interviews qualitatives',
+      nl: 'Gebruikersonderzoek · kwalitatieve interviews',
+      en: 'User research · qualitative interviews'
+    },
+    'bnp.barriersIntro.title': {
+      fr: 'Six voix.<br><span class="accent">Une seule conviction.</span>',
+      nl: 'Zes stemmen.<br><span class="accent">Eén overtuiging.</span>',
+      en: 'Six voices.<br><span class="accent">One conviction.</span>'
+    },
+    'bnp.barriersIntro.lead': {
+      fr: 'On a interviewé Jean-Paul, CEO multi-shops, et cinq autres commerçants. Six fois, la même réticence — exprimée différemment. <strong>Pas de la friction générique.</strong> Les phrases exactes qui sont sorties en interview, et qui sont devenues les six contraintes design du MVP.',
+      nl: 'We interviewden Jean-Paul, CEO multi-winkels, en vijf andere merchants. Zes keer dezelfde terughoudendheid — anders verwoord. <strong>Geen generieke wrijving.</strong> De letterlijke zinnen uit de interviews, die de zes ontwerpbeperkingen van de MVP werden.',
+      en: 'We interviewed Jean-Paul, multi-shop CEO, and five other merchants. Six times, the same reluctance — phrased differently. <strong>Not generic friction.</strong> The exact sentences from the interviews that became the six design constraints of the MVP.'
+    },
+    'bnp.barriersIntro.cue': {
+      fr: 'Faites défiler · les six voix prennent la parole',
+      nl: 'Scroll · de zes stemmen nemen het woord',
+      en: 'Scroll · the six voices speak'
+    },
+
     /* 6 barrières — horizontal pin section, voix unifiée Jean-Paul */
     'bnp.barriers.label': {
       fr: 'Jean-Paul, CEO multi-shops · six barrières en interviews',
