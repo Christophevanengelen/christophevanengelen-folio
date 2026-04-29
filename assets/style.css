@@ -1017,13 +1017,13 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
 }
 
 /* Ambient hue shift — chapter dividers progressively warmer (gris cool → cuivre warm) */
-.chapter-divider[data-chapter="01"] {
+.chapter-divider[data-chapter="T"] {
   background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg-2) 96%, var(--amber)) 50%, var(--bg) 100%);
 }
-.chapter-divider[data-chapter="02"] {
+.chapter-divider[data-chapter="A"] {
   background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg-2) 92%, var(--amber)) 50%, var(--bg) 100%);
 }
-.chapter-divider[data-chapter="03"] {
+.chapter-divider[data-chapter="R"] {
   background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg-2) 86%, var(--amber)) 50%, var(--bg) 100%);
 }
 .chapter-divider[data-chapter="→"] {

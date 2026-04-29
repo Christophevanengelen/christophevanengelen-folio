@@ -131,26 +131,26 @@
     'bnp.hero.cap': { fr: 'Vision canal · Concept Report · Slide 02', nl: 'Kanaalvisie · Concept Report · Slide 02', en: 'Channel vision · Concept Report · Slide 02' },
 
     /* ============== CHAPTER DIVIDERS (NEW — cinematic 3-act structure) ============== */
-    'bnp.chap1.label': { fr: 'Acte I', nl: 'Akte I', en: 'Act I' },
-    'bnp.chap1.title': { fr: 'Le problème.', nl: 'Het probleem.', en: 'The problem.' },
+    'bnp.chap1.label': { fr: 'Task · Le défi', nl: 'Task · De uitdaging', en: 'Task · The challenge' },
+    'bnp.chap1.title': { fr: 'Le défi.', nl: 'De uitdaging.', en: 'The challenge.' },
     'bnp.chap1.lead': {
-      fr: 'Une asymétrie stratégique. La banque voyait, les PME ignoraient.',
-      nl: 'Een strategische asymmetrie. De bank zag, de kmo\'s wisten niet.',
-      en: 'A strategic asymmetry. The bank saw, the SMEs were blind.'
+      fr: 'Une banque assise sur 30% des flux carte du pays. Personne pour transformer ça en service.',
+      nl: 'Een bank die 30% van de kaartstromen ziet. Niemand die er een dienst van maakte.',
+      en: 'A bank sitting on 30% of the country\'s card flows. Nobody turning that into a service.'
     },
-    'bnp.chap2.label': { fr: 'Acte II', nl: 'Akte II', en: 'Act II' },
-    'bnp.chap2.title': { fr: 'L\'action.', nl: 'De actie.', en: 'The move.' },
+    'bnp.chap2.label': { fr: 'Action · La démarche', nl: 'Action · De aanpak', en: 'Action · The approach' },
+    'bnp.chap2.title': { fr: 'La démarche.', nl: 'De aanpak.', en: 'The approach.' },
     'bnp.chap2.lead': {
-      fr: 'Cadrer un service, pas une feature. Six mouvements, un Triple-Win.',
-      nl: 'Een dienst kaderen, geen feature. Zes bewegingen, één Triple-Win.',
-      en: 'Frame a service, not a feature. Six moves, one Triple-Win.'
+      fr: 'Double diamond. Six mois. Comprendre d\'abord, créer ensuite, valider avec un vrai client.',
+      nl: 'Double diamond. Zes maanden. Eerst begrijpen, dan creëren, valideren met een echte klant.',
+      en: 'Double diamond. Six months. Understand first, build next, validate with a real client.'
     },
-    'bnp.chap3.label': { fr: 'Acte III', nl: 'Akte III', en: 'Act III' },
-    'bnp.chap3.title': { fr: 'L\'épreuve du marché.', nl: 'De markttoets.', en: 'The market test.' },
+    'bnp.chap3.label': { fr: 'Result · Le résultat', nl: 'Result · Het resultaat', en: 'Result · The outcome' },
+    'bnp.chap3.title': { fr: 'Le résultat.', nl: 'Het resultaat.', en: 'The outcome.' },
     'bnp.chap3.lead': {
-      fr: 'Le concept est de-risked. Mais est-ce qu\'un vrai client paierait pour ça ?',
-      nl: 'Het concept is gederisicood. Maar zou een echte klant er voor betalen ?',
-      en: 'The concept is de-risked. But would a real client actually pay for it ?'
+      fr: 'Le concept est de-risked. Un vrai commerçant paie.',
+      nl: 'Het concept is de-risked. Een echte handelaar betaalt.',
+      en: 'The concept is de-risked. A real merchant pays.'
     },
     'bnp.chapBridge.label': { fr: 'Pont', nl: 'Brug', en: 'Bridge' },
     'bnp.chapBridge.title': { fr: 'Vers Luminus.', nl: 'Naar Luminus.', en: 'To Luminus.' },
