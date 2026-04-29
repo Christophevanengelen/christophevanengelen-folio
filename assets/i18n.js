@@ -110,9 +110,9 @@
     'bnp.nav.pill2': { fr: 'Pour Luminus · 2026', nl: 'Voor Luminus · 2026', en: 'For Luminus · 2026' },
 
     'bnp.hero.eyebrow': {
-      fr: 'Étude de cas Service Design · BNP Paribas Fortis · 2018 – 2019',
-      nl: 'Service Design Case Study · BNP Paribas Fortis · 2018 – 2019',
-      en: 'Service Design Case Study · BNP Paribas Fortis · 2018 – 2019'
+      fr: 'Étude de cas · Service Design',
+      nl: 'Case Study · Service Design',
+      en: 'Service Design · Case Study'
     },
     'bnp.hero.h1.start': { fr: 'Enterprise', nl: 'Enterprise', en: 'Enterprise' },
     'bnp.hero.h1.alt': { fr: 'Intelligence.', nl: 'Intelligence.', en: 'Intelligence.' },
@@ -123,9 +123,9 @@
     },
     'bnp.hero.metaRole': { fr: 'Service Designer · Freelance', nl: 'Service Designer · Freelance', en: 'Service Designer · Freelance' },
     'bnp.hero.metaWhere': {
-      fr: '12 mois · cadrage stratégique upstream',
-      nl: '12 maanden · upstream strategisch kaderwerk',
-      en: '12 months · upstream strategic framing'
+      fr: '6 mois · cadrage stratégique upstream',
+      nl: '6 maanden · upstream strategisch kaderwerk',
+      en: '6 months · upstream strategic framing'
     },
     'bnp.hero.location': { fr: 'Bruxelles', nl: 'Brussel', en: 'Brussels' },
     'bnp.hero.cap': { fr: 'Vision canal · Concept Report · Slide 02', nl: 'Kanaalvisie · Concept Report · Slide 02', en: 'Channel vision · Concept Report · Slide 02' },
@@ -181,9 +181,9 @@
       en: 'My mandate : a design thinking journey to validate — or invalidate — the B2B opportunity, and defend a recommendation to the executive sponsor.'
     },
     'bnp.brief.sizing': {
-      fr: '12 mois <span class="dot">·</span> cadrage stratégique upstream <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> Service Designer freelance',
-      nl: '12 maanden <span class="dot">·</span> upstream strategisch kaderwerk <span class="dot">·</span> 4 interne functies <span class="dot">·</span> Service Designer freelance',
-      en: '12 months <span class="dot">·</span> upstream strategic framing <span class="dot">·</span> 4 internal functions <span class="dot">·</span> freelance Service Designer'
+      fr: '6 mois <span class="dot">·</span> cadrage stratégique upstream <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> Service Designer freelance',
+      nl: '6 maanden <span class="dot">·</span> upstream strategisch kaderwerk <span class="dot">·</span> 4 interne functies <span class="dot">·</span> Service Designer freelance',
+      en: '6 months <span class="dot">·</span> upstream strategic framing <span class="dot">·</span> 4 internal functions <span class="dot">·</span> freelance Service Designer'
     },
 
     'bnp.catalyst.eyebrow': { fr: 'Le catalyseur', nl: 'De aanleiding', en: 'The catalyst' },
@@ -302,14 +302,14 @@
       en: 'The numbers,<br><span class="accent">before the story.</span>'
     },
     'bnp.glance.lead': {
-      fr: 'Douze mois entre service design, stratégie business et aide à la décision. Quatre chiffres résument ce qui comptait.',
-      nl: 'Twaalf maanden tussen service design, bedrijfsstrategie en beslissingsondersteuning. Vier cijfers vatten samen wat telde.',
-      en: 'Twelve months at the intersection of service design, business strategy and decision support. Four numbers sum up what mattered.'
+      fr: 'Six mois entre service design, stratégie business et aide à la décision. Quatre chiffres résument ce qui comptait.',
+      nl: 'Zes maanden tussen service design, bedrijfsstrategie en beslissingsondersteuning. Vier cijfers vatten samen wat telde.',
+      en: 'Six months at the intersection of service design, business strategy and decision support. Four numbers sum up what mattered.'
     },
     'bnp.glance.sizing': {
-      fr: '12 mois <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> 6 PME testées <span class="dot">·</span> 1 client pilote',
-      nl: '12 maanden <span class="dot">·</span> 4 interne functies <span class="dot">·</span> 6 kmo\'s getest <span class="dot">·</span> 1 pilootklant',
-      en: '12 months <span class="dot">·</span> 4 internal functions <span class="dot">·</span> 6 SMEs tested <span class="dot">·</span> 1 pilot client'
+      fr: '6 mois <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> 6 PME testées <span class="dot">·</span> 1 client pilote',
+      nl: '6 maanden <span class="dot">·</span> 4 interne functies <span class="dot">·</span> 6 kmo\'s getest <span class="dot">·</span> 1 pilootklant',
+      en: '6 months <span class="dot">·</span> 4 internal functions <span class="dot">·</span> 6 SMEs tested <span class="dot">·</span> 1 pilot client'
     },
     'bnp.glance.s1.label': { fr: 'Flux cartes consommateurs', nl: 'Consumentenkaart-flows', en: 'Consumer card flows' },
     'bnp.glance.s1.desc': {

@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=sprintC">
+<link rel="stylesheet" href="assets/style.css?v=sprintD">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -66,28 +66,27 @@
   }
   .hcx__client {
     grid-column: 1 / 2; grid-row: 1 / 2;
-    display: flex; flex-direction: column; gap: 14px;
+    display: flex; flex-direction: row; align-items: center; gap: 16px;
     font-family: "Manrope", sans-serif;
-    align-self: start;
+    align-self: center;           /* vertically aligned with Brussels */
   }
-  .hcx__logo {
-    height: 32px; width: auto;
-    display: block;
-    filter: brightness(0) invert(1) drop-shadow(0 1px 8px rgba(10,18,32,0.4));
-    opacity: 0.95;
+  .hcx__client-name {
+    font-size: 11px; font-weight: 700; letter-spacing: .20em; text-transform: uppercase;
+    color: rgba(242,235,219,0.88);
   }
   .hcx__client-period {
-    font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
-    color: rgba(242,235,219,0.72);
-    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase;
+    color: rgba(242,235,219,0.45);
+    display: inline-flex; align-items: center; gap: 10px;
   }
-  .hcx__client-period::before { content: ""; width: 24px; height: 1px; background: #C76941; }
+  .hcx__client-period::before { content: "/"; color: #C76941; font-weight: 300; font-size: 14px; letter-spacing: 0; width: auto; height: auto; background: none; }
   .hcx__period {
     grid-column: 2 / 3; grid-row: 1 / 2;
-    align-self: start; justify-self: end; text-align: right;
+    align-self: center;           /* same baseline as client — no more misalignment */
+    justify-self: end; text-align: right;
     font-family: "Manrope", sans-serif;
     font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
-    color: rgba(242,235,219,0.62);
+    color: rgba(242,235,219,0.55);
   }
   .hcx__period strong { display: block; color: #F2EBDB; font-weight: 700; font-size: 14px; letter-spacing: .12em; margin-top: 4px; }
 
@@ -954,7 +953,7 @@
   <div class="hcx__grain"></div>
   <div class="hcx__grid">
     <div class="hcx__client">
-      <img class="hcx__logo" src="public/img/bnp-logo.svg" alt="BNP Paribas Fortis" />
+      <span class="hcx__client-name">BNP Paribas Fortis</span>
       <span class="hcx__client-period">2018 — 2019</span>
     </div>
     <div class="hcx__period">
@@ -969,7 +968,7 @@
       <p class="hcx__lead" data-i18n="bnp.hero.lead">Une banque assise sur 30% des flux carte du pays voulait vendre quelque chose à ses propres clients PME. J'ai transformé cette asymétrie en service que les commerçants acceptent de payer.</p>
       <div class="hcx__role">
         <span class="hcx__role-label" data-i18n="bnp.hero.metaRole">Service Designer · Freelance</span>
-        <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">BNP Paribas Fortis · Bruxelles · Fév 2018 → Jan 2019</span>
+        <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">6 mois · cadrage stratégique upstream</span>
       </div>
     </div>
     <div class="hcx__bento">
@@ -1005,7 +1004,7 @@
     <h2 data-i18n-html="bnp.brief.title">30 % des flux ne devenaient<br><span class="accent">jamais une décision.</span></h2>
     <p class="lead" style="margin-top: 22px; max-width: 70ch;" data-i18n="bnp.brief.lead1">BNP voyait passer chaque semaine des données de cartes consommateurs qui valaient de l'or pour les commerçants. Personne ne les transformait en service.</p>
     <p class="lead" style="max-width: 70ch;" data-i18n="bnp.brief.lead2">Mon mandat : un parcours design thinking pour valider — ou invalider — l'opportunité B2B, et défendre une recommandation au sponsor exécutif.</p>
-    <p class="glance-sizing" data-i18n-html="bnp.brief.sizing">12 months <span class="dot">·</span> upstream strategic framing <span class="dot">·</span> 4 internal functions <span class="dot">·</span> freelance Service Designer</p>
+    <p class="glance-sizing" data-i18n-html="bnp.brief.sizing">6 months <span class="dot">·</span> upstream strategic framing <span class="dot">·</span> 4 internal functions <span class="dot">·</span> freelance Service Designer</p>
   </div>
 </section>
 
@@ -1568,7 +1567,7 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=R1"></script>
+<script src="assets/i18n.js?v=R2"></script>
 <script src="assets/theme.js?v=cinema"></script>
 <script src="assets/motion.js?v=portal3"></script>
 <script src="assets/deck.js?v=deck1"></script>
