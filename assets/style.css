@@ -1053,7 +1053,14 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
   transform: scaleX(1);
 }
 
-/* Ambient hue shift — chapter dividers progressively warmer (gris cool → cuivre warm) */
+/* Ambient hue shift — chapter dividers progressively warmer (gris cool → cuivre warm)
+   S = coolest (observation, calm before the storm)
+   T = warmer (challenge rising)
+   A = warmer still (action heating up)
+   R = warmest (resolution, peak) */
+.chapter-divider[data-chapter="S"] {
+  background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg-2) 96%, hsl(210, 40%, 26%)) 50%, var(--bg) 100%);
+}
 .chapter-divider[data-chapter="T"] {
   background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg-2) 96%, var(--amber)) 50%, var(--bg) 100%);
 }

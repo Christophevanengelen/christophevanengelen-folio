@@ -137,9 +137,9 @@
 
     /* ============== BRIDGE — jaquette → histoire ============== */
     'bnp.bridge.phrase': {
-      fr: 'Six mois. Trois actes. Un commerçant qui dit oui.',
-      nl: 'Zes maanden. Drie aktes. Een handelaar die ja zegt.',
-      en: 'Six months. Three acts. A merchant who says yes.'
+      fr: 'Six mois. Une enquête. Un commerçant qui dit oui.',
+      nl: 'Zes maanden. Een onderzoek. Een handelaar die ja zegt.',
+      en: 'Six months. One investigation. A merchant who says yes.'
     },
     'bnp.bridge.sub': {
       fr: 'Une asymétrie de données · un processus design thinking · un premier paiement.',
@@ -147,7 +147,16 @@
       en: 'A data asymmetry · a design thinking process · a first payment.'
     },
 
-    /* ============== CHAPTER DIVIDERS (NEW — cinematic 3-act structure) ============== */
+    /* ============== CHAPTER S — Situation (NEW 2026-04-30 s2 — STAR 4 acts) ============== */
+    'bnp.chapS.label': { fr: 'Situation · L\'observation', nl: 'Situation · De observatie', en: 'Situation · Observation' },
+    'bnp.chapS.title': { fr: 'L\'observation.', nl: 'De observatie.', en: 'Observation.' },
+    'bnp.chapS.lead': {
+      fr: 'Avant de proposer, observer. Une banque, une donnée, une équipe qui appelle.',
+      nl: 'Voor er een voorstel komt, eerst observeren. Een bank, de data, een team dat belt.',
+      en: 'Before proposing, observe. A bank, the data, a team that calls.'
+    },
+
+    /* ============== CHAPTER DIVIDERS (T/A/R — cinematic narrative structure) ============== */
     'bnp.chap1.label': { fr: 'Task · Le défi', nl: 'Task · De uitdaging', en: 'Task · The challenge' },
     'bnp.chap1.title': { fr: 'Le défi.', nl: 'De uitdaging.', en: 'The challenge.' },
     'bnp.chap1.lead': {

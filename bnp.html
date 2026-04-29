@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=sprintH">
+<link rel="stylesheet" href="assets/style.css?v=sprintI">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -1033,25 +1033,25 @@
 
 <!-- BRIDGE · Jaquette → Histoire — moment typographique, synopsis avant le STAR -->
 <section class="star-bridge">
-  <div class="star-bridge__bg" aria-hidden="true">T · A · R</div>
+  <div class="star-bridge__bg" aria-hidden="true">S · T · A · R</div>
   <div class="star-bridge__inner">
-    <p class="star-bridge__phrase" data-i18n="bnp.bridge.phrase">Six mois. Trois actes. Un commerçant qui dit oui.</p>
+    <p class="star-bridge__phrase" data-i18n="bnp.bridge.phrase">Six mois. Une enquête. Un commerçant qui dit oui.</p>
     <span class="star-bridge__sub" data-i18n="bnp.bridge.sub">Une asymétrie de données · un processus design thinking · un premier paiement.</span>
   </div>
 </section>
 
-<!-- CHAPTER T — portail vers Act T (positionné avant le contenu T) -->
-<section class="chapter-divider" data-chapter="T">
-  <div class="chapter-roman" aria-hidden="true">T</div>
+<!-- CHAPTER S — Situation : l'observation, le terrain (NEW 2026-04-30 s2 — STAR is 4 acts) -->
+<section class="chapter-divider" data-chapter="S">
+  <div class="chapter-roman" aria-hidden="true">S</div>
   <div class="chapter-meta">
-    <span class="chapter-label" data-i18n="bnp.chap1.label">Task · Le défi</span>
-    <h2 class="chapter-title" data-i18n="bnp.chap1.title">Le défi.</h2>
-    <p class="chapter-lead" data-i18n="bnp.chap1.lead">Une banque assise sur 30% des flux carte du pays. Personne pour transformer ça en service.</p>
+    <span class="chapter-label" data-i18n="bnp.chapS.label">Situation · L'observation</span>
+    <h2 class="chapter-title" data-i18n="bnp.chapS.title">L'observation.</h2>
+    <p class="chapter-lead" data-i18n="bnp.chapS.lead">Avant de proposer, observer. Une banque, une donnée, une équipe qui appelle.</p>
   </div>
 </section>
 
-<!-- LE BRIEF — Setup. Pose la question, pas le résultat. Découverte progressive. -->
-<section id="brief" data-act="T">
+<!-- LE BRIEF — Setup (Act S — observation phase) -->
+<section id="brief" data-act="S">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.brief.eyebrow">Le brief</span>
     <h2 data-i18n-html="bnp.brief.title">30 % des flux ne devenaient<br><span class="accent">jamais une décision.</span></h2>
@@ -1061,12 +1061,22 @@
   </div>
 </section>
 
-<!-- LE CATALYSEUR — Inciting incident : Marketing called. Pas encore de pivot. -->
-<section id="catalyst" data-act="T">
+<!-- LE CATALYSEUR — Inciting incident (Act S — observation phase) -->
+<section id="catalyst" data-act="S">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.catalyst.eyebrow">Le catalyseur</span>
     <h2 data-i18n-html="bnp.catalyst.title">Marketing m'a <span class="accent">appelé.</span></h2>
     <p class="lead" style="margin-top: 22px; max-width: 70ch;" data-i18n="bnp.catalyst.lead">Leur POC partait dans le mur : trop « data exploration », inadapté à la cible. Ils m'ont fait venir pour valider, ou invalider, l'opportunité via un parcours design thinking. C'est par là qu'a démarré l'enquête.</p>
+  </div>
+</section>
+
+<!-- CHAPTER T — Task : le défi qui émerge de l'observation -->
+<section class="chapter-divider" data-chapter="T">
+  <div class="chapter-roman" aria-hidden="true">T</div>
+  <div class="chapter-meta">
+    <span class="chapter-label" data-i18n="bnp.chap1.label">Task · Le défi</span>
+    <h2 class="chapter-title" data-i18n="bnp.chap1.title">Le défi.</h2>
+    <p class="chapter-lead" data-i18n="bnp.chap1.lead">Une banque assise sur 30% des flux carte du pays. Personne pour transformer ça en service.</p>
   </div>
 </section>
 
@@ -1610,7 +1620,7 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=R5"></script>
+<script src="assets/i18n.js?v=R6"></script>
 <script src="assets/theme.js?v=cinema"></script>
 <script src="assets/motion.js?v=portal5"></script>
 <script src="assets/deck.js?v=deck1"></script>
