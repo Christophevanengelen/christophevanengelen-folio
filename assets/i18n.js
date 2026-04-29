@@ -182,26 +182,26 @@
     },
 
     /* ============== CHAPTER DIVIDERS (T/A/R — cinematic narrative structure) ============== */
-    'bnp.chap1.label': { fr: 'Task · Le défi', nl: 'Task · De uitdaging', en: 'Task · The challenge' },
-    'bnp.chap1.title': { fr: 'Le défi.', nl: 'De uitdaging.', en: 'The challenge.' },
+    'bnp.chap1.label': { fr: 'Task · La proposition', nl: 'Task · Het voorstel', en: 'Task · The proposal' },
+    'bnp.chap1.title': { fr: 'La proposition.', nl: 'Het voorstel.', en: 'The proposal.' },
     'bnp.chap1.lead': {
-      fr: 'Une banque assise sur 30% des flux carte du pays. Personne pour transformer ça en service.',
-      nl: 'Een bank die 30% van de kaartstromen ziet. Niemand die er een dienst van maakte.',
-      en: 'A bank sitting on 30% of the country\'s card flows. Nobody turning that into a service.'
+      fr: 'Pas un dashboard. Un service. Six étapes pour faire le pont.',
+      nl: 'Geen dashboard. Een dienst. Zes stappen om de brug te slaan.',
+      en: 'Not a dashboard. A service. Six steps to bridge it.'
     },
     'bnp.chap2.label': { fr: 'Action · La démarche', nl: 'Action · De aanpak', en: 'Action · The approach' },
     'bnp.chap2.title': { fr: 'La démarche.', nl: 'De aanpak.', en: 'The approach.' },
     'bnp.chap2.lead': {
-      fr: 'Double diamond. Six mois. Comprendre d\'abord, créer ensuite, valider avec un vrai client.',
-      nl: 'Double diamond. Zes maanden. Eerst begrijpen, dan creëren, valideren met een echte klant.',
-      en: 'Double diamond. Six months. Understand first, build next, validate with a real client.'
+      fr: 'Double diamond. Six mois. Cross-départemental. Des ateliers qui mettent l\'utilisateur au centre.',
+      nl: 'Double diamond. Zes maanden. Cross-departementaal. Workshops die de gebruiker centraal stellen.',
+      en: 'Double diamond. Six months. Cross-departmental. Workshops that put the user at the centre.'
     },
     'bnp.chap3.label': { fr: 'Result · Le résultat', nl: 'Result · Het resultaat', en: 'Result · The outcome' },
     'bnp.chap3.title': { fr: 'Le résultat.', nl: 'Het resultaat.', en: 'The outcome.' },
     'bnp.chap3.lead': {
-      fr: 'Le concept est de-risked. Un vrai commerçant paie.',
-      nl: 'Het concept is de-risked. Een echte handelaar betaalt.',
-      en: 'The concept is de-risked. A real merchant pays.'
+      fr: 'Léonidas, dans les interviews dès le départ. Au prototype : « on achète ».',
+      nl: 'Léonidas, vanaf de eerste interviews. Bij het prototype: "we kopen het".',
+      en: 'Léonidas, in the interviews from day one. At the prototype: "we buy it".'
     },
     'bnp.chapBridge.label': { fr: 'Pont', nl: 'Brug', en: 'Bridge' },
     'bnp.chapBridge.title': { fr: 'Vers Luminus.', nl: 'Naar Luminus.', en: 'To Luminus.' },
@@ -227,9 +227,9 @@
       en: 'BNP saw consumer-card data go by every week that was gold for merchants. No one turned it into a service.'
     },
     'bnp.brief.lead2': {
-      fr: 'Mon mandat : un parcours design thinking pour valider, ou invalider, l\'opportunité B2B, et défendre une recommandation au sponsor exécutif.',
-      nl: 'Mijn mandaat : een design thinking-traject om de B2B-opportuniteit te valideren, of te invalideren, en een aanbeveling te verdedigen bij de executive sponsor.',
-      en: 'My mandate : a design thinking journey to validate, or invalidate, the B2B opportunity, and defend a recommendation to the executive sponsor.'
+      fr: 'Faciliter un parcours design thinking. Valider l\'opportunité, ou l\'invalider. Défendre une recommandation au sponsor exécutif.',
+      nl: 'Een design thinking-traject faciliteren. De opportuniteit valideren, of niet. Een aanbeveling verdedigen bij de executive sponsor.',
+      en: 'Facilitate a design thinking journey. Validate the opportunity, or rule it out. Defend a recommendation to the executive sponsor.'
     },
     'bnp.brief.sizing': {
       fr: '6 mois <span class="dot">·</span> cadrage stratégique upstream <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> Service Designer freelance',

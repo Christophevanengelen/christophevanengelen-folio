@@ -289,75 +289,124 @@
     }
   }
 
-  /* ── Chapter dividers : ZOOM-PORTAL pattern (CVE 2026-04-30 spec).
-        Pattern : user scrolls down → divider pins → numeral scales 1 → 4 (zoom-in
-        effect, "entering the chapter") → meta reveals at peak → both fade out as
-        pin releases → next section (often horizontal-pin content) takes over.
-        Mobile / reduced-motion : skip pin, simple parallax. */
-  const isMobileForChapter = window.matchMedia('(max-width: 900px)').matches;
-  if (!isMobileForChapter) {
-    document.querySelectorAll('.chapter-divider').forEach((chap) => {
-      const roman = chap.querySelector('.chapter-roman');
-      const meta = chap.querySelector('.chapter-meta');
-      if (!roman || !meta) return;
+  /* ── Chapter dividers : NATURAL FLOW pattern (CVE 2026-04-30 s2 — REBUILD).
+        Previous version pinned scroll for 70% viewport. With 4 chapter dividers
+        (S/T/A/R) + bridge to Luminus + horizontal pin sections, the page felt
+        constantly stopped. CVE verbatim : "transitions importantes en plein
+        milieu de storytelling — tout tuer et refaire."
 
-      const metaChildren = meta.querySelectorAll('.chapter-label, .chapter-title, .chapter-lead');
+        New approach : NO PIN. The divider is a tall section with a parallax
+        roman letter (slow scale + opacity arc as user scrolls through) and
+        meta content that reveals on scroll-in. Visitor scrolls continuously.
+        The transition accompanies the narrative — it doesn't capture it. */
+  document.querySelectorAll('.chapter-divider').forEach((chap) => {
+    const roman = chap.querySelector('.chapter-roman');
+    const meta = chap.querySelector('.chapter-meta');
+    if (!roman || !meta) return;
 
-      /* Pin the divider for ~1 viewport. Inside the pin, run a timeline that :
-            0.0 → 0.55 : numeral scales 1 → 4, opacity 0.13 → 0.55 (zoom-in)
-            0.10 → 0.55 : meta children fade in staggered
-            0.55 → 1.0 : both fade out (handing off to next section) */
-      const tl = gsap.timeline({
+    const metaChildren = meta.querySelectorAll('.chapter-label, .chapter-title, .chapter-lead');
+
+    /* Roman letter : slow parallax. Scale 0.92 → 1.18, opacity 0.08 → 0.28,
+       y +18% → -18%. The letter breathes through the section. */
+    gsap.fromTo(roman,
+      { scale: 0.92, opacity: 0.08, yPercent: 18 },
+      { scale: 1.18, opacity: 0.28, yPercent: -18,
+        ease: 'none',
         scrollTrigger: {
           trigger: chap,
-          start: 'top top',
-          end: '+=70%',           /* pin for ~0.7 viewport — tighter, less dead scroll */
-          pin: true,
-          scrub: 0.6,
-          anticipatePin: 1,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.2,
+          invalidateOnRefresh: true,
         },
-      });
-      /* Zoom velocity : smooth in-out so the numeral swells evenly, without
-         the abrupt lurch of a pure power3.in. Meta reads comfortably before exit. */
-      tl.fromTo(roman,
-        { scale: 1.0, opacity: 0.10 },
-        { scale: 3.6, opacity: 0.48, ease: 'power2.inOut' }, 0);
-      tl.fromTo(metaChildren,
-        { opacity: 0, y: 36 },
-        { opacity: 1, y: 0, stagger: 0.07, ease: 'power2.out' }, 0.10);
-      /* Phase fade-through : gentle exit, gives meta a beat to be read */
-      tl.to(roman, { opacity: 0, scale: 5.0, ease: 'power1.in' }, 0.62);
-      tl.to(metaChildren, { opacity: 0, y: -16, stagger: 0.04, ease: 'power2.in' }, 0.62);
+      },
+    );
 
-      /* In-view class for CSS-driven cuivre line + ambient hue */
-      ScrollTrigger.create({
-        trigger: chap,
-        start: 'top 70%',
-        end: 'bottom 30%',
-        onEnter: () => chap.classList.add('is-in-view'),
-        onEnterBack: () => chap.classList.add('is-in-view'),
-        onLeave: () => chap.classList.remove('is-in-view'),
-        onLeaveBack: () => chap.classList.remove('is-in-view'),
-      });
+    /* Meta : single fade-up reveal when the meta block enters the comfortable
+       reading zone. No scrub, no pin — just a clean entry. */
+    gsap.fromTo(metaChildren,
+      { opacity: 0, y: 28 },
+      { opacity: 1, y: 0, duration: 0.90, ease: 'power3.out', stagger: 0.08,
+        scrollTrigger: {
+          trigger: meta,
+          start: 'top 78%',
+          toggleActions: 'play none none reverse',
+        },
+      },
+    );
+
+    /* In-view class drives the CSS cuivre line draw across centerline */
+    ScrollTrigger.create({
+      trigger: chap,
+      start: 'top 70%',
+      end: 'bottom 30%',
+      onEnter:     () => chap.classList.add('is-in-view'),
+      onEnterBack: () => chap.classList.add('is-in-view'),
+      onLeave:     () => chap.classList.remove('is-in-view'),
+      onLeaveBack: () => chap.classList.remove('is-in-view'),
     });
-  } else {
-    /* Touch fallback : simple scrub parallax, no pin */
-    document.querySelectorAll('.chapter-divider').forEach((chap) => {
-      const roman = chap.querySelector('.chapter-roman');
-      const meta = chap.querySelector('.chapter-meta');
-      if (!roman || !meta) return;
-      gsap.fromTo(roman,
-        { yPercent: -8, opacity: 0.10, scale: 1.0 },
-        { yPercent: 8, opacity: 0.30, scale: 1.4,
-          ease: 'none',
-          scrollTrigger: { trigger: chap, start: 'top bottom', end: 'bottom top', scrub: true },
-        });
-      const metaChildren = meta.querySelectorAll('.chapter-label, .chapter-title, .chapter-lead');
-      gsap.from(metaChildren, {
-        opacity: 0, y: 30, duration: 0.9, stagger: 0.12, ease: 'power3.out',
-        scrollTrigger: { trigger: chap, start: 'top 75%', toggleActions: 'play none none reverse' },
-      });
-    });
+  });
+
+  /* ── Bridge section : phrase + sub fade in, watermark parallax */
+  const bridgeEl = document.querySelector('.star-bridge');
+  if (bridgeEl) {
+    const phrase = bridgeEl.querySelector('.star-bridge__phrase');
+    const sub = bridgeEl.querySelector('.star-bridge__sub');
+    const watermark = bridgeEl.querySelector('.star-bridge__bg');
+
+    if (watermark) {
+      gsap.fromTo(watermark,
+        { yPercent: 22, opacity: 0.05 },
+        { yPercent: -22, opacity: 0.10, ease: 'none',
+          scrollTrigger: { trigger: bridgeEl, start: 'top bottom', end: 'bottom top', scrub: 1.5 },
+        },
+      );
+    }
+
+    const bridgeReveals = [phrase, sub].filter(Boolean);
+    if (bridgeReveals.length) {
+      gsap.fromTo(bridgeReveals,
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out', stagger: 0.18,
+          scrollTrigger: { trigger: bridgeEl, start: 'top 72%', toggleActions: 'play none none reverse' },
+        },
+      );
+    }
+  }
+
+  /* ── Fin Royale : close line, paths, signature — sequential entry */
+  const finEl = document.querySelector('.fin-royale');
+  if (finEl) {
+    const finLine = finEl.querySelector('.fin-royale__line');
+    const finPaths = finEl.querySelectorAll('.fin-royale__path');
+    const finSig = finEl.querySelector('.fin-royale__signature');
+
+    if (finLine) {
+      gsap.fromTo(finLine,
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out',
+          scrollTrigger: { trigger: finLine, start: 'top 78%', toggleActions: 'play none none reverse' },
+        },
+      );
+    }
+
+    if (finPaths.length) {
+      gsap.fromTo(finPaths,
+        { opacity: 0, y: 28 },
+        { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.14,
+          scrollTrigger: { trigger: finPaths[0], start: 'top 82%', toggleActions: 'play none none reverse' },
+        },
+      );
+    }
+
+    if (finSig) {
+      gsap.fromTo(finSig,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.7, ease: 'power2.out',
+          scrollTrigger: { trigger: finSig, start: 'top 90%', toggleActions: 'play none none reverse' },
+        },
+      );
+    }
   }
 
   /* ── Generic scroll reveals — fade + slight translate */
