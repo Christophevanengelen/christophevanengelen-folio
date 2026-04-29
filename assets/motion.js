@@ -218,24 +218,23 @@
         scrollTrigger: {
           trigger: chap,
           start: 'top top',
-          end: '+=110%',          /* pin for ~1.1 viewport of scroll */
+          end: '+=70%',           /* pin for ~0.7 viewport — tighter, less dead scroll */
           pin: true,
           scrub: 0.6,
           anticipatePin: 1,
         },
       });
-      /* Zoom velocity : slow start, faster end (CVE 2026-04-30 night spec).
-         power3.in = vitesse cubique accélérée. Le user "rentre dans le numéral"
-         d'abord doucement, puis le zoom emballe à mesure qu'on plonge dedans. */
+      /* Zoom velocity : smooth in-out so the numeral swells evenly, without
+         the abrupt lurch of a pure power3.in. Meta reads comfortably before exit. */
       tl.fromTo(roman,
         { scale: 1.0, opacity: 0.10 },
-        { scale: 4.2, opacity: 0.55, ease: 'power3.in' }, 0);
+        { scale: 3.6, opacity: 0.48, ease: 'power2.inOut' }, 0);
       tl.fromTo(metaChildren,
         { opacity: 0, y: 36 },
         { opacity: 1, y: 0, stagger: 0.07, ease: 'power2.out' }, 0.10);
-      /* Phase fade-through : continuation de l'accélération, on traverse */
-      tl.to(roman, { opacity: 0, scale: 6.2, ease: 'power3.in' }, 0.55);
-      tl.to(metaChildren, { opacity: 0, y: -16, stagger: 0.04, ease: 'power2.in' }, 0.55);
+      /* Phase fade-through : gentle exit, gives meta a beat to be read */
+      tl.to(roman, { opacity: 0, scale: 5.0, ease: 'power1.in' }, 0.62);
+      tl.to(metaChildren, { opacity: 0, y: -16, stagger: 0.04, ease: 'power2.in' }, 0.62);
 
       /* In-view class for CSS-driven cuivre line + ambient hue */
       ScrollTrigger.create({

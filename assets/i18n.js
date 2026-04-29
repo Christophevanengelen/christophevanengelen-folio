@@ -176,9 +176,9 @@
       en: 'BNP saw consumer-card data go by every week that was gold for merchants. No one turned it into a service.'
     },
     'bnp.brief.lead2': {
-      fr: 'Mon mandat : un parcours design thinking pour valider — ou invalider — l\'opportunité B2B, et défendre une recommandation au sponsor exécutif.',
-      nl: 'Mijn mandaat : een design thinking-traject om de B2B-opportuniteit te valideren — of te invalideren — en een aanbeveling te verdedigen bij de executive sponsor.',
-      en: 'My mandate : a design thinking journey to validate — or invalidate — the B2B opportunity, and defend a recommendation to the executive sponsor.'
+      fr: 'Mon mandat : un parcours design thinking pour valider, ou invalider, l\'opportunité B2B, et défendre une recommandation au sponsor exécutif.',
+      nl: 'Mijn mandaat : een design thinking-traject om de B2B-opportuniteit te valideren, of te invalideren, en een aanbeveling te verdedigen bij de executive sponsor.',
+      en: 'My mandate : a design thinking journey to validate, or invalidate, the B2B opportunity, and defend a recommendation to the executive sponsor.'
     },
     'bnp.brief.sizing': {
       fr: '6 mois <span class="dot">·</span> cadrage stratégique upstream <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> Service Designer freelance',
@@ -193,9 +193,9 @@
       en: 'Marketing <span class="accent">called.</span>'
     },
     'bnp.catalyst.lead': {
-      fr: 'Leur POC partait dans le mur — trop « data exploration », inadapté à la cible. Ils m\'ont fait venir pour valider, ou invalider, l\'opportunité via un parcours design thinking. C\'est par là qu\'a démarré l\'enquête.',
-      nl: 'Hun POC ging de verkeerde kant op — te « data exploration », niet aangepast aan de doelgroep. Ze haalden me erbij om de opportuniteit te valideren — of te invalideren — via een design thinking-traject. Daar begon het onderzoek.',
-      en: 'Their POC was heading the wrong way — too « data exploration », a mismatch for the target. They brought me in to validate, or invalidate, the opportunity via a design thinking journey. That\'s where the investigation started.'
+      fr: 'Leur POC partait dans le mur : trop « data exploration », inadapté à la cible. Ils m\'ont fait venir pour valider, ou invalider, l\'opportunité via un parcours design thinking. C\'est par là qu\'a démarré l\'enquête.',
+      nl: 'Hun POC ging de verkeerde kant op : te « data exploration », niet aangepast aan de doelgroep. Ze haalden me erbij om de opportuniteit te valideren, of te invalideren, via een design thinking-traject. Daar begon het onderzoek.',
+      en: 'Their POC was heading the wrong way : too « data exploration », a mismatch for the target. They brought me in to validate, or invalidate, the opportunity through a design thinking process. That\'s where the investigation started.'
     },
 
     /* STAR keys legacy — gardés mais plus utilisés en HTML */
@@ -323,6 +323,8 @@
       nl: 'Van vrije beroepen tot corporate kmo\'s.',
       en: 'From liberal professions to corporate SMEs.'
     },
+    'bnp.glance.s2b.label': { fr: '6 mois · même data', nl: '6 maanden · zelfde data', en: '6 months · same data' },
+    'bnp.glance.s2c.label': { fr: 'Part de marché · vs 10%', nl: 'Marktaandeel · vs 10%', en: 'Market share · vs 10%' },
     'bnp.glance.s3.label': { fr: 'Client pilote signé', nl: 'Pilootklant getekend', en: 'Pilot client signed' },
     'bnp.glance.s3.desc': {
       fr: 'Une PME a dit oui. Léonidas Wolluwé.',
@@ -437,9 +439,9 @@
       en: 'Six voices.<br><span class="accent">One conviction.</span>'
     },
     'bnp.barriersIntro.lead': {
-      fr: 'On a interviewé Jean-Paul, CEO multi-shops, et cinq autres commerçants. Six fois, la même réticence — exprimée différemment. <strong>Pas de la friction générique.</strong> Les phrases exactes qui sont sorties en interview, et qui sont devenues les six contraintes design du MVP.',
-      nl: 'We interviewden Jean-Paul, CEO multi-winkels, en vijf andere merchants. Zes keer dezelfde terughoudendheid — anders verwoord. <strong>Geen generieke wrijving.</strong> De letterlijke zinnen uit de interviews, die de zes ontwerpbeperkingen van de MVP werden.',
-      en: 'We interviewed Jean-Paul, multi-shop CEO, and five other merchants. Six times, the same reluctance — phrased differently. <strong>Not generic friction.</strong> The exact sentences from the interviews that became the six design constraints of the MVP.'
+      fr: 'On a interviewé Jean-Paul, CEO multi-shops, et cinq autres commerçants. Six fois, la même réticence, formulée différemment. <strong>Pas de la friction générique.</strong> Les phrases exactes qui sont sorties en interview, et qui sont devenues les six contraintes design du MVP.',
+      nl: 'We interviewden Jean-Paul, CEO multi-winkels, en vijf andere merchants. Zes keer dezelfde terughoudendheid, anders verwoord. <strong>Geen generieke wrijving.</strong> De letterlijke zinnen uit de interviews, die de zes ontwerpbeperkingen van de MVP werden.',
+      en: 'We interviewed Jean-Paul, multi-shop CEO, and five other merchants. Six times, the same reluctance, expressed differently. <strong>Not generic friction.</strong> The exact sentences from the interviews that became the six design constraints of the MVP.'
     },
     'bnp.barriersIntro.cue': {
       fr: 'Faites défiler · les six voix prennent la parole',
@@ -500,9 +502,9 @@
       en: 'Became Marketing tout-boîte axis : targeted campaigns by source-commune, anonymous by design. GDPR built-in.'
     },
     'bnp.barriers.b5.constraint': {
-      fr: 'Hors scope MVP. Inscrit comme évolution roadmap phase 2 — connexion future avec les systèmes POS.',
-      nl: 'Buiten MVP-scope. Opgenomen als roadmap fase 2 — toekomstige POS-systeem-koppeling.',
-      en: 'Out of MVP scope. Logged as roadmap phase 2 — future POS systems integration.'
+      fr: 'Hors scope MVP. Inscrit comme évolution roadmap phase 2 : connexion future avec les systèmes POS.',
+      nl: 'Buiten MVP-scope. Opgenomen als roadmap fase 2 : toekomstige POS-systeem-koppeling.',
+      en: 'Out of MVP scope. Logged as roadmap phase 2 : future POS systems integration.'
     },
     'bnp.barriers.b6.constraint': {
       fr: 'Devenu central dans le Triple-Win : commerçant gagne en décisions, banque crée une ligne B2B, cardholder garde sa privacy.',
@@ -628,18 +630,18 @@
 
     'bnp.steps.s1.h': { fr: 'Recherche personas et segmentation B2B', nl: 'Persona-onderzoek en B2B-segmentatie', en: 'Persona research and B2B segmentation' },
     'bnp.steps.s1.p': {
-      fr: 'L\'enquête démarre par la cartographie. Segmenter le marché PME selon BNP, puis interviewer des commerçants susceptibles d\'acheter de la donnée. Pas pour valider une vision — pour identifier leurs problèmes réels. Le benchmark a confirmé l\'angle stratégique : <strong class="accent">BNP voit 30 % des comptes via Bancontact</strong>, position quasi-monopolistique sur la donnée transactionnelle B2B. <strong>Mes findings ont sorti la réponse : ces gens ne sont pas data scientists.</strong> Une bibliothèque de neuf personas B2B est sortie de la phase, du libéral au CPBB, avec leur niveau d\'intérêt mappé.',
-      nl: 'Het onderzoek start met cartografie. De kmo-markt segmenteren zoals BNP die zag, dan merchants interviewen die mogelijk data zouden kopen. Niet om een visie te valideren — om hun reële problemen te identificeren. De benchmark bevestigde de strategische hoek : <strong class="accent">BNP ziet 30 % van de rekeningen via Bancontact</strong>, bijna-monopoliepositie op B2B-transactiedata. <strong>Mijn findings leverden het antwoord : deze mensen zijn geen data scientists.</strong> Een bibliotheek van negen B2B-persona\'s kwam uit de fase, van vrije beroepen tot CPBB, met hun interesseniveau in kaart gebracht.',
-      en: 'The investigation starts with mapping. Segment the SME market the way BNP saw it, then interview merchants likely to buy data. Not to validate a vision — to identify their real problems. The benchmark confirmed the strategic angle : <strong class="accent">BNP sees 30% of accounts via Bancontact</strong>, near-monopoly on B2B transactional data. <strong>My findings gave the answer : these people aren\'t data scientists.</strong> A library of nine B2B personas came out of the phase, from liberal professions to CPBB, with their level of interest mapped.'
+      fr: 'L\'enquête démarre par la cartographie. Segmenter le marché PME selon BNP, puis interviewer des commerçants susceptibles d\'acheter de la donnée. Pas pour valider une vision, mais pour identifier leurs problèmes réels. Le benchmark a confirmé l\'angle stratégique : <strong class="accent">BNP voit 30 % des comptes via Bancontact</strong>, position quasi-monopolistique sur la donnée transactionnelle B2B. <strong>Mes findings ont sorti la réponse : ces gens ne sont pas data scientists.</strong> Une bibliothèque de neuf personas B2B est sortie de la phase, du libéral au CPBB, avec leur niveau d\'intérêt mappé.',
+      nl: 'Het onderzoek start met cartografie. De kmo-markt segmenteren zoals BNP die zag, dan merchants interviewen die mogelijk data zouden kopen. Niet om een visie te valideren, maar om hun reële problemen te identificeren. De benchmark bevestigde de strategische hoek : <strong class="accent">BNP ziet 30 % van de rekeningen via Bancontact</strong>, bijna-monopoliepositie op B2B-transactiedata. <strong>Mijn findings leverden het antwoord : deze mensen zijn geen data scientists.</strong> Een bibliotheek van negen B2B-persona\'s kwam uit de fase, van vrije beroepen tot CPBB, met hun interesseniveau in kaart gebracht.',
+      en: 'The investigation starts with mapping. Segment the SME market the way BNP saw it, then interview merchants likely to buy data. Not to validate a vision, but to identify their real problems. The benchmark confirmed the strategic angle : <strong class="accent">BNP sees 30% of accounts via Bancontact</strong>, near-monopoly on B2B transactional data. <strong>My findings gave the answer : these people aren\'t data scientists.</strong> A library of nine B2B personas came out of the phase, from liberal professions to CPBB, with their level of interest mapped.'
     },
     'bnp.steps.s1.deliv': { fr: 'Livrable · bibliothèque 9 personas · matrice Niveaux d\'intérêt', nl: 'Deliverable · 9-persona-bibliotheek · Interesseniveau-matrix', en: 'Deliverable · 9-persona library · Levels of Interest matrix' },
     'bnp.steps.s1.cap': { fr: '9 personas B2B · validés par recherche', nl: '9 B2B-persona\'s · onderzoeksgebaseerd', en: '9 B2B personas · research-backed' },
 
     'bnp.steps.s2.h': { fr: 'Value Proposition Canvas', nl: 'Value Proposition Canvas', en: 'Value Proposition Canvas' },
     'bnp.steps.s2.p': {
-      fr: 'La question fondatrice tenait en une ligne, posée à chaque atelier : <em>« Comment transformer ce que la banque voit déjà en un service que les PME accepteraient de payer ? »</em> Le VPC a structuré la réponse en trois axes concrets, alignés sur les décisions hebdomadaires d\'un commerçant. <strong>Audience</strong> : qui est le bon client, où il habite, combien de kilomètres il parcourt. <strong>Trafic</strong> : à quelles heures les cartes passent, quand ouvrir et fermer. <strong>Marketing tout-boîte</strong> : depuis quelles communes les clients arrivent, donc où lancer une campagne ciblée. Trois colonnes, trois décisions hebdomadaires. Pas de data exploration — des outputs.',
-      nl: 'De stichtingsvraag paste in één regel, gesteld in elke workshop : <em>« Hoe vertalen we wat de bank al ziet in een dienst waarvoor kmo\'s zouden willen betalen ? »</em> De VPC structureerde het antwoord in drie concrete assen, afgestemd op de wekelijkse beslissingen van een winkelier. <strong>Doelpubliek</strong> : wie is de goede klant, waar woont hij, hoeveel kilometer legt hij af. <strong>Verkeer</strong> : op welke uren passeren de kaarten, wanneer openen en sluiten. <strong>Marketing tout-boîte</strong> : uit welke gemeenten komen de klanten, dus waar een gerichte campagne lanceren. Drie kolommen, drie wekelijkse beslissingen. Geen data exploration — outputs.',
-      en: 'The founding question fit in one line, asked in every workshop : <em>« How do we turn what the bank already sees into a service SMEs would actually pay for ? »</em> The VPC structured the answer in three concrete axes, aligned to a shopkeeper\'s weekly decisions. <strong>Audience</strong> : who\'s the right customer, where they live, how many kilometers they travel. <strong>Traffic</strong> : at what hours the cards swipe, when to open and close. <strong>Tout-boîte marketing</strong> : from which communes customers come, so where to launch a targeted campaign. Three columns, three weekly decisions. No data exploration — outputs.'
+      fr: 'La question fondatrice tenait en une ligne, posée à chaque atelier : <em>« Comment transformer ce que la banque voit déjà en un service que les PME accepteraient de payer ? »</em> Le VPC a structuré la réponse en trois axes concrets, alignés sur les décisions hebdomadaires d\'un commerçant. <strong>Audience</strong> : qui est le bon client, où il habite, combien de kilomètres il parcourt. <strong>Trafic</strong> : à quelles heures les cartes passent, quand ouvrir et fermer. <strong>Marketing tout-boîte</strong> : depuis quelles communes les clients arrivent, donc où lancer une campagne ciblée. Trois colonnes, trois décisions hebdomadaires. Pas de data exploration. Des outputs actionnables.',
+      nl: 'De stichtingsvraag paste in één regel, gesteld in elke workshop : <em>« Hoe vertalen we wat de bank al ziet in een dienst waarvoor kmo\'s zouden willen betalen ? »</em> De VPC structureerde het antwoord in drie concrete assen, afgestemd op de wekelijkse beslissingen van een winkelier. <strong>Doelpubliek</strong> : wie is de goede klant, waar woont hij, hoeveel kilometer legt hij af. <strong>Verkeer</strong> : op welke uren passeren de kaarten, wanneer openen en sluiten. <strong>Marketing tout-boîte</strong> : uit welke gemeenten komen de klanten, dus waar een gerichte campagne lanceren. Drie kolommen, drie wekelijkse beslissingen. Geen data exploration. Enkel outputs.',
+      en: 'The founding question fit in one line, asked in every workshop : <em>« How do we turn what the bank already sees into a service SMEs would actually pay for ? »</em> The VPC structured the answer in three concrete axes, aligned to a shopkeeper\'s weekly decisions. <strong>Audience</strong> : who\'s the right customer, where they live, how many kilometers they travel. <strong>Traffic</strong> : at what hours the cards swipe, when to open and close. <strong>Tout-boîte marketing</strong> : from which communes customers come, so where to launch a targeted campaign. Three columns, three weekly decisions. No data exploration. Actionable outputs only.'
     },
     'bnp.steps.s2.deliv': { fr: 'Livrable · VPC · Pains / Gains / Jobs vers features MVP', nl: 'Deliverable · VPC · Pains / Gains / Jobs naar MVP-features', en: 'Deliverable · VPC · Pains / Gains / Jobs to MVP features' },
     'bnp.steps.s2.cap': { fr: 'VPC · Besoins · Envies · Peurs vers offre MVP', nl: 'VPC · Behoeften · Wensen · Angsten naar MVP-aanbod', en: 'VPC · Needs · Wants · Fears to MVP offer' },
@@ -673,9 +675,9 @@
 
     'bnp.steps.s6.h': { fr: 'Roadmap et dossier de décision exécutif', nl: 'Roadmap en executive beslissingspakket', en: 'Roadmap and executive decision pack' },
     'bnp.steps.s6.p': {
-      fr: 'Tous les artefacts précédents — recherche, VPC, Lean Canvas, blueprints, prototypes — ont alimenté un seul livrable final : un dossier de décision exécutif. Roadmap séquencée Q1 2018 → 2020 (du MVP scope à 20 % de part de marché acquiring visé). Registre des risques RGPD / faisabilité technique / défensibilité concurrentielle. Matrice de trade-offs MVP. <strong class="accent">Construit pour être décidé, pas seulement lu.</strong> Le sponsor exécutif a eu son go.',
-      nl: 'Alle voorgaande artefacten — onderzoek, VPC, Lean Canvas, blueprints, prototypes — voedden één finaal deliverable : een executive decision document. Gefaseerde roadmap Q1 2018 → 2020 (van MVP-scope naar 20 % market share acquiring). Risicoregister GDPR / technische haalbaarheid / concurrentie-verdedigbaarheid. MVP trade-off matrix. <strong class="accent">Gebouwd om beslist te worden, niet enkel gelezen.</strong> De executive sponsor kreeg zijn go.',
-      en: 'Every prior artefact — research, VPC, Lean Canvas, blueprints, prototypes — fed into a single final deliverable : an executive decision pack. Sequenced roadmap Q1 2018 → 2020 (MVP scope to 20% acquiring market share target). Risk register GDPR / technical feasibility / competitive defensibility. MVP trade-off matrix. <strong class="accent">Built to be decided on, not just reviewed.</strong> The executive sponsor got his go.'
+      fr: 'Tous les artefacts précédents (recherche, VPC, Lean Canvas, blueprints, prototypes) ont alimenté un seul livrable final : un dossier de décision exécutif. Roadmap séquencée Q1 2018 vers 2020 (du MVP scope à 20 % de part de marché acquiring visé). Registre des risques RGPD / faisabilité technique / défensibilité concurrentielle. Matrice de trade-offs MVP. <strong class="accent">Construit pour être décidé, pas seulement lu.</strong> Le sponsor exécutif a eu son go.',
+      nl: 'Alle voorgaande artefacten (onderzoek, VPC, Lean Canvas, blueprints, prototypes) voedden één finaal deliverable : een executive decision document. Gefaseerde roadmap Q1 2018 naar 2020 (van MVP-scope naar 20 % market share acquiring). Risicoregister GDPR / technische haalbaarheid / concurrentie-verdedigbaarheid. MVP trade-off matrix. <strong class="accent">Gebouwd om beslist te worden, niet enkel gelezen.</strong> De executive sponsor kreeg zijn go.',
+      en: 'Every prior artefact (research, VPC, Lean Canvas, blueprints, prototypes) fed into a single final deliverable : an executive decision pack. Sequenced roadmap Q1 2018 to 2020 (MVP scope to 20% acquiring market share target). Risk register GDPR / technical feasibility / competitive defensibility. MVP trade-off matrix. <strong class="accent">Built to be decided on, not just reviewed.</strong> The executive sponsor got his go.'
     },
     'bnp.steps.s6.deliv': { fr: 'Livrable · roadmap · registre des risques · dossier de décision', nl: 'Deliverable · roadmap · risicoregister · beslissingspakket', en: 'Deliverable · roadmap · Risk register · Decision pack' },
     'bnp.steps.s6.cap': { fr: 'Principe de sélection temporelle · cadre de comparaison étagé', nl: 'Principe tijdselectie · gefaseerd vergelijkingskader', en: 'Time selection principle · Staged comparison frame' },
@@ -813,9 +815,9 @@
       en: 'Seven years on, the project delivered. But three calls deserve a second take. Here they are, plain.'
     },
     'bnp.lessons.l1.h': {
-      fr: 'Une prévente conditionnelle, ce n\'est qu\'un demi-pas.',
-      nl: 'Een conditionele pré-aankoop is maar een halve stap.',
-      en: 'A conditional pre-purchase is only a half-step.'
+      fr: 'Mettre un prix sur la table dès la semaine 8.',
+      nl: 'Een prijs op tafel leggen vanaf week 8.',
+      en: 'Put a price on the table by week 8.'
     },
     'bnp.lessons.l1.p': {
       fr: 'La prévente Léonidas est venue conditionnelle au build. Le sponsor avait son signal, mais le pari restait à courir. Aujourd\'hui, je négocierais une lettre d\'intention plus ferme dès le prototype, et un mandat qui m\'accompagne au moins jusqu\'à la mise en marché.',
@@ -866,7 +868,7 @@
     'bnp.qa.q2': {
       fr: 'À quoi ressemblerait, pour Luminus, ce premier client B2B qui signerait une prévente sur un prototype, avant qu\'on engage toute la plateforme ?',
       nl: 'Hoe zou voor Luminus die eerste B2B-klant eruitzien die een pré-aankoop tekent op een prototype, vóór we het hele platform bouwen?',
-      en: 'What would, for Luminus, that first B2B customer look like — the one who signs a pre-purchase on a prototype, before you commit to build the whole platform?'
+      en: 'What would, for Luminus, that first B2B customer look like? The one who signs a pre-purchase on a prototype, before you commit to build the whole platform?'
     },
     'bnp.qa.q3': {
       fr: 'Quelle couche de stakeholders est la plus dure à aligner aujourd\'hui : business, IT, légal et régulateur, ou client final ? L\'énergie ajoute le régulateur au-dessus de la contrainte compliance de BNP. J\'aimerais comparer nos retours.',
