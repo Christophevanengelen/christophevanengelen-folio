@@ -135,13 +135,17 @@
           anticipatePin: 1,
         },
       });
+      /* Zoom velocity : slow start, faster end (CVE 2026-04-30 night spec).
+         power3.in = vitesse cubique accélérée. Le user "rentre dans le numéral"
+         d'abord doucement, puis le zoom emballe à mesure qu'on plonge dedans. */
       tl.fromTo(roman,
         { scale: 1.0, opacity: 0.10 },
-        { scale: 4.2, opacity: 0.55, ease: 'sine.inOut' }, 0);
+        { scale: 4.2, opacity: 0.55, ease: 'power3.in' }, 0);
       tl.fromTo(metaChildren,
         { opacity: 0, y: 36 },
         { opacity: 1, y: 0, stagger: 0.07, ease: 'power2.out' }, 0.10);
-      tl.to(roman, { opacity: 0, scale: 5.5, ease: 'sine.in' }, 0.55);
+      /* Phase fade-through : continuation de l'accélération, on traverse */
+      tl.to(roman, { opacity: 0, scale: 6.2, ease: 'power3.in' }, 0.55);
       tl.to(metaChildren, { opacity: 0, y: -16, stagger: 0.04, ease: 'power2.in' }, 0.55);
 
       /* In-view class for CSS-driven cuivre line + ambient hue */
