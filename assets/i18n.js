@@ -19,10 +19,10 @@
     'footer.thanks': { fr: 'Merci.', nl: 'Dank u.', en: 'Thank you.' },
     'footer.lookForward': { fr: 'Au plaisir de la conversation.', nl: 'Ik kijk uit naar het gesprek.', en: 'I look forward to the conversation.' },
     'footer.contact': { fr: 'Contact', nl: 'Contact', en: 'Contact' },
-    'footer.for': { fr: 'Pour', nl: 'Voor', en: 'For' },
+    'footer.for': { fr: 'Préparé pour', nl: 'Voorbereid voor', en: 'Prepared for' },
     'footer.forCompany': { fr: 'Luminus', nl: 'Luminus', en: 'Luminus' },
     'footer.forSubtitle': { fr: 'Entretien Service Designer', nl: 'Sollicitatiegesprek Service Designer', en: 'Service Designer interview' },
-    'footer.forDate': { fr: 'Avril / Mai 2026', nl: 'April / Mei 2026', en: 'April / May 2026' },
+    'footer.forDate': { fr: 'Avril 2026', nl: 'April 2026', en: 'April 2026' },
     'footer.copy': {
       fr: '© Christophe van Engelen, 2026. Artefacts originaux © BNP Paribas Fortis 2017–2018, repris ici pour illustration de portfolio.',
       nl: '© Christophe van Engelen, 2026. Originele artefacten © BNP Paribas Fortis 2017–2018, hier gebruikt ter illustratie van portfolio.',
@@ -36,9 +36,9 @@
       en: 'Christophe van Engelen, freelance Service Designer in Brussels'
     },
     'home.metaDesc': {
-      fr: 'Service Designer freelance basé à Bruxelles. Études de cas en service design stratégique, monétisation de la donnée, alignement multi-acteurs.',
-      nl: 'Freelance Service Designer in Brussel. Case studies in strategisch service design, datamonetisatie, multi-stakeholder alignering.',
-      en: 'Freelance Service Designer based in Brussels. Case studies in strategic service design, data monetization, multi-stakeholder alignment.'
+      fr: 'Service Designer freelance à Bruxelles. Je transforme une donnée, un objectif business ou une asymétrie stratégique en service que quelqu\'un accepte de payer.',
+      nl: 'Freelance Service Designer in Brussel. Ik zet data, een businessdoel of een strategische asymmetrie om in een dienst waar iemand voor wil betalen.',
+      en: 'Freelance Service Designer in Brussels. I turn data, a business goal or a strategic asymmetry into a service someone will pay for.'
     },
     'home.eyebrow': { fr: 'Portfolio · Service Design', nl: 'Portfolio · Service Design', en: 'Portfolio · Service Design' },
     'home.h1': {
@@ -47,20 +47,20 @@
       en: 'Service design that<br><span class="alt">decides.</span>'
     },
     'home.lead': {
-      fr: 'Je suis Christophe van Engelen, Service Designer freelance à Bruxelles. Je travaille en amont. Là où une donnée brute, un objectif business ou une asymétrie stratégique se transforme en service que quelqu\'un veut payer. Voici un cas qui résume cette approche.',
-      nl: 'Ik ben Christophe van Engelen, freelance Service Designer in Brussel. Ik werk upstream. Daar waar ruwe data, een businessdoel of een strategische asymmetrie omgezet wordt in een dienst waar iemand voor wil betalen. Hieronder een case die deze aanpak samenvat.',
-      en: 'I\'m Christophe van Engelen, a freelance Service Designer in Brussels. I work upstream. Where raw data, a business goal or a strategic asymmetry get turned into a service someone wants to pay for. One case that sums up that approach is below.'
+      fr: 'Je suis Christophe van Engelen, Service Designer freelance à Bruxelles. Je travaille en amont, là où une donnée, un objectif business ou une asymétrie stratégique devient un service que quelqu\'un accepte de payer.',
+      nl: 'Ik ben Christophe van Engelen, freelance Service Designer in Brussel. Ik werk upstream, daar waar data, een businessdoel of een strategische asymmetrie een dienst wordt waar iemand voor wil betalen.',
+      en: 'I\'m Christophe van Engelen, freelance Service Designer in Brussels. I work upstream, where data, a business goal or a strategic asymmetry becomes a service someone will pay for.'
     },
     'home.casesEyebrow': { fr: 'Travaux sélectionnés', nl: 'Geselecteerd werk', en: 'Selected work' },
     'home.casesH2': {
-      fr: 'Une étude de cas qui a fait <span class="accent">décider quelque chose.</span>',
+      fr: 'Une étude de cas qui a <span class="accent">décidé quelque chose.</span>',
       nl: 'Een case study die <span class="accent">iets heeft beslist.</span>',
       en: 'A case study that <span class="accent">decided something.</span>'
     },
     'home.casesIntro': {
-      fr: 'Cliquez la carte pour ouvrir l\'étude. Pour Luminus, j\'ai aussi écrit ma manière d\'aborder les 90 premiers jours du rôle, accessible depuis la navigation.',
-      nl: 'Klik op de kaart om de case te openen. Voor Luminus schreef ik ook mijn aanpak voor de eerste 90 dagen van de rol, te vinden in de navigatie.',
-      en: 'Click the card to open the case. For Luminus, I also wrote how I would approach the first 90 days of the role, available from the navigation.'
+      fr: 'Cliquez la carte pour ouvrir le cas. Pour Luminus, j\'ai écrit séparément ma manière d\'aborder les 90 premiers jours du rôle.',
+      nl: 'Klik op de kaart om de case te openen. Voor Luminus schreef ik apart mijn aanpak voor de eerste 90 dagen van de rol.',
+      en: 'Click the card to open the case. For Luminus, I wrote separately how I would approach the first 90 days of the role.'
     },
     'home.openCase': { fr: 'Ouvrir le cas →', nl: 'Open de case →', en: 'Open the case →' },
 
