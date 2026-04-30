@@ -160,9 +160,9 @@
   .hcx__kpis {
     grid-column: 1 / 2; grid-row: 3 / 4;
     align-self: end; justify-self: start;
-    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1px; margin-top: 32px;
-    width: 100%; max-width: 760px;
+    width: 100%; max-width: 600px;
     border-radius: 10px; overflow: hidden;
     /* Glass shell */
     background:
@@ -197,7 +197,7 @@
   .hcx__kpi:hover { background: rgba(10,18,32,0.45); }
   .hcx__kpi-num {
     font-family: "Manrope", sans-serif;
-    font-weight: 200; font-size: clamp(28px, 3.2vw, 44px);
+    font-weight: 200; font-size: clamp(40px, 4.5vw, 64px);
     line-height: 0.95; letter-spacing: -.04em;
     color: rgba(242,235,219,0.92);
     text-shadow: 0 2px 18px rgba(10,18,32,0.40);
@@ -205,11 +205,9 @@
   .hcx__kpi-unit { font-size: 0.55em; font-weight: 200; margin-left: 1px; }
   .hcx__kpi-sep { font-size: 0.7em; opacity: .65; margin: 0 1px; font-weight: 200; }
   .hcx__kpi-frac { font-size: 0.55em; opacity: .55; font-weight: 300; }
-  /* Cells 1 (asymétrie issuer) + 2 (VP +15-25%) get accent — strategic stakes */
-  .hcx__kpi:nth-child(1) .hcx__kpi-num,
-  .hcx__kpi:nth-child(2) .hcx__kpi-num { color: #C76941; font-weight: 700; }
-  .hcx__kpi:nth-child(2) .hcx__kpi-num { font-size: clamp(24px, 2.8vw, 38px); }
-  /* Cell 3 — climax tease (1/6 promesse) — accent ambre + soft inner glow */
+  /* Cell 1 — asymétrie issuer 30% — accent ambre, l'enjeu */
+  .hcx__kpi:nth-child(1) .hcx__kpi-num { color: #C76941; font-weight: 700; }
+  /* Cell 2 — climax tease (1/6 promesse) — accent ambre + soft inner glow, la chute */
   .hcx__kpi--accent .hcx__kpi-num { color: #C76941; font-weight: 700; }
   .hcx__kpi--accent::after {
     content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -1145,19 +1143,15 @@
         <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">6 mois · cadrage stratégique upstream</span>
       </div>
     </div>
-    <!-- KPI bento — 3 facts, glass-blurred, narrative arc enjeu → promesse → climax -->
-    <div class="hcx__kpis" role="group" aria-label="Trois chiffres pour planter l'enjeu">
+    <!-- KPI bento — 2 facts, glass-blurred : l'enjeu (30% asymétrie) + la chute (1/6 promesse) -->
+    <div class="hcx__kpis" role="group" aria-label="Deux faits pour planter l'enjeu et teaser la chute">
       <div class="hcx__kpi">
         <span class="hcx__kpi-num">30<span class="hcx__kpi-unit">%</span></span>
-        <span class="hcx__kpi-lab" data-i18n="bnp.hero.kpi1">flux carte vus<br>jamais traduits en valeur PME</span>
-      </div>
-      <div class="hcx__kpi">
-        <span class="hcx__kpi-num">+15<span class="hcx__kpi-sep">–</span>25<span class="hcx__kpi-unit">%</span></span>
-        <span class="hcx__kpi-lab" data-i18n="bnp.hero.kpi2">CA promis aux PME<br>via 4 rapports business</span>
+        <span class="hcx__kpi-lab" data-i18n="bnp.hero.kpi1">des flux carte conso vus par BNP<br>jamais traduits en valeur PME</span>
       </div>
       <div class="hcx__kpi hcx__kpi--accent">
         <span class="hcx__kpi-num">1<span class="hcx__kpi-frac">/6</span></span>
-        <span class="hcx__kpi-lab" data-i18n="bnp.hero.kpi4">promesse d'achat ferme<br>0 refus chez les autres</span>
+        <span class="hcx__kpi-lab" data-i18n="bnp.hero.kpi4">PME a pré-signé une promesse d'achat<br>0 refus chez les cinq autres</span>
       </div>
     </div>
   </div>

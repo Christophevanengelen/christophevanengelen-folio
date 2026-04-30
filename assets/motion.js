@@ -335,17 +335,17 @@
       hcxTl.to(hcxKpiCells, {
         opacity: 1, y: 0, duration: 0.55, ease: 'power3.out', stagger: 0.13,
       }, 3.05);
-      /* Accent pulse on cell 3 (1/6 climax tease) — last and strongest */
-      const cellAccent = hcxKpiCells[2] && hcxKpiCells[2].querySelector('.hcx__kpi-num');
+      /* Accent pulse on cell 2 (1/6 climax tease) — the last beat */
+      const cellAccent = hcxKpiCells[1] && hcxKpiCells[1].querySelector('.hcx__kpi-num');
       if (cellAccent) {
-        hcxTl.fromTo(cellAccent, { scale: 1 }, { scale: 1.10, duration: 0.24, ease: 'power3.out', yoyo: true, repeat: 1 }, 3.55);
+        hcxTl.fromTo(cellAccent, { scale: 1 }, { scale: 1.10, duration: 0.24, ease: 'power3.out', yoyo: true, repeat: 1 }, 3.45);
       }
     }
 
-    /* ── PAUSE 200ms : the bento lands ── */
+    /* ── PAUSE 250ms : the bento lands ── */
 
-    /* t=3.95 — Scroll cue last. The invitation. */
-    if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.95);
+    /* t=3.85 — Scroll cue last. The invitation. */
+    if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.85);
 
     /* ── Scroll parallax : BG image drifts slower than content */
     if (hcxBg) {
