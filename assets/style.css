@@ -328,37 +328,93 @@ hr { border: 0; height: 1px; background: var(--border); margin: 60px 0; }
   display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center;
   margin-top: 40px;
 }
-/* Léonidas section background — chocolates close-up image, heavy overlay for legibility */
-.leo--with-bg { position: relative; z-index: 0; isolation: isolate; padding: 56px 48px; border-radius: var(--radius); overflow: hidden; }
+/* Léonidas section background — chocolates close-up, photo plus visible, climax R */
+.leo--with-bg {
+  position: relative; z-index: 0; isolation: isolate;
+  padding: 72px 64px;
+  border-radius: 14px; overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.30),
+    0 0 0 1px color-mix(in srgb, var(--amber) 18%, transparent),
+    0 0 80px color-mix(in srgb, var(--amber) 8%, transparent);
+}
 .leo--with-bg .leo__bg {
   position: absolute; inset: 0; z-index: -1;
+  /* Overlay plus subtil pour que la photo soit vraiment vue, mais lisibilité maintenue */
   background-image:
-    /* Heavy overlay to keep text and figures legible */
     linear-gradient(135deg,
-      color-mix(in srgb, var(--bg) 88%, transparent) 0%,
-      color-mix(in srgb, var(--bg) 75%, transparent) 45%,
-      color-mix(in srgb, var(--bg) 92%, transparent) 100%),
-    /* Vignette to focus the eye */
-    radial-gradient(ellipse at 50% 100%, transparent 30%, color-mix(in srgb, var(--bg) 70%, transparent) 95%),
-    /* The actual photo */
+      color-mix(in srgb, var(--bg) 72%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 56%, transparent) 45%,
+      color-mix(in srgb, var(--bg) 78%, transparent) 100%),
+    radial-gradient(ellipse at 50% 100%, transparent 35%, color-mix(in srgb, var(--bg) 60%, transparent) 95%),
     url("../public/img/leonidas_chocolates_bg.jpg?v=leo1");
   background-size: cover, cover, cover;
   background-position: center, center, center 40%;
   background-repeat: no-repeat;
-  /* Fallback color if image is missing */
   background-color: color-mix(in srgb, var(--card) 60%, var(--bg));
-  filter: saturate(0.92) contrast(1.05);
+  filter: saturate(1.05) contrast(1.08);
   border-radius: inherit;
+  /* Slow Ken Burns ambient — la photo respire pendant que le user lit les KPIs */
+  animation: leoKenBurns 28s ease-in-out infinite alternate;
 }
-/* Subtle copper sheen on top of the bg, makes it feel premium even in fallback */
+@keyframes leoKenBurns {
+  0%   { transform: scale(1.00) translate3d(0, 0, 0); }
+  100% { transform: scale(1.06) translate3d(-1%, -0.6%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .leo--with-bg .leo__bg { animation: none; }
+}
+/* Subtle copper sheen — top-right ambre glow */
 .leo--with-bg::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: radial-gradient(ellipse at 80% 0%, color-mix(in srgb, var(--amber) 14%, transparent) 0%, transparent 55%);
+  background:
+    radial-gradient(ellipse at 80% 0%, color-mix(in srgb, var(--amber) 18%, transparent) 0%, transparent 55%),
+    radial-gradient(ellipse at 0% 100%, color-mix(in srgb, var(--amber) 10%, transparent) 0%, transparent 50%);
   border-radius: inherit;
 }
-.leo--with-bg .stat-leo { background: color-mix(in srgb, var(--bg) 55%, transparent); backdrop-filter: blur(6px); border-radius: 8px; padding: 16px 18px; }
+/* Stat cards : glass blur sur la photo, plus présents */
+.leo--with-bg .stat-leo {
+  background: color-mix(in srgb, var(--bg) 62%, transparent);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid color-mix(in srgb, var(--amber) 22%, transparent);
+  border-left: 3px solid var(--amber);
+  border-radius: 10px; padding: 22px 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .25s ease;
+}
+.leo--with-bg .stat-leo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.26), 0 0 28px color-mix(in srgb, var(--amber) 18%, transparent);
+}
+/* Numbers in climax R : plus gros, accent ambre direct */
+.leo--with-bg .stat-leo .num {
+  font-size: clamp(34px, 4vw, 52px);
+  font-family: var(--display); font-weight: 200;
+  color: var(--amber);
+  letter-spacing: -.03em;
+  text-shadow: 0 2px 24px rgba(10,18,32,0.40);
+}
+.leo--with-bg .stat-leo .label {
+  margin-top: 8px;
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(242,235,219,0.82);
+  font-weight: 600;
+}
+.leo--with-bg blockquote {
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid color-mix(in srgb, var(--amber) 22%, transparent);
+  border-left: 2px solid var(--amber);
+  margin-top: 32px; padding: 28px 30px;
+  border-radius: 10px;
+  font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.20);
+}
 @media (max-width: 720px) {
-  .leo--with-bg { padding: 36px 24px; }
+  .leo--with-bg { padding: 44px 28px; }
+  .leo--with-bg .stat-leo .num { font-size: clamp(28px, 8vw, 36px); }
 }
 
 .leo .leo-figs { display: grid; gap: 18px; }
