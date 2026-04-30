@@ -788,9 +788,144 @@ section.tldr { padding: 60px 0 70px; }
   .proposed-bands--bottom { grid-template-columns: 1fr; }
 }
 
-/* STORY NAV — timeline sticky 4 phases × 4 jalons, MAINTENANT FULL-WIDTH
-   Plus de top-nav meta (back link + 2 pills retirés), donc la story-nav peut
-   prendre plus d'espace horizontal et devenir vraiment graphique. */
+/* STORYLINE — UNE SEULE timeline avec 2 modes :
+   1) DEFAULT (in-flow grand) : présence dans #proposed-roadmap, double-diamond shape
+   2) .is-stuck (sticky compact) : position fixed top, pill format au scroll past
+   Animation FLIP au passage. */
+.storyline {
+  display: block;
+  margin: 56px auto 32px;
+  padding: 36px 32px;
+  max-width: 1240px;
+  background: color-mix(in srgb, var(--card) 50%, transparent);
+  border: 1px solid var(--card-edge);
+  border-radius: 14px;
+  position: relative;
+  transition:
+    max-width .55s cubic-bezier(.16,1,.3,1),
+    padding .55s cubic-bezier(.16,1,.3,1),
+    border-radius .55s cubic-bezier(.16,1,.3,1),
+    background .55s ease,
+    box-shadow .55s ease,
+    margin .55s ease,
+    transform .55s cubic-bezier(.16,1,.3,1);
+}
+.storyline__head { margin-bottom: 28px; transition: opacity .35s ease, max-height .55s ease; overflow: hidden; }
+.storyline__head .eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 11px; letter-spacing: .18em;
+}
+.storyline__head .eyebrow::before {
+  content: ""; width: 28px; height: 1px; background: var(--amber);
+}
+
+/* Default in-flow line — large, double-diamond visual : research up, analyse down,
+   prototype up, concept down (waveform alternance via group margin-top) */
+.storyline__line {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; align-items: stretch; justify-content: space-between;
+  gap: 32px;
+  position: relative;
+}
+.storyline:not(.is-stuck) .snm-group[data-phase="research"]  { margin-top: 20px; }
+.storyline:not(.is-stuck) .snm-group[data-phase="analyse"]   { margin-top: 0; }
+.storyline:not(.is-stuck) .snm-group[data-phase="prototype"] { margin-top: 20px; }
+.storyline:not(.is-stuck) .snm-group[data-phase="concept"]   { margin-top: 0; }
+.storyline:not(.is-stuck) .storyline__line {
+  align-items: center;
+  padding: 28px 0;
+}
+/* Double-diamond decorative line behind groups — connecting wave */
+.storyline:not(.is-stuck) .storyline__line::before {
+  content: ""; position: absolute; left: 5%; right: 5%;
+  top: 50%; height: 2px;
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--amber) 35%, transparent) 0%,
+    color-mix(in srgb, var(--amber) 60%, transparent) 50%,
+    color-mix(in srgb, var(--amber) 90%, transparent) 100%);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* STUCK MODE — sticky compact at top */
+.storyline.is-stuck {
+  position: fixed; top: 16px; left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 12px 22px;
+  max-width: calc(100vw - 240px);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 100%, transparent);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow:
+    0 14px 40px rgba(0,0,0,0.24),
+    0 0 80px color-mix(in srgb, var(--amber) 9%, transparent),
+    0 1px 0 color-mix(in srgb, var(--fg) 8%, transparent) inset;
+  z-index: 50;
+  width: auto;
+}
+.storyline.is-stuck .storyline__head {
+  max-height: 0; opacity: 0; margin: 0;
+}
+.storyline.is-stuck .storyline__line {
+  gap: 22px; align-items: stretch; padding: 0;
+}
+.storyline.is-stuck .storyline__line::before { display: none; }
+.storyline.is-stuck .snm-group { margin: 0 !important; }
+
+/* Placeholder pour éviter le saut quand la storyline passe en fixed */
+.storyline-placeholder {
+  height: 0;
+  transition: height .55s cubic-bezier(.16,1,.3,1);
+}
+
+/* Group + nodes shared styles between default and stuck modes */
+.storyline .snm-group {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  position: relative; padding: 0 8px;
+  z-index: 1;
+}
+.storyline:not(.is-stuck) .snm-group {
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  border-radius: 12px; padding: 14px 18px;
+  border: 1px solid color-mix(in srgb, var(--amber) 25%, transparent);
+}
+.storyline .snm-group + .snm-group::before {
+  content: ""; position: absolute; left: -10px; top: 14px; bottom: 6px;
+  width: 1px; background: color-mix(in srgb, var(--fg) 14%, transparent);
+}
+.storyline:not(.is-stuck) .snm-group + .snm-group::before { display: none; }
+.storyline .snm-group__name {
+  font-family: var(--sans); font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  transition: color .35s ease, font-size .55s ease;
+}
+.storyline:not(.is-stuck) .snm-group__name {
+  font-size: 13px;
+  color: var(--amber);
+}
+.storyline.is-stuck .snm-group__name {
+  font-size: 10px; color: var(--fg-muted);
+}
+.storyline .snm-group.is-current .snm-group__name { color: var(--amber); letter-spacing: .22em; }
+
+.storyline .snm-group__nodes {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; align-items: center; gap: 11px;
+  position: relative;
+}
+.storyline .snm-group__nodes::before {
+  content: ""; position: absolute; left: 5px; right: 5px; top: 50%; height: 1px;
+  background: color-mix(in srgb, var(--fg) 12%, transparent);
+  transform: translateY(-50%);
+}
+.storyline .snm-group.is-current .snm-group__nodes::before {
+  background: color-mix(in srgb, var(--amber) 50%, transparent);
+}
+
+/* LEGACY: ancien story-nav fixed top (now neutralised) */
 .story-nav {
   position: fixed; top: 16px; right: 24px;
   display: inline-flex;

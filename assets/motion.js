@@ -137,28 +137,35 @@
   /* STAR menu progress (legacy) — neutralisé puisque le STAR menu est remplacé
      par .story-nav. Le data-act marker reste utile pour les CSS hooks act-level. */
 
-  /* STORY NAV sticky : marque-page de 12 jalons, accompagne le scroll.
-     Show après #proposed-roadmap (handoff naturel : la roadmap se réduit en nav).
-     Hide sur Fin Royale. Active state synchronisé via IntersectionObserver sur
-     les anchors des jalons. */
-  const storyNav = document.querySelector('.story-nav');
+  /* STORYLINE — UNE SEULE timeline qui vit dans #proposed-roadmap (rencontre)
+     puis se transforme en sticky compact au passage. Pas de duplication. */
+  const storyNav = document.querySelector('.storyline');
+  const placeholder = document.querySelector('.storyline-placeholder');
   const proposedEl = document.querySelector('#proposed-roadmap');
   if (storyNav && proposedEl) {
-    /* Show / hide */
+    /* Toggle .is-stuck quand la storyline atteint le top du viewport.
+       Quand sticky, on reserve sa hauteur dans le placeholder pour éviter
+       le saut de scroll (l'élément sort du flow en position fixed). */
+    let stuckHeight = 0;
+    const setStuck = (on) => {
+      if (on) {
+        stuckHeight = storyNav.offsetHeight;
+        if (placeholder) placeholder.style.height = stuckHeight + 'px';
+        storyNav.classList.add('is-stuck');
+      } else {
+        if (placeholder) placeholder.style.height = '0';
+        storyNav.classList.remove('is-stuck');
+      }
+    };
     ScrollTrigger.create({
-      trigger: proposedEl, start: 'bottom 70%',
-      onEnter:     () => storyNav.classList.add('is-visible'),
-      onLeaveBack: () => storyNav.classList.remove('is-visible'),
+      trigger: storyNav,
+      start: 'top 16px',
+      endTrigger: '.fin-royale', end: 'top 16px',
+      onEnter:     () => setStuck(true),
+      onLeaveBack: () => setStuck(false),
+      onLeave:     () => setStuck(false),
+      onEnterBack: () => setStuck(true),
     });
-    const finEl = document.querySelector('.fin-royale');
-    if (finEl) {
-      ScrollTrigger.create({
-        trigger: finEl, start: 'top 70%',
-        onEnter:     () => storyNav.classList.remove('is-visible'),
-        onLeaveBack: () => storyNav.classList.add('is-visible'),
-      });
-    }
-
     /* Active state — IntersectionObserver via ScrollTrigger.
        Le jalon courant est highlighted, les précédents marqués .is-past.
        Le groupe de phase courant a .is-current sur son nom. */
