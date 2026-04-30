@@ -166,44 +166,57 @@
       onLeave:     () => setStuck(false),
       onEnterBack: () => setStuck(true),
     });
-    /* Active state — IntersectionObserver via ScrollTrigger.
-       Le jalon courant est highlighted, les précédents marqués .is-past.
-       Le groupe de phase courant a .is-current sur son nom. */
+    /* Active state — driven by scroll progress between chapter-dividers.
+       Each phase (research/analyse/prototype/concept) covers 4 nodes.
+       The active node = floor(progress * 4) within its phase. */
     const navNodes = Array.from(storyNav.querySelectorAll('.snm-node'));
     const navGroups = Array.from(storyNav.querySelectorAll('.snm-group'));
     let activeIdx = -1;
-    let currentGroupPhase = null;
 
     const updateActive = (idx) => {
       if (idx === activeIdx) return;
       activeIdx = idx;
       navNodes.forEach((n, i) => {
         n.classList.toggle('is-active', i === idx);
-        n.classList.toggle('is-past', i < idx);
+        n.classList.toggle('is-past', i < idx && idx >= 0);
       });
-      /* Find which group contains the active node — just update is-current
-         on the group name. No overlay flash, the chapter divider does the job. */
-      const activeNode = navNodes[idx];
+      const activeNode = idx >= 0 ? navNodes[idx] : null;
       const activeGroup = activeNode?.closest('.snm-group');
       navGroups.forEach((g) => g.classList.toggle('is-current', g === activeGroup));
-      if (activeGroup?.dataset.phase && activeGroup.dataset.phase !== currentGroupPhase) {
-        currentGroupPhase = activeGroup.dataset.phase;
-      }
     };
 
-    /* Build a map of anchor → node index. Multiple nodes can share an anchor;
-       we use the node order to assign indexes. */
-    navNodes.forEach((n, i) => {
-      const sel = n.getAttribute('data-anchor');
-      if (!sel) return;
-      const target = document.querySelector(sel);
-      if (!target) return;
+    /* Reset all to inactive at start (before research begins) */
+    updateActive(-1);
+
+    /* 4 phases : entre chapter-divider X et chapter-divider X+1, le user traverse
+       4 nodes (idx 0-3 / 4-7 / 8-11 / 12-15). Le scroll progress dans la phase
+       détermine quel node est actif. */
+    const phases = [
+      { id: 'research',  startSel: '#chap-research',  endSel: '#chap-analyse',  nodes: [0, 1, 2, 3] },
+      { id: 'analyse',   startSel: '#chap-analyse',   endSel: '#chap-prototype', nodes: [4, 5, 6, 7] },
+      { id: 'prototype', startSel: '#chap-prototype', endSel: '#chap-concept',  nodes: [8, 9, 10, 11] },
+      { id: 'concept',   startSel: '#chap-concept',   endSel: '.fin-royale',    nodes: [12, 13, 14, 15] },
+    ];
+
+    phases.forEach((phase, pIdx) => {
+      const startEl = document.querySelector(phase.startSel);
+      const endEl = document.querySelector(phase.endSel);
+      if (!startEl || !endEl) return;
+
       ScrollTrigger.create({
-        trigger: target,
-        start: () => `top+=${i * 4}px 60%`,
-        end: () => `bottom-=${i * 4}px 40%`,
-        onEnter:     () => updateActive(i),
-        onEnterBack: () => updateActive(i),
+        trigger: startEl,
+        start: 'top 60%',
+        endTrigger: endEl,
+        end: 'top 60%',
+        onEnter: () => updateActive(phase.nodes[0]),
+        onUpdate: (self) => {
+          const subIdx = Math.min(3, Math.max(0, Math.floor(self.progress * 4)));
+          updateActive(phase.nodes[subIdx]);
+        },
+        onLeaveBack: () => {
+          if (pIdx === 0) updateActive(-1);
+          else updateActive(phases[pIdx - 1].nodes[3]);
+        },
       });
     });
   }
