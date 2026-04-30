@@ -174,25 +174,6 @@
     let activeIdx = -1;
     let currentGroupPhase = null;
 
-    /* PHASE TRANSITION overlay : full-screen ambre wash quand on passe d'une
-       grande phase à une autre (research → analyse → prototype → concept). */
-    const phaseOverlay = document.querySelector('.phase-transition');
-    const phaseLabel = phaseOverlay?.querySelector('.phase-transition__label');
-    const phaseLabels = {
-      research: 'Research',
-      analyse:  'Analyse',
-      prototype: 'Prototype',
-      concept:  'Concept',
-    };
-    const firePhaseTransition = (phase) => {
-      if (!phaseOverlay || !phaseLabel) return;
-      phaseLabel.textContent = phaseLabels[phase] || '';
-      phaseOverlay.classList.remove('is-firing');
-      void phaseOverlay.offsetWidth;
-      phaseOverlay.classList.add('is-firing');
-      setTimeout(() => phaseOverlay.classList.remove('is-firing'), 1500);
-    };
-
     const updateActive = (idx) => {
       if (idx === activeIdx) return;
       activeIdx = idx;
@@ -200,14 +181,13 @@
         n.classList.toggle('is-active', i === idx);
         n.classList.toggle('is-past', i < idx);
       });
-      /* Find which group contains the active node, fire phase transition if changed */
+      /* Find which group contains the active node — just update is-current
+         on the group name. No overlay flash, the chapter divider does the job. */
       const activeNode = navNodes[idx];
       const activeGroup = activeNode?.closest('.snm-group');
-      const newPhase = activeGroup?.dataset.phase;
       navGroups.forEach((g) => g.classList.toggle('is-current', g === activeGroup));
-      if (newPhase && newPhase !== currentGroupPhase) {
-        if (currentGroupPhase !== null) firePhaseTransition(newPhase);
-        currentGroupPhase = newPhase;
+      if (activeGroup?.dataset.phase && activeGroup.dataset.phase !== currentGroupPhase) {
+        currentGroupPhase = activeGroup.dataset.phase;
       }
     };
 

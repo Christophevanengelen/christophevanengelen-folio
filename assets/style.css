@@ -1076,57 +1076,8 @@ section.tldr { padding: 60px 0 70px; }
   .snm-dot, .snm-tip { transition: none; }
 }
 
-/* PHASE TRANSITION OVERLAY — full-screen ambre wash + zoom-in label
-   Déclenché par JS quand on passe d'une grande phase à une autre. */
-.phase-transition {
-  position: fixed; inset: 0; z-index: 60;
-  pointer-events: none;
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0;
-  background: radial-gradient(ellipse at 50% 50%,
-    color-mix(in srgb, var(--amber) 18%, transparent) 0%,
-    color-mix(in srgb, var(--bg) 65%, transparent) 60%,
-    color-mix(in srgb, var(--bg) 90%, transparent) 100%);
-  backdrop-filter: blur(8px);
-  transition: opacity .25s ease;
-}
-.phase-transition.is-firing {
-  opacity: 1;
-  animation: phaseWash 1.4s cubic-bezier(.16,1,.3,1) forwards;
-}
-@keyframes phaseWash {
-  0%   { opacity: 0; backdrop-filter: blur(0px); }
-  20%  { opacity: 1; backdrop-filter: blur(14px); }
-  60%  { opacity: 1; backdrop-filter: blur(14px); }
-  100% { opacity: 0; backdrop-filter: blur(0px); }
-}
-.phase-transition__inner {
-  display: flex; flex-direction: column; align-items: center; gap: 18px;
-  transform: scale(0.85);
-}
-.phase-transition.is-firing .phase-transition__inner {
-  animation: phaseLabelIn 1.4s cubic-bezier(.16,1,.3,1) forwards;
-}
-@keyframes phaseLabelIn {
-  0%   { transform: scale(0.65); opacity: 0; }
-  35%  { transform: scale(1.0); opacity: 1; }
-  70%  { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1.4); opacity: 0; }
-}
-.phase-transition__label {
-  font-family: var(--display); font-weight: 200;
-  font-size: clamp(64px, 12vw, 180px);
-  letter-spacing: -.04em; line-height: 1;
-  color: var(--amber);
-  text-shadow:
-    0 0 40px color-mix(in srgb, var(--amber) 50%, transparent),
-    0 4px 60px rgba(0,0,0,0.4);
-  text-align: center;
-}
-@media (prefers-reduced-motion: reduce) {
-  .phase-transition.is-firing { animation: none; opacity: 0; }
-  .phase-transition.is-firing .phase-transition__inner { animation: none; }
-}
+/* PHASE TRANSITION overlay supprimé — le chapter-divider (grande lettre + titre + zoom)
+   joue ce rôle de transition entre phases, c'est le pattern qui plaît. */
 
 /* LEGACY STAR MENU — neutralisé (remplacé par .story-nav). Conservé pour fallback CSS. */
    Apparaît après le Hero, glass-blurred, click pour naviguer aux 4 actes. */
