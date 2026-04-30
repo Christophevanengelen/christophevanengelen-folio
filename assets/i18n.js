@@ -182,6 +182,40 @@
     },
     /* footer.copy already defined globally above (line 26) — single source of truth */
 
+    /* ============== CHAPTERS — 4 phases Double Diamond (Research/Analyse/Prototype/Concept) ============== */
+    'bnp.chapResearch.label': { fr: 'Phase 01 · Research', nl: 'Fase 01 · Research', en: 'Phase 01 · Research' },
+    'bnp.chapResearch.title': { fr: 'Le terrain enseigne.', nl: 'Het terrein leert.', en: 'The ground teaches.' },
+    'bnp.chapResearch.lead': {
+      fr: 'Six PME interviewées. Trois benchmarks live (Barclays, Proximus, BBVA). Une matrice de segments. Avant de proposer, comprendre ce qu\'un commerçant choisit de faire avec ce qu\'il sait.',
+      nl: 'Zes kmo\'s geïnterviewd. Drie live benchmarks (Barclays, Proximus, BBVA). Een segmentmatrix. Voor er een voorstel komt, eerst begrijpen wat een merchant kiest te doen met wat hij weet.',
+      en: 'Six SMEs interviewed. Three live benchmarks (Barclays, Proximus, BBVA). One segment matrix. Understand before proposing — what a shopkeeper chooses to do with what he already knows.'
+    },
+    'bnp.chapAnalyse.label': { fr: 'Phase 02 · Analyse', nl: 'Fase 02 · Analyse', en: 'Phase 02 · Analyse' },
+    'bnp.chapAnalyse.title': { fr: 'Le bon problème.', nl: 'Het juiste probleem.', en: 'The right problem.' },
+    'bnp.chapAnalyse.lead': {
+      fr: 'Six barrières client cartographiées. Une Value Proposition Canvas posée sur les vrais frictions. Un Lean Canvas qui tient sur une page. Reframer la donnée brute en service que le commerçant achète.',
+      nl: 'Zes klantbarrières in kaart gebracht. Een Value Proposition Canvas op de echte wrijvingen. Een Lean Canvas op één pagina. De ruwe data herkaderen tot een dienst die de merchant koopt.',
+      en: 'Six customer barriers mapped. A Value Proposition Canvas anchored on real frictions. A Lean Canvas that fits on a single page. Reframe raw data into a service the merchant buys.'
+    },
+    'bnp.chapPrototype.label': { fr: 'Phase 03 · Prototype', nl: 'Fase 03 · Prototype', en: 'Phase 03 · Prototype' },
+    'bnp.chapPrototype.title': { fr: 'Pas un dashboard. Un service.', nl: 'Geen dashboard. Een dienst.', en: 'Not a dashboard. A service.' },
+    'bnp.chapPrototype.lead': {
+      fr: 'Neuf personas B2B livrés. Cinq journeys end-to-end. Un dashboard Spotfire avec trois lectures coachées par graphique. Le concept prend forme — chaque écran ouvre sur une décision possible.',
+      nl: 'Negen B2B-personas opgeleverd. Vijf end-to-end journeys. Een Spotfire-dashboard met drie begeleide lezingen per diagram. Het concept krijgt vorm — elk scherm opent op een mogelijke beslissing.',
+      en: 'Nine B2B personas delivered. Five end-to-end journeys. A Spotfire dashboard with three coached reads per chart. The concept takes shape — every screen opens on a possible decision.'
+    },
+    'bnp.chapConcept.label': { fr: 'Phase 04 · Concept', nl: 'Fase 04 · Concept', en: 'Phase 04 · Concept' },
+    'bnp.chapConcept.title': {
+      fr: 'Le résultat ne se déclare pas, il se prouve.',
+      nl: 'Het resultaat verklaar je niet, je bewijst het.',
+      en: 'A result is not declared, it\'s proven.'
+    },
+    'bnp.chapConcept.lead': {
+      fr: 'Six PME testent. Une dit oui par écrit — le groupe Léonidas, par décision du manager général. Zéro refus chez les cinq autres. Le sponsor a son signal. Le MVP rentre en production.',
+      nl: 'Zes kmo\'s testen. Eén zegt schriftelijk ja — de Léonidas-groep, op beslissing van haar algemeen directeur. Nul weigeringen bij de vijf anderen. De sponsor heeft zijn signaal. Het MVP gaat in productie.',
+      en: 'Six SMEs test. One signs yes in writing — the Léonidas group, by decision of its general manager. Zero refusals among the other five. The sponsor has his signal. The MVP goes into production.'
+    },
+
     /* ============== CHAPTER S — Situation (NEW 2026-04-30 s2 — STAR 4 acts) ============== */
     /* STORY NAV sticky — 4 phases × 4 jalons, juste les noms d'ateliers/deliverables */
     'bnp.snm.gResearch':   { fr: 'Research',  nl: 'Research',  en: 'Research' },
