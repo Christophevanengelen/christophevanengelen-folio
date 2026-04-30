@@ -788,20 +788,20 @@ section.tldr { padding: 60px 0 70px; }
   .proposed-bands--bottom { grid-template-columns: 1fr; }
 }
 
-/* STORY NAV — timeline sticky compacte, 12 jalons, marque-page narratif tout
-   au long du scroll. Remplace l'ancien STAR menu (4 nodes S/T/A/R). */
+/* STORY NAV — timeline sticky 4 phases × 4 jalons, marque-page narratif épuré
+   Remplace ancien STAR menu. Phases groupées avec leur nom, dots dans chaque
+   groupe, séparateurs visuels entre les 4 phases. */
 .story-nav {
-  position: fixed; top: 16px; left: 50%; transform: translateX(-50%) translateY(-16px);
-  display: inline-flex; flex-direction: column; align-items: center; gap: 6px;
-  padding: 10px 18px 12px;
-  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  position: fixed; top: 18px; left: 50%; transform: translateX(-50%) translateY(-16px);
+  padding: 12px 22px;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
   border: 1px solid color-mix(in srgb, var(--border) 100%, transparent);
   border-radius: 14px;
   backdrop-filter: blur(22px) saturate(180%);
   -webkit-backdrop-filter: blur(22px) saturate(180%);
   box-shadow:
-    0 12px 32px rgba(0,0,0,0.22),
-    0 0 50px color-mix(in srgb, var(--amber) 8%, transparent),
+    0 12px 36px rgba(0,0,0,0.22),
+    0 0 60px color-mix(in srgb, var(--amber) 7%, transparent),
     0 1px 0 color-mix(in srgb, var(--fg) 8%, transparent) inset;
   z-index: 50;
   opacity: 0; pointer-events: none;
@@ -814,14 +814,37 @@ section.tldr { padding: 60px 0 70px; }
 }
 .story-nav__line {
   list-style: none; padding: 0; margin: 0;
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: stretch; gap: 14px;
+}
+.snm-group {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  position: relative;
+  padding: 0 6px;
+}
+.snm-group + .snm-group::before {
+  content: ""; position: absolute; left: -7px; top: 12px; bottom: 6px;
+  width: 1px;
+  background: color-mix(in srgb, var(--fg) 12%, transparent);
+}
+.snm-group__name {
+  font-family: var(--sans); font-size: 9.5px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--fg-muted);
+  transition: color .35s ease;
+}
+.snm-group.is-current .snm-group__name {
+  color: var(--amber);
+}
+.snm-group__nodes {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; align-items: center; gap: 7px;
   position: relative;
 }
-.story-nav__line::before {
-  content: ""; position: absolute; left: 5px; right: 5px; top: 50%;
-  height: 1px; background: color-mix(in srgb, var(--fg) 14%, transparent);
+.snm-group__nodes::before {
+  content: ""; position: absolute; left: 4px; right: 4px; top: 50%;
+  height: 1px; background: color-mix(in srgb, var(--fg) 12%, transparent);
   transform: translateY(-50%);
-  z-index: 0; pointer-events: none;
+  z-index: 0;
 }
 .snm-node {
   position: relative; z-index: 1;
@@ -831,89 +854,126 @@ section.tldr { padding: 60px 0 70px; }
 .snm-node:hover { transform: translateY(-1px); }
 .snm-dot {
   display: block;
-  width: 10px; height: 10px; border-radius: 99px;
-  background: color-mix(in srgb, var(--fg) 18%, transparent);
-  border: 1.5px solid color-mix(in srgb, var(--amber) 50%, transparent);
+  width: 9px; height: 9px; border-radius: 99px;
+  background: var(--bg);
+  border: 1.5px solid color-mix(in srgb, var(--amber) 55%, transparent);
   transition: all .35s cubic-bezier(.16,1,.3,1);
 }
 .snm-node:hover .snm-dot {
   background: var(--amber);
   border-color: var(--amber);
-  transform: scale(1.4);
+  transform: scale(1.6);
 }
-/* Phase color hints */
-.snm-node[data-phase="research"]  .snm-dot { border-color: color-mix(in srgb, var(--amber) 45%, transparent); }
-.snm-node[data-phase="analyse"]   .snm-dot { border-color: color-mix(in srgb, var(--amber) 65%, transparent); }
-.snm-node[data-phase="prototype"] .snm-dot { border-color: color-mix(in srgb, var(--amber) 85%, transparent); }
-.snm-node[data-phase="concept"]   .snm-dot { border-color: var(--amber); }
-/* Past nodes (filled subtle ambre) */
+/* Phase color hints (subtle gradient research → concept) */
+.snm-group[data-phase="research"]  .snm-dot { border-color: color-mix(in srgb, var(--amber) 45%, transparent); }
+.snm-group[data-phase="analyse"]   .snm-dot { border-color: color-mix(in srgb, var(--amber) 65%, transparent); }
+.snm-group[data-phase="prototype"] .snm-dot { border-color: color-mix(in srgb, var(--amber) 85%, transparent); }
+.snm-group[data-phase="concept"]   .snm-dot { border-color: var(--amber); }
+/* Past nodes */
 .snm-node.is-past .snm-dot {
-  background: color-mix(in srgb, var(--amber) 50%, transparent);
-  border-color: color-mix(in srgb, var(--amber) 80%, transparent);
+  background: color-mix(in srgb, var(--amber) 55%, transparent);
+  border-color: color-mix(in srgb, var(--amber) 85%, transparent);
 }
-/* Active node (current jalon) */
+/* Active node */
 .snm-node.is-active .snm-dot {
   background: var(--amber);
   border-color: var(--amber);
-  transform: scale(1.55);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--amber) 20%, transparent),
-              0 0 14px color-mix(in srgb, var(--amber) 55%, transparent);
+  transform: scale(1.7);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--amber) 22%, transparent),
+              0 0 14px color-mix(in srgb, var(--amber) 60%, transparent);
 }
-.snm-node.snm-node--accent .snm-dot {
+.snm-node--accent .snm-dot {
   background: var(--amber);
   border-color: var(--amber);
 }
-/* Tooltip on hover : jalon details */
+/* Current group is highlighted */
+.snm-group.is-current .snm-group__nodes::before {
+  background: color-mix(in srgb, var(--amber) 50%, transparent);
+}
+/* Tooltip on hover */
 .snm-tip {
-  position: absolute; top: -54px; left: 50%; transform: translateX(-50%) translateY(4px);
-  padding: 8px 12px; border-radius: 8px;
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  position: absolute; top: -36px; left: 50%; transform: translateX(-50%) translateY(4px);
+  padding: 7px 12px; border-radius: 8px;
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
   border: 1px solid color-mix(in srgb, var(--amber) 35%, transparent);
   backdrop-filter: blur(14px);
-  font-family: var(--sans); font-size: 11px; line-height: 1.4;
+  font-family: var(--sans); font-size: 11px; font-weight: 500; line-height: 1.3;
   color: var(--fg);
-  white-space: nowrap; text-align: center;
+  white-space: nowrap;
   opacity: 0; pointer-events: none;
   transition: opacity .25s ease, transform .25s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.20);
   z-index: 2;
-}
-.snm-tip strong {
-  display: block;
-  font-size: 9.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 2px;
 }
 .snm-node:hover .snm-tip {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
-/* Current jalon label below the line — always visible, updates with scroll */
-.story-nav__current {
-  display: flex; align-items: baseline; gap: 8px;
-  font-family: var(--sans); font-size: 10.5px; line-height: 1.3;
-  color: var(--fg-muted);
-  padding-top: 4px;
-  text-align: center; min-height: 14px;
-}
-.snm-current-when {
-  font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--amber);
-}
-.snm-current-what {
-  font-weight: 500; color: var(--fg);
-}
-
 @media (max-width: 720px) {
-  .story-nav { top: 10px; padding: 8px 12px 10px; }
-  .story-nav__line { gap: 6px; }
-  .snm-dot { width: 8px; height: 8px; }
-  .story-nav__current { font-size: 9.5px; }
+  .story-nav { top: 10px; padding: 10px 14px; }
+  .story-nav__line { gap: 10px; }
+  .snm-group { gap: 4px; padding: 0 3px; }
+  .snm-group__name { font-size: 8.5px; letter-spacing: .12em; }
+  .snm-group__nodes { gap: 5px; }
+  .snm-dot { width: 7px; height: 7px; }
+  .snm-group + .snm-group::before { left: -5px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .story-nav { transition: opacity .2s linear; }
   .snm-dot, .snm-tip { transition: none; }
+}
+
+/* PHASE TRANSITION OVERLAY — full-screen ambre wash + zoom-in label
+   Déclenché par JS quand on passe d'une grande phase à une autre. */
+.phase-transition {
+  position: fixed; inset: 0; z-index: 60;
+  pointer-events: none;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  background: radial-gradient(ellipse at 50% 50%,
+    color-mix(in srgb, var(--amber) 18%, transparent) 0%,
+    color-mix(in srgb, var(--bg) 65%, transparent) 60%,
+    color-mix(in srgb, var(--bg) 90%, transparent) 100%);
+  backdrop-filter: blur(8px);
+  transition: opacity .25s ease;
+}
+.phase-transition.is-firing {
+  opacity: 1;
+  animation: phaseWash 1.4s cubic-bezier(.16,1,.3,1) forwards;
+}
+@keyframes phaseWash {
+  0%   { opacity: 0; backdrop-filter: blur(0px); }
+  20%  { opacity: 1; backdrop-filter: blur(14px); }
+  60%  { opacity: 1; backdrop-filter: blur(14px); }
+  100% { opacity: 0; backdrop-filter: blur(0px); }
+}
+.phase-transition__inner {
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+  transform: scale(0.85);
+}
+.phase-transition.is-firing .phase-transition__inner {
+  animation: phaseLabelIn 1.4s cubic-bezier(.16,1,.3,1) forwards;
+}
+@keyframes phaseLabelIn {
+  0%   { transform: scale(0.65); opacity: 0; }
+  35%  { transform: scale(1.0); opacity: 1; }
+  70%  { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+.phase-transition__label {
+  font-family: var(--display); font-weight: 200;
+  font-size: clamp(64px, 12vw, 180px);
+  letter-spacing: -.04em; line-height: 1;
+  color: var(--amber);
+  text-shadow:
+    0 0 40px color-mix(in srgb, var(--amber) 50%, transparent),
+    0 4px 60px rgba(0,0,0,0.4);
+  text-align: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .phase-transition.is-firing { animation: none; opacity: 0; }
+  .phase-transition.is-firing .phase-transition__inner { animation: none; }
 }
 
 /* LEGACY STAR MENU — neutralisé (remplacé par .story-nav). Conservé pour fallback CSS. */

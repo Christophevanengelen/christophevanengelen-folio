@@ -159,13 +159,32 @@
       });
     }
 
-    /* Active state — IntersectionObserver sur les anchors des jalons.
-       Le jalon dont l'anchor est le plus proche du milieu du viewport = actif.
-       Les jalons précédents = .is-past (highlight subtil). */
+    /* Active state — IntersectionObserver via ScrollTrigger.
+       Le jalon courant est highlighted, les précédents marqués .is-past.
+       Le groupe de phase courant a .is-current sur son nom. */
     const navNodes = Array.from(storyNav.querySelectorAll('.snm-node'));
-    const currentWhen = storyNav.querySelector('.snm-current-when');
-    const currentWhat = storyNav.querySelector('.snm-current-what');
+    const navGroups = Array.from(storyNav.querySelectorAll('.snm-group'));
     let activeIdx = -1;
+    let currentGroupPhase = null;
+
+    /* PHASE TRANSITION overlay : full-screen ambre wash quand on passe d'une
+       grande phase à une autre (research → analyse → prototype → concept). */
+    const phaseOverlay = document.querySelector('.phase-transition');
+    const phaseLabel = phaseOverlay?.querySelector('.phase-transition__label');
+    const phaseLabels = {
+      research: 'Research',
+      analyse:  'Analyse',
+      prototype: 'Prototype',
+      concept:  'Concept',
+    };
+    const firePhaseTransition = (phase) => {
+      if (!phaseOverlay || !phaseLabel) return;
+      phaseLabel.textContent = phaseLabels[phase] || '';
+      phaseOverlay.classList.remove('is-firing');
+      void phaseOverlay.offsetWidth;
+      phaseOverlay.classList.add('is-firing');
+      setTimeout(() => phaseOverlay.classList.remove('is-firing'), 1500);
+    };
 
     const updateActive = (idx) => {
       if (idx === activeIdx) return;
@@ -174,27 +193,30 @@
         n.classList.toggle('is-active', i === idx);
         n.classList.toggle('is-past', i < idx);
       });
-      const tip = navNodes[idx]?.querySelector('.snm-tip');
-      if (tip && currentWhen && currentWhat) {
-        currentWhen.textContent = tip.querySelector('strong')?.textContent || '';
-        currentWhat.textContent = tip.querySelector('span')?.textContent || '';
+      /* Find which group contains the active node, fire phase transition if changed */
+      const activeNode = navNodes[idx];
+      const activeGroup = activeNode?.closest('.snm-group');
+      const newPhase = activeGroup?.dataset.phase;
+      navGroups.forEach((g) => g.classList.toggle('is-current', g === activeGroup));
+      if (newPhase && newPhase !== currentGroupPhase) {
+        if (currentGroupPhase !== null) firePhaseTransition(newPhase);
+        currentGroupPhase = newPhase;
       }
     };
 
-    /* Build a map of anchor → node index */
-    const anchorMap = new Map();
+    /* Build a map of anchor → node index. Multiple nodes can share an anchor;
+       we use the node order to assign indexes. */
     navNodes.forEach((n, i) => {
       const sel = n.getAttribute('data-anchor');
-      if (sel) anchorMap.set(sel, i);
-    });
-    /* Watch each anchored target with ScrollTrigger */
-    anchorMap.forEach((idx, sel) => {
+      if (!sel) return;
       const target = document.querySelector(sel);
       if (!target) return;
       ScrollTrigger.create({
-        trigger: target, start: 'top 60%', end: 'bottom 40%',
-        onEnter:     () => updateActive(idx),
-        onEnterBack: () => updateActive(idx),
+        trigger: target,
+        start: () => `top+=${i * 4}px 60%`,
+        end: () => `bottom-=${i * 4}px 40%`,
+        onEnter:     () => updateActive(i),
+        onEnterBack: () => updateActive(i),
       });
     });
   }

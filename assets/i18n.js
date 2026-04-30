@@ -183,6 +183,28 @@
     /* footer.copy already defined globally above (line 26) — single source of truth */
 
     /* ============== CHAPTER S — Situation (NEW 2026-04-30 s2 — STAR 4 acts) ============== */
+    /* STORY NAV sticky — 4 phases × 4 jalons, juste les noms d'ateliers/deliverables */
+    'bnp.snm.gResearch':   { fr: 'Research',  nl: 'Research',  en: 'Research' },
+    'bnp.snm.gAnalyse':    { fr: 'Analyse',   nl: 'Analyse',   en: 'Analyse' },
+    'bnp.snm.gPrototype':  { fr: 'Prototype', nl: 'Prototype', en: 'Prototype' },
+    'bnp.snm.gConcept':    { fr: 'Concept',   nl: 'Concept',   en: 'Concept' },
+    'bnp.snm.r1': { fr: 'User interviews · 6 PME', nl: 'User interviews · 6 kmo\'s', en: 'User interviews · 6 SMEs' },
+    'bnp.snm.r2': { fr: 'Competitors benchmark', nl: 'Competitors benchmark', en: 'Competitors benchmark' },
+    'bnp.snm.r3': { fr: 'Market analysis · B2B segments', nl: 'Marktanalyse · B2B-segmenten', en: 'Market analysis · B2B segments' },
+    'bnp.snm.r4': { fr: '9 personas B2B', nl: '9 B2B-personas', en: '9 B2B personas' },
+    'bnp.snm.a1': { fr: 'Insights · 6 Key Barriers', nl: 'Insights · 6 Key Barriers', en: 'Insights · 6 Key Barriers' },
+    'bnp.snm.a2': { fr: 'AS-IS journey', nl: 'AS-IS journey', en: 'AS-IS journey' },
+    'bnp.snm.a3': { fr: 'Could-Be journey · GAP', nl: 'Could-Be journey · GAP', en: 'Could-Be journey · GAP' },
+    'bnp.snm.a4': { fr: 'VPC · Lean Canvas', nl: 'VPC · Lean Canvas', en: 'VPC · Lean Canvas' },
+    'bnp.snm.p1': { fr: 'Service blueprint · 5 journeys', nl: 'Service blueprint · 5 journeys', en: 'Service blueprint · 5 journeys' },
+    'bnp.snm.p2': { fr: 'Sprint design · 3 goals', nl: 'Sprint design · 3 goals', en: 'Sprint design · 3 goals' },
+    'bnp.snm.p3': { fr: 'POC dashboard Spotfire', nl: 'POC dashboard Spotfire', en: 'POC dashboard Spotfire' },
+    'bnp.snm.p4': { fr: 'User test · 6 PME', nl: 'User test · 6 kmo\'s', en: 'User test · 6 SMEs' },
+    'bnp.snm.c1': { fr: 'Concept Report · 4 goals', nl: 'Concept Report · 4 goals', en: 'Concept Report · 4 goals' },
+    'bnp.snm.c2': { fr: 'User stories · MVP scope', nl: 'User stories · MVP-scope', en: 'User stories · MVP scope' },
+    'bnp.snm.c3': { fr: 'User flows · UX/UI', nl: 'User flows · UX/UI', en: 'User flows · UX/UI' },
+    'bnp.snm.c4': { fr: 'Decision pack · sponsor', nl: 'Decision pack · sponsor', en: 'Decision pack · sponsor' },
+
     /* PROPOSED ROADMAP — vue d'ensemble entre Hero et Chapter S */
     'bnp.proposed.eyebrow': {
       fr: 'La roadmap proposée',
