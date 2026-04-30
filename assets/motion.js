@@ -273,8 +273,7 @@
     const hcxHl2     = hcxSection.querySelector('.hcx__hl2');
     const hcxLead    = hcxSection.querySelector('.hcx__lead');
     const hcxRole    = hcxSection.querySelector('.hcx__role');
-    const hcxBentoCells = hcxSection.querySelectorAll('.hcx__bento-cell');
-    const hcxHook    = hcxSection.querySelector('.hcx__hook');
+    const hcxTease   = hcxSection.querySelector('.hcx__tease');
     const hcxScroll  = hcxSection.querySelector('.hcx__scroll');
 
     /* Set all elements invisible before curtain rises — synchronous, no flash */
@@ -286,8 +285,7 @@
     if (hcxHl2)     gsap.set(hcxHl2,     { opacity: 0, y: 48 });
     if (hcxLead)    gsap.set(hcxLead,    { opacity: 0, y: 20 });
     if (hcxRole)    gsap.set(hcxRole,    { opacity: 0, y: 18 });
-    if (hcxBentoCells.length) gsap.set(hcxBentoCells, { opacity: 0, y: 22, scale: 0.96 });
-    if (hcxHook)    gsap.set(hcxHook,    { opacity: 0, y: 12 });
+    if (hcxTease)   gsap.set(hcxTease,   { opacity: 0, y: 26, filter: 'blur(8px)', visibility: 'hidden' });
     if (hcxScroll)  gsap.set(hcxScroll,  { opacity: 0, y: 10 });
 
     const hcxTl = gsap.timeline({ delay: 0.25 });
@@ -321,35 +319,24 @@
     /* t=2.2 — Role. Authority signal : freelance, upstream, 6 months. */
     if (hcxRole)    hcxTl.to(hcxRole,    { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 2.20);
 
-    /* t=2.6 — Bento cells stagger. 4 receipts landing — the narrative arc :
-       cell 1 asymétrie · cell 2 VP claim (+15-25%) · cell 3 research · cell 4 climax tease (1/6).
-       Cells 2 and 4 get a subtle accent pulse after landing. */
-    if (hcxBentoCells.length) {
-      hcxTl.to(hcxBentoCells, {
-        opacity: 1, y: 0, scale: 1,
-        duration: 0.60, ease: 'power2.out',
-        stagger: 0.14,
-      }, 2.60);
-      /* Accent pulse on cell 2 (VP) — slight scale beat after landing */
-      const cell2Num = hcxBentoCells[1] && hcxBentoCells[1].querySelector('.hcx__bento-num');
-      if (cell2Num) {
-        hcxTl.fromTo(cell2Num, { scale: 1 }, { scale: 1.06, duration: 0.18, ease: 'power2.out', yoyo: true, repeat: 1 }, 3.10);
-      }
-      /* Accent pulse on cell 4 (1/6 climax tease) — slightly stronger, last */
-      const cell4Num = hcxBentoCells[3] && hcxBentoCells[3].querySelector('.hcx__bento-num');
-      if (cell4Num) {
-        hcxTl.fromTo(cell4Num, { scale: 1 }, { scale: 1.10, duration: 0.22, ease: 'power3.out', yoyo: true, repeat: 1 }, 3.30);
+    /* t=2.7 — Single tease line. Glass surface materialises out of the bg :
+       blur clears, opacity rises, slight upward float. The number scales-in subtle. */
+    if (hcxTease) {
+      hcxTl.set(hcxTease, { visibility: 'visible' }, 2.65);
+      hcxTl.to(hcxTease, {
+        opacity: 1, y: 0, filter: 'blur(0px)',
+        duration: 1.10, ease: 'power3.out',
+      }, 2.70);
+      const teaseNum = hcxTease.querySelector('.hcx__tease-num');
+      if (teaseNum) {
+        hcxTl.fromTo(teaseNum, { scale: 0.94 }, { scale: 1, duration: 0.95, ease: 'back.out(1.3)' }, 2.75);
       }
     }
 
-    /* ── PAUSE 600ms : numbers land, eyebrows raise ── */
+    /* ── PAUSE 500ms : the stake lands ── */
 
-    /* t=3.2 — Curiosity hook. Italic, quiet, irresistible.
-       Information gap : names the transformation without explaining it. */
-    if (hcxHook)    hcxTl.to(hcxHook,    { opacity: 1, y: 0, duration: 0.90, ease: 'power2.out' }, 3.20);
-
-    /* t=3.5 — Scroll cue last. The invitation. */
-    if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.50);
+    /* t=3.6 — Scroll cue last. The invitation. */
+    if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.60);
 
     /* ── Scroll parallax : BG image drifts slower than content */
     if (hcxBg) {

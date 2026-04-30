@@ -79,18 +79,18 @@
   .hcx__grid {
     position: absolute; inset: 0; z-index: 3;
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(380px, 0.75fr);
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-    column-gap: 48px;
-    row-gap: 0;
-    padding: 120px 56px 96px 56px;
+    gap: 0;
+    padding: 120px 64px 96px 64px;
     color: #F2EBDB;
   }
   .hcx__client {
     grid-column: 1 / 2; grid-row: 1 / 2;
     display: flex; flex-direction: row; align-items: center; gap: 16px;
     font-family: "Manrope", sans-serif;
-    align-self: center;           /* vertically aligned with Brussels */
+    align-self: center;
+    justify-self: start;
   }
   .hcx__client-name {
     font-size: 11px; font-weight: 700; letter-spacing: .20em; text-transform: uppercase;
@@ -103,8 +103,8 @@
   }
   .hcx__client-period::before { content: "/"; color: #C76941; font-weight: 300; font-size: 14px; letter-spacing: 0; width: auto; height: auto; background: none; }
   .hcx__period {
-    grid-column: 2 / 3; grid-row: 1 / 2;
-    align-self: center;           /* same baseline as client — no more misalignment */
+    grid-column: 1 / 2; grid-row: 1 / 2;
+    align-self: center;
     justify-self: end; text-align: right;
     font-family: "Manrope", sans-serif;
     font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
@@ -113,11 +113,10 @@
   .hcx__period strong { display: block; color: #F2EBDB; font-weight: 700; font-size: 14px; letter-spacing: .12em; margin-top: 4px; }
 
   .hcx__head {
-    grid-column: 1 / 2; grid-row: 2 / 4;
+    grid-column: 1 / 2; grid-row: 2 / 3;
     align-self: end;
     display: flex; flex-direction: column; gap: 28px;
-    max-width: min(720px, 100%);
-    padding-right: 8px;
+    max-width: min(960px, 100%);
   }
   .hcx__eyebrow {
     font-family: "Manrope", sans-serif;
@@ -157,8 +156,56 @@
   }
   .hcx__role-where { font-size: 14px; font-weight: 600; color: #F2EBDB; }
 
-  /* Right column: stat bento — teasers of the case, none spoils the climax R.
-     Premium glass effect : strong blur, inner highlight, soft outer glow. */
+  /* Single hero tease — un chiffre qui plante l'enjeu, glass-blurred, incrusted in the bg */
+  .hcx__tease {
+    grid-column: 1 / 2; grid-row: 3 / 4;
+    align-self: end; justify-self: start;
+    display: inline-flex; flex-direction: column; gap: 4px;
+    margin-top: 36px; padding: 18px 26px 18px 22px;
+    max-width: 44ch; position: relative;
+    /* Glass surface — incrusté dans l'image bg, pas plaqué dessus */
+    background:
+      linear-gradient(135deg,
+        rgba(242,235,219,0.10) 0%,
+        rgba(242,235,219,0.03) 40%,
+        rgba(10,18,32,0.10) 100%);
+    border: 1px solid rgba(242,235,219,0.16);
+    border-top-color: rgba(242,235,219,0.24);
+    border-left: 2px solid #C76941;
+    border-radius: 0 8px 8px 0;
+    backdrop-filter: blur(22px) saturate(150%);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    box-shadow:
+      0 18px 50px rgba(0,0,0,0.40),
+      0 1px 0 rgba(242,235,219,0.06) inset;
+    overflow: hidden;
+  }
+  /* Subtle diagonal sheen on the glass surface */
+  .hcx__tease::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(120deg,
+      transparent 35%, rgba(242,235,219,0.08) 50%, transparent 65%);
+    opacity: .45; mix-blend-mode: overlay;
+    border-radius: inherit;
+  }
+  .hcx__tease-num {
+    position: relative; z-index: 1;
+    font-family: "Manrope", sans-serif;
+    font-weight: 200; font-size: clamp(48px, 6vw, 84px);
+    line-height: 0.95; letter-spacing: -.04em;
+    color: #C76941;
+    text-shadow: 0 2px 18px rgba(10,18,32,0.40);
+  }
+  .hcx__tease-unit { font-size: 0.55em; font-weight: 200; margin-left: 2px; }
+  .hcx__tease-lab {
+    position: relative; z-index: 1;
+    font-family: "Manrope", sans-serif;
+    font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+    color: rgba(242,235,219,0.72);
+    margin-top: 4px;
+  }
+
+  /* Legacy bento styles — neutralised since bento was retired in the cleanup pass */
   .hcx__bento {
     grid-column: 2 / 3; grid-row: 2 / 4;
     align-self: end; justify-self: end;
@@ -278,10 +325,8 @@
     .hcx__period { grid-column: 1 / 2; grid-row: 1 / 2; justify-self: start; text-align: left; margin-top: 12px; }
     .hcx__client { padding-bottom: 12px; }
     .hcx__head { grid-column: 1; grid-row: 2; max-width: 100%; padding-right: 0; }
-    .hcx__bento { grid-column: 1; grid-row: 3; justify-self: stretch; width: 100%; margin-top: 32px; }
+    .hcx__tease { margin-top: 28px; max-width: 100%; }
     .hcx__h1 { font-size: clamp(52px, 9.5vw, 100px); }
-    /* Hide the italic curiosity hook when the bento goes full-width — they collide */
-    .hcx__hook { display: none; }
   }
   @media (max-width: 768px) {
     .hcx__grid { padding: 80px 28px 44px; }
@@ -1081,26 +1126,12 @@
         <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">6 mois · cadrage stratégique upstream</span>
       </div>
     </div>
-    <div class="hcx__bento">
-      <div class="hcx__bento-cell">
-        <span class="hcx__bento-num">30<span class="hcx__bento-unit">%</span></span>
-        <span class="hcx__bento-lab" data-i18n="bnp.glance.s1.label">Flux carte conso · vus, pas convertis</span>
-      </div>
-      <div class="hcx__bento-cell">
-        <span class="hcx__bento-num">+15<span class="hcx__bento-sep">–</span>25<span class="hcx__bento-unit">%</span></span>
-        <span class="hcx__bento-lab" data-i18n="bnp.glance.s2.label">CA promis aux PME · 4 rapports business</span>
-      </div>
-      <div class="hcx__bento-cell">
-        <span class="hcx__bento-num">9</span>
-        <span class="hcx__bento-lab" data-i18n="bnp.glance.s3.label">Personas B2B livrés · réutilisés downstream</span>
-      </div>
-      <div class="hcx__bento-cell">
-        <span class="hcx__bento-num">1<span class="hcx__bento-sep">/</span><span class="hcx__bento-frac">6</span></span>
-        <span class="hcx__bento-lab" data-i18n="bnp.glance.s4.label">Promesse d'achat · sur 6 PME testées · 0 refus</span>
-      </div>
+    <!-- Single tease line — un seul chiffre qui plante l'enjeu, pas le résultat -->
+    <div class="hcx__tease" aria-label="Asymétrie issuer">
+      <span class="hcx__tease-num">30<span class="hcx__tease-unit">%</span></span>
+      <span class="hcx__tease-lab" data-i18n="bnp.hero.teaseLab">des flux carte conso vus par BNP · jamais traduits en valeur PME</span>
     </div>
   </div>
-  <div class="hcx__hook" data-i18n="bnp.hero.hook">Comment une donnée bancaire est devenue un service que quelqu'un a accepté de payer.</div>
   <div class="hcx__scroll">
     <span>Scroll · l'histoire</span>
     <span class="hcx__scroll-line"></span>
@@ -1113,45 +1144,6 @@
   <div class="star-bridge__inner">
     <p class="star-bridge__phrase" data-i18n="bnp.bridge.phrase">Six mois. Une enquête. Un commerçant qui dit oui.</p>
     <span class="star-bridge__sub" data-i18n="bnp.bridge.sub">Une asymétrie de données · un processus design thinking · un premier paiement.</span>
-  </div>
-</section>
-
-<!-- TIMELINE INTRO — graphique synthétique avant l'histoire (CVE 2026-04-30 fin session) -->
-<section class="timeline-intro" data-act="S" aria-label="Timeline du projet en six étapes">
-  <div class="container">
-    <span class="eyebrow" data-i18n="bnp.timeline.eyebrow">Six mois · en un coup d'œil</span>
-    <ol class="ti-line" role="list">
-      <li class="ti-node" style="--ti-pos: 0%">
-        <span class="ti-dot" aria-hidden="true"></span>
-        <span class="ti-when" data-i18n="bnp.timeline.t1.when">Q3 2017</span>
-        <span class="ti-what" data-i18n="bnp.timeline.t1.what">Brief reçu</span>
-      </li>
-      <li class="ti-node" style="--ti-pos: 20%">
-        <span class="ti-dot" aria-hidden="true"></span>
-        <span class="ti-when" data-i18n="bnp.timeline.t2.when">Oct 2017</span>
-        <span class="ti-what" data-i18n="bnp.timeline.t2.what">VPC + Lean Canvas</span>
-      </li>
-      <li class="ti-node" style="--ti-pos: 40%">
-        <span class="ti-dot" aria-hidden="true"></span>
-        <span class="ti-when" data-i18n="bnp.timeline.t3.when">Nov–Déc 2017</span>
-        <span class="ti-what" data-i18n="bnp.timeline.t3.what">6 PME interviewées</span>
-      </li>
-      <li class="ti-node" style="--ti-pos: 60%">
-        <span class="ti-dot" aria-hidden="true"></span>
-        <span class="ti-when" data-i18n="bnp.timeline.t4.when">Q1 2018</span>
-        <span class="ti-what" data-i18n="bnp.timeline.t4.what">Blueprint + prototypes Spotfire</span>
-      </li>
-      <li class="ti-node ti-node--accent" style="--ti-pos: 80%">
-        <span class="ti-dot" aria-hidden="true"></span>
-        <span class="ti-when" data-i18n="bnp.timeline.t5.when">Mars 2018</span>
-        <span class="ti-what" data-i18n="bnp.timeline.t5.what">6 testées · 1 promesse · 0 refus</span>
-      </li>
-      <li class="ti-node" style="--ti-pos: 100%">
-        <span class="ti-dot" aria-hidden="true"></span>
-        <span class="ti-when" data-i18n="bnp.timeline.t6.when">Q2 2018</span>
-        <span class="ti-what" data-i18n="bnp.timeline.t6.what">Sponsor go production</span>
-      </li>
-    </ol>
   </div>
 </section>
 
