@@ -183,6 +183,50 @@
     /* footer.copy already defined globally above (line 26) — single source of truth */
 
     /* ============== CHAPTER S — Situation (NEW 2026-04-30 s2 — STAR 4 acts) ============== */
+    /* PROPOSED ROADMAP — vue d'ensemble entre Hero et Chapter S */
+    'bnp.proposed.eyebrow': {
+      fr: 'La roadmap proposée',
+      nl: 'De voorgestelde roadmap',
+      en: 'The proposed roadmap'
+    },
+    'bnp.proposed.title': {
+      fr: 'Comment j\'ai cadré <span class="accent">les six mois.</span>',
+      nl: 'Hoe ik <span class="accent">de zes maanden</span> heb gekaderd.',
+      en: 'How I framed <span class="accent">the six months.</span>'
+    },
+    'bnp.proposed.lead': {
+      fr: 'De l\'opportunité au signal de marché — un parcours méthodologique en quatre actes, du Design Thinking au prototype piloté en condition réelle.',
+      nl: 'Van de opportuniteit tot het marktsignaal — een methodologisch traject in vier akten, van Design Thinking tot een prototype gepiloot in reële omstandigheden.',
+      en: 'From opportunity to market signal — a four-act methodological journey, from Design Thinking through to a prototype piloted under real conditions.'
+    },
+    'bnp.proposed.bandDt': { fr: 'Design Thinking', nl: 'Design Thinking', en: 'Design Thinking' },
+    'bnp.proposed.bandDel': { fr: 'Prototype & Pilote', nl: 'Prototype & Pilot', en: 'Prototype & Pilot' },
+    'bnp.proposed.s': { fr: 'Situation', nl: 'Situatie', en: 'Situation' },
+    'bnp.proposed.t': { fr: 'Task', nl: 'Task', en: 'Task' },
+    'bnp.proposed.a': { fr: 'Action', nl: 'Action', en: 'Action' },
+    'bnp.proposed.r': { fr: 'Result', nl: 'Result', en: 'Result' },
+    'bnp.proposed.sSub': { fr: 'Insights · terrain', nl: 'Insights · terrein', en: 'Insights · ground truth' },
+    'bnp.proposed.tSub': { fr: 'Reframe · value proposition', nl: 'Reframe · value proposition', en: 'Reframe · value proposition' },
+    'bnp.proposed.aSub': { fr: 'Co-création · prototype', nl: 'Co-creatie · prototype', en: 'Co-creation · prototype' },
+    'bnp.proposed.rSub': { fr: 'Pilote · signal de marché', nl: 'Pilot · marktsignaal', en: 'Pilot · market signal' },
+    'bnp.proposed.m1.when': { fr: 'Q3 2017', nl: 'Q3 2017', en: 'Q3 2017' },
+    'bnp.proposed.m1.what': { fr: 'Brief reçu', nl: 'Briefing ontvangen', en: 'Brief received' },
+    'bnp.proposed.m2.when': { fr: 'Oct. 2017', nl: 'Okt. 2017', en: 'Oct 2017' },
+    'bnp.proposed.m2.what': { fr: '6 PME interviewées', nl: '6 kmo\'s geïnterviewd', en: '6 SMEs interviewed' },
+    'bnp.proposed.m3.when': { fr: 'Nov. 2017', nl: 'Nov. 2017', en: 'Nov 2017' },
+    'bnp.proposed.m3.what': { fr: 'Lean Canvas signé', nl: 'Lean Canvas getekend', en: 'Lean Canvas signed off' },
+    'bnp.proposed.m4.when': { fr: 'Q1 2018', nl: 'Q1 2018', en: 'Q1 2018' },
+    'bnp.proposed.m4.what': { fr: 'Service blueprint · prototype Spotfire', nl: 'Service blueprint · Spotfire-prototype', en: 'Service blueprint · Spotfire prototype' },
+    'bnp.proposed.m5.when': { fr: 'Mars 2018', nl: 'Maart 2018', en: 'March 2018' },
+    'bnp.proposed.m5.what': { fr: 'Léonidas pré-signe', nl: 'Léonidas tekent vooraf', en: 'Léonidas pre-signs' },
+    'bnp.proposed.m6.when': { fr: 'Q2 2018', nl: 'Q2 2018', en: 'Q2 2018' },
+    'bnp.proposed.m6.what': { fr: 'Sponsor go production', nl: 'Sponsor go productie', en: 'Sponsor go production' },
+    'bnp.proposed.cap': {
+      fr: 'Voici l\'arc complet. Chaque acte qui suit montre ce qui s\'est joué — les insights, la décision, la création, le pilote, le signal.',
+      nl: 'Hier is het volledige verhaalbogen. Elke akte die volgt toont wat er gespeeld werd — de insights, de beslissing, de creatie, de pilot, het signaal.',
+      en: 'Here is the full arc. Each act that follows shows what played out — the insights, the decision, the creation, the pilot, the signal.'
+    },
+
     /* STAR menu sticky guide — labels courts pour les 4 nodes */
     'bnp.starMenu.s': { fr: 'Situation', nl: 'Situatie', en: 'Situation' },
     'bnp.starMenu.t': { fr: 'Proposition', nl: 'Voorstel', en: 'Proposal' },

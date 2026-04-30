@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=star9">
+<link rel="stylesheet" href="assets/style.css?v=star11">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -1191,6 +1191,98 @@
   </div>
 </section>
 
+<!-- ROADMAP PROPOSED — entre Hero et Chapter S, plante le décor du STAR
+     Vue d'ensemble du parcours méthodologique : ce que j'ai proposé une fois
+     le contexte BNP compris. De l'opportunité au signal de marché. -->
+<section id="proposed-roadmap" aria-label="Roadmap proposée — vue d'ensemble du parcours méthodologique">
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.proposed.eyebrow">La roadmap proposée</span>
+    <h2 class="proposed-title" data-i18n-html="bnp.proposed.title">Comment j'ai cadré <span class="accent">les six mois.</span></h2>
+    <p class="lead proposed-lead" data-i18n="bnp.proposed.lead">De l'opportunité au signal de marché — un parcours méthodologique en quatre actes, du Design Thinking au prototype piloté en condition réelle.</p>
+
+    <!-- Bandes méthodologie (top) -->
+    <div class="proposed-bands">
+      <div class="proposed-band proposed-band--dt" data-i18n="bnp.proposed.bandDt">Design Thinking</div>
+      <div class="proposed-band proposed-band--del" data-i18n="bnp.proposed.bandDel">Prototype &amp; Pilote</div>
+    </div>
+
+    <!-- Sub-bandes STAR -->
+    <div class="proposed-acts">
+      <a href="#chap-s" class="proposed-act proposed-act--s">
+        <span class="proposed-act__letter">S</span>
+        <span class="proposed-act__name" data-i18n="bnp.proposed.s">Situation</span>
+        <span class="proposed-act__sub" data-i18n="bnp.proposed.sSub">Insights · terrain</span>
+      </a>
+      <a href="#chap-t" class="proposed-act proposed-act--t">
+        <span class="proposed-act__letter">T</span>
+        <span class="proposed-act__name" data-i18n="bnp.proposed.t">Task</span>
+        <span class="proposed-act__sub" data-i18n="bnp.proposed.tSub">Reframe · value proposition</span>
+      </a>
+      <a href="#chap-a" class="proposed-act proposed-act--a">
+        <span class="proposed-act__letter">A</span>
+        <span class="proposed-act__name" data-i18n="bnp.proposed.a">Action</span>
+        <span class="proposed-act__sub" data-i18n="bnp.proposed.aSub">Co-création · prototype</span>
+      </a>
+      <a href="#chap-r" class="proposed-act proposed-act--r">
+        <span class="proposed-act__letter">R</span>
+        <span class="proposed-act__name" data-i18n="bnp.proposed.r">Result</span>
+        <span class="proposed-act__sub" data-i18n="bnp.proposed.rSub">Pilote · signal de marché</span>
+      </a>
+    </div>
+
+    <!-- Diagramme SVG : diamonds + funnels mappés sur STAR -->
+    <svg class="proposed-svg" viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="proposed-svg-title">
+      <title id="proposed-svg-title">Diagramme méthodologique : opportunité, double diamant Design Thinking, prototype, pilote, signal</title>
+      <!-- S · Opportunité (cercle) -->
+      <circle cx="60" cy="110" r="34" fill="none" stroke="currentColor" stroke-width="1.5" class="prp-shape prp-shape--s"/>
+      <text x="60" y="115" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" letter-spacing="1" fill="currentColor">BRIEF</text>
+
+      <!-- S · Discovery diamond -->
+      <polygon points="160,110 270,40 380,110 270,180" fill="none" stroke="currentColor" stroke-width="1.5" class="prp-shape prp-shape--s"/>
+      <text x="270" y="106" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">DISCOVERY</text>
+      <text x="270" y="122" text-anchor="middle" font-family="Manrope" font-size="9" font-style="italic" fill="currentColor" opacity="0.7">6 PME · interviews</text>
+
+      <!-- T · Reframe + VP diamond -->
+      <polygon points="430,110 540,40 650,110 540,180" fill="none" stroke="currentColor" stroke-width="1.5" class="prp-shape prp-shape--t"/>
+      <text x="540" y="106" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">REFRAME</text>
+      <text x="540" y="122" text-anchor="middle" font-family="Manrope" font-size="9" font-style="italic" fill="currentColor" opacity="0.7">Lean Canvas · VP</text>
+
+      <!-- A · Co-création / prototype funnel -->
+      <polygon points="700,80 700,140 870,180 870,40" fill="none" stroke="currentColor" stroke-width="1.5" class="prp-shape prp-shape--a"/>
+      <text x="785" y="106" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">PROTOTYPE</text>
+      <text x="785" y="122" text-anchor="middle" font-family="Manrope" font-size="9" font-style="italic" fill="currentColor" opacity="0.7">Spotfire · service blueprint</text>
+
+      <!-- R · Pilote (cercle) -->
+      <circle cx="950" cy="110" r="34" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="2" class="prp-shape prp-shape--r"/>
+      <text x="950" y="115" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" letter-spacing="1" fill="currentColor">PILOTE</text>
+
+      <!-- R · Signal cone (élargi vers la sortie) -->
+      <polygon points="1000,80 1000,140 1180,180 1180,40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6,4" class="prp-shape prp-shape--r"/>
+      <text x="1090" y="106" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">SIGNAL</text>
+      <text x="1090" y="122" text-anchor="middle" font-family="Manrope" font-size="9" font-style="italic" fill="currentColor" opacity="0.7">Léonidas · sponsor go</text>
+
+      <!-- Connexion line entre les 4 actes -->
+      <line x1="94" y1="110" x2="160" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+      <line x1="380" y1="110" x2="430" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+      <line x1="650" y1="110" x2="700" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+      <line x1="870" y1="110" x2="916" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+      <line x1="984" y1="110" x2="1000" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+    </svg>
+
+    <!-- Timeline horizontale ambre — milestones key dates -->
+    <ol class="proposed-timeline" role="list">
+      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m1.when">Q3 2017</span><span class="prp-what" data-i18n="bnp.proposed.m1.what">Brief reçu</span></li>
+      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m2.when">Oct 2017</span><span class="prp-what" data-i18n="bnp.proposed.m2.what">6 PME interviewées</span></li>
+      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m3.when">Nov 2017</span><span class="prp-what" data-i18n="bnp.proposed.m3.what">Lean Canvas signé</span></li>
+      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m4.when">Q1 2018</span><span class="prp-what" data-i18n="bnp.proposed.m4.what">Service blueprint · prototype Spotfire</span></li>
+      <li class="prp-milestone prp-milestone--accent"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m5.when">Mars 2018</span><span class="prp-what" data-i18n="bnp.proposed.m5.what">Léonidas pré-signe</span></li>
+      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m6.when">Q2 2018</span><span class="prp-what" data-i18n="bnp.proposed.m6.what">Sponsor go production</span></li>
+    </ol>
+
+    <p class="proposed-cap" data-i18n="bnp.proposed.cap">Voici l'arc complet. Chaque acte qui suit montre ce qui s'est joué — les insights, la décision, la création, le pilote, le signal.</p>
+  </div>
+</section>
+
 <!-- CHAPTER S — Situation : l'observation, le terrain (NEW 2026-04-30 s2 — STAR is 4 acts) -->
 <section class="chapter-divider" id="chap-s" data-chapter="S">
   <div class="chapter-roman" aria-hidden="true">S</div>
@@ -1955,7 +2047,7 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=star11"></script>
+<script src="assets/i18n.js?v=star12"></script>
 <script src="assets/theme.js?v=cinema"></script>
 <script src="assets/motion.js?v=star9"></script>
 <script src="assets/deck.js?v=deck1"></script>
