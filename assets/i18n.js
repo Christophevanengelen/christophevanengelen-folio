@@ -183,6 +183,12 @@
     /* footer.copy already defined globally above (line 26) — single source of truth */
 
     /* ============== CHAPTER S — Situation (NEW 2026-04-30 s2 — STAR 4 acts) ============== */
+    /* STAR menu sticky guide — labels courts pour les 4 nodes */
+    'bnp.starMenu.s': { fr: 'Situation', nl: 'Situatie', en: 'Situation' },
+    'bnp.starMenu.t': { fr: 'Proposition', nl: 'Voorstel', en: 'Proposal' },
+    'bnp.starMenu.a': { fr: 'Démarche', nl: 'Aanpak', en: 'Approach' },
+    'bnp.starMenu.r': { fr: 'Résultat', nl: 'Resultaat', en: 'Result' },
+
     'bnp.chapS.label': { fr: 'Situation · L\'observation', nl: 'Situation · De observatie', en: 'Situation · Observation' },
     'bnp.chapS.title': { fr: 'L\'observation.', nl: 'De observatie.', en: 'Observation.' },
     'bnp.chapS.lead': {

@@ -122,17 +122,38 @@
     return spans;
   }
 
-  /* Body data-act marker — drives act-level CSS hooks if needed */
+  /* Body data-act marker — drives act-level CSS hooks + star-menu active state */
   ['S', 'T', 'A', 'R'].forEach((actId) => {
     const chap = document.querySelector(`.chapter-divider[data-chapter="${actId}"]`);
     if (!chap) return;
     ScrollTrigger.create({
       trigger: chap,
-      start: 'bottom 80%',
+      start: 'top 65%',
       onEnter:     () => { document.body.dataset.act = actId; },
       onEnterBack: () => { document.body.dataset.act = actId; },
     });
   });
+
+  /* STAR menu sticky guide : show after Hero, hide on Fin Royale.
+     Active state comes from body[data-act] CSS rules. */
+  const starMenu = document.querySelector('.star-menu');
+  const heroEl = document.querySelector('.hcx');
+  if (starMenu && heroEl) {
+    ScrollTrigger.create({
+      trigger: heroEl, start: 'bottom 82%',
+      onEnter:     () => starMenu.classList.add('is-visible'),
+      onLeaveBack: () => starMenu.classList.remove('is-visible'),
+    });
+    /* Hide on Fin Royale (closing) — la lecture est finie, plus de menu */
+    const finEl = document.querySelector('.fin-royale');
+    if (finEl) {
+      ScrollTrigger.create({
+        trigger: finEl, start: 'top 70%',
+        onEnter:     () => starMenu.classList.remove('is-visible'),
+        onLeaveBack: () => starMenu.classList.add('is-visible'),
+      });
+    }
+  }
 
   /* ── Hero entrance: staggered headline reveal */
   const heroH1Lines = document.querySelectorAll('.hero-h1 .hl-line');
