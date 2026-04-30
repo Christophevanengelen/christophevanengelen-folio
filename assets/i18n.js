@@ -252,6 +252,78 @@
       en: '9 B2B personas · provisional research-backed · Concept Report p34'
     },
 
+    /* ============== ANALYSE subsections : AS-IS + GAP + VPC/Lean ============== */
+    'bnp.analyse.asisEyebrow': { fr: 'Analyse · AS-IS journey', nl: 'Analyse · AS-IS journey', en: 'Analyse · AS-IS journey' },
+    'bnp.analyse.asisTitle': {
+      fr: 'Quinze étapes <span class="accent">avant le premier insight.</span>',
+      nl: 'Vijftien stappen <span class="accent">vóór het eerste inzicht.</span>',
+      en: 'Fifteen steps <span class="accent">before the first insight.</span>'
+    },
+    'bnp.analyse.asisLead': {
+      fr: 'Le journey end-to-end d\'un commerçant non-EBB. Quinze étapes étalées sur 1 à 3 jours juste pour onboarder. Chiffre qui a tué le débat « on peut builder demain ».',
+      nl: 'De end-to-end journey van een niet-EBB-merchant. Vijftien stappen verspreid over 1 tot 3 dagen, enkel om aan boord te komen. Het cijfer dat het « we kunnen morgen bouwen »-debat sloot.',
+      en: 'The end-to-end journey of a non-EBB merchant. Fifteen steps spread over 1 to 3 days just to onboard. The figure that killed the « we can build it tomorrow » debate.'
+    },
+    'bnp.analyse.asisCap': {
+      fr: 'AS-IS journey · PME non-enregistrée · 15 étapes · 1-3 jours · Concept Report p75',
+      nl: 'AS-IS journey · niet-geregistreerde kmo · 15 stappen · 1-3 dagen · Concept Report p75',
+      en: 'AS-IS journey · unregistered SME · 15 steps · 1-3 days · Concept Report p75'
+    },
+    'bnp.analyse.asisSource': {
+      fr: 'Source · Concept Report · page 75 · « Journey AS-IS »',
+      nl: 'Bron · Concept Report · pagina 75 · « Journey AS-IS »',
+      en: 'Source · Concept Report · page 75 · "Journey AS-IS"'
+    },
+
+    'bnp.analyse.gapEyebrow': { fr: 'Analyse · GAP & Could-Be', nl: 'Analyse · GAP & Could-Be', en: 'Analyse · GAP & Could-Be' },
+    'bnp.analyse.gapTitle': {
+      fr: 'De l\'AS-IS <span class="accent">au Could-Be.</span>',
+      nl: 'Van AS-IS <span class="accent">naar Could-Be.</span>',
+      en: 'From AS-IS <span class="accent">to Could-Be.</span>'
+    },
+    'bnp.analyse.gapLead': {
+      fr: 'Cinq journeys end-to-end dessinés, un par point d\'entrée : non-enregistré · enregistré nouveau EBB · utilisateur EBB existant · via deep link · via app launcher. Le GAP entre l\'AS-IS et le Could-Be devient la backlog du MVP onboarding.',
+      nl: 'Vijf end-to-end journeys getekend, één per instappunt : niet-geregistreerd · geregistreerd nieuw EBB · bestaande EBB-gebruiker · via deep link · via app launcher. De GAP tussen AS-IS en Could-Be wordt de MVP onboarding-backlog.',
+      en: 'Five end-to-end journeys drawn, one per entry point : unregistered · registered new EBB · existing EBB user · via deep link · via app launcher. The GAP between AS-IS and Could-Be becomes the MVP onboarding backlog.'
+    },
+    'bnp.analyse.gap1': { fr: 'Non-enregistré · 15 étapes', nl: 'Niet-geregistreerd · 15 stappen', en: 'Unregistered · 15 steps' },
+    'bnp.analyse.gap2': { fr: 'Enregistré · nouveau EBB', nl: 'Geregistreerd · nieuw EBB', en: 'Registered · new EBB' },
+    'bnp.analyse.gap3': { fr: 'EBB existant · deep link', nl: 'Bestaande EBB · deep link', en: 'Existing EBB · deep link' },
+    'bnp.analyse.gap4': { fr: 'App launcher', nl: 'App launcher', en: 'App launcher' },
+    'bnp.analyse.gap5': { fr: 'Contract manager flow', nl: 'Contract manager flow', en: 'Contract manager flow' },
+    'bnp.analyse.gapSource': {
+      fr: 'Source · Concept Report · 5 journeys end-to-end',
+      nl: 'Bron · Concept Report · 5 end-to-end journeys',
+      en: 'Source · Concept Report · 5 end-to-end journeys'
+    },
+
+    'bnp.analyse.vpcEyebrow': { fr: 'Analyse · VPC & Lean Canvas', nl: 'Analyse · VPC & Lean Canvas', en: 'Analyse · VPC & Lean Canvas' },
+    'bnp.analyse.vpcTitle': {
+      fr: 'Le concept <span class="accent">tient sur deux pages.</span>',
+      nl: 'Het concept <span class="accent">past op twee pagina\'s.</span>',
+      en: 'The concept <span class="accent">fits on two pages.</span>'
+    },
+    'bnp.analyse.vpcLead': {
+      fr: 'Value Proposition Canvas mappé sur les Jobs/Pains/Gains du commerçant. Lean Canvas qui boucle Problem → Solution → VP → Channels → Customer Segments. Triple Win locked : Bank · Retailer · Cardholder.',
+      nl: 'Value Proposition Canvas in kaart gebracht op de Jobs/Pains/Gains van de merchant. Lean Canvas die Problem → Solution → VP → Channels → Customer Segments doorloopt. Triple Win vastgelegd : Bank · Retailer · Cardholder.',
+      en: 'Value Proposition Canvas mapped on the merchant\'s Jobs/Pains/Gains. Lean Canvas looping Problem → Solution → VP → Channels → Customer Segments. Triple Win locked : Bank · Retailer · Cardholder.'
+    },
+    'bnp.analyse.vpcCap': {
+      fr: 'Value Proposition Canvas · Needs / Wants / Fears → MVP offer · Ideation Report p12',
+      nl: 'Value Proposition Canvas · Needs / Wants / Fears → MVP offer · Ideation Report p12',
+      en: 'Value Proposition Canvas · Needs / Wants / Fears → MVP offer · Ideation Report p12'
+    },
+    'bnp.analyse.leanCap': {
+      fr: 'Lean Canvas Enterprise Intelligence MVP · 30 octobre 2017 · Ideation Report p16',
+      nl: 'Lean Canvas Enterprise Intelligence MVP · 30 oktober 2017 · Ideation Report p16',
+      en: 'Lean Canvas Enterprise Intelligence MVP · October 30, 2017 · Ideation Report p16'
+    },
+    'bnp.analyse.vpcSource': {
+      fr: 'Source · Ideation Report · p12 (VPC) + p16 (Lean Canvas)',
+      nl: 'Bron · Ideation Report · p12 (VPC) + p16 (Lean Canvas)',
+      en: 'Source · Ideation Report · p12 (VPC) + p16 (Lean Canvas)'
+    },
+
     /* ============== CHAPTERS — 4 phases Double Diamond (Research/Analyse/Prototype/Concept) ============== */
     'bnp.chapResearch.label': { fr: 'Phase 01 · Research', nl: 'Fase 01 · Research', en: 'Phase 01 · Research' },
     'bnp.chapResearch.title': { fr: 'Le terrain enseigne.', nl: 'Het terrein leert.', en: 'The ground teaches.' },

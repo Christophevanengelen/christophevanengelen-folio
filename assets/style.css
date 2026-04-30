@@ -527,9 +527,27 @@ section.tldr { padding: 60px 0 70px; }
 @media (max-width: 720px) { .stakeholder-map { padding: 60px 0 56px; } }
 
 /* RESEARCH subsections — benchmark + targeting + personas (Phase 01 du Double Diamond) */
-#research-benchmark, #research-targeting, #research-personas {
+/* ANALYSE subsections — AS-IS + GAP + VPC/Lean (Phase 02) */
+#research-benchmark, #research-targeting, #research-personas,
+#analyse-asis, #analyse-gap, #analyse-vpc-lean {
   padding: 90px 0 70px;
   position: relative;
+}
+
+/* GAP pills */
+.gap-pills {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin: 40px 0 0;
+}
+.gap-pill {
+  display: inline-flex; align-items: center;
+  padding: 10px 16px;
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-left: 2px solid var(--amber);
+  border-radius: 99px;
+  font-family: var(--sans); font-size: 13px; font-weight: 500;
+  color: var(--fg);
 }
 .research-h3 {
   font-size: clamp(32px, 4vw, 56px);
