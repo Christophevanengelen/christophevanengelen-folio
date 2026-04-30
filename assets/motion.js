@@ -72,6 +72,68 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
+  /* ──────────────────────────────────────────────────────────
+     2.5. Storytelling helpers (split text + act progress marker)
+     ────────────────────────────────────────────────────────── */
+  function splitWords(el) {
+    if (!el || el.dataset.split === 'words') return Array.from(el.querySelectorAll('.sw-word'));
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+    const textNodes = [];
+    let n; while ((n = walker.nextNode())) textNodes.push(n);
+    const spans = [];
+    textNodes.forEach((tn) => {
+      const text = tn.nodeValue;
+      if (!text || !text.trim()) return;
+      const frag = document.createDocumentFragment();
+      const parts = text.split(/(\s+)/);
+      parts.forEach((p) => {
+        if (!p) return;
+        if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(p)); return; }
+        const s = document.createElement('span');
+        s.className = 'sw-word';
+        s.style.display = 'inline-block';
+        s.style.willChange = 'transform, opacity';
+        s.textContent = p;
+        frag.appendChild(s);
+        spans.push(s);
+      });
+      tn.parentNode.replaceChild(frag, tn);
+    });
+    el.dataset.split = 'words';
+    return spans;
+  }
+
+  function splitLines(el) {
+    if (!el || el.dataset.split === 'lines') return Array.from(el.querySelectorAll('.sl-line'));
+    const html = el.innerHTML;
+    const parts = html.split(/<br\s*\/?>/i);
+    el.innerHTML = '';
+    const spans = [];
+    parts.forEach((p) => {
+      const s = document.createElement('span');
+      s.className = 'sl-line';
+      s.style.display = 'block';
+      s.style.willChange = 'transform, opacity';
+      s.innerHTML = p;
+      el.appendChild(s);
+      spans.push(s);
+    });
+    el.dataset.split = 'lines';
+    return spans;
+  }
+
+  /* Body data-act marker — drives act-level CSS hooks if needed */
+  ['S', 'T', 'A', 'R'].forEach((actId) => {
+    const chap = document.querySelector(`.chapter-divider[data-chapter="${actId}"]`);
+    if (!chap) return;
+    ScrollTrigger.create({
+      trigger: chap,
+      start: 'bottom 80%',
+      onEnter:     () => { document.body.dataset.act = actId; },
+      onEnterBack: () => { document.body.dataset.act = actId; },
+    });
+  });
+
   /* ── Hero entrance: staggered headline reveal */
   const heroH1Lines = document.querySelectorAll('.hero-h1 .hl-line');
   if (heroH1Lines.length) {
@@ -259,13 +321,25 @@
     /* t=2.2 — Role. Authority signal : freelance, upstream, 6 months. */
     if (hcxRole)    hcxTl.to(hcxRole,    { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 2.20);
 
-    /* t=2.6 — Bento cells stagger. 4 receipts landing, each one concrete. */
+    /* t=2.6 — Bento cells stagger. 4 receipts landing — the narrative arc :
+       cell 1 asymétrie · cell 2 VP claim (+15-25%) · cell 3 research · cell 4 climax tease (1/6).
+       Cells 2 and 4 get a subtle accent pulse after landing. */
     if (hcxBentoCells.length) {
       hcxTl.to(hcxBentoCells, {
         opacity: 1, y: 0, scale: 1,
         duration: 0.60, ease: 'power2.out',
-        stagger: 0.12,
+        stagger: 0.14,
       }, 2.60);
+      /* Accent pulse on cell 2 (VP) — slight scale beat after landing */
+      const cell2Num = hcxBentoCells[1] && hcxBentoCells[1].querySelector('.hcx__bento-num');
+      if (cell2Num) {
+        hcxTl.fromTo(cell2Num, { scale: 1 }, { scale: 1.06, duration: 0.18, ease: 'power2.out', yoyo: true, repeat: 1 }, 3.10);
+      }
+      /* Accent pulse on cell 4 (1/6 climax tease) — slightly stronger, last */
+      const cell4Num = hcxBentoCells[3] && hcxBentoCells[3].querySelector('.hcx__bento-num');
+      if (cell4Num) {
+        hcxTl.fromTo(cell4Num, { scale: 1 }, { scale: 1.10, duration: 0.22, ease: 'power3.out', yoyo: true, repeat: 1 }, 3.30);
+      }
     }
 
     /* ── PAUSE 600ms : numbers land, eyebrows raise ── */
@@ -306,21 +380,25 @@
 
     const metaChildren = meta.querySelectorAll('.chapter-label, .chapter-title, .chapter-lead');
 
-    /* Roman letter : slow parallax. Scale 0.92 → 1.18, opacity 0.08 → 0.28,
-       y +18% → -18%. The letter breathes through the section. */
-    gsap.fromTo(roman,
-      { scale: 0.92, opacity: 0.08, yPercent: 18 },
-      { scale: 1.18, opacity: 0.28, yPercent: -18,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: chap,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1.2,
-          invalidateOnRefresh: true,
-        },
+    /* Roman letter : slow parallax. Climax act R gets a stronger arc (scale + opacity)
+       to mark it visually as the pic of the narrative. */
+    const isClimaxR = chap.dataset.chapter === 'R';
+    const fromState = isClimaxR
+      ? { scale: 0.86, opacity: 0.06, yPercent: 22 }
+      : { scale: 0.92, opacity: 0.08, yPercent: 18 };
+    const toState = isClimaxR
+      ? { scale: 1.34, opacity: 0.42, yPercent: -22, ease: 'none' }
+      : { scale: 1.18, opacity: 0.28, yPercent: -18, ease: 'none' };
+    gsap.fromTo(roman, fromState, {
+      ...toState,
+      scrollTrigger: {
+        trigger: chap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1.2,
+        invalidateOnRefresh: true,
       },
-    );
+    });
 
     /* Meta : single fade-up reveal when the meta block enters the comfortable
        reading zone. No scrub, no pin — just a clean entry. */
@@ -346,6 +424,399 @@
       onLeaveBack: () => chap.classList.remove('is-in-view'),
     });
   });
+
+  /* ──────────────────────────────────────────────────────────
+     STORYTELLING ORCHESTRATION — par acte STAR.
+     Hiérarchie 3 tiers : Tier 1 hero (above) · Tier 2 act-level (here) · Tier 3 micro (count-up, hover).
+     Chaque acte a son propre rythme. S = lent · T = build · A = rising · R = climax · Bridge = decrescendo.
+     Splits sont différés dans onEnter pour cohabiter avec i18n async.
+     ────────────────────────────────────────────────────────── */
+
+  /* ── Act S — Observation : slow descent, suspense, qualitative reveals */
+  function actS_brief() {
+    const sec = document.querySelector('#brief');
+    if (!sec) return;
+    const title = sec.querySelector('h2');
+    const leads = sec.querySelectorAll('.lead, .glance-sizing');
+    if (title) {
+      ScrollTrigger.create({
+        trigger: title, start: 'top 82%', once: true,
+        onEnter: () => {
+          const lines = splitLines(title);
+          if (!lines.length) return;
+          gsap.fromTo(lines, { y: 36, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', stagger: 0.14 });
+        },
+      });
+    }
+    if (leads.length) {
+      gsap.set(leads, { opacity: 0, y: 22 });
+      gsap.to(leads, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.18,
+        scrollTrigger: { trigger: leads[0], start: 'top 84%', toggleActions: 'play none none reverse' },
+      });
+    }
+  }
+
+  function actS_catalyst() {
+    const sec = document.querySelector('#catalyst');
+    if (!sec) return;
+    const title = sec.querySelector('h2');
+    const lead = sec.querySelector('.lead');
+    if (title) {
+      ScrollTrigger.create({
+        trigger: title, start: 'top 82%', once: true,
+        onEnter: () => {
+          const lines = splitLines(title);
+          if (!lines.length) return;
+          gsap.fromTo(lines, { y: 36, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', stagger: 0.14 });
+        },
+      });
+    }
+    if (lead) {
+      gsap.set(lead, { opacity: 0, y: 22 });
+      gsap.to(lead, { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out',
+        scrollTrigger: { trigger: lead, start: 'top 84%', toggleActions: 'play none none reverse' },
+      });
+    }
+  }
+
+  function actS_problem() {
+    const sec = document.querySelector('#problem');
+    if (!sec) return;
+    const title = sec.querySelector('h2');
+    const paras = sec.querySelectorAll('.lead, h3, h3 + p, .container > div > p');
+    const figure = sec.querySelector('.figure');
+    if (title) {
+      ScrollTrigger.create({
+        trigger: title, start: 'top 80%', once: true,
+        onEnter: () => {
+          const lines = splitLines(title);
+          if (!lines.length) return;
+          gsap.fromTo(lines, { y: 32, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', stagger: 0.16 });
+        },
+      });
+    }
+    if (paras.length) {
+      gsap.set(paras, { opacity: 0, y: 20 });
+      gsap.to(paras, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.10,
+        scrollTrigger: { trigger: paras[0], start: 'top 84%', toggleActions: 'play none none reverse' },
+      });
+    }
+    if (figure) {
+      const img = figure.querySelector('img');
+      if (img) {
+        gsap.set(img, { scale: 1.06, opacity: 0 });
+        gsap.to(img, { scale: 1, opacity: 1, duration: 1.2, ease: 'power2.out',
+          scrollTrigger: { trigger: figure, start: 'top 82%', toggleActions: 'play none none reverse' },
+        });
+      }
+    }
+  }
+
+  function actS_barriersIntro() {
+    const sec = document.querySelector('.bi-slide');
+    if (!sec) return;
+    const els = [
+      sec.querySelector('.bi-eyebrow'),
+      sec.querySelector('.bi-title'),
+      sec.querySelector('.bi-lead'),
+      sec.querySelector('.bi-cue'),
+    ].filter(Boolean);
+    if (!els.length) return;
+    gsap.set(els, { opacity: 0, y: 24 });
+    gsap.to(els, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.20,
+      scrollTrigger: { trigger: sec, start: 'top 75%', toggleActions: 'play none none reverse' },
+    });
+  }
+
+  function actS_pq1() {
+    const pq = document.querySelector('.pq-hero[data-act="S"]');
+    if (!pq) return;
+    const eyebrow = pq.querySelector('.pq-eyebrow');
+    const quote = pq.querySelector('.pq-quote');
+    if (eyebrow) {
+      gsap.set(eyebrow, { opacity: 0, y: 16 });
+      gsap.to(eyebrow, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
+        scrollTrigger: { trigger: pq, start: 'top 78%', toggleActions: 'play none none reverse' },
+      });
+    }
+    if (quote) {
+      ScrollTrigger.create({
+        trigger: pq, start: 'top 75%', once: true,
+        onEnter: () => {
+          const words = splitWords(quote);
+          if (!words.length) return;
+          gsap.fromTo(words, { y: 14, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.55, ease: 'power3.out', stagger: 0.04, delay: 0.25 });
+        },
+      });
+    }
+  }
+
+  actS_brief();
+  actS_catalyst();
+  actS_problem();
+  actS_barriersIntro();
+  actS_pq1();
+
+  /* ── Act T — Proposition : energy build, roadmap cascade with bounce, accent reveal */
+  function actT_roadmap() {
+    const roadmap = document.querySelector('.roadmap-timeline');
+    if (!roadmap) return;
+    const title = roadmap.parentElement.querySelector('h3');
+    const lead = roadmap.parentElement.querySelector('.lead');
+    const eyebrow = roadmap.parentElement.querySelector('.eyebrow');
+    const nodes = Array.from(roadmap.querySelectorAll('.rm:not(.rm-future)'));
+    const futureNode = roadmap.querySelector('.rm-future');
+
+    /* Eyebrow + h3 + lead first */
+    [eyebrow, title, lead].filter(Boolean).forEach((el, i) => {
+      gsap.set(el, { opacity: 0, y: 20 });
+      gsap.to(el, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: i * 0.10,
+        scrollTrigger: { trigger: el, start: 'top 80%', toggleActions: 'play none none reverse' },
+      });
+    });
+
+    /* Nodes 1-5 cascade with back ease */
+    if (nodes.length) {
+      gsap.set(nodes, { opacity: 0, y: 24, scale: 0.92 });
+      gsap.to(nodes, {
+        opacity: 1, y: 0, scale: 1,
+        duration: 0.55, ease: 'back.out(1.4)', stagger: 0.16, delay: 0.2,
+        scrollTrigger: { trigger: roadmap, start: 'top 78%', toggleActions: 'play none none reverse' },
+      });
+
+      const nums = nodes.map(n => n.querySelector('.rm-num')).filter(Boolean);
+      if (nums.length) {
+        gsap.set(nums, { scale: 0.55 });
+        gsap.to(nums, {
+          scale: 1, duration: 0.65, ease: 'back.out(2.2)', stagger: 0.16, delay: 0.32,
+          scrollTrigger: { trigger: roadmap, start: 'top 78%', toggleActions: 'play none none reverse' },
+        });
+      }
+
+      const phases = nodes.map(n => n.querySelector('.rm-phase')).filter(Boolean);
+      if (phases.length) {
+        gsap.set(phases, { opacity: 0 });
+        gsap.to(phases, {
+          opacity: 1, duration: 0.5, ease: 'power2.out', stagger: 0.16, delay: 0.5,
+          scrollTrigger: { trigger: roadmap, start: 'top 78%', toggleActions: 'play none none reverse' },
+        });
+      }
+    }
+
+    /* Future node (Scale 2020) — opacity-only fade, last, muted */
+    if (futureNode) {
+      gsap.set(futureNode, { opacity: 0 });
+      gsap.to(futureNode, {
+        opacity: 0.78, duration: 0.85, ease: 'power2.out', delay: 1.15,
+        scrollTrigger: { trigger: roadmap, start: 'top 75%', toggleActions: 'play none none reverse' },
+      });
+    }
+  }
+
+  function actT_pq2() {
+    const pq = document.querySelector('.pq-hero--accent');
+    if (!pq) return;
+    const eyebrow = pq.querySelector('.pq-eyebrow');
+    const quote = pq.querySelector('.pq-quote');
+    if (eyebrow) {
+      gsap.set(eyebrow, { opacity: 0, y: 16 });
+      gsap.to(eyebrow, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
+        scrollTrigger: { trigger: pq, start: 'top 78%', toggleActions: 'play none none reverse' },
+      });
+    }
+    if (quote) {
+      ScrollTrigger.create({
+        trigger: pq, start: 'top 75%', once: true,
+        onEnter: () => {
+          const words = splitWords(quote);
+          if (!words.length) return;
+          gsap.fromTo(words, { y: 14, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.55, ease: 'power3.out', stagger: 0.05, delay: 0.30 });
+        },
+      });
+    }
+  }
+
+  actT_roadmap();
+  actT_pq2();
+
+  /* ── Act A — Démarche : steps counter overlay (01/06 → 06/06).
+        The horizontal pin + per-panel 3D depth-field is already orchestrated
+        by scroll-narrative.js. We add a numeric counter that breathes with
+        the active panel. */
+  function actA_stepsCounter() {
+    const stepsSection = document.querySelector('#steps');
+    if (!stepsSection) return;
+    const panels = stepsSection.querySelectorAll('.h-panel-step');
+    if (!panels.length) return;
+
+    const counter = document.createElement('div');
+    counter.className = 'steps-counter';
+    counter.setAttribute('aria-hidden', 'true');
+    counter.innerHTML =
+      '<span class="steps-counter__current">01</span>' +
+      '<span class="steps-counter__sep">/</span>' +
+      '<span class="steps-counter__total">' + String(panels.length).padStart(2, '0') + '</span>';
+    stepsSection.appendChild(counter);
+
+    const currentEl = counter.querySelector('.steps-counter__current');
+    let lastIdx = -1;
+
+    const observer = new MutationObserver(() => {
+      const active = stepsSection.querySelector('.h-panel-step.h-in-view');
+      if (!active) return;
+      const idx = Array.from(panels).indexOf(active);
+      if (idx >= 0 && idx !== lastIdx) {
+        lastIdx = idx;
+        currentEl.textContent = String(idx + 1).padStart(2, '0');
+        gsap.fromTo(currentEl, { y: 8, opacity: 0.4 },
+          { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', overwrite: 'auto' });
+      }
+    });
+    panels.forEach((p) => observer.observe(p, { attributes: true, attributeFilter: ['class'] }));
+  }
+  actA_stepsCounter();
+
+  /* ── Act R — Climax : Léonidas quote split-text reveal + Triple-Win is already
+        CSS-driven via .is-in class (handled by the existing block below).
+        KPIs count-up is also already orchestrated below. */
+  function actR_leoQuote() {
+    const blockquote = document.querySelector('#result blockquote');
+    if (!blockquote) return;
+    const inner = blockquote.querySelector('[data-i18n-html="bnp.leo.quote"]');
+    const target = inner || blockquote;
+    ScrollTrigger.create({
+      trigger: blockquote, start: 'top 78%', once: true,
+      onEnter: () => {
+        const words = splitWords(target);
+        if (!words.length) return;
+        gsap.fromTo(words, { y: 18, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.65, ease: 'power4.out', stagger: 0.045 });
+        /* Subtle flash : add and remove an accent class on the blockquote */
+        blockquote.classList.add('is-punching');
+        setTimeout(() => blockquote.classList.remove('is-punching'), 1200);
+      },
+    });
+  }
+  actR_leoQuote();
+
+  /* ── Act R — CLIMAX stat block 6 / 1 / 0 (fin du double diamant).
+        Reveal sequential : eyebrow → cell 6 → arrow → cell 1 (flash) → dot → cell 0 → caption.
+        Count-up on each .climax-stat__num via data-count-to. The "1" gets the climax flash. */
+  function actR_climaxStat() {
+    const block = document.querySelector('.climax-stat');
+    if (!block) return;
+    const eyebrow = block.querySelector('.climax-stat__eyebrow');
+    const cells = block.querySelectorAll('.climax-stat__cell');
+    const seps = block.querySelectorAll('.climax-stat__sep');
+    const caption = block.querySelector('.climax-stat__caption');
+
+    /* Initial states */
+    if (eyebrow) gsap.set(eyebrow, { opacity: 0, y: 16 });
+    if (cells.length) gsap.set(cells, { opacity: 0, y: 28 });
+    if (seps.length) gsap.set(seps, { opacity: 0, scale: 0.6 });
+    if (caption) gsap.set(caption, { opacity: 0, y: 14 });
+
+    ScrollTrigger.create({
+      trigger: block, start: 'top 76%', once: true,
+      onEnter: () => {
+        const tl = gsap.timeline();
+        if (eyebrow) tl.to(eyebrow, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0);
+        /* Cells reveal in narrative order : 6 → 1 → 0, with arrows/dots between */
+        const orderedReveals = [];
+        if (cells[0]) orderedReveals.push({ el: cells[0], at: 0.30 });
+        if (seps[0])  orderedReveals.push({ el: seps[0],  at: 0.55 });
+        if (cells[1]) orderedReveals.push({ el: cells[1], at: 0.65 });
+        if (seps[1])  orderedReveals.push({ el: seps[1],  at: 0.95 });
+        if (cells[2]) orderedReveals.push({ el: cells[2], at: 1.05 });
+        orderedReveals.forEach(({ el, at }) => {
+          if (el.classList.contains('climax-stat__sep')) {
+            tl.to(el, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(2)' }, at);
+          } else {
+            tl.to(el, { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' }, at);
+          }
+        });
+        if (caption) tl.to(caption, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 1.45);
+
+        /* Count-up on each numeric cell */
+        block.querySelectorAll('.climax-stat__num').forEach((numEl, idx) => {
+          const target = parseInt(numEl.dataset.countTo || numEl.textContent, 10);
+          if (Number.isNaN(target)) return;
+          const obj = { v: 0 };
+          numEl.textContent = '0';
+          /* Each count-up starts when its cell lands : 0.30 / 0.65 / 1.05 (idx 0,1,2) */
+          const starts = [0.40, 0.78, 1.18];
+          tl.to(obj, {
+            v: target, duration: 0.85, ease: 'power3.out',
+            onUpdate: () => { numEl.textContent = String(Math.round(obj.v)); },
+            onComplete: () => { numEl.textContent = String(target); },
+          }, starts[idx] || 0.4);
+        });
+
+        /* CLIMAX FLASH on the "1" cell — the promesse Léonidas */
+        const accentCell = block.querySelector('.climax-stat__cell--accent');
+        if (accentCell) {
+          tl.fromTo(accentCell, { boxShadow: '0 0 0 0 rgba(199,105,65,0)' },
+            { boxShadow: '0 0 0 8px rgba(199,105,65,0.18)', duration: 0.45, ease: 'power3.out',
+              yoyo: true, repeat: 1 }, 1.05);
+        }
+      },
+    });
+  }
+  actR_climaxStat();
+
+  /* ── Act R — Frictions & Alignment section.
+        4 cards stagger reveal, then pivot block (claim + outcome) lands as the resolution. */
+  function actR_alignment() {
+    const sec = document.querySelector('#alignment');
+    if (!sec) return;
+    const eyebrow = sec.querySelector('.eyebrow');
+    const title = sec.querySelector('h2');
+    const lead = sec.querySelector('.lead');
+    const cards = sec.querySelectorAll('.align-card');
+    const pivot = sec.querySelector('.alignment-pivot');
+    const pivotClaim = pivot && pivot.querySelector('.alignment-pivot__claim');
+    const pivotOutcome = pivot && pivot.querySelector('.alignment-pivot__outcome');
+
+    [eyebrow, title, lead].filter(Boolean).forEach((el) => gsap.set(el, { opacity: 0, y: 22 }));
+    if (cards.length) gsap.set(cards, { opacity: 0, y: 32 });
+    if (pivot) gsap.set(pivot, { opacity: 0, y: 24 });
+    if (pivotClaim) gsap.set(pivotClaim, { opacity: 0, y: 18 });
+    if (pivotOutcome) gsap.set(pivotOutcome, { opacity: 0, y: 14 });
+
+    /* Header reveals */
+    [eyebrow, title, lead].filter(Boolean).forEach((el, i) => {
+      gsap.to(el, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', delay: i * 0.10,
+        scrollTrigger: { trigger: el, start: 'top 82%', toggleActions: 'play none none reverse' },
+      });
+    });
+
+    /* 4 cards stagger — narrative order Banking → IT → Legal → Marketing */
+    if (cards.length) {
+      gsap.to(cards, {
+        opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', stagger: 0.18,
+        scrollTrigger: { trigger: cards[0], start: 'top 82%', toggleActions: 'play none none reverse' },
+      });
+    }
+
+    /* Pivot block — the resolution. Lands after cards, with claim then outcome. */
+    if (pivot) {
+      ScrollTrigger.create({
+        trigger: pivot, start: 'top 80%', once: true,
+        onEnter: () => {
+          const tl = gsap.timeline();
+          tl.to(pivot, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, 0);
+          if (pivotClaim) tl.to(pivotClaim, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' }, 0.25);
+          if (pivotOutcome) tl.to(pivotOutcome, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 0.55);
+        },
+      });
+    }
+  }
+  actR_alignment();
 
   /* ── Bridge section : phrase + sub fade in, watermark parallax */
   const bridgeEl = document.querySelector('.star-bridge');
@@ -409,8 +880,41 @@
     }
   }
 
-  /* ── Generic scroll reveals — fade + slight translate */
-  const reveals = document.querySelectorAll('.figure, .pain, .stake, .stat, .stat-leo, .step, .rm, .dl, .case-card, blockquote, .qa .q, .luminus-needs li, .tldr-card');
+  /* ── Roadmap timeline : draw-in the connecting amber line on scroll-in.
+        The .rm nodes are already revealed by the generic scroll-reveal block below. */
+  const roadmapEl = document.querySelector('.roadmap-timeline');
+  if (roadmapEl) {
+    ScrollTrigger.create({
+      trigger: roadmapEl,
+      start: 'top 78%',
+      onEnter:     () => roadmapEl.style.setProperty('--rm-fill', '1'),
+      onEnterBack: () => roadmapEl.style.setProperty('--rm-fill', '1'),
+    });
+  }
+
+  /* ── Sprint 5 — Bridges + Fin Royale enrichments. */
+  /* Lessons cards : staggered fade-up (Act R aftermath, between climax and bridge) */
+  const lessonCards = document.querySelectorAll('.lesson-card');
+  if (lessonCards.length) {
+    gsap.set(lessonCards, { opacity: 0, y: 28 });
+    gsap.to(lessonCards, {
+      opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.18,
+      scrollTrigger: { trigger: lessonCards[0], start: 'top 82%', toggleActions: 'play none none reverse' },
+    });
+  }
+
+  /* Fin Royale : add .is-in class so the signature underline can draw via CSS */
+  const finRoyaleEl = document.querySelector('.fin-royale');
+  if (finRoyaleEl) {
+    ScrollTrigger.create({
+      trigger: finRoyaleEl, start: 'top 70%', once: true,
+      onEnter: () => finRoyaleEl.classList.add('is-in'),
+    });
+  }
+
+  /* ── Generic scroll reveals — fade + slight translate.
+        EXCLUDED: .rm, .step (orchestrated by Act T / Act A), .figure (orchestrated by problem/result/etc). */
+  const reveals = document.querySelectorAll('.pain, .stake, .stat, .dl, .case-card, blockquote:not(#result blockquote):not(.pq-quote), .qa .q, .luminus-needs li, .tldr-card');
   reveals.forEach((el) => {
     gsap.from(el, {
       opacity: 0, y: 24,

@@ -362,31 +362,42 @@
       nl: '6 maanden <span class="dot">·</span> 4 interne functies <span class="dot">·</span> 6 kmo\'s getest <span class="dot">·</span> 1 pilootklant',
       en: '6 months <span class="dot">·</span> 4 internal functions <span class="dot">·</span> 6 SMEs tested <span class="dot">·</span> 1 pilot client'
     },
-    'bnp.glance.s1.label': { fr: 'Flux cartes consommateurs', nl: 'Consumentenkaart-flows', en: 'Consumer card flows' },
-    'bnp.glance.s1.desc': {
-      fr: 'Visibles par BNP, sans valeur traduite pour les PME.',
-      nl: 'Zichtbaar voor BNP, zonder waarde vertaald voor kmo\'s.',
-      en: 'BNP saw them. They never reached SME value.'
+    'bnp.glance.s1.label': {
+      fr: 'Flux carte conso · vus, pas convertis',
+      nl: 'Consumentenkaart-flows · gezien, niet omgezet',
+      en: 'Card flows seen, not turned to value'
     },
-    'bnp.glance.s2.label': { fr: 'Personas B2B conçus', nl: 'B2B-persona\'s ontworpen', en: 'B2B personas designed' },
-    'bnp.glance.s2.desc': {
-      fr: 'Des professions libérales aux PME corporate.',
-      nl: 'Van vrije beroepen tot corporate kmo\'s.',
-      en: 'From liberal professions to corporate SMEs.'
+    'bnp.glance.s2.label': {
+      fr: 'CA promis aux PME · 4 rapports business',
+      nl: 'Beloofde omzetgroei kmo\'s · 4 business-rapporten',
+      en: 'Revenue uplift promised · 4 business-goal reports'
     },
-    'bnp.glance.s2b.label': { fr: '6 mois · même data', nl: '6 maanden · zelfde data', en: '6 months · same data' },
-    'bnp.glance.s2c.label': { fr: 'Part de marché · vs 10%', nl: 'Marktaandeel · vs 10%', en: 'Market share · vs 10%' },
-    'bnp.glance.s3.label': { fr: 'Client pilote signé', nl: 'Pilootklant getekend', en: 'Pilot client signed' },
-    'bnp.glance.s3.desc': {
-      fr: 'Une PME a dit oui. Léonidas Wolluwé.',
-      nl: 'Een kmo zei ja. Léonidas Wolluwé.',
-      en: 'A real shopkeeper said yes. Léonidas Wolluwé.'
+    'bnp.glance.s3.label': {
+      fr: 'Personas B2B livrés · réutilisés downstream',
+      nl: 'B2B-personas opgeleverd · downstream herbruikt',
+      en: 'B2B personas delivered · reused downstream'
     },
-    'bnp.glance.s4.label': { fr: 'PME Corporate Banking', nl: 'Kmo\'s Corporate Banking', en: 'Corporate Banking SMEs' },
-    'bnp.glance.s4.desc': {
-      fr: 'Population pilote cadrée et dé-risquée pour le MVP.',
-      nl: 'Pilotpopulatie afgebakend en gederisicood voor de MVP.',
-      en: 'Pilot population scoped and de-risked for the MVP.'
+    'bnp.glance.s4.label': {
+      fr: 'Promesse d\'achat · sur 6 PME testées · 0 refus',
+      nl: 'Aankoopbelofte · op 6 geteste kmo\'s · 0 weigeringen',
+      en: 'Pre-purchase commitment · across 6 SMEs tested · 0 refusals'
+    },
+
+    /* VP statement — Act T claim that opens the proposition (the "why merchants pay") */
+    'bnp.vp.eyebrow': {
+      fr: 'La proposition de valeur',
+      nl: 'De waardepropositie',
+      en: 'The value proposition'
+    },
+    'bnp.vp.claim': {
+      fr: '<span class="vp-claim__num">+15<span class="vp-claim__sep">–</span>25<span class="vp-claim__unit">%</span></span><span class="vp-claim__text">de chiffre d\'affaires<br>pour les PME qui suivent les rapports.</span>',
+      nl: '<span class="vp-claim__num">+15<span class="vp-claim__sep">–</span>25<span class="vp-claim__unit">%</span></span><span class="vp-claim__text">extra omzet<br>voor kmo\'s die de rapporten volgen.</span>',
+      en: '<span class="vp-claim__num">+15<span class="vp-claim__sep">–</span>25<span class="vp-claim__unit">%</span></span><span class="vp-claim__text">in revenue<br>for SMEs who act on the reports.</span>'
+    },
+    'bnp.vp.sub': {
+      fr: 'Quatre rapports orientés objectifs business — <em>qui cibler</em>, <em>où</em>, <em>quand</em>, <em>avec quels critères</em> — répondus par les données de la banque. Pas une exploration. Une décision par écran.',
+      nl: 'Vier doelgerichte business-rapporten — <em>wie targeten</em>, <em>waar</em>, <em>wanneer</em>, <em>met welke criteria</em> — beantwoord door de data van de bank. Geen exploratie. Eén beslissing per scherm.',
+      en: 'Four goal-oriented business reports — <em>who to target</em>, <em>where</em>, <em>when</em>, <em>by which criteria</em> — answered by the bank\'s data. Not an exploration. One decision per screen.'
     },
 
     'bnp.problem.eyebrow': { fr: 'Le Problème · 1 / 3', nl: 'Het Probleem · 1 / 3', en: 'The Problem · 1 of 3' },
@@ -726,46 +737,66 @@
 
     'bnp.steps.s6.h': { fr: 'Roadmap et dossier de décision exécutif', nl: 'Roadmap en executive beslissingspakket', en: 'Roadmap and executive decision pack' },
     'bnp.steps.s6.p': {
-      fr: 'Tous les artefacts précédents (recherche, VPC, Lean Canvas, blueprints, prototypes) ont alimenté un seul livrable final : un dossier de décision exécutif. Roadmap séquencée Q1 2018 vers 2020 (du MVP scope à 20 % de part de marché acquiring visé). Registre des risques RGPD / faisabilité technique / défensibilité concurrentielle. Matrice de trade-offs MVP. <strong class="accent">Construit pour être décidé, pas seulement lu.</strong> Le sponsor exécutif a eu son go.',
-      nl: 'Alle voorgaande artefacten (onderzoek, VPC, Lean Canvas, blueprints, prototypes) voedden één finaal deliverable : een executive decision document. Gefaseerde roadmap Q1 2018 naar 2020 (van MVP-scope naar 20 % market share acquiring). Risicoregister GDPR / technische haalbaarheid / concurrentie-verdedigbaarheid. MVP trade-off matrix. <strong class="accent">Gebouwd om beslist te worden, niet enkel gelezen.</strong> De executive sponsor kreeg zijn go.',
-      en: 'Every prior artefact (research, VPC, Lean Canvas, blueprints, prototypes) fed into a single final deliverable : an executive decision pack. Sequenced roadmap Q1 2018 to 2020 (MVP scope to 20% acquiring market share target). Risk register GDPR / technical feasibility / competitive defensibility. MVP trade-off matrix. <strong class="accent">Built to be decided on, not just reviewed.</strong> The executive sponsor got his go.'
+      fr: 'Tous les artefacts précédents (recherche, VPC, Lean Canvas, blueprints, prototypes) ont alimenté un seul livrable final : un dossier de décision exécutif. Roadmap séquencée Q1 2018 vers 2020. Registre des risques RGPD / faisabilité technique / défensibilité concurrentielle. <strong class="accent">Et la preuve commerciale en avance : six PME testées avec le prototype. Une promesse d\'achat ferme — le groupe Léonidas, sur décision de son manager général, qui s\'engageait à acheter à la sortie pour tous ses magasins. Aucun refus chez les cinq autres ; toutes prêtes à être dans les premières acheteuses.</strong> C\'était le signal qui manquait au sponsor pour passer en production. <strong class="accent">Construit pour être décidé, pas seulement lu.</strong>',
+      nl: 'Alle voorgaande artefacten (onderzoek, VPC, Lean Canvas, blueprints, prototypes) voedden één finaal deliverable : een executive decision document. Gefaseerde roadmap Q1 2018 naar 2020. Risicoregister GDPR / technische haalbaarheid / concurrentie-verdedigbaarheid. <strong class="accent">En het commerciële bewijs vooraf : zes kmo\'s testten het prototype. Eén harde aankoopbelofte — de Léonidas-groep, op beslissing van haar algemeen directeur, die zich engageerde om bij lancering aan te kopen voor al haar winkels. Geen weigering bij de vijf anderen ; allemaal bereid om bij de eerste kopers te zijn.</strong> Dat was het signaal dat de sponsor nodig had om in productie te gaan. <strong class="accent">Gebouwd om beslist te worden, niet enkel gelezen.</strong>',
+      en: 'Every prior artefact (research, VPC, Lean Canvas, blueprints, prototypes) fed into a single final deliverable : an executive decision pack. Sequenced roadmap Q1 2018 to 2020. Risk register GDPR / technical feasibility / competitive defensibility. <strong class="accent">And the commercial proof up-front : six SMEs tested the prototype. One firm pre-purchase commitment — the Léonidas group, by decision of its general manager, committing to buy on launch for all of its stores. No refusals among the other five ; all of them ready to be first-buyers.</strong> That was the signal the sponsor needed to push for production. <strong class="accent">Built to be decided on, not just reviewed.</strong>'
     },
     'bnp.steps.s6.deliv': { fr: 'Livrable · roadmap · registre des risques · dossier de décision', nl: 'Deliverable · roadmap · risicoregister · beslissingspakket', en: 'Deliverable · roadmap · Risk register · Decision pack' },
     'bnp.steps.s6.cap': { fr: 'Principe de sélection temporelle · cadre de comparaison étagé', nl: 'Principe tijdselectie · gefaseerd vergelijkingskader', en: 'Time selection principle · Staged comparison frame' },
 
-    'bnp.roadmap.h3': { fr: 'La roadmap, en quatre temps.', nl: 'De roadmap, in vier zetten.', en: 'The roadmap, in four moves.' },
+    'bnp.roadmap.h3': { fr: 'La roadmap, en six temps.', nl: 'De roadmap, in zes zetten.', en: 'The roadmap, in six moves.' },
     'bnp.roadmap.lead': {
-      fr: 'Du dé-risquage du MVP à l\'objectif acquiring 2020. Le travail a été cadencé pour donner à la banque une décision claire à chaque étape.',
-      nl: 'Van het derisken van de MVP tot het acquiring-doel van 2020. Het werk was geritmeerd om de bank op elke etappe een duidelijke volgende beslissing te bieden.',
-      en: 'From de-risking the MVP to the 2020 acquiring goal. The work was paced to give the bank a clear next-decision at every stage.'
+      fr: 'Six mois. De l\'observation du commerçant à la signature d\'un vrai contrat. À chaque étape, une décision claire pour la banque.',
+      nl: 'Zes maanden. Van shadowing op de winkelvloer tot een handtekening op een echt contract. Bij elke stap één duidelijke beslissing voor de bank.',
+      en: 'Six months. From shadowing the merchant to a signature on a real contract. Each step, one clear decision for the bank.'
     },
-    'bnp.roadmap.r1.when': { fr: 'T1 2018 · Maintenant', nl: 'Q1 2018 · Nu', en: 'Q1 2018 · Now' },
-    'bnp.roadmap.r1.h': { fr: 'Scope MVP verrouillé', nl: 'MVP-scope vastgelegd', en: 'MVP scope locked' },
+    'bnp.roadmap.r1.phase': { fr: 'Observer', nl: 'Observeren', en: 'Discover' },
+    'bnp.roadmap.r1.when': { fr: 'Q3 2017', nl: 'Q3 2017', en: 'Q3 2017' },
+    'bnp.roadmap.r1.h': { fr: 'À l\'écoute du terrain', nl: 'Luisteren op de winkelvloer', en: 'Listening on the shop floor' },
     'bnp.roadmap.r1.p': {
-      fr: 'Concept validé. 4 lentilles de données. Population pilote cadrée à 1 500 PME.',
-      nl: 'Concept gevalideerd. 4 datalenzen. Pilotpopulatie afgebakend op 1 500 kmo\'s.',
-      en: 'Concept validated. 4 data lenses. Pilot population framed at 1,500 SMEs.'
+      fr: 'Entretiens PME, observation des points de vente, benchmark des outils existants (Barclays, Proximus, BBVA).',
+      nl: 'Kmo-interviews, shadowing van pos-locaties, benchmark van bestaande tools (Barclays, Proximus, BBVA).',
+      en: 'SME interviews, shadowing on sales floors, benchmark of existing tools (Barclays, Proximus, BBVA).'
     },
-    'bnp.roadmap.r2.when': { fr: 'T2 2018 · Pilote', nl: 'Q2 2018 · Pilot', en: 'Q2 2018 · Pilot' },
-    'bnp.roadmap.r2.h': { fr: 'Offre acquiring pour grands retailers', nl: 'Acquiring-aanbod voor grote retailers', en: 'Acquiring offer for large retailers' },
+    'bnp.roadmap.r2.phase': { fr: 'Cadrer', nl: 'Kaderen', en: 'Define' },
+    'bnp.roadmap.r2.when': { fr: '30 oct. 2017', nl: '30 okt. 2017', en: 'Oct 30, 2017' },
+    'bnp.roadmap.r2.h': { fr: 'Lean Canvas posé', nl: 'Lean Canvas vastgelegd', en: 'Lean Canvas signed off' },
     'bnp.roadmap.r2.p': {
-      fr: 'Corporate Banking peut proposer l\'acquiring. Les commerçants gardent leurs terminaux.',
-      nl: 'Corporate Banking kan acquiring aanbieden. Merchants behouden hun terminals.',
-      en: 'Corporate Banking can offer acquiring. Merchants keep their terminals.'
+      fr: 'Value Proposition Canvas cartographié. Triple Win verrouillé : banque, commerçant, porteur de carte.',
+      nl: 'Value Proposition Canvas in kaart gebracht. Triple Win vastgelegd: bank, merchant, kaarthouder.',
+      en: 'Value Proposition Canvas mapped. Triple Win locked: bank, retailer, cardholder.'
     },
-    'bnp.roadmap.r3.when': { fr: '2019 · Build', nl: '2019 · Build', en: '2019 · Build' },
-    'bnp.roadmap.r3.h': { fr: 'Onboarding live via EBB', nl: 'Live onboarding via EBB', en: 'Live onboarding via EBB' },
+    'bnp.roadmap.r3.phase': { fr: 'Recadrer', nl: 'Herkaderen', en: 'Reframe' },
+    'bnp.roadmap.r3.when': { fr: 'Q4 2017', nl: 'Q4 2017', en: 'Q4 2017' },
+    'bnp.roadmap.r3.h': { fr: 'Pas un dashboard. Un service.', nl: 'Geen dashboard. Een dienst.', en: 'Not a dashboard. A service.' },
     'bnp.roadmap.r3.p': {
-      fr: 'Outil déployé via Easy Banking Business avec rafraîchissement quotidien des données.',
-      nl: 'Tool uitgerold via Easy Banking Business met dagelijkse data-refresh.',
-      en: 'Tool deployed via Easy Banking Business with daily data refresh.'
+      fr: 'Reports orientés objectifs au lieu de tableaux de bord. La surcharge cognitive devient l\'ennemi.',
+      nl: 'Doelgerichte rapporten in plaats van data-dumps. Cognitieve overload wordt de vijand.',
+      en: 'Goal-oriented reports replace data-dump screens. Cognitive overload becomes the enemy.'
     },
-    'bnp.roadmap.r4.when': { fr: '2020 · Objectif', nl: '2020 · Doel', en: '2020 · Goal' },
-    'bnp.roadmap.r4.h': { fr: 'De 7 % à 20 % de part acquirer', nl: 'Van 7 % naar 20 % acquirer-aandeel', en: 'From 7% to 20% acquirer share' },
+    'bnp.roadmap.r4.phase': { fr: 'Concevoir', nl: 'Ontwerpen', en: 'Concept' },
+    'bnp.roadmap.r4.when': { fr: '1ᵉʳ mars 2018', nl: '1 maart 2018', en: 'Mar 1, 2018' },
+    'bnp.roadmap.r4.h': { fr: 'Quatre goals, un canal', nl: 'Vier goals, één kanaal', en: 'Four goals, one channel' },
     'bnp.roadmap.r4.p': {
-      fr: 'Présence acquirer complète. Enterprise Intelligence comme différenciateur.',
-      nl: 'Volledige acquirer-aanwezigheid. Enterprise Intelligence als differentiator.',
-      en: 'Full acquirer presence. Enterprise Intelligence as the differentiator.'
+      fr: 'Performance · Expansion · Actions · Comparaison. Le tout dans Easy Banking Business.',
+      nl: 'Performance · Expansion · Actions · Comparison. Alles binnen Easy Banking Business.',
+      en: 'Performance · Expansion · Actions · Comparison. All inside Easy Banking Business.'
+    },
+    'bnp.roadmap.r5.phase': { fr: 'Piloter', nl: 'Piloteren', en: 'Pilot' },
+    'bnp.roadmap.r5.when': { fr: 'Q2 2018', nl: 'Q2 2018', en: 'Q2 2018' },
+    'bnp.roadmap.r5.h': { fr: 'Léonidas signe', nl: 'Léonidas tekent', en: 'Léonidas signs' },
+    'bnp.roadmap.r5.p': {
+      fr: 'Co-création avec un client réel. Pont ATOS résolu. Le concept se valide en boutique.',
+      nl: 'Co-creatie met een echte klant. ATOS-brug opgelost. Het concept wordt in de winkel gevalideerd.',
+      en: 'Co-creation with a real merchant. ATOS bridge resolved. Concept validated on the shop floor.'
+    },
+    'bnp.roadmap.r6.phase': { fr: 'Étendre', nl: 'Schalen', en: 'Scale' },
+    'bnp.roadmap.r6.when': { fr: '2020 · Étoile polaire', nl: '2020 · Noordster', en: '2020 · North star' },
+    'bnp.roadmap.r6.h': { fr: 'De 7 % à 20 % de part acquirer', nl: 'Van 7 % naar 20 % acquirer-aandeel', en: 'From 7% to 20% acquirer share' },
+    'bnp.roadmap.r6.p': {
+      fr: 'Enterprise Intelligence comme différenciateur, sur 1 500 retailers corporate.',
+      nl: 'Enterprise Intelligence als differentiator, op 1 500 corporate retailers.',
+      en: 'Enterprise Intelligence as the differentiator, across 1,500 corporate retailers.'
     },
 
     'bnp.result.eyebrow': { fr: 'Le résultat', nl: 'Het resultaat', en: 'The Result' },
@@ -809,9 +840,9 @@
       en: 'We didn\'t just ship a deck. We tested the concept on a real chain, <strong class="accent">Léonidas</strong>, using BNP transaction data over a six-month window. Two boutiques in Brussels : one in Wolluwé Saint-Pierre, one in Ixelles.'
     },
     'bnp.leo.lead2': {
-      fr: 'Le shop de Wolluwé avait conduit des actions marketing segmentées par client. Celui d\'Ixelles non. Le dashboard Enterprise Intelligence rendait l\'impact <strong>visible d\'un coup d\'œil</strong>. Le chocolatier est devenu un <strong class="accent">acheteur potentiel</strong> du MVP.',
-      nl: 'De Woluwe-shop had klant-gesegmenteerde marketingacties uitgevoerd. De Elsene-shop niet. Het Enterprise Intelligence-dashboard maakte de impact <strong>in één oogopslag zichtbaar</strong>. De chocolatier werd een <strong class="accent">potentiële koper</strong> van de MVP.',
-      en: 'The Wolluwé store had run customer-segmented marketing actions. The Ixelles store hadn\'t. The Enterprise Intelligence dashboard made the impact <strong>visible at a glance</strong>. The chocolatier became a <strong class="accent">paying customer in waiting</strong> for the MVP.'
+      fr: 'Le shop de Wolluwé avait conduit des actions marketing segmentées par client. Celui d\'Ixelles non. Le dashboard Enterprise Intelligence rendait l\'impact <strong>visible d\'un coup d\'œil</strong>. Sur cette base, <strong class="accent">le manager général du groupe Léonidas a décidé pour l\'ensemble des magasins</strong> : promesse d\'achat à la sortie du MVP, pour être dans les premiers à équiper toute la chaîne.',
+      nl: 'De Woluwe-shop had klant-gesegmenteerde marketingacties uitgevoerd. De Elsene-shop niet. Het Enterprise Intelligence-dashboard maakte de impact <strong>in één oogopslag zichtbaar</strong>. Op die basis heeft <strong class="accent">de algemeen directeur van de Léonidas-groep voor al haar winkels beslist</strong> : aankoopbelofte bij lancering van het MVP, om bij de eersten te zijn die de hele keten uitrusten.',
+      en: 'The Wolluwé store had run customer-segmented marketing actions. The Ixelles store hadn\'t. The Enterprise Intelligence dashboard made the impact <strong>visible at a glance</strong>. On that basis, <strong class="accent">the general manager of the Léonidas group decided for all of its stores</strong> : pre-purchase commitment on MVP launch, to be among the first chains rolled out across.'
     },
     'bnp.leo.s1': { fr: 'Hausse de revenu', nl: 'Omzetstijging', en: 'Revenue increase' },
     'bnp.leo.s2': { fr: 'Six mois', nl: 'Zes maanden', en: 'Six months' },
@@ -849,9 +880,108 @@
       en: 'Why our data is relevant · Unique BNP value intersection'
     },
     'bnp.beyond.summary': {
-      fr: 'Au-delà du chiffre : un MVP signé Corporate Banking, IT, Legal et Marketing, dérisqué côté GDPR et qualité de données. Et une bibliothèque de <strong class="accent">9 personas B2B</strong> qui a survécu au projet.',
-      nl: 'Voorbij het cijfer : een MVP ondertekend door Corporate Banking, IT, Legal en Marketing, zonder GDPR- of datakwaliteits-risico\'s. En een bibliotheek van <strong class="accent">9 B2B-persona\'s</strong> die het project overleefde.',
-      en: 'Beyond the figure : an MVP signed off by Corporate Banking, IT, Legal and Marketing, de-risked on GDPR and data quality. And a <strong class="accent">9-persona B2B library</strong> that outlived the project.'
+      fr: 'Au-delà du chiffre : un MVP signé Corporate Banking, IT, Legal et Marketing, dérisqué côté GDPR et qualité de données. <strong class="accent">Six PME testées avec le prototype. Le groupe Léonidas, par décision de son manager général, s\'engage à acheter à la sortie pour tous ses magasins. Zéro refus chez les cinq autres.</strong> Le signal commercial qui a convaincu le sponsor de passer en production. Et une bibliothèque de <strong class="accent">9 personas B2B</strong> qui a survécu au projet.',
+      nl: 'Voorbij het cijfer : een MVP ondertekend door Corporate Banking, IT, Legal en Marketing, zonder GDPR- of datakwaliteits-risico\'s. <strong class="accent">Zes kmo\'s testten het prototype. De Léonidas-groep, op beslissing van haar algemeen directeur, engageert zich om bij lancering aan te kopen voor al haar winkels. Nul weigeringen bij de vijf anderen.</strong> Het commerciële signaal dat de sponsor overtuigde om in productie te gaan. En een bibliotheek van <strong class="accent">9 B2B-persona\'s</strong> die het project overleefde.',
+      en: 'Beyond the figure : an MVP signed off by Corporate Banking, IT, Legal and Marketing, de-risked on GDPR and data quality. <strong class="accent">Six SMEs tested the prototype. The Léonidas group, by decision of its general manager, committed to buy on launch for all of its stores. Zero refusals among the five others.</strong> The commercial signal that convinced the sponsor to push for production. And a <strong class="accent">9-persona B2B library</strong> that outlived the project.'
+    },
+
+    /* FRICTIONS & ALIGNMENT — Act R chute marketing, 4 fonctions → bébé de tout le monde → empathie utilisateur */
+    'bnp.alignment.eyebrow': {
+      fr: 'Frictions stakeholders · Alignement',
+      nl: 'Stakeholder-frictions · Alignering',
+      en: 'Stakeholder frictions · Alignment'
+    },
+    'bnp.alignment.h2': {
+      fr: 'Comment quatre départements ont fini par <span class="accent">porter le même bébé.</span>',
+      nl: 'Hoe vier afdelingen uiteindelijk <span class="accent">dezelfde baby droegen.</span>',
+      en: 'How four departments ended up <span class="accent">carrying the same baby.</span>'
+    },
+    'bnp.alignment.lead': {
+      fr: 'Chaque fonction arrivait avec sa friction propre. Le double diamant n\'a pas été qu\'une méthode : c\'est l\'outil qui a calé chaque conversation au bon moment, sur le bon objet, avec le bon arbitrage.',
+      nl: 'Elke functie kwam met haar eigen wrijving. De double diamond was niet enkel een methode : het was de tool die elk gesprek op het juiste moment, over het juiste onderwerp en met de juiste arbitrage plaatste.',
+      en: 'Each function showed up with its own friction. The double diamond was not just a method : it was the tool that placed each conversation at the right moment, on the right object, with the right arbitration.'
+    },
+
+    'bnp.alignment.f1.fn': { fr: 'Corporate Banking', nl: 'Corporate Banking', en: 'Corporate Banking' },
+    'bnp.alignment.f1.h': { fr: '« Quel revenu prouvable ? »', nl: '"Welke aantoonbare omzet?"', en: '"What revenue can we prove?"' },
+    'bnp.alignment.f1.p': {
+      fr: 'Friction : un produit B2B sans client signataire, c\'est invendable côté board. Levée par la Phase Discover : on a sourcé six PME et obtenu Léonidas en promesse d\'achat avant le build.',
+      nl: 'Wrijving : een B2B-product zonder ondertekende klant is onverkoopbaar op boardniveau. Opgelost in de Discover-fase : we sourceerden zes kmo\'s en haalden Léonidas binnen als aankoopbelofte vóór de build.',
+      en: 'Friction : a B2B product without a signed customer is unsellable at board level. Resolved in the Discover phase : we sourced six SMEs and secured Léonidas as a pre-purchase commitment before any build.'
+    },
+
+    'bnp.alignment.f2.fn': { fr: 'IT & Data', nl: 'IT & Data', en: 'IT & Data' },
+    'bnp.alignment.f2.h': { fr: '« On peut builder demain. »', nl: '"We kunnen morgen bouwen."', en: '"We can build it tomorrow."' },
+    'bnp.alignment.f2.p': {
+      fr: 'Friction : envie de coder avant le service blueprint. Levée semaine 6 par 5 customer journeys end-to-end. Chiffre qui a tué le débat : 15 étapes étalées sur 1-3 jours juste pour onboarder.',
+      nl: 'Wrijving : drang om te coderen vóór het service blueprint. Opgelost in week 6 met 5 end-to-end customer journeys. Het cijfer dat het debat sloot : 15 stappen verspreid over 1-3 dagen enkel om aan boord te komen.',
+      en: 'Friction : urge to start coding before the service blueprint. Resolved in week 6 with 5 end-to-end customer journeys. The figure that killed the debate : 15 steps spread over 1-3 days just to onboard.'
+    },
+
+    'bnp.alignment.f3.fn': { fr: 'Legal & Compliance', nl: 'Legal & Compliance', en: 'Legal & Compliance' },
+    'bnp.alignment.f3.h': { fr: '« Et si un cardholder se plaint ? »', nl: '"En als een kaarthouder klaagt?"', en: '"What if a cardholder complains?"' },
+    'bnp.alignment.f3.p': {
+      fr: 'Friction : risque réputationnel sur les données carte. Levée par le Triple-Win frame : zéro donnée individuelle exposée, statistiques agrégées seulement, GDPR dérisqué dès la value prop.',
+      nl: 'Wrijving : reputatierisico op kaartdata. Opgelost door het Triple-Win-frame : nul individuele data blootgesteld, enkel geaggregeerde statistieken, GDPR gederisicood vanaf de value prop.',
+      en: 'Friction : reputational risk on card data. Resolved by the Triple-Win frame : zero individual data exposed, aggregated statistics only, GDPR de-risked from the value prop onwards.'
+    },
+
+    'bnp.alignment.f4.fn': { fr: 'Marketing', nl: 'Marketing', en: 'Marketing' },
+    'bnp.alignment.f4.h': { fr: '« 47 indicateurs, c\'est mieux. »', nl: '"47 indicatoren, dat is beter."', en: '"47 indicators is better."' },
+    'bnp.alignment.f4.p': {
+      fr: 'Friction : appétit pour la richesse data. Réduit semaine 9 à trois lectures coachées par graphique. Les six barrières des interviews ont fait le travail d\'arbitrage à ma place.',
+      nl: 'Wrijving : honger naar datarijkdom. Teruggebracht in week 9 tot drie begeleide lezingen per diagram. De zes barrières uit de interviews deden het arbitragewerk voor mij.',
+      en: 'Friction : appetite for data richness. Cut down in week 9 to three coached reads per chart. The six interview barriers did the arbitration work for me.'
+    },
+
+    'bnp.alignment.pivotClaim': {
+      fr: 'Le double diamant a mis chacun au bon moment, sur le bon objet. <span class="accent">L\'utilisateur est devenu le centre de l\'énergie</span> — pas le commerçant abstrait, le commerçant qu\'on avait observé sur sa caisse, dont on connaissait la phrase exacte.',
+      nl: 'De double diamond plaatste iedereen op het juiste moment, over het juiste onderwerp. <span class="accent">De gebruiker werd het centrum van de energie</span> — niet de abstracte merchant, maar de merchant die we hadden geobserveerd aan zijn kassa, wiens letterlijke zin we kenden.',
+      en: 'The double diamond placed each person at the right moment, on the right object. <span class="accent">The user became the centre of the energy</span> — not the abstract merchant, but the merchant we had watched at his till, whose exact sentence we knew.'
+    },
+    'bnp.alignment.pivotOutcome': {
+      fr: 'Quand les quatre fonctions ont vu la même PME au centre, le projet est devenu <strong class="accent">le bébé de tout le monde</strong>. Vision alignée. Aucune incompréhension sur où mettre le focus. Le résultat MVP a été maximisé parce que l\'empathie pour l\'utilisateur tenait toute l\'équipe.',
+      nl: 'Toen de vier functies dezelfde kmo in het centrum zagen, werd het project <strong class="accent">de baby van iedereen</strong>. Uitgelijnde visie. Geen misverstand over waar de focus moest liggen. Het MVP-resultaat werd gemaximaliseerd omdat de empathie voor de gebruiker het hele team bijeenhield.',
+      en: 'When the four functions saw the same SME at the centre, the project became <strong class="accent">everyone\'s baby</strong>. Aligned vision. No misunderstanding on where to focus. The MVP outcome was maximised because empathy for the user held the whole team together.'
+    },
+
+    /* CLIMAX STAT BLOCK 6 / 1 / 0 — fin du double diamant, signal sponsor */
+    'bnp.climax.eyebrow': {
+      fr: 'Fin du double diamant · Phase prototype',
+      nl: 'Einde van de double diamond · Prototype-fase',
+      en: 'End of double diamond · Prototype phase'
+    },
+    'bnp.climax.tested': {
+      fr: 'PME testées avec le prototype',
+      nl: 'kmo\'s die het prototype testten',
+      en: 'SMEs tested the prototype'
+    },
+    'bnp.climax.commit': {
+      fr: 'Promesse d\'achat ferme · groupe Léonidas',
+      nl: 'Harde aankoopbelofte · Léonidas-groep',
+      en: 'Firm pre-purchase commitment · Léonidas group'
+    },
+    'bnp.climax.refused': {
+      fr: 'Refus chez les cinq autres',
+      nl: 'Weigeringen bij de vijf anderen',
+      en: 'Refusals among the five others'
+    },
+    'bnp.climax.caption': {
+      fr: 'Le manager général de Léonidas a décidé pour tous ses magasins : promesse d\'achat à la sortie. Les cinq autres : « c\'est bien · prêts à acheter avant la sortie pour être les premiers. » Le signal qui manquait au sponsor pour passer en production.',
+      nl: 'De algemeen directeur van Léonidas besliste voor al haar winkels : aankoopbelofte bij lancering. De vijf anderen : « het is goed · klaar om voor lancering te kopen om bij de eersten te zijn. » Het signaal dat de sponsor nodig had om in productie te gaan.',
+      en: 'The general manager of Léonidas decided for all of its stores : pre-purchase commitment on launch. The other five : "it\'s good · ready to buy before launch to be among the first." The signal the sponsor needed to push for production.'
+    },
+
+    /* Double Diamond — methodology label + caption */
+    'bnp.dd.eyebrow': {
+      fr: 'Méthodologie · Design Council',
+      nl: 'Methodologie · Design Council',
+      en: 'Methodology · Design Council'
+    },
+    'bnp.dd.cap': {
+      fr: 'Diverger pour comprendre, converger pour décider — deux fois. La structure exacte des six mois BNP.',
+      nl: 'Divergeren om te begrijpen, convergeren om te beslissen — twee keer. De exacte structuur van de zes maanden BNP.',
+      en: 'Diverge to understand, converge to decide — twice. The exact shape of the six BNP months.'
     },
 
     'bnp.lessons.eyebrow': { fr: 'Si je refaisais le projet', nl: 'Als ik het opnieuw zou doen', en: 'If I did it again' },
@@ -871,9 +1001,9 @@
       en: 'Put a price on the table by week 8.'
     },
     'bnp.lessons.l1.p': {
-      fr: 'La prévente Léonidas est venue conditionnelle au build. Le sponsor avait son signal, mais le pari restait à courir. Aujourd\'hui, je négocierais une lettre d\'intention plus ferme dès le prototype, et un mandat qui m\'accompagne au moins jusqu\'à la mise en marché.',
-      nl: 'De pré-aankoop van Léonidas kwam conditioneel op de build. De sponsor had zijn signaal, maar de gok bleef te lopen. Vandaag zou ik onderhandelen voor een hardere intentieverklaring vanaf het prototype, en een mandaat dat me minstens tot aan de marktintroductie begeleidt.',
-      en: 'The Léonidas pre-purchase came conditional on the build. The sponsor had the signal, but the bet still had to run. Today, I would negotiate a firmer letter of intent at the prototype stage, and a mandate that takes me at least through the market launch.'
+      fr: 'La promesse d\'achat du groupe Léonidas au prototype, plus zéro refus chez les cinq autres PME testées, a été le signal qui a fait basculer le sponsor vers la production. Mais cet engagement restait conditionnel à la sortie du build. Aujourd\'hui, je négocierais des bons de commande plus fermes dès le prototype, et un accompagnement qui tient jusqu\'à la mise en marché.',
+      nl: 'De aankoopbelofte van de Léonidas-groep op het prototype, plus nul weigeringen bij de vijf andere geteste kmo\'s, was het signaal dat de sponsor over de streep trok naar productie. Maar dat engagement bleef afhankelijk van de oplevering van de build. Vandaag zou ik hardere bestelbonnen vanaf het prototype onderhandelen, en een begeleiding tot aan de marktintroductie.',
+      en: 'The pre-purchase commitment from the Léonidas group at prototype stage, plus zero refusals among the five other SMEs tested, was the signal that pushed the sponsor toward production. But that commitment stayed conditional on build delivery. Today, I would negotiate firmer purchase orders from the prototype stage, with engagement that runs through market launch.'
     },
     'bnp.lessons.l2.h': {
       fr: 'Élargir l\'échantillon avant de figer la promesse.',
