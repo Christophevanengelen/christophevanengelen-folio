@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=star5">
+<link rel="stylesheet" href="assets/style.css?v=star7">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -44,12 +44,7 @@
     width: 100%; height: 100%; object-fit: cover; object-position: center 35%;
     filter: saturate(0.88) contrast(1.10) brightness(0.82);
     transform: scale(1.06); will-change: transform;
-    animation: hcx-kenburns 22s ease-in-out infinite alternate;
-  }
-  /* Ken Burns ambient — slow zoom + drift, makes the hero feel alive even at rest */
-  @keyframes hcx-kenburns {
-    0%   { transform: scale(1.06) translate3d(0, 0, 0); }
-    100% { transform: scale(1.13) translate3d(-1.5%, -1%, 0); }
+    /* Ken Burns désactivé — le parallax scroll prend le relais (zoom-in + drift Y) */
   }
   @media (prefers-reduced-motion: reduce) {
     .hcx__bg img { animation: none; }
@@ -161,29 +156,31 @@
     text-shadow: 0 1px 10px rgba(10,18,32,0.65);
   }
 
-  /* KPI bento — 2 facts, à DROITE, stack vertical, compact, vraiment incrusté */
+  /* KPI bento — 2 facts, glassmorphisme RÉEL : transparent translucide, la photo passe au travers */
   .hcx__kpis {
     grid-column: 2 / 3; grid-row: 2 / 4;
     align-self: end; justify-self: end;
     display: grid; grid-template-columns: 1fr;
     gap: 1px;
     width: 100%; max-width: 340px;
-    border-radius: 10px; overflow: hidden;
-    /* Glass shell — verre teinté foncé, plus présent */
+    border-radius: 14px; overflow: hidden;
+    /* Glass shell unique — la teinte vit ici, pas sur les cells */
     background:
       linear-gradient(135deg,
-        rgba(242,235,219,0.10) 0%,
-        rgba(10,18,32,0.20) 100%);
-    border: 1px solid rgba(242,235,219,0.16);
-    border-top-color: rgba(242,235,219,0.30);
-    backdrop-filter: blur(28px) saturate(180%);
-    -webkit-backdrop-filter: blur(28px) saturate(180%);
-    /* Glow ambre incrusté + ombre flottante */
+        rgba(242,235,219,0.08) 0%,
+        rgba(199,105,65,0.05) 50%,
+        rgba(10,18,32,0.10) 100%);
+    border: 1px solid rgba(242,235,219,0.18);
+    border-top-color: rgba(242,235,219,0.32);
+    /* LE blur — c'est ICI qu'il s'applique sur ce qui est derrière (la photo) */
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    /* Glow ambre incrusté + ombre flottante + relief */
     box-shadow:
-      0 24px 60px rgba(0,0,0,0.55),
-      0 0 90px rgba(199,105,65,0.12),
-      0 1px 0 rgba(242,235,219,0.10) inset,
-      0 -1px 0 rgba(0,0,0,0.30) inset;
+      0 24px 60px rgba(0,0,0,0.45),
+      0 0 90px rgba(199,105,65,0.14),
+      0 1px 0 rgba(242,235,219,0.14) inset,
+      0 -1px 0 rgba(0,0,0,0.25) inset;
     position: relative;
   }
   /* Diagonal sheen overlay on the bento shell */
@@ -196,13 +193,19 @@
   }
   .hcx__kpi {
     position: relative; z-index: 1;
-    /* Cells beaucoup plus opaques pour lisibilité parfaite */
-    background: rgba(10,18,32,0.62);
-    padding: 18px 20px 16px;
+    /* TRANSPARENT — laisse passer le blur du shell parent (la photo transparait) */
+    background: transparent;
+    padding: 20px 22px 18px;
     display: flex; flex-direction: column; gap: 6px;
     transition: background .35s ease;
   }
-  .hcx__kpi:hover { background: rgba(10,18,32,0.74); }
+  /* Séparateur subtil entre les 2 cells (line ambre 10% au lieu de gap solid) */
+  .hcx__kpi + .hcx__kpi {
+    border-top: 1px solid rgba(242,235,219,0.10);
+  }
+  .hcx__kpi:hover {
+    background: rgba(242,235,219,0.04);
+  }
   .hcx__kpi-num {
     font-family: "Manrope", sans-serif;
     font-weight: 200; font-size: clamp(30px, 3.2vw, 44px);
@@ -1957,9 +1960,9 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=star5"></script>
+<script src="assets/i18n.js?v=star7"></script>
 <script src="assets/theme.js?v=cinema"></script>
-<script src="assets/motion.js?v=star5"></script>
+<script src="assets/motion.js?v=star7"></script>
 <script src="assets/deck.js?v=deck1"></script>
 <script src="assets/scroll-narrative.js?v=fielded"></script>
 </body>

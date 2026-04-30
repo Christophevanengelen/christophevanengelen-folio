@@ -382,13 +382,46 @@
     /* t=3.85 — Scroll cue last. The invitation. */
     if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.85);
 
-    /* ── Scroll parallax : BG image drifts slower than content */
+    /* ── Scroll parallax DRAMATIQUE : multi-layer dénivelé pour vrai effet 3D.
+       BG image : grandit en zoom-in (1.06 → 1.18) ET drift Y (yPercent 0 → 28)
+       → impression de plonger dans la photo en scrollant.
+       Text column : drift slower (yPercent -16) pour effet de surface.
+       KPI bento : drift fast (yPercent -8) avec scale subtle (1 → 0.96)
+       → effet "le bento s'éloigne de la caméra" tandis qu'on scrolle.
+       Header (client + period) : drift slowest (yPercent -22). */
     if (hcxBg) {
       gsap.to(hcxBg, {
-        yPercent: 15, ease: 'none',
+        yPercent: 28, scale: 1.18, ease: 'none',
         scrollTrigger: {
           trigger: hcxSection, start: 'top top', end: 'bottom top',
-          scrub: 1.2, invalidateOnRefresh: true,
+          scrub: 1.4, invalidateOnRefresh: true,
+        },
+      });
+    }
+    if (hcxHead) {
+      gsap.to(hcxHead, {
+        yPercent: -16, ease: 'none',
+        scrollTrigger: {
+          trigger: hcxSection, start: 'top top', end: 'bottom top',
+          scrub: 0.9, invalidateOnRefresh: true,
+        },
+      });
+    }
+    if (hcxKpis) {
+      gsap.to(hcxKpis, {
+        yPercent: -8, scale: 0.94, ease: 'none',
+        scrollTrigger: {
+          trigger: hcxSection, start: 'top top', end: 'bottom top',
+          scrub: 0.7, invalidateOnRefresh: true,
+        },
+      });
+    }
+    if (hcxClient) {
+      gsap.to(hcxClient, {
+        yPercent: -22, opacity: 0.4, ease: 'none',
+        scrollTrigger: {
+          trigger: hcxSection, start: 'top top', end: 'bottom top',
+          scrub: 1.1, invalidateOnRefresh: true,
         },
       });
     }
