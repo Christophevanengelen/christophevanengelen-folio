@@ -110,16 +110,26 @@
     'bnp.nav.pill2': { fr: 'Pour Luminus · 2026', nl: 'Voor Luminus · 2026', en: 'For Luminus · 2026' },
 
     'bnp.hero.eyebrow': {
-      fr: 'Étude de cas · Service Design',
-      nl: 'Case Study · Service Design',
-      en: 'Service Design · Case Study'
+      fr: 'New Business Revenue · Service Design',
+      nl: 'New Business Revenue · Service Design',
+      en: 'New Business Revenue · Service Design'
     },
     'bnp.hero.h1.start': { fr: 'Enterprise', nl: 'Enterprise', en: 'Enterprise' },
     'bnp.hero.h1.alt': { fr: 'Intelligence.', nl: 'Intelligence.', en: 'Intelligence.' },
     'bnp.hero.lead': {
-      fr: 'Une banque assise sur 30% des flux carte du pays voulait vendre quelque chose à ses propres clients PME. J\'ai transformé cette asymétrie de données en service que les commerçants acceptent de payer. De la découverte au concept MVP, jusqu\'à un signal d\'achat concret de Léonidas.',
-      nl: 'Een bank zat op 30% van alle kaarttransacties van het land en wilde haar eigen kmo-klanten iets verkopen. Ik zette die data-asymmetrie om in een dienst waar merchants voor willen betalen. Van discovery naar MVP-concept, tot een concreet koopsignaal van Léonidas.',
-      en: 'A bank that saw 30% of all card flows in the country wanted to sell something to its own SME clients. I turned that data asymmetry into a service merchants would actually pay for. From discovery to MVP concept, to a concrete buying signal from Léonidas.'
+      fr: 'Comment BNP peut générer de nouveaux revenus à partir de sa donnée transactionnelle. Service Designer mandaté sur ce pilier, pour faciliter le chemin de productisation via le big data — du concept jusqu\'au premier signal d\'achat.',
+      nl: 'Hoe BNP nieuwe inkomsten kan genereren uit haar transactiedata. Service Designer aangesteld op deze pijler, om het productisatie-traject via big data te faciliteren — van concept tot het eerste koopsignaal.',
+      en: 'How BNP can generate new revenue from its transactional data. Service Designer mandated on this pillar, to facilitate the productisation path via big data — from concept to the first buying signal.'
+    },
+    'bnp.hero.kpi1': {
+      fr: 'des flux carte conso vus par BNP<br>la matière première du new business revenue',
+      nl: 'van consumentenkaart-flows gezien door BNP<br>de grondstof voor new business revenue',
+      en: 'of consumer card flows BNP saw<br>the raw material for new business revenue'
+    },
+    'bnp.hero.kpi4': {
+      fr: 'PME a pré-signé une promesse d\'achat<br>la première ligne de revenu confirmée',
+      nl: 'kmo tekende vooraf een aankoopbelofte<br>de eerste bevestigde inkomstenlijn',
+      en: 'SME pre-signed a purchase commitment<br>the first confirmed revenue line'
     },
     'bnp.hero.metaRole': { fr: 'Service Designer · Freelance', nl: 'Service Designer · Freelance', en: 'Service Designer · Freelance' },
     'bnp.hero.metaWhere': {
