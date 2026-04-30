@@ -156,53 +156,72 @@
   }
   .hcx__role-where { font-size: 14px; font-weight: 600; color: #F2EBDB; }
 
-  /* Single hero tease — un chiffre qui plante l'enjeu, glass-blurred, incrusted in the bg */
-  .hcx__tease {
+  /* KPI bento — 4 chiffres glass-blurred, incrustés dans la photo bg */
+  .hcx__kpis {
     grid-column: 1 / 2; grid-row: 3 / 4;
     align-self: end; justify-self: start;
-    display: inline-flex; flex-direction: column; gap: 4px;
-    margin-top: 36px; padding: 18px 26px 18px 22px;
-    max-width: 44ch; position: relative;
-    /* Glass surface — incrusté dans l'image bg, pas plaqué dessus */
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px; margin-top: 32px;
+    width: 100%; max-width: 760px;
+    border-radius: 10px; overflow: hidden;
+    /* Glass shell */
     background:
       linear-gradient(135deg,
         rgba(242,235,219,0.10) 0%,
         rgba(242,235,219,0.03) 40%,
         rgba(10,18,32,0.10) 100%);
-    border: 1px solid rgba(242,235,219,0.16);
-    border-top-color: rgba(242,235,219,0.24);
-    border-left: 2px solid #C76941;
-    border-radius: 0 8px 8px 0;
-    backdrop-filter: blur(22px) saturate(150%);
-    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    border: 1px solid rgba(242,235,219,0.18);
+    border-top-color: rgba(242,235,219,0.26);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
     box-shadow:
-      0 18px 50px rgba(0,0,0,0.40),
-      0 1px 0 rgba(242,235,219,0.06) inset;
-    overflow: hidden;
+      0 18px 50px rgba(0,0,0,0.45),
+      0 1px 0 rgba(242,235,219,0.08) inset;
+    position: relative;
   }
-  /* Subtle diagonal sheen on the glass surface */
-  .hcx__tease::before {
+  /* Diagonal sheen overlay on the bento shell */
+  .hcx__kpis::before {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background: linear-gradient(120deg,
-      transparent 35%, rgba(242,235,219,0.08) 50%, transparent 65%);
-    opacity: .45; mix-blend-mode: overlay;
-    border-radius: inherit;
+      transparent 32%, rgba(242,235,219,0.07) 50%, transparent 68%);
+    opacity: .55; mix-blend-mode: overlay;
+    border-radius: inherit; z-index: 0;
   }
-  .hcx__tease-num {
+  .hcx__kpi {
     position: relative; z-index: 1;
+    background: rgba(10,18,32,0.30);
+    padding: 18px 18px 16px;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: background .35s ease;
+  }
+  .hcx__kpi:hover { background: rgba(10,18,32,0.45); }
+  .hcx__kpi-num {
     font-family: "Manrope", sans-serif;
-    font-weight: 200; font-size: clamp(48px, 6vw, 84px);
+    font-weight: 200; font-size: clamp(28px, 3.2vw, 44px);
     line-height: 0.95; letter-spacing: -.04em;
-    color: #C76941;
+    color: rgba(242,235,219,0.92);
     text-shadow: 0 2px 18px rgba(10,18,32,0.40);
   }
-  .hcx__tease-unit { font-size: 0.55em; font-weight: 200; margin-left: 2px; }
-  .hcx__tease-lab {
-    position: relative; z-index: 1;
+  .hcx__kpi-unit { font-size: 0.55em; font-weight: 200; margin-left: 1px; }
+  .hcx__kpi-sep { font-size: 0.7em; opacity: .65; margin: 0 1px; font-weight: 200; }
+  .hcx__kpi-frac { font-size: 0.55em; opacity: .55; font-weight: 300; }
+  /* Cells 1 (asymétrie issuer) + 2 (VP +15-25%) get accent — strategic stakes */
+  .hcx__kpi:nth-child(1) .hcx__kpi-num,
+  .hcx__kpi:nth-child(2) .hcx__kpi-num { color: #C76941; font-weight: 700; }
+  .hcx__kpi:nth-child(2) .hcx__kpi-num { font-size: clamp(24px, 2.8vw, 38px); }
+  /* Cell 3 — climax tease (1/6 promesse) — accent ambre + soft inner glow */
+  .hcx__kpi--accent .hcx__kpi-num { color: #C76941; font-weight: 700; }
+  .hcx__kpi--accent::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at 50% 100%,
+      rgba(199,105,65,0.16) 0%, transparent 60%);
+    opacity: .65;
+  }
+  .hcx__kpi-lab {
     font-family: "Manrope", sans-serif;
-    font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
-    color: rgba(242,235,219,0.72);
-    margin-top: 4px;
+    font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+    color: rgba(242,235,219,0.62);
+    line-height: 1.45;
   }
 
   /* Legacy bento styles — neutralised since bento was retired in the cleanup pass */
@@ -325,7 +344,7 @@
     .hcx__period { grid-column: 1 / 2; grid-row: 1 / 2; justify-self: start; text-align: left; margin-top: 12px; }
     .hcx__client { padding-bottom: 12px; }
     .hcx__head { grid-column: 1; grid-row: 2; max-width: 100%; padding-right: 0; }
-    .hcx__tease { margin-top: 28px; max-width: 100%; }
+    .hcx__kpis { grid-template-columns: 1fr 1fr; max-width: 100%; }
     .hcx__h1 { font-size: clamp(52px, 9.5vw, 100px); }
   }
   @media (max-width: 768px) {
@@ -1126,10 +1145,20 @@
         <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">6 mois · cadrage stratégique upstream</span>
       </div>
     </div>
-    <!-- Single tease line — un seul chiffre qui plante l'enjeu, pas le résultat -->
-    <div class="hcx__tease" aria-label="Asymétrie issuer">
-      <span class="hcx__tease-num">30<span class="hcx__tease-unit">%</span></span>
-      <span class="hcx__tease-lab" data-i18n="bnp.hero.teaseLab">des flux carte conso vus par BNP · jamais traduits en valeur PME</span>
+    <!-- KPI bento — 3 facts, glass-blurred, narrative arc enjeu → promesse → climax -->
+    <div class="hcx__kpis" role="group" aria-label="Trois chiffres pour planter l'enjeu">
+      <div class="hcx__kpi">
+        <span class="hcx__kpi-num">30<span class="hcx__kpi-unit">%</span></span>
+        <span class="hcx__kpi-lab" data-i18n="bnp.hero.kpi1">flux carte vus<br>jamais traduits en valeur PME</span>
+      </div>
+      <div class="hcx__kpi">
+        <span class="hcx__kpi-num">+15<span class="hcx__kpi-sep">–</span>25<span class="hcx__kpi-unit">%</span></span>
+        <span class="hcx__kpi-lab" data-i18n="bnp.hero.kpi2">CA promis aux PME<br>via 4 rapports business</span>
+      </div>
+      <div class="hcx__kpi hcx__kpi--accent">
+        <span class="hcx__kpi-num">1<span class="hcx__kpi-frac">/6</span></span>
+        <span class="hcx__kpi-lab" data-i18n="bnp.hero.kpi4">promesse d'achat ferme<br>0 refus chez les autres</span>
+      </div>
     </div>
   </div>
   <div class="hcx__scroll">

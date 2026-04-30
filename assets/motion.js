@@ -273,7 +273,8 @@
     const hcxHl2     = hcxSection.querySelector('.hcx__hl2');
     const hcxLead    = hcxSection.querySelector('.hcx__lead');
     const hcxRole    = hcxSection.querySelector('.hcx__role');
-    const hcxTease   = hcxSection.querySelector('.hcx__tease');
+    const hcxKpis    = hcxSection.querySelector('.hcx__kpis');
+    const hcxKpiCells = hcxSection.querySelectorAll('.hcx__kpi');
     const hcxScroll  = hcxSection.querySelector('.hcx__scroll');
 
     /* Set all elements invisible before curtain rises — synchronous, no flash */
@@ -285,7 +286,8 @@
     if (hcxHl2)     gsap.set(hcxHl2,     { opacity: 0, y: 48 });
     if (hcxLead)    gsap.set(hcxLead,    { opacity: 0, y: 20 });
     if (hcxRole)    gsap.set(hcxRole,    { opacity: 0, y: 18 });
-    if (hcxTease)   gsap.set(hcxTease,   { opacity: 0, y: 26, filter: 'blur(8px)', visibility: 'hidden' });
+    if (hcxKpis)    gsap.set(hcxKpis,    { opacity: 0, y: 26, filter: 'blur(8px)', visibility: 'hidden' });
+    if (hcxKpiCells.length) gsap.set(hcxKpiCells, { opacity: 0, y: 14 });
     if (hcxScroll)  gsap.set(hcxScroll,  { opacity: 0, y: 10 });
 
     const hcxTl = gsap.timeline({ delay: 0.25 });
@@ -319,24 +321,31 @@
     /* t=2.2 — Role. Authority signal : freelance, upstream, 6 months. */
     if (hcxRole)    hcxTl.to(hcxRole,    { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 2.20);
 
-    /* t=2.7 — Single tease line. Glass surface materialises out of the bg :
-       blur clears, opacity rises, slight upward float. The number scales-in subtle. */
-    if (hcxTease) {
-      hcxTl.set(hcxTease, { visibility: 'visible' }, 2.65);
-      hcxTl.to(hcxTease, {
+    /* t=2.65 — KPI bento : glass shell materialises from the bg first
+       (blur clears, opacity rises), then the 4 cells cascade in narrative order
+       S asymétrie · T VP · A research · R climax tease. */
+    if (hcxKpis) {
+      hcxTl.set(hcxKpis, { visibility: 'visible' }, 2.60);
+      hcxTl.to(hcxKpis, {
         opacity: 1, y: 0, filter: 'blur(0px)',
-        duration: 1.10, ease: 'power3.out',
-      }, 2.70);
-      const teaseNum = hcxTease.querySelector('.hcx__tease-num');
-      if (teaseNum) {
-        hcxTl.fromTo(teaseNum, { scale: 0.94 }, { scale: 1, duration: 0.95, ease: 'back.out(1.3)' }, 2.75);
+        duration: 1.05, ease: 'power3.out',
+      }, 2.65);
+    }
+    if (hcxKpiCells.length) {
+      hcxTl.to(hcxKpiCells, {
+        opacity: 1, y: 0, duration: 0.55, ease: 'power3.out', stagger: 0.13,
+      }, 3.05);
+      /* Accent pulse on cell 3 (1/6 climax tease) — last and strongest */
+      const cellAccent = hcxKpiCells[2] && hcxKpiCells[2].querySelector('.hcx__kpi-num');
+      if (cellAccent) {
+        hcxTl.fromTo(cellAccent, { scale: 1 }, { scale: 1.10, duration: 0.24, ease: 'power3.out', yoyo: true, repeat: 1 }, 3.55);
       }
     }
 
-    /* ── PAUSE 500ms : the stake lands ── */
+    /* ── PAUSE 200ms : the bento lands ── */
 
-    /* t=3.6 — Scroll cue last. The invitation. */
-    if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.60);
+    /* t=3.95 — Scroll cue last. The invitation. */
+    if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.95);
 
     /* ── Scroll parallax : BG image drifts slower than content */
     if (hcxBg) {
