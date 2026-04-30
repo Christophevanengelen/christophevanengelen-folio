@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=star11">
+<link rel="stylesheet" href="assets/style.css?v=star12">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -1191,95 +1191,143 @@
   </div>
 </section>
 
-<!-- ROADMAP PROPOSED — entre Hero et Chapter S, plante le décor du STAR
-     Vue d'ensemble du parcours méthodologique : ce que j'ai proposé une fois
-     le contexte BNP compris. De l'opportunité au signal de marché. -->
-<section id="proposed-roadmap" aria-label="Roadmap proposée — vue d'ensemble du parcours méthodologique">
+<!-- ROADMAP PROPOSED — Double Diamond + demi-diamants + 4 phases avec deliverables BNP
+     Inspiré pattern Design Thinking + Agile : OBSERVE/DEFINE | IDEATE/PROTOTYPE & TEST,
+     marqueurs Intake → Value Proposition → Concept Report → Sprints. -->
+<section id="proposed-roadmap" aria-label="Roadmap proposée — Double Diamond, deliverables BNP, MVP prioritisé en stories">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.proposed.eyebrow">La roadmap proposée</span>
     <h2 class="proposed-title" data-i18n-html="bnp.proposed.title">Comment j'ai cadré <span class="accent">les six mois.</span></h2>
-    <p class="lead proposed-lead" data-i18n="bnp.proposed.lead">De l'opportunité au signal de marché — un parcours méthodologique en quatre actes, du Design Thinking au prototype piloté en condition réelle.</p>
+    <p class="lead proposed-lead" data-i18n="bnp.proposed.lead">Double Diamond posé sur le projet. À chaque demi-diamant, un atelier et un livrable. À la sortie, un MVP prioritisé en user stories, prêt pour les sprints agiles.</p>
 
-    <!-- Bandes méthodologie (top) -->
-    <div class="proposed-bands">
-      <div class="proposed-band proposed-band--dt" data-i18n="bnp.proposed.bandDt">Design Thinking</div>
-      <div class="proposed-band proposed-band--del" data-i18n="bnp.proposed.bandDel">Prototype &amp; Pilote</div>
+    <!-- Bandes top : Strategic frame + Market & user research -->
+    <div class="proposed-bands proposed-bands--top">
+      <div class="proposed-band proposed-band--strat" data-i18n="bnp.proposed.bandStrat">Strategic digital guidelines &amp; frameworks</div>
+      <div class="proposed-band proposed-band--research" data-i18n="bnp.proposed.bandResearch">Market &amp; user research</div>
     </div>
 
-    <!-- Sub-bandes STAR -->
-    <div class="proposed-acts">
-      <a href="#chap-s" class="proposed-act proposed-act--s">
-        <span class="proposed-act__letter">S</span>
-        <span class="proposed-act__name" data-i18n="bnp.proposed.s">Situation</span>
-        <span class="proposed-act__sub" data-i18n="bnp.proposed.sSub">Insights · terrain</span>
-      </a>
-      <a href="#chap-t" class="proposed-act proposed-act--t">
-        <span class="proposed-act__letter">T</span>
-        <span class="proposed-act__name" data-i18n="bnp.proposed.t">Task</span>
-        <span class="proposed-act__sub" data-i18n="bnp.proposed.tSub">Reframe · value proposition</span>
-      </a>
-      <a href="#chap-a" class="proposed-act proposed-act--a">
-        <span class="proposed-act__letter">A</span>
-        <span class="proposed-act__name" data-i18n="bnp.proposed.a">Action</span>
-        <span class="proposed-act__sub" data-i18n="bnp.proposed.aSub">Co-création · prototype</span>
-      </a>
-      <a href="#chap-r" class="proposed-act proposed-act--r">
-        <span class="proposed-act__letter">R</span>
-        <span class="proposed-act__name" data-i18n="bnp.proposed.r">Result</span>
-        <span class="proposed-act__sub" data-i18n="bnp.proposed.rSub">Pilote · signal de marché</span>
-      </a>
-    </div>
+    <!-- Diagramme SVG : Double Diamond avec demi-diamants visibles + marqueurs -->
+    <svg class="proposed-svg" viewBox="0 0 1240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="proposed-svg-title">
+      <title id="proposed-svg-title">Double Diamond Design Thinking : Observe/Define puis Ideate/Prototype, marqué par Intake, Value Proposition, Concept Report, sprints agiles</title>
+      <defs>
+        <marker id="prp-arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 8 4 L 0 8 z" fill="currentColor"/>
+        </marker>
+      </defs>
 
-    <!-- Diagramme SVG : diamonds + funnels mappés sur STAR -->
-    <svg class="proposed-svg" viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="proposed-svg-title">
-      <title id="proposed-svg-title">Diagramme méthodologique : opportunité, double diamant Design Thinking, prototype, pilote, signal</title>
-      <!-- S · Opportunité (cercle) -->
-      <circle cx="60" cy="110" r="34" fill="none" stroke="currentColor" stroke-width="1.5" class="prp-shape prp-shape--s"/>
-      <text x="60" y="115" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" letter-spacing="1" fill="currentColor">BRIEF</text>
+      <!-- INTAKE marqueur -->
+      <rect x="40" y="115" width="14" height="14" fill="currentColor" transform="rotate(45 47 122)"/>
+      <text x="47" y="170" text-anchor="middle" font-family="Manrope" font-size="10" font-weight="700" letter-spacing="1.5" fill="currentColor">INTAKE</text>
 
-      <!-- S · Discovery diamond -->
-      <polygon points="160,110 270,40 380,110 270,180" fill="none" stroke="currentColor" stroke-width="1.5" class="prp-shape prp-shape--s"/>
-      <text x="270" y="106" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">DISCOVERY</text>
-      <text x="270" y="122" text-anchor="middle" font-family="Manrope" font-size="9" font-style="italic" fill="currentColor" opacity="0.7">6 PME · interviews</text>
+      <!-- DIAMOND 1 : Observe & Understand (diverge) | Define (converge) -->
+      <polygon points="100,120 280,30 280,210" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5,4"/>
+      <polygon points="280,30 460,120 280,210" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5,4"/>
+      <line x1="280" y1="30" x2="280" y2="210" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.5"/>
+      <text x="190" y="118" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">OBSERVE &amp;</text>
+      <text x="190" y="132" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">UNDERSTAND</text>
+      <text x="370" y="125" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">DEFINE</text>
 
-      <!-- T · Reframe + VP diamond -->
-      <polygon points="430,110 540,40 650,110 540,180" fill="none" stroke="currentColor" stroke-width="1.5" class="prp-shape prp-shape--t"/>
-      <text x="540" y="106" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">REFRAME</text>
-      <text x="540" y="122" text-anchor="middle" font-family="Manrope" font-size="9" font-style="italic" fill="currentColor" opacity="0.7">Lean Canvas · VP</text>
+      <!-- VALUE PROPOSITION marqueur -->
+      <rect x="495" y="115" width="14" height="14" fill="currentColor" transform="rotate(45 502 122)"/>
+      <text x="502" y="170" text-anchor="middle" font-family="Manrope" font-size="10" font-weight="700" letter-spacing="1" fill="currentColor">VALUE</text>
+      <text x="502" y="183" text-anchor="middle" font-family="Manrope" font-size="10" font-weight="700" letter-spacing="1" fill="currentColor">PROPOSITION</text>
 
-      <!-- A · Co-création / prototype funnel -->
-      <polygon points="700,80 700,140 870,180 870,40" fill="none" stroke="currentColor" stroke-width="1.5" class="prp-shape prp-shape--a"/>
-      <text x="785" y="106" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">PROTOTYPE</text>
-      <text x="785" y="122" text-anchor="middle" font-family="Manrope" font-size="9" font-style="italic" fill="currentColor" opacity="0.7">Spotfire · service blueprint</text>
+      <!-- DIAMOND 2 : Ideate (diverge) | Prototype & Test (converge) -->
+      <polygon points="555,120 735,30 735,210" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5,4"/>
+      <polygon points="735,30 915,120 735,210" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5,4"/>
+      <line x1="735" y1="30" x2="735" y2="210" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.5"/>
+      <text x="645" y="125" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">IDEATE</text>
+      <text x="825" y="118" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">PROTOTYPE</text>
+      <text x="825" y="132" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">&amp; TEST</text>
 
-      <!-- R · Pilote (cercle) -->
-      <circle cx="950" cy="110" r="34" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="2" class="prp-shape prp-shape--r"/>
-      <text x="950" y="115" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" letter-spacing="1" fill="currentColor">PILOTE</text>
+      <!-- CONCEPT REPORT marqueur -->
+      <rect x="950" y="115" width="14" height="14" fill="currentColor" transform="rotate(45 957 122)"/>
+      <text x="957" y="170" text-anchor="middle" font-family="Manrope" font-size="10" font-weight="700" letter-spacing="1" fill="currentColor">CONCEPT</text>
+      <text x="957" y="183" text-anchor="middle" font-family="Manrope" font-size="10" font-weight="700" letter-spacing="1" fill="currentColor">REPORT</text>
 
-      <!-- R · Signal cone (élargi vers la sortie) -->
-      <polygon points="1000,80 1000,140 1180,180 1180,40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6,4" class="prp-shape prp-shape--r"/>
-      <text x="1090" y="106" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="currentColor">SIGNAL</text>
-      <text x="1090" y="122" text-anchor="middle" font-family="Manrope" font-size="9" font-style="italic" fill="currentColor" opacity="0.7">Léonidas · sponsor go</text>
-
-      <!-- Connexion line entre les 4 actes -->
-      <line x1="94" y1="110" x2="160" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
-      <line x1="380" y1="110" x2="430" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
-      <line x1="650" y1="110" x2="700" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
-      <line x1="870" y1="110" x2="916" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
-      <line x1="984" y1="110" x2="1000" y2="110" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+      <!-- 4 cercles itération sprints (agile loop) -->
+      <g class="prp-sprints">
+        <circle cx="1010" cy="122" r="22" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M 1010 100 A 22 22 0 0 1 1032 122" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#prp-arrow)"/>
+        <circle cx="1066" cy="122" r="22" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M 1066 100 A 22 22 0 0 1 1088 122" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#prp-arrow)"/>
+        <circle cx="1122" cy="122" r="22" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M 1122 100 A 22 22 0 0 1 1144 122" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#prp-arrow)"/>
+        <circle cx="1178" cy="122" r="22" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M 1178 100 A 22 22 0 0 1 1200 122" stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#prp-arrow)"/>
+      </g>
+      <text x="1094" y="178" text-anchor="middle" font-family="Manrope" font-size="10" font-weight="700" letter-spacing="1.5" fill="currentColor">SPRINTS · AGILE</text>
     </svg>
 
-    <!-- Timeline horizontale ambre — milestones key dates -->
-    <ol class="proposed-timeline" role="list">
-      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m1.when">Q3 2017</span><span class="prp-what" data-i18n="bnp.proposed.m1.what">Brief reçu</span></li>
-      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m2.when">Oct 2017</span><span class="prp-what" data-i18n="bnp.proposed.m2.what">6 PME interviewées</span></li>
-      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m3.when">Nov 2017</span><span class="prp-what" data-i18n="bnp.proposed.m3.what">Lean Canvas signé</span></li>
-      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m4.when">Q1 2018</span><span class="prp-what" data-i18n="bnp.proposed.m4.what">Service blueprint · prototype Spotfire</span></li>
-      <li class="prp-milestone prp-milestone--accent"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m5.when">Mars 2018</span><span class="prp-what" data-i18n="bnp.proposed.m5.what">Léonidas pré-signe</span></li>
-      <li class="prp-milestone"><span class="prp-dot"></span><span class="prp-when" data-i18n="bnp.proposed.m6.when">Q2 2018</span><span class="prp-what" data-i18n="bnp.proposed.m6.what">Sponsor go production</span></li>
-    </ol>
+    <!-- Bandes bottom : Concept Design + UX & UI Design -->
+    <div class="proposed-bands proposed-bands--bottom">
+      <div class="proposed-band proposed-band--concept" data-i18n="bnp.proposed.bandConcept">Concept design</div>
+      <div class="proposed-band proposed-band--ux" data-i18n="bnp.proposed.bandUx">UX &amp; UI design</div>
+    </div>
 
-    <p class="proposed-cap" data-i18n="bnp.proposed.cap">Voici l'arc complet. Chaque acte qui suit montre ce qui s'est joué — les insights, la décision, la création, le pilote, le signal.</p>
+    <!-- Étiquettes timeline : Idea to Maturity / Inception / Agile Project -->
+    <div class="proposed-phases">
+      <span class="proposed-phase proposed-phase--idea" data-i18n="bnp.proposed.phaseIdea">Idea to maturity</span>
+      <span class="proposed-phase proposed-phase--inception" data-i18n="bnp.proposed.phaseInception">Inception</span>
+      <span class="proposed-phase proposed-phase--agile" data-i18n="bnp.proposed.phaseAgile">Agile project</span>
+    </div>
+
+    <!-- 4 colonnes deliverables BNP — chaque demi-diamant produit ses ateliers -->
+    <div class="proposed-deliverables" aria-label="Ateliers et livrables par phase Design Thinking">
+      <div class="proposed-col">
+        <div class="proposed-col__head">
+          <span class="proposed-col__step">01</span>
+          <h3 class="proposed-col__title" data-i18n="bnp.proposed.colResearch">Research</h3>
+        </div>
+        <ul class="proposed-col__list">
+          <li data-i18n="bnp.proposed.researchLi1">6 interviews PME terrain</li>
+          <li data-i18n="bnp.proposed.researchLi2">Benchmark concurrents (Barclays, Proximus, BBVA)</li>
+          <li data-i18n="bnp.proposed.researchLi3">Analyse marché B2B + segments</li>
+          <li data-i18n="bnp.proposed.researchLi4">9 personas B2B livrés</li>
+        </ul>
+      </div>
+      <span class="proposed-col__sep" aria-hidden="true">›</span>
+      <div class="proposed-col">
+        <div class="proposed-col__head">
+          <span class="proposed-col__step">02</span>
+          <h3 class="proposed-col__title" data-i18n="bnp.proposed.colAnalyse">Analyse</h3>
+        </div>
+        <ul class="proposed-col__list">
+          <li data-i18n="bnp.proposed.analyseLi1">6 Key Barriers identifiées</li>
+          <li data-i18n="bnp.proposed.analyseLi2">AS-IS journey · 15 étapes onboarding</li>
+          <li data-i18n="bnp.proposed.analyseLi3">Could-Be journey + GAP analyse</li>
+          <li data-i18n="bnp.proposed.analyseLi4">Value Proposition Canvas + Lean Canvas</li>
+        </ul>
+      </div>
+      <span class="proposed-col__sep" aria-hidden="true">›</span>
+      <div class="proposed-col">
+        <div class="proposed-col__head">
+          <span class="proposed-col__step">03</span>
+          <h3 class="proposed-col__title" data-i18n="bnp.proposed.colPrototype">Prototype</h3>
+        </div>
+        <ul class="proposed-col__list">
+          <li data-i18n="bnp.proposed.prototypeLi1">Service blueprint · 5 journeys end-to-end</li>
+          <li data-i18n="bnp.proposed.prototypeLi2">Sprint design · 3 goals coachés</li>
+          <li data-i18n="bnp.proposed.prototypeLi3">Prototype Spotfire · POC dashboard</li>
+          <li data-i18n="bnp.proposed.prototypeLi4">User test 6 PME · validation hypothèses</li>
+        </ul>
+      </div>
+      <span class="proposed-col__sep" aria-hidden="true">›</span>
+      <div class="proposed-col proposed-col--accent">
+        <div class="proposed-col__head">
+          <span class="proposed-col__step">04</span>
+          <h3 class="proposed-col__title" data-i18n="bnp.proposed.colConcept">Concept</h3>
+        </div>
+        <ul class="proposed-col__list">
+          <li data-i18n="bnp.proposed.conceptLi1">Concept report · 4 goals + wireframes</li>
+          <li data-i18n="bnp.proposed.conceptLi2">User stories prioritisées · MVP scope</li>
+          <li data-i18n="bnp.proposed.conceptLi3">User flows + UX/UI directions</li>
+          <li data-i18n="bnp.proposed.conceptLi4">Decision pack pour sponsor exécutif</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="proposed-cap" data-i18n="bnp.proposed.cap">À la sortie : un MVP prioritisé en user stories, signé Banking · IT · Legal · Marketing, prêt pour les sprints agiles. Ce qui suit dans le case montre ce qui s'est joué à chaque étape.</p>
   </div>
 </section>
 
@@ -2047,7 +2095,7 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=star12"></script>
+<script src="assets/i18n.js?v=star13"></script>
 <script src="assets/theme.js?v=cinema"></script>
 <script src="assets/motion.js?v=star9"></script>
 <script src="assets/deck.js?v=deck1"></script>

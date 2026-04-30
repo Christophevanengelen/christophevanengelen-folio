@@ -199,32 +199,51 @@
       nl: 'Van de opportuniteit tot het marktsignaal — een methodologisch traject in vier akten, van Design Thinking tot een prototype gepiloot in reële omstandigheden.',
       en: 'From opportunity to market signal — a four-act methodological journey, from Design Thinking through to a prototype piloted under real conditions.'
     },
-    'bnp.proposed.bandDt': { fr: 'Design Thinking', nl: 'Design Thinking', en: 'Design Thinking' },
-    'bnp.proposed.bandDel': { fr: 'Prototype & Pilote', nl: 'Prototype & Pilot', en: 'Prototype & Pilot' },
-    'bnp.proposed.s': { fr: 'Situation', nl: 'Situatie', en: 'Situation' },
-    'bnp.proposed.t': { fr: 'Task', nl: 'Task', en: 'Task' },
-    'bnp.proposed.a': { fr: 'Action', nl: 'Action', en: 'Action' },
-    'bnp.proposed.r': { fr: 'Result', nl: 'Result', en: 'Result' },
-    'bnp.proposed.sSub': { fr: 'Insights · terrain', nl: 'Insights · terrein', en: 'Insights · ground truth' },
-    'bnp.proposed.tSub': { fr: 'Reframe · value proposition', nl: 'Reframe · value proposition', en: 'Reframe · value proposition' },
-    'bnp.proposed.aSub': { fr: 'Co-création · prototype', nl: 'Co-creatie · prototype', en: 'Co-creation · prototype' },
-    'bnp.proposed.rSub': { fr: 'Pilote · signal de marché', nl: 'Pilot · marktsignaal', en: 'Pilot · market signal' },
-    'bnp.proposed.m1.when': { fr: 'Q3 2017', nl: 'Q3 2017', en: 'Q3 2017' },
-    'bnp.proposed.m1.what': { fr: 'Brief reçu', nl: 'Briefing ontvangen', en: 'Brief received' },
-    'bnp.proposed.m2.when': { fr: 'Oct. 2017', nl: 'Okt. 2017', en: 'Oct 2017' },
-    'bnp.proposed.m2.what': { fr: '6 PME interviewées', nl: '6 kmo\'s geïnterviewd', en: '6 SMEs interviewed' },
-    'bnp.proposed.m3.when': { fr: 'Nov. 2017', nl: 'Nov. 2017', en: 'Nov 2017' },
-    'bnp.proposed.m3.what': { fr: 'Lean Canvas signé', nl: 'Lean Canvas getekend', en: 'Lean Canvas signed off' },
-    'bnp.proposed.m4.when': { fr: 'Q1 2018', nl: 'Q1 2018', en: 'Q1 2018' },
-    'bnp.proposed.m4.what': { fr: 'Service blueprint · prototype Spotfire', nl: 'Service blueprint · Spotfire-prototype', en: 'Service blueprint · Spotfire prototype' },
-    'bnp.proposed.m5.when': { fr: 'Mars 2018', nl: 'Maart 2018', en: 'March 2018' },
-    'bnp.proposed.m5.what': { fr: 'Léonidas pré-signe', nl: 'Léonidas tekent vooraf', en: 'Léonidas pre-signs' },
-    'bnp.proposed.m6.when': { fr: 'Q2 2018', nl: 'Q2 2018', en: 'Q2 2018' },
-    'bnp.proposed.m6.what': { fr: 'Sponsor go production', nl: 'Sponsor go productie', en: 'Sponsor go production' },
+    'bnp.proposed.bandStrat': {
+      fr: 'Strategic digital guidelines & frameworks',
+      nl: 'Strategic digital guidelines & frameworks',
+      en: 'Strategic digital guidelines & frameworks'
+    },
+    'bnp.proposed.bandResearch': {
+      fr: 'Market & user research',
+      nl: 'Market & user research',
+      en: 'Market & user research'
+    },
+    'bnp.proposed.bandConcept': { fr: 'Concept design', nl: 'Concept design', en: 'Concept design' },
+    'bnp.proposed.bandUx': { fr: 'UX & UI design', nl: 'UX & UI design', en: 'UX & UI design' },
+    'bnp.proposed.phaseIdea': { fr: 'Idea to maturity', nl: 'Idea to maturity', en: 'Idea to maturity' },
+    'bnp.proposed.phaseInception': { fr: 'Inception', nl: 'Inception', en: 'Inception' },
+    'bnp.proposed.phaseAgile': { fr: 'Agile project', nl: 'Agile project', en: 'Agile project' },
+
+    'bnp.proposed.colResearch': { fr: 'Research', nl: 'Research', en: 'Research' },
+    'bnp.proposed.colAnalyse': { fr: 'Analyse', nl: 'Analyse', en: 'Analyse' },
+    'bnp.proposed.colPrototype': { fr: 'Prototype', nl: 'Prototype', en: 'Prototype' },
+    'bnp.proposed.colConcept': { fr: 'Concept', nl: 'Concept', en: 'Concept' },
+
+    'bnp.proposed.researchLi1': { fr: '6 interviews PME terrain', nl: '6 kmo-interviews op het terrein', en: '6 SME field interviews' },
+    'bnp.proposed.researchLi2': { fr: 'Benchmark concurrents (Barclays, Proximus, BBVA)', nl: 'Concurrenten-benchmark (Barclays, Proximus, BBVA)', en: 'Competitors benchmark (Barclays, Proximus, BBVA)' },
+    'bnp.proposed.researchLi3': { fr: 'Analyse marché B2B + segments', nl: 'B2B-marktanalyse + segmenten', en: 'B2B market analysis + segments' },
+    'bnp.proposed.researchLi4': { fr: '9 personas B2B livrés', nl: '9 B2B-personas opgeleverd', en: '9 B2B personas delivered' },
+
+    'bnp.proposed.analyseLi1': { fr: '6 Key Barriers identifiées', nl: '6 Key Barriers geïdentificeerd', en: '6 Key Barriers surfaced' },
+    'bnp.proposed.analyseLi2': { fr: 'AS-IS journey · 15 étapes onboarding', nl: 'AS-IS journey · 15 onboarding-stappen', en: 'AS-IS journey · 15 onboarding steps' },
+    'bnp.proposed.analyseLi3': { fr: 'Could-Be journey + GAP analyse', nl: 'Could-Be journey + GAP-analyse', en: 'Could-Be journey + GAP analysis' },
+    'bnp.proposed.analyseLi4': { fr: 'Value Proposition Canvas + Lean Canvas', nl: 'Value Proposition Canvas + Lean Canvas', en: 'Value Proposition Canvas + Lean Canvas' },
+
+    'bnp.proposed.prototypeLi1': { fr: 'Service blueprint · 5 journeys end-to-end', nl: 'Service blueprint · 5 end-to-end journeys', en: 'Service blueprint · 5 end-to-end journeys' },
+    'bnp.proposed.prototypeLi2': { fr: 'Sprint design · 3 goals coachés', nl: 'Sprint design · 3 begeleide goals', en: 'Sprint design · 3 coached goals' },
+    'bnp.proposed.prototypeLi3': { fr: 'Prototype Spotfire · POC dashboard', nl: 'Spotfire-prototype · POC dashboard', en: 'Spotfire prototype · POC dashboard' },
+    'bnp.proposed.prototypeLi4': { fr: 'User test 6 PME · validation hypothèses', nl: 'User test 6 kmo\'s · hypotheses gevalideerd', en: 'User test 6 SMEs · hypotheses validated' },
+
+    'bnp.proposed.conceptLi1': { fr: 'Concept report · 4 goals + wireframes', nl: 'Concept report · 4 goals + wireframes', en: 'Concept report · 4 goals + wireframes' },
+    'bnp.proposed.conceptLi2': { fr: 'User stories prioritisées · MVP scope', nl: 'Geprioriteerde user stories · MVP-scope', en: 'Prioritised user stories · MVP scope' },
+    'bnp.proposed.conceptLi3': { fr: 'User flows + UX/UI directions', nl: 'User flows + UX/UI-richtingen', en: 'User flows + UX/UI directions' },
+    'bnp.proposed.conceptLi4': { fr: 'Decision pack pour sponsor exécutif', nl: 'Decision pack voor de executive sponsor', en: 'Decision pack for the executive sponsor' },
+
     'bnp.proposed.cap': {
-      fr: 'Voici l\'arc complet. Chaque acte qui suit montre ce qui s\'est joué — les insights, la décision, la création, le pilote, le signal.',
-      nl: 'Hier is het volledige verhaalbogen. Elke akte die volgt toont wat er gespeeld werd — de insights, de beslissing, de creatie, de pilot, het signaal.',
-      en: 'Here is the full arc. Each act that follows shows what played out — the insights, the decision, the creation, the pilot, the signal.'
+      fr: 'À la sortie : un MVP prioritisé en user stories, signé Banking · IT · Legal · Marketing, prêt pour les sprints agiles. Ce qui suit dans le case montre ce qui s\'est joué à chaque étape.',
+      nl: 'Aan de uitgang : een MVP geprioriteerd in user stories, ondertekend door Banking · IT · Legal · Marketing, klaar voor de agile sprints. Wat volgt toont wat er bij elke stap gespeeld werd.',
+      en: 'Exit deliverable : an MVP prioritised in user stories, signed off by Banking · IT · Legal · Marketing, ready for agile sprints. What follows shows what played out at each step.'
     },
 
     /* STAR menu sticky guide — labels courts pour les 4 nodes */
