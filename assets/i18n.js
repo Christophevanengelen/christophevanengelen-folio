@@ -182,6 +182,76 @@
     },
     /* footer.copy already defined globally above (line 26) — single source of truth */
 
+    /* ============== RESEARCH subsections : Benchmark + Targeting + Personas ============== */
+    'bnp.research.benchEyebrow': { fr: 'Research · Benchmark', nl: 'Research · Benchmark', en: 'Research · Benchmark' },
+    'bnp.research.benchTitle': {
+      fr: 'Trois benchmarks <span class="accent">live.</span>',
+      nl: 'Drie <span class="accent">live</span> benchmarks.',
+      en: 'Three <span class="accent">live</span> benchmarks.'
+    },
+    'bnp.research.benchLead': {
+      fr: 'Qu\'est-ce qui marche ailleurs ? Trois acteurs étudiés. Trois signatures distinctes — chacun isolé sur son angle de force.',
+      nl: 'Wat werkt elders ? Drie spelers bestudeerd. Drie onderscheidende handtekeningen — elk gericht op hun sterkste hoek.',
+      en: 'What works elsewhere ? Three players studied. Three distinct signatures — each isolated on its angle of strength.'
+    },
+    'bnp.research.barclays1': { fr: 'Visual design très soigné', nl: 'Zeer aantrekkelijk visueel ontwerp', en: 'Very appealing visual design' },
+    'bnp.research.barclays2': { fr: 'Intégré aux outils de gestion small-business', nl: 'Geïntegreerd met small-business management software', en: 'Integrates with small-business management software' },
+    'bnp.research.barclays3': { fr: 'Modèle App Marketplace', nl: 'App Marketplace-model', en: 'App Marketplace model' },
+    'bnp.research.proximus1': { fr: 'Visual design très soigné', nl: 'Zeer aantrekkelijk visueel ontwerp', en: 'Very appealing visual design' },
+    'bnp.research.proximus2': { fr: 'Mouvement consommateur via géolocalisation', nl: 'Consumentenbeweging via geolocatie', en: 'Consumer movement via geolocation' },
+    'bnp.research.bbva1': { fr: 'API d\'accès aux données statistiques anonymisées via le POS provider', nl: 'API voor anonieme statistische data via de POS-provider', en: 'API to anonymous statistical data via POS provider' },
+    'bnp.research.benchSource': {
+      fr: 'Source · Ideation Report · pages 3-4 · 30 octobre 2017',
+      nl: 'Bron · Ideation Report · pagina\'s 3-4 · 30 oktober 2017',
+      en: 'Source · Ideation Report · pages 3-4 · October 30, 2017'
+    },
+
+    'bnp.research.targetEyebrow': { fr: 'Research · Targeting', nl: 'Research · Targeting', en: 'Research · Targeting' },
+    'bnp.research.targetTitle': {
+      fr: 'Qui est <span class="accent">vraiment</span> intéressé ?',
+      nl: 'Wie is <span class="accent">echt</span> geïnteresseerd ?',
+      en: 'Who is <span class="accent">really</span> interested ?'
+    },
+    'bnp.research.targetLead': {
+      fr: 'Quatre segments cartographiés sur leur appétit pour Enterprise Intelligence. Le KEY TARGET sort net : B2C avec plusieurs boutiques, peu de support data interne. Très intéressé.',
+      nl: 'Vier segmenten in kaart gebracht op hun appetijt voor Enterprise Intelligence. Het KEY TARGET komt scherp naar voren : B2C met meerdere winkels, weinig interne data-support. Zeer geïnteresseerd.',
+      en: 'Four segments mapped on their appetite for Enterprise Intelligence. The KEY TARGET comes out clean : B2C with several shops, little/no internal data support. Very interested.'
+    },
+    'bnp.research.segKey': { fr: 'Key target', nl: 'Key target', en: 'Key target' },
+    'bnp.research.segSecondary': { fr: 'Secondary', nl: 'Secondary', en: 'Secondary' },
+    'bnp.research.segThird': { fr: 'Third', nl: 'Third', en: 'Third' },
+    'bnp.research.segOut': { fr: 'Out of scope', nl: 'Out of scope', en: 'Out of scope' },
+    'bnp.research.seg1Name': { fr: 'B2C · plusieurs boutiques · peu/pas de support data', nl: 'B2C · meerdere winkels · weinig/geen data-support', en: 'B2C · several shops · little/no data support' },
+    'bnp.research.seg1Verdict': { fr: 'Très intéressé · à prendre en compte pour écrire le concept', nl: 'Zeer geïnteresseerd · meenemen om het concept te schrijven', en: 'Very interested · take into consideration to write the concept' },
+    'bnp.research.seg2Name': { fr: 'B2C · une seule boutique', nl: 'B2C · één winkel', en: 'B2C · single shop' },
+    'bnp.research.seg2Verdict': { fr: 'Peut être intrigué · capter l\'intérêt avec accompagnement', nl: 'Kan geïntrigeerd worden · interesse vangen met begeleiding', en: 'Can be intrigued · catch their interest with guidance' },
+    'bnp.research.seg3Name': { fr: 'B2C · plusieurs boutiques · support data fort', nl: 'B2C · meerdere winkels · sterke data-support', en: 'B2C · several shops · strong data support' },
+    'bnp.research.seg3Verdict': { fr: 'Pas intéressé · déjà couvert par leurs outils existants', nl: 'Niet geïnteresseerd · al gedekt door hun bestaande tools', en: 'Not interested · already covered by their existing tools' },
+    'bnp.research.seg4Name': { fr: 'Entreprises B2B', nl: 'B2B-bedrijven', en: 'B2B businesses' },
+    'bnp.research.seg4Verdict': { fr: 'Pas intéressé · les data de facturation couvrent déjà leurs besoins', nl: 'Niet geïnteresseerd · facturatiedata dekt hun behoeften al', en: 'Not interested · invoicing data already covers their needs' },
+    'bnp.research.targetSource': {
+      fr: 'Source · Ideation Report · pages 5-6 · « Levels of Interest »',
+      nl: 'Bron · Ideation Report · pagina\'s 5-6 · « Levels of Interest »',
+      en: 'Source · Ideation Report · pages 5-6 · "Levels of Interest"'
+    },
+
+    'bnp.research.persoEyebrow': { fr: 'Research · Personas', nl: 'Research · Personas', en: 'Research · Personas' },
+    'bnp.research.persoTitle': {
+      fr: 'Neuf personas B2B, <span class="accent">pas un de plus.</span>',
+      nl: 'Negen B2B-personas, <span class="accent">geen één meer.</span>',
+      en: 'Nine B2B personas, <span class="accent">not one more.</span>'
+    },
+    'bnp.research.persoLead': {
+      fr: 'Du Liberal Pro au Corporate Banking SME. Une bibliothèque construite sur les interviews + les matrices de segmentation, qui a survécu au projet et a servi à d\'autres initiatives BNP B2B.',
+      nl: 'Van Liberal Pro tot Corporate Banking SME. Een bibliotheek gebouwd op de interviews + segmentatiematrices, die het project overleefde en werd gebruikt door andere BNP B2B-initiatieven.',
+      en: 'From Liberal Pro to Corporate Banking SME. A library built on interviews + segmentation matrices, that outlived the project and was reused by other BNP B2B initiatives.'
+    },
+    'bnp.research.persoCap': {
+      fr: '9 personas B2B · provisional research-backed · Concept Report p34',
+      nl: '9 B2B-personas · provisional research-backed · Concept Report p34',
+      en: '9 B2B personas · provisional research-backed · Concept Report p34'
+    },
+
     /* ============== CHAPTERS — 4 phases Double Diamond (Research/Analyse/Prototype/Concept) ============== */
     'bnp.chapResearch.label': { fr: 'Phase 01 · Research', nl: 'Fase 01 · Research', en: 'Phase 01 · Research' },
     'bnp.chapResearch.title': { fr: 'Le terrain enseigne.', nl: 'Het terrein leert.', en: 'The ground teaches.' },
