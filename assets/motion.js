@@ -134,71 +134,82 @@
     });
   });
 
-  /* STAR menu progress bar : fill grows from 0 to 1 across the 4 acts.
-     Maps body[data-act] to a fraction : S=0.10, T=0.40, A=0.65, R=0.92.
-     Subtle, gives the user a 'where am I in the story' visual cue. */
-  const starMenuEl = document.querySelector('.star-menu');
-  if (starMenuEl) {
-    const progressMap = { S: 0.12, T: 0.40, A: 0.66, R: 0.92 };
-    const updateStarProgress = () => {
-      const act = document.body.dataset.act;
-      if (act && progressMap[act] != null) {
-        starMenuEl.style.setProperty('--star-progress', progressMap[act]);
+  /* STAR menu progress (legacy) — neutralisé puisque le STAR menu est remplacé
+     par .story-nav. Le data-act marker reste utile pour les CSS hooks act-level. */
+
+  /* STORY NAV sticky : marque-page de 12 jalons, accompagne le scroll.
+     Show après #proposed-roadmap (handoff naturel : la roadmap se réduit en nav).
+     Hide sur Fin Royale. Active state synchronisé via IntersectionObserver sur
+     les anchors des jalons. */
+  const storyNav = document.querySelector('.story-nav');
+  const proposedEl = document.querySelector('#proposed-roadmap');
+  if (storyNav && proposedEl) {
+    /* Show / hide */
+    ScrollTrigger.create({
+      trigger: proposedEl, start: 'bottom 70%',
+      onEnter:     () => storyNav.classList.add('is-visible'),
+      onLeaveBack: () => storyNav.classList.remove('is-visible'),
+    });
+    const finEl = document.querySelector('.fin-royale');
+    if (finEl) {
+      ScrollTrigger.create({
+        trigger: finEl, start: 'top 70%',
+        onEnter:     () => storyNav.classList.remove('is-visible'),
+        onLeaveBack: () => storyNav.classList.add('is-visible'),
+      });
+    }
+
+    /* Active state — IntersectionObserver sur les anchors des jalons.
+       Le jalon dont l'anchor est le plus proche du milieu du viewport = actif.
+       Les jalons précédents = .is-past (highlight subtil). */
+    const navNodes = Array.from(storyNav.querySelectorAll('.snm-node'));
+    const currentWhen = storyNav.querySelector('.snm-current-when');
+    const currentWhat = storyNav.querySelector('.snm-current-what');
+    let activeIdx = -1;
+
+    const updateActive = (idx) => {
+      if (idx === activeIdx) return;
+      activeIdx = idx;
+      navNodes.forEach((n, i) => {
+        n.classList.toggle('is-active', i === idx);
+        n.classList.toggle('is-past', i < idx);
+      });
+      const tip = navNodes[idx]?.querySelector('.snm-tip');
+      if (tip && currentWhen && currentWhat) {
+        currentWhen.textContent = tip.querySelector('strong')?.textContent || '';
+        currentWhat.textContent = tip.querySelector('span')?.textContent || '';
       }
     };
-    /* Watch for data-act changes via MutationObserver */
-    new MutationObserver(updateStarProgress)
-      .observe(document.body, { attributes: true, attributeFilter: ['data-act'] });
-    updateStarProgress();
+
+    /* Build a map of anchor → node index */
+    const anchorMap = new Map();
+    navNodes.forEach((n, i) => {
+      const sel = n.getAttribute('data-anchor');
+      if (sel) anchorMap.set(sel, i);
+    });
+    /* Watch each anchored target with ScrollTrigger */
+    anchorMap.forEach((idx, sel) => {
+      const target = document.querySelector(sel);
+      if (!target) return;
+      ScrollTrigger.create({
+        trigger: target, start: 'top 60%', end: 'bottom 40%',
+        onEnter:     () => updateActive(idx),
+        onEnterBack: () => updateActive(idx),
+      });
+    });
   }
 
-  /* Storyline timeline (#proposed-roadmap) : click on a jalon node to jump
-     to that anchor (smooth via Lenis if available). */
-  document.querySelectorAll('.psl-node[data-anchor]').forEach((node) => {
+  /* Click handler global sur n'importe quel [data-anchor] (story nav + storyline) */
+  document.querySelectorAll('[data-anchor]').forEach((node) => {
     node.addEventListener('click', (e) => {
       const sel = node.getAttribute('data-anchor');
       const target = sel && document.querySelector(sel);
       if (!target) return;
       e.preventDefault();
-      if (lenis) lenis.scrollTo(target, { offset: -80, duration: 1.2 });
+      if (lenis) lenis.scrollTo(target, { offset: -100, duration: 1.2 });
       else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-
-  /* STAR menu sticky guide : show after Hero, hide on Fin Royale.
-     Active state comes from body[data-act] CSS rules.
-     Bonus : when the user scrolls past the inline Roadmap (#roadmap, Act T), the
-     menu pulses once — visual handoff from "the proposition in 6 steps" (full
-     roadmap) to "the guide in 4 acts" (sticky menu). */
-  const starMenu = document.querySelector('.star-menu');
-  const heroEl = document.querySelector('.hcx');
-  if (starMenu && heroEl) {
-    ScrollTrigger.create({
-      trigger: heroEl, start: 'bottom 82%',
-      onEnter:     () => starMenu.classList.add('is-visible'),
-      onLeaveBack: () => starMenu.classList.remove('is-visible'),
-    });
-    /* Roadmap → menu handoff pulse (only first time, once: true) */
-    const roadmapEl = document.querySelector('#roadmap');
-    if (roadmapEl) {
-      ScrollTrigger.create({
-        trigger: roadmapEl, start: 'bottom 60%', once: true,
-        onEnter: () => {
-          starMenu.classList.add('is-handoff');
-          setTimeout(() => starMenu.classList.remove('is-handoff'), 1100);
-        },
-      });
-    }
-    /* Hide on Fin Royale (closing) — la lecture est finie, plus de menu */
-    const finEl = document.querySelector('.fin-royale');
-    if (finEl) {
-      ScrollTrigger.create({
-        trigger: finEl, start: 'top 70%',
-        onEnter:     () => starMenu.classList.remove('is-visible'),
-        onLeaveBack: () => starMenu.classList.add('is-visible'),
-      });
-    }
-  }
 
   /* ── Hero entrance: staggered headline reveal */
   const heroH1Lines = document.querySelectorAll('.hero-h1 .hl-line');

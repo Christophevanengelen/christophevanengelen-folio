@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=star13">
+<link rel="stylesheet" href="assets/style.css?v=story1">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -1123,27 +1123,26 @@
   </div>
 </nav>
 
-<!-- STAR menu — guide sticky qui suit le scroll, indicateur d'acte courant -->
-<nav class="star-menu" aria-label="Storytelling progress · STAR">
-  <a href="#chap-s" class="star-menu__node" data-act-target="S">
-    <span class="star-menu__letter">S</span>
-    <span class="star-menu__label" data-i18n="bnp.starMenu.s">Situation</span>
-  </a>
-  <span class="star-menu__sep" aria-hidden="true"></span>
-  <a href="#chap-t" class="star-menu__node" data-act-target="T">
-    <span class="star-menu__letter">T</span>
-    <span class="star-menu__label" data-i18n="bnp.starMenu.t">Proposition</span>
-  </a>
-  <span class="star-menu__sep" aria-hidden="true"></span>
-  <a href="#chap-a" class="star-menu__node" data-act-target="A">
-    <span class="star-menu__letter">A</span>
-    <span class="star-menu__label" data-i18n="bnp.starMenu.a">Démarche</span>
-  </a>
-  <span class="star-menu__sep" aria-hidden="true"></span>
-  <a href="#chap-r" class="star-menu__node" data-act-target="R">
-    <span class="star-menu__letter">R</span>
-    <span class="star-menu__label" data-i18n="bnp.starMenu.r">Résultat</span>
-  </a>
+<!-- STORY NAV — timeline sticky compacte, 12 jalons, marque-page narratif -->
+<nav class="story-nav" aria-label="Fil conducteur · 12 jalons sur 6 mois">
+  <ol class="story-nav__line" role="list">
+    <li class="snm-node" data-anchor="#chap-s" data-phase="research"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j1.when">Q3 2017</strong><br><span data-i18n="bnp.psl.j1.what">Brief reçu</span></span></li>
+    <li class="snm-node" data-anchor="#brief" data-phase="research"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j2.when">Sept. 2017</strong><br><span data-i18n="bnp.psl.j2.what">Catalyseur · marketing appelle</span></span></li>
+    <li class="snm-node" data-anchor="#problem" data-phase="research"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j3.when">Oct. 2017</strong><br><span data-i18n="bnp.psl.j3.what">6 PME interviewées · 6 Key Barriers</span></span></li>
+    <li class="snm-node" data-anchor="#barriers" data-phase="research"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j4.when">Oct. 2017</strong><br><span data-i18n="bnp.psl.j4.what">9 personas B2B livrés</span></span></li>
+    <li class="snm-node" data-anchor="#chap-t" data-phase="analyse"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j5.when">30 oct. 2017</strong><br><span data-i18n="bnp.psl.j5.what">Lean Canvas signé · Triple Win</span></span></li>
+    <li class="snm-node" data-anchor="#roadmap" data-phase="analyse"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j6.when">Nov. 2017</strong><br><span data-i18n="bnp.psl.j6.what">VP +15-25 % CA · 4 rapports</span></span></li>
+    <li class="snm-node" data-anchor="#chap-a" data-phase="prototype"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j7.when">Déc. 2017</strong><br><span data-i18n="bnp.psl.j7.what">Service blueprint · 5 journeys</span></span></li>
+    <li class="snm-node" data-anchor="#steps" data-phase="prototype"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j8.when">Janv. 2018</strong><br><span data-i18n="bnp.psl.j8.what">47→7 indicateurs · sprint design</span></span></li>
+    <li class="snm-node" data-anchor="#steps" data-phase="prototype"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j9.when">Févr. 2018</strong><br><span data-i18n="bnp.psl.j9.what">Prototype Spotfire · POC dashboard</span></span></li>
+    <li class="snm-node snm-node--accent" data-anchor="#chap-r" data-phase="concept"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j10.when">Mars 2018</strong><br><span data-i18n="bnp.psl.j10.what">6 testées · 1 promesse · 0 refus</span></span></li>
+    <li class="snm-node" data-anchor="#result" data-phase="concept"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j11.when">Mars 2018</strong><br><span data-i18n="bnp.psl.j11.what">Concept Report · decision pack</span></span></li>
+    <li class="snm-node" data-anchor="#alignment" data-phase="concept"><span class="snm-dot"></span><span class="snm-tip"><strong data-i18n="bnp.psl.j12.when">Q2 2018</strong><br><span data-i18n="bnp.psl.j12.what">Sponsor go production</span></span></li>
+  </ol>
+  <div class="story-nav__current" aria-live="polite">
+    <span class="snm-current-when"></span>
+    <span class="snm-current-what"></span>
+  </div>
 </nav>
 
 <!-- HERO 2026 — Bento cinematic (Apple/Notion/Linear pattern) -->
@@ -2164,9 +2163,9 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=star14"></script>
+<script src="assets/i18n.js?v=story1"></script>
 <script src="assets/theme.js?v=cinema"></script>
-<script src="assets/motion.js?v=star10"></script>
+<script src="assets/motion.js?v=story1"></script>
 <script src="assets/deck.js?v=deck1"></script>
 <script src="assets/scroll-narrative.js?v=fielded"></script>
 </body>
