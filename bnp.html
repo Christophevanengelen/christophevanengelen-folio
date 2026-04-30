@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=star4">
+<link rel="stylesheet" href="assets/style.css?v=star5">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -57,19 +57,19 @@
   .hcx__veil {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background:
-      /* Vertical : blend out at bottom to var(--bg), no hard edge into next section */
-      linear-gradient(180deg, rgba(10,18,32,0.40) 0%, rgba(10,18,32,0.08) 28%, rgba(10,18,32,0.78) 72%, var(--bg) 100%),
+      /* Vertical : softer bottom darkening so content stays readable, no hard cliff */
+      linear-gradient(180deg, rgba(10,18,32,0.40) 0%, rgba(10,18,32,0.10) 30%, rgba(10,18,32,0.55) 80%, rgba(10,18,32,0.85) 100%),
       /* Horizontal : keep readable left side, image breathes on the right */
-      linear-gradient(90deg, rgba(10,18,32,0.88) 0%, rgba(10,18,32,0.28) 50%, rgba(10,18,32,0.04) 100%),
-      radial-gradient(ellipse at 22% 78%, rgba(10,18,32,0.55) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 78%, rgba(10,18,32,0.30) 0%, transparent 55%),
+      linear-gradient(90deg, rgba(10,18,32,0.85) 0%, rgba(10,18,32,0.25) 50%, rgba(10,18,32,0.04) 100%),
+      radial-gradient(ellipse at 22% 78%, rgba(10,18,32,0.50) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 78%, rgba(10,18,32,0.28) 0%, transparent 55%),
       radial-gradient(ellipse at 80% 0%, rgba(199,105,65,0.16) 0%, transparent 55%);
   }
-  /* Soft fade-to-bg ribbon at the very bottom — guarantees blend regardless of theme */
+  /* Soft fade-to-bg ribbon at the very bottom — minimal, behind content (z-index 2 < grid 3) */
   .hcx::after {
-    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22%;
-    background: linear-gradient(180deg, transparent 0%, var(--bg) 92%);
-    z-index: 3; pointer-events: none;
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 8%;
+    background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+    z-index: 2; pointer-events: none;
   }
   .hcx__grain {
     position: absolute; inset: 0; z-index: 2; pointer-events: none;
@@ -153,9 +153,13 @@
   }
   .hcx__role-label {
     font-size: 10px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase;
-    color: rgba(242,235,219,0.55);
+    color: rgba(242,235,219,0.78);
+    text-shadow: 0 1px 8px rgba(10,18,32,0.65);
   }
-  .hcx__role-where { font-size: 14px; font-weight: 600; color: #F2EBDB; }
+  .hcx__role-where {
+    font-size: 14px; font-weight: 600; color: #F2EBDB;
+    text-shadow: 0 1px 10px rgba(10,18,32,0.65);
+  }
 
   /* KPI bento — 2 facts, à DROITE, stack vertical, compact, vraiment incrusté */
   .hcx__kpis {
@@ -1953,9 +1957,9 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=star4"></script>
+<script src="assets/i18n.js?v=star5"></script>
 <script src="assets/theme.js?v=cinema"></script>
-<script src="assets/motion.js?v=star4"></script>
+<script src="assets/motion.js?v=star5"></script>
 <script src="assets/deck.js?v=deck1"></script>
 <script src="assets/scroll-narrative.js?v=fielded"></script>
 </body>
