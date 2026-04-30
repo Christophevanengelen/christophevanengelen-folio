@@ -324,6 +324,92 @@
       en: 'Source · Ideation Report · p12 (VPC) + p16 (Lean Canvas)'
     },
 
+    /* ============== PROTOTYPE subsections : Vision + 4 axes + Spotfire POC ============== */
+    'bnp.prototype.visionEyebrow': { fr: 'Prototype · Channel vision', nl: 'Prototype · Channel vision', en: 'Prototype · Channel vision' },
+    'bnp.prototype.visionTitle': {
+      fr: 'Du transactionnel <span class="accent">à l\'insightful.</span>',
+      nl: 'Van transactioneel <span class="accent">naar insightful.</span>',
+      en: 'From transactional <span class="accent">to insightful.</span>'
+    },
+    'bnp.prototype.visionLead': {
+      fr: 'La vision canal BNP — passer d\'une expérience transactionnelle à une expérience d\'insights. Personalised & insightful advice. La data de la banque devient un service de conseil.',
+      nl: 'De BNP-kanaalvisie — van een transactionele ervaring naar een insights-ervaring. Personalised & insightful advice. De data van de bank wordt een adviesdienst.',
+      en: 'BNP\'s channel vision — from a transactional experience to an insights experience. Personalised & insightful advice. The bank\'s data becomes an advisory service.'
+    },
+    'bnp.prototype.visionCap': {
+      fr: 'Channel vision · Du transactionnel à l\'insightful · Concept Report p3',
+      nl: 'Channel vision · Van transactioneel naar insightful · Concept Report p3',
+      en: 'Channel vision · From transactional to insightful · Concept Report p3'
+    },
+    'bnp.prototype.visionSource': {
+      fr: 'Source · Concept Report · pages 2-3 · 1ᵉʳ mars 2018',
+      nl: 'Bron · Concept Report · pagina\'s 2-3 · 1 maart 2018',
+      en: 'Source · Concept Report · pages 2-3 · March 1, 2018'
+    },
+
+    'bnp.prototype.relevantEyebrow': { fr: 'Prototype · 4 axes data', nl: 'Prototype · 4 data-assen', en: 'Prototype · 4 data axes' },
+    'bnp.prototype.relevantTitle': {
+      fr: 'Pourquoi notre data <span class="accent">est pertinente.</span>',
+      nl: 'Waarom onze data <span class="accent">relevant is.</span>',
+      en: 'Why our data <span class="accent">is relevant.</span>'
+    },
+    'bnp.prototype.relevantLead': {
+      fr: 'Quatre axes où la donnée transactionnelle BNP éclaire les décisions du commerçant — chacun ciblé sur un type de décision marketing/business.',
+      nl: 'Vier assen waar de BNP-transactiedata de beslissingen van de merchant verheldert — elk gericht op een type marketing/business-beslissing.',
+      en: 'Four axes where BNP transactional data lights up the merchant\'s decisions — each targeted at a type of marketing/business call.'
+    },
+    'bnp.prototype.axe1Name': { fr: 'Advanced profiling', nl: 'Advanced profiling', en: 'Advanced profiling' },
+    'bnp.prototype.axe1Desc': {
+      fr: 'Origine · profil socio · revenus · trends spending → cross-selling, marketing local',
+      nl: 'Herkomst · socio-profiel · inkomen · spending trends → cross-selling, lokale marketing',
+      en: 'Origin · socio profile · income · spending trends → cross-selling, local marketing'
+    },
+    'bnp.prototype.axe2Name': { fr: 'Loyalty ranking', nl: 'Loyalty ranking', en: 'Loyalty ranking' },
+    'bnp.prototype.axe2Desc': {
+      fr: 'Nombre transactions par client → ranker la fidélité, tracker l\'évolution',
+      nl: 'Aantal transacties per klant → loyalty ranken, evolutie tracken',
+      en: 'Transactions per customer → rank loyalty, track evolution'
+    },
+    'bnp.prototype.axe3Name': { fr: 'Help for marketing', nl: 'Help for marketing', en: 'Help for marketing' },
+    'bnp.prototype.axe3Desc': {
+      fr: 'Origine clients · part de marché → opportunités locales, expansion trackée',
+      nl: 'Klantherkomst · marktaandeel → lokale opportuniteiten, getrackte expansie',
+      en: 'Customer origin · market share → local opportunities, tracked expansion'
+    },
+    'bnp.prototype.axe4Name': { fr: 'POS & competitors comparison', nl: 'POS & concurrenten-vergelijking', en: 'POS & competitors comparison' },
+    'bnp.prototype.axe4Desc': {
+      fr: 'Volume clients · trafic · revenus → opening hours, market share, brand performance',
+      nl: 'Klantvolume · traffic · omzet → opening hours, marktaandeel, brand performance',
+      en: 'Customer volume · traffic · revenue → opening hours, market share, brand performance'
+    },
+    'bnp.prototype.relevantSource': {
+      fr: 'Source · Concept Report · page 41 · « Why our data are relevant »',
+      nl: 'Bron · Concept Report · pagina 41 · « Why our data are relevant »',
+      en: 'Source · Concept Report · page 41 · "Why our data are relevant"'
+    },
+
+    'bnp.prototype.spotfireEyebrow': { fr: 'Prototype · Spotfire POC', nl: 'Prototype · Spotfire POC', en: 'Prototype · Spotfire POC' },
+    'bnp.prototype.spotfireTitle': {
+      fr: 'Trois lectures coachées <span class="accent">par graphique.</span>',
+      nl: 'Drie begeleide lezingen <span class="accent">per diagram.</span>',
+      en: 'Three coached reads <span class="accent">per chart.</span>'
+    },
+    'bnp.prototype.spotfireLead': {
+      fr: 'IT proposait 47 indicateurs. J\'ai dit non. Trois lectures coachées par graphique, parce que les six barrières en interview disaient toutes la même chose : un commerçant ne sait pas quoi faire avec des chiffres bruts. Le détail qui change tout : chaque graphique entouré d\'une annotation « What\'s important » qui suggère une décision concrète.',
+      nl: 'IT stelde 47 indicatoren voor. Ik zei nee. Drie begeleide lezingen per diagram, omdat de zes barrières uit de interviews allemaal hetzelfde zeiden : een merchant weet niet wat te doen met ruwe cijfers. Het detail dat alles verandert : elk diagram omringd door een « What\'s important »-annotatie die een concrete beslissing voorstelt.',
+      en: 'IT proposed 47 indicators. I said no. Three coached reads per chart, because the six interview barriers all said the same thing : a shopkeeper doesn\'t know what to do with raw numbers. The detail that changes everything : each chart wrapped in a « What\'s important » annotation that suggests a concrete decision.'
+    },
+    'bnp.prototype.spotfireCap': {
+      fr: 'Dashboard KPI Principles · POC Spotfire · 4 goals · Concept Report p42',
+      nl: 'Dashboard KPI Principles · POC Spotfire · 4 goals · Concept Report p42',
+      en: 'Dashboard KPI Principles · POC Spotfire · 4 goals · Concept Report p42'
+    },
+    'bnp.prototype.spotfireSource': {
+      fr: 'Source · Concept Report · pages 42-44 · « Dashboard Principles »',
+      nl: 'Bron · Concept Report · pagina\'s 42-44 · « Dashboard Principles »',
+      en: 'Source · Concept Report · pages 42-44 · "Dashboard Principles"'
+    },
+
     /* ============== CHAPTERS — 4 phases Double Diamond (Research/Analyse/Prototype/Concept) ============== */
     'bnp.chapResearch.label': { fr: 'Phase 01 · Research', nl: 'Fase 01 · Research', en: 'Phase 01 · Research' },
     'bnp.chapResearch.title': { fr: 'Le terrain enseigne.', nl: 'Het terrein leert.', en: 'The ground teaches.' },
