@@ -382,48 +382,62 @@
     /* t=3.85 — Scroll cue last. The invitation. */
     if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.85);
 
-    /* ── Scroll parallax DRAMATIQUE : multi-layer dénivelé pour vrai effet 3D.
-       BG image : grandit en zoom-in (1.06 → 1.18) ET drift Y (yPercent 0 → 28)
-       → impression de plonger dans la photo en scrollant.
-       Text column : drift slower (yPercent -16) pour effet de surface.
-       KPI bento : drift fast (yPercent -8) avec scale subtle (1 → 0.96)
-       → effet "le bento s'éloigne de la caméra" tandis qu'on scrolle.
-       Header (client + period) : drift slowest (yPercent -22). */
+    /* ── Scroll parallax : ZOOM INVERSE de l'entrance (zoom-out → zoom-in continu).
+       Entrance fait : scale 1.18 → 1.04 (zoom-out posant le décor).
+       Scroll fait l'inverse : scale 1.04 → 1.16 (zoom-in en plongeant).
+       fromTo + immediateRender: false → ne touche pas l'image avant que le scroll
+       atteigne le start (sinon ça toussait à scroll 0). */
     if (hcxBg) {
-      gsap.to(hcxBg, {
-        yPercent: 28, scale: 1.18, ease: 'none',
-        scrollTrigger: {
-          trigger: hcxSection, start: 'top top', end: 'bottom top',
-          scrub: 1.4, invalidateOnRefresh: true,
+      gsap.fromTo(hcxBg,
+        { scale: 1.04, yPercent: 0 },
+        {
+          scale: 1.16, yPercent: 18, ease: 'none',
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: hcxSection, start: 'top top', end: 'bottom top',
+            scrub: 1.4, invalidateOnRefresh: true,
+          },
         },
-      });
+      );
     }
     if (hcxHead) {
-      gsap.to(hcxHead, {
-        yPercent: -16, ease: 'none',
-        scrollTrigger: {
-          trigger: hcxSection, start: 'top top', end: 'bottom top',
-          scrub: 0.9, invalidateOnRefresh: true,
+      gsap.fromTo(hcxHead,
+        { yPercent: 0 },
+        {
+          yPercent: -14, ease: 'none',
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: hcxSection, start: 'top top', end: 'bottom top',
+            scrub: 0.9, invalidateOnRefresh: true,
+          },
         },
-      });
+      );
     }
     if (hcxKpis) {
-      gsap.to(hcxKpis, {
-        yPercent: -8, scale: 0.94, ease: 'none',
-        scrollTrigger: {
-          trigger: hcxSection, start: 'top top', end: 'bottom top',
-          scrub: 0.7, invalidateOnRefresh: true,
+      gsap.fromTo(hcxKpis,
+        { yPercent: 0, scale: 1 },
+        {
+          yPercent: -6, scale: 0.96, ease: 'none',
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: hcxSection, start: 'top top', end: 'bottom top',
+            scrub: 0.7, invalidateOnRefresh: true,
+          },
         },
-      });
+      );
     }
     if (hcxClient) {
-      gsap.to(hcxClient, {
-        yPercent: -22, opacity: 0.4, ease: 'none',
-        scrollTrigger: {
-          trigger: hcxSection, start: 'top top', end: 'bottom top',
-          scrub: 1.1, invalidateOnRefresh: true,
+      gsap.fromTo(hcxClient,
+        { yPercent: 0, opacity: 1 },
+        {
+          yPercent: -20, opacity: 0.45, ease: 'none',
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: hcxSection, start: 'top top', end: 'bottom top',
+            scrub: 1.1, invalidateOnRefresh: true,
+          },
         },
-      });
+      );
     }
   }
 
