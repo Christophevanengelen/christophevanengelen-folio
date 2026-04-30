@@ -581,9 +581,9 @@
       en: 'What role did I<br>play in the process?'
     },
     'bnp.role.lead': {
-      fr: 'Service design stratégique en amont. Pas du wireframing, pas de l\'UI. La couche de cadrage au-dessus, là où le brief se traduit en service vendable. J\'ai travaillé en <span class="accent">Double Diamond</span>, avec deux sponsors au-dessus de moi et une équipe pluridisciplinaire autour.',
-      nl: 'Strategisch upstream service design. Geen wireframing, geen UI. De framing-laag erboven, waar de briefing in een verkoopbare dienst wordt vertaald. Ik werkte volgens <span class="accent">Double Diamond</span>, met twee sponsors boven mij en een multidisciplinair team rond mij.',
-      en: 'Strategic upstream service design. Not wireframing, not UI. The framing layer above both, where the brief gets translated into a buyable service. I worked through a <span class="accent">Double Diamond</span>, with two sponsors above me and a multi-disciplinary team around me.'
+      fr: 'Service design stratégique upstream. Pas wireframing, pas UI. La couche au-dessus — où le brief devient service vendable. <span class="accent">Double Diamond</span>, deux sponsors, équipe pluridisciplinaire.',
+      nl: 'Strategisch upstream service design. Geen wireframing, geen UI. De laag erboven — waar de briefing een verkoopbare dienst wordt. <span class="accent">Double Diamond</span>, twee sponsors, multidisciplinair team.',
+      en: 'Strategic upstream service design. Not wireframing, not UI. The layer above — where the brief becomes a buyable service. <span class="accent">Double Diamond</span>, two sponsors, multi-disciplinary team.'
     },
     'bnp.role.dd1': { fr: 'DÉCOUVRIR', nl: 'DISCOVER', en: 'DISCOVER' },
     'bnp.role.dd2': { fr: 'DÉFINIR', nl: 'DEFINE', en: 'DEFINE' },
@@ -623,9 +623,9 @@
 
     'bnp.role.roomH3': { fr: 'La salle dans laquelle j\'étais.', nl: 'De kamer waarin ik zat.', en: 'The room I was in.' },
     'bnp.role.roomP': {
-      fr: 'Senior service designer dans un programme couvrant quatre fonctions de la banque, plus un partenaire externe. Mon rôle : garder la voix du commerçant audible, les options de l\'exécutif claires, et les trade-offs explicites.',
-      nl: 'Senior service designer in een programma dat vier bankfuncties omvatte, plus een externe partner. Mijn job : de stem van de merchant luid houden, de opties van de executive helder, en de trade-offs expliciet.',
-      en: 'A senior service designer in a programme spanning four functions of the bank, plus an external partner. My job : keep the merchant\'s voice loud, the executive\'s options clear, and the trade-offs explicit.'
+      fr: '4 fonctions banque + 1 partenaire externe. Voix du commerçant audible. Options exécutif claires. Trade-offs explicites.',
+      nl: '4 bankfuncties + 1 externe partner. Merchant-stem luid. Executive-opties helder. Trade-offs expliciet.',
+      en: '4 bank functions + 1 external partner. Merchant\'s voice loud. Executive options clear. Trade-offs explicit.'
     },
     'bnp.role.roomCap': {
       fr: 'Atelier interne · Principes KPI dashboard · synthèse post-it',
@@ -808,50 +808,50 @@
 
     'bnp.tw.h3': { fr: 'Le frame <span class="accent">Triple-Win.</span>', nl: 'Het <span class="accent">Triple-Win</span>-frame.', en: 'The <span class="accent">Triple-Win</span> frame.' },
     'bnp.tw.p': {
-      fr: 'Chaque choix de design était noté contre ce triangle. Si une feature en cassait un seul, elle ne sortait pas. Peu importe sa pertinence.',
-      nl: 'Elke ontwerpkeuze werd getoetst aan deze driehoek. Brak een feature één van de drie? Dan ging ze niet live. Hoe slim ook.',
-      en: 'Every design choice was scored against this triangle. If a feature broke any of the three, it didn\'t ship. No matter how clever.'
+      fr: 'Chaque feature était notée contre ce triangle. Une seule branche cassée, elle ne sortait pas.',
+      nl: 'Elke feature werd getoetst aan deze driehoek. Eén tak gebroken, dan niet live.',
+      en: 'Every feature was scored against this triangle. One branch broken, it didn\'t ship.'
     },
     'bnp.tw.w1.who': { fr: 'La banque', nl: 'De bank', en: 'The Bank' },
     'bnp.tw.w1.h': { fr: 'BNP Paribas Fortis', nl: 'BNP Paribas Fortis', en: 'BNP Paribas Fortis' },
     'bnp.tw.w1.p': {
-      fr: 'Une nouvelle ligne de revenu B2B qui transforme la donnée transactionnelle existante en service défensif. Au service de l\'objectif acquiring 7 % à 20 %.',
-      nl: 'Een nieuwe B2B-omzetlijn die bestaande transactiedata omzet in een verdedigbare dienst. Ter ondersteuning van het 7 % naar 20 % acquiring-doel.',
-      en: 'A new B2B revenue line that turns existing transaction data into a defensible service. Supporting the 7% to 20% acquirer goal.'
+      fr: 'Nouvelle ligne B2B. Au service du 7 % → 20 % acquiring.',
+      nl: 'Nieuwe B2B-lijn. Ten dienste van 7 % → 20 % acquiring.',
+      en: 'New B2B revenue line. Serving the 7% → 20% acquirer goal.'
     },
     'bnp.tw.w2.who': { fr: 'Le commerçant', nl: 'De merchant', en: 'The Retailer' },
     'bnp.tw.w2.h': { fr: 'PME commerçante', nl: 'Kmo-merchant', en: 'SME Merchant' },
     'bnp.tw.w2.p': {
-      fr: 'Des décisions, pas des dashboards. Insight lisible qui suggère une action marketing, benchmarké contre la vraie concurrence locale.',
-      nl: 'Beslissingen, geen dashboards. Leesbare insight die marketingactie voorstelt, gebenchmarkt tegen de echte lokale concurrentie.',
-      en: 'Decisions, not dashboards. Readable insight that prompts a marketing action, benchmarked against real local competition.'
+      fr: 'Des décisions, pas des dashboards. Benchmarké sur la concurrence réelle.',
+      nl: 'Beslissingen, geen dashboards. Gebenchmarkt op de echte concurrentie.',
+      en: 'Decisions, not dashboards. Benchmarked on real competition.'
     },
     'bnp.tw.w3.who': { fr: 'Le porteur de carte', nl: 'De kaarthouder', en: 'The Cardholder' },
     'bnp.tw.w3.h': { fr: 'Consommateur final', nl: 'Eindconsument', en: 'End Consumer' },
     'bnp.tw.w3.p': {
-      fr: 'Vie privée préservée : statistiques uniquement, aucune donnée personnelle. Des magasins mieux ajustés, des offres plus pertinentes, sans contrepartie de surveillance.',
-      nl: 'Privacy gewaarborgd : enkel statistieken, geen persoonlijke data. Beter afgestemde winkels, relevantere aanbiedingen, zonder surveillance-trade-off.',
-      en: 'Privacy preserved : statistics only, no personal data. Better-tuned shops, more relevant offers, no surveillance trade-off.'
+      fr: 'Statistiques agrégées seulement. Zéro donnée personnelle exposée.',
+      nl: 'Enkel geaggregeerde statistieken. Nul persoonlijke data blootgesteld.',
+      en: 'Aggregated statistics only. Zero personal data exposed.'
     },
 
     'bnp.leo.lead1': {
-      fr: 'On n\'a pas livré qu\'un deck. On a testé le concept sur une chaîne réelle, <strong class="accent">Léonidas</strong>, sur six mois de données BNP. Deux boutiques bruxelloises : une à Woluwe-Saint-Pierre, une à Ixelles.',
-      nl: 'We leverden niet alleen een deck. We testten het concept op een echte keten, <strong class="accent">Léonidas</strong>, op zes maanden BNP-transactiedata. Twee Brusselse boetieken : één in Sint-Pieters-Woluwe, één in Elsene.',
-      en: 'We didn\'t just ship a deck. We tested the concept on a real chain, <strong class="accent">Léonidas</strong>, using BNP transaction data over a six-month window. Two boutiques in Brussels : one in Wolluwé Saint-Pierre, one in Ixelles.'
+      fr: 'Test grandeur nature sur <strong class="accent">Léonidas</strong>. Six mois de données BNP. Deux boutiques bruxelloises : Wolluwé SP (test) vs Ixelles (control).',
+      nl: 'Test op ware grootte op <strong class="accent">Léonidas</strong>. Zes maanden BNP-data. Twee Brusselse boetieken : Wolluwé SP (test) vs Elsene (control).',
+      en: 'Live test on <strong class="accent">Léonidas</strong>. Six months of BNP data. Two Brussels boutiques : Wolluwé SP (test) vs Ixelles (control).'
     },
     'bnp.leo.lead2': {
-      fr: 'Le shop de Wolluwé avait conduit des actions marketing segmentées par client. Celui d\'Ixelles non. Le dashboard Enterprise Intelligence rendait l\'impact <strong>visible d\'un coup d\'œil</strong>. Sur cette base, <strong class="accent">le manager général du groupe Léonidas a décidé pour l\'ensemble des magasins</strong> : promesse d\'achat à la sortie du MVP, pour être dans les premiers à équiper toute la chaîne.',
-      nl: 'De Woluwe-shop had klant-gesegmenteerde marketingacties uitgevoerd. De Elsene-shop niet. Het Enterprise Intelligence-dashboard maakte de impact <strong>in één oogopslag zichtbaar</strong>. Op die basis heeft <strong class="accent">de algemeen directeur van de Léonidas-groep voor al haar winkels beslist</strong> : aankoopbelofte bij lancering van het MVP, om bij de eersten te zijn die de hele keten uitrusten.',
-      en: 'The Wolluwé store had run customer-segmented marketing actions. The Ixelles store hadn\'t. The Enterprise Intelligence dashboard made the impact <strong>visible at a glance</strong>. On that basis, <strong class="accent">the general manager of the Léonidas group decided for all of its stores</strong> : pre-purchase commitment on MVP launch, to be among the first chains rolled out across.'
+      fr: 'Une seule variable : Wolluwé a appliqué les rapports. Ixelles non. <strong class="accent">Le manager général Léonidas a décidé pour tous les magasins</strong> : promesse d\'achat à la sortie.',
+      nl: 'Eén variabele : Wolluwé paste de rapporten toe. Elsene niet. <strong class="accent">De algemeen directeur van Léonidas besliste voor al haar winkels</strong> : aankoopbelofte bij lancering.',
+      en: 'One variable : Wolluwé applied the reports. Ixelles didn\'t. <strong class="accent">The Léonidas general manager decided for all stores</strong> : pre-purchase commitment on launch.'
     },
     'bnp.leo.s1': { fr: 'Hausse de revenu', nl: 'Omzetstijging', en: 'Revenue increase' },
     'bnp.leo.s2': { fr: 'Six mois', nl: 'Zes maanden', en: 'Six months' },
     'bnp.leo.s3': { fr: 'Panier moyen', nl: 'Gemiddeld winkelmandje', en: 'Avg basket size' },
     'bnp.leo.s4': { fr: 'Clients fidélisés', nl: 'Behouden klanten', en: 'Maintained customers' },
     'bnp.leo.quote': {
-      fr: 'Léonidas Wolluwé SP a atteint une part de marché sectorielle de <strong>35 %</strong>, contre <strong>10 %</strong> pour Léonidas Ixelles. Même marque, mêmes six mois, même dataset. Une seule variable : des actions marketing segmentées par client, rendues lisibles d\'un coup d\'œil par le dashboard EI.',
-      nl: 'Léonidas Woluwe SP behaalde een sectoraal marktaandeel van <strong>35 %</strong>, tegenover <strong>10 %</strong> voor Léonidas Elsene. Zelfde merk, zelfde zes maanden, zelfde dataset. Eén variabele : klant-gesegmenteerde marketingacties, in één oogopslag zichtbaar gemaakt door het EI-dashboard.',
-      en: 'Léonidas Wolluwé SP reached a sector market share of <strong>35%</strong>, against <strong>10%</strong> for Léonidas Ixelles. Same brand, same six months, same dataset. One variable : customer-segmented marketing actions, made visible at a glance by the EI dashboard.'
+      fr: 'Wolluwé SP : <strong>35 %</strong> de part sectorielle. Ixelles : <strong>10 %</strong>. Même marque, même dataset. Une variable : les rapports appliqués.',
+      nl: 'Wolluwé SP : <strong>35 %</strong> sectoraal aandeel. Elsene : <strong>10 %</strong>. Zelfde merk, zelfde dataset. Eén variabele : de rapporten toegepast.',
+      en: 'Wolluwé SP : <strong>35%</strong> sector share. Ixelles : <strong>10%</strong>. Same brand, same dataset. One variable : the reports applied.'
     },
     'bnp.leo.src': {
       fr: 'Concept Report · Goal 2 / Business Expansion · Jan → Juin 2017',
@@ -880,9 +880,9 @@
       en: 'Why our data is relevant · Unique BNP value intersection'
     },
     'bnp.beyond.summary': {
-      fr: 'Au-delà du chiffre : un MVP signé Corporate Banking, IT, Legal et Marketing, dérisqué côté GDPR et qualité de données. <strong class="accent">Six PME testées avec le prototype. Le groupe Léonidas, par décision de son manager général, s\'engage à acheter à la sortie pour tous ses magasins. Zéro refus chez les cinq autres.</strong> Le signal commercial qui a convaincu le sponsor de passer en production. Et une bibliothèque de <strong class="accent">9 personas B2B</strong> qui a survécu au projet.',
-      nl: 'Voorbij het cijfer : een MVP ondertekend door Corporate Banking, IT, Legal en Marketing, zonder GDPR- of datakwaliteits-risico\'s. <strong class="accent">Zes kmo\'s testten het prototype. De Léonidas-groep, op beslissing van haar algemeen directeur, engageert zich om bij lancering aan te kopen voor al haar winkels. Nul weigeringen bij de vijf anderen.</strong> Het commerciële signaal dat de sponsor overtuigde om in productie te gaan. En een bibliotheek van <strong class="accent">9 B2B-persona\'s</strong> die het project overleefde.',
-      en: 'Beyond the figure : an MVP signed off by Corporate Banking, IT, Legal and Marketing, de-risked on GDPR and data quality. <strong class="accent">Six SMEs tested the prototype. The Léonidas group, by decision of its general manager, committed to buy on launch for all of its stores. Zero refusals among the five others.</strong> The commercial signal that convinced the sponsor to push for production. And a <strong class="accent">9-persona B2B library</strong> that outlived the project.'
+      fr: 'MVP signé Banking + IT + Legal + Marketing. GDPR et qualité données dérisqués. <strong class="accent">9 personas B2B</strong> qui ont survécu au projet.',
+      nl: 'MVP ondertekend door Banking + IT + Legal + Marketing. GDPR en datakwaliteit gederisicood. <strong class="accent">9 B2B-persona\'s</strong> die het project overleefden.',
+      en: 'MVP signed by Banking + IT + Legal + Marketing. GDPR and data quality de-risked. <strong class="accent">9 B2B personas</strong> that outlived the project.'
     },
 
     /* TIMELINE INTRO — graphique synthétique avant l'histoire (entre star-bridge et Chapter S) */
@@ -1010,9 +1010,9 @@
       en: 'What I\'d do <span class="accent">differently.</span>'
     },
     'bnp.lessons.lead': {
-      fr: 'Sept ans après, le projet a tenu sa promesse. Mais trois choix mériteraient d\'être refaits autrement. Les voici, en clair.',
-      nl: 'Zeven jaar later heeft het project zijn belofte ingelost. Maar drie keuzes verdienen een tweede ronde. Hier zijn ze, klare taal.',
-      en: 'Seven years on, the project delivered. But three calls deserve a second take. Here they are, plain.'
+      fr: 'Sept ans après. Trois choix à refaire autrement.',
+      nl: 'Zeven jaar later. Drie keuzes om anders te maken.',
+      en: 'Seven years on. Three calls to make differently.'
     },
     'bnp.lessons.l1.h': {
       fr: 'Mettre un prix sur la table dès la semaine 8.',
@@ -1020,9 +1020,9 @@
       en: 'Put a price on the table by week 8.'
     },
     'bnp.lessons.l1.p': {
-      fr: 'La promesse d\'achat du groupe Léonidas au prototype, plus zéro refus chez les cinq autres PME testées, a été le signal qui a fait basculer le sponsor vers la production. Mais cet engagement restait conditionnel à la sortie du build. Aujourd\'hui, je négocierais des bons de commande plus fermes dès le prototype, et un accompagnement qui tient jusqu\'à la mise en marché.',
-      nl: 'De aankoopbelofte van de Léonidas-groep op het prototype, plus nul weigeringen bij de vijf andere geteste kmo\'s, was het signaal dat de sponsor over de streep trok naar productie. Maar dat engagement bleef afhankelijk van de oplevering van de build. Vandaag zou ik hardere bestelbonnen vanaf het prototype onderhandelen, en een begeleiding tot aan de marktintroductie.',
-      en: 'The pre-purchase commitment from the Léonidas group at prototype stage, plus zero refusals among the five other SMEs tested, was the signal that pushed the sponsor toward production. But that commitment stayed conditional on build delivery. Today, I would negotiate firmer purchase orders from the prototype stage, with engagement that runs through market launch.'
+      fr: 'La promesse Léonidas restait conditionnelle au build. Aujourd\'hui : bons de commande fermes dès le prototype, accompagnement jusqu\'au marché.',
+      nl: 'De Léonidas-belofte bleef afhankelijk van de build. Vandaag : harde bestelbonnen vanaf het prototype, begeleiding tot in de markt.',
+      en: 'The Léonidas commitment stayed conditional on the build. Today : firm purchase orders from the prototype, engagement through to market.'
     },
     'bnp.lessons.l2.h': {
       fr: 'Élargir l\'échantillon avant de figer la promesse.',
@@ -1030,9 +1030,9 @@
       en: 'Widen the sample before locking the value prop.'
     },
     'bnp.lessons.l2.p': {
-      fr: 'Six PME testeurs, un seul secteur. Le signal Léonidas était fort, mais mono-vertical. Aujourd\'hui, je pousse pour douze testeurs en trois verticales avant de bétonner la value prop.',
-      nl: 'Zes kmo-testers, één sector. Het Léonidas-signaal was sterk, maar mono-verticaal. Vandaag duw ik voor twaalf testers in drie verticalen voor ik de value prop betonneer.',
-      en: 'Six SME testers, one sector. The Léonidas signal was strong, but mono-vertical. Today, I push for twelve testers across three verticals before I lock the value prop.'
+      fr: '6 testeurs, 1 secteur. Signal fort, mono-vertical. Aujourd\'hui : 12 testeurs sur 3 verticales avant de bétonner.',
+      nl: '6 testers, 1 sector. Sterk signaal, mono-verticaal. Vandaag : 12 testers in 3 verticalen voor ik betonneer.',
+      en: '6 testers, 1 vertical. Strong signal, mono-vertical. Today : 12 testers across 3 verticals before locking.'
     },
     'bnp.lessons.l3.h': {
       fr: 'Auditer la qualité de la donnée avant d\'écrire le service.',
@@ -1040,9 +1040,9 @@
       en: 'Audit data quality before writing the service.'
     },
     'bnp.lessons.l3.p': {
-      fr: 'J\'ai découvert mi-parcours que toutes les catégories transactionnelles n\'étaient pas également propres. Aujourd\'hui, je commande un audit qualité avant la value prop.',
-      nl: 'Ik ontdekte halverwege dat niet alle transactiecategorieën even proper waren. Vandaag bestel ik eerst een kwaliteitsaudit, dan pas de value prop.',
-      en: 'I found out mid-project that not all transaction categories were equally clean. Today I commission a quality audit before the value prop.'
+      fr: 'Découvert mi-parcours : toutes les catégories transactionnelles n\'étaient pas également propres. Aujourd\'hui : audit qualité avant la value prop.',
+      nl: 'Halverwege ontdekt : niet alle transactiecategorieën waren even proper. Vandaag : kwaliteitsaudit vóór de value prop.',
+      en: 'Found mid-project : not all transaction categories were equally clean. Today : quality audit before the value prop.'
     },
 
     'bnp.qa.eyebrow': {
