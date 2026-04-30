@@ -117,9 +117,9 @@
     'bnp.hero.h1.start': { fr: 'Enterprise', nl: 'Enterprise', en: 'Enterprise' },
     'bnp.hero.h1.alt': { fr: 'Intelligence.', nl: 'Intelligence.', en: 'Intelligence.' },
     'bnp.hero.lead': {
-      fr: 'Comment BNP peut générer de nouveaux revenus à partir de sa donnée transactionnelle. Service Designer mandaté sur ce pilier, pour faciliter le chemin de productisation via le big data — du concept jusqu\'au premier signal d\'achat.',
-      nl: 'Hoe BNP nieuwe inkomsten kan genereren uit haar transactiedata. Service Designer aangesteld op deze pijler, om het productisatie-traject via big data te faciliteren — van concept tot het eerste koopsignaal.',
-      en: 'How BNP can generate new revenue from its transactional data. Service Designer mandated on this pillar, to facilitate the productisation path via big data — from concept to the first buying signal.'
+      fr: 'Dans le pilier New Business Revenue, BNP commercialisait ses données pour faire profiter les PME du big data — comme en profitent déjà les grands comptes. Une banque est assise sur ses données transactionnelles comme un Facebook sur les siennes : un autre type de données, parfois plus pertinent pour les décisions marketing et les arbitrages business d\'un commerçant.',
+      nl: 'In de New Business Revenue-pijler commercialiseerde BNP haar data om kmo\'s te laten profiteren van big data — zoals grote bedrijven dat al doen. Een bank zit op haar transactiedata zoals een Facebook op de zijne : een ander type data, soms relevanter voor de marketingkeuzes en businessafwegingen van een merchant.',
+      en: 'Within the New Business Revenue pillar, BNP was monetising its data to give SMEs access to big data — the way big enterprises already enjoy it. A bank sits on its transactional data like Facebook sits on its own : a different kind of data, sometimes more relevant for the marketing calls and business trade-offs a shopkeeper has to make.'
     },
     'bnp.hero.kpi1': {
       fr: 'des flux carte conso vus par BNP<br>la matière première du new business revenue',
