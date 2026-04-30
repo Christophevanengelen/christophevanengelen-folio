@@ -356,28 +356,21 @@
     /* t=2.2 — Role. Authority signal : freelance, upstream, 6 months. */
     if (hcxRole)    hcxTl.to(hcxRole,    { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 2.20);
 
-    /* t=2.65 — KPI bento : glass shell materialises from the bg first
-       (blur clears, opacity rises), then the 4 cells cascade in narrative order
-       S asymétrie · T VP · A research · R climax tease. */
+    /* t=2.7 — KPI bento : entrance smooth en bloc unique, no stagger fancy.
+       Corporate posé : opacity + y + blur clear, c'est tout. Pas de pulse, pas
+       de scale flashy. */
     if (hcxKpis) {
-      hcxTl.set(hcxKpis, { visibility: 'visible' }, 2.60);
+      hcxTl.set(hcxKpis, { visibility: 'visible' }, 2.65);
       hcxTl.to(hcxKpis, {
         opacity: 1, y: 0, filter: 'blur(0px)',
-        duration: 1.05, ease: 'power3.out',
-      }, 2.65);
+        duration: 1.10, ease: 'power2.out',
+      }, 2.70);
     }
     if (hcxKpiCells.length) {
       hcxTl.to(hcxKpiCells, {
-        opacity: 1, y: 0, duration: 0.55, ease: 'power3.out', stagger: 0.13,
-      }, 3.05);
-      /* Accent pulse on cell 2 (1/6 climax tease) — the last beat */
-      const cellAccent = hcxKpiCells[1] && hcxKpiCells[1].querySelector('.hcx__kpi-num');
-      if (cellAccent) {
-        hcxTl.fromTo(cellAccent, { scale: 1 }, { scale: 1.10, duration: 0.24, ease: 'power3.out', yoyo: true, repeat: 1 }, 3.45);
-      }
+        opacity: 1, y: 0, duration: 0.85, ease: 'power2.out',
+      }, 2.85);
     }
-
-    /* ── PAUSE 250ms : the bento lands ── */
 
     /* t=3.85 — Scroll cue last. The invitation. */
     if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.85);

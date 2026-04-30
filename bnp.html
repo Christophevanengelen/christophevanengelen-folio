@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=star8">
+<link rel="stylesheet" href="assets/style.css?v=star9">
 <script>
   (function(){var k='cve-theme',s=localStorage.getItem(k),d=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(d?'dark':'light');document.documentElement.classList.add('theme-'+t);}());
 </script>
@@ -175,10 +175,9 @@
     /* LE blur — c'est ICI qu'il s'applique sur ce qui est derrière (la photo) */
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
-    /* Glow ambre incrusté + ombre flottante + relief */
+    /* Ombre flottante + relief subtil — pas de glow ambre, on reste corporate */
     box-shadow:
       0 24px 60px rgba(0,0,0,0.45),
-      0 0 90px rgba(199,105,65,0.14),
       0 1px 0 rgba(242,235,219,0.14) inset,
       0 -1px 0 rgba(0,0,0,0.25) inset;
     position: relative;
@@ -197,14 +196,10 @@
     background: transparent;
     padding: 20px 22px 18px;
     display: flex; flex-direction: column; gap: 6px;
-    transition: background .35s ease;
   }
-  /* Séparateur subtil entre les 2 cells (line ambre 10% au lieu de gap solid) */
+  /* Séparateur subtil entre les 2 cells */
   .hcx__kpi + .hcx__kpi {
     border-top: 1px solid rgba(242,235,219,0.10);
-  }
-  .hcx__kpi:hover {
-    background: rgba(242,235,219,0.04);
   }
   .hcx__kpi-num {
     font-family: "Manrope", sans-serif;
@@ -1960,9 +1955,9 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=star8"></script>
+<script src="assets/i18n.js?v=star9"></script>
 <script src="assets/theme.js?v=cinema"></script>
-<script src="assets/motion.js?v=star8"></script>
+<script src="assets/motion.js?v=star9"></script>
 <script src="assets/deck.js?v=deck1"></script>
 <script src="assets/scroll-narrative.js?v=fielded"></script>
 </body>
