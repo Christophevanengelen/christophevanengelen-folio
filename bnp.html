@@ -79,9 +79,10 @@
   .hcx__grid {
     position: absolute; inset: 0; z-index: 3;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.65fr);
     grid-template-rows: auto 1fr auto;
-    gap: 0;
+    column-gap: 56px;
+    row-gap: 0;
     padding: 120px 64px 96px 64px;
     color: #F2EBDB;
   }
@@ -103,7 +104,7 @@
   }
   .hcx__client-period::before { content: "/"; color: #C76941; font-weight: 300; font-size: 14px; letter-spacing: 0; width: auto; height: auto; background: none; }
   .hcx__period {
-    grid-column: 1 / 2; grid-row: 1 / 2;
+    grid-column: 2 / 3; grid-row: 1 / 2;
     align-self: center;
     justify-self: end; text-align: right;
     font-family: "Manrope", sans-serif;
@@ -113,10 +114,10 @@
   .hcx__period strong { display: block; color: #F2EBDB; font-weight: 700; font-size: 14px; letter-spacing: .12em; margin-top: 4px; }
 
   .hcx__head {
-    grid-column: 1 / 2; grid-row: 2 / 3;
+    grid-column: 1 / 2; grid-row: 2 / 4;
     align-self: end;
     display: flex; flex-direction: column; gap: 28px;
-    max-width: min(960px, 100%);
+    max-width: 100%;
   }
   .hcx__eyebrow {
     font-family: "Manrope", sans-serif;
@@ -156,55 +157,58 @@
   }
   .hcx__role-where { font-size: 14px; font-weight: 600; color: #F2EBDB; }
 
-  /* KPI bento — 4 chiffres glass-blurred, incrustés dans la photo bg */
+  /* KPI bento — 2 facts, à DROITE, stack vertical, compact, vraiment incrusté */
   .hcx__kpis {
-    grid-column: 1 / 2; grid-row: 3 / 4;
-    align-self: end; justify-self: start;
-    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1px; margin-top: 32px;
-    width: 100%; max-width: 600px;
+    grid-column: 2 / 3; grid-row: 2 / 4;
+    align-self: end; justify-self: end;
+    display: grid; grid-template-columns: 1fr;
+    gap: 1px;
+    width: 100%; max-width: 340px;
     border-radius: 10px; overflow: hidden;
-    /* Glass shell */
+    /* Glass shell — verre teinté foncé, plus présent */
     background:
       linear-gradient(135deg,
         rgba(242,235,219,0.10) 0%,
-        rgba(242,235,219,0.03) 40%,
-        rgba(10,18,32,0.10) 100%);
-    border: 1px solid rgba(242,235,219,0.18);
-    border-top-color: rgba(242,235,219,0.26);
-    backdrop-filter: blur(22px) saturate(160%);
-    -webkit-backdrop-filter: blur(22px) saturate(160%);
+        rgba(10,18,32,0.20) 100%);
+    border: 1px solid rgba(242,235,219,0.16);
+    border-top-color: rgba(242,235,219,0.30);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    /* Glow ambre incrusté + ombre flottante */
     box-shadow:
-      0 18px 50px rgba(0,0,0,0.45),
-      0 1px 0 rgba(242,235,219,0.08) inset;
+      0 24px 60px rgba(0,0,0,0.55),
+      0 0 90px rgba(199,105,65,0.12),
+      0 1px 0 rgba(242,235,219,0.10) inset,
+      0 -1px 0 rgba(0,0,0,0.30) inset;
     position: relative;
   }
   /* Diagonal sheen overlay on the bento shell */
   .hcx__kpis::before {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background: linear-gradient(120deg,
-      transparent 32%, rgba(242,235,219,0.07) 50%, transparent 68%);
-    opacity: .55; mix-blend-mode: overlay;
+      transparent 30%, rgba(242,235,219,0.10) 50%, transparent 70%);
+    opacity: .65; mix-blend-mode: overlay;
     border-radius: inherit; z-index: 0;
   }
   .hcx__kpi {
     position: relative; z-index: 1;
-    background: rgba(10,18,32,0.30);
-    padding: 18px 18px 16px;
-    display: flex; flex-direction: column; gap: 8px;
+    /* Cells beaucoup plus opaques pour lisibilité parfaite */
+    background: rgba(10,18,32,0.62);
+    padding: 18px 20px 16px;
+    display: flex; flex-direction: column; gap: 6px;
     transition: background .35s ease;
   }
-  .hcx__kpi:hover { background: rgba(10,18,32,0.45); }
+  .hcx__kpi:hover { background: rgba(10,18,32,0.74); }
   .hcx__kpi-num {
     font-family: "Manrope", sans-serif;
-    font-weight: 200; font-size: clamp(40px, 4.5vw, 64px);
+    font-weight: 200; font-size: clamp(30px, 3.2vw, 44px);
     line-height: 0.95; letter-spacing: -.04em;
-    color: rgba(242,235,219,0.92);
-    text-shadow: 0 2px 18px rgba(10,18,32,0.40);
+    color: rgba(242,235,219,0.96);
+    text-shadow: 0 2px 24px rgba(10,18,32,0.70);
   }
   .hcx__kpi-unit { font-size: 0.55em; font-weight: 200; margin-left: 1px; }
   .hcx__kpi-sep { font-size: 0.7em; opacity: .65; margin: 0 1px; font-weight: 200; }
-  .hcx__kpi-frac { font-size: 0.55em; opacity: .55; font-weight: 300; }
+  .hcx__kpi-frac { font-size: 0.55em; opacity: .60; font-weight: 300; }
   /* Cell 1 — asymétrie issuer 30% — accent ambre, l'enjeu */
   .hcx__kpi:nth-child(1) .hcx__kpi-num { color: #C76941; font-weight: 700; }
   /* Cell 2 — climax tease (1/6 promesse) — accent ambre + soft inner glow, la chute */
@@ -212,14 +216,15 @@
   .hcx__kpi--accent::after {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background: radial-gradient(ellipse at 50% 100%,
-      rgba(199,105,65,0.16) 0%, transparent 60%);
-    opacity: .65;
+      rgba(199,105,65,0.20) 0%, transparent 65%);
+    opacity: .75;
   }
   .hcx__kpi-lab {
     font-family: "Manrope", sans-serif;
     font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-    color: rgba(242,235,219,0.62);
-    line-height: 1.45;
+    color: rgba(242,235,219,0.86);
+    line-height: 1.5;
+    text-shadow: 0 1px 6px rgba(10,18,32,0.5);
   }
 
   /* Legacy bento styles — neutralised since bento was retired in the cleanup pass */
@@ -342,7 +347,7 @@
     .hcx__period { grid-column: 1 / 2; grid-row: 1 / 2; justify-self: start; text-align: left; margin-top: 12px; }
     .hcx__client { padding-bottom: 12px; }
     .hcx__head { grid-column: 1; grid-row: 2; max-width: 100%; padding-right: 0; }
-    .hcx__kpis { grid-template-columns: 1fr 1fr; max-width: 100%; }
+    .hcx__kpis { grid-column: 1; grid-row: 3; justify-self: stretch; grid-template-columns: 1fr 1fr; max-width: 100%; margin-top: 32px; }
     .hcx__h1 { font-size: clamp(52px, 9.5vw, 100px); }
   }
   @media (max-width: 768px) {
