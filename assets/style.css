@@ -1025,9 +1025,11 @@ section.tldr { padding: 60px 0 70px; }
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--amber) 22%, transparent),
               0 0 14px color-mix(in srgb, var(--amber) 60%, transparent);
 }
+/* .snm-node--accent : NE PAS styler comme allumé (bug : paraissait actif au début).
+   On garde juste un ring ambre subtil, l'état actif vient seulement de .is-active. */
 .snm-node--accent .snm-dot {
-  background: var(--amber);
   border-color: var(--amber);
+  border-width: 2px;
 }
 /* Current group is highlighted */
 .snm-group.is-current .snm-group__nodes::before {
