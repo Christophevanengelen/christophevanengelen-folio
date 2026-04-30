@@ -818,6 +818,36 @@
   }
   actR_alignment();
 
+  /* ── Timeline intro (avant Act S) — line draws in + nodes pop sequential.
+        Visual synthèse des 6 mois. The accent node (mars 2018 · 6/1/0) gets a beat. */
+  function timelineIntro() {
+    const tl = document.querySelector('.timeline-intro .ti-line');
+    if (!tl) return;
+    const eyebrow = document.querySelector('.timeline-intro .eyebrow');
+    const nodes = tl.querySelectorAll('.ti-node');
+    if (eyebrow) gsap.set(eyebrow, { opacity: 0, y: 14 });
+    if (nodes.length) gsap.set(nodes, { opacity: 0, y: 18 });
+    ScrollTrigger.create({
+      trigger: tl, start: 'top 78%', once: true,
+      onEnter: () => {
+        const t = gsap.timeline();
+        if (eyebrow) t.to(eyebrow, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0);
+        /* Trigger the line draw-in via CSS var */
+        t.call(() => tl.style.setProperty('--ti-fill', '1'), [], 0.20);
+        /* Nodes pop sequentially as the line passes */
+        if (nodes.length) {
+          t.to(nodes, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)', stagger: 0.18 }, 0.30);
+        }
+        /* Beat on the accent node (mars 2018 · 6/1/0) */
+        const accent = tl.querySelector('.ti-node--accent .ti-dot');
+        if (accent) {
+          t.fromTo(accent, { scale: 1 }, { scale: 1.5, duration: 0.25, ease: 'power3.out', yoyo: true, repeat: 1 }, 1.20);
+        }
+      },
+    });
+  }
+  timelineIntro();
+
   /* ── Bridge section : phrase + sub fade in, watermark parallax */
   const bridgeEl = document.querySelector('.star-bridge');
   if (bridgeEl) {

@@ -222,19 +222,19 @@
       en: '30% of the flows never<br><span class="accent">became a decision.</span>'
     },
     'bnp.brief.lead1': {
-      fr: 'BNP voyait passer chaque semaine des données de cartes consommateurs qui valaient de l\'or pour les commerçants. Personne ne les transformait en service.',
-      nl: 'BNP zag elke week consumentenkaart-data passeren die goud waard was voor de winkeliers. Niemand zette ze om in een dienst.',
-      en: 'BNP saw consumer-card data go by every week that was gold for merchants. No one turned it into a service.'
+      fr: 'Une asymétrie stratégique : émetteur fort, acquirer faible. La banque voulait vendre quelque chose à ses propres PME — sans casser la confiance.',
+      nl: 'Een strategische asymmetrie : sterk als uitgever, zwak als acquirer. De bank wilde iets verkopen aan haar eigen kmo\'s — zonder vertrouwen te breken.',
+      en: 'A strategic asymmetry : strong as issuer, weak as acquirer. The bank wanted to sell something to its own SMEs — without breaking trust.'
     },
     'bnp.brief.lead2': {
-      fr: 'Faciliter un parcours design thinking. Valider l\'opportunité, ou l\'invalider. Défendre une recommandation au sponsor exécutif.',
-      nl: 'Een design thinking-traject faciliteren. De opportuniteit valideren, of niet. Een aanbeveling verdedigen bij de executive sponsor.',
-      en: 'Facilitate a design thinking journey. Validate the opportunity, or rule it out. Defend a recommendation to the executive sponsor.'
+      fr: 'Mission : faciliter le design thinking, valider ou invalider, défendre la recommandation.',
+      nl: 'Opdracht : design thinking faciliteren, valideren of invalideren, de aanbeveling verdedigen.',
+      en: 'Mission : facilitate the design thinking, validate or rule out, defend the recommendation.'
     },
     'bnp.brief.sizing': {
-      fr: '6 mois <span class="dot">·</span> cadrage stratégique upstream <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> Service Designer freelance',
-      nl: '6 maanden <span class="dot">·</span> upstream strategisch kaderwerk <span class="dot">·</span> 4 interne functies <span class="dot">·</span> Service Designer freelance',
-      en: '6 months <span class="dot">·</span> upstream strategic framing <span class="dot">·</span> 4 internal functions <span class="dot">·</span> freelance Service Designer'
+      fr: '6 mois <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> 6 PME terrain <span class="dot">·</span> Service Designer freelance',
+      nl: '6 maanden <span class="dot">·</span> 4 interne functies <span class="dot">·</span> 6 kmo\'s op het terrein <span class="dot">·</span> Service Designer freelance',
+      en: '6 months <span class="dot">·</span> 4 internal functions <span class="dot">·</span> 6 SMEs on the ground <span class="dot">·</span> freelance Service Designer'
     },
 
     'bnp.catalyst.eyebrow': { fr: 'Le catalyseur', nl: 'De aanleiding', en: 'The catalyst' },
@@ -244,9 +244,9 @@
       en: 'Marketing <span class="accent">called.</span>'
     },
     'bnp.catalyst.lead': {
-      fr: 'Leur POC partait dans le mur : trop « data exploration », inadapté à la cible. Ils m\'ont fait venir pour valider, ou invalider, l\'opportunité via un parcours design thinking. C\'est par là qu\'a démarré l\'enquête.',
-      nl: 'Hun POC ging de verkeerde kant op : te « data exploration », niet aangepast aan de doelgroep. Ze haalden me erbij om de opportuniteit te valideren, of te invalideren, via een design thinking-traject. Daar begon het onderzoek.',
-      en: 'Their POC was heading the wrong way : too « data exploration », a mismatch for the target. They brought me in to validate, or invalidate, the opportunity through a design thinking process. That\'s where the investigation started.'
+      fr: 'Leur POC partait dans le mur — trop « data exploration », inadapté à la cible. L\'enquête a démarré là.',
+      nl: 'Hun POC ging de verkeerde kant op — te « data exploration », niet aangepast aan de doelgroep. Daar begon het onderzoek.',
+      en: 'Their POC was heading the wrong way — too « data exploration », a mismatch for the target. The investigation started there.'
     },
 
     /* STAR keys legacy — gardés mais plus utilisés en HTML */
@@ -407,14 +407,14 @@
       en: 'What problem<br>were we trying to solve?'
     },
     'bnp.problem.p1': {
-      fr: 'BNP Paribas Fortis avait une asymétrie stratégique. Comme émetteur de cartes, la banque voyait environ <strong class="accent">30 % de toutes les transactions cartes consommateurs en Belgique</strong>. Côté commerçant (acquiring), elle ne détenait que 7 % du marché. Le board avait fixé une ambition : atteindre 20 % d\'ici 2020.',
-      nl: 'BNP Paribas Fortis had een strategische asymmetrie. Als kaartuitgever zag de bank ongeveer <strong class="accent">30 % van alle consumentenkaarttransacties in België</strong>. Aan de merchant- (acquiring-) zijde had ze slechts 7 % marktaandeel. Het bestuur had een ambitie gezet : 20 % halen tegen 2020.',
-      en: 'BNP Paribas Fortis had a strategic asymmetry. As a card issuer, the bank saw roughly <strong class="accent">30% of all consumer card transactions in Belgium</strong>. On the merchant (acquiring) side, it held only 7% of the market. The board had set an ambition : reach 20% by 2020.'
+      fr: 'Émetteur : <strong class="accent">30 % des flux carte du pays</strong>. Acquirer : <strong class="accent">7 %</strong>. Ambition board : 20 % en 2020.',
+      nl: 'Uitgever : <strong class="accent">30 % van de kaartflows van het land</strong>. Acquirer : <strong class="accent">7 %</strong>. Boardambitie : 20 % tegen 2020.',
+      en: 'Issuer side : <strong class="accent">30% of the country\'s card flows</strong>. Acquirer side : <strong class="accent">7%</strong>. Board ambition : 20% by 2020.'
     },
     'bnp.problem.p2': {
-      fr: 'Pendant ce temps, les PME commerçantes que BNP voulait gagner travaillaient en <strong class="accent">indigence de données</strong>. Aucune vision claire de leurs clients, aucun benchmark contre leurs voisins, aucun insight actionnable. La banque était assise sur une mine d\'or. Les clients en étaient affamés.',
-      nl: 'Ondertussen werkten de kmo-merchants die BNP wilde winnen in <strong class="accent">data-armoede</strong>. Geen duidelijk zicht op hun klanten, geen benchmark tegen hun buren, geen actionable inzichten. De bank zat op een goudmijn. De klanten hadden honger.',
-      en: 'Meanwhile, the SME merchants BNP wanted to win were operating in <strong class="accent">data poverty</strong>. No clear view of who their customers were. No benchmarking against neighbours. No actionable insight. The bank was sitting on a goldmine. The clients were starving.'
+      fr: 'En face : des PME en <strong class="accent">indigence de données</strong>. Mine d\'or côté banque, clients affamés côté commerce.',
+      nl: 'Tegenover : kmo\'s in <strong class="accent">data-armoede</strong>. Goudmijn aan de bankzijde, klanten met honger aan de winkelzijde.',
+      en: 'Across the table : SMEs in <strong class="accent">data poverty</strong>. A goldmine on the bank side, hungry clients on the shop side.'
     },
     'bnp.problem.shiftH3': {
       fr: 'Du transactionnel à <span class="accent">l\'insight.</span>',
@@ -884,6 +884,25 @@
       nl: 'Voorbij het cijfer : een MVP ondertekend door Corporate Banking, IT, Legal en Marketing, zonder GDPR- of datakwaliteits-risico\'s. <strong class="accent">Zes kmo\'s testten het prototype. De Léonidas-groep, op beslissing van haar algemeen directeur, engageert zich om bij lancering aan te kopen voor al haar winkels. Nul weigeringen bij de vijf anderen.</strong> Het commerciële signaal dat de sponsor overtuigde om in productie te gaan. En een bibliotheek van <strong class="accent">9 B2B-persona\'s</strong> die het project overleefde.',
       en: 'Beyond the figure : an MVP signed off by Corporate Banking, IT, Legal and Marketing, de-risked on GDPR and data quality. <strong class="accent">Six SMEs tested the prototype. The Léonidas group, by decision of its general manager, committed to buy on launch for all of its stores. Zero refusals among the five others.</strong> The commercial signal that convinced the sponsor to push for production. And a <strong class="accent">9-persona B2B library</strong> that outlived the project.'
     },
+
+    /* TIMELINE INTRO — graphique synthétique avant l'histoire (entre star-bridge et Chapter S) */
+    'bnp.timeline.eyebrow': {
+      fr: 'Six mois · en un coup d\'œil',
+      nl: 'Zes maanden · in één oogopslag',
+      en: 'Six months · at a glance'
+    },
+    'bnp.timeline.t1.when': { fr: 'Q3 2017', nl: 'Q3 2017', en: 'Q3 2017' },
+    'bnp.timeline.t1.what': { fr: 'Brief reçu', nl: 'Briefing ontvangen', en: 'Brief received' },
+    'bnp.timeline.t2.when': { fr: 'Oct 2017', nl: 'Okt 2017', en: 'Oct 2017' },
+    'bnp.timeline.t2.what': { fr: 'VPC + Lean Canvas', nl: 'VPC + Lean Canvas', en: 'VPC + Lean Canvas' },
+    'bnp.timeline.t3.when': { fr: 'Nov–Déc 2017', nl: 'Nov–Dec 2017', en: 'Nov–Dec 2017' },
+    'bnp.timeline.t3.what': { fr: '6 PME interviewées', nl: '6 kmo\'s geïnterviewd', en: '6 SMEs interviewed' },
+    'bnp.timeline.t4.when': { fr: 'Q1 2018', nl: 'Q1 2018', en: 'Q1 2018' },
+    'bnp.timeline.t4.what': { fr: 'Blueprint + prototypes Spotfire', nl: 'Blueprint + Spotfire-prototypes', en: 'Blueprint + Spotfire prototypes' },
+    'bnp.timeline.t5.when': { fr: 'Mars 2018', nl: 'Maart 2018', en: 'March 2018' },
+    'bnp.timeline.t5.what': { fr: '6 testées · 1 promesse · 0 refus', nl: '6 getest · 1 belofte · 0 weigeringen', en: '6 tested · 1 commitment · 0 refusals' },
+    'bnp.timeline.t6.when': { fr: 'Q2 2018', nl: 'Q2 2018', en: 'Q2 2018' },
+    'bnp.timeline.t6.what': { fr: 'Sponsor go production', nl: 'Sponsor go productie', en: 'Sponsor go production' },
 
     /* FRICTIONS & ALIGNMENT — Act R chute marketing, 4 fonctions → bébé de tout le monde → empathie utilisateur */
     'bnp.alignment.eyebrow': {

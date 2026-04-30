@@ -454,6 +454,77 @@ section.tldr { padding: 60px 0 70px; }
   .triwin-svg .tw-node, .triwin-svg .tw-label { opacity: 1; transform: none; }
 }
 
+/* TIMELINE INTRO — graphique synthétique entre star-bridge et Chapter S */
+.timeline-intro {
+  padding: 60px 0 56px;
+  background:
+    radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--amber) 6%, transparent) 0%, transparent 70%);
+}
+.timeline-intro .eyebrow {
+  display: block; text-align: center; margin-bottom: 56px;
+}
+.ti-line {
+  list-style: none; padding: 0; margin: 0;
+  position: relative;
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px;
+  max-width: 1100px; margin: 0 auto;
+}
+/* The base line — full width, muted */
+.ti-line::before {
+  content: ""; position: absolute; left: 8%; right: 8%; top: 22px; height: 1px;
+  background: var(--border);
+  z-index: 0;
+}
+/* The progress line — draws in via --ti-fill set by motion.js */
+.ti-line::after {
+  content: ""; position: absolute; left: 8%; top: 22px; height: 1px;
+  background: linear-gradient(90deg, var(--amber), color-mix(in srgb, var(--amber) 60%, transparent));
+  width: calc(84% * var(--ti-fill, 0));
+  transition: width 1.8s cubic-bezier(.16,1,.3,1);
+  z-index: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ti-line::after { width: 84%; transition: none; }
+}
+.ti-node {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 6px;
+  padding-top: 46px;
+}
+.ti-dot {
+  position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+  width: 14px; height: 14px; border-radius: 99px;
+  background: var(--bg);
+  border: 1.5px solid var(--amber);
+  transition: transform .35s ease, background .25s ease;
+}
+.ti-node--accent .ti-dot {
+  background: var(--amber);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--amber) 18%, transparent),
+              0 0 20px color-mix(in srgb, var(--amber) 35%, transparent);
+}
+.ti-node:hover .ti-dot { transform: translateX(-50%) scale(1.18); }
+.ti-when {
+  font-family: var(--sans); font-size: 10px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--amber);
+}
+.ti-what {
+  font-family: var(--sans); font-size: 12.5px; font-weight: 500;
+  line-height: 1.4; color: var(--fg-muted);
+  max-width: 16ch;
+}
+.ti-node--accent .ti-what { color: var(--fg); font-weight: 600; }
+@media (max-width: 980px) {
+  .ti-line { grid-template-columns: repeat(3, 1fr); gap: 36px 12px; }
+  .ti-line::before, .ti-line::after { display: none; }
+  .ti-node { padding-top: 38px; }
+}
+@media (max-width: 560px) {
+  .ti-line { grid-template-columns: 1fr 1fr; gap: 28px 10px; }
+}
+
 /* FRICTIONS & ALIGNMENT — Act R chute marketing : 4 fonctions, double diamond outil d'alignement, "bébé de tout le monde" */
 #alignment { padding: 100px 0 90px; position: relative; }
 #alignment .lead { max-width: 70ch; margin-top: 18px; color: var(--fg-muted); }
