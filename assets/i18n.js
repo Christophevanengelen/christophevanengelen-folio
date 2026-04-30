@@ -47,9 +47,9 @@
       en: 'Service design that<br><span class="alt">decides.</span>'
     },
     'home.lead': {
-      fr: 'Je suis Christophe van Engelen, Service Designer freelance à Bruxelles. Je travaille en amont, là où une donnée, un objectif business ou une asymétrie stratégique devient un service que quelqu\'un accepte de payer.',
-      nl: 'Ik ben Christophe van Engelen, freelance Service Designer in Brussel. Ik werk upstream, daar waar data, een businessdoel of een strategische asymmetrie een dienst wordt waar iemand voor wil betalen.',
-      en: 'I\'m Christophe van Engelen, freelance Service Designer in Brussels. I work upstream, where data, a business goal or a strategic asymmetry becomes a service someone will pay for.'
+      fr: 'Christophe van Engelen, Service Designer freelance à Bruxelles. Je travaille upstream — là où une donnée ou une asymétrie stratégique devient un service que quelqu\'un paie.',
+      nl: 'Christophe van Engelen, freelance Service Designer in Brussel. Ik werk upstream — daar waar data of een strategische asymmetrie een dienst wordt waar iemand voor betaalt.',
+      en: 'Christophe van Engelen, freelance Service Designer in Brussels. I work upstream — where data or a strategic asymmetry becomes a service someone pays for.'
     },
     'home.casesEyebrow': { fr: 'Travaux sélectionnés', nl: 'Geselecteerd werk', en: 'Selected work' },
     'home.casesH2': {
@@ -1125,17 +1125,17 @@
       en: 'How I\'d approach<br>my <span class="alt">first 90 days.</span>'
     },
     'luminus.lead': {
-      fr: 'Je n\'arriverais pas avec des réponses sur Luminus. Je ne les ai pas. J\'arriverais avec une manière structurée de les trouver, et un calendrier honnête. Voici trois phases, neuf semaines, et le premier dossier de décision que je poserais sur la table.',
-      nl: 'Ik zou niet binnenkomen met antwoorden over Luminus. Die heb ik niet. Ik zou binnenkomen met een gestructureerde manier om ze te vinden, en een eerlijk tijdsschema. Drie fases, negen weken, en het eerste beslissingsdocument dat ik op tafel zou leggen.',
-      en: 'I wouldn\'t arrive with answers about Luminus. I don\'t have them. I\'d arrive with a structured way of finding them, and an honest timeline. Three phases, nine weeks, and the first decision document I\'d put on the table.'
+      fr: 'Pas de réponses toutes faites. Une méthode pour les trouver. Trois phases, douze semaines, un dossier de décision sur la table.',
+      nl: 'Geen kant-en-klare antwoorden. Een methode om ze te vinden. Drie fases, twaalf weken, een beslissingspakket op tafel.',
+      en: 'No ready-made answers. A method to find them. Three phases, twelve weeks, a decision pack on the table.'
     },
 
     'luminus.p1.eyebrow': { fr: 'Phase 1 · Semaines 1 à 3', nl: 'Fase 1 · Weken 1 tot 3', en: 'Phase 1 · Weeks 1 to 3' },
     'luminus.p1.h': { fr: 'Écouter.', nl: 'Luisteren.', en: 'Listen.' },
     'luminus.p1.p': {
-      fr: 'Trois semaines de shadowing et d\'entretiens, pas de production. Je suivrais une journée du Corporate Sales Manager, une journée d\'un membre de la stratégie B2B, une journée d\'IT et Data, et un appel client B2B en live. Côté externe, je mènerais cinq entretiens semi-structurés avec des PME clientes Luminus déjà engagées dans la transition (PV, batterie, EV, contrats flexibles).',
-      nl: 'Drie weken shadowing en interviews, geen productie. Ik zou een dag meelopen met de Corporate Sales Manager, een dag bij iemand uit B2B-strategie, een dag bij IT en Data, en een live klantgesprek B2B bijwonen. Extern zou ik vijf semi-gestructureerde interviews voeren met Luminus-kmo-klanten die al engageren in de transitie (PV, batterij, EV, flexibele contracten).',
-      en: 'Three weeks of shadowing and interviews, no production. I would shadow a Corporate Sales Manager for a day, someone from B2B strategy for a day, IT and Data for a day, and sit in on a live B2B customer call. Outside, I would run five semi-structured interviews with Luminus SME clients already engaged in the transition (PV, battery, EV, flexible contracts).'
+      fr: 'Shadowing interne · 1 jour Corporate Sales · 1 jour B2B Strategy · 1 jour IT & Data · 1 appel client live. <strong>Externe</strong> · 5 PME Luminus en transition (PV, batterie, EV, contrats flex). Pas de production en phase 1.',
+      nl: 'Intern shadowing · 1 dag Corporate Sales · 1 dag B2B Strategy · 1 dag IT & Data · 1 live klantgesprek. <strong>Extern</strong> · 5 Luminus-kmo\'s in transitie (PV, batterij, EV, flex-contracten). Geen productie in fase 1.',
+      en: 'Internal shadowing · 1 day Corporate Sales · 1 day B2B Strategy · 1 day IT & Data · 1 live customer call. <strong>External</strong> · 5 Luminus SMEs in transition (PV, battery, EV, flex contracts). No production in phase 1.'
     },
     'luminus.p1.deliv': {
       fr: 'Livrable de fin de phase : carte des stakeholders, 5 verbatims clients, et trois hypothèses initiales sur la « zone Léonidas » de Luminus.',
@@ -1146,9 +1146,9 @@
     'luminus.p2.eyebrow': { fr: 'Phase 2 · Semaines 4 à 8', nl: 'Fase 2 · Weken 4 tot 8', en: 'Phase 2 · Weeks 4 to 8' },
     'luminus.p2.h': { fr: 'Cadrer.', nl: 'Kaderen.', en: 'Frame.' },
     'luminus.p2.p': {
-      fr: 'Cinq semaines pour transformer les hypothèses en options testables. Pour chaque candidat MVP que j\'aurai identifié pendant l\'écoute (par exemple : un service flex-management pour PME énergivores, ou une couche d\'insight sur la consommation comparée aux pairs sectoriels), je produirais un mini Lean Canvas, une carte des risques (légal, régulatoire, technique, ROI) et une estimation du « coût de non-action ». Je présenterais à la mi-phase un comparatif des candidats, en groupe restreint.',
-      nl: 'Vijf weken om hypotheses om te zetten in testbare opties. Voor elke MVP-kandidaat die ik tijdens de luisterfase identificeer (bijvoorbeeld : een flex-managementservice voor energie-intensieve kmo\'s, of een laag insight over verbruik vergeleken met sectoorpeers), zou ik een mini Lean Canvas maken, een risicokaart (legal, regulatoir, technisch, ROI) en een schatting van de "kostprijs van niet-actie". Halverwege fase zou ik een vergelijking van de kandidaten in beperkte groep voorstellen.',
-      en: 'Five weeks to turn hypotheses into testable options. For each MVP candidate identified during the listen phase (for example : a flex-management service for energy-intensive SMEs, or an insight layer comparing consumption to sector peers), I would produce a mini Lean Canvas, a risk map (legal, regulatory, technical, ROI), and an estimate of the "cost of inaction". Mid-phase I\'d present a candidate comparison in a restricted group.'
+      fr: 'Hypothèses → options testables. Par candidat MVP : mini Lean Canvas + carte des risques (légal, régulatoire, technique, ROI) + coût de non-action. Mi-phase : comparatif en groupe restreint.',
+      nl: 'Hypotheses → testbare opties. Per MVP-kandidaat : mini Lean Canvas + risicokaart (legal, regulatoir, technisch, ROI) + kostprijs van niet-actie. Halverwege : vergelijking in beperkte groep.',
+      en: 'Hypotheses → testable options. Per MVP candidate : mini Lean Canvas + risk map (legal, regulatory, technical, ROI) + cost of inaction. Mid-phase : comparison in a restricted group.'
     },
     'luminus.p2.deliv': {
       fr: 'Livrable de fin de phase : trois candidats MVP cadrés (Lean Canvas + risques + ROI), un recommandé.',
@@ -1159,9 +1159,9 @@
     'luminus.p3.eyebrow': { fr: 'Phase 3 · Semaines 9 à 12', nl: 'Fase 3 · Weken 9 tot 12', en: 'Phase 3 · Weeks 9 to 12' },
     'luminus.p3.h': { fr: 'Livrer le premier dossier de décision.', nl: 'Het eerste beslissingsdocument leveren.', en: 'Ship the first decision pack.' },
     'luminus.p3.p': {
-      fr: 'Quatre semaines pour livrer un dossier exécutif sur le candidat recommandé. Roadmap séquencée (90 jours, 12 mois, 24 mois). Registre des risques. Matrice de trade-offs. Une logique Triple-Win Luminus (utilité · client B2B · ménage final). Et une proposition de pilote concret : un client B2B nominé, six mois, KPI mesurable. Le but n\'est pas que ce dossier soit lu. Le but est qu\'il soit décidé.',
-      nl: 'Vier weken om een executive document te leveren over de aanbevolen kandidaat. Gefaseerde roadmap (90 dagen, 12 maanden, 24 maanden). Risicoregister. Trade-off-matrix. Een Triple-Win Luminus-logica (nut · B2B-klant · eindgezin). En een concreet pilotvoorstel : één benoemde B2B-klant, zes maanden, meetbare KPI. Het doel is niet dat dit document wordt gelezen. Het doel is dat het wordt beslist.',
-      en: 'Four weeks to deliver an executive document on the recommended candidate. Sequenced roadmap (90 days, 12 months, 24 months). Risk register. Trade-off matrix. A Luminus Triple-Win logic (utility · B2B customer · end household). And a concrete pilot proposal : one named B2B customer, six months, measurable KPI. The goal isn\'t to be read. It\'s to be decided.'
+      fr: 'Roadmap séquencée 90 j / 12 m / 24 m. Registre des risques. Matrice trade-offs. Triple-Win Luminus (utilité · client B2B · ménage final). Pilote nominé · 6 mois · KPI mesurable. <strong class="accent">Construit pour être décidé, pas lu.</strong>',
+      nl: 'Gefaseerde roadmap 90 d / 12 m / 24 m. Risicoregister. Trade-off-matrix. Triple-Win Luminus (nut · B2B-klant · eindgezin). Genomineerde pilot · 6 maanden · meetbare KPI. <strong class="accent">Gebouwd om beslist te worden, niet gelezen.</strong>',
+      en: 'Sequenced roadmap 90 d / 12 m / 24 m. Risk register. Trade-off matrix. Triple-Win Luminus (utility · B2B customer · end household). Named pilot · 6 months · measurable KPI. <strong class="accent">Built to be decided on, not read.</strong>'
     },
     'luminus.p3.deliv': {
       fr: 'Livrable de fin de phase : dossier de décision exécutif, prêt à signer.',
