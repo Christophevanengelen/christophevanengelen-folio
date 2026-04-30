@@ -134,6 +134,37 @@
     });
   });
 
+  /* STAR menu progress bar : fill grows from 0 to 1 across the 4 acts.
+     Maps body[data-act] to a fraction : S=0.10, T=0.40, A=0.65, R=0.92.
+     Subtle, gives the user a 'where am I in the story' visual cue. */
+  const starMenuEl = document.querySelector('.star-menu');
+  if (starMenuEl) {
+    const progressMap = { S: 0.12, T: 0.40, A: 0.66, R: 0.92 };
+    const updateStarProgress = () => {
+      const act = document.body.dataset.act;
+      if (act && progressMap[act] != null) {
+        starMenuEl.style.setProperty('--star-progress', progressMap[act]);
+      }
+    };
+    /* Watch for data-act changes via MutationObserver */
+    new MutationObserver(updateStarProgress)
+      .observe(document.body, { attributes: true, attributeFilter: ['data-act'] });
+    updateStarProgress();
+  }
+
+  /* Storyline timeline (#proposed-roadmap) : click on a jalon node to jump
+     to that anchor (smooth via Lenis if available). */
+  document.querySelectorAll('.psl-node[data-anchor]').forEach((node) => {
+    node.addEventListener('click', (e) => {
+      const sel = node.getAttribute('data-anchor');
+      const target = sel && document.querySelector(sel);
+      if (!target) return;
+      e.preventDefault();
+      if (lenis) lenis.scrollTo(target, { offset: -80, duration: 1.2 });
+      else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
   /* STAR menu sticky guide : show after Hero, hide on Fin Royale.
      Active state comes from body[data-act] CSS rules.
      Bonus : when the user scrolls past the inline Roadmap (#roadmap, Act T), the
