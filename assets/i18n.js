@@ -117,9 +117,9 @@
     'bnp.hero.h1.start': { fr: 'Enterprise', nl: 'Enterprise', en: 'Enterprise' },
     'bnp.hero.h1.alt': { fr: 'Intelligence.', nl: 'Intelligence.', en: 'Intelligence.' },
     'bnp.hero.lead': {
-      fr: 'Dans le pilier New Business Revenue, BNP commercialisait ses données pour faire profiter les PME du big data — comme en profitent déjà les grands comptes. Une banque est assise sur ses données transactionnelles comme un Facebook sur les siennes : un autre type de données, parfois plus pertinent pour les décisions marketing et les arbitrages business d\'un commerçant.',
-      nl: 'In de New Business Revenue-pijler commercialiseerde BNP haar data om kmo\'s te laten profiteren van big data — zoals grote bedrijven dat al doen. Een bank zit op haar transactiedata zoals een Facebook op de zijne : een ander type data, soms relevanter voor de marketingkeuzes en businessafwegingen van een merchant.',
-      en: 'Within the New Business Revenue pillar, BNP was monetising its data to give SMEs access to big data — the way big enterprises already enjoy it. A bank sits on its transactional data like Facebook sits on its own : a different kind of data, sometimes more relevant for the marketing calls and business trade-offs a shopkeeper has to make.'
+      fr: 'Dans le pilier New Business Revenue, BNP voulait vendre ses données aux segments et personas qui en auraient besoin pour mieux piloter leur business. Mon rôle : faciliter le travail cross-silos, mettre tout le monde autour de la table, définir la value proposition après la phase de recherche, prototyper le service, et tester la traction du marché.',
+      nl: 'Binnen de New Business Revenue-pijler wilde BNP haar data verkopen aan de segmenten en persona\'s die ze nodig hadden om hun business beter te sturen. Mijn rol : het cross-silo-werk faciliteren, iedereen rond dezelfde tafel brengen, de value proposition vastleggen na de onderzoeksfase, het service prototypen, en de markttractie testen.',
+      en: 'Within the New Business Revenue pillar, BNP wanted to sell its data to the segments and personas that needed it to better drive their business. My role : facilitate the cross-silo work, get everyone around the same table, frame the value proposition after the research phase, prototype the service, and test market traction.'
     },
     'bnp.hero.kpi1': {
       fr: 'des flux carte conso vus par BNP<br>la matière première du new business revenue',
