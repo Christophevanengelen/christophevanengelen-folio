@@ -341,7 +341,7 @@ hr { border: 0; height: 1px; background: var(--border); margin: 60px 0; }
     /* Vignette to focus the eye */
     radial-gradient(ellipse at 50% 100%, transparent 30%, color-mix(in srgb, var(--bg) 70%, transparent) 95%),
     /* The actual photo */
-    url("../public/img/leonidas_chocolates_bg.jpg");
+    url("../public/img/leonidas_chocolates_bg.jpg?v=leo1");
   background-size: cover, cover, cover;
   background-position: center, center, center 40%;
   background-repeat: no-repeat;
