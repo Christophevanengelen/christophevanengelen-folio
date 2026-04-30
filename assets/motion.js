@@ -376,22 +376,41 @@
 
     const metaChildren = meta.querySelectorAll('.chapter-label, .chapter-title, .chapter-lead');
 
-    /* Roman letter : slow parallax. Climax act R gets a stronger arc (scale + opacity)
-       to mark it visually as the pic of the narrative. */
+    /* Roman letter : zoom-in dramatique sur les transitions STAR.
+       La lettre vient de loin (scale 0.5), s'avance (scale 1.4 au pic),
+       puis recule légèrement (1.1 quand on quitte). Climax R encore plus fort. */
     const isClimaxR = chap.dataset.chapter === 'R';
     const fromState = isClimaxR
-      ? { scale: 0.86, opacity: 0.06, yPercent: 22 }
-      : { scale: 0.92, opacity: 0.08, yPercent: 18 };
-    const toState = isClimaxR
-      ? { scale: 1.34, opacity: 0.42, yPercent: -22, ease: 'none' }
-      : { scale: 1.18, opacity: 0.28, yPercent: -18, ease: 'none' };
+      ? { scale: 0.45, opacity: 0.0, yPercent: 30 }
+      : { scale: 0.55, opacity: 0.0, yPercent: 24 };
+    const peakScale = isClimaxR ? 1.55 : 1.35;
+    const peakOpacity = isClimaxR ? 0.46 : 0.32;
+    /* Two-segment scrub : 0 → 50% : zoom-in (scale 0.55→peak, opacity 0→peak),
+       50 → 100% : settle back (scale peak→1.0, opacity peak→0.10). */
     gsap.fromTo(roman, fromState, {
-      ...toState,
+      keyframes: [
+        { scale: peakScale, opacity: peakOpacity, yPercent: 0, duration: 0.5, ease: 'power2.out' },
+        { scale: 1.0, opacity: 0.10, yPercent: -16, duration: 0.5, ease: 'power2.in' },
+      ],
+      ease: 'none',
       scrollTrigger: {
         trigger: chap,
         start: 'top bottom',
         end: 'bottom top',
-        scrub: 1.2,
+        scrub: 1.0,
+        invalidateOnRefresh: true,
+      },
+    });
+
+    /* Meta block : zoom-in subtle synchronised with roman peak — the title
+       advances toward the viewer at the same moment the letter peaks. */
+    gsap.fromTo(meta, { scale: 0.94 }, {
+      scale: 1.0, ease: 'power2.out',
+      scrollTrigger: {
+        trigger: chap,
+        start: 'top 80%',
+        end: 'top 30%',
+        scrub: 1.0,
         invalidateOnRefresh: true,
       },
     });

@@ -186,32 +186,32 @@
     'bnp.chapS.label': { fr: 'Situation · L\'observation', nl: 'Situation · De observatie', en: 'Situation · Observation' },
     'bnp.chapS.title': { fr: 'L\'observation.', nl: 'De observatie.', en: 'Observation.' },
     'bnp.chapS.lead': {
-      fr: 'Avant de proposer, observer. Une banque, une donnée, une équipe qui appelle.',
-      nl: 'Voor er een voorstel komt, eerst observeren. Een bank, de data, een team dat belt.',
-      en: 'Before proposing, observe. A bank, the data, a team that calls.'
+      fr: 'Avant de proposer, comprendre. Le terrain enseigne ce que la donnée seule ne dit jamais : ce qu\'un commerçant choisit de faire avec ce qu\'il sait.',
+      nl: 'Eerst begrijpen, dan voorstellen. Het terrein leert wat de data alleen nooit zegt : wat een merchant kiest te doen met wat hij weet.',
+      en: 'Understand before proposing. The shop floor teaches what data alone never says : what a shopkeeper chooses to do with what he knows.'
     },
 
     /* ============== CHAPTER DIVIDERS (T/A/R — cinematic narrative structure) ============== */
     'bnp.chap1.label': { fr: 'Task · La proposition', nl: 'Task · Het voorstel', en: 'Task · The proposal' },
     'bnp.chap1.title': { fr: 'La proposition.', nl: 'Het voorstel.', en: 'The proposal.' },
     'bnp.chap1.lead': {
-      fr: 'Pas un dashboard. Un service. Six étapes pour faire le pont.',
-      nl: 'Geen dashboard. Een dienst. Zes stappen om de brug te slaan.',
-      en: 'Not a dashboard. A service. Six steps to bridge it.'
+      fr: 'Le bon problème vaut la moitié de la solution. Reframer la donnée brute en service que le commerçant achète, parce qu\'il décide mieux avec.',
+      nl: 'Het juiste probleem is de helft van de oplossing. De ruwe data herkaderen tot een dienst die de merchant koopt, omdat hij er betere beslissingen mee neemt.',
+      en: 'The right problem is half the solution. Reframe raw data into a service the merchant buys, because it sharpens the calls he has to make.'
     },
     'bnp.chap2.label': { fr: 'Action · La démarche', nl: 'Action · De aanpak', en: 'Action · The approach' },
     'bnp.chap2.title': { fr: 'La démarche.', nl: 'De aanpak.', en: 'The approach.' },
     'bnp.chap2.lead': {
-      fr: 'Double diamond. Six mois. Cross-départemental. Des ateliers qui mettent l\'utilisateur au centre.',
-      nl: 'Double diamond. Zes maanden. Cross-departementaal. Workshops die de gebruiker centraal stellen.',
-      en: 'Double diamond. Six months. Cross-departmental. Workshops that put the user at the centre.'
+      fr: 'Aligner quatre fonctions sur la même PME. Le double diamant tient le rythme : on diverge pour comprendre, on converge pour décider, deux fois.',
+      nl: 'Vier functies uitlijnen op dezelfde kmo. De double diamond houdt het ritme : divergeren om te begrijpen, convergeren om te beslissen, twee keer.',
+      en: 'Align four functions on the same SME. The double diamond holds the tempo : diverge to understand, converge to decide, twice.'
     },
     'bnp.chap3.label': { fr: 'Result · Le résultat', nl: 'Result · Het resultaat', en: 'Result · The outcome' },
     'bnp.chap3.title': { fr: 'Le résultat.', nl: 'Het resultaat.', en: 'The outcome.' },
     'bnp.chap3.lead': {
-      fr: 'Léonidas, dans les interviews dès le départ. Au prototype : « on achète ».',
-      nl: 'Léonidas, vanaf de eerste interviews. Bij het prototype: "we kopen het".',
-      en: 'Léonidas, in the interviews from day one. At the prototype: "we buy it".'
+      fr: 'Le résultat ne se déclare pas, il se prouve. Six PME testent, une dit oui par écrit, zéro refus chez les autres. Le sponsor a son signal.',
+      nl: 'Het resultaat verklaar je niet, je bewijst het. Zes kmo\'s testen, één zegt schriftelijk ja, nul weigeringen bij de anderen. De sponsor heeft zijn signaal.',
+      en: 'A result is not declared, it\'s proven. Six SMEs test, one signs yes in writing, zero refusals among the others. The sponsor has his signal.'
     },
     'bnp.chapBridge.label': { fr: 'Pont', nl: 'Brug', en: 'Bridge' },
     'bnp.chapBridge.title': { fr: 'Vers Luminus.', nl: 'Naar Luminus.', en: 'To Luminus.' },
