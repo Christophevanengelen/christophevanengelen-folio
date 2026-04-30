@@ -1208,6 +1208,76 @@
   </div>
 </section>
 
+<!-- STAKEHOLDER MAP — Act S, qui était autour de la table (E5.4) -->
+<section class="stakeholder-map" data-act="S">
+  <div class="container">
+    <span class="eyebrow" data-i18n="bnp.stk.eyebrow">Qui était autour de la table</span>
+    <h3 class="stk-title" data-i18n-html="bnp.stk.h3">Le réseau d'acteurs <span class="accent">à aligner.</span></h3>
+    <p class="lead stk-lead" data-i18n="bnp.stk.lead">Service designer au centre. Quatre fonctions internes, le sponsor exécutif, et le commerçant final. La carte qui a guidé chaque atelier.</p>
+
+    <svg class="stk-svg" viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stk-svg-title">
+      <title id="stk-svg-title">Stakeholder map · Service designer au centre, 4 fonctions internes, sponsor, commerçant final</title>
+      <!-- Edges from center to each stakeholder -->
+      <g class="stk-edges" stroke="currentColor" stroke-width="1" fill="none" opacity="0.45">
+        <line class="stk-edge" x1="400" y1="260" x2="400" y2="80"/>
+        <line class="stk-edge" x1="400" y1="260" x2="690" y2="180"/>
+        <line class="stk-edge" x1="400" y1="260" x2="690" y2="380"/>
+        <line class="stk-edge" x1="400" y1="260" x2="400" y2="460"/>
+        <line class="stk-edge" x1="400" y1="260" x2="110" y2="380"/>
+        <line class="stk-edge" x1="400" y1="260" x2="110" y2="180"/>
+      </g>
+      <!-- Center : Service Designer (CVE) -->
+      <g class="stk-node stk-node--me">
+        <circle cx="400" cy="260" r="62" fill="currentColor" opacity="0.10"/>
+        <circle cx="400" cy="260" r="48" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="400" y="256" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" letter-spacing="2" fill="currentColor">SERVICE</text>
+        <text x="400" y="272" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" letter-spacing="2" fill="currentColor">DESIGNER</text>
+      </g>
+      <!-- Top : Sponsor exécutif (anchor of decision) -->
+      <g class="stk-node stk-node--sponsor">
+        <circle cx="400" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="400" y="40" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">SPONSOR</text>
+        <text x="400" y="54" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">EXÉCUTIF</text>
+        <text x="400" y="70" text-anchor="middle" font-family="Manrope" font-size="8" font-style="italic" fill="currentColor" opacity="0.65">décide le go</text>
+      </g>
+      <!-- Right top : Corporate Banking -->
+      <g class="stk-node">
+        <circle cx="690" cy="160" r="32" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="690" y="150" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">CORPORATE</text>
+        <text x="690" y="164" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">BANKING</text>
+        <text x="690" y="180" text-anchor="middle" font-family="Manrope" font-size="8" font-style="italic" fill="currentColor" opacity="0.65">veut du revenu</text>
+      </g>
+      <!-- Right bottom : IT & Data -->
+      <g class="stk-node">
+        <circle cx="690" cy="360" r="32" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="690" y="358" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">IT &amp; DATA</text>
+        <text x="690" y="378" text-anchor="middle" font-family="Manrope" font-size="8" font-style="italic" fill="currentColor" opacity="0.65">veut builder</text>
+      </g>
+      <!-- Bottom : Marketing -->
+      <g class="stk-node">
+        <circle cx="400" cy="475" r="32" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="400" y="479" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">MARKETING</text>
+        <text x="400" y="495" text-anchor="middle" font-family="Manrope" font-size="8" font-style="italic" fill="currentColor" opacity="0.65">veut tout mesurer</text>
+      </g>
+      <!-- Left bottom : Legal & Compliance -->
+      <g class="stk-node">
+        <circle cx="110" cy="360" r="32" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="110" y="354" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">LEGAL &amp;</text>
+        <text x="110" y="368" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">COMPLIANCE</text>
+        <text x="110" y="384" text-anchor="middle" font-family="Manrope" font-size="8" font-style="italic" fill="currentColor" opacity="0.65">veut zéro risque</text>
+      </g>
+      <!-- Left top : Merchant SME (the user voice) -->
+      <g class="stk-node stk-node--user">
+        <circle cx="110" cy="160" r="34" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4,3"/>
+        <text x="110" y="154" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">PME</text>
+        <text x="110" y="168" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" letter-spacing="1.5" fill="currentColor">COMMERÇANTE</text>
+        <text x="110" y="184" text-anchor="middle" font-family="Manrope" font-size="8" font-style="italic" fill="currentColor" opacity="0.65">au centre via la voix</text>
+      </g>
+    </svg>
+    <p class="stk-cap" data-i18n="bnp.stk.cap">Le commerçant n'était pas dans la salle. Sa voix l'était — captée en interview, portée à chaque atelier, au centre de chaque arbitrage.</p>
+  </div>
+</section>
+
 <!-- BARRIÈRES INTRO SLIDE · transition typographique avant le horizontal pin (Act S — observation) -->
 <section class="bi-slide" data-act="S">
   <div class="bi-num" aria-hidden="true">06</div>

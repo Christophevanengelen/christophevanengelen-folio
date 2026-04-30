@@ -885,6 +885,28 @@
       en: 'MVP signed by Banking + IT + Legal + Marketing. GDPR and data quality de-risked. <strong class="accent">9 B2B personas</strong> that outlived the project.'
     },
 
+    /* STAKEHOLDER MAP — Act S, qui était autour de la table */
+    'bnp.stk.eyebrow': {
+      fr: 'Qui était autour de la table',
+      nl: 'Wie zat aan tafel',
+      en: 'Who sat at the table'
+    },
+    'bnp.stk.h3': {
+      fr: 'Le réseau d\'acteurs <span class="accent">à aligner.</span>',
+      nl: 'Het netwerk van actoren <span class="accent">om uit te lijnen.</span>',
+      en: 'The network of actors <span class="accent">to align.</span>'
+    },
+    'bnp.stk.lead': {
+      fr: 'Service designer au centre. Quatre fonctions internes, le sponsor exécutif, et le commerçant final. La carte qui a guidé chaque atelier.',
+      nl: 'Service designer in het centrum. Vier interne functies, de executive sponsor, en de eindmerchant. De kaart die elke workshop stuurde.',
+      en: 'Service designer at the centre. Four internal functions, the executive sponsor, and the final merchant. The map that guided every workshop.'
+    },
+    'bnp.stk.cap': {
+      fr: 'Le commerçant n\'était pas dans la salle. Sa voix l\'était — captée en interview, portée à chaque atelier, au centre de chaque arbitrage.',
+      nl: 'De merchant zat niet in de zaal. Zijn stem wel — opgenomen in interviews, meegedragen naar elke workshop, in het centrum van elke arbitrage.',
+      en: 'The merchant wasn\'t in the room. His voice was — captured in interviews, carried into every workshop, at the centre of every arbitration.'
+    },
+
     /* TIMELINE INTRO — graphique synthétique avant l'histoire (entre star-bridge et Chapter S) */
     'bnp.timeline.eyebrow': {
       fr: 'Six mois · en un coup d\'œil',

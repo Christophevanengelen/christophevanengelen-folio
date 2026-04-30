@@ -454,6 +454,22 @@ section.tldr { padding: 60px 0 70px; }
   .triwin-svg .tw-node, .triwin-svg .tw-label { opacity: 1; transform: none; }
 }
 
+/* STAKEHOLDER MAP — Act S, qui était autour de la table (E5.4) */
+.stakeholder-map { padding: 90px 0 80px; color: var(--amber); }
+.stakeholder-map .container { max-width: 980px; }
+.stakeholder-map .eyebrow { display: inline-block; margin-bottom: 14px; }
+.stk-title { color: var(--fg); margin: 8px 0 16px; }
+.stk-lead { color: var(--fg-muted); max-width: 64ch; margin-bottom: 36px; }
+.stk-svg { width: 100%; height: auto; max-width: 800px; display: block; margin: 0 auto; }
+.stk-svg .stk-node { transition: transform .35s ease, opacity .35s ease; transform-origin: center; transform-box: fill-box; }
+.stk-svg .stk-node:hover { transform: scale(1.06); }
+.stk-svg .stk-node--me circle:first-child { fill: color-mix(in srgb, var(--amber) 18%, transparent); }
+.stk-svg .stk-node--me text { fill: var(--amber); }
+.stk-svg .stk-node--sponsor circle { stroke-width: 2; }
+.stk-svg .stk-node--user circle { stroke: var(--amber); }
+.stk-cap { margin-top: 26px; max-width: 60ch; color: var(--fg-muted); font-size: 14px; line-height: 1.65; }
+@media (max-width: 720px) { .stakeholder-map { padding: 60px 0 56px; } }
+
 /* TIMELINE INTRO — graphique synthétique entre star-bridge et Chapter S */
 .timeline-intro {
   padding: 60px 0 56px;
