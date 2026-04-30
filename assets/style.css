@@ -493,6 +493,18 @@ section.tldr { padding: 60px 0 70px; }
   opacity: 1; pointer-events: auto;
   transform: translateX(-50%) translateY(0);
 }
+/* Pulse when the roadmap (Act T) hands off to the menu — first time it appears */
+.star-menu.is-handoff {
+  animation: starMenuHandoff .9s cubic-bezier(.16,1,.3,1) 1;
+}
+@keyframes starMenuHandoff {
+  0%   { transform: translateX(-50%) translateY(0) scale(1); box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 0 0 0 color-mix(in srgb, var(--amber) 50%, transparent); }
+  35%  { transform: translateX(-50%) translateY(0) scale(1.06); box-shadow: 0 14px 34px rgba(0,0,0,0.28), 0 0 0 8px color-mix(in srgb, var(--amber) 18%, transparent); }
+  100% { transform: translateX(-50%) translateY(0) scale(1); box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 0 40px color-mix(in srgb, var(--amber) 8%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .star-menu.is-handoff { animation: none; }
+}
 .star-menu__node {
   display: inline-flex; align-items: center; gap: 6px;
   text-decoration: none;

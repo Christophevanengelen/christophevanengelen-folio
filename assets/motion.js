@@ -135,7 +135,10 @@
   });
 
   /* STAR menu sticky guide : show after Hero, hide on Fin Royale.
-     Active state comes from body[data-act] CSS rules. */
+     Active state comes from body[data-act] CSS rules.
+     Bonus : when the user scrolls past the inline Roadmap (#roadmap, Act T), the
+     menu pulses once — visual handoff from "the proposition in 6 steps" (full
+     roadmap) to "the guide in 4 acts" (sticky menu). */
   const starMenu = document.querySelector('.star-menu');
   const heroEl = document.querySelector('.hcx');
   if (starMenu && heroEl) {
@@ -144,6 +147,17 @@
       onEnter:     () => starMenu.classList.add('is-visible'),
       onLeaveBack: () => starMenu.classList.remove('is-visible'),
     });
+    /* Roadmap → menu handoff pulse (only first time, once: true) */
+    const roadmapEl = document.querySelector('#roadmap');
+    if (roadmapEl) {
+      ScrollTrigger.create({
+        trigger: roadmapEl, start: 'bottom 60%', once: true,
+        onEnter: () => {
+          starMenu.classList.add('is-handoff');
+          setTimeout(() => starMenu.classList.remove('is-handoff'), 1100);
+        },
+      });
+    }
     /* Hide on Fin Royale (closing) — la lecture est finie, plus de menu */
     const finEl = document.querySelector('.fin-royale');
     if (finEl) {
