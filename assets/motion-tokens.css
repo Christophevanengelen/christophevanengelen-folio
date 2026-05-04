@@ -1,0 +1,258 @@
+/* ════════════════════════════════════════════════════════════════════════
+   MOTION TOKENS · Design system motion narratif · CVE 2026-05-03
+   ════════════════════════════════════════════════════════════════════════
+
+   Design system de motion design pour les case studies CVE.
+   À appeler en premier dans la cascade CSS, AVANT style.css du case.
+   À cloner pour case 2/3/N · ne pas modifier les tokens, override en local.
+
+   GRAMMAIRE CANONIQUE (immuable) :
+       TOP-DOWN au passage d'un chap-divider (transition de section)
+       LEFT-RIGHT partout dans une phase (h-pin scroll)
+       AUCUNE exception · aucune section verticale au milieu d'une phase
+
+   USAGE :
+       <link rel="stylesheet" href="assets/motion-tokens.css">
+       <link rel="stylesheet" href="assets/style.css">  (case-spécifique)
+
+   STRUCTURE HTML ATTENDUE :
+       <section class="chapter-divider" id="chap-X" data-chapter="X">
+         <div class="chapter-roman">X</div>
+         <div class="chapter-meta">...</div>
+       </section>
+
+       OU pour outcomes typographiques :
+
+       <section class="chap-vp-statement" id="chap-Y">
+         <div class="chap-vp-statement__inner">
+           <span class="chap-vp-statement__eyebrow">...</span>
+           <p class="chap-vp-statement__phrase">...</p>
+           <p class="chap-vp-statement__footer">...</p>
+         </div>
+       </section>
+
+       Le wrapPhaseRails() (dans motion-engine.js) détecte automatiquement
+       les sections de contenu entre 2 chap-dividers et les wrap en h-pin rail.
+   ════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── DURATIONS · cohérence narrative ── */
+  --m-dolly-duration: 1.6s;
+  --m-meta-duration: 0.8s;
+  --m-meta-stagger: 0.10s;
+  --m-meta-delay-start: 0.85s;
+  --m-stmt-duration: 0.85s;
+  --m-stmt-stagger: 0.18s;
+  --m-strike-duration: 0.9s;
+  --m-strike-delay: 0.55s;
+
+  /* ── EASINGS · vocabulaire fixe ── */
+  --m-ease-cinematic: cubic-bezier(.22, .61, .36, 1);  /* dolly-in profondeur */
+  --m-ease-spring:    cubic-bezier(.16, 1, .3, 1);     /* meta cascade · stmt rise */
+
+  /* ── LETTER DOLLY · états ── */
+  --m-letter-from-scale: 0.30;
+  --m-letter-from-z: -400px;
+  --m-letter-from-blur: 14px;
+  --m-letter-peak-scale: 1.10;
+  --m-letter-peak-opacity: 0.36;
+  --m-letter-rest-opacity: 0.30;
+
+  /* ── DEPTH · perspective ── */
+  --m-perspective: 1200px;
+}
+
+/* Mobile overrides · amplitude réduite */
+@media (max-width: 760px) {
+  :root {
+    --m-letter-from-z: -200px;
+    --m-letter-from-blur: 6px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   KEYFRAMES · les animations atomiques · à ne pas réécrire ailleurs
+   ════════════════════════════════════════════════════════════════════════ */
+
+@keyframes m-letter-dolly {
+  0%   { opacity: 0;
+         transform: scale(var(--m-letter-from-scale)) translateZ(var(--m-letter-from-z));
+         filter: blur(var(--m-letter-from-blur)); }
+  60%  { opacity: var(--m-letter-peak-opacity);
+         transform: scale(var(--m-letter-peak-scale)) translateZ(0);
+         filter: blur(0); }
+  78%  { opacity: calc(var(--m-letter-peak-opacity) - 0.04);
+         transform: scale(0.97); }
+  100% { opacity: var(--m-letter-rest-opacity);
+         transform: scale(1.00); }
+}
+
+@keyframes m-meta-rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes m-stmt-rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes m-strike-draw {
+  to { transform: scaleX(1); }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PAUSE PATTERN A · Chap-divider phase letter (R, A, I, P)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.chapter-divider {
+  perspective: var(--m-perspective);
+  perspective-origin: 50% 50%;
+}
+.chapter-divider .chapter-roman {
+  /* État initial · invisible en profondeur */
+  opacity: 0;
+  transform: scale(var(--m-letter-from-scale)) translateZ(var(--m-letter-from-z));
+  filter: blur(var(--m-letter-from-blur));
+  transform-style: preserve-3d;
+  will-change: transform, opacity, filter;
+}
+.chapter-divider.is-in-view .chapter-roman {
+  animation: m-letter-dolly var(--m-dolly-duration) var(--m-ease-cinematic) forwards;
+}
+
+.chapter-divider .chapter-meta > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.chapter-divider.is-in-view .chapter-meta > * {
+  animation: m-meta-rise var(--m-meta-duration) var(--m-ease-spring) forwards;
+}
+.chapter-divider.is-in-view .chapter-meta > *:nth-child(1) { animation-delay: var(--m-meta-delay-start); }
+.chapter-divider.is-in-view .chapter-meta > *:nth-child(2) { animation-delay: calc(var(--m-meta-delay-start) + var(--m-meta-stagger) * 1); }
+.chapter-divider.is-in-view .chapter-meta > *:nth-child(3) { animation-delay: calc(var(--m-meta-delay-start) + var(--m-meta-stagger) * 2); }
+.chapter-divider.is-in-view .chapter-meta > *:nth-child(4) { animation-delay: calc(var(--m-meta-delay-start) + var(--m-meta-stagger) * 3); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   PAUSE PATTERN B · Outcome typographic statement (VP, CR)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.chap-vp-statement__eyebrow,
+.chap-vp-statement__reject,
+.chap-vp-statement__affirm,
+.chap-vp-statement__footer {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.chap-vp-statement.is-revealing .chap-vp-statement__eyebrow {
+  animation: m-stmt-rise var(--m-stmt-duration) var(--m-ease-spring) 0s forwards;
+}
+.chap-vp-statement.is-revealing .chap-vp-statement__reject {
+  animation: m-stmt-rise var(--m-stmt-duration) var(--m-ease-spring) calc(var(--m-stmt-stagger) * 1) forwards;
+}
+.chap-vp-statement.is-revealing .chap-vp-statement__affirm {
+  animation: m-stmt-rise calc(var(--m-stmt-duration) + 0.10s) var(--m-ease-spring) calc(var(--m-stmt-stagger) * 3) forwards;
+}
+.chap-vp-statement.is-revealing .chap-vp-statement__footer {
+  animation: m-stmt-rise var(--m-stmt-duration) var(--m-ease-spring) calc(var(--m-stmt-stagger) * 6) forwards;
+}
+
+/* Strike "Pas" / "Plus" · barre amber qui se dessine */
+.chap-vp-statement__strike::after {
+  content: "";
+  position: absolute;
+  left: -2px; right: -2px;
+  top: 52%;
+  height: 3px;
+  background: var(--amber);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+.chap-vp-statement.is-revealing .chap-vp-statement__strike::after {
+  animation: m-strike-draw var(--m-strike-duration) var(--m-ease-spring) var(--m-strike-delay) forwards;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PASSAGE PATTERN · h-pin rail per phase
+   wrapPhaseRails() (motion.js) wrappe automatiquement les sections de
+   contenu entre 2 chap-dividers en :
+     <section data-h-pin class="phase-rail">
+       <div class="h-track">
+         <article class="h-panel">...</article>
+         ...
+       </div>
+     </section>
+   Le moteur scroll-narrative.js applique le pin horizontal au scroll.
+   ════════════════════════════════════════════════════════════════════════ */
+
+section[data-h-pin] {
+  position: relative;
+  width: 100%;
+}
+section[data-h-pin].h-active {
+  will-change: transform;
+}
+.h-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  height: 100vh;
+  will-change: transform;
+}
+.h-panel {
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 6vh 6vw;
+  position: relative;
+  overflow-y: auto;  /* Si contenu dépasse 100vh, scroll vertical interne */
+  overflow-x: hidden;
+}
+
+/* Mobile + reduced-motion · stack vertical (fallback géré par scroll-narrative.js) */
+section[data-h-pin].h-stack {
+  height: auto;
+}
+section[data-h-pin].h-stack .h-track {
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  transform: none !important;
+}
+section[data-h-pin].h-stack .h-panel {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   REDUCED-MOTION · accessibility
+   ════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  .chapter-divider .chapter-roman {
+    opacity: var(--m-letter-rest-opacity);
+    transform: none;
+    filter: none;
+    animation: none !important;
+  }
+  .chapter-divider .chapter-meta > * {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+  .chap-vp-statement__eyebrow,
+  .chap-vp-statement__reject,
+  .chap-vp-statement__affirm,
+  .chap-vp-statement__footer {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+  .chap-vp-statement__strike::after {
+    transform: scaleX(1);
+    animation: none !important;
+  }
+}

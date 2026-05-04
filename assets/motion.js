@@ -9,6 +9,87 @@
   const hasST = hasGSAP && typeof window.ScrollTrigger !== 'undefined';
   const hasLenis = typeof window.Lenis !== 'undefined';
 
+  /* ════════════════════════════════════════════════════════════════════════
+     wrapPhaseRails · CVE 2026-05-03 v10 · MOTION GRAMMAR CANONIQUE
+     ════════════════════════════════════════════════════════════════════════
+     Règle absolue (cf memory/feedback_motion_grammar_canonique.md) :
+       - TOP-DOWN ONLY au passage d'un chap-divider
+       - L→R partout dans une phase (h-pin scroll)
+
+     Cette fonction groupe automatiquement les sections entre 2 chap-dividers
+     en un seul rail <section data-h-pin> avec <div class="h-track">. Chaque
+     section interne devient un .h-panel. Le moteur scroll-narrative.js prend
+     le relais et anime le pin horizontal.
+
+     Cas spécial #barriers (legacy h-pin imbriqué) : flatten · ses .h-panel
+     enfants sont déplacés comme siblings dans le rail parent.
+
+     Skipped (rest vertical) : .fin-royale (close · pas une phase).
+
+     Mobile (<900px) + reduced-motion : pas de wrapping · sections empilées
+     verticalement comme avant. Le moteur scroll-narrative.js applique déjà
+     .h-stack dans ces cas, donc cohérent.
+     ════════════════════════════════════════════════════════════════════════ */
+  const isMobileForRail = window.matchMedia('(max-width: 1180px)').matches;
+  if (!reduce && !isMobileForRail) {
+    wrapPhaseRails();
+  }
+
+  function wrapPhaseRails() {
+    /* Boundaries narratifs · 6 chap-dividers · entre chacun = une phase */
+    const boundaries = Array.from(document.querySelectorAll('.chapter-divider, .chap-vp-statement'));
+    if (boundaries.length === 0) return;
+
+    boundaries.forEach((boundary, i) => {
+      const next = boundaries[i + 1];
+      const phaseSections = [];
+      let cursor = boundary.nextElementSibling;
+      while (cursor && cursor !== next) {
+        if (cursor.tagName === 'SECTION') {
+          /* Skip fin-royale (close vertical · pas une phase) */
+          if (cursor.classList.contains('fin-royale')) break;
+          /* CVE 2026-05-04 fix responsive : opt-out par section riche.
+             data-rail="vertical" reste vertical et est exclue du wrap horizontal.
+             Évite le crop des sections > 100vh dans le wrap forcé. */
+          if (cursor.dataset.rail === 'vertical') {
+            cursor = cursor.nextElementSibling;
+            continue;
+          }
+          phaseSections.push(cursor);
+        }
+        cursor = cursor.nextElementSibling;
+      }
+      if (phaseSections.length === 0) return;
+
+      /* Crée le rail wrapper */
+      const rail = document.createElement('section');
+      rail.dataset.hPin = '';
+      rail.className = 'phase-rail';
+      rail.id = 'phase-rail-' + (boundary.id || ('after-' + i));
+
+      const track = document.createElement('div');
+      track.className = 'h-track';
+      rail.appendChild(track);
+
+      /* Insère le rail juste avant la 1re section de phase */
+      phaseSections[0].parentNode.insertBefore(rail, phaseSections[0]);
+
+      /* Move chaque section dans le track comme .h-panel
+         · Si la section est elle-même un h-pin existant (ex #barriers),
+           on flatten ses .h-panel enfants au lieu de la nester. */
+      phaseSections.forEach((sec) => {
+        if (sec.hasAttribute('data-h-pin')) {
+          const innerPanels = sec.querySelectorAll(':scope > .h-track > .h-panel');
+          innerPanels.forEach((p) => track.appendChild(p));
+          sec.remove();
+        } else {
+          sec.classList.add('h-panel');
+          track.appendChild(sec);
+        }
+      });
+    });
+  }
+
   /* ──────────────────────────────────────────────────────────
      1. Reading progress bar (always on, even with reduce-motion)
      ────────────────────────────────────────────────────────── */
@@ -46,18 +127,22 @@
       wheelMultiplier: 0.95,
       touchMultiplier: 1.6,
     });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+    /* CVE 2026-05-03 v9 · Lenis pilote UNIQUE via gsap.ticker.
+       Avant : double pilote (rAF perso + gsap.ticker) qui faisait Lenis tick
+       deux fois par frame → drift, micro-jitter. Fix audit Senior Dev. */
     document.documentElement.classList.add('lenis', 'lenis-smooth');
 
-    /* sync ScrollTrigger with Lenis */
     if (hasST) {
       lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add((time) => { lenis.raf(time * 1000); });
-      gsap.ticker.lagSmoothing(0);
+      /* lagSmoothing retiré · protège tab refocus contre saut massif Lenis */
+    } else {
+      /* Fallback rAF si pas de GSAP */
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
     }
   }
 
@@ -143,93 +228,402 @@
   const placeholder = document.querySelector('.storyline-placeholder');
   const proposedEl = document.querySelector('#proposed-roadmap');
   if (storyNav && proposedEl) {
-    /* Toggle .is-stuck quand la storyline atteint le top du viewport.
-       Quand sticky, on reserve sa hauteur dans le placeholder pour éviter
-       le saut de scroll (l'élément sort du flow en position fixed). */
-    let stuckHeight = 0;
+    /* CVE 2026-04-30 : sticky doit se positionner JUSTE EN DESSOUS de la top-nav,
+       pleine largeur, jamais overlap. On lit la hauteur de la top-nav existante
+       et on l'expose comme variable CSS --top-nav-h. */
+    const measureTopNav = () => {
+      /* CVE 2026-05-04 v8 · selector élargi à nav.top (le sélecteur réel utilisé
+         dans bnp.html / speos.html). Avant : on ne matchait rien et le fallback 64
+         écrasait la top nav 77px réelle. */
+      const topNav = document.querySelector('nav.top, .topnav, .top-nav, header.site-header, [data-topnav]');
+      const h = topNav ? Math.ceil(topNav.getBoundingClientRect().height) : 64;
+      document.documentElement.style.setProperty('--top-nav-h', h + 'px');
+      return h;
+    };
+    let topNavH = measureTopNav();
+    window.addEventListener('resize', () => { topNavH = measureTopNav(); }, { passive: true });
+
+    /* CVE 2026-04-30 update : la storyline default in-flow est retirée (display: none).
+       Le placeholder n'a plus de raison d'occuper de la hauteur — l'élément n'a jamais
+       été dans le flow. On ne touche plus au placeholder. */
     const setStuck = (on) => {
-      if (on) {
-        stuckHeight = storyNav.offsetHeight;
-        if (placeholder) placeholder.style.height = stuckHeight + 'px';
-        storyNav.classList.add('is-stuck');
-      } else {
-        if (placeholder) placeholder.style.height = '0';
-        storyNav.classList.remove('is-stuck');
+      if (on) storyNav.classList.add('is-stuck');
+      else storyNav.classList.remove('is-stuck');
+      /* Recalcule l'underline magique APRÈS la fin de l'animation storyline-emerge.
+         Pendant l'anim (scaleX 0.45→1, 650ms), getBoundingClientRect renvoie des
+         largeurs déformées par le transform — on attend que le layout soit stable.
+         Multi-pass : raf + 100ms + 700ms (post-anim) pour être sûr. */
+      const passes = [0, 100, 700];
+      passes.forEach((delay) => {
+        setTimeout(() => {
+          if (typeof updateUnderline === 'function') updateUnderline(currentPhaseIdx);
+        }, delay);
+      });
+    };
+    /* CVE 2026-05-03 v6 FINAL · sticky nav PAR LISTENER MANUEL (pas ScrollTrigger).
+       Robuste contre Lenis / smooth scroll / refresh issues. Sticky ON dès que
+       hero exits, OFF seulement quand l'user atteint le bas absolu de la page. */
+    const finRoyaleEl = document.querySelector('.fin-royale');
+    const heroEl = document.querySelector('.hcx');
+    const updateStuck = () => {
+      if (!heroEl) return;
+      const heroBottom = heroEl.getBoundingClientRect().bottom;
+      const shouldStick = heroBottom < (topNavH + 4);
+      /* Désactive seulement si l'user a scrollé tout en bas de fin-royale ET
+         que le bas de fin-royale est dans le viewport (= close lue). */
+      let pastClose = false;
+      if (finRoyaleEl) {
+        const finBottom = finRoyaleEl.getBoundingClientRect().bottom;
+        pastClose = finBottom < window.innerHeight * 0.5;  /* fin-royale.bottom au-dessus du milieu du viewport */
+      }
+      const target = shouldStick && !pastClose;
+      if (target !== storyNav.classList.contains('is-stuck')) {
+        setStuck(target);
       }
     };
-    ScrollTrigger.create({
-      trigger: storyNav,
-      start: 'top 16px',
-      endTrigger: '.fin-royale', end: 'top 16px',
-      onEnter:     () => setStuck(true),
-      onLeaveBack: () => setStuck(false),
-      onLeave:     () => setStuck(false),
-      onEnterBack: () => setStuck(true),
-    });
-    /* Active state — driven by scroll progress between chapter-dividers.
-       Each phase (research/analyse/prototype/concept) covers 4 nodes.
-       The active node = floor(progress * 4) within its phase. */
-    const navNodes = Array.from(storyNav.querySelectorAll('.snm-node'));
-    const navGroups = Array.from(storyNav.querySelectorAll('.snm-group'));
-    let activeIdx = -1;
-
-    const updateActive = (idx) => {
-      if (idx === activeIdx) return;
-      activeIdx = idx;
-      navNodes.forEach((n, i) => {
-        n.classList.toggle('is-active', i === idx);
-        n.classList.toggle('is-past', i < idx && idx >= 0);
+    let stuckTicking = false;
+    const onStuckScroll = () => {
+      if (stuckTicking) return;
+      stuckTicking = true;
+      requestAnimationFrame(() => {
+        stuckTicking = false;
+        updateStuck();
       });
-      const activeNode = idx >= 0 ? navNodes[idx] : null;
-      const activeGroup = activeNode?.closest('.snm-group');
-      navGroups.forEach((g) => g.classList.toggle('is-current', g === activeGroup));
+    };
+    window.addEventListener('scroll', onStuckScroll, { passive: true });
+    window.addEventListener('resize', onStuckScroll, { passive: true });
+    updateStuck();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(updateStuck);
+    window.addEventListener('load', updateStuck, { once: true });
+    /* ──────────────────────────────────────────────────────────────────────
+       STORYLINE PHASE TRACKING (CVE 2026-05-03 · refonte robuste v3)
+
+       Stratégie : on abandonne ScrollTrigger pour le tracking de phase.
+       Avec les pins horizontaux (#barriers, 5 viewports de pinSpacing) et
+       les chap-dividers superposés, ScrollTrigger calcule mal les positions
+       cachées des triggers de phase (résultat : la sticky nav saute à la
+       phase suivante en plein milieu du contenu d'une phase).
+
+       Nouveau modèle, déterministe et indépendant de tout pin/refresh :
+
+         À chaque scroll, on regarde quelle section a son top au-dessus de
+         la "ligne de lecture" (50% viewport). On itère les sections dans
+         l'ordre du DOM ; la dernière qui satisfait la condition = celle
+         que l'utilisateur est en train de lire. Sa phase + son jalon
+         deviennent actifs.
+
+       Les chap-X dividers sont eux aussi des "ancres de phase" : quand le
+       chap-X est croisé en lecture, la phase X démarre (jalon 0). Idem si
+       on remonte le scroll. Cohérent forward + backward.
+
+       Aucune dépendance à ScrollTrigger pour la logique critique → robuste,
+       pas de calculs cachés à invalider, pas de race condition à l'init.
+
+       Réutilisable tel quel pour n'importe quel case respectant :
+         - .snm-group[data-phase="<phaseId>"] dans la storyline
+         - chaque group avec des .snm-node[data-anchor="#sectionId"]
+         - chaque phaseId X correspondant à un <section id="chap-X">
+       ────────────────────────────────────────────────────────────────────── */
+
+    /** Build phase model from DOM. */
+    const buildPhases = () => {
+      const groups = Array.from(storyNav.querySelectorAll('.snm-group[data-phase]'));
+      let nodeIdx = 0;
+      return groups
+        .map((group, phaseIdx) => {
+          const phaseId = group.dataset.phase;
+          const divider = document.querySelector(`#chap-${phaseId}`);
+          const nodes = Array.from(group.querySelectorAll('.snm-node')).map((nodeEl) => ({
+            el: nodeEl,
+            anchor: nodeEl.getAttribute('data-anchor'),
+            target: document.querySelector(nodeEl.getAttribute('data-anchor') || ''),
+            globalIdx: nodeIdx++,
+          }));
+          return { id: phaseId, phaseIdx, group, divider, nodes };
+        })
+        .filter((phase) => phase.nodes.length > 0);
     };
 
-    /* Reset all to inactive at start (before research begins) */
-    updateActive(-1);
+    const phases = buildPhases();
+    const allNodes = phases.flatMap((p) => p.nodes);
+    const allGroups = phases.map((p) => p.group);
 
-    /* 4 phases : entre chapter-divider X et chapter-divider X+1, le user traverse
-       4 nodes (idx 0-3 / 4-7 / 8-11 / 12-15). Le scroll progress dans la phase
-       détermine quel node est actif. */
-    const phases = [
-      { id: 'research',  startSel: '#chap-research',  endSel: '#chap-analyse',  nodes: [0, 1, 2, 3] },
-      { id: 'analyse',   startSel: '#chap-analyse',   endSel: '#chap-prototype', nodes: [4, 5, 6, 7] },
-      { id: 'prototype', startSel: '#chap-prototype', endSel: '#chap-concept',  nodes: [8, 9, 10, 11] },
-      { id: 'concept',   startSel: '#chap-concept',   endSel: '.fin-royale',    nodes: [12, 13, 14, 15] },
-    ];
+    /** Build the flat ordered list of "anchors" : each chap-divider is the
+     *  phase entry (jalon 0), then each node's target section is a precise
+     *  jalon. Sorted by position in document. */
+    const anchors = [];
+    phases.forEach((phase) => {
+      if (phase.divider) {
+        anchors.push({ el: phase.divider, phaseIdx: phase.phaseIdx, jalonIdx: 0 });
+      }
+      phase.nodes.forEach((node, jalonIdx) => {
+        if (node.target) {
+          anchors.push({ el: node.target, phaseIdx: phase.phaseIdx, jalonIdx });
+        }
+      });
+    });
 
-    phases.forEach((phase, pIdx) => {
-      const startEl = document.querySelector(phase.startSel);
-      const endEl = document.querySelector(phase.endSel);
-      if (!startEl || !endEl) return;
+    /** Apply visual state for a given (phase, jalonIdx) tuple.
+     *  Pass (-1, -1) to reset (no phase active). */
+    let currentPhaseIdx = -1;
+    let currentNodeIdx = -1;
+    const apply = (phaseIdx, jalonIdx) => {
+      if (phaseIdx === currentPhaseIdx && jalonIdx === currentNodeIdx) return;
+      currentPhaseIdx = phaseIdx;
+      currentNodeIdx = jalonIdx;
 
+      const targetGlobalIdx = phaseIdx >= 0
+        ? phases[phaseIdx].nodes[jalonIdx]?.globalIdx ?? -1
+        : -1;
+
+      allGroups.forEach((g, i) => {
+        g.classList.toggle('is-current', i === phaseIdx);
+        g.classList.toggle('is-past', i < phaseIdx && phaseIdx >= 0);
+      });
+      allNodes.forEach((n) => {
+        n.el.classList.toggle('is-active', n.globalIdx === targetGlobalIdx);
+        n.el.classList.toggle('is-past', n.globalIdx < targetGlobalIdx && targetGlobalIdx >= 0);
+      });
+
+      /* UNDERLINE MAGIQUE · CVE 2026-05-03 (10/10 polish)
+         Une seule barre amber qui voyage de pill à pill, recalcule sa width
+         et sa translateX selon la pill is-current. CSS gère la spring transition. */
+      updateUnderline(phaseIdx);
+    };
+
+    /* Crée et positionne l'underline magique sous la pill active.
+       L'underline est masqué pour les outcomes (VP, CR) car la gem porte
+       son propre halo amber + ring pulse. CVE 2026-05-03. */
+    const underline = storyNav.querySelector('.storyline__underline');
+    const updateUnderline = (phaseIdx) => {
+      if (!underline) return;
+      if (phaseIdx < 0 || phaseIdx >= phases.length) {
+        underline.classList.remove('is-ready');
+        return;
+      }
+      const target = phases[phaseIdx].group;
+      if (!target) return;
+      /* Outcome (VP, CR) : pas d'underline · la gem a son propre éclat */
+      if (target.classList.contains('snm-group--outcome')) {
+        underline.classList.remove('is-ready');
+        return;
+      }
+      const parent = underline.parentElement;
+      if (!parent) return;
+      const parentRect = parent.getBoundingClientRect();
+      const targetRect = target.getBoundingClientRect();
+      const offsetX = targetRect.left - parentRect.left;
+      const width   = targetRect.width;
+      underline.style.setProperty('--u-x', offsetX + 'px');
+      underline.style.setProperty('--u-w', width + 'px');
+      underline.classList.add('is-ready');
+    };
+    /* Recalcule l'underline en cas de resize (largeur des pills change). */
+    window.addEventListener('resize', () => updateUnderline(currentPhaseIdx), { passive: true });
+
+    /* CODA FINALE · CVE 2026-05-03 art polish 10/10
+       À l'entrée de .fin-royale, les 7 markers de la sticky nav s'illuminent
+       SIMULTANÉMENT pendant 1.2s puis fade-out. Le voyage est validé d'un coup. */
+    const finRoyale = document.querySelector('.fin-royale');
+    if (finRoyale) {
       ScrollTrigger.create({
-        trigger: startEl,
-        start: 'top 60%',
-        endTrigger: endEl,
-        end: 'top 60%',
-        onEnter: () => updateActive(phase.nodes[0]),
-        onUpdate: (self) => {
-          const subIdx = Math.min(3, Math.max(0, Math.floor(self.progress * 4)));
-          updateActive(phase.nodes[subIdx]);
-        },
-        onLeaveBack: () => {
-          if (pIdx === 0) updateActive(-1);
-          else updateActive(phases[pIdx - 1].nodes[3]);
+        trigger: finRoyale,
+        start: 'top 70%',
+        once: true,
+        onEnter: () => {
+          storyNav.classList.add('is-coda');
+          setTimeout(() => storyNav.classList.remove('is-coda'), 1800);
         },
       });
+    }
+
+    apply(-1, -1);
+
+    /** Determine which anchor the user is currently "reading".
+     *  CVE 2026-05-03 fix v4 : reading line à 25vh + fallback center detection.
+     *  Avec READING_LINE à 0.25, la phase switche dès que la section apparaît
+     *  dans le tiers supérieur du viewport — perception "instantanée" pour les
+     *  chap-dividers 100vh. Le center fallback capture les cas où la section
+     *  est très tall et son top ne descend jamais sous la reading line. */
+    const READING_LINE_RATIO = 0.25;
+    const updatePhase = () => {
+      const vh = window.innerHeight;
+      const readingY = vh * READING_LINE_RATIO;
+      const viewportMid = vh * 0.5;
+      let best = null;
+      for (let i = 0; i < anchors.length; i++) {
+        const rect = anchors[i].el.getBoundingClientRect();
+        const sectionCenter = rect.top + rect.height / 2;
+        /* QUALIFY si section.top ≤ readingY OU section center ≤ viewport mid.
+           Le 2e cas couvre les sections très grandes (100vh chap-dividers). */
+        if (rect.top <= readingY || sectionCenter <= viewportMid) {
+          best = anchors[i];
+        } else {
+          break;
+        }
+      }
+      if (best) {
+        apply(best.phaseIdx, best.jalonIdx);
+      } else {
+        apply(-1, -1);
+      }
+      updatePhaseProgress();
+    };
+
+    /* PROGRESS MICRO-BAR · CVE 2026-05-03 art polish 10/10
+       Pour chaque phase, calcule la progression du user dans le contenu :
+       - phase top en haut du viewport → 0%
+       - phase bottom en haut du viewport → 100%
+       Injecte la valeur dans --p sur le .snm-progress du group correspondant. */
+    const updatePhaseProgress = () => {
+      const readingY = window.innerHeight * READING_LINE_RATIO;
+      phases.forEach((phase) => {
+        const progressEl = phase.group.querySelector('.snm-progress');
+        if (!progressEl) return;
+        if (!phase.nodes.length) {
+          progressEl.style.setProperty('--p', '0%');
+          return;
+        }
+        const firstTop = phase.nodes[0].target ? phase.nodes[0].target.getBoundingClientRect().top : null;
+        const last = phase.nodes[phase.nodes.length - 1].target;
+        const lastBottom = last ? last.getBoundingClientRect().bottom : null;
+        if (firstTop === null || lastBottom === null) {
+          progressEl.style.setProperty('--p', '0%');
+          return;
+        }
+        const totalSpan = lastBottom - firstTop;
+        if (totalSpan <= 0) {
+          progressEl.style.setProperty('--p', '0%');
+          return;
+        }
+        const traveled = readingY - firstTop;
+        const pct = Math.max(0, Math.min(100, (traveled / totalSpan) * 100));
+        progressEl.style.setProperty('--p', pct.toFixed(1) + '%');
+      });
+    };
+
+    /* rAF-throttled scroll listener — called at most once per frame. */
+    let scrollTicking = false;
+    const onScroll = () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(() => {
+        scrollTicking = false;
+        updatePhase();
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    /* Initial pass + a delayed second pass after layout has fully settled
+       (images loaded, fonts loaded, h-pin spacers applied). */
+    updatePhase();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(updatePhase);
+    }
+    window.addEventListener('load', updatePhase, { once: true });
+
+    /* CVE 2026-05-01 : progress bar continu sur la sticky.
+       Reste sur ScrollTrigger car c'est juste une CSS variable, pas du
+       state critique de phase. */
+    ScrollTrigger.create({
+      trigger: proposedEl,
+      start: 'bottom bottom',
+      endTrigger: '.fin-royale',
+      end: 'top top',
+      onUpdate: (self) => {
+        storyNav.style.setProperty('--story-progress', (self.progress * 100).toFixed(2) + '%');
+      },
     });
   }
 
-  /* Click handler global sur n'importe quel [data-anchor] (story nav + storyline) */
+  /* Click handler global sur n'importe quel [data-anchor] (story nav + storyline).
+     CVE 2026-05-04 · si le node est dans un .snm-group[data-phase] et que le
+     chap-divider correspondant (#chap-${phase}) existe, on redirige vers le
+     chap-divider pour que l'utilisateur voie l'animation de transition se
+     construire avant d'entrer dans le contenu de la phase.
+     CVE 2026-05-04 v2 · pour les chap-divider--v2 (sticky-pin scroll-driven),
+     on scrolle jusqu'à la FIN du pin range au lieu du début → Lenis lerp 1.4s
+     pendant lequel ScrollTrigger.scrub joue l'animation de build. L'utilisateur
+     atterrit sur l'écran fully-built au lieu d'un écran vide en attente. */
   document.querySelectorAll('[data-anchor]').forEach((node) => {
     node.addEventListener('click', (e) => {
-      const sel = node.getAttribute('data-anchor');
+      let sel = node.getAttribute('data-anchor');
+      const groupParent = node.closest('.snm-group[data-phase]');
+      if (groupParent) {
+        const phase = groupParent.getAttribute('data-phase');
+        if (phase && document.querySelector(`#chap-${phase}`)) {
+          sel = `#chap-${phase}`;
+        }
+      }
       const target = sel && document.querySelector(sel);
       if (!target) return;
       e.preventDefault();
+      if (target.classList && target.classList.contains('chapter-divider--v2')) {
+        /* On vise p≈0.80 (peak fully-built avant exit) plutôt que p=1.0 (où la
+           lettre commence déjà à shrink). Le pin range = offsetHeight - vh.
+           Position = offsetTop + 0.80 × pin range.
+           CVE 2026-05-04 v3 · duration 2.6s + easing slow-out (expo decay)
+           pour que la build respire et ne flicke pas à l'œil. */
+        const pinRange = Math.max(0, target.offsetHeight - window.innerHeight);
+        const builtPos = target.offsetTop + pinRange * 0.80;
+        const slowOut = (t) => 1 - Math.pow(1 - t, 3.2); /* ease-out cubic+ , atterrit en douceur */
+        if (lenis) lenis.scrollTo(builtPos, { duration: 2.6, easing: slowOut });
+        else window.scrollTo({ top: builtPos, behavior: 'smooth' });
+        return;
+      }
       if (lenis) lenis.scrollTo(target, { offset: -100, duration: 1.2 });
       else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  /* CVE 2026-05-03 · sticky pills cliquables · scroll smooth vers la 1re section
+     de la phase. En mode stuck les snm-nodes sont cachés, donc le pill entier
+     devient clickable. Pour les outcome gems (intake, vp, cr) on cible aussi
+     leur premier nœud. */
+  document.querySelectorAll('.storyline .snm-group').forEach((group) => {
+    /* CVE 2026-05-04 · group header click cible le chap-divider de la phase
+       (l'écran de transition) au lieu du premier snm-node. L'utilisateur voit
+       l'animation de bascule construire avant de continuer dans le contenu.
+       Fallback sur firstNode si #chap-${phase} n'existe pas (cas intake). */
+    const phase = group.getAttribute('data-phase');
+    const chapTarget = phase ? document.querySelector(`#chap-${phase}`) : null;
+    const firstNode = group.querySelector('.snm-node[data-anchor]');
+    const sel = chapTarget ? `#chap-${phase}` : (firstNode ? firstNode.getAttribute('data-anchor') : null);
+    if (!sel) return;
+    group.style.cursor = 'pointer';
+    group.setAttribute('role', 'button');
+    group.setAttribute('tabindex', '0');
+    const goTo = () => {
+      const target = document.querySelector(sel);
+      if (!target) return;
+      /* CVE 2026-05-04 · scroll vers la FIN du pin range pour les chap-divider--v2 ·
+         l'animation de build se joue pendant le smooth-scroll Lenis (1.4s) · l'user
+         atterrit sur l'écran fully-built au lieu d'un écran vide. */
+      if (target.classList && target.classList.contains('chapter-divider--v2')) {
+        /* On vise p≈0.80 (peak fully-built avant exit) plutôt que p=1.0 (où la
+           lettre commence déjà à shrink). Le pin range = offsetHeight - vh.
+           Position = offsetTop + 0.80 × pin range.
+           CVE 2026-05-04 v3 · duration 2.6s + easing slow-out (expo decay)
+           pour que la build respire et ne flicke pas à l'œil. */
+        const pinRange = Math.max(0, target.offsetHeight - window.innerHeight);
+        const builtPos = target.offsetTop + pinRange * 0.80;
+        const slowOut = (t) => 1 - Math.pow(1 - t, 3.2); /* ease-out cubic+ , atterrit en douceur */
+        if (lenis) lenis.scrollTo(builtPos, { duration: 2.6, easing: slowOut });
+        else window.scrollTo({ top: builtPos, behavior: 'smooth' });
+        return;
+      }
+      const offset = -((document.querySelector('.topnav, .top-nav, header.site-header, [data-topnav]')?.getBoundingClientRect().height) || 64) - 8;
+      if (lenis) lenis.scrollTo(target, { offset, duration: 1.2 });
+      else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    group.addEventListener('click', (e) => {
+      /* Si le user a cliqué directement sur un snm-node visible, laisse son handler agir */
+      if (e.target.closest('.snm-node[data-anchor]')) return;
+      e.preventDefault();
+      goTo();
+    });
+    group.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(); }
     });
   });
 
@@ -375,6 +769,7 @@
     const hcxKpis    = hcxSection.querySelector('.hcx__kpis');
     const hcxKpiCells = hcxSection.querySelectorAll('.hcx__kpi');
     const hcxScroll  = hcxSection.querySelector('.hcx__scroll');
+    const hcxHead    = hcxSection.querySelector('.hcx__head');
 
     /* Set all elements invisible before curtain rises — synchronous, no flash */
     if (hcxBg)      gsap.set(hcxBg,      { scale: 1.18 });
@@ -441,18 +836,17 @@
 
     /* ── Scroll parallax : ZOOM INVERSE de l'entrance (zoom-out → zoom-in continu).
        Entrance fait : scale 1.18 → 1.04 (zoom-out posant le décor).
-       Scroll fait l'inverse : scale 1.04 → 1.16 (zoom-in en plongeant).
-       fromTo + immediateRender: false → ne touche pas l'image avant que le scroll
-       atteigne le start (sinon ça toussait à scroll 0). */
+       CVE 2026-05-01 (calibré douceur) : amplitude visible, mais lissée par scrub
+       long. Scale start = 1.06 = scale fin d'intro → zéro saut au passage. */
     if (hcxBg) {
       gsap.fromTo(hcxBg,
-        { scale: 1.04, yPercent: 0 },
+        { scale: 1.06, yPercent: 0 },
         {
-          scale: 1.16, yPercent: 18, ease: 'none',
+          scale: 1.26, yPercent: 26, ease: 'none',
           immediateRender: false,
           scrollTrigger: {
             trigger: hcxSection, start: 'top top', end: 'bottom top',
-            scrub: 1.4, invalidateOnRefresh: true,
+            scrub: 2.2, invalidateOnRefresh: true,
           },
         },
       );
@@ -461,11 +855,11 @@
       gsap.fromTo(hcxHead,
         { yPercent: 0 },
         {
-          yPercent: -14, ease: 'none',
+          yPercent: -10, ease: 'none',
           immediateRender: false,
           scrollTrigger: {
             trigger: hcxSection, start: 'top top', end: 'bottom top',
-            scrub: 0.9, invalidateOnRefresh: true,
+            scrub: 1.6, invalidateOnRefresh: true,
           },
         },
       );
@@ -474,11 +868,11 @@
       gsap.fromTo(hcxKpis,
         { yPercent: 0, scale: 1 },
         {
-          yPercent: -6, scale: 0.96, ease: 'none',
+          yPercent: -5, scale: 0.96, ease: 'none',
           immediateRender: false,
           scrollTrigger: {
             trigger: hcxSection, start: 'top top', end: 'bottom top',
-            scrub: 0.7, invalidateOnRefresh: true,
+            scrub: 1.4, invalidateOnRefresh: true,
           },
         },
       );
@@ -487,96 +881,170 @@
       gsap.fromTo(hcxClient,
         { yPercent: 0, opacity: 1 },
         {
-          yPercent: -20, opacity: 0.45, ease: 'none',
+          yPercent: -14, opacity: 0.45, ease: 'none',
           immediateRender: false,
           scrollTrigger: {
             trigger: hcxSection, start: 'top top', end: 'bottom top',
-            scrub: 1.1, invalidateOnRefresh: true,
+            scrub: 1.8, invalidateOnRefresh: true,
           },
         },
       );
     }
   }
 
-  /* ── Chapter dividers : NATURAL FLOW pattern (CVE 2026-04-30 s2 — REBUILD).
-        Previous version pinned scroll for 70% viewport. With 4 chapter dividers
-        (S/T/A/R) + bridge to Luminus + horizontal pin sections, the page felt
-        constantly stopped. CVE verbatim : "transitions importantes en plein
-        milieu de storytelling — tout tuer et refaire."
+  /* ════════════════════════════════════════════════════════════════════════
+     NARRATIVE MOTION TEMPLATE · CVE 2026-05-03 · case-agnostic engine.
+     ════════════════════════════════════════════════════════════════════════
 
-        New approach : NO PIN. The divider is a tall section with a parallax
-        roman letter (slow scale + opacity arc as user scrolls through) and
-        meta content that reveals on scroll-in. Visitor scrolls continuously.
-        The transition accompanies the narrative — it doesn't capture it. */
-  document.querySelectorAll('.chapter-divider').forEach((chap) => {
-    const roman = chap.querySelector('.chapter-roman');
-    const meta = chap.querySelector('.chapter-meta');
-    if (!roman || !meta) return;
+     GRAMMAIRE NARRATIVE EN 2 RYTHMES, SE SUCCÉDANT EN BOUCLE :
 
-    const metaChildren = meta.querySelectorAll('.chapter-label, .chapter-title, .chapter-lead');
+         [PAUSE]──────[PASSAGE]──────[PAUSE]──────[PASSAGE]──────[PAUSE]──────...
 
-    /* Roman letter : zoom-in dramatique sur les transitions STAR.
-       La lettre vient de loin (scale 0.5), s'avance (scale 1.4 au pic),
-       puis recule légèrement (1.1 quand on quitte). Climax R encore plus fort. */
-    const isClimaxR = chap.dataset.chapter === 'R';
-    const fromState = isClimaxR
-      ? { scale: 0.45, opacity: 0.0, yPercent: 30 }
-      : { scale: 0.55, opacity: 0.0, yPercent: 24 };
-    const peakScale = isClimaxR ? 1.55 : 1.35;
-    const peakOpacity = isClimaxR ? 0.46 : 0.32;
-    /* Two-segment scrub : 0 → 50% : zoom-in (scale 0.55→peak, opacity 0→peak),
-       50 → 100% : settle back (scale peak→1.0, opacity peak→0.10). */
-    gsap.fromTo(roman, fromState, {
-      keyframes: [
-        { scale: peakScale, opacity: peakOpacity, yPercent: 0, duration: 0.5, ease: 'power2.out' },
-        { scale: 1.0, opacity: 0.10, yPercent: -16, duration: 0.5, ease: 'power2.in' },
-      ],
-      ease: 'none',
-      scrollTrigger: {
-        trigger: chap,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1.0,
-        invalidateOnRefresh: true,
-      },
+         PAUSE  · sticky-marker · transition narrative pinée 100vh.
+                  Letter dolly-in OU statement révélation typographique.
+                  CSS-driven via class .is-in-view (ou .is-revealing).
+                  C'est le souffle, le seuil. L'œil se pose, la phase change.
+
+         PASSAGE · contenu narratif consumable de gauche à droite.
+                  xPercent 100 → 0, opacity 0 → 1, scrub-tied.
+                  L'user scrolle, la section glisse depuis la droite.
+                  Une section = une lecture L→R complète.
+
+     CONVENTIONS HTML POUR CLONAGE CASE 2/3/N :
+
+         PAUSE   = `<section class="chapter-divider" data-chapter="X">`
+                   contenant `.chapter-roman` (la lettre) + `.chapter-meta`
+                   OU `<section class="chap-vp-statement">` pour les outcomes
+                   typographiques (statement géant pleine page).
+
+         PASSAGE = `<section id="...">` (ou avec data-passage attribute).
+                   Doit contenir un wrapper `.container` à l'intérieur,
+                   sinon la section elle-même est animée.
+
+     POURQUOI CSS-DRIVEN POUR LES PAUSES :
+         GSAP timelines + scrub + Lenis = fragile, désynchronisations.
+         CSS keyframes triggered by class = standard web, robuste, prévisible,
+         clonable. ScrollTrigger toggle juste la class.
+
+     POURQUOI SCRUB POUR LES PASSAGES :
+         L→R consumption-style : l'user voit la section glisser AU RYTHME
+         de son scroll. Tight 1:1, pas de lag. Mirror le feeling barriers.
+     ════════════════════════════════════════════════════════════════════════ */
+
+  const isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ──────────────────────────────────────────────────────────────────────
+     PAUSE handler · CVE 2026-05-03 v8 FINAL · scroll listener manuel rAF.
+
+     Approche bulletproof : un scroll listener vérifie chaque frame si une
+     pause section a son top dans le viewport. Si oui, ajoute la class. Une
+     fois ajoutée, la class reste. Pas d'API magique qui peut rater une
+     entry, pas de Lenis-conflict, pas de timing fragile.
+
+     2 collections :
+       - .chapter-divider · class .is-in-view
+       - .chap-vp-statement · class .is-revealing
+
+     Trigger : section.top < viewport_height * 0.80
+     (= 20% de la section visible depuis le bas du viewport)
+     ────────────────────────────────────────────────────────────────────── */
+  const pauseTargets = [
+    ...document.querySelectorAll('.chapter-divider'),
+    ...document.querySelectorAll('.chap-vp-statement'),
+  ].map((el) => ({
+    el,
+    className: el.classList.contains('chap-vp-statement') ? 'is-revealing' : 'is-in-view',
+    armed: true,
+  }));
+
+  const checkPauses = () => {
+    const triggerY = window.innerHeight * 0.80;
+    pauseTargets.forEach((t) => {
+      if (!t.armed) return;
+      const rect = t.el.getBoundingClientRect();
+      if (rect.top < triggerY && rect.bottom > 0) {
+        t.el.classList.add(t.className);
+        t.armed = false;
+      }
     });
+  };
 
-    /* Meta block : zoom-in subtle synchronised with roman peak — the title
-       advances toward the viewer at the same moment the letter peaks. */
-    gsap.fromTo(meta, { scale: 0.94 }, {
-      scale: 1.0, ease: 'power2.out',
-      scrollTrigger: {
-        trigger: chap,
-        start: 'top 80%',
-        end: 'top 30%',
-        scrub: 1.0,
-        invalidateOnRefresh: true,
-      },
+  let pauseTicking = false;
+  const onPauseScroll = () => {
+    if (pauseTicking) return;
+    pauseTicking = true;
+    requestAnimationFrame(() => {
+      pauseTicking = false;
+      checkPauses();
     });
+  };
+  window.addEventListener('scroll', onPauseScroll, { passive: true });
+  window.addEventListener('resize', onPauseScroll, { passive: true });
+  checkPauses(); /* Initial pass · si une pause est déjà visible au load, anime */
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(checkPauses);
+  window.addEventListener('load', checkPauses, { once: true });
 
-    /* Meta : single fade-up reveal when the meta block enters the comfortable
-       reading zone. No scrub, no pin — just a clean entry. */
-    gsap.fromTo(metaChildren,
-      { opacity: 0, y: 28 },
-      { opacity: 1, y: 0, duration: 0.90, ease: 'power3.out', stagger: 0.08,
+  /* CVE 2026-04-30 directive : transitions L→R entre jalons d'une phase.
+     Chaque jalon (sauf horizontal-pin sections #barriers + #steps qui sont déjà
+     animés horizontalement) fait une entrée légère depuis la droite quand il
+     arrive dans le viewport — suggère la lecture gauche-droite, sans casser
+     le scroll naturel ni le responsive. Pattern : xPercent +10 → 0, scrub. */
+  const phaseJalonSelectors = [
+    /* INTAKE (avant Research) */
+    '#brief',
+    /* RESEARCH */
+    '#problem', '#research-interviews', '#research-benchmark', '#research-targeting', '#research-personas',
+    /* ANALYSE — skip #barriers (h-pin existant) */
+    '#analyse-asis', '#analyse-gap', '#analyse-data', '#analyse-vpc', '#analyse-vp',
+    /* IDEATION (D2 H1 · Develop) */
+    '#prototype-direction', '#prototype-overview',
+    /* PROTOTYPE (D2 H2 · Deliver) */
+    '#prototype-home',
+    '#prototype-goal1', '#prototype-goal2', '#prototype-goal3', '#prototype-goal4',
+    '#prototype-blueprint', '#prototype-sprintdesign', '#prototype-venn',
+    '#prototype-relevant', '#prototype-usertest',
+    /* CONCEPT REPORT — outcome final */
+    '#concept-deliverable', '#alignment', '#concept-triplewin', '#outcome', '#lessons',
+    /* Legacy ID-compat (silencieux si absents) */
+    '#concept-vp-statement', '#concept-goals-overview',
+    '#concept-goal1-performance', '#concept-goal2-expansion', '#concept-goal3-evaluating',
+    '#concept-userstories', '#concept-flows', '#decision-pack',
+  ];
+  /* ──────────────────────────────────────────────────────────────────────
+     PASSAGE handler · L→R consumption pattern.
+
+     Chaque section listée dans phaseJalonSelectors glisse FULLEMENT depuis
+     la droite — xPercent 100 → 0 — au rythme du scroll (scrub: true).
+     L'user scrolle vers le bas, la section glisse de droite à gauche
+     dans le viewport. Une fois la section centrée, elle est consumée.
+
+     Sections marquées "subtle" reçoivent une amplitude réduite (sections
+     post-rich qui suivent un h-pin, par exemple, pour ne pas surcharger).
+
+     Le pattern fait écho à la lecture occidentale L→R. Combiné aux PAUSES,
+     ça crée un rythme narratif : passage → pause → passage → pause...
+     ────────────────────────────────────────────────────────────────────── */
+  /* CVE 2026-05-04 v3 · L→R passage REMPLACÉ par fade-up top-down.
+     L'utilisateur a constaté que le L→R causait des coupures + des
+     comportements erratiques quand combiné aux pins horizontaux.
+     Nouveau pattern : translateY 28 → 0, opacity 0 → 1, one-shot au
+     scroll dans le viewport. Pas de scrub, pas de translation horizontale. */
+  phaseJalonSelectors.forEach((sel) => {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    const inner = el.querySelector(':scope > .container') || el;
+    gsap.fromTo(inner,
+      { y: 28, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: 0.85, ease: 'power3.out',
         scrollTrigger: {
-          trigger: meta,
-          start: 'top 78%',
+          trigger: el,
+          start: 'top 85%',
           toggleActions: 'play none none reverse',
+          invalidateOnRefresh: true,
         },
       },
     );
-
-    /* In-view class drives the CSS cuivre line draw across centerline */
-    ScrollTrigger.create({
-      trigger: chap,
-      start: 'top 70%',
-      end: 'bottom 30%',
-      onEnter:     () => chap.classList.add('is-in-view'),
-      onEnterBack: () => chap.classList.add('is-in-view'),
-      onLeave:     () => chap.classList.remove('is-in-view'),
-      onLeaveBack: () => chap.classList.remove('is-in-view'),
-    });
   });
 
   /* ──────────────────────────────────────────────────────────
@@ -798,6 +1266,18 @@
   actT_roadmap();
   actT_pq2();
 
+  /* ── Venn 3 cercles reveal — phase Prototype, agrégation données BNP.
+        Cercles s'agrandissent depuis 0.78 → 1, tags fade-in en cascade. */
+  function actA_vennReveal() {
+    const stage = document.querySelector('#analyse-data .venn-stage');
+    if (!stage) return;
+    ScrollTrigger.create({
+      trigger: stage, start: 'top 75%', once: true,
+      onEnter: () => stage.classList.add('is-revealed'),
+    });
+  }
+  actA_vennReveal();
+
   /* ── Act A — Démarche : steps counter overlay (01/06 → 06/06).
         The horizontal pin + per-panel 3D depth-field is already orchestrated
         by scroll-narrative.js. We add a numeric counter that breathes with
@@ -911,17 +1391,232 @@
           }, starts[idx] || 0.4);
         });
 
-        /* CLIMAX FLASH on the "1" cell — the promesse Léonidas */
+        /* CLIMAX FLASH sur la "1" cell. CVE 2026-05-04 v3 · couleur scopée par case
+           via lecture de --amber au runtime. Le case BNP le voit en vert,
+           le case SPEOS le voit en jaune, le neutre CVE en coral. */
         const accentCell = block.querySelector('.climax-stat__cell--accent');
         if (accentCell) {
-          tl.fromTo(accentCell, { boxShadow: '0 0 0 0 rgba(199,105,65,0)' },
-            { boxShadow: '0 0 0 8px rgba(199,105,65,0.18)', duration: 0.45, ease: 'power3.out',
+          const accentColor = getComputedStyle(accentCell).getPropertyValue('--amber').trim() || '#C76941';
+          /* Convert hex to rgba avec 18% opacity pour le glow */
+          const hexToRgba = (hex, alpha) => {
+            const h = hex.replace('#','');
+            const r = parseInt(h.substring(0,2), 16);
+            const g = parseInt(h.substring(2,4), 16);
+            const b = parseInt(h.substring(4,6), 16);
+            return `rgba(${r},${g},${b},${alpha})`;
+          };
+          tl.fromTo(accentCell, { boxShadow: `0 0 0 0 ${hexToRgba(accentColor, 0)}` },
+            { boxShadow: `0 0 0 8px ${hexToRgba(accentColor, 0.18)}`, duration: 0.45, ease: 'power3.out',
               yoyo: true, repeat: 1 }, 1.05);
         }
       },
     });
   }
   actR_climaxStat();
+
+  /* CVE 2026-05-03 · Outcome 3 cards stagger + integrity note discrète.
+     Le climax 6/1/0 animation est dans actR_climaxStat ci-dessus. */
+  function actR_outcomeCards() {
+    const sec = document.querySelector('#outcome');
+    if (!sec) return;
+    const cards = sec.querySelectorAll('.outcome-card');
+    const integrity = sec.querySelector('.outcome-integrity');
+    if (cards.length) gsap.set(cards, { opacity: 0, y: 28 });
+    if (integrity) gsap.set(integrity, { opacity: 0, y: 14 });
+    if (cards.length) {
+      gsap.to(cards, {
+        opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', stagger: 0.18,
+        scrollTrigger: { trigger: cards[0], start: 'top 82%', once: true },
+      });
+    }
+    if (integrity) {
+      gsap.to(integrity, {
+        opacity: 0.85, y: 0, duration: 0.9, ease: 'power2.out',
+        scrollTrigger: { trigger: integrity, start: 'top 88%', once: true },
+      });
+    }
+  }
+  actR_outcomeCards();
+
+  /* CVE 2026-05-03 · Lessons cards stagger + numéros count-glow */
+  function actR_lessons() {
+    const sec = document.querySelector('#lessons');
+    if (!sec) return;
+    const cards = sec.querySelectorAll('.lesson-card');
+    if (!cards.length) return;
+    gsap.set(cards, { opacity: 0, y: 30 });
+    gsap.to(cards, {
+      opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.22,
+      scrollTrigger: { trigger: cards[0], start: 'top 82%', once: true },
+    });
+  }
+  actR_lessons();
+
+  /* ========================================================================
+     CVE 2026-05-03 · FIN ROYALE upgrade · WOW final + délice
+     Postscript word-by-word reveal · Closing line typewriter effect ·
+     Particules amber très subtiles · Email path underline draw on hover.
+     ======================================================================== */
+  function finRoyaleUpgrade() {
+    const sec = document.querySelector('.fin-royale');
+    if (!sec) return;
+    const psText = sec.querySelector('.fin-royale__ps-text');
+    const closeLine = sec.querySelector('.fin-royale__line');
+    const path = sec.querySelector('.fin-royale__path');
+    const sub = sec.querySelector('.fin-royale__path-sub');
+    const sig = sec.querySelector('.fin-royale__signature');
+
+    /* Postscript · word-by-word fade-in */
+    if (psText && !isReduced) {
+      const html = psText.innerHTML;
+      /* Wrap each word in a span for stagger reveal · garde les inline tags (.accent) */
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      const wrap = (node) => {
+        if (node.nodeType === 3) {
+          /* Text node : split en mots, wrap each */
+          const frag = document.createDocumentFragment();
+          node.textContent.split(/(\s+)/).forEach((part) => {
+            if (part.trim() === '') {
+              frag.appendChild(document.createTextNode(part));
+            } else {
+              const s = document.createElement('span');
+              s.className = 'fr-word';
+              s.textContent = part;
+              frag.appendChild(s);
+            }
+          });
+          node.parentNode.replaceChild(frag, node);
+        } else if (node.nodeType === 1) {
+          Array.from(node.childNodes).forEach(wrap);
+        }
+      };
+      Array.from(tmp.childNodes).forEach(wrap);
+      psText.innerHTML = tmp.innerHTML;
+      const words = psText.querySelectorAll('.fr-word');
+      gsap.set(words, { opacity: 0, y: 12 });
+      ScrollTrigger.create({
+        trigger: sec, start: 'top 75%', once: true,
+        onEnter: () => {
+          gsap.to(words, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out', stagger: 0.06 });
+        },
+      });
+    }
+
+    /* Closing line · typewriter effect */
+    if (closeLine && !isReduced) {
+      const text = closeLine.textContent.trim();
+      ScrollTrigger.create({
+        trigger: closeLine, start: 'top 80%', once: true,
+        onEnter: () => {
+          closeLine.textContent = '';
+          closeLine.classList.add('is-typing');
+          let i = 0;
+          const tick = () => {
+            if (i <= text.length) {
+              closeLine.textContent = text.slice(0, i);
+              i++;
+              setTimeout(tick, 38);
+            } else {
+              closeLine.classList.remove('is-typing');
+              closeLine.classList.add('is-typed');
+              /* Pulse subtle amber après fin du typing */
+              setTimeout(() => closeLine.classList.add('is-glowing'), 400);
+            }
+          };
+          /* Délai avant typing pour laisser le postscript respirer */
+          setTimeout(tick, 600);
+        },
+      });
+    }
+
+    /* Path · email · subtle reveal */
+    if (path) {
+      gsap.set(path, { opacity: 0, y: 22 });
+      ScrollTrigger.create({
+        trigger: path, start: 'top 85%', once: true,
+        onEnter: () => gsap.to(path, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' }),
+      });
+    }
+    if (sub) {
+      gsap.set(sub, { opacity: 0 });
+      ScrollTrigger.create({
+        trigger: sub, start: 'top 90%', once: true,
+        onEnter: () => gsap.to(sub, { opacity: 1, duration: 0.7, ease: 'power2.out', delay: 0.2 }),
+      });
+    }
+    if (sig) {
+      gsap.set(sig, { opacity: 0 });
+      ScrollTrigger.create({
+        trigger: sig, start: 'top 95%', once: true,
+        onEnter: () => gsap.to(sig, { opacity: 1, duration: 0.9, ease: 'power2.out', delay: 0.3 }),
+      });
+    }
+
+    /* Délice · particules amber qui montent · 5 dots, animation infinite douce */
+    if (!isReduced && !sec.querySelector('.fin-royale__particles')) {
+      const particles = document.createElement('div');
+      particles.className = 'fin-royale__particles';
+      particles.setAttribute('aria-hidden', 'true');
+      for (let i = 0; i < 5; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'fr-particle';
+        dot.style.setProperty('--p-delay', (i * 1.6) + 's');
+        dot.style.setProperty('--p-x', (15 + i * 17) + '%');
+        particles.appendChild(dot);
+      }
+      sec.appendChild(particles);
+    }
+  }
+  finRoyaleUpgrade();
+
+  /* CVE 2026-05-03 · Concept Deliverable count-up 86 + reveal sequence */
+  function actR_crDeliv() {
+    const sec = document.querySelector('#concept-deliverable');
+    if (!sec) return;
+    const eyebrow = sec.querySelector('.cr-deliv__eyebrow');
+    const weight = sec.querySelector('.cr-deliv__weight');
+    const countEl = sec.querySelector('.cr-deliv__count');
+    const phrase = sec.querySelector('.cr-deliv__phrase');
+    const tocItems = sec.querySelectorAll('.cr-toc__item');
+    const stack = sec.querySelector('.cr-deliv__stack');
+
+    [eyebrow, weight, phrase].filter(Boolean).forEach((el) => gsap.set(el, { opacity: 0, y: 22 }));
+    if (tocItems.length) gsap.set(tocItems, { opacity: 0, x: 28 });
+
+    if (eyebrow) {
+      gsap.to(eyebrow, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out',
+        scrollTrigger: { trigger: eyebrow, start: 'top 85%', once: true } });
+    }
+    if (weight) {
+      ScrollTrigger.create({
+        trigger: weight, start: 'top 78%', once: true,
+        onEnter: () => {
+          gsap.to(weight, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' });
+          if (phrase) gsap.to(phrase, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.4 });
+          /* Count-up 0 → 86 */
+          if (countEl) {
+            const target = parseInt(countEl.dataset.countTo || '86', 10);
+            const obj = { v: 0 };
+            countEl.textContent = '0';
+            gsap.to(obj, {
+              v: target, duration: 1.4, ease: 'power3.out',
+              onUpdate: () => { countEl.textContent = String(Math.round(obj.v)); },
+              onComplete: () => { countEl.textContent = String(target); },
+              delay: 0.3,
+            });
+          }
+        },
+      });
+    }
+    if (tocItems.length) {
+      gsap.to(tocItems, {
+        opacity: 1, x: 0, duration: 0.6, ease: 'power3.out', stagger: 0.10,
+        scrollTrigger: { trigger: tocItems[0], start: 'top 82%', once: true },
+      });
+    }
+  }
+  actR_crDeliv();
 
   /* ── Act R — Frictions & Alignment section.
         4 cards stagger reveal, then pivot block (claim + outcome) lands as the resolution. */
@@ -957,7 +1652,12 @@
       });
     }
 
-    /* Pivot block — the resolution. Lands after cards, with claim then outcome. */
+    /* CVE 2026-05-03 · Triple-Win section · triangle draw + sync cards · sub-fonction
+       intégrée à actR_alignment pour cohérence Act R. */
+    actR_triplewin();
+
+    /* Pivot block — the resolution. Lands after cards, with claim then outcome.
+       CVE 2026-05-03 : pulse subtle sur "le bébé de tout le monde" en fin de timeline. */
     if (pivot) {
       ScrollTrigger.create({
         trigger: pivot, start: 'top 80%', once: true,
@@ -966,10 +1666,64 @@
           tl.to(pivot, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, 0);
           if (pivotClaim) tl.to(pivotClaim, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' }, 0.25);
           if (pivotOutcome) tl.to(pivotOutcome, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 0.55);
+          /* Délice : pulse "le bébé de tout le monde" 1.5s après le reveal */
+          tl.add(() => {
+            const accent = pivotOutcome && pivotOutcome.querySelector('strong.accent');
+            if (accent) accent.classList.add('is-pulsing');
+          }, 1.6);
         },
       });
     }
   }
+  /* Concept Triple-Win · triangle SVG draw on scroll + 3 cards sync · CVE 2026-05-03 */
+  function actR_triplewin() {
+    const sec = document.querySelector('#concept-triplewin');
+    if (!sec) return;
+    const eyebrow = sec.querySelector('.eyebrow');
+    const title = sec.querySelector('h2');
+    const lead = sec.querySelector('.triplewin-lead');
+    const claim = sec.querySelector('.triplewin-claim');
+    const cards = sec.querySelectorAll('.triplewin-card');
+    const edges = sec.querySelectorAll('.tw-edge');
+    const nodes = sec.querySelectorAll('.tw-node');
+    const labels = sec.querySelectorAll('.tw-label');
+
+    [eyebrow, title, lead].filter(Boolean).forEach((el) => gsap.set(el, { opacity: 0, y: 22 }));
+    if (cards.length) gsap.set(cards, { opacity: 0, y: 30 });
+    if (edges.length) gsap.set(edges, { strokeDasharray: 600, strokeDashoffset: 600 });
+    if (nodes.length) gsap.set(nodes, { scale: 0, transformOrigin: 'center', opacity: 0 });
+    if (labels.length) gsap.set(labels, { opacity: 0 });
+    if (claim) gsap.set(claim, { opacity: 0, y: 22 });
+
+    [eyebrow, title, lead].filter(Boolean).forEach((el, i) => {
+      gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: i * 0.10,
+        scrollTrigger: { trigger: el, start: 'top 82%', toggleActions: 'play none none reverse' },
+      });
+    });
+
+    /* Triangle draw + nodes pop + cards sync · ScrollTrigger once: true */
+    const stage = sec.querySelector('.triplewin-grid');
+    if (stage) {
+      ScrollTrigger.create({
+        trigger: stage, start: 'top 78%', once: true,
+        onEnter: () => {
+          const tl = gsap.timeline();
+          if (edges.length) tl.to(edges, { strokeDashoffset: 0, duration: 1.2, ease: 'power2.out', stagger: 0.18 }, 0);
+          if (nodes.length) tl.to(nodes, { scale: 1, opacity: 1, duration: 0.45, ease: 'back.out(1.8)', stagger: 0.18 }, 0.6);
+          if (labels.length) tl.to(labels, { opacity: 0.9, duration: 0.5, ease: 'power2.out', stagger: 0.15 }, 0.85);
+          if (cards.length) tl.to(cards, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.18 }, 0.9);
+        },
+      });
+    }
+
+    if (claim) {
+      ScrollTrigger.create({
+        trigger: claim, start: 'top 80%', once: true,
+        onEnter: () => gsap.to(claim, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }),
+      });
+    }
+  }
+
   actR_alignment();
 
   /* ── Timeline intro (avant Act S) — line draws in + nodes pop sequential.
@@ -1178,10 +1932,61 @@
     }
   });
 
-  /* ── Refresh ScrollTrigger after fonts load (avoid layout-shift bugs) */
+  /* ── Refresh ScrollTrigger after fonts load AND after window load (images,
+        h-pin sections fully laid out). Évite les calculs de positions de pins
+        basés sur un layout pas encore stable, qui faisaient désynchroniser
+        les chap-dividers et les sections horizontales. */
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => ScrollTrigger.refresh());
   }
+  if (document.readyState === 'complete') {
+    /* Already loaded — refresh next tick to let any pending init complete. */
+    setTimeout(() => ScrollTrigger.refresh(), 100);
+  } else {
+    window.addEventListener('load', () => {
+      /* All images + sub-resources loaded → recompute every ScrollTrigger position. */
+      setTimeout(() => ScrollTrigger.refresh(), 100);
+    }, { once: true });
+  }
+
+  /* ──────────────────────────────────────────────────────────
+     CHAPTER-DIVIDER v2 · sticky-pin scroll-driven · CVE 2026-05-04
+     Section 180vh, stage 100vh sticky. Au scroll, on calcule p ∈ [0,1]
+     selon -rect.top / (offsetHeight - innerHeight) et on écrit 5 vars
+     CSS sur la section. Le CSS interpole tout le reste.
+     ────────────────────────────────────────────────────────── */
+  (function initChapterDividerV2() {
+    const sections = document.querySelectorAll('.chapter-divider--v2');
+    if (!sections.length) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+    const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+    const sub = (p, lo, hi) => clamp((p - lo) / (hi - lo), 0, 1);
+    sections.forEach(section => {
+      const stage = section.querySelector('.chap-v2__stage');
+      if (!stage) return;
+      const apply = (p) => {
+        const s = section.style;
+        s.setProperty('--p', p.toFixed(4));
+        s.setProperty('--p-enter', sub(p, 0.00, 0.32).toFixed(4));
+        s.setProperty('--p-meta',  sub(p, 0.28, 0.65).toFixed(4));
+        s.setProperty('--p-hold',  sub(p, 0.55, 0.85).toFixed(4));
+        s.setProperty('--p-exit',  sub(p, 0.85, 1.00).toFixed(4));
+      };
+      apply(0);
+      ScrollTrigger.create({
+        trigger: section,
+        pin: stage,
+        pinSpacing: false,
+        start: 'top top',
+        end: () => '+=' + (section.offsetHeight - window.innerHeight),
+        scrub: true,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+        onUpdate: (st) => apply(st.progress),
+      });
+    });
+  })();
 
   /* ──────────────────────────────────────────────────────────
      Fallback: no GSAP → simple IO reveal
