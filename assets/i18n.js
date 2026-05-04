@@ -2929,6 +2929,153 @@
       en: 'See full history 2006 → 2015 →'
     },
 
+    /* CVE 2026-05-04 audit i18n · 35 clés HTML manquantes maintenant trilingual */
+    'home.awardsEyebrow': { fr: 'Reconnaissances', nl: 'Erkenningen', en: 'Recognitions' },
+    'home.awardsH2': {
+      fr: 'Quelques signaux extérieurs.',
+      nl: 'Enkele externe signalen.',
+      en: 'A few external signals.'
+    },
+    'home.awards.fwa': {
+      fr: 'Site Dragonne et plusieurs autres projets · My Media Is Rich · Creative Director.',
+      nl: 'Site Dragonne en verschillende andere projecten · My Media Is Rich · Creative Director.',
+      en: 'Dragonne site and several other projects · My Media Is Rich · Creative Director.'
+    },
+    'home.awards.awwwards': {
+      fr: 'Plusieurs projets digitaux primés · My Media Is Rich · Creative Director.',
+      nl: 'Verschillende bekroonde digitale projecten · My Media Is Rich · Creative Director.',
+      en: 'Several award-winning digital projects · My Media Is Rich · Creative Director.'
+    },
+    'home.awards.creativewallonia': {
+      fr: 'Concours startup · levée de fonds gagnée pour <strong>Unfold</strong>.',
+      nl: 'Startup-wedstrijd · kapitaalronde gewonnen voor <strong>Unfold</strong>.',
+      en: 'Startup contest · funding round won for <strong>Unfold</strong>.'
+    },
+
+    /* CVE 2026-05-04 audit i18n · BNP Value Proposition content section (30 clés) */
+    'bnp.vp.title': {
+      fr: 'Un dashboard, ce n\'est pas <span class="accent">pousser de la donnée.</span><br>C\'est raconter une histoire qui décide.',
+      nl: 'Een dashboard is geen <span class="accent">data pushen.</span><br>Het is een verhaal vertellen dat beslist.',
+      en: 'A dashboard is not about <span class="accent">pushing data.</span><br>It\'s about telling a story that decides.'
+    },
+    'bnp.vp.lede': {
+      fr: 'Avant la VP, chaque fonction parlait sa propre langue. Après, une phrase tient debout dans la salle : <strong>l\'utilisateur a un objectif, on lui livre un rapport orienté objectif, point</strong>. Plus de cognitive overload, plus de visualisation pour la visualisation. Cette section est l\'alignement qui rend la suite légitime.',
+      nl: 'Vóór de VP sprak elke functie haar eigen taal. Erna staat één zin overeind in de zaal: <strong>de gebruiker heeft een doel, we leveren een doelgericht rapport, punt</strong>. Geen cognitieve overbelasting meer, geen visualisatie omwille van de visualisatie. Deze sectie is de uitlijning die de rest legitiem maakt.',
+      en: 'Before the VP, every function spoke its own language. After, one sentence holds in the room: <strong>the user has an objective, we deliver an objective-oriented report, period</strong>. No more cognitive overload, no more visualisation for visualisation\'s sake. This section is the alignment that makes the rest legitimate.'
+    },
+    'bnp.vp.posture.h': { fr: 'La posture', nl: 'De houding', en: 'The posture' },
+    'bnp.vp.posture.claim': {
+      fr: 'Pas une plateforme exploratoire. <span class="accent">Une narration outillée.</span>',
+      nl: 'Geen exploratief platform. <span class="accent">Een verhaal met tools.</span>',
+      en: 'Not an exploratory platform. <span class="accent">A tool-equipped narrative.</span>'
+    },
+    'bnp.vp.posture.l1': {
+      fr: '<strong>Pas</strong> de pushing data via charts décoratifs.',
+      nl: '<strong>Geen</strong> data-push via decoratieve grafieken.',
+      en: '<strong>No</strong> data-pushing via decorative charts.'
+    },
+    'bnp.vp.posture.l2': {
+      fr: '<strong>Telling a story</strong> avec la donnée à disposition.',
+      nl: '<strong>Een verhaal vertellen</strong> met de beschikbare data.',
+      en: '<strong>Telling a story</strong> with the data at hand.'
+    },
+    'bnp.vp.posture.l3': {
+      fr: '<strong>Focus</strong> sur l\'information pertinente, qui pilote l\'action.',
+      nl: '<strong>Focus</strong> op relevante informatie, die actie aanstuurt.',
+      en: '<strong>Focus</strong> on relevant information that drives action.'
+    },
+    'bnp.vp.posture.src': {
+      fr: 'Source · Concept Report mars 2018 · slide « E.I. Concept · Value Proposition »',
+      nl: 'Bron · Concept Report maart 2018 · slide "E.I. Concept · Value Proposition"',
+      en: 'Source · Concept Report March 2018 · slide "E.I. Concept · Value Proposition"'
+    },
+    'bnp.vp.persona.h': {
+      fr: 'Les 3 questions du commerçant',
+      nl: 'De 3 vragen van de handelaar',
+      en: 'The merchant\'s 3 questions'
+    },
+    'bnp.vp.persona.claim': {
+      fr: 'Le commerçant ouvre l\'app avec <span class="accent">un objectif précis</span>, pas avec l\'envie d\'explorer.',
+      nl: 'De handelaar opent de app met <span class="accent">een specifiek doel</span>, niet met de wens om te verkennen.',
+      en: 'The merchant opens the app with <span class="accent">a specific goal</span>, not with a desire to explore.'
+    },
+    'bnp.vp.persona.q1': {
+      fr: 'Pourquoi Enterprise Intelligence est pertinent pour mon business ?',
+      nl: 'Waarom is Enterprise Intelligence relevant voor mijn business?',
+      en: 'Why is Enterprise Intelligence relevant to my business?'
+    },
+    'bnp.vp.persona.q2': {
+      fr: 'Quels insights vais-je en tirer concrètement ?',
+      nl: 'Welke inzichten zal ik er concreet uit halen?',
+      en: 'What insights will I actually gain from it?'
+    },
+    'bnp.vp.persona.q3': {
+      fr: 'Comment je m\'en sers, ce matin, à 8h, derrière ma caisse ?',
+      nl: 'Hoe gebruik ik het, vanmorgen om 8u, achter mijn kassa?',
+      en: 'How do I use it, this morning at 8am, behind my counter?'
+    },
+    'bnp.vp.persona.hint': {
+      fr: 'Il veut <strong>l\'information le plus vite possible</strong>, sans effort. Il n\'explorera pas plus de données qu\'il ne peut traiter.',
+      nl: 'Hij wil <strong>de informatie zo snel mogelijk</strong>, zonder moeite. Hij verkent niet meer data dan hij kan verwerken.',
+      en: 'He wants <strong>information as fast as possible</strong>, with no effort. He won\'t explore more data than he can process.'
+    },
+    'bnp.vp.needs.h': {
+      fr: '5 besoins → 5 livrables',
+      nl: '5 behoeften → 5 deliverables',
+      en: '5 needs → 5 deliverables'
+    },
+    'bnp.vp.needs.claim': {
+      fr: 'Chaque besoin du commerçant <span class="accent">se mappe à un livrable</span> du futur produit. Pas un de plus.',
+      nl: 'Elke behoefte van de handelaar <span class="accent">wordt gekoppeld aan een deliverable</span> van het toekomstige product. Geen één meer.',
+      en: 'Every merchant need <span class="accent">maps to one deliverable</span> of the future product. Not one more.'
+    },
+    'bnp.vp.needs.colNeed': { fr: 'Besoin', nl: 'Behoefte', en: 'Need' },
+    'bnp.vp.needs.colDeliv': {
+      fr: 'Ce que le produit livre',
+      nl: 'Wat het product levert',
+      en: 'What the product delivers'
+    },
+    'bnp.vp.needs.n1': { fr: 'Goals report', nl: 'Goals report', en: 'Goals report' },
+    'bnp.vp.needs.d1': {
+      fr: '<strong>Goal-oriented report</strong> calé sur les objectifs métier',
+      nl: '<strong>Doelgericht rapport</strong> afgestemd op de business-doelstellingen',
+      en: '<strong>Goal-oriented report</strong> aligned with business objectives'
+    },
+    'bnp.vp.needs.n2': { fr: 'KPI overview', nl: 'KPI overview', en: 'KPI overview' },
+    'bnp.vp.needs.d2': {
+      fr: 'KPIs <strong>focus là où la décision se joue</strong>',
+      nl: 'KPI\'s <strong>gericht op waar de beslissing zich afspeelt</strong>',
+      en: 'KPIs <strong>focused where the decision happens</strong>'
+    },
+    'bnp.vp.needs.n3': { fr: 'Information', nl: 'Informatie', en: 'Information' },
+    'bnp.vp.needs.d3': {
+      fr: 'Texte qui <strong>explique la dataviz</strong>, pas l\'inverse',
+      nl: 'Tekst die <strong>de dataviz verklaart</strong>, niet andersom',
+      en: 'Text that <strong>explains the dataviz</strong>, not the other way round'
+    },
+    'bnp.vp.needs.n4': { fr: 'Outcomes', nl: 'Outcomes', en: 'Outcomes' },
+    'bnp.vp.needs.d4': {
+      fr: 'Outcomes prêts à l\'emploi pour <strong>éviter le calcul mental</strong>',
+      nl: 'Kant-en-klare outcomes om <strong>hoofdrekenen te vermijden</strong>',
+      en: 'Ready-to-use outcomes to <strong>avoid mental calculation</strong>'
+    },
+    'bnp.vp.needs.n5': { fr: 'Personalisation', nl: 'Personalisatie', en: 'Personalisation' },
+    'bnp.vp.needs.d5': {
+      fr: 'Agrégation <strong>customisée selon les produits</strong> du commerçant',
+      nl: 'Aggregatie <strong>aangepast aan de producten</strong> van de handelaar',
+      en: 'Aggregation <strong>customised to the merchant\'s products</strong>'
+    },
+    'bnp.vp.bridgeText': {
+      fr: 'À la sortie de cette VP, <strong>Banking, IT, Legal et Marketing</strong> partagent la même phrase, le même utilisateur, les mêmes 5 livrables. C\'est ce <span class="accent">socle commun</span> qui rend l\'idéation légitime, on n\'arbitre plus sur le « quoi », on arbitre sur le « comment ».',
+      nl: 'Aan het eind van deze VP delen <strong>Banking, IT, Legal en Marketing</strong> dezelfde zin, dezelfde gebruiker, dezelfde 5 deliverables. Het is dit <span class="accent">gemeenschappelijke fundament</span> dat de ideation legitiem maakt: we arbitreren niet meer over het "wat", maar over het "hoe".',
+      en: 'At the end of this VP, <strong>Banking, IT, Legal and Marketing</strong> share the same sentence, the same user, the same 5 deliverables. It\'s this <span class="accent">common ground</span> that makes ideation legitimate: we no longer arbitrate on the "what", we arbitrate on the "how".'
+    },
+    'bnp.vp.bridgeNext': {
+      fr: 'Suite logique <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 4 Goals identifiés en atelier',
+      nl: 'Logisch vervolg <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 4 Goals geïdentificeerd in workshop',
+      en: 'Next step <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 4 Goals identified in workshop'
+    },
+
     /* CVE 2026-05-04 S8.2 · About / Bio dense factuelle pour LLM citations */
     'home.aboutEyebrow': { fr: 'À propos', nl: 'Over mij', en: 'About' },
     'home.aboutH2': { fr: 'Bio en clair.', nl: 'Bio in het kort.', en: 'Bio in plain words.' },
