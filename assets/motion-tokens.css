@@ -227,6 +227,16 @@ section[data-h-pin].h-stack .h-panel {
   min-height: 100vh;
 }
 
+/* CVE 2026-05-08 · fix bug barrières 02-06 invisibles.
+   Quand le JS désactive le scroll horizontal et applique .h-stack, l'attribut
+   data-overflow="contain" doit être neutralisé (sinon il clip la section à 100svh
+   et masque tous les panels au-delà du premier). */
+section[data-h-pin].h-stack[data-overflow="contain"],
+section[data-h-pin].h-stack[data-overflow="frame"] {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
 /* ════════════════════════════════════════════════════════════════════════
    REDUCED-MOTION · accessibility
    ════════════════════════════════════════════════════════════════════════ */

@@ -165,8 +165,9 @@ function injectHreflang(html, page) {
 /* Pour les pages traduites : asset paths relatifs deviennent absolus
    (sinon /nl/index.html cherche /nl/assets/... qui n'existe pas). */
 function rebaseAssets(html) {
-  /* href/src qui commencent par 'assets/' ou 'public/' → '/assets/' '/public/' */
-  html = html.replace(/(href|src)="(assets|public)\//g, '$1="/$2/');
+  /* href/src/srcset/poster/data-src qui commencent par 'assets/' ou 'public/' → '/assets/' '/public/'
+     CVE 2026-05-08 · srcset ajouté · les <source srcset="public/img/X.webp"> sur home cassaient en /nl/ /en/ */
+  html = html.replace(/(href|src|srcset|poster|data-src)="(assets|public)\//g, '$1="/$2/');
   /* Les inter-pages doivent aussi rester sur la même langue (rester dans /nl/ ou /en/) */
   /* href="bnp.html" relatif fonctionne dans /nl/ qui contient bnp.html */
   return html;
