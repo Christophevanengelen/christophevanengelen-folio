@@ -758,7 +758,7 @@
      Tier 1 intensity — this is the film's opening frame, not a section reveal. */
   const hcxSection = document.querySelector('.hcx');
   if (hcxSection) {
-    const hcxBg      = hcxSection.querySelector('.hcx__bg img');
+    const hcxBg      = hcxSection.querySelector('.hcx__bg img, .hcx__bg video');
     const hcxClient  = hcxSection.querySelector('.hcx__client');
     const hcxPeriod  = hcxSection.querySelector('.hcx__period');
     const hcxEyebrow = hcxSection.querySelector('.hcx__eyebrow');
@@ -833,6 +833,16 @@
 
     /* t=3.85 — Scroll cue last. The invitation. */
     if (hcxScroll)  hcxTl.to(hcxScroll,  { opacity: 1, y: 0, duration: 0.70, ease: 'power2.out' }, 3.85);
+
+    /* CVE 2026-05-08 · safety timeout · si l'intro timeline n'a pas joué après 5s
+       (cas observé sur hms.html avec <video> bg · cause non identifiée),
+       force progress(1) pour ne JAMAIS laisser un hero invisible.
+       Si l'intro a joué normalement (4.55s), le force est no-op. */
+    setTimeout(() => {
+      if (hcxTl && hcxTl.progress() < 1) {
+        hcxTl.progress(1);
+      }
+    }, 5000);
 
     /* ── Scroll parallax : ZOOM INVERSE de l'entrance (zoom-out → zoom-in continu).
        Entrance fait : scale 1.18 → 1.04 (zoom-out posant le décor).
