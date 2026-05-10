@@ -8248,6 +8248,22 @@ body.home {
   flex-direction: column;
   gap: clamp(48px, 8vh, 96px);
 }
+/* CVE 2026-05-08 · séparateur centré entre cards (best practice UI) ·
+   ligne 1px neutre, positionnée au milieu du gap, ne touche aucune card.
+   Aide la lecture diagonale, pas de surcharge visuelle. */
+.home-case + .home-case {
+  position: relative;
+}
+.home-case + .home-case::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * clamp(24px, 4vh, 48px));
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border);
+  opacity: 0.4;
+}
 .home-case__link {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -8325,7 +8341,10 @@ body.home {
   color: var(--amber);
   margin-top: 8px;
   align-self: flex-start;
-  border-bottom: 1px solid color-mix(in srgb, var(--amber) 35%, transparent);
+  /* CVE 2026-05-08 · underline retiré · le link signal est porté par
+     le hover (color-shift + arrow translate) pour ne pas créer de fausse
+     ligne de séparation accrochée au bas de chaque card. */
+  border-bottom: 1px solid transparent;
   padding-bottom: 3px;
   transition: border-color 0.2s ease, letter-spacing 0.25s ease;
 }
@@ -8484,12 +8503,12 @@ body.home {
   font-size: var(--font-body-md);
   line-height: 1.5;
 }
-/* CVE 2026-05-08 · accent items alignés sur les non-accent (pas de débordement) ·
-   highlight discret via background interne au padding-block. */
+/* CVE 2026-05-08 · accent items · ZÉRO débordement, alignement parfait avec
+   les non-accent. Highlight visuel = uniquement client name en amber + lien
+   « Read case → ». Pas de background, pas de border-left, pas de padding qui
+   casse la grille en mobile. UI clean, lecture diagonale facile. */
 .home-track__item--accent {
-  background: color-mix(in srgb, var(--amber) 5%, transparent);
-  border-left: 2px solid var(--amber);
-  padding-left: 14px;
+  /* highlight retiré · seul .home-track__client en amber + .home-track__case-link signalent les cases cliquables */
 }
 .home-track__period {
   font-family: var(--sans);
