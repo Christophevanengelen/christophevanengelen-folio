@@ -903,6 +903,75 @@
   }
 
   /* ════════════════════════════════════════════════════════════════════════
+     CINEMATIC HERO IMAGE REVEAL · CVE 2026-05-08 · pattern Apple WOW
+     ════════════════════════════════════════════════════════════════════════
+     Pour les figures .cjm-hero, .proto-hero, .case-hero ajoutées dans les
+     cases · scroll-driven scale + clip-path reveal + parallax subtil.
+     L'image apparaît zoomée avec un masque inset, se révèle progressivement
+     à mesure que la section entre dans le viewport. Inspiration Apple
+     MacBook Pro · scènes cinématiques au scroll.
+     ════════════════════════════════════════════════════════════════════════ */
+  /* Apple-style title reveal · clip-path bottom-up · pour h2/h3 marqués
+     [data-reveal="title"]. Le texte se découvre du bas vers le haut quand
+     la section entre · effet papier-déroulé cinématique. */
+  document.querySelectorAll('[data-reveal="title"]').forEach((title) => {
+    gsap.set(title, {
+      clipPath: 'inset(0% 0% 100% 0%)',
+      yPercent: 8,
+      willChange: 'clip-path, transform',
+    });
+    gsap.to(title, {
+      clipPath: 'inset(0% 0% 0% 0%)',
+      yPercent: 0,
+      duration: 1.2,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: title,
+        start: 'top 85%',
+        toggleActions: 'play none none reverse',
+      },
+    });
+  });
+
+  document.querySelectorAll('.cjm-hero, .proto-hero, .case-hero-reveal').forEach((figure) => {
+    const img = figure.querySelector('img, video');
+    if (!img) return;
+    /* État initial · clipped + scaled-up légèrement */
+    gsap.set(img, {
+      scale: 1.10,
+      clipPath: 'inset(8% 8% 8% 8% round 12px)',
+      filter: 'brightness(0.85)',
+      willChange: 'transform, clip-path, filter',
+    });
+    /* Reveal scrubbed sur l'entrée · scale → 1.0, clip → 0%, brightness → 1 */
+    gsap.to(img, {
+      scale: 1.0,
+      clipPath: 'inset(0% 0% 0% 0% round 12px)',
+      filter: 'brightness(1)',
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: figure,
+        start: 'top 85%',
+        end: 'top 35%',
+        scrub: 1.2,
+        invalidateOnRefresh: true,
+      },
+    });
+    /* Parallax subtil après reveal · y déplacement -8% sur la traversée */
+    gsap.to(img, {
+      yPercent: -6,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: figure,
+        start: 'top 35%',
+        end: 'bottom top',
+        scrub: 1.6,
+        invalidateOnRefresh: true,
+      },
+    });
+  });
+
+  /* ════════════════════════════════════════════════════════════════════════
      NARRATIVE MOTION TEMPLATE · CVE 2026-05-03 · case-agnostic engine.
      ════════════════════════════════════════════════════════════════════════
 
