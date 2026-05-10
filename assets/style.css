@@ -9678,3 +9678,128 @@ body.home {
   .chap-v2__progress > span { width: 100%; }
   .chap-v2__meta > * { opacity: 1 !important; transform: none !important; }
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   HMS CLOUD REVAMP SHOWCASE · CVE 2026-05-08 · Apple-style horizontal
+   scroll-snap gallery. 17 slides Heuristic Evaluation défilent latéralement.
+   Le user scrolle/swipe horizontalement. Cinematic mais accessible.
+   ════════════════════════════════════════════════════════════════════════ */
+.hms-showcase {
+  padding-block: clamp(80px, 12vh, 140px);
+  background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--amber) 4%, transparent) 50%, transparent 100%);
+  overflow: hidden;
+}
+.hms-showcase__title {
+  font-family: var(--display);
+  font-weight: 200;
+  font-size: clamp(40px, 5.5vw, 80px);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0 0 24px;
+  color: var(--fg);
+}
+.hms-showcase__title .accent {
+  color: var(--amber);
+  font-weight: 600;
+}
+.hms-showcase__lead {
+  max-width: 60ch;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0 0 48px;
+}
+.hms-showcase__rail {
+  display: flex;
+  gap: clamp(20px, 2vw, 32px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 24px clamp(24px, 4vw, 64px) 32px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: clamp(24px, 4vw, 64px);
+  -webkit-overflow-scrolling: touch;
+  list-style: none;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--amber) 40%, transparent) transparent;
+}
+.hms-showcase__rail::-webkit-scrollbar { height: 6px; }
+.hms-showcase__rail::-webkit-scrollbar-track { background: transparent; }
+.hms-showcase__rail::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--amber) 30%, transparent);
+  border-radius: 3px;
+}
+.hms-showcase__rail::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--amber) 60%, transparent);
+}
+.hms-showcase__slide {
+  flex: 0 0 clamp(280px, 75vw, 1100px);
+  scroll-snap-align: center;
+  margin: 0;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(10, 18, 32, 0.4),
+              0 4px 12px rgba(10, 18, 32, 0.2);
+  background: var(--bg-2);
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1), box-shadow 0.5s;
+}
+.hms-showcase__slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 80px rgba(10, 18, 32, 0.5),
+              0 6px 16px rgba(10, 18, 32, 0.25);
+}
+.hms-showcase__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top center;
+}
+.hms-showcase__slide figcaption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 14px 20px;
+  background: linear-gradient(0deg, rgba(10,18,32,0.92) 0%, rgba(10,18,32,0.0) 100%);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+.hms-showcase__slide--final {
+  outline: 2px solid var(--amber);
+  outline-offset: -2px;
+}
+.hms-showcase__slide--final figcaption {
+  color: var(--amber);
+}
+.hms-showcase__hint {
+  margin-top: 20px;
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--fg-soft);
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .hms-showcase__slide { flex-basis: 88vw; }
+  .hms-showcase__rail { padding: 16px 20px 24px; gap: 16px; }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   COUNT-UP CLIMAX · CVE 2026-05-08 · Apple-style number animation
+   Les chiffres marqués [data-countup] s'incrémentent quand ils entrent
+   dans le viewport. Climax punch · €2M, 76 pages, 6 PME.
+   ════════════════════════════════════════════════════════════════════════ */
+[data-countup] {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+[data-countup].is-counting {
+  color: var(--amber);
+}

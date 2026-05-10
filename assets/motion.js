@@ -911,6 +911,35 @@
      à mesure que la section entre dans le viewport. Inspiration Apple
      MacBook Pro · scènes cinématiques au scroll.
      ════════════════════════════════════════════════════════════════════════ */
+  /* Apple-style count-up · les chiffres marqués [data-countup] s'incrémentent
+     de 0 jusqu'à leur valeur finale quand ils entrent dans le viewport.
+     Pattern · climax punch sur les stats des cases (€2M, 76 pages, 6 PME). */
+  document.querySelectorAll('[data-countup]').forEach((el) => {
+    const finalValue = parseFloat(el.getAttribute('data-countup')) || 0;
+    const decimals = parseInt(el.getAttribute('data-countup-decimals') || '0', 10);
+    const prefix = el.getAttribute('data-countup-prefix') || '';
+    const suffix = el.getAttribute('data-countup-suffix') || '';
+    const duration = parseFloat(el.getAttribute('data-countup-duration') || '1.6');
+    const obj = { v: 0 };
+    /* Pre-render valeur 0 pour éviter flash final */
+    el.textContent = prefix + (0).toFixed(decimals) + suffix;
+    gsap.to(obj, {
+      v: finalValue,
+      duration: duration,
+      ease: 'power2.out',
+      onStart: () => el.classList.add('is-counting'),
+      onUpdate: () => {
+        el.textContent = prefix + obj.v.toFixed(decimals) + suffix;
+      },
+      onComplete: () => el.classList.remove('is-counting'),
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none reset',
+      },
+    });
+  });
+
   /* Apple-style title reveal · clip-path bottom-up · pour h2/h3 marqués
      [data-reveal="title"]. Le texte se découvre du bas vers le haut quand
      la section entre · effet papier-déroulé cinématique. */
