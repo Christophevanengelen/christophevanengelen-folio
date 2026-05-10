@@ -2544,14 +2544,14 @@
     /* CVE 2026-05-04 v9 · home cards refonte sobre · subtitle court 1 phrase
        claim · outcomeLine 1 phrase toolkit→outcome · cta lien sobre. */
     'case.bnp.subtitle': {
-      fr: 'La donnée transactionnelle dormante d\'une banque, devenue un service que des PME commerçantes ont accepté de payer.',
-      nl: 'De sluimerende transactiedata van een bank, geworden een dienst waar handelsondernemingen voor willen betalen.',
-      en: 'A bank\'s dormant transactional data, turned into a service that SME merchants accepted to pay for.'
+      fr: 'Une donnée bancaire dormante, devenue service signé.',
+      nl: 'Sluimerende bankdata, geworden ondertekende dienst.',
+      en: 'Dormant bank data, turned into a signed service.'
     },
     'case.bnp.outcomeLine': {
-      fr: 'Lean Canvas, Value Proposition Canvas, Co-design → 1 promesse d\'achat signée par Léonidas avant le développement.',
-      nl: 'Lean Canvas, Value Proposition Canvas, Co-design → 1 ondertekende koopbelofte van Léonidas vóór de ontwikkeling.',
-      en: 'Lean Canvas, Value Proposition Canvas, Co-design → 1 signed purchase commitment from Léonidas before development.'
+      fr: '<strong>Léonidas signé</strong> avant la première ligne de code.',
+      nl: '<strong>Léonidas ondertekend</strong> vóór de eerste coderegel.',
+      en: '<strong>Léonidas signed</strong> before the first line of code.'
     },
     'case.bnp.cta': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
 
@@ -2561,14 +2561,14 @@
     'case.speos.year': { fr: '2024 — 2025', nl: '2024 — 2025', en: '2024 — 2025' },
     'case.speos.role': { fr: 'CX/UX/Service Design Consultant', nl: 'CX/UX/Service Design Consultant', en: 'CX/UX/Service Design Consultant' },
     'case.speos.subtitle': {
-      fr: 'J\'ai installé le Service Design chez SPEOS, un postal industriel 100 % IT, en pleine bascule Agile.',
-      nl: 'Ik heb Service Design geïnstalleerd bij SPEOS, een industrieel postbedrijf 100 % IT, midden in een Agile-overgang.',
-      en: 'I installed Service Design at SPEOS, an industrial postal player 100 % IT, in the middle of its Agile transition.'
+      fr: 'Un postal industriel devenu user-centric en douze mois.',
+      nl: 'Een industrieel postbedrijf dat user-centric werd in twaalf maanden.',
+      en: 'An industrial postal player turned user-centric in twelve months.'
     },
     'case.speos.outcomeLine': {
-      fr: 'Stakeholder Map, CJM AS-IS, 10 Pain Points → 6 clients pilotes valident, dont Luminus.',
-      nl: 'Stakeholder Map, CJM AS-IS, 10 Pain Points → 6 pilootklanten valideren, waaronder Luminus.',
-      en: 'Stakeholder Map, CJM AS-IS, 10 Pain Points → 6 pilot customers validated, including Luminus.'
+      fr: '<strong>Six clients pilotes valident.</strong> Dont Luminus.',
+      nl: '<strong>Zes pilootklanten valideren.</strong> Waaronder Luminus.',
+      en: '<strong>Six pilot customers validated.</strong> Including Luminus.'
     },
     'case.speos.cta': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
 
@@ -2579,14 +2579,14 @@
     'case.hms.year': { fr: '2021 — 2022', nl: '2021 — 2022', en: '2021 — 2022' },
     'case.hms.role': { fr: 'Service Design + UX/UI Consultant', nl: 'Service Design + UX/UI Consultant', en: 'Service Design + UX/UI Consultant' },
     'case.hms.subtitle': {
-      fr: 'Trois plateformes legacy d\'industrial IoT — eCatcher, M2Web, Talk2M — réunifiées en une plateforme one-stop user-centric.',
-      nl: 'Drie legacy platforms voor industrial IoT — eCatcher, M2Web, Talk2M — herenigd in één user-centric one-stop platform.',
-      en: 'Three legacy industrial IoT platforms — eCatcher, M2Web, Talk2M — unified into one user-centric platform.'
+      fr: 'Trois plateformes legacy d\'industrial IoT, réunifiées en un an.',
+      nl: 'Drie legacy industrial IoT platforms, herenigd in één jaar.',
+      en: 'Three legacy industrial IoT platforms, unified in one year.'
     },
     'case.hms.outcomeLine': {
-      fr: 'Customer Journey workshops, Heuristic Evaluation Nielsen → Concept Report priorisé, sponsor décroche 2 M€ pour la mise en prod.',
-      nl: 'Customer Journey workshops, Heuristic Evaluation Nielsen → Concept Report op prioriteit, sponsor krijgt 2 M€ voor de productie.',
-      en: 'Customer Journey workshops, Heuristic Evaluation Nielsen → prioritised Concept Report, sponsor secures €2M for production rollout.'
+      fr: '<strong>2 M€ débloqués</strong> pour la mise en prod.',
+      nl: '<strong>2 M€ vrijgemaakt</strong> voor productie.',
+      en: '<strong>€2M secured</strong> for production rollout.'
     },
     'case.hms.cta': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
 
@@ -2933,19 +2933,19 @@
     'home.trackSource': { fr: 'Références téléphonables disponibles sur demande.', nl: 'Telefonische referenties beschikbaar op aanvraag.', en: 'Phone references available on request.' },
     /* CVE 2026-05-04 S4.2 · 3 one-liners punchy remplacent les 3 paragraphes p1/p2/p3 */
     'home.practice.l1': {
-      fr: 'Je rentre par le <strong>métier</strong>, j\'installe avec <strong>l\'IT</strong>.',
-      nl: 'Ik kom binnen langs <strong>Business</strong>, installeer met <strong>IT</strong>.',
-      en: 'I come in through <strong>Business</strong>, install with <strong>IT</strong>.'
+      fr: '<strong>De la friction stakeholder au scope MVP signé.</strong><span class="home-practice__sub">Faire converger Business, IT et utilisateur autour d\'une décision défendable. C\'est mon métier.</span>',
+      nl: '<strong>Van stakeholder-frictie tot ondertekende MVP-scope.</strong><span class="home-practice__sub">Business, IT en gebruiker laten samenkomen rond een verdedigbare beslissing. Dat is mijn vak.</span>',
+      en: '<strong>From stakeholder friction to signed MVP scope.</strong><span class="home-practice__sub">Bringing Business, IT and the user together around a defensible decision. That\'s my craft.</span>'
     },
     'home.practice.l2': {
-      fr: 'La <strong>méthode</strong> change selon le contexte. Le <strong>métier</strong>, lui, ne bouge pas.',
-      nl: 'De <strong>methode</strong> verandert met de context. Het <strong>vak</strong> blijft hetzelfde.',
-      en: 'The <strong>method</strong> changes with the context. The <strong>craft</strong>, however, stays the same.'
+      fr: '<strong>Le bon outil au bon moment.</strong><span class="home-practice__sub">Strategyzer, Customer Journey, Heuristic Evaluation, Service Blueprint, Design Sprint. Le contexte change, le métier reste.</span>',
+      nl: '<strong>De juiste tool op het juiste moment.</strong><span class="home-practice__sub">Strategyzer, Customer Journey, Heuristic Evaluation, Service Blueprint, Design Sprint. De context verandert, het vak blijft.</span>',
+      en: '<strong>The right tool at the right moment.</strong><span class="home-practice__sub">Strategyzer, Customer Journey, Heuristic Evaluation, Service Blueprint, Design Sprint. The context changes, the craft stays.</span>'
     },
     'home.practice.l3': {
-      fr: 'Vingt ans, <strong>douze missions</strong>, banque, postal industriel, SaaS, legal-tech, produit digital.',
-      nl: 'Twintig jaar, <strong>twaalf opdrachten</strong>, banking, industriële post, SaaS, legal-tech, digitaal product.',
-      en: 'Twenty years, <strong>twelve assignments</strong>, banking, industrial postal, SaaS, legal-tech, digital product.'
+      fr: '<strong>Trois cases en ligne. Trois décisions de production signées.</strong><span class="home-practice__sub">BNP · Léonidas signé avant le build. SPEOS · six clients pilotes valident. HMS · 2 M€ débloqués pour la mise en prod.</span>',
+      nl: '<strong>Drie cases online. Drie getekende productiebeslissingen.</strong><span class="home-practice__sub">BNP · Léonidas getekend vóór de build. SPEOS · zes pilootklanten valideren. HMS · 2 M€ vrijgemaakt voor productie.</span>',
+      en: '<strong>Three cases online. Three signed production decisions.</strong><span class="home-practice__sub">BNP · Léonidas signed before the build. SPEOS · six pilot customers validate. HMS · €2M secured for production.</span>'
     },
     /* CVE 2026-05-04 S4.3 · "Voir tout l'historique" disclosure pour 4 missions
        2006-2015 masquées par défaut. */

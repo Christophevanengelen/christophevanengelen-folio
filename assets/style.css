@@ -8147,14 +8147,12 @@ body.home {
      anchored bottom-right : buste touche la baseline, tête a de l'air en haut. */
   object-fit: contain;
   object-position: bottom right;
-  /* CVE 2026-05-04 v6 · mix-blend-mode lighten supprime le fond sombre JPG.
-     Mask-image fade le BORD GAUCHE de l'image (pas un overlay) pour que
-     le texte lise clean sans rien d'opaque qui passe par-dessus. */
-  opacity: 0.74;
-  filter: saturate(0.85) contrast(1.02);
-  mix-blend-mode: lighten;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 28%, black 100%);
-          mask-image: linear-gradient(90deg, transparent 0%, black 28%, black 100%);
+  /* CVE 2026-05-08 · filtres + blend retirés (rendu sale signalé) ·
+     opacité 1, couleurs naturelles. Le mask-image gauche reste pour
+     que le texte se pose proprement sur la photo. */
+  opacity: 1;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 32%, black 100%);
+          mask-image: linear-gradient(90deg, transparent 0%, black 32%, black 100%);
 }
 /* ============== HOME HERO RESPONSIVE · CVE 2026-05-04 v7 ==============
    Approche : on garde le layout overlay (photo behind, texte par-dessus)
@@ -8256,8 +8254,12 @@ body.home {
   gap: clamp(28px, 4vw, 64px);
   align-items: center;
   text-decoration: none;
+  border: 0;
   color: inherit;
   transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+  /* CVE 2026-05-08 · padding vertical pour breathing room entre cases ·
+     remplace l'orange line global qui collait les cards. */
+  padding-block: clamp(8px, 1.6vh, 24px);
 }
 .home-case__link:hover { transform: translateY(-2px); }
 .home-case__cover {
@@ -8420,12 +8422,26 @@ body.home {
   margin: 0;
 }
 .home-practice__line p strong {
-  color: var(--amber);
+  color: var(--fg);
   font-weight: 500;
+  display: block;
+}
+/* CVE 2026-05-08 · sub-line discrète sous chaque claim · Apple-style proof */
+.home-practice__sub {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.55;
+  letter-spacing: 0;
+  color: var(--fg-muted);
+  max-width: 60ch;
 }
 @media (max-width: 600px) {
   .home-practice__line { grid-template-columns: 36px 1fr; gap: 12px; }
   .home-practice__num { font-size: 16px; }
+  .home-practice__sub { font-size: 14px; margin-top: 8px; }
 }
 
 /* HOME TRACK · liste textuelle 3 colonnes · format CV européen */
@@ -8468,10 +8484,12 @@ body.home {
   font-size: var(--font-body-md);
   line-height: 1.5;
 }
+/* CVE 2026-05-08 · accent items alignés sur les non-accent (pas de débordement) ·
+   highlight discret via background interne au padding-block. */
 .home-track__item--accent {
   background: color-mix(in srgb, var(--amber) 5%, transparent);
-  margin-inline: calc(-1 * var(--frame-pad-x));
-  padding-inline: var(--frame-pad-x);
+  border-left: 2px solid var(--amber);
+  padding-left: 14px;
 }
 .home-track__period {
   font-family: var(--sans);
