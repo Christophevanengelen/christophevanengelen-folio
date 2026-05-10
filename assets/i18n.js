@@ -2525,9 +2525,9 @@
       en: 'Freelance Service Design Leader in Brussels. 20 years of experience in UX, CX and Service Design. I align business, users and IT. Cases: BNP, SPEOS, HMS Networks.'
     },
     'home.lead': {
-      fr: 'Vingt ans à designer des services à l\'intersection business, utilisateur et livraison. Pour banques, postaux industriels, industrial IoT, B2B SaaS, legal-tech. Cas récents ci-dessous · SPEOS (groupe bpost), Ewon by HMS Networks, BNP Paribas Fortis.',
-      nl: 'Twintig jaar diensten ontwerpen op het kruispunt van business, gebruiker en levering. Voor banken, industriële postbedrijven, industrial IoT, B2B SaaS, legal-tech. Recente cases hieronder · SPEOS (bpost-groep), Ewon by HMS Networks, BNP Paribas Fortis.',
-      en: 'Twenty years designing services at the intersection of business, user and delivery. For banks, industrial postal players, industrial IoT, B2B SaaS, legal-tech. Recent cases below · SPEOS (bpost group), Ewon by HMS Networks, BNP Paribas Fortis.'
+      fr: 'Vingt ans à designer des services qui décident. Trois cases ci-dessous · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      nl: 'Twintig jaar diensten ontwerpen die beslissen. Drie cases hieronder · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      en: 'Twenty years designing services that decide. Three cases below · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
     },
     'home.casesH2': {
       fr: 'Trois missions. <span class="accent">Trois décisions de production signées.</span>',
@@ -2868,9 +2868,9 @@
       en: 'Worked with'
     },
     'home.casesCta': {
-      fr: 'Un projet en tête ? Premier call <strong>30 min, gratuit</strong>, pour qualifier votre besoin. <a href="mailto:cve@hi-def.be?subject=Projet%20Service%20Design&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>',
-      nl: 'Een project in gedachten? Eerste call <strong>30 min, gratis</strong>, om uw behoefte te kwalificeren. <a href="mailto:cve@hi-def.be?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>',
-      en: 'Got a project in mind? First call <strong>30 min, free</strong>, to qualify your need. <a href="mailto:cve@hi-def.be?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>'
+      fr: 'Un projet en tête ? Premier call <strong>30 min, gratuit</strong>. <a href="mailto:cve@hi-def.be?subject=Projet%20Service%20Design&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>',
+      nl: 'Een project in gedachten? Eerste call <strong>30 min, gratis</strong>. <a href="mailto:cve@hi-def.be?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>',
+      en: 'Got a project in mind? First call <strong>30 min, free</strong>. <a href="mailto:cve@hi-def.be?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>'
     },
     'home.testimonialEyebrow': {
       fr: 'Ce qu\'ils disent',
@@ -2893,9 +2893,9 @@
       en: 'Sponsor, Enterprise Intelligence project'
     },
     'home.testimonialNote': {
-      fr: 'Référence téléphonable disponible sur demande.',
-      nl: 'Telefonische referentie beschikbaar op aanvraag.',
-      en: 'Phone reference available on request.'
+      fr: 'Référence sur demande.',
+      nl: 'Referentie op aanvraag.',
+      en: 'Reference on request.'
     },
 
     'home.contactEyebrow': { fr: 'Contact', nl: 'Contact', en: 'Contact' },
@@ -2930,7 +2930,7 @@
     'home.seeWork': { fr: 'Selected work ↓', nl: 'Selected work ↓', en: 'Selected work ↓' },
     'home.trackEyebrow': { fr: 'Track record', nl: 'Track record', en: 'Track record' },
     'home.trackH2': { fr: 'Vingt ans, douze missions.', nl: 'Twintig jaar, twaalf opdrachten.', en: 'Twenty years, twelve assignments.' },
-    'home.trackSource': { fr: 'Références téléphonables disponibles sur demande.', nl: 'Telefonische referenties beschikbaar op aanvraag.', en: 'Phone references available on request.' },
+    'home.trackSource': { fr: 'Références sur demande.', nl: 'Referenties op aanvraag.', en: 'References on request.' },
     /* CVE 2026-05-04 S4.2 · 3 one-liners punchy remplacent les 3 paragraphes p1/p2/p3 */
     'home.practice.l1': {
       fr: '<strong>De la friction stakeholder au scope MVP signé.</strong><span class="home-practice__sub">Faire converger Business, IT et utilisateur autour d\'une décision défendable. C\'est mon métier.</span>',
