@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * CVE 2026-05-04 S2 · build-i18n.js
- * Génère les versions NL/EN pré-rendues de index.html, bnp.html, speos.html
+ * Génère les versions NL/EN pré-rendues de index.html, bnp.html, speos.html, hms.html
  * à partir du dict i18n.js. Sortie : /nl/<page>.html et /en/<page>.html.
  *
  * Pourquoi : le i18n côté client (data-i18n swap au runtime) ne crée pas
@@ -16,7 +16,7 @@ const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
 const I18N_PATH = path.join(ROOT, 'assets', 'i18n.js');
-const PAGES = ['index.html', 'bnp.html', 'speos.html'];
+const PAGES = ['index.html', 'bnp.html', 'speos.html', 'hms.html'];
 const LANGS = ['nl', 'en'];
 const HOST = 'https://christophevanengelen.be';
 
@@ -82,8 +82,8 @@ function replaceI18nNodes(html, dict, lang) {
 
 /* Remplace les meta SEO pour la langue (title, og:title, og:locale, etc.) */
 function applySeoForLang(html, dict, lang, page) {
-  const titleKey = page === 'index.html' ? 'home.title' : (page === 'bnp.html' ? 'bnp.title' : 'speos.title');
-  const descKey = page === 'index.html' ? 'home.metaDesc' : (page === 'bnp.html' ? 'bnp.metaDesc' : 'speos.metaDesc');
+  const titleKey = page === 'index.html' ? 'home.title' : (page === 'bnp.html' ? 'bnp.title' : (page === 'hms.html' ? 'hms.title' : 'speos.title'));
+  const descKey = page === 'index.html' ? 'home.metaDesc' : (page === 'bnp.html' ? 'bnp.metaDesc' : (page === 'hms.html' ? 'hms.metaDesc' : 'speos.metaDesc'));
   const newTitle = dict[titleKey] && dict[titleKey][lang];
   const newDesc = dict[descKey] && dict[descKey][lang];
   if (newTitle) {

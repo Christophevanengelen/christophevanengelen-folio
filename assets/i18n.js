@@ -2522,22 +2522,22 @@
     'home.metaDesc': {
       fr: 'Service Designer Leader freelance à Bruxelles. 20 ans d\'expérience en UX, CX et Service Design. J\'aligne business, utilisateurs et IT. Cas : BNP, SPEOS.',
       nl: 'Freelance Service Design Leader in Brussel. 20 jaar ervaring in UX, CX en Service Design. Ik lijn business, gebruikers en IT uit. Cases: BNP, SPEOS.',
-      en: 'Freelance Service Design Leader in Brussels. 20 years of experience in UX, CX and Service Design. I align business, users and IT. Cases: BNP, SPEOS.'
+      en: 'Freelance Service Design Leader in Brussels. 20 years of experience in UX, CX and Service Design. I align business, users and IT. Cases: BNP, SPEOS, HMS Networks.'
     },
     'home.lead': {
-      fr: 'Vingt ans à designer des services à l\'intersection business, utilisateur et livraison. Pour banques, postaux industriels, B2B SaaS, legal-tech. Cas récents ci-dessous · SPEOS (groupe bpost), BNP Paribas Fortis.',
-      nl: 'Twintig jaar diensten ontwerpen op het kruispunt van business, gebruiker en levering. Voor banken, industriële postbedrijven, B2B SaaS, legal-tech. Recente cases hieronder · SPEOS (bpost-groep), BNP Paribas Fortis.',
-      en: 'Twenty years designing services at the intersection of business, user and delivery. For banks, industrial postal players, B2B SaaS, legal-tech. Recent cases below · SPEOS (bpost group), BNP Paribas Fortis.'
+      fr: 'Vingt ans à designer des services à l\'intersection business, utilisateur et livraison. Pour banques, postaux industriels, industrial IoT, B2B SaaS, legal-tech. Cas récents ci-dessous · SPEOS (groupe bpost), Ewon by HMS Networks, BNP Paribas Fortis.',
+      nl: 'Twintig jaar diensten ontwerpen op het kruispunt van business, gebruiker en levering. Voor banken, industriële postbedrijven, industrial IoT, B2B SaaS, legal-tech. Recente cases hieronder · SPEOS (bpost-groep), Ewon by HMS Networks, BNP Paribas Fortis.',
+      en: 'Twenty years designing services at the intersection of business, user and delivery. For banks, industrial postal players, industrial IoT, B2B SaaS, legal-tech. Recent cases below · SPEOS (bpost group), Ewon by HMS Networks, BNP Paribas Fortis.'
     },
     'home.casesH2': {
-      fr: 'Deux missions. <span class="accent">Deux décisions de production signées.</span>',
-      nl: 'Twee opdrachten. <span class="accent">Twee getekende productiebeslissingen.</span>',
-      en: 'Two missions. <span class="accent">Two signed production decisions.</span>'
+      fr: 'Trois missions. <span class="accent">Trois décisions de production signées.</span>',
+      nl: 'Drie opdrachten. <span class="accent">Drie getekende productiebeslissingen.</span>',
+      en: 'Three missions. <span class="accent">Three signed production decisions.</span>'
     },
     'home.casesIntro': {
-      fr: 'Le toolkit du Service Designer ne se choisit pas en amont · il se choisit selon la maturité de l\'organisation et la nature du problème. Chez BNP Paribas Fortis, banque mature avec une donnée à activer, l\'entrée s\'est faite par <strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>. Chez SPEOS, postal industriel à transformer, par <strong>Stakeholder Map + Customer Journey AS-IS</strong>. Deux toolkits différents, le même métier.',
-      nl: 'De toolkit van een Service Designer kies je niet vooraf · je kiest hem afhankelijk van de maturiteit van de organisatie en de aard van het probleem. Bij BNP Paribas Fortis, een mature bank met te activeren data, lag de instap bij <strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>. Bij SPEOS, een industrieel postbedrijf in transformatie, bij <strong>Stakeholder Map + Customer Journey AS-IS</strong>. Twee verschillende toolkits, hetzelfde vak.',
-      en: 'A Service Designer\'s toolkit is not chosen in advance · it is chosen based on the maturity of the organisation and the nature of the problem. At BNP Paribas Fortis, a mature bank with data to activate, the entry was through <strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>. At SPEOS, an industrial postal player in transformation, through <strong>Stakeholder Map + AS-IS Customer Journey</strong>. Two different toolkits, the same craft.'
+      fr: 'Le toolkit du Service Designer ne se choisit pas en amont · il se choisit selon la maturité de l\'organisation et la nature du problème. Chez BNP Paribas Fortis, banque mature avec une donnée à activer · <strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>. Chez SPEOS, postal industriel à transformer · <strong>Stakeholder Map + Customer Journey AS-IS</strong>. Chez Ewon by HMS Networks, industrial IoT à réunifier · <strong>Customer Journey workshops + Heuristic Evaluation Nielsen + framework Relevance/Simplicity/Consistency</strong>. Trois toolkits différents, le même métier.',
+      nl: 'De toolkit van een Service Designer kies je niet vooraf · je kiest hem afhankelijk van de maturiteit van de organisatie en de aard van het probleem. Bij BNP Paribas Fortis, een mature bank met te activeren data · <strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>. Bij SPEOS, een industrieel postbedrijf in transformatie · <strong>Stakeholder Map + Customer Journey AS-IS</strong>. Bij Ewon by HMS Networks, industrial IoT te herenigen · <strong>Customer Journey workshops + Heuristic Evaluation Nielsen + framework Relevance/Simplicity/Consistency</strong>. Drie verschillende toolkits, hetzelfde vak.',
+      en: 'A Service Designer\'s toolkit is not chosen in advance · it is chosen based on the maturity of the organisation and the nature of the problem. At BNP Paribas Fortis, a mature bank with data to activate · <strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>. At SPEOS, an industrial postal player in transformation · <strong>Stakeholder Map + AS-IS Customer Journey</strong>. At Ewon by HMS Networks, industrial IoT to unify · <strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Relevance/Simplicity/Consistency framework</strong>. Three different toolkits, the same craft.'
     },
     'home.openCases': { fr: 'Voir les deux cases →', nl: 'Bekijk beide cases →', en: 'See both cases →' },
 
@@ -2571,6 +2571,24 @@
       en: 'Stakeholder Map, CJM AS-IS, 10 Pain Points → 6 pilot customers validated, including Luminus.'
     },
     'case.speos.cta': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
+
+    /* Case 03 · Ewon by HMS Networks · Cloud Revamp · 2021-2022 */
+    'case.hms.tag': { fr: '2021 — 2022', nl: '2021 — 2022', en: '2021 — 2022' },
+    'case.hms.title': { fr: 'Cloud Revamp.', nl: 'Cloud Revamp.', en: 'Cloud Revamp.' },
+    'case.hms.client': { fr: 'Ewon by HMS Networks', nl: 'Ewon by HMS Networks', en: 'Ewon by HMS Networks' },
+    'case.hms.year': { fr: '2021 — 2022', nl: '2021 — 2022', en: '2021 — 2022' },
+    'case.hms.role': { fr: 'Service Design + UX/UI Consultant', nl: 'Service Design + UX/UI Consultant', en: 'Service Design + UX/UI Consultant' },
+    'case.hms.subtitle': {
+      fr: 'Trois plateformes legacy d\'industrial IoT — eCatcher, M2Web, Talk2M — réunifiées en une plateforme one-stop user-centric.',
+      nl: 'Drie legacy platforms voor industrial IoT — eCatcher, M2Web, Talk2M — herenigd in één user-centric one-stop platform.',
+      en: 'Three legacy industrial IoT platforms — eCatcher, M2Web, Talk2M — unified into one user-centric platform.'
+    },
+    'case.hms.outcomeLine': {
+      fr: 'Customer Journey workshops, Heuristic Evaluation Nielsen → Concept Report priorisé, sponsor décroche 2 M€ pour la mise en prod.',
+      nl: 'Customer Journey workshops, Heuristic Evaluation Nielsen → Concept Report op prioriteit, sponsor krijgt 2 M€ voor de productie.',
+      en: 'Customer Journey workshops, Heuristic Evaluation Nielsen → prioritised Concept Report, sponsor secures €2M for production rollout.'
+    },
+    'case.hms.cta': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
 
     'footer.copy': {
       fr: '© Christophe van Engelen, 2026. Artefacts originaux © Speos / bpostgroup 2024-2025.',
