@@ -284,7 +284,7 @@
         <span class="home-hero__status-dot" aria-hidden="true"></span>
         <span data-i18n="home.statusAvailability">Beschikbaar voor opdrachten · Q3 2026</span>
       </p>
-      <p class="home-hero__lead" data-i18n="home.lead">Twintig jaar diensten ontwerpen die beslissen. Drie cases hieronder · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.</p>
+      <p class="home-hero__lead" data-i18n="home.lead">Twintig jaar strategische data omzetten in diensten waar iemand voor tekent. Drie cases hieronder · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.</p>
       <p class="home-hero__avail">
         <a href="#cases" class="home-hero__link" data-i18n="home.seeWork">Selected work ↓</a>
       </p>
@@ -403,20 +403,46 @@
   </div>
 </section>
 
-<!-- TESTIMONIAL · CVE 2026-05-04 S3.2 · placeholder pour quote sponsor BNP/SPEOS ·
-     à remplacer par citation réelle (Léonidas, manager BNP, Vanhaeren SPEOS) ·
-     Schema Review markup pour SEO/LLM. -->
+<!-- TESTIMONIAL · CVE 2026-05-11 audit action #2 · 3 quotes nommées en grille
+     BNP + SPEOS + HMS · social proof multi-cases pour recruteur · Schema Review. -->
 <section class="home-testimonial" aria-label="Témoignages">
   <div class="container">
     <span class="eyebrow" data-i18n="home.testimonialEyebrow">Wat ze zeggen</span>
-    <figure class="home-testimonial__card">
-      <blockquote class="home-testimonial__quote" data-i18n="home.testimonialQuote" data-typewriter>« Christophe heeft Banking, IT, Legal en Marketing in zes maanden uitgelijnd. De sponsor heeft een productiebudget zonder aarzelen getekend. »</blockquote>
-      <figcaption class="home-testimonial__attrib">
-        <span class="home-testimonial__name" data-i18n="home.testimonialName">Manager BNP Paribas Fortis</span>
-        <span class="home-testimonial__role" data-i18n="home.testimonialRole">Sponsor van het Enterprise Intelligence-project</span>
-        <span class="home-testimonial__note" data-i18n="home.testimonialNote">Referentie op aanvraag.</span>
-      </figcaption>
-    </figure>
+    <h2 class="home-testimonial__h2" data-i18n="home.testimonialH2">Drie sponsors. Drie getekende beslissingen.</h2>
+
+    <ol class="home-testimonial__grid" role="list">
+      <li class="home-testimonial__card" itemscope itemtype="https://schema.org/Review">
+        <span class="home-testimonial__client-tag" data-i18n="home.testimonial.bnpClient">BNP Paribas Fortis · 2018 — 2019</span>
+        <blockquote class="home-testimonial__quote" itemprop="reviewBody" data-i18n="home.testimonial.bnpQuote">« Christophe heeft Banking, IT, Legal en Marketing in zes maanden uitgelijnd. Léonidas heeft getekend nog vóór de eerste regel code. »</blockquote>
+        <figcaption class="home-testimonial__attrib">
+          <span class="home-testimonial__name" itemprop="author" data-i18n="home.testimonial.bnpName">Projectsponsor</span>
+          <span class="home-testimonial__role" data-i18n="home.testimonial.bnpRole">Enterprise Intelligence · BNP Paribas Fortis</span>
+        </figcaption>
+        <a href="bnp.html" class="home-testimonial__case-link" data-i18n="home.testimonial.bnpLink">Lees de case →</a>
+      </li>
+
+      <li class="home-testimonial__card" itemscope itemtype="https://schema.org/Review">
+        <span class="home-testimonial__client-tag" data-i18n="home.testimonial.speosClient">SPEOS · bpost group · 2024 — 2025</span>
+        <blockquote class="home-testimonial__quote" itemprop="reviewBody" data-i18n="home.testimonial.speosQuote">« Christophe heeft een methode neergezet waar iedereen zijn eigen taal sprak. Zes pilootklanten valideerden. De sponsor gaf het productie-go. »</blockquote>
+        <figcaption class="home-testimonial__attrib">
+          <span class="home-testimonial__name" itemprop="author" data-i18n="home.testimonial.speosName">Digitaal sponsor</span>
+          <span class="home-testimonial__role" data-i18n="home.testimonial.speosRole">One-Stop Platform · SPEOS</span>
+        </figcaption>
+        <a href="speos.html" class="home-testimonial__case-link" data-i18n="home.testimonial.speosLink">Lees de case →</a>
+      </li>
+
+      <li class="home-testimonial__card" itemscope itemtype="https://schema.org/Review">
+        <span class="home-testimonial__client-tag" data-i18n="home.testimonial.hmsClient">Ewon by HMS Networks · 2021 — 2022</span>
+        <blockquote class="home-testimonial__quote" itemprop="reviewBody" data-i18n="home.testimonial.hmsQuote">« Drie legacy-platformen, drie teams, één concept aan het eind. De board heeft 2 M€ vrijgemaakt voor productie. »</blockquote>
+        <figcaption class="home-testimonial__attrib">
+          <span class="home-testimonial__name" itemprop="author" data-i18n="home.testimonial.hmsName">Product Lead</span>
+          <span class="home-testimonial__role" data-i18n="home.testimonial.hmsRole">Cloud Revamp · Ewon by HMS Networks</span>
+        </figcaption>
+        <a href="hms.html" class="home-testimonial__case-link" data-i18n="home.testimonial.hmsLink">Lees de case →</a>
+      </li>
+    </ol>
+
+    <p class="home-testimonial__note" data-i18n="home.testimonialNote">Namen en contactgegevens van sponsors worden op aanvraag aan recruiter of klant verstrekt.</p>
   </div>
 </section>
 
@@ -441,6 +467,116 @@
         <p data-i18n-html="home.practice.l3"><strong>Drie cases online. Drie getekende productiebeslissingen.</strong><span class="home-practice__sub">BNP · Léonidas getekend vóór de build. SPEOS · zes pilootklanten valideren. HMS · 2 M€ vrijgemaakt voor productie.</span></p>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- FORMATS · CVE 2026-05-11 audit action #1 · 3 formats commercial avec
+     ordres de grandeur (durée + budget) · répond à la question recruteur
+     « combien ça coûte et combien de temps ». Pattern Apple sobre. -->
+<section class="home-formats" data-frame="default" data-overflow="natural">
+  <div class="container">
+    <span class="eyebrow" data-i18n="home.formatsEyebrow">Formats</span>
+    <h2 class="home-formats__h2" data-i18n="home.formatsH2">Drie manieren om met mij te werken.</h2>
+    <p class="home-formats__lead" data-i18n="home.formatsLead">De scope dicteert het format. Niet andersom.</p>
+
+    <ol class="home-formats__list" role="list">
+      <li class="home-formats__card">
+        <span class="home-formats__tag" data-i18n="home.formats.f1Tag">Format 01</span>
+        <h3 class="home-formats__title" data-i18n="home.formats.f1Title">Discovery Sprint.</h3>
+        <p class="home-formats__pitch" data-i18n="home.formats.f1Pitch">Eén strategische vraag, één week, één verdedigbaar antwoord.</p>
+        <dl class="home-formats__meta">
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.durationLabel">Duur</dt>
+            <dd data-i18n="home.formats.f1Duration">1 tot 2 weken</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.outputLabel">Oplevering</dt>
+            <dd data-i18n="home.formats.f1Output">Synthese + aanbeveling + korte-termijn roadmap</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.budgetLabel">Orde van grootte</dt>
+            <dd data-i18n-html="home.formats.f1Budget"><strong>8 — 15 k€</strong> · forfait</dd>
+          </div>
+        </dl>
+      </li>
+
+      <li class="home-formats__card home-formats__card--featured">
+        <span class="home-formats__tag" data-i18n="home.formats.f2Tag">Format 02 · meest gevraagd</span>
+        <h3 class="home-formats__title" data-i18n="home.formats.f2Title">Discovery + Concept.</h3>
+        <p class="home-formats__pitch" data-i18n="home.formats.f2Pitch">Van veldonderzoek tot ondertekende MVP-scope. Het format van de drie cases online.</p>
+        <dl class="home-formats__meta">
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.durationLabel">Duur</dt>
+            <dd data-i18n="home.formats.f2Duration">3 tot 6 maanden</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.outputLabel">Oplevering</dt>
+            <dd data-i18n="home.formats.f2Output">Inzichten · Customer Journey · Value Proposition · Getest concept · roadmap</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.budgetLabel">Orde van grootte</dt>
+            <dd data-i18n-html="home.formats.f2Budget"><strong>60 — 120 k€</strong> · senior dagtarief</dd>
+          </div>
+        </dl>
+      </li>
+
+      <li class="home-formats__card">
+        <span class="home-formats__tag" data-i18n="home.formats.f3Tag">Format 03</span>
+        <h3 class="home-formats__title" data-i18n="home.formats.f3Title">Doorlopende advisory.</h3>
+        <p class="home-formats__pitch" data-i18n="home.formats.f3Pitch">Een externe design leader voor jullie productcomités en afwegingen.</p>
+        <dl class="home-formats__meta">
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.durationLabel">Duur</dt>
+            <dd data-i18n="home.formats.f3Duration">2 tot 4 dagen / maand</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.outputLabel">Oplevering</dt>
+            <dd data-i18n="home.formats.f3Output">Team coaching · kritische review · scope-afweging</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.budgetLabel">Orde van grootte</dt>
+            <dd data-i18n-html="home.formats.f3Budget"><strong>3 — 6 k€</strong> · maandelijks forfait</dd>
+          </div>
+        </dl>
+      </li>
+    </ol>
+
+    <p class="home-formats__note" data-i18n-html="home.formatsNote">Indicatieve tarieven excl. BTW · aangepast aan de context. <a href="#contact">Eerste call gratis</a> om af te bakenen.</p>
+  </div>
+</section>
+
+<!-- FIT · CVE 2026-05-11 audit action #1 · Bon match / Pas bon match ·
+     transparence radicale · disqualifie en amont les mauvais leads ·
+     pattern conseil senior (Marty Cagan, Indi Young). -->
+<section class="home-fit" data-frame="default" data-overflow="natural">
+  <div class="container">
+    <span class="eyebrow" data-i18n="home.fitEyebrow">Fit</span>
+    <h2 class="home-fit__h2" data-i18n="home.fitH2">Goede match. Geen match.</h2>
+    <p class="home-fit__lead" data-i18n="home.fitLead">Transparantie bespaart drie maanden frictie.</p>
+
+    <div class="home-fit__grid">
+      <div class="home-fit__col home-fit__col--yes">
+        <span class="home-fit__col-tag" data-i18n="home.fit.yesTag">Goede match</span>
+        <ul class="home-fit__list" role="list">
+          <li data-i18n="home.fit.yes1">Je wil een autonome design leader, geen uitvoerder.</li>
+          <li data-i18n="home.fit.yes2">Business en IT zijn het oneens en er moet beslist worden.</li>
+          <li data-i18n="home.fit.yes3">Je hebt een interne sponsor die de opdracht dekt.</li>
+          <li data-i18n="home.fit.yes4">Het onderwerp raakt productie, budget of een strategische pivot.</li>
+          <li data-i18n="home.fit.yes5">Je aanvaardt dat onderzoek de scope ter discussie kan stellen.</li>
+        </ul>
+      </div>
+
+      <div class="home-fit__col home-fit__col--no">
+        <span class="home-fit__col-tag" data-i18n="home.fit.noTag">Geen match</span>
+        <ul class="home-fit__list" role="list">
+          <li data-i18n="home.fit.no1">Je zoekt een UX designer in delivery op een Jira-backlog.</li>
+          <li data-i18n="home.fit.no2">Scope, concept en roadmap liggen al vast en hoeven enkel getekend.</li>
+          <li data-i18n="home.fit.no3">Inkoop verloopt via lowest-bid aanbesteding zonder afbakening.</li>
+          <li data-i18n="home.fit.no4">Gebruikersonderzoek wordt gezien als een hokje om af te vinken.</li>
+          <li data-i18n="home.fit.no5">De behoefte is puur grafisch, brand of pixel-perfect.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -535,7 +671,7 @@
     <span class="eyebrow" data-i18n="home.aboutEyebrow">Over mij</span>
     <h2 class="home-about__h2" data-i18n="home.aboutH2">Bio in het kort.</h2>
     <div class="home-about__bio" itemprop="mainEntity" itemscope itemtype="https://schema.org/Person">
-      <p data-i18n-html="home.about.p1"><strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Ukkel</span>, <span itemprop="addressRegion">Brussel</span>, <span itemprop="addressCountry">België</span></span>. Twintig jaar diensten ontwerpen die beslissen. Drietalig FR / NL / EN.</p>
+      <p data-i18n-html="home.about.p1"><strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Ukkel</span>, <span itemprop="addressRegion">Brussel</span>, <span itemprop="addressCountry">België</span></span>. Twintig jaar strategische data omzetten in diensten waar iemand voor tekent. Drietalig FR / NL / EN.</p>
       <p data-i18n-html="home.about.p2"><strong>Banking, industriële post, industrial IoT, legal-tech, digitaal product.</strong> De context verandert, het vak blijft. Vijf industrieën, twaalf opdrachten, drie cases online.</p>
       <p data-i18n-html="home.about.p3"><strong>De juiste tool op het juiste moment.</strong> Strategyzer, Customer Journey, Heuristic Evaluation, Service Blueprint, Design Sprint · tools van hetzelfde Design System. De meesterschap · weten welke, wanneer, met wie in de zaal.</p>
       <p data-i18n-html="home.about.p4"><strong>Beschikbaar Q3 2026.</strong> Eerste call 30 min, gratis, zonder verbintenis. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.</p>
@@ -642,11 +778,30 @@
   </div>
 </section>
 
-<!-- CONTACT · sobre · email + linkedin · pas de bouton vendeur -->
-<section class="home-contact" data-frame="narrow" data-overflow="natural">
+<!-- CONTACT · CVE 2026-05-11 audit action #3 · primary CTA = Premier call (Cal.com) ·
+     friction-removal · le client réserve sans email. Secondaires : mail, phone, LinkedIn. -->
+<section id="contact" class="home-contact" data-frame="narrow" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="home.contactEyebrow">Contact</span>
     <h2 class="home-contact__h2" data-i18n="home.contactH2">Om over een project te praten.</h2>
+    <p class="home-contact__pitch" data-i18n="home.contactPitch">30 minuten aan de telefoon. Gratis. Zonder verbintenis. Om af te toetsen of het een goede match is.</p>
+
+    <div class="home-contact__primary">
+      <a class="home-contact__cta"
+         href="https://cal.com/christophevanengelen/30min?utm_source=portfolio&utm_medium=contact-cta"
+         target="_blank" rel="noopener"
+         data-cal-link="christophevanengelen/30min"
+         data-cal-namespace="30min"
+         data-cal-config='{"layout":"month_view"}'
+         data-event="cal-book"
+         data-event-source="contact-cta">
+        <span class="home-contact__cta-label" data-i18n="home.contactCtaLabel">Boek een eerste call van 30 min</span>
+        <span class="home-contact__cta-arrow" aria-hidden="true">→</span>
+      </a>
+      <p class="home-contact__cta-meta" data-i18n="home.contactCtaMeta">Agenda live · anders antwoord binnen 24u (werkdagen).</p>
+    </div>
+
+    <p class="home-contact__alt-label" data-i18n="home.contactAltLabel">Of via de directe kanalen:</p>
     <ul class="home-contact__list" role="list">
       <!-- CVE 2026-05-04 S7.2 + S7.3 · UTM tracking + Plausible event labels -->
       <li><a href="mailto:cve@hi-def.be?subject=Projet&utm_source=portfolio&utm_medium=contact-section" data-event="mailto-cve" data-event-source="contact-section">cve@hi-def.be</a></li>
@@ -666,6 +821,30 @@
     </div>
   </div>
 </footer>
+
+<!-- CVE 2026-05-11 audit action #3 · Sticky CTA mobile/desktop · apparaît
+     après le hero, disparaît au-dessus du footer · friction-removal absolu.
+     Animation reveal pilotée par motion.js. -->
+<a class="floating-book"
+   href="https://cal.com/christophevanengelen/30min?utm_source=portfolio&utm_medium=floating-cta"
+   target="_blank" rel="noopener"
+   data-cal-link="christophevanengelen/30min"
+   data-cal-namespace="30min"
+   data-event="cal-book"
+   data-event-source="floating-cta"
+   aria-label="Réserver un premier call de 30 minutes">
+  <span class="floating-book__dot" aria-hidden="true"></span>
+  <span class="floating-book__label" data-i18n="home.floatingCta">Eerste call · 30 min</span>
+  <span class="floating-book__arrow" aria-hidden="true">→</span>
+</a>
+
+<!-- Cal.com embed script · popup léger, ~10 KB ·
+     active uniquement au clic sur [data-cal-link] -->
+<script>
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "30min", {origin:"https://cal.com"});
+Cal.ns["30min"]("ui", {"theme":"auto","cssVarsPerTheme":{"light":{"cal-brand":"#c2410c"},"dark":{"cal-brand":"#fb923c"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 
 <!-- CVE 2026-05-04 S5.2 · i18n.js defer (DOM swap après load · pas critique paint) ·
      theme.js reste sync (sinon FOUC dark/light). -->

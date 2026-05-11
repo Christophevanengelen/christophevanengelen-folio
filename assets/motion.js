@@ -2202,6 +2202,43 @@
     });
   })();
 
+  /* Floating book CTA reveal · CVE 2026-05-11 audit action #3 · le bouton
+     apparaît après le hero (≥ 60% scroll viewport) et disparaît au-dessus
+     du footer pour ne pas masquer la signature. Pas de GSAP requis. */
+  (function setupFloatingBook() {
+    const btn = document.querySelector('.floating-book');
+    if (!btn) return;
+    const footer = document.querySelector('.home-footer');
+    const hero = document.querySelector('.home-hero');
+    const heroH = () => (hero ? hero.getBoundingClientRect().height : window.innerHeight * 0.6);
+
+    let raf = null;
+    const update = () => {
+      raf = null;
+      const scrolledPastHero = window.scrollY > heroH() * 0.55;
+      let footerVisible = false;
+      if (footer) {
+        const fRect = footer.getBoundingClientRect();
+        footerVisible = fRect.top < window.innerHeight - 40;
+      }
+      if (footerVisible) {
+        btn.classList.remove('is-visible');
+        btn.classList.add('is-hidden');
+      } else if (scrolledPastHero) {
+        btn.classList.add('is-visible');
+        btn.classList.remove('is-hidden');
+      } else {
+        btn.classList.remove('is-visible');
+        btn.classList.remove('is-hidden');
+      }
+    };
+
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+
   /* ──────────────────────────────────────────────────────────
      Fallback: no GSAP → simple IO reveal
      ────────────────────────────────────────────────────────── */

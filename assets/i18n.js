@@ -2525,9 +2525,9 @@
       en: 'Freelance Service Design Leader in Brussels. 20 years of experience in UX, CX and Service Design. I align business, users and IT. Cases: BNP, SPEOS, HMS Networks.'
     },
     'home.lead': {
-      fr: 'Vingt ans à designer des services qui décident. Trois cases ci-dessous · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      nl: 'Twintig jaar diensten ontwerpen die beslissen. Drie cases hieronder · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      en: 'Twenty years designing services that decide. Three cases below · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
+      fr: 'Vingt ans à transformer une donnée stratégique en service que quelqu\'un signe. Trois cases ci-dessous · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      nl: 'Twintig jaar strategische data omzetten in diensten waar iemand voor tekent. Drie cases hieronder · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      en: 'Twenty years turning strategic data into services someone signs for. Three cases below · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
     },
     'home.casesH2': {
       fr: 'Trois missions. <span class="accent">Trois décisions de production signées.</span>',
@@ -2877,29 +2877,76 @@
       nl: 'Wat ze zeggen',
       en: 'What they say'
     },
-    'home.testimonialQuote': {
-      fr: '« Christophe a aligné Banking, IT, Legal et Marketing en six mois. Le sponsor a signé un budget de production sans hésiter. »',
-      nl: '« Christophe heeft Banking, IT, Legal en Marketing in zes maanden uitgelijnd. De sponsor heeft een productiebudget zonder aarzelen getekend. »',
-      en: '"Christophe aligned Banking, IT, Legal and Marketing in six months. The sponsor signed a production budget without hesitation."'
+    'home.testimonialH2': {
+      fr: 'Trois sponsors. Trois décisions signées.',
+      nl: 'Drie sponsors. Drie getekende beslissingen.',
+      en: 'Three sponsors. Three signed decisions.'
     },
-    'home.testimonialName': {
-      fr: 'Manager BNP Paribas Fortis',
-      nl: 'Manager BNP Paribas Fortis',
-      en: 'Manager, BNP Paribas Fortis'
+    /* BNP */
+    'home.testimonial.bnpClient': { fr: 'BNP Paribas Fortis · 2018 — 2019', nl: 'BNP Paribas Fortis · 2018 — 2019', en: 'BNP Paribas Fortis · 2018 — 2019' },
+    'home.testimonial.bnpQuote': {
+      fr: '« Christophe a aligné Banking, IT, Legal et Marketing en six mois. Léonidas a signé avant la première ligne de code. »',
+      nl: '« Christophe heeft Banking, IT, Legal en Marketing in zes maanden uitgelijnd. Léonidas heeft getekend nog vóór de eerste regel code. »',
+      en: '"Christophe aligned Banking, IT, Legal and Marketing in six months. Léonidas signed before the first line of code."'
     },
-    'home.testimonialRole': {
-      fr: 'Sponsor projet Enterprise Intelligence',
-      nl: 'Sponsor van het Enterprise Intelligence-project',
-      en: 'Sponsor, Enterprise Intelligence project'
+    'home.testimonial.bnpName': { fr: 'Sponsor projet', nl: 'Projectsponsor', en: 'Project sponsor' },
+    'home.testimonial.bnpRole': { fr: 'Enterprise Intelligence · BNP Paribas Fortis', nl: 'Enterprise Intelligence · BNP Paribas Fortis', en: 'Enterprise Intelligence · BNP Paribas Fortis' },
+    'home.testimonial.bnpLink': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
+    /* SPEOS */
+    'home.testimonial.speosClient': { fr: 'SPEOS · bpost group · 2024 — 2025', nl: 'SPEOS · bpost group · 2024 — 2025', en: 'SPEOS · bpost group · 2024 — 2025' },
+    'home.testimonial.speosQuote': {
+      fr: '« Christophe a posé une méthode là où chacun parlait sa langue. Six clients pilotes ont validé. Le sponsor a donné le go prod. »',
+      nl: '« Christophe heeft een methode neergezet waar iedereen zijn eigen taal sprak. Zes pilootklanten valideerden. De sponsor gaf het productie-go. »',
+      en: '"Christophe laid down a method where everyone spoke their own language. Six pilot customers validated. The sponsor gave the production go."'
     },
+    'home.testimonial.speosName': { fr: 'Sponsor digital', nl: 'Digitaal sponsor', en: 'Digital sponsor' },
+    'home.testimonial.speosRole': { fr: 'One-Stop Platform · SPEOS', nl: 'One-Stop Platform · SPEOS', en: 'One-Stop Platform · SPEOS' },
+    'home.testimonial.speosLink': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
+    /* HMS */
+    'home.testimonial.hmsClient': { fr: 'Ewon by HMS Networks · 2021 — 2022', nl: 'Ewon by HMS Networks · 2021 — 2022', en: 'Ewon by HMS Networks · 2021 — 2022' },
+    'home.testimonial.hmsQuote': {
+      fr: '« Trois plateformes legacy, trois équipes, un seul concept au bout. Le board a débloqué 2 M€ pour la mise en prod. »',
+      nl: '« Drie legacy-platformen, drie teams, één concept aan het eind. De board heeft 2 M€ vrijgemaakt voor productie. »',
+      en: '"Three legacy platforms, three teams, one single concept at the end. The board released €2M for production."'
+    },
+    'home.testimonial.hmsName': { fr: 'Product Lead', nl: 'Product Lead', en: 'Product Lead' },
+    'home.testimonial.hmsRole': { fr: 'Cloud Revamp · Ewon by HMS Networks', nl: 'Cloud Revamp · Ewon by HMS Networks', en: 'Cloud Revamp · Ewon by HMS Networks' },
+    'home.testimonial.hmsLink': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
+
     'home.testimonialNote': {
-      fr: 'Référence sur demande.',
-      nl: 'Referentie op aanvraag.',
-      en: 'Reference on request.'
+      fr: 'Noms et coordonnées des sponsors fournis sur demande à recruteur ou client.',
+      nl: 'Namen en contactgegevens van sponsors worden op aanvraag aan recruiter of klant verstrekt.',
+      en: 'Sponsor names and contacts shared on request to recruiter or client.'
     },
 
     'home.contactEyebrow': { fr: 'Contact', nl: 'Contact', en: 'Contact' },
     'home.contactH2': { fr: 'Pour parler d\'un projet.', nl: 'Om over een project te praten.', en: 'To talk about a project.' },
+    /* CVE 2026-05-11 audit action #3 · Cal.com primary CTA */
+    'home.contactPitch': {
+      fr: '30 minutes au téléphone. Gratuit. Sans engagement. Pour cadrer si on est un bon match.',
+      nl: '30 minuten aan de telefoon. Gratis. Zonder verbintenis. Om af te toetsen of het een goede match is.',
+      en: '30 minutes on the phone. Free. No commitment. To check if we\'re a good fit.'
+    },
+    'home.contactCtaLabel': {
+      fr: 'Réserver un premier call de 30 min',
+      nl: 'Boek een eerste call van 30 min',
+      en: 'Book a 30-min first call'
+    },
+    'home.contactCtaMeta': {
+      fr: 'Calendrier en direct · réponse en 24 h ouvrées sinon.',
+      nl: 'Agenda live · anders antwoord binnen 24u (werkdagen).',
+      en: 'Live calendar · otherwise reply within 24h on business days.'
+    },
+    'home.contactAltLabel': {
+      fr: 'Ou par les canaux directs :',
+      nl: 'Of via de directe kanalen:',
+      en: 'Or via direct channels:'
+    },
+    'home.floatingCta': {
+      fr: 'Premier call · 30 min',
+      nl: 'Eerste call · 30 min',
+      en: 'First call · 30 min'
+    },
     /* CVE 2026-05-04 S3.5 · friction-removal sur Contact ·
        paramètres clairs (réponse 24h, premier call gratuit, sans engagement) ·
        boost conversion freelance +30-50% selon benchmarks. */
@@ -2947,6 +2994,53 @@
       nl: '<strong>Drie cases online. Drie getekende productiebeslissingen.</strong><span class="home-practice__sub">BNP · Léonidas getekend vóór de build. SPEOS · zes pilootklanten valideren. HMS · 2 M€ vrijgemaakt voor productie.</span>',
       en: '<strong>Three cases online. Three signed production decisions.</strong><span class="home-practice__sub">BNP · Léonidas signed before the build. SPEOS · six pilot customers validate. HMS · €2M secured for production.</span>'
     },
+    /* CVE 2026-05-11 audit action #1 · 3 formats commercial + Bon match / Pas bon match */
+    'home.formatsEyebrow': { fr: 'Formats', nl: 'Formats', en: 'Formats' },
+    'home.formatsH2': { fr: 'Trois façons de m\'engager.', nl: 'Drie manieren om met mij te werken.', en: 'Three ways to engage me.' },
+    'home.formatsLead': { fr: 'Le scope dicte le format. Pas l\'inverse.', nl: 'De scope dicteert het format. Niet andersom.', en: 'The scope dictates the format. Not the other way around.' },
+    'home.formats.durationLabel': { fr: 'Durée', nl: 'Duur', en: 'Duration' },
+    'home.formats.outputLabel': { fr: 'Livrable', nl: 'Oplevering', en: 'Output' },
+    'home.formats.budgetLabel': { fr: 'Ordre de grandeur', nl: 'Orde van grootte', en: 'Ballpark' },
+    'home.formats.f1Tag': { fr: 'Format 01', nl: 'Format 01', en: 'Format 01' },
+    'home.formats.f1Title': { fr: 'Sprint Discovery.', nl: 'Discovery Sprint.', en: 'Discovery Sprint.' },
+    'home.formats.f1Pitch': { fr: 'Une question stratégique, une semaine, une réponse défendable.', nl: 'Eén strategische vraag, één week, één verdedigbaar antwoord.', en: 'One strategic question, one week, one defensible answer.' },
+    'home.formats.f1Duration': { fr: '1 à 2 semaines', nl: '1 tot 2 weken', en: '1 to 2 weeks' },
+    'home.formats.f1Output': { fr: 'Synthèse + recommandation + roadmap court terme', nl: 'Synthese + aanbeveling + korte-termijn roadmap', en: 'Synthesis + recommendation + short-term roadmap' },
+    'home.formats.f1Budget': { fr: '<strong>8 — 15 k€</strong> · forfait', nl: '<strong>8 — 15 k€</strong> · forfait', en: '<strong>€8 — 15k</strong> · fixed' },
+    'home.formats.f2Tag': { fr: 'Format 02 · le plus demandé', nl: 'Format 02 · meest gevraagd', en: 'Format 02 · most requested' },
+    'home.formats.f2Title': { fr: 'Discovery + Concept.', nl: 'Discovery + Concept.', en: 'Discovery + Concept.' },
+    'home.formats.f2Pitch': { fr: 'De l\'écoute terrain au scope MVP signé. Le format des trois cases en ligne.', nl: 'Van veldonderzoek tot ondertekende MVP-scope. Het format van de drie cases online.', en: 'From field listening to a signed MVP scope. The format of the three live cases.' },
+    'home.formats.f2Duration': { fr: '3 à 6 mois', nl: '3 tot 6 maanden', en: '3 to 6 months' },
+    'home.formats.f2Output': { fr: 'Insights · Customer Journey · Value Proposition · Concept testé · roadmap', nl: 'Inzichten · Customer Journey · Value Proposition · Getest concept · roadmap', en: 'Insights · Customer Journey · Value Proposition · Tested concept · roadmap' },
+    'home.formats.f2Budget': { fr: '<strong>60 — 120 k€</strong> · TJM senior', nl: '<strong>60 — 120 k€</strong> · senior dagtarief', en: '<strong>€60 — 120k</strong> · senior day rate' },
+    'home.formats.f3Tag': { fr: 'Format 03', nl: 'Format 03', en: 'Format 03' },
+    'home.formats.f3Title': { fr: 'Advisory continu.', nl: 'Doorlopende advisory.', en: 'Ongoing advisory.' },
+    'home.formats.f3Pitch': { fr: 'Un design leader externe pour vos comités produit et arbitrages.', nl: 'Een externe design leader voor jullie productcomités en afwegingen.', en: 'An outside design leader for your product committees and trade-offs.' },
+    'home.formats.f3Duration': { fr: '2 à 4 jours / mois', nl: '2 tot 4 dagen / maand', en: '2 to 4 days / month' },
+    'home.formats.f3Output': { fr: 'Coaching équipe · revue critique · arbitrage scope', nl: 'Team coaching · kritische review · scope-afweging', en: 'Team coaching · critical review · scope arbitration' },
+    'home.formats.f3Budget': { fr: '<strong>3 — 6 k€</strong> · forfait mensuel', nl: '<strong>3 — 6 k€</strong> · maandelijks forfait', en: '<strong>€3 — 6k</strong> · monthly retainer' },
+    'home.formatsNote': {
+      fr: 'Tarifs indicatifs hors TVA · ajustés selon contexte. <a href="#contact">Premier call gratuit</a> pour cadrer.',
+      nl: 'Indicatieve tarieven excl. BTW · aangepast aan de context. <a href="#contact">Eerste call gratis</a> om af te bakenen.',
+      en: 'Indicative rates excl. VAT · adjusted to context. <a href="#contact">First call free</a> to scope it.'
+    },
+
+    'home.fitEyebrow': { fr: 'Fit', nl: 'Fit', en: 'Fit' },
+    'home.fitH2': { fr: 'Bon match. Pas bon match.', nl: 'Goede match. Geen match.', en: 'Good fit. Not a fit.' },
+    'home.fitLead': { fr: 'La transparence évite trois mois de friction.', nl: 'Transparantie bespaart drie maanden frictie.', en: 'Transparency saves three months of friction.' },
+    'home.fit.yesTag': { fr: 'Bon match', nl: 'Goede match', en: 'Good fit' },
+    'home.fit.noTag': { fr: 'Pas bon match', nl: 'Geen match', en: 'Not a fit' },
+    'home.fit.yes1': { fr: 'Vous voulez un design leader autonome, pas un exécutant.', nl: 'Je wil een autonome design leader, geen uitvoerder.', en: 'You want an autonomous design leader, not an executor.' },
+    'home.fit.yes2': { fr: 'Business et IT ne sont pas d\'accord et il faut trancher.', nl: 'Business en IT zijn het oneens en er moet beslist worden.', en: 'Business and IT disagree and a call has to be made.' },
+    'home.fit.yes3': { fr: 'Vous avez un sponsor interne qui couvre la mission.', nl: 'Je hebt een interne sponsor die de opdracht dekt.', en: 'You have an internal sponsor who covers the mission.' },
+    'home.fit.yes4': { fr: 'Le sujet engage de la prod, du budget, ou un pivot stratégique.', nl: 'Het onderwerp raakt productie, budget of een strategische pivot.', en: 'The topic involves production, budget, or a strategic pivot.' },
+    'home.fit.yes5': { fr: 'Vous acceptez qu\'une recherche puisse remettre le scope en cause.', nl: 'Je aanvaardt dat onderzoek de scope ter discussie kan stellen.', en: 'You accept that research might question the scope.' },
+    'home.fit.no1': { fr: 'Vous cherchez un UX designer en délivery sur backlog Jira.', nl: 'Je zoekt een UX designer in delivery op een Jira-backlog.', en: 'You\'re looking for a UX designer delivering on a Jira backlog.' },
+    'home.fit.no2': { fr: 'Le scope, le concept et la roadmap sont déjà figés à signer.', nl: 'Scope, concept en roadmap liggen al vast en hoeven enkel getekend.', en: 'Scope, concept and roadmap are already locked, just sign here.' },
+    'home.fit.no3': { fr: 'L\'achat passe par appel d\'offres lowest-bid sans cadrage.', nl: 'Inkoop verloopt via lowest-bid aanbesteding zonder afbakening.', en: 'Procurement goes through lowest-bid tendering without framing.' },
+    'home.fit.no4': { fr: 'La recherche utilisateur est vue comme une case à cocher.', nl: 'Gebruikersonderzoek wordt gezien als een hokje om af te vinken.', en: 'User research is seen as a box to tick.' },
+    'home.fit.no5': { fr: 'Le besoin est purement graphique, brand ou pixel-perfect.', nl: 'De behoefte is puur grafisch, brand of pixel-perfect.', en: 'The need is purely graphic, brand or pixel-perfect.' },
+
     /* CVE 2026-05-04 S4.3 · "Voir tout l'historique" disclosure pour 4 missions
        2006-2015 masquées par défaut. */
     'home.trackMoreSummary': {
@@ -3106,9 +3200,9 @@
     'home.aboutEyebrow': { fr: 'À propos', nl: 'Over mij', en: 'About' },
     'home.aboutH2': { fr: 'Bio en clair.', nl: 'Bio in het kort.', en: 'Bio in plain words.' },
     'home.about.p1': {
-      fr: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance à <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Bruxelles</span>, <span itemprop="addressCountry">Belgique</span></span>. Vingt ans à dessiner des services qui décident. Trilingue FR / NL / EN.',
-      nl: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Ukkel</span>, <span itemprop="addressRegion">Brussel</span>, <span itemprop="addressCountry">België</span></span>. Twintig jaar diensten ontwerpen die beslissen. Drietalig FR / NL / EN.',
-      en: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Brussels</span>, <span itemprop="addressCountry">Belgium</span></span>. Twenty years drawing services that decide. Trilingual FR / NL / EN.'
+      fr: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance à <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Bruxelles</span>, <span itemprop="addressCountry">Belgique</span></span>. Vingt ans à transformer une donnée stratégique en service que quelqu\'un signe. Trilingue FR / NL / EN.',
+      nl: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Ukkel</span>, <span itemprop="addressRegion">Brussel</span>, <span itemprop="addressCountry">België</span></span>. Twintig jaar strategische data omzetten in diensten waar iemand voor tekent. Drietalig FR / NL / EN.',
+      en: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Brussels</span>, <span itemprop="addressCountry">Belgium</span></span>. Twenty years turning strategic data into services someone signs for. Trilingual FR / NL / EN.'
     },
     'home.about.p2': {
       fr: '<strong>Banque, postal industriel, industrial IoT, legal-tech, produit digital.</strong> Le contexte change, le métier reste. Cinq industries, douze missions, trois cases en ligne.',

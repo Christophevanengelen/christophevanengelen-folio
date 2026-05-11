@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Christophe van Engelen — Service Designer Freelance Bruxelles | UX, CX</title>
-<meta name="description" content="Service Design Leader freelance à Bruxelles. Vingt ans à designer des services qui décident. Cas en ligne · SPEOS · Ewon by HMS Networks · BNP Paribas Fortis." />
+<meta name="description" content="Service Design Leader freelance à Bruxelles. Vingt ans à transformer une donnée stratégique en service que quelqu'un signe. Cas · SPEOS · Ewon by HMS Networks · BNP Paribas Fortis." />
 <meta name="author" content="Christophe van Engelen" />
 <meta name="theme-color" content="#0a1220" />
 <meta name="color-scheme" content="dark light" />
@@ -288,7 +288,7 @@
         <span data-i18n="home.statusAvailability">Disponible pour des missions · Q3 2026</span>
       </p>
       <p class="home-hero__lead" data-i18n="home.lead">
-        Vingt ans à designer des services qui décident. Trois cases ci-dessous · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.
+        Vingt ans à transformer une donnée stratégique en service que quelqu'un signe. Trois cases ci-dessous · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.
       </p>
       <p class="home-hero__avail">
         <a href="#cases" class="home-hero__link" data-i18n="home.seeWork">Selected work ↓</a>
@@ -410,22 +410,52 @@
   </div>
 </section>
 
-<!-- TESTIMONIAL · CVE 2026-05-04 S3.2 · placeholder pour quote sponsor BNP/SPEOS ·
-     à remplacer par citation réelle (Léonidas, manager BNP, Vanhaeren SPEOS) ·
-     Schema Review markup pour SEO/LLM. -->
+<!-- TESTIMONIAL · CVE 2026-05-11 audit action #2 · 3 quotes nommées en grille
+     BNP + SPEOS + HMS · social proof multi-cases pour recruteur · Schema Review. -->
 <section class="home-testimonial" aria-label="Témoignages">
   <div class="container">
     <span class="eyebrow" data-i18n="home.testimonialEyebrow">Ce qu'ils disent</span>
-    <figure class="home-testimonial__card">
-      <blockquote class="home-testimonial__quote" data-i18n="home.testimonialQuote" data-typewriter>
-        « Christophe a aligné Banking, IT, Legal et Marketing en six mois. Le sponsor a signé un budget de production sans hésiter. »
-      </blockquote>
-      <figcaption class="home-testimonial__attrib">
-        <span class="home-testimonial__name" data-i18n="home.testimonialName">Manager BNP Paribas Fortis</span>
-        <span class="home-testimonial__role" data-i18n="home.testimonialRole">Sponsor projet Enterprise Intelligence</span>
-        <span class="home-testimonial__note" data-i18n="home.testimonialNote">Référence sur demande.</span>
-      </figcaption>
-    </figure>
+    <h2 class="home-testimonial__h2" data-i18n="home.testimonialH2">Trois sponsors. Trois décisions signées.</h2>
+
+    <ol class="home-testimonial__grid" role="list">
+      <li class="home-testimonial__card" itemscope itemtype="https://schema.org/Review">
+        <span class="home-testimonial__client-tag" data-i18n="home.testimonial.bnpClient">BNP Paribas Fortis · 2018 — 2019</span>
+        <blockquote class="home-testimonial__quote" itemprop="reviewBody" data-i18n="home.testimonial.bnpQuote">
+          « Christophe a aligné Banking, IT, Legal et Marketing en six mois. Léonidas a signé avant la première ligne de code. »
+        </blockquote>
+        <figcaption class="home-testimonial__attrib">
+          <span class="home-testimonial__name" itemprop="author" data-i18n="home.testimonial.bnpName">Sponsor projet</span>
+          <span class="home-testimonial__role" data-i18n="home.testimonial.bnpRole">Enterprise Intelligence · BNP Paribas Fortis</span>
+        </figcaption>
+        <a href="bnp.html" class="home-testimonial__case-link" data-i18n="home.testimonial.bnpLink">Lire le case →</a>
+      </li>
+
+      <li class="home-testimonial__card" itemscope itemtype="https://schema.org/Review">
+        <span class="home-testimonial__client-tag" data-i18n="home.testimonial.speosClient">SPEOS · bpost group · 2024 — 2025</span>
+        <blockquote class="home-testimonial__quote" itemprop="reviewBody" data-i18n="home.testimonial.speosQuote">
+          « Christophe a posé une méthode là où chacun parlait sa langue. Six clients pilotes ont validé. Le sponsor a donné le go prod. »
+        </blockquote>
+        <figcaption class="home-testimonial__attrib">
+          <span class="home-testimonial__name" itemprop="author" data-i18n="home.testimonial.speosName">Sponsor digital</span>
+          <span class="home-testimonial__role" data-i18n="home.testimonial.speosRole">One-Stop Platform · SPEOS</span>
+        </figcaption>
+        <a href="speos.html" class="home-testimonial__case-link" data-i18n="home.testimonial.speosLink">Lire le case →</a>
+      </li>
+
+      <li class="home-testimonial__card" itemscope itemtype="https://schema.org/Review">
+        <span class="home-testimonial__client-tag" data-i18n="home.testimonial.hmsClient">Ewon by HMS Networks · 2021 — 2022</span>
+        <blockquote class="home-testimonial__quote" itemprop="reviewBody" data-i18n="home.testimonial.hmsQuote">
+          « Trois plateformes legacy, trois équipes, un seul concept au bout. Le board a débloqué 2 M€ pour la mise en prod. »
+        </blockquote>
+        <figcaption class="home-testimonial__attrib">
+          <span class="home-testimonial__name" itemprop="author" data-i18n="home.testimonial.hmsName">Product Lead</span>
+          <span class="home-testimonial__role" data-i18n="home.testimonial.hmsRole">Cloud Revamp · Ewon by HMS Networks</span>
+        </figcaption>
+        <a href="hms.html" class="home-testimonial__case-link" data-i18n="home.testimonial.hmsLink">Lire le case →</a>
+      </li>
+    </ol>
+
+    <p class="home-testimonial__note" data-i18n="home.testimonialNote">Noms et coordonnées des sponsors fournis sur demande à recruteur ou client.</p>
   </div>
 </section>
 
@@ -450,6 +480,118 @@
         <p data-i18n-html="home.practice.l3"><strong>Trois cases en ligne. Trois décisions de production signées.</strong><span class="home-practice__sub">BNP · Léonidas signé avant le build. SPEOS · six clients pilotes valident. HMS · 2 M€ débloqués pour la mise en prod.</span></p>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- FORMATS · CVE 2026-05-11 audit action #1 · 3 formats commercial avec
+     ordres de grandeur (durée + budget) · répond à la question recruteur
+     « combien ça coûte et combien de temps ». Pattern Apple sobre. -->
+<section class="home-formats" data-frame="default" data-overflow="natural">
+  <div class="container">
+    <span class="eyebrow" data-i18n="home.formatsEyebrow">Formats</span>
+    <h2 class="home-formats__h2" data-i18n="home.formatsH2">Trois façons de m'engager.</h2>
+    <p class="home-formats__lead" data-i18n="home.formatsLead">Le scope dicte le format. Pas l'inverse.</p>
+
+    <ol class="home-formats__list" role="list">
+      <li class="home-formats__card">
+        <span class="home-formats__tag" data-i18n="home.formats.f1Tag">Format 01</span>
+        <h3 class="home-formats__title" data-i18n="home.formats.f1Title">Sprint Discovery.</h3>
+        <p class="home-formats__pitch" data-i18n="home.formats.f1Pitch">Une question stratégique, une semaine, une réponse défendable.</p>
+        <dl class="home-formats__meta">
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.durationLabel">Durée</dt>
+            <dd data-i18n="home.formats.f1Duration">1 à 2 semaines</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.outputLabel">Livrable</dt>
+            <dd data-i18n="home.formats.f1Output">Synthèse + recommandation + roadmap court terme</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.budgetLabel">Ordre de grandeur</dt>
+            <dd data-i18n-html="home.formats.f1Budget"><strong>8 — 15 k€</strong> · forfait</dd>
+          </div>
+        </dl>
+      </li>
+
+      <li class="home-formats__card home-formats__card--featured">
+        <span class="home-formats__tag" data-i18n="home.formats.f2Tag">Format 02 · le plus demandé</span>
+        <h3 class="home-formats__title" data-i18n="home.formats.f2Title">Discovery + Concept.</h3>
+        <p class="home-formats__pitch" data-i18n="home.formats.f2Pitch">De l'écoute terrain au scope MVP signé. Le format des trois cases en ligne.</p>
+        <dl class="home-formats__meta">
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.durationLabel">Durée</dt>
+            <dd data-i18n="home.formats.f2Duration">3 à 6 mois</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.outputLabel">Livrable</dt>
+            <dd data-i18n="home.formats.f2Output">Insights · Customer Journey · Value Proposition · Concept testé · roadmap</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.budgetLabel">Ordre de grandeur</dt>
+            <dd data-i18n-html="home.formats.f2Budget"><strong>60 — 120 k€</strong> · TJM senior</dd>
+          </div>
+        </dl>
+      </li>
+
+      <li class="home-formats__card">
+        <span class="home-formats__tag" data-i18n="home.formats.f3Tag">Format 03</span>
+        <h3 class="home-formats__title" data-i18n="home.formats.f3Title">Advisory continu.</h3>
+        <p class="home-formats__pitch" data-i18n="home.formats.f3Pitch">Un design leader externe pour vos comités produit / arbitrages.</p>
+        <dl class="home-formats__meta">
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.durationLabel">Durée</dt>
+            <dd data-i18n="home.formats.f3Duration">2 à 4 jours / mois</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.outputLabel">Livrable</dt>
+            <dd data-i18n="home.formats.f3Output">Coaching équipe · revue critique · arbitrage scope</dd>
+          </div>
+          <div class="home-formats__row">
+            <dt data-i18n="home.formats.budgetLabel">Ordre de grandeur</dt>
+            <dd data-i18n-html="home.formats.f3Budget"><strong>3 — 6 k€</strong> · forfait mensuel</dd>
+          </div>
+        </dl>
+      </li>
+    </ol>
+
+    <p class="home-formats__note" data-i18n-html="home.formatsNote">
+      Tarifs indicatifs hors TVA · ajustés selon contexte. <a href="#contact">Premier call gratuit</a> pour cadrer.
+    </p>
+  </div>
+</section>
+
+<!-- FIT · CVE 2026-05-11 audit action #1 · Bon match / Pas bon match ·
+     transparence radicale · disqualifie en amont les mauvais leads ·
+     pattern conseil senior (Marty Cagan, Indi Young). -->
+<section class="home-fit" data-frame="default" data-overflow="natural">
+  <div class="container">
+    <span class="eyebrow" data-i18n="home.fitEyebrow">Fit</span>
+    <h2 class="home-fit__h2" data-i18n="home.fitH2">Bon match. Pas bon match.</h2>
+    <p class="home-fit__lead" data-i18n="home.fitLead">La transparence évite trois mois de friction.</p>
+
+    <div class="home-fit__grid">
+      <div class="home-fit__col home-fit__col--yes">
+        <span class="home-fit__col-tag" data-i18n="home.fit.yesTag">Bon match</span>
+        <ul class="home-fit__list" role="list">
+          <li data-i18n="home.fit.yes1">Vous voulez un design leader autonome, pas un exécutant.</li>
+          <li data-i18n="home.fit.yes2">Business et IT ne sont pas d'accord et il faut trancher.</li>
+          <li data-i18n="home.fit.yes3">Vous avez un sponsor interne qui couvre la mission.</li>
+          <li data-i18n="home.fit.yes4">Le sujet engage de la prod, du budget, ou un pivot stratégique.</li>
+          <li data-i18n="home.fit.yes5">Vous acceptez qu'une recherche puisse remettre le scope en cause.</li>
+        </ul>
+      </div>
+
+      <div class="home-fit__col home-fit__col--no">
+        <span class="home-fit__col-tag" data-i18n="home.fit.noTag">Pas bon match</span>
+        <ul class="home-fit__list" role="list">
+          <li data-i18n="home.fit.no1">Vous cherchez un UX designer en délivery sur backlog Jira.</li>
+          <li data-i18n="home.fit.no2">Le scope, le concept et la roadmap sont déjà figés à signer.</li>
+          <li data-i18n="home.fit.no3">L'achat passe par appel d'offres lowest-bid sans cadrage.</li>
+          <li data-i18n="home.fit.no4">La recherche utilisateur est vue comme une case à cocher.</li>
+          <li data-i18n="home.fit.no5">Le besoin est purement graphique / brand / pixel-perfect.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -545,7 +687,7 @@
     <h2 class="home-about__h2" data-i18n="home.aboutH2">Bio en clair.</h2>
     <div class="home-about__bio" itemprop="mainEntity" itemscope itemtype="https://schema.org/Person">
       <p data-i18n-html="home.about.p1">
-        <strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance à <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Bruxelles</span>, <span itemprop="addressCountry">Belgique</span></span>. Vingt ans à dessiner des services qui décident. Trilingue FR / NL / EN.
+        <strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance à <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Bruxelles</span>, <span itemprop="addressCountry">Belgique</span></span>. Vingt ans à transformer une donnée stratégique en service que quelqu'un signe. Trilingue FR / NL / EN.
       </p>
       <p data-i18n-html="home.about.p2">
         <strong>Banque, postal industriel, industrial IoT, legal-tech, produit digital.</strong> Le contexte change, le métier reste. Cinq industries, douze missions, trois cases en ligne.
@@ -673,11 +815,30 @@
   </div>
 </section>
 
-<!-- CONTACT · sobre · email + linkedin · pas de bouton vendeur -->
-<section class="home-contact" data-frame="narrow" data-overflow="natural">
+<!-- CONTACT · CVE 2026-05-11 audit action #3 · primary CTA = Premier call (Cal.com) ·
+     friction-removal · le client réserve sans email. Secondaires : mail, phone, LinkedIn. -->
+<section id="contact" class="home-contact" data-frame="narrow" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="home.contactEyebrow">Contact</span>
     <h2 class="home-contact__h2" data-i18n="home.contactH2">Pour parler d'un projet.</h2>
+    <p class="home-contact__pitch" data-i18n="home.contactPitch">30 minutes au téléphone. Gratuit. Sans engagement. Pour cadrer si on est un bon match.</p>
+
+    <div class="home-contact__primary">
+      <a class="home-contact__cta"
+         href="https://cal.com/christophevanengelen/30min?utm_source=portfolio&utm_medium=contact-cta"
+         target="_blank" rel="noopener"
+         data-cal-link="christophevanengelen/30min"
+         data-cal-namespace="30min"
+         data-cal-config='{"layout":"month_view"}'
+         data-event="cal-book"
+         data-event-source="contact-cta">
+        <span class="home-contact__cta-label" data-i18n="home.contactCtaLabel">Réserver un premier call de 30 min</span>
+        <span class="home-contact__cta-arrow" aria-hidden="true">→</span>
+      </a>
+      <p class="home-contact__cta-meta" data-i18n="home.contactCtaMeta">Calendrier en direct · réponse en 24 h ouvrées sinon.</p>
+    </div>
+
+    <p class="home-contact__alt-label" data-i18n="home.contactAltLabel">Ou par les canaux directs :</p>
     <ul class="home-contact__list" role="list">
       <!-- CVE 2026-05-04 S7.2 + S7.3 · UTM tracking + Plausible event labels -->
       <li><a href="mailto:cve@hi-def.be?subject=Projet&utm_source=portfolio&utm_medium=contact-section" data-event="mailto-cve" data-event-source="contact-section">cve@hi-def.be</a></li>
@@ -697,6 +858,30 @@
     </div>
   </div>
 </footer>
+
+<!-- CVE 2026-05-11 audit action #3 · Sticky CTA mobile/desktop · apparaît
+     après le hero, disparaît au-dessus du footer · friction-removal absolu.
+     Animation reveal pilotée par motion.js. -->
+<a class="floating-book"
+   href="https://cal.com/christophevanengelen/30min?utm_source=portfolio&utm_medium=floating-cta"
+   target="_blank" rel="noopener"
+   data-cal-link="christophevanengelen/30min"
+   data-cal-namespace="30min"
+   data-event="cal-book"
+   data-event-source="floating-cta"
+   aria-label="Réserver un premier call de 30 minutes">
+  <span class="floating-book__dot" aria-hidden="true"></span>
+  <span class="floating-book__label" data-i18n="home.floatingCta">Premier call · 30 min</span>
+  <span class="floating-book__arrow" aria-hidden="true">→</span>
+</a>
+
+<!-- Cal.com embed script · popup léger, ~10 KB ·
+     active uniquement au clic sur [data-cal-link] -->
+<script>
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "30min", {origin:"https://cal.com"});
+Cal.ns["30min"]("ui", {"theme":"auto","cssVarsPerTheme":{"light":{"cal-brand":"#c2410c"},"dark":{"cal-brand":"#fb923c"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 
 <!-- CVE 2026-05-04 S5.2 · i18n.js defer (DOM swap après load · pas critique paint) ·
      theme.js reste sync (sinon FOUC dark/light). -->

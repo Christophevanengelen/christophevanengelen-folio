@@ -8050,21 +8050,58 @@ body.home {
   color: var(--amber);
   margin-bottom: clamp(32px, 4vh, 48px);
 }
+.home-testimonial__h2 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 clamp(40px, 6vh, 64px);
+  color: var(--fg);
+}
+.home-testimonial__grid {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 28px);
+}
 .home-testimonial__card {
   margin: 0;
-  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  transition: border-color 220ms ease, transform 280ms ease;
+}
+.home-testimonial__card:hover {
+  border-color: color-mix(in oklab, var(--amber) 35%, var(--border));
+  transform: translateY(-2px);
+}
+.home-testimonial__client-tag {
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber);
+  opacity: 0.9;
 }
 .home-testimonial__quote {
-  margin: 0 0 28px;
+  margin: 0;
   padding: 0;
   font-family: var(--display);
   font-weight: 300;
-  font-size: clamp(22px, 2.4vw, 32px);
-  line-height: 1.4;
-  letter-spacing: -0.012em;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
   color: var(--fg);
   border: none;
   quotes: none;
+  flex: 1;
 }
 .home-testimonial__attrib {
   display: flex;
@@ -8073,18 +8110,46 @@ body.home {
   font-family: var(--sans);
   font-size: 13px;
   color: var(--fg-soft);
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
 }
 .home-testimonial__name {
   font-weight: 600;
   color: var(--fg-muted);
   letter-spacing: 0.04em;
+  font-size: 13px;
 }
-.home-testimonial__role { font-size: 12px; opacity: 0.85; }
+.home-testimonial__role {
+  font-size: 12px;
+  opacity: 0.85;
+}
+.home-testimonial__case-link {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  border-bottom: 1px solid color-mix(in oklab, var(--amber) 30%, transparent);
+  align-self: flex-start;
+  padding-bottom: 2px;
+  transition: border-color 200ms ease;
+}
+.home-testimonial__case-link:hover {
+  border-bottom-color: var(--amber);
+}
 .home-testimonial__note {
-  font-size: 11px;
-  opacity: 0.6;
+  margin: clamp(28px, 4vh, 40px) 0 0;
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--fg-soft);
   font-style: italic;
-  margin-top: 8px;
+  text-align: center;
+  opacity: 0.75;
+}
+@media (max-width: 960px) {
+  .home-testimonial__grid { grid-template-columns: 1fr; }
 }
 
 /* CVE 2026-05-04 v3 · portrait en BACKGROUND, texte par-dessus.
@@ -8463,6 +8528,250 @@ body.home {
   .home-practice__sub { font-size: 14px; margin-top: 8px; }
 }
 
+/* HOME FORMATS · CVE 2026-05-11 audit action #1 · 3 cards sobres avec
+   meta dl · pattern Apple-pricing-page · centre = format featured. */
+.home-formats {
+  padding-block: clamp(80px, 12vh, 140px);
+  border-top: 1px solid var(--border);
+}
+.home-formats .eyebrow {
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 24px;
+}
+.home-formats__h2 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  color: var(--fg);
+}
+.home-formats__lead {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0 0 clamp(40px, 6vh, 64px);
+  max-width: 56ch;
+}
+.home-formats__list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 28px);
+}
+.home-formats__card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  transition: border-color 220ms ease, transform 280ms ease;
+}
+.home-formats__card:hover {
+  border-color: color-mix(in oklab, var(--amber) 35%, var(--border));
+  transform: translateY(-2px);
+}
+.home-formats__card--featured {
+  border-color: color-mix(in oklab, var(--amber) 45%, var(--border));
+  background: color-mix(in oklab, var(--amber) 4%, var(--bg));
+}
+.home-formats__tag {
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber);
+  opacity: 0.9;
+}
+.home-formats__title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.012em;
+  color: var(--fg);
+  margin: 0;
+}
+.home-formats__pitch {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0 0 8px;
+  min-height: 3.3em;
+}
+.home-formats__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.home-formats__row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+  align-items: baseline;
+}
+.home-formats__row dt {
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 0;
+}
+.home-formats__row dd {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.45;
+  color: var(--fg);
+  margin: 0;
+}
+.home-formats__row dd strong {
+  font-weight: 500;
+  color: var(--fg);
+}
+.home-formats__note {
+  margin: clamp(28px, 4vh, 40px) 0 0;
+  font-family: var(--sans);
+  font-size: clamp(13px, 1vw, 14px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  text-align: center;
+}
+.home-formats__note a {
+  color: var(--amber);
+  border-bottom: 1px solid color-mix(in oklab, var(--amber) 30%, transparent);
+}
+.home-formats__note a:hover {
+  border-bottom-color: var(--amber);
+}
+@media (max-width: 960px) {
+  .home-formats__list { grid-template-columns: 1fr; }
+  .home-formats__pitch { min-height: 0; }
+}
+
+/* HOME FIT · CVE 2026-05-11 audit action #1 · 2 colonnes bon match / pas bon
+   match · transparence radicale · pattern Cagan / Indi Young senior conseil. */
+.home-fit {
+  padding-block: clamp(80px, 12vh, 140px);
+  border-top: 1px solid var(--border);
+}
+.home-fit .eyebrow {
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 24px;
+}
+.home-fit__h2 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  color: var(--fg);
+}
+.home-fit__lead {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0 0 clamp(40px, 6vh, 64px);
+  max-width: 56ch;
+}
+.home-fit__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 40px);
+}
+.home-fit__col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+.home-fit__col--yes {
+  border-color: color-mix(in oklab, #4ade80 38%, var(--border));
+  background: color-mix(in oklab, #4ade80 4%, var(--bg));
+}
+.home-fit__col--no {
+  border-color: color-mix(in oklab, #fb7185 32%, var(--border));
+  background: color-mix(in oklab, #fb7185 3%, var(--bg));
+  opacity: 0.92;
+}
+.home-fit__col-tag {
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.home-fit__col--yes .home-fit__col-tag { color: #16a34a; }
+.home-fit__col--no .home-fit__col-tag { color: #e11d48; }
+.home-fit__list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.home-fit__list li {
+  position: relative;
+  padding-left: 28px;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.55;
+  color: var(--fg);
+}
+.home-fit__list li::before {
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.05em;
+  line-height: 1.2;
+}
+.home-fit__col--yes .home-fit__list li::before {
+  content: "✓";
+  color: #16a34a;
+}
+.home-fit__col--no .home-fit__list li::before {
+  content: "—";
+  color: #e11d48;
+}
+@media (max-width: 800px) {
+  .home-fit__grid { grid-template-columns: 1fr; }
+}
+
 /* HOME TRACK · liste textuelle 3 colonnes · format CV européen */
 .home-track {
   padding-block: clamp(80px, 12vh, 140px);
@@ -8797,8 +9106,65 @@ body.home {
   font-size: clamp(28px, 3.5vw, 44px);
   line-height: 1.15;
   letter-spacing: -0.02em;
-  margin: 0 0 clamp(28px, 4vh, 40px);
+  margin: 0 0 16px;
   color: var(--fg);
+}
+.home-contact__pitch {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0 0 clamp(28px, 4vh, 40px);
+  max-width: 56ch;
+}
+.home-contact__primary {
+  margin: 0 0 clamp(32px, 5vh, 48px);
+}
+.home-contact__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 28px;
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.2vw, 17px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #fff;
+  background: var(--amber);
+  border-radius: 999px;
+  border: 1px solid var(--amber);
+  transition: transform 220ms ease, box-shadow 280ms ease, background 220ms ease;
+  box-shadow: 0 4px 18px color-mix(in oklab, var(--amber) 28%, transparent);
+}
+.home-contact__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px color-mix(in oklab, var(--amber) 40%, transparent);
+  background: color-mix(in oklab, var(--amber) 85%, #000);
+}
+.home-contact__cta-arrow {
+  font-size: 1.1em;
+  transition: transform 220ms ease;
+}
+.home-contact__cta:hover .home-contact__cta-arrow {
+  transform: translateX(4px);
+}
+.home-contact__cta-meta {
+  margin: 12px 0 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--fg-soft);
+  opacity: 0.85;
+}
+.home-contact__alt-label {
+  margin: 0 0 16px;
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
 }
 .home-contact__list {
   list-style: none;
@@ -8850,6 +9216,80 @@ body.home {
   align-items: center;
 }
 .home-footer__sep { opacity: 0.4; }
+
+/* FLOATING BOOK CTA · CVE 2026-05-11 audit action #3 · sticky bottom-right
+   apparaît après hero (state visible), disparaît au-dessus du footer (state hide).
+   Friction-removal · 1 clic → réserver call · accessible mobile + desktop. */
+.floating-book {
+  position: fixed;
+  bottom: clamp(16px, 3vh, 28px);
+  right: clamp(16px, 2.5vw, 32px);
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px 12px 16px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #fff;
+  background: var(--amber);
+  border-radius: 999px;
+  border: 1px solid var(--amber);
+  box-shadow: 0 8px 24px color-mix(in oklab, var(--amber) 35%, transparent),
+              0 2px 6px rgba(0,0,0,0.12);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.94);
+  transition: opacity 320ms ease, transform 360ms cubic-bezier(.2,.7,.2,1.2), background 220ms ease;
+}
+.floating-book.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+.floating-book.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.94);
+}
+.floating-book:hover {
+  background: color-mix(in oklab, var(--amber) 85%, #000);
+  transform: translateY(-2px) scale(1.02);
+}
+.floating-book__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 color-mix(in oklab, #4ade80 60%, transparent);
+  animation: pulseDot 2.4s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in oklab, #4ade80 60%, transparent); }
+  50% { box-shadow: 0 0 0 6px color-mix(in oklab, #4ade80 0%, transparent); }
+}
+.floating-book__arrow {
+  font-size: 1.05em;
+  transition: transform 220ms ease;
+}
+.floating-book:hover .floating-book__arrow {
+  transform: translateX(3px);
+}
+@media (max-width: 600px) {
+  .floating-book {
+    bottom: 14px;
+    right: 14px;
+    padding: 10px 14px 10px 12px;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-book { transition: opacity 220ms ease; }
+  .floating-book__dot { animation: none; }
+}
 
 /* ============================================================
    SPEOS · prototype mockups (CVE 2026-05-04)
