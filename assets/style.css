@@ -5607,6 +5607,254 @@ body[data-act="R"] .star-menu__node[data-act-target="A"] .star-menu__letter {
   color: var(--fg-muted); margin: 0;
 }
 
+/* CVE 2026-05-11 SPEOS Alignment 2×2 AVANT/APRÈS · UX Researcher reco ·
+   grille scannable Marc + Sophie en 8s · structure bipartite avec labels */
+.alignment-grid--2x2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.align-card--ba .align-card__ba {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+.align-card--ba .align-card__ba-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  align-items: baseline;
+}
+.align-card--ba .align-card__ba-lab {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--fg-muted) 70%, transparent);
+  padding-top: 2px;
+}
+.align-card--ba .align-card__ba-lab--after {
+  color: var(--amber);
+}
+.align-card--ba .align-card__ba-val {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--fg);
+}
+@media (max-width: 720px) {
+  .alignment-grid--2x2 { grid-template-columns: 1fr; }
+  .align-card--ba .align-card__ba-row { grid-template-columns: 52px 1fr; gap: 10px; }
+}
+
+/* CVE 2026-05-11 SPEOS Shared Language Artefact · Trend Researcher reco ·
+   pont entre Alignment et Climax · trois colonnes BIZ / IT / PARTAGÉE */
+.shared-language {
+  padding-block: clamp(60px, 9vh, 100px);
+  border-top: 1px solid var(--border);
+}
+.shared-language .eyebrow {
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+.shared-language__h2 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.2;
+  letter-spacing: -0.018em;
+  margin: 0 0 18px;
+  color: var(--fg);
+  max-width: 36ch;
+}
+.shared-language__lead {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0 0 clamp(36px, 5vh, 52px);
+  max-width: 70ch;
+}
+.shared-language__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: clamp(14px, 1.8vw, 24px);
+  align-items: stretch;
+}
+.shared-language__col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(22px, 2.8vw, 32px);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card, var(--bg));
+}
+.shared-language__col--biz {
+  border-left: 3px solid color-mix(in oklab, var(--amber) 45%, transparent);
+}
+.shared-language__col--it {
+  border-left: 3px solid color-mix(in oklab, #6366f1 45%, transparent);
+}
+.shared-language__col--shared {
+  border: 1px solid color-mix(in oklab, var(--amber) 55%, var(--border));
+  background: color-mix(in oklab, var(--amber) 5%, var(--bg));
+}
+.shared-language__col-tag {
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.shared-language__col--shared .shared-language__col-tag {
+  color: var(--amber);
+}
+.shared-language__col-text {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.55;
+  color: var(--fg);
+  margin: 0;
+  font-style: italic;
+}
+.shared-language__col-text strong {
+  font-weight: 500;
+  font-style: normal;
+  color: var(--fg);
+}
+.shared-language__consequence {
+  margin: clamp(28px, 4vh, 40px) 0 0;
+  font-family: var(--sans);
+  font-size: clamp(13px, 1vw, 15px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  text-align: center;
+  max-width: 60ch;
+  margin-inline: auto;
+}
+@media (max-width: 900px) {
+  .shared-language__grid { grid-template-columns: 1fr; }
+}
+
+/* CVE 2026-05-11 HMS L'antagoniste · Trend Researcher reco ·
+   cristallise stakes business · Ewon legacy vs IXON cloud-native */
+.hms-antagonist {
+  padding-block: clamp(60px, 9vh, 100px);
+  border-top: 1px solid var(--border);
+}
+.hms-antagonist .eyebrow {
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+.hms-antagonist__h2 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.2;
+  letter-spacing: -0.018em;
+  margin: 0 0 18px;
+  color: var(--fg);
+  max-width: 36ch;
+}
+.hms-antagonist__lead {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0 0 clamp(36px, 5vh, 52px);
+  max-width: 70ch;
+}
+.hms-antagonist__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+}
+.hms-antagonist__col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: clamp(22px, 2.8vw, 32px);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card, var(--bg));
+}
+.hms-antagonist__col--rival {
+  border: 1px solid color-mix(in oklab, #ef4444 35%, var(--border));
+  background: color-mix(in oklab, #ef4444 4%, var(--bg));
+}
+.hms-antagonist__col-tag {
+  font-family: var(--sans);
+  font-size: var(--font-micro);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.hms-antagonist__col--rival .hms-antagonist__col-tag {
+  color: #ef4444;
+}
+.hms-antagonist__list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hms-antagonist__list li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.05vw, 15.5px);
+  line-height: 1.55;
+  color: var(--fg);
+}
+.hms-antagonist__list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: color-mix(in oklab, var(--fg-muted) 60%, transparent);
+}
+.hms-antagonist__col--rival .hms-antagonist__list li::before {
+  color: #ef4444;
+}
+.hms-antagonist__consequence {
+  margin: clamp(28px, 4vh, 40px) 0 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.55;
+  color: var(--fg);
+  max-width: 60ch;
+  margin-inline: auto;
+  text-align: center;
+  padding: clamp(20px, 2.5vw, 28px);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+@media (max-width: 720px) {
+  .hms-antagonist__grid { grid-template-columns: 1fr; }
+}
+
 .alignment-pivot {
   margin-top: 50px; padding: 44px 48px;
   background:

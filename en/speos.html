@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://christophevanengelen.be/en/speos.html" />
 <meta property="og:title" content="SPEOS One-Stop Platform · Service Design Case Study by Christophe van Engelen" />
 <meta property="og:description" content="Service design case study: installing a one-stop platform at SPEOS, a bpost subsidiary. 12 expert interviews, 10 pain points, 5 MVP Value Props, 6 pre-validating pilot customers including Luminus." />
-<meta property="og:image" content="https://christophevanengelen.be/public/img/speos-ambiance.webp" />
+<meta property="og:image" content="https://christophevanengelen.be/public/img/og/og-speos.jpg" />
 <meta property="og:image:type" content="image/webp" />
 <meta property="og:image:width" content="2048" />
 <meta property="og:image:height" content="1365" />
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="SPEOS One-Stop Platform · Service Design Case Study by Christophe van Engelen" />
 <meta name="twitter:description" content="Service design case study: installing a one-stop platform at SPEOS, a bpost subsidiary. 12 expert interviews, 10 pain points, 5 MVP Value Props, 6 pre-validating pilot customers including Luminus." />
-<meta name="twitter:image" content="https://christophevanengelen.be/public/img/speos-ambiance.webp" />
+<meta name="twitter:image" content="https://christophevanengelen.be/public/img/og/og-speos.jpg" />
 <meta name="twitter:image:alt" content="SPEOS bpost group — One-Stop Platform, étude de cas Service Design." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -3338,38 +3338,52 @@
     <h2 data-i18n-html="speos.alignment.h2">How Business and IT ended up <span class="accent">speaking the same language.</span></h2>
     <p class="lead" data-i18n-html="speos.alignment.lead">At the start, each role defended its reading. The Project Owner on Business side wanted sellable features. The Project Manager on IT side wanted a maintainable stack. The Project Lead arbitrated on the schedule. <strong>Two workshop formats bridged the gap.</strong> Small targeted workshops with the Project Managers and key IT figures to lock technical trade-offs. Large Customer Journey workshops with all stakeholders around the table, to put the customer at the centre, not the org chart.</p>
 
-    <div class="alignment-grid">
-      <div class="align-card" data-fn="banking">
+    <!-- CVE 2026-05-11 SPEOS Alignment 2×2 AVANT/APRÈS · UX Researcher reco (gain Marc +10) ·
+         grille scannable en 8 secondes au lieu de prose dense -->
+    <div class="alignment-grid alignment-grid--2x2">
+      <div class="align-card align-card--ba" data-fn="banking">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">01</span>
           <span class="align-card__fn" data-i18n="speos.alignment.f1.fn">Project Owner · Business</span>
         </div>
         <h3 class="align-card__friction" data-i18n="speos.alignment.f1.h">"Which growth driver?"</h3>
-        <p class="align-card__body" data-i18n="speos.alignment.f1.p">Friction · the print rent erodes while agile competitors capture SMEs. The multichannel Value Proposition and the tiered pricing opened expansion and captured the Easy2Mail segment.</p>
+        <div class="align-card__ba">
+          <div class="align-card__ba-row"><span class="align-card__ba-lab">Avant</span><span class="align-card__ba-val" data-i18n="speos.alignment.f1.avant">The print rent erodes while pure players capture SMEs.</span></div>
+          <div class="align-card__ba-row"><span class="align-card__ba-lab align-card__ba-lab--after">Après</span><span class="align-card__ba-val" data-i18n="speos.alignment.f1.apres">Multichannel Value Proposition + tiered pricing. Expansion opened, SME segment recaptured.</span></div>
+        </div>
       </div>
-      <div class="align-card" data-fn="it">
+      <div class="align-card align-card--ba" data-fn="it">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">02</span>
           <span class="align-card__fn" data-i18n="speos.alignment.f2.fn">Project Manager · IT</span>
         </div>
         <h3 class="align-card__friction" data-i18n="speos.alignment.f2.h">"We can build tomorrow."</h3>
-        <p class="align-card__body" data-i18n="speos.alignment.f2.p">Friction · urge to code before aligning. The AS-IS Customer Journey, built on the 12 internal expert interviews, closed the debate · five disconnected systems to orchestrate and 10 Pain Points mapped before any MVP line.</p>
+        <div class="align-card__ba">
+          <div class="align-card__ba-row"><span class="align-card__ba-lab">Avant</span><span class="align-card__ba-val" data-i18n="speos.alignment.f2.avant">Urge to code before aligning. Five disconnected systems to orchestrate.</span></div>
+          <div class="align-card__ba-row"><span class="align-card__ba-lab align-card__ba-lab--after">Après</span><span class="align-card__ba-val" data-i18n="speos.alignment.f2.apres">AS-IS Customer Journey built on the 12 expert interviews. 10 Pain Points mapped before any MVP line.</span></div>
+        </div>
       </div>
-      <div class="align-card" data-fn="legal">
+      <div class="align-card align-card--ba" data-fn="legal">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">03</span>
           <span class="align-card__fn" data-i18n="speos.alignment.f3.fn">Project Lead · arbitration</span>
         </div>
-        <h3 class="align-card__friction" data-i18n="speos.alignment.f3.h">"The 2026 mandate does not move."</h3>
-        <p class="align-card__body" data-i18n="speos.alignment.f3.p">Friction · holding the timeline against the wish to do everything. The MVP scope cut at 5 Value Props, the rest placed in phase 2 of the roadmap. A written decision, not a fuzzy compromise.</p>
+        <h3 class="align-card__friction" data-i18n="speos.alignment.f3.h">"The 2026 deadline does not move."</h3>
+        <div class="align-card__ba">
+          <div class="align-card__ba-row"><span class="align-card__ba-lab">Avant</span><span class="align-card__ba-val" data-i18n="speos.alignment.f3.avant">Holding the timeline against the wish to do everything.</span></div>
+          <div class="align-card__ba-row"><span class="align-card__ba-lab align-card__ba-lab--after">Après</span><span class="align-card__ba-val" data-i18n="speos.alignment.f3.apres">MVP scope cut at 5 Value Props. The rest placed in phase 2. Written decision, not a fuzzy compromise.</span></div>
+        </div>
       </div>
-      <div class="align-card" data-fn="marketing">
+      <div class="align-card align-card--ba" data-fn="marketing">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">04</span>
           <span class="align-card__fn" data-i18n="speos.alignment.f4.fn">UI & UX · validation</span>
         </div>
         <h3 class="align-card__friction" data-i18n="speos.alignment.f4.h">"And the experience?"</h3>
-        <p class="align-card__body" data-i18n="speos.alignment.f4.p">Friction · experience stays unthought when we slice by feature. The persona-first onboarding and the 6 pilot client test secured the sponsor signal · Luminus among them.</p>
+        <div class="align-card__ba">
+          <div class="align-card__ba-row"><span class="align-card__ba-lab">Avant</span><span class="align-card__ba-val" data-i18n="speos.alignment.f4.avant">Experience stays unthought when we slice by feature.</span></div>
+          <div class="align-card__ba-row"><span class="align-card__ba-lab align-card__ba-lab--after">Après</span><span class="align-card__ba-val" data-i18n="speos.alignment.f4.apres">Persona-driven onboarding + tests at 6 pilot clients. Sponsor signal secured. Luminus among them.</span></div>
+        </div>
       </div>
     </div>
 
@@ -3382,6 +3396,33 @@
       <span class="source-link__ref" data-i18n="speos.alignment.sourceRef">Speos Design Thinking Roadmap 2024 · p11 · Stakeholder Map</span>
       <span class="source-link__arrow" aria-hidden="true">↗</span>
     </a>
+  </div>
+</section>
+
+<!-- CVE 2026-05-11 SPEOS · Shared Language Artefact · Trend Researcher reco (+10 pts) ·
+     visuel PO Business + PM IT + VP partagée · le pont entre Alignment et Climax -->
+<section id="shared-language" class="shared-language" data-act="R" data-frame="default" data-overflow="natural">
+  <div class="container">
+    <span class="eyebrow" data-i18n="speos.shared.eyebrow">The artefact that tipped it</span>
+    <h2 class="shared-language__h2" data-i18n-html="speos.shared.h2">The same Value Proposition <span class="accent">in the mouth of Business and IT.</span></h2>
+    <p class="lead shared-language__lead" data-i18n="speos.shared.lead">For eight months, Business and IT described the same product with two different vocabularies. The following sentence ended up coming out of both sides, word for word, in conversation and in the Concept Report. That moment unlocked the sponsor.</p>
+
+    <div class="shared-language__grid">
+      <div class="shared-language__col shared-language__col--biz">
+        <span class="shared-language__col-tag" data-i18n="speos.shared.bizTag">Business wanted</span>
+        <p class="shared-language__col-text" data-i18n="speos.shared.bizText">"A recurring revenue channel on the key accounts, with possible expansion to SMEs via a simpler onboarding."</p>
+      </div>
+      <div class="shared-language__col shared-language__col--it">
+        <span class="shared-language__col-tag" data-i18n="speos.shared.itTag">IT wanted</span>
+        <p class="shared-language__col-text" data-i18n="speos.shared.itText">"A platform with a single production layer and clean API-isation, to avoid building the same integration twice."</p>
+      </div>
+      <div class="shared-language__col shared-language__col--shared">
+        <span class="shared-language__col-tag" data-i18n="speos.shared.sharedTag">What they ended up saying together</span>
+        <p class="shared-language__col-text" data-i18n-html="speos.shared.sharedText">"A one-stop platform with <strong>persona-driven onboarding</strong>, opening SMEs without destabilising key accounts, on a <strong>single production layer</strong> with public API."</p>
+      </div>
+    </div>
+
+    <p class="shared-language__consequence" data-i18n="speos.shared.consequence">That exact sentence ended up on the cover of the Concept Report presented to the sponsor. No scope arbitration questioned the direction afterwards.</p>
   </div>
 </section>
 

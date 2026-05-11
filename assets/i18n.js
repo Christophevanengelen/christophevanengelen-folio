@@ -3294,7 +3294,7 @@
       en: 'Friction · urge to code before aligning. The AS-IS Customer Journey, built on the 12 internal expert interviews, closed the debate · five disconnected systems to orchestrate and 10 Pain Points mapped before any MVP line.'
     },
     'speos.alignment.f3.fn': { fr: 'Project Lead · arbitrage', nl: 'Project Lead · arbitrage', en: 'Project Lead · arbitration' },
-    'speos.alignment.f3.h': { fr: '« Le mandate 2026 ne bouge pas. »', nl: '« Het mandaat 2026 schuift niet op. »', en: '"The 2026 mandate does not move."' },
+    'speos.alignment.f3.h': { fr: '« L\'obligation 2026 ne bouge pas. »', nl: '« De verplichting 2026 schuift niet op. »', en: '"The 2026 deadline does not move."' },
     'speos.alignment.f3.p': {
       fr: 'Friction · tenir le calendrier face à la volonté de tout faire. Le scope MVP a tranché à 5 Value Props, le reste placé en roadmap phase 2. Une décision écrite, pas un compromis flou.',
       nl: 'Wrijving · de planning houden tegenover de wil om alles te doen. De MVP-scope sneed op 5 Value Props, de rest geplaatst in fase 2 van de roadmap. Een schriftelijke beslissing, geen vaag compromis.',
@@ -3306,6 +3306,109 @@
       fr: 'Friction · l\'expérience reste impensée si on découpe par fonctionnalité. Le persona-first onboarding et le test des 6 clients pilotes ont sécurisé le signal sponsor · Luminus parmi eux.',
       nl: 'Wrijving · de ervaring blijft ondoordacht als je per feature snijdt. De persona-first onboarding en de test bij 6 pilootklanten stelden het sponsorvertrouwen veilig · Luminus als één van hen.',
       en: 'Friction · experience stays unthought when we slice by feature. The persona-first onboarding and the 6 pilot client test secured the sponsor signal · Luminus among them.'
+    },
+    /* CVE 2026-05-11 SPEOS Alignment 2×2 AVANT/APRÈS · UX Researcher reco */
+    'speos.alignment.f1.avant': {
+      fr: 'La rente print s\'érode pendant que les pure players capturent les PME.',
+      nl: 'De print-rente brokkelt af terwijl pure players de kmo\'s veroveren.',
+      en: 'The print rent erodes while pure players capture SMEs.'
+    },
+    'speos.alignment.f1.apres': {
+      fr: 'Value Proposition multicanale + pricing par paliers. Expansion ouverte, segment PME repris.',
+      nl: 'Multichannel Value Proposition + tiered pricing. Expansie open, KMO-segment heroverd.',
+      en: 'Multichannel Value Proposition + tiered pricing. Expansion opened, SME segment recaptured.'
+    },
+    'speos.alignment.f2.avant': {
+      fr: 'Envie de coder avant d\'aligner. Cinq systèmes déconnectés à orchestrer.',
+      nl: 'Drang om te coderen voor er afgestemd is. Vijf losgekoppelde systemen te orkestreren.',
+      en: 'Urge to code before aligning. Five disconnected systems to orchestrate.'
+    },
+    'speos.alignment.f2.apres': {
+      fr: 'Customer Journey AS-IS posé sur les 12 entretiens experts. 10 Pain Points cartographiés avant la moindre ligne MVP.',
+      nl: 'AS-IS Customer Journey gebouwd op de 12 expertinterviews. 10 Pain Points in kaart gebracht vóór de eerste MVP-regel.',
+      en: 'AS-IS Customer Journey built on the 12 expert interviews. 10 Pain Points mapped before any MVP line.'
+    },
+    'speos.alignment.f3.avant': {
+      fr: 'Tenir le calendrier face à la volonté de tout faire.',
+      nl: 'De planning houden tegenover de wil om alles te doen.',
+      en: 'Holding the timeline against the wish to do everything.'
+    },
+    'speos.alignment.f3.apres': {
+      fr: 'Scope MVP tranché à 5 Value Props. Le reste placé en phase 2. Décision écrite, pas un compromis flou.',
+      nl: 'MVP-scope gesneden op 5 Value Props. De rest geplaatst in fase 2. Schriftelijke beslissing, geen vaag compromis.',
+      en: 'MVP scope cut at 5 Value Props. The rest placed in phase 2. Written decision, not a fuzzy compromise.'
+    },
+    'speos.alignment.f4.avant': {
+      fr: 'L\'expérience reste impensée si on découpe par fonctionnalité.',
+      nl: 'De ervaring blijft ondoordacht als je per feature snijdt.',
+      en: 'Experience stays unthought when we slice by feature.'
+    },
+    'speos.alignment.f4.apres': {
+      fr: 'Onboarding piloté par persona + tests chez 6 clients pilotes. Signal sponsor sécurisé. Luminus parmi eux.',
+      nl: 'Persona-gestuurde onboarding + tests bij 6 pilootklanten. Sponsorvertrouwen veilig. Luminus daarbij.',
+      en: 'Persona-driven onboarding + tests at 6 pilot clients. Sponsor signal secured. Luminus among them.'
+    },
+    /* CVE 2026-05-11 SPEOS Shared Language Artefact · Trend Researcher reco */
+    'speos.shared.eyebrow': { fr: 'L\'artefact qui a fait basculer', nl: 'Het artefact dat de kanteling bracht', en: 'The artefact that tipped it' },
+    'speos.shared.h2': {
+      fr: 'La même Value Proposition <span class="accent">dans la bouche de Business et IT.</span>',
+      nl: 'Dezelfde Value Proposition <span class="accent">uit de mond van Business en IT.</span>',
+      en: 'The same Value Proposition <span class="accent">in the mouth of Business and IT.</span>'
+    },
+    'speos.shared.lead': {
+      fr: 'Pendant huit mois, Business et IT décrivaient le même produit avec deux vocabulaires différents. La phrase suivante a fini par sortir des deux côtés, mot pour mot, à l\'oral et dans le Concept Report. C\'est ce moment-là qui a débloqué le sponsor.',
+      nl: 'Acht maanden lang beschreven Business en IT hetzelfde product met twee verschillende vocabulaires. De onderstaande zin kwam uiteindelijk woord voor woord uit beide kanten, mondeling en in het Concept Report. Dat moment heeft de sponsor gedeblokkeerd.',
+      en: 'For eight months, Business and IT described the same product with two different vocabularies. The following sentence ended up coming out of both sides, word for word, in conversation and in the Concept Report. That moment unlocked the sponsor.'
+    },
+    'speos.shared.bizTag': { fr: 'Business voulait', nl: 'Business wou', en: 'Business wanted' },
+    'speos.shared.bizText': {
+      fr: '« Un canal de revenu récurrent sur les comptes-clés, avec une expansion possible vers les PME via un onboarding plus simple. »',
+      nl: '« Een terugkerend inkomstenkanaal op de key accounts, met mogelijke expansie naar kmo\'s via een eenvoudigere onboarding. »',
+      en: '"A recurring revenue channel on the key accounts, with possible expansion to SMEs via a simpler onboarding."'
+    },
+    'speos.shared.itTag': { fr: 'IT voulait', nl: 'IT wou', en: 'IT wanted' },
+    'speos.shared.itText': {
+      fr: '« Une plateforme avec un seul socle de production et une API-isation propre pour éviter de refaire deux fois la même intégration. »',
+      nl: '« Een platform met één productiesokkel en een propere API-isatie om niet twee keer dezelfde integratie te bouwen. »',
+      en: '"A platform with a single production layer and clean API-isation, to avoid building the same integration twice."'
+    },
+    'speos.shared.sharedTag': { fr: 'Ce qu\'ils ont fini par dire ensemble', nl: 'Wat ze uiteindelijk samen zeiden', en: 'What they ended up saying together' },
+    'speos.shared.sharedText': {
+      fr: '« Une plateforme one-stop avec <strong>onboarding piloté par persona</strong>, qui ouvre les PME sans déstabiliser les comptes-clés, sur un <strong>socle de production unique</strong> avec API publique. »',
+      nl: '« Een one-stop platform met <strong>persona-gestuurde onboarding</strong>, dat kmo\'s opent zonder de key accounts te destabiliseren, op één <strong>productiesokkel</strong> met publieke API. »',
+      en: '"A one-stop platform with <strong>persona-driven onboarding</strong>, opening SMEs without destabilising key accounts, on a <strong>single production layer</strong> with public API."'
+    },
+    'speos.shared.consequence': {
+      fr: 'C\'est cette phrase, exacte, qui a fini sur la couverture du Concept Report présenté au sponsor. Plus aucun arbitrage de scope n\'a remis en cause la direction.',
+      nl: 'Deze exacte zin belandde op de cover van het Concept Report aan de sponsor. Geen enkele scope-afweging heeft de richting nadien nog ter discussie gesteld.',
+      en: 'That exact sentence ended up on the cover of the Concept Report presented to the sponsor. No scope arbitration questioned the direction afterwards.'
+    },
+    /* CVE 2026-05-11 HMS L'antagoniste · Trend Researcher reco · stakes business IXON */
+    'hms.antagonist.eyebrow': { fr: 'L\'antagoniste', nl: 'De antagonist', en: 'The antagonist' },
+    'hms.antagonist.h2': {
+      fr: 'Pendant qu\'Ewon vendait des routeurs, <span class="accent">IXON vendait une plateforme.</span>',
+      nl: 'Terwijl Ewon routers verkocht, <span class="accent">verkocht IXON een platform.</span>',
+      en: 'While Ewon was selling routers, <span class="accent">IXON was selling a platform.</span>'
+    },
+    'hms.antagonist.lead': {
+      fr: 'Ewon a vingt ans de comptes-clés fidèles et la promesse industrielle qui va avec · superviser et contrôler des machines à distance, partout dans le monde. IXON, startup cloud-native néerlandaise, n\'avait ni l\'historique ni la dette technique. Et le bénéfice de cette absence de passé · une expérience produit pensée user-centric dès le premier jour.',
+      nl: 'Ewon heeft twintig jaar trouwe key accounts en de industriële belofte die daarbij hoort · machines op afstand superviseren en controleren, overal ter wereld. IXON, Nederlandse cloud-native startup, had geen historiek noch technische schuld. En het voordeel van die afwezigheid van verleden · een productervaring user-centric vanaf dag één.',
+      en: 'Ewon has twenty years of loyal key accounts and the industrial promise that comes with it · supervising and controlling machines remotely, anywhere in the world. IXON, a Dutch cloud-native startup, had neither the history nor the technical debt. And the benefit of that absence of past · a product experience designed user-centric from day one.'
+    },
+    'hms.antagonist.ewonTag': { fr: 'Ewon (legacy industriel)', nl: 'Ewon (industriële legacy)', en: 'Ewon (industrial legacy)' },
+    'hms.antagonist.ewon1': { fr: 'Trois plateformes legacy à se parler · eCatcher, M2Web, Talk2M.', nl: 'Drie legacy-platformen die met elkaar moeten praten · eCatcher, M2Web, Talk2M.', en: 'Three legacy platforms to talk to each other · eCatcher, M2Web, Talk2M.' },
+    'hms.antagonist.ewon2': { fr: 'Zéro self-onboarding · démarrage manuel piloté par les commerciaux.', nl: 'Geen self-onboarding · handmatige start gestuurd door de sales.', en: 'Zero self-onboarding · manual start driven by sales.' },
+    'hms.antagonist.ewon3': { fr: 'Pas de design system, pas de librairie front Angular.', nl: 'Geen design system, geen Angular-frontbibliotheek.', en: 'No design system, no Angular front library.' },
+    'hms.antagonist.ewon4': { fr: 'Vingt ans de fidélité client, mais segment PME en érosion.', nl: 'Twintig jaar klantloyaliteit, maar erosie in het kmo-segment.', en: 'Twenty years of customer loyalty, but SME segment eroding.' },
+    'hms.antagonist.ixonTag': { fr: 'IXON (cloud-native)', nl: 'IXON (cloud-native)', en: 'IXON (cloud-native)' },
+    'hms.antagonist.ixon1': { fr: 'Une plateforme unifiée, cloud-native dès le premier jour.', nl: 'Eén verenigd platform, cloud-native vanaf dag één.', en: 'One unified platform, cloud-native from day one.' },
+    'hms.antagonist.ixon2': { fr: 'Self-onboarding automatisé · le client démarre seul.', nl: 'Automatische self-onboarding · de klant start zelf.', en: 'Automated self-onboarding · the customer starts alone.' },
+    'hms.antagonist.ixon3': { fr: 'Freemium pour capter les End-User Plants laissés de côté.', nl: 'Freemium om de End-User Plants te vangen die opzij waren gezet.', en: 'Freemium to capture the End-User Plants left aside.' },
+    'hms.antagonist.ixon4': { fr: 'Persona-driven · le produit pensé par segment d\'usage.', nl: 'Persona-driven · product gedacht per gebruikssegment.', en: 'Persona-driven · product designed per usage segment.' },
+    'hms.antagonist.consequence': {
+      fr: 'Le retard à combler n\'était pas business · les machines Ewon tiennent en production sur tous les continents. Le retard était <strong>UX, UI et culture user-centric</strong>. C\'est ce diagnostic qui a justifié, à la fin du mandat, les <strong class="accent">2 M€ obtenus en comité de direction</strong> pour passer le concept en production.',
+      nl: 'De achterstand was niet business · Ewon-machines draaien in productie op alle continenten. De achterstand was <strong>UX, UI en user-centric cultuur</strong>. Die diagnose heeft, aan het einde van de opdracht, de <strong class="accent">2 M€ verkregen in directiecomité</strong> gerechtvaardigd om het concept in productie te brengen.',
+      en: 'The gap to close was not business · Ewon machines run in production on every continent. The gap was <strong>UX, UI and user-centric culture</strong>. That diagnosis justified, at the end of the mandate, the <strong class="accent">€2M secured in steering committee</strong> to bring the concept into production.'
     },
     'speos.alignment.lead': {
       fr: 'Au démarrage, chaque rôle défendait sa lecture. Le Project Owner côté Business voulait des fonctionnalités vendables. Le Project Manager côté IT voulait une stack maintenable. Le Project Lead arbitrait sur le calendrier. <strong>Deux formats d\'atelier ont fait le pont.</strong> Des petits ateliers ciblés avec les Project Managers et les figures clés côté IT pour caler les arbitrages techniques. Des grands ateliers Customer Journey avec toutes les parties prenantes autour de la table, pour mettre le client au centre, pas l\'org chart.',
