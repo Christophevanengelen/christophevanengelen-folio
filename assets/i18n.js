@@ -2688,8 +2688,9 @@
 
     /* Outcome SPEOS */
     'speos.outcome.eyebrow': { fr: 'À la sortie du parcours', nl: 'Aan het einde van het traject', en: 'At the end of the journey' },
+    /* CVE 2026-05-11 SPEOS v2 · "scaler" → "monter en charge" (Content Creator + Brand Guardian) */
     'speos.outcome.title': {
-      fr: 'Pas une intention. <span class="accent">Une plateforme prête à scaler.</span>',
+      fr: 'Pas une intention. <span class="accent">Une plateforme prête à monter en charge.</span>',
       nl: 'Geen intentie. <span class="accent">Een platform klaar om op te schalen.</span>',
       en: 'Not an intention. <span class="accent">A platform ready to scale.</span>'
     },
@@ -3420,12 +3421,12 @@
       en: 'SPEOS, a postal subsidiary of the bpost group. Large-scale document production for key accounts in banking, insurance, telecoms and energy. The UX function did not exist as a dedicated department.'
     },
     'speos.brief.lead2': {
-      fr: 'Le pattern UX en département dédié est déployé depuis quinze ans aux États-Unis et dix ans en Europe dans les grands comptes belges (banking, energy, telecoms). SPEOS a souhaité l\'adopter à son tour, en cohérence avec le mandate B2G PEPPOL au 1<sup>er</sup> janvier 2026 et la pression concurrentielle des acteurs digital-first.',
+      fr: 'Le pattern UX en département dédié est déployé depuis quinze ans aux États-Unis et dix ans en Europe dans les grands comptes belges (banking, energy, telecoms). SPEOS a souhaité l\'adopter à son tour, en cohérence avec l\'obligation B2G PEPPOL (facturation B2G obligatoire) au 1<sup>er</sup> janvier 2026 et la pression des acteurs nés sur le numérique.',
       nl: 'Het patroon van een toegewijde UX-afdeling wordt al vijftien jaar in de Verenigde Staten en tien jaar in Europa toegepast in de grote Belgische accounts (banking, energy, telecoms). SPEOS heeft het op zijn beurt willen overnemen, in lijn met het B2G PEPPOL-mandaat van 1 januari 2026 en de concurrentiedruk van digital-first spelers.',
       en: 'The pattern of a dedicated UX department has been deployed for fifteen years in the United States and ten years in Europe across large Belgian accounts (banking, energy, telecoms). SPEOS chose to adopt it in turn, in line with the B2G PEPPOL mandate of 1 January 2026 and the competitive pressure of digital-first players.'
     },
     'speos.brief.lead3': {
-      fr: 'À mon arrivée, deux initiatives produit étaient en cours. Archetype, refonte de la plateforme E2M, conduite en interne sur stack Angular. Communication Platform, née de l\'opportunité tender Ethias, conduite avec des ressources externes sur stack React. Les deux s\'appuyaient sur le même back-end stream platform. La direction cherchait une vision produit unifiée pour la suite. L\'onboarding d\'un UX consultant a été inscrit dans l\'exec review du 21 novembre 2024.',
+      fr: 'À mon arrivée, deux initiatives produit étaient en cours. Archetype, refonte de la plateforme E2M, conduite en interne sur stack Angular. Communication Platform, née de l\'appel d\'offres Ethias, conduite avec des ressources externes sur stack React. Les deux s\'appuyaient sur le même back-end stream platform. La direction cherchait une vision produit unifiée pour la suite. L\'arrivée d\'un consultant UX a été inscrite au comité de direction du 21 novembre 2024.',
       nl: 'Bij mijn aankomst waren twee productinitiatieven aan de gang. Archetype, refactoring van het E2M-platform, intern uitgevoerd op een Angular-stack. Communication Platform, voortgekomen uit de Ethias-tender, met externe resources op een React-stack. Beide bouwden op dezelfde stream platform back-end. De directie zocht een verenigde productvisie voor de volgende fase. De onboarding van een UX-consultant werd ingeschreven in de exec review van 21 november 2024.',
       en: 'At my arrival, two product initiatives were under way. Archetype, the refactor of the E2M platform, run internally on an Angular stack. Communication Platform, born from the Ethias tender opportunity, run with external resources on a React stack. Both relied on the same stream platform back-end. The direction sought a unified product vision for the next stage. The onboarding of a UX consultant was registered in the exec review of 21 November 2024.'
     },
@@ -3551,7 +3552,7 @@
     'speos.hero.h1.alt': { fr: 'dans une filiale postale du groupe bpost.', nl: 'in een postdochter van de bpost-groep.', en: 'in a postal subsidiary of the bpost group.' },
     'speos.hero.h1.start': { fr: 'Installer la fonction UX', nl: 'De UX-functie installeren', en: 'Installing the UX function' },
     'speos.hero.lead': {
-      fr: 'Mission freelance de douze mois. Production documentaire à grande échelle, comptes-clés bancaires, assurance, télécoms, énergie. Mandat · poser la méthode Service Design, aligner Business et IT, livrer un Concept Report sponsor-ready et un MVP priorisé.',
+      fr: 'Mission freelance de douze mois. Production documentaire à grande échelle, comptes-clés bancaires, assurance, télécoms, énergie. Mandat · poser la méthode Service Design, aligner Business et IT, livrer un Concept Report défendable devant le sponsor et un MVP priorisé.',
       nl: 'Freelance opdracht van twaalf maanden. Grootschalige documentaire productie, key accounts in banking, verzekering, telecom, energie. Opdracht · de Service Design-methode neerleggen, Business en IT afstemmen, een sponsor-ready Concept Report en een geprioriteerd MVP opleveren.',
       en: 'Freelance mission of twelve months. Large-scale document production, key accounts in banking, insurance, telecoms, energy. Mandate · lay down the Service Design method, align Business and IT, deliver a sponsor-ready Concept Report and a prioritised MVP.'
     },
@@ -3620,7 +3621,7 @@
     },
     'speos.outcome.d3.h': { fr: 'Leadership marché défendu.', nl: 'Marktleiderschap verdedigd.', en: 'Market leadership defended.' },
     'speos.outcome.d3.p': {
-      fr: 'Face aux digital-first qui visent les PME et aux acteurs internationaux qui visent le SaaS line-of-business, SPEOS reste pionnier compliance B2G et scale par effet de levier API. Position consolidée, pas érodée.',
+      fr: 'Face aux acteurs nés sur le numérique qui visent les PME et aux acteurs internationaux qui visent le SaaS line-of-business, SPEOS reste pionnier compliance B2G et monte en charge par effet de levier API. Position consolidée, pas érodée.',
       nl: 'Tegenover digital-first spelers die op KMO mikken en internationale spelers die op SaaS line-of-business mikken, blijft SPEOS pionier in B2G-compliance en schaalt via API-hefboom. Positie geconsolideerd, niet uitgehold.',
       en: 'Against digital-first players targeting SMEs and international players targeting line-of-business SaaS, SPEOS remains a B2G compliance pioneer and scales through API leverage. Position consolidated, not eroded.'
     },
@@ -4427,7 +4428,7 @@
 
     /* Brief mandat (refonte compte rendu sprint S1 · 2026-05-08) */
     'speos.brief.lead4': {
-      fr: 'Mandat · poser la méthode Service Design, aligner Business et IT autour de l\'utilisateur, livrer un Concept Report sponsor-ready et un MVP priorisé en user stories. Contexte technique · IT en bascule Agile, pas encore SAFe.',
+      fr: 'Mandat · poser la méthode Service Design, aligner Business et IT autour de l\'utilisateur, livrer un Concept Report défendable devant le sponsor et un MVP priorisé en user stories. Contexte technique · IT en bascule Agile, pas encore SAFe.',
       nl: 'Opdracht · de Service Design-methode neerleggen, Business en IT afstemmen rond de gebruiker, een sponsor-ready Concept Report en een MVP geprioriteerd in user stories opleveren. Technische context · IT in Agile-overgang, nog niet SAFe.',
       en: 'Mandate · lay down the Service Design method, align Business and IT around the user, deliver a sponsor-ready Concept Report and an MVP prioritised in user stories. Technical context · IT in Agile transition, not yet SAFe.'
     },
