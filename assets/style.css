@@ -74,6 +74,10 @@ html.theme-light {
   --card-edge: rgba(10,18,32,0.06);
   --hl: var(--amber-deep);
   --quote: #1A2236;
+  /* CVE 2026-05-11 a11y · #C76941 sur bg light = 3.46 (rate WCAG AA 4.5).
+     amber_deep #9E4F2D = 5.30 sur bg light · white on amber_deep = 5.82.
+     Override en light mode → AA pour texte + CTA. */
+  --amber: #9E4F2D;
 }
 
 /* ════════════════════════════════════════════════════════════════════════
@@ -7854,6 +7858,24 @@ body.home {
   color: var(--amber-deep);
 }
 .home-hero__sep { color: var(--fg-soft); opacity: 0.5; }
+
+/* CVE 2026-05-11 a11y · focus-visible global · WCAG 2.4.7 Focus Visible AA
+   Tous les éléments interactifs reçoivent un ring amber 2px à 2px offset.
+   Le ring ne s'affiche qu'au clavier (`:focus-visible`), jamais à la souris,
+   donc pas de pollution visuelle pour les utilisateurs souris. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+/* Préserver les outlines bespoke existants (skip-link, source-link, etc.)
+   ↑ ces sélecteurs plus spécifiques gagnent naturellement. */
 
 /* CVE 2026-05-04 S6.1 · skip-to-content link · WCAG 2.4.1 ·
    sr-only par défaut, visible au focus clavier en haut-gauche. */

@@ -46,6 +46,9 @@
      Le browser charge la CSS sans bloquer le first paint, puis applique au load. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- CVE 2026-05-11 perf · preconnect Cal.com pour réduire le TTFB du widget popup -->
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
@@ -155,7 +158,110 @@
         "addressLocality": "Uccle",
         "addressRegion": "Brussels",
         "addressCountry": "BE"
-      }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Service Design engagements",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Sprint Discovery",
+            "description": "Une question stratégique, une semaine, une réponse défendable.",
+            "category": "Strategic Discovery Sprint",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 8000,
+              "maxPrice": 15000,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": false
+            },
+            "eligibleDuration": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitText": "weeks"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Discovery + Concept",
+            "description": "De l'écoute terrain au scope MVP signé. Le format des trois cases en ligne.",
+            "category": "Full Service Design Engagement",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 60000,
+              "maxPrice": 120000,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": false
+            },
+            "eligibleDuration": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 6,
+              "unitText": "months"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Advisory continu",
+            "description": "Un design leader externe pour vos comités produit et arbitrages.",
+            "category": "Ongoing Design Advisory",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 3000,
+              "maxPrice": 6000,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": false,
+              "billingDuration": {
+                "@type": "QuantitativeValue",
+                "value": 1,
+                "unitText": "month"
+              }
+            }
+          }
+        ]
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewBody": "Christophe a aligné Banking, IT, Legal et Marketing en six mois. Léonidas a signé avant la première ligne de code.",
+          "author": { "@type": "Person", "name": "Project Sponsor, Enterprise Intelligence, BNP Paribas Fortis" },
+          "datePublished": "2019-06-01",
+          "itemReviewed": { "@id": "https://christophevanengelen.be/#service" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "Christophe a posé une méthode là où chacun parlait sa langue. Six clients pilotes ont validé. Le sponsor a donné le go prod.",
+          "author": { "@type": "Person", "name": "Digital Sponsor, One-Stop Platform, SPEOS · bpost group" },
+          "datePublished": "2025-04-01",
+          "itemReviewed": { "@id": "https://christophevanengelen.be/#service" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "Trois plateformes legacy, trois équipes, un seul concept au bout. Le board a débloqué 2 M€ pour la mise en prod.",
+          "author": { "@type": "Person", "name": "Product Lead, Cloud Revamp, Ewon by HMS Networks" },
+          "datePublished": "2022-06-01",
+          "itemReviewed": { "@id": "https://christophevanengelen.be/#service" }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://christophevanengelen.be/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://christophevanengelen.be/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cases",
+          "item": "https://christophevanengelen.be/#cases"
+        }
+      ]
     }
   ]
 }
@@ -272,7 +378,7 @@
     <!-- CVE 2026-05-04 S5.4 · WebP first (52 KB vs 637 KB JPG, -92%) · JPG fallback. -->
     <picture>
       <source srcset="/public/cve-portrait.webp" type="image/webp">
-      <img src="/public/cve-portrait.jpg" alt="Christophe van Engelen, service designer basé à Bruxelles, portrait de profil épaules" loading="eager" decoding="async"/>
+      <img src="/public/cve-portrait.jpg" alt="Christophe van Engelen, service designer basé à Bruxelles, portrait de profil épaules" loading="eager" decoding="async" fetchpriority="high"/>
     </picture>
   </figure>
   <div class="container home-hero__grid">
@@ -408,7 +514,7 @@
 <section class="home-testimonial" aria-label="Témoignages">
   <div class="container">
     <span class="eyebrow" data-i18n="home.testimonialEyebrow">What they say</span>
-    <h2 class="home-testimonial__h2" data-i18n="home.testimonialH2">Three sponsors. Three signed decisions.</h2>
+    <h2 class="home-testimonial__h2" id="testimonial-h2" data-i18n="home.testimonialH2">Three sponsors. Three signed decisions.</h2>
 
     <ol class="home-testimonial__grid" role="list">
       <li class="home-testimonial__card" itemscope itemtype="https://schema.org/Review">
@@ -473,10 +579,10 @@
 <!-- FORMATS · CVE 2026-05-11 audit action #1 · 3 formats commercial avec
      ordres de grandeur (durée + budget) · répond à la question recruteur
      « combien ça coûte et combien de temps ». Pattern Apple sobre. -->
-<section class="home-formats" data-frame="default" data-overflow="natural">
+<section class="home-formats" data-frame="default" data-overflow="natural" aria-labelledby="formats-h2">
   <div class="container">
     <span class="eyebrow" data-i18n="home.formatsEyebrow">Formats</span>
-    <h2 class="home-formats__h2" data-i18n="home.formatsH2">Three ways to engage me.</h2>
+    <h2 class="home-formats__h2" id="formats-h2" data-i18n="home.formatsH2">Three ways to engage me.</h2>
     <p class="home-formats__lead" data-i18n="home.formatsLead">The scope dictates the format. Not the other way around.</p>
 
     <ol class="home-formats__list" role="list">
@@ -548,10 +654,10 @@
 <!-- FIT · CVE 2026-05-11 audit action #1 · Bon match / Pas bon match ·
      transparence radicale · disqualifie en amont les mauvais leads ·
      pattern conseil senior (Marty Cagan, Indi Young). -->
-<section class="home-fit" data-frame="default" data-overflow="natural">
+<section class="home-fit" data-frame="default" data-overflow="natural" aria-labelledby="fit-h2">
   <div class="container">
     <span class="eyebrow" data-i18n="home.fitEyebrow">Fit</span>
-    <h2 class="home-fit__h2" data-i18n="home.fitH2">Good fit. Not a fit.</h2>
+    <h2 class="home-fit__h2" id="fit-h2" data-i18n="home.fitH2">Good fit. Not a fit.</h2>
     <p class="home-fit__lead" data-i18n="home.fitLead">Transparency saves three months of friction.</p>
 
     <div class="home-fit__grid">

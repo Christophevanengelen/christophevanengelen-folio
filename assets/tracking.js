@@ -9,7 +9,19 @@
  *   <a href="https://linkedin..." data-event="linkedin-out" data-event-source="footer">...</a>
  *
  * Goals à créer dans Plausible (Settings > Goals > Custom event) :
- *   - mailto-cve, linkedin-out, lire-case, lang-switch, theme-toggle
+ *   - mailto-cve         · clic sur l'email
+ *   - phone-cve          · clic sur le téléphone
+ *   - linkedin-out       · clic sur LinkedIn (sortie)
+ *   - lire-case          · clic sur "Lire le case" (BNP/SPEOS/HMS)
+ *   - lang-switch        · changement de langue FR/NL/EN
+ *   - theme-toggle       · clic sur le toggle thème dark/light
+ *   - cal-book           · clic CTA Cal.com (contact-cta | floating-cta)
+ *
+ * Activation Plausible · une étape :
+ *   1. Créer compte sur plausible.io, ajouter christophevanengelen.com
+ *   2. Décommenter les 2 lignes <script> dans index.html
+ *      (+ bnp.html, speos.html, hms.html si voulu)
+ *   3. Créer les 7 goals ci-dessus dans Plausible Settings > Goals
  */
 (function () {
   'use strict';

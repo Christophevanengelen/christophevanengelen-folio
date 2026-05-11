@@ -1159,6 +1159,9 @@
 </head>
 <body>
 
+<!-- CVE 2026-05-11 a11y · skip-to-content WCAG 2.4.1 Bypass Blocks -->
+<a href="#main-content" class="skip-link" data-i18n="a11y.skipToContent">Aller au contenu principal</a>
+
 <nav class="top">
   <div class="row">
     <a class="brand" href="index.html">
@@ -1188,7 +1191,7 @@
      Top-nav et footer-mini restent en charte CVE neutre.
      Tout le contenu du case (sections, sticky-nav, fin-royale, next-case)
      est dans le scope data-case="bnp" pour palette vert Pantone 340 C. -->
-<main class="case-wrap" data-case="bnp">
+<main id="main-content" class="case-wrap" data-case="bnp">
 
 <!-- Placeholder pour réserver l'espace quand la storyline devient sticky (évite saut de scroll) -->
 <div class="storyline-placeholder" aria-hidden="true"></div>
@@ -1196,7 +1199,7 @@
 <!-- HERO 2026 — Bento cinematic (Apple/Notion/Linear pattern) -->
 <section class="hcx">
   <div class="hcx__bg">
-    <img src="public/img/hero-bnp-bg.jpg?v=bnp-hq-bxl" alt="BNP Paribas Fortis HQ — Montagne du Parc, Brussels" />
+    <img src="public/img/hero-bnp-bg.jpg?v=bnp-hq-bxl" alt="BNP Paribas Fortis HQ — Montagne du Parc, Brussels" fetchpriority="high" decoding="async" />
   </div>
   <div class="hcx__veil"></div>
   <div class="hcx__grain"></div>
@@ -2399,7 +2402,7 @@
     <p class="lead proto-overview__lead" data-i18n="bnp.prototype.overviewLead">Le wall ci-dessous, c'est le moment où toutes les features candidates ont été étalées et regroupées en grandes intentions. Chaque rapport correspond à un objectif business du commerçant, avec son propre type de données pertinentes. Trois retenues pour le MVP, une placée en roadmap phase 2.</p>
 
     <a class="proto-wall" href="public/decks/concept-report/p-37.jpg" target="_blank" rel="noopener" aria-label="Ouvrir la slide originale du wall en taille réelle">
-      <img class="proto-wall__img" src="public/decks/concept-report/p-37.jpg" alt="Wall d'atelier · 4 goals identifiés sur le mur de la salle, post-it stickers et bulles vertes/grises pour MVP scope vs phase 2"/>
+      <img class="proto-wall__img" loading="lazy" decoding="async" src="public/decks/concept-report/p-37.jpg" alt="Wall d'atelier · 4 goals identifiés sur le mur de la salle, post-it stickers et bulles vertes/grises pour MVP scope vs phase 2"/>
       <span class="proto-wall__zoom" aria-hidden="true">↗ Voir en taille réelle</span>
     </a>
 

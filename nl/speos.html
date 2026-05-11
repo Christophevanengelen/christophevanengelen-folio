@@ -1188,6 +1188,9 @@
 </head>
 <body>
 
+<!-- CVE 2026-05-11 a11y · skip-to-content WCAG 2.4.1 Bypass Blocks -->
+<a href="#main-content" class="skip-link" data-i18n="a11y.skipToContent">Ga naar de hoofdinhoud</a>
+
 <nav class="top">
   <div class="row">
     <a class="brand" href="index.html">
@@ -1217,7 +1220,7 @@
      Top-nav et footer-mini restent en charte CVE (neutre).
      Tout le contenu du case (sections, sticky-nav, fin-royale, next-case)
      est dans le scope data-case="speos" pour palette jaune-or sur bleu royal. -->
-<main class="case-wrap" data-case="speos">
+<main id="main-content" class="case-wrap" data-case="speos">
 
 <!-- Placeholder pour réserver l'espace quand la storyline devient sticky (évite saut de scroll) -->
 <div class="storyline-placeholder" aria-hidden="true"></div>
@@ -1225,7 +1228,7 @@
 <!-- HERO SPEOS · charte jaune-or sur bleu royal nuit · cinématique premium -->
 <section class="hcx">
   <div class="hcx__bg">
-    <img src="/public/img/speos-ambiance.webp?v=speos-1" alt="SPEOS · environnement de production · Bruxelles" />
+    <img src="/public/img/speos-ambiance.webp?v=speos-1" alt="SPEOS · environnement de production · Bruxelles" fetchpriority="high" decoding="async" />
   </div>
   <div class="hcx__veil"></div>
   <div class="hcx__grain"></div>

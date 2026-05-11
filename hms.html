@@ -1191,6 +1191,9 @@
 </head>
 <body>
 
+<!-- CVE 2026-05-11 a11y · skip-to-content WCAG 2.4.1 Bypass Blocks -->
+<a href="#main-content" class="skip-link" data-i18n="a11y.skipToContent">Aller au contenu principal</a>
+
 <nav class="top">
   <div class="row">
     <a class="brand" href="index.html">
@@ -1220,7 +1223,7 @@
      Top-nav et footer-mini restent en charte CVE (neutre).
      Tout le contenu du case (sections, sticky-nav, fin-royale, next-case)
      est dans le scope data-case="hms" pour palette jaune-or sur bleu royal. -->
-<main class="case-wrap" data-case="hms">
+<main id="main-content" class="case-wrap" data-case="hms">
 
 <!-- Placeholder pour réserver l'espace quand la storyline devient sticky (évite saut de scroll) -->
 <div class="storyline-placeholder" aria-hidden="true"></div>
@@ -1228,7 +1231,7 @@
 <!-- HERO HMS · vidéo Ewon header · industrial IoT context -->
 <section class="hcx">
   <div class="hcx__bg">
-    <video src="public/img/hms-hero.mp4" poster="public/img/hms-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="width:100%; height:100%; object-fit:cover;"></video>
+    <video src="public/img/hms-hero.mp4" poster="public/img/hms-poster.jpg" autoplay muted loop playsinline preload="metadata" disableremoteplayback aria-hidden="true" fetchpriority="high" style="width:100%; height:100%; object-fit:cover;"></video>
   </div>
   <div class="hcx__veil"></div>
   <div class="hcx__grain"></div>
