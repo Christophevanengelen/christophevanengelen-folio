@@ -824,7 +824,8 @@
 
 <!-- CVE 2026-05-11 audit action #3 · Sticky CTA mobile/desktop · apparaît
      après le hero, disparaît au-dessus du footer · friction-removal absolu.
-     Animation reveal pilotée par motion.js. -->
+     Reveal pilotée par un petit script inline ci-dessous (motion.js n'est
+     pas chargé sur index.html). -->
 <a class="floating-book"
    href="https://cal.com/christophevanengelen/30min?utm_source=portfolio&utm_medium=floating-cta"
    target="_blank" rel="noopener"
@@ -837,6 +838,43 @@
   <span class="floating-book__label" data-i18n="home.floatingCta">Eerste call · 30 min</span>
   <span class="floating-book__arrow" aria-hidden="true">→</span>
 </a>
+
+<!-- Floating book CTA reveal · CVE 2026-05-11 · script inline standalone
+     (motion.js n'est pas chargé sur la home). Apparaît après hero, disparaît
+     avant footer. RAF-throttle, passive listeners. -->
+<script>
+(function () {
+  const btn = document.querySelector('.floating-book');
+  if (!btn) return;
+  const footer = document.querySelector('.home-footer');
+  const hero = document.querySelector('.home-hero');
+  const heroH = () => (hero ? hero.getBoundingClientRect().height : window.innerHeight * 0.6);
+  let raf = null;
+  const update = () => {
+    raf = null;
+    const scrolledPastHero = window.scrollY > heroH() * 0.55;
+    let footerVisible = false;
+    if (footer) {
+      const fRect = footer.getBoundingClientRect();
+      footerVisible = fRect.top < window.innerHeight - 40;
+    }
+    if (footerVisible) {
+      btn.classList.remove('is-visible');
+      btn.classList.add('is-hidden');
+    } else if (scrolledPastHero) {
+      btn.classList.add('is-visible');
+      btn.classList.remove('is-hidden');
+    } else {
+      btn.classList.remove('is-visible');
+      btn.classList.remove('is-hidden');
+    }
+  };
+  const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+})();
+</script>
 
 <!-- Cal.com embed script · popup léger, ~10 KB ·
      active uniquement au clic sur [data-cal-link] -->
