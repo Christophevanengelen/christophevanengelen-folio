@@ -2860,10 +2860,12 @@
     'home.contact': { fr: 'cve@hi-def.be', nl: 'cve@hi-def.be', en: 'cve@hi-def.be' },
 
     /* CVE 2026-05-04 S3.x · trust signals & conversion (sprint S3) */
+    /* CVE 2026-05-11 · pas de date · posture "à l'écoute" plutôt que "à vendre".
+       Pattern senior consultant · on choisit, on ne court pas après. */
     'home.statusAvailability': {
-      fr: 'Disponible pour des missions · Q3 2026',
-      nl: 'Beschikbaar voor opdrachten · Q3 2026',
-      en: 'Available for assignments · Q3 2026'
+      fr: 'À l\'écoute des projets qui ont du sens.',
+      nl: 'Open voor projecten met betekenis.',
+      en: 'Listening for projects that matter.'
     },
     'home.trustEyebrow': {
       fr: 'Travaillé avec',
@@ -3218,9 +3220,9 @@
       en: '<strong>The right tool at the right moment.</strong> Strategyzer, Customer Journey, Heuristic Evaluation, Service Blueprint, Design Sprint · tools of the same Design System. Mastery · knowing which one, when, with whom in the room.'
     },
     'home.about.p4': {
-      fr: '<strong>Disponible Q3 2026.</strong> Premier call 30 min, gratuit, sans engagement. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.',
-      nl: '<strong>Beschikbaar Q3 2026.</strong> Eerste call 30 min, gratis, zonder verbintenis. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.',
-      en: '<strong>Available Q3 2026.</strong> First call 30 min, free, no commitment. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.'
+      fr: '<strong>À l\'écoute des projets qui ont du sens.</strong> Premier call 30 min, gratuit, sans engagement. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.',
+      nl: '<strong>Open voor projecten met betekenis.</strong> Eerste call 30 min, gratis, zonder verbintenis. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.',
+      en: '<strong>Listening for projects that matter.</strong> First call 30 min, free, no commitment. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.'
     },
 
     /* CVE 2026-05-04 S8.1 · FAQ avec Schema FAQPage · 7 Q&A pour featured snippet */
@@ -3246,9 +3248,9 @@
     },
     'home.faq.q4': { fr: 'Combien de temps avant de pouvoir démarrer ?', nl: 'Hoe lang voor je kan starten?', en: 'How long before you can start?' },
     'home.faq.a4': {
-      fr: '<p><strong>Disponible Q3 2026.</strong> Réponse en 24h ouvrées. Premier call 30 min gratuit. Démarrage en 2 semaines.</p>',
-      nl: '<p><strong>Beschikbaar Q3 2026.</strong> Antwoord binnen 24u (werkdagen). Eerste call 30 min gratis. Start binnen 2 weken.</p>',
-      en: '<p><strong>Available Q3 2026.</strong> Reply within 24h business days. First call 30 min free. Start within 2 weeks.</p>'
+      fr: '<p><strong>Cela dépend du projet et de la valeur en jeu.</strong> Réponse en 24h ouvrées. Premier call 30 min gratuit. Pour un brief qui a du sens, je sais faire bouger l\'agenda · démarrage habituel en 2 à 4 semaines.</p>',
+      nl: '<p><strong>Hangt af van het project en de waarde die op het spel staat.</strong> Antwoord binnen 24u (werkdagen). Eerste call 30 min gratis. Voor een brief die telt, kan ik de agenda doen schuiven · gewoonlijke start in 2 tot 4 weken.</p>',
+      en: '<p><strong>It depends on the project and the value at stake.</strong> Reply within 24h business days. First call 30 min free. For a brief that matters, I can move the calendar · usual start in 2 to 4 weeks.</p>'
     },
     'home.faq.q5': { fr: 'Tarifs et modèle de facturation ?', nl: 'Tarieven en facturatiemodel?', en: 'Rates and billing model?' },
     'home.faq.a5': {
