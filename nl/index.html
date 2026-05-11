@@ -990,6 +990,12 @@ Cal("init", "30min", {origin:"https://cal.com"});
 Cal.ns["30min"]("ui", {"theme":"auto","cssVarsPerTheme":{"light":{"cal-brand":"#c2410c"},"dark":{"cal-brand":"#fb923c"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 
+<!-- CVE 2026-05-11 Apple-tier motion · Lenis smooth scroll + GSAP pour le hero
+     reveal · ramène la home au niveau cinématique des cases. -->
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 <!-- CVE 2026-05-04 S5.2 · i18n.js defer (DOM swap après load · pas critique paint) ·
      theme.js reste sync (sinon FOUC dark/light). -->
 <script src="/assets/i18n.js?v=20260504-s8" defer></script>
@@ -1001,6 +1007,11 @@ Cal.ns["30min"]("ui", {"theme":"auto","cssVarsPerTheme":{"light":{"cal-brand":"#
      "lang-switch" déclenchés via tracking.js ci-dessous. -->
 <!-- <script defer data-domain="christophevanengelen.be" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script> -->
 <!-- <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script> -->
+
+<!-- CVE 2026-05-11 · Apple-tier motion home · Lenis smooth scroll + cinematic
+     hero reveal (word-by-word H1 + parallax portrait + cascade) + cards fade-up.
+     Chargé après i18n.js (defer) pour pouvoir splitter le H1 après swap. -->
+<script src="/assets/home-motion.js?v=20260511-apple1" defer></script>
 
 <!-- CVE 2026-05-04 S7.3 · event tracking universel · attribute data-event sur
      les CTAs · push vers plausible() si chargé, sinon noop silencieux. -->

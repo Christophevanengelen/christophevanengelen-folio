@@ -636,12 +636,12 @@
 
     const heroTl = gsap.timeline({ delay: 0.15 });
     heroTl
-      .to('.hero-cinema .hero-bg img', { scale: 1.04, duration: 1.6, ease: 'power3.out' }, 0)
+      .to('.hero-cinema .hero-bg img', { scale: 1.04, duration: 1.6, ease: 'expo.out' }, 0)
       .to('.hero-masthead', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 0.2)
       .to('.hero-eyebrow', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.5)
       .to(heroH1Lines, {
         yPercent: 0, opacity: 1,
-        duration: 1.0, ease: 'power3.out',
+        duration: 1.0, ease: 'expo.out',
         stagger: 0.12,
       }, 0.65)
       .to('.hero-lead', { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 1.3)
@@ -673,7 +673,7 @@
     if (portraitGlow) pTl.to(portraitGlow, { scale: 1, opacity: 1, duration: 2.4, ease: 'power2.out' }, 0);
 
     /* 2 — Portrait rises: the main event */
-    pTl.to(portraitImg, { y: 0, opacity: 1, duration: 1.6, ease: 'power3.out' }, 0.18);
+    pTl.to(portraitImg, { y: 0, opacity: 1, duration: 1.6, ease: 'expo.out' }, 0.18);
 
     /* 3 — Text staircase left-to-right */
     const textEls = [heroEyebrow, heroH1Home, heroLead, heroCtas, metaBlock].filter(Boolean);
@@ -787,7 +787,7 @@
     const hcxTl = gsap.timeline({ delay: 0.25 });
 
     /* t=0.0 — BG breathes in. Majestic, slow. The world establishes. */
-    if (hcxBg)      hcxTl.to(hcxBg,      { scale: 1.04, duration: 1.60, ease: 'power3.out' }, 0);
+    if (hcxBg)      hcxTl.to(hcxBg,      { scale: 1.04, duration: 1.60, ease: 'expo.out' }, 0);
 
     /* t=0.3 — Client name slides from left. Context anchors. */
     if (hcxClient)  hcxTl.to(hcxClient,  { opacity: 1, x: 0, duration: 0.70, ease: 'power2.out' }, 0.30);
@@ -799,11 +799,11 @@
     if (hcxEyebrow) hcxTl.to(hcxEyebrow, { opacity: 1, y: 0, duration: 0.60, ease: 'power2.out' }, 0.80);
 
     /* t=1.0 — "Enterprise" weight 200 floats up. Light. Hangs. */
-    if (hcxHl1)     hcxTl.to(hcxHl1,     { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' }, 1.00);
+    if (hcxHl1)     hcxTl.to(hcxHl1,     { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out' }, 1.00);
 
     /* t=1.2 — "Intelligence." weight 800, copper, lands heavy.
        200ms gap vs hl1 = the beat. Not mechanical, alive. */
-    if (hcxHl2)     hcxTl.to(hcxHl2,     { opacity: 1, y: 0, duration: 1.00, ease: 'power3.out' }, 1.20);
+    if (hcxHl2)     hcxTl.to(hcxHl2,     { opacity: 1, y: 0, duration: 1.00, ease: 'expo.out' }, 1.20);
 
     /* ── PAUSE 500ms : headline settles, brain decodes ── */
 
@@ -1059,7 +1059,7 @@
       clipPath: 'inset(0% 0% 0% 0%)',
       yPercent: 0,
       duration: 1.2,
-      ease: 'power3.out',
+      ease: 'expo.out',
       scrollTrigger: {
         trigger: title,
         start: 'top 85%',
@@ -1250,7 +1250,7 @@
     gsap.fromTo(inner,
       { y: 28, opacity: 0 },
       {
-        y: 0, opacity: 1, duration: 0.85, ease: 'power3.out',
+        y: 0, opacity: 1, duration: 0.85, ease: 'expo.out',
         scrollTrigger: {
           trigger: el,
           start: 'top 85%',
@@ -1281,13 +1281,13 @@
           const lines = splitLines(title);
           if (!lines.length) return;
           gsap.fromTo(lines, { y: 36, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', stagger: 0.14 });
+            { y: 0, opacity: 1, duration: 0.9, ease: 'expo.out', stagger: 0.14 });
         },
       });
     }
     if (leads.length) {
       gsap.set(leads, { opacity: 0, y: 22 });
-      gsap.to(leads, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.18,
+      gsap.to(leads, { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out', stagger: 0.18,
         scrollTrigger: { trigger: leads[0], start: 'top 84%', toggleActions: 'play none none reverse' },
       });
     }
@@ -1305,13 +1305,13 @@
           const lines = splitLines(title);
           if (!lines.length) return;
           gsap.fromTo(lines, { y: 36, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', stagger: 0.14 });
+            { y: 0, opacity: 1, duration: 0.9, ease: 'expo.out', stagger: 0.14 });
         },
       });
     }
     if (lead) {
       gsap.set(lead, { opacity: 0, y: 22 });
-      gsap.to(lead, { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out',
+      gsap.to(lead, { opacity: 1, y: 0, duration: 0.95, ease: 'expo.out',
         scrollTrigger: { trigger: lead, start: 'top 84%', toggleActions: 'play none none reverse' },
       });
     }
@@ -1330,13 +1330,13 @@
           const lines = splitLines(title);
           if (!lines.length) return;
           gsap.fromTo(lines, { y: 32, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', stagger: 0.16 });
+            { y: 0, opacity: 1, duration: 0.85, ease: 'expo.out', stagger: 0.16 });
         },
       });
     }
     if (paras.length) {
       gsap.set(paras, { opacity: 0, y: 20 });
-      gsap.to(paras, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.10,
+      gsap.to(paras, { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out', stagger: 0.10,
         scrollTrigger: { trigger: paras[0], start: 'top 84%', toggleActions: 'play none none reverse' },
       });
     }
@@ -1362,7 +1362,7 @@
     ].filter(Boolean);
     if (!els.length) return;
     gsap.set(els, { opacity: 0, y: 24 });
-    gsap.to(els, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.20,
+    gsap.to(els, { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out', stagger: 0.20,
       scrollTrigger: { trigger: sec, start: 'top 75%', toggleActions: 'play none none reverse' },
     });
   }
@@ -1385,7 +1385,7 @@
           const words = splitWords(quote);
           if (!words.length) return;
           gsap.fromTo(words, { y: 14, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.55, ease: 'power3.out', stagger: 0.04, delay: 0.25 });
+            { y: 0, opacity: 1, duration: 0.55, ease: 'expo.out', stagger: 0.04, delay: 0.25 });
         },
       });
     }
@@ -1410,7 +1410,7 @@
     /* Eyebrow + h3 + lead first */
     [eyebrow, title, lead].filter(Boolean).forEach((el, i) => {
       gsap.set(el, { opacity: 0, y: 20 });
-      gsap.to(el, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: i * 0.10,
+      gsap.to(el, { opacity: 1, y: 0, duration: 0.7, ease: 'expo.out', delay: i * 0.10,
         scrollTrigger: { trigger: el, start: 'top 80%', toggleActions: 'play none none reverse' },
       });
     });
@@ -1471,7 +1471,7 @@
           const words = splitWords(quote);
           if (!words.length) return;
           gsap.fromTo(words, { y: 14, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.55, ease: 'power3.out', stagger: 0.05, delay: 0.30 });
+            { y: 0, opacity: 1, duration: 0.55, ease: 'expo.out', stagger: 0.05, delay: 0.30 });
         },
       });
     }
@@ -1522,7 +1522,7 @@
         lastIdx = idx;
         currentEl.textContent = String(idx + 1).padStart(2, '0');
         gsap.fromTo(currentEl, { y: 8, opacity: 0.4 },
-          { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', overwrite: 'auto' });
+          { y: 0, opacity: 1, duration: 0.45, ease: 'expo.out', overwrite: 'auto' });
       }
     });
     panels.forEach((p) => observer.observe(p, { attributes: true, attributeFilter: ['class'] }));
@@ -1543,7 +1543,7 @@
         const words = splitWords(target);
         if (!words.length) return;
         gsap.fromTo(words, { y: 18, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.65, ease: 'power4.out', stagger: 0.045 });
+          { y: 0, opacity: 1, duration: 0.65, ease: 'expo.out', stagger: 0.045 });
         /* Subtle flash : add and remove an accent class on the blockquote */
         blockquote.classList.add('is-punching');
         setTimeout(() => blockquote.classList.remove('is-punching'), 1200);
@@ -1585,7 +1585,7 @@
           if (el.classList.contains('climax-stat__sep')) {
             tl.to(el, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(2)' }, at);
           } else {
-            tl.to(el, { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' }, at);
+            tl.to(el, { opacity: 1, y: 0, duration: 0.55, ease: 'expo.out' }, at);
           }
         });
         if (caption) tl.to(caption, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 1.45);
@@ -1599,7 +1599,7 @@
           /* Each count-up starts when its cell lands : 0.30 / 0.65 / 1.05 (idx 0,1,2) */
           const starts = [0.40, 0.78, 1.18];
           tl.to(obj, {
-            v: target, duration: 0.85, ease: 'power3.out',
+            v: target, duration: 0.85, ease: 'expo.out',
             onUpdate: () => { numEl.textContent = String(Math.round(obj.v)); },
             onComplete: () => { numEl.textContent = String(target); },
           }, starts[idx] || 0.4);
@@ -1620,7 +1620,7 @@
             return `rgba(${r},${g},${b},${alpha})`;
           };
           tl.fromTo(accentCell, { boxShadow: `0 0 0 0 ${hexToRgba(accentColor, 0)}` },
-            { boxShadow: `0 0 0 8px ${hexToRgba(accentColor, 0.18)}`, duration: 0.45, ease: 'power3.out',
+            { boxShadow: `0 0 0 8px ${hexToRgba(accentColor, 0.18)}`, duration: 0.45, ease: 'expo.out',
               yoyo: true, repeat: 1 }, 1.05);
         }
       },
@@ -1639,7 +1639,7 @@
     if (integrity) gsap.set(integrity, { opacity: 0, y: 14 });
     if (cards.length) {
       gsap.to(cards, {
-        opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', stagger: 0.18,
+        opacity: 1, y: 0, duration: 0.75, ease: 'expo.out', stagger: 0.18,
         scrollTrigger: { trigger: cards[0], start: 'top 82%', once: true },
       });
     }
@@ -1660,7 +1660,7 @@
     if (!cards.length) return;
     gsap.set(cards, { opacity: 0, y: 30 });
     gsap.to(cards, {
-      opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.22,
+      opacity: 1, y: 0, duration: 0.7, ease: 'expo.out', stagger: 0.22,
       scrollTrigger: { trigger: cards[0], start: 'top 82%', once: true },
     });
   }
@@ -1712,7 +1712,7 @@
       ScrollTrigger.create({
         trigger: sec, start: 'top 75%', once: true,
         onEnter: () => {
-          gsap.to(words, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out', stagger: 0.06 });
+          gsap.to(words, { opacity: 1, y: 0, duration: 0.5, ease: 'expo.out', stagger: 0.06 });
         },
       });
     }
@@ -1749,7 +1749,7 @@
       gsap.set(path, { opacity: 0, y: 22 });
       ScrollTrigger.create({
         trigger: path, start: 'top 85%', once: true,
-        onEnter: () => gsap.to(path, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' }),
+        onEnter: () => gsap.to(path, { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out' }),
       });
     }
     if (sub) {
@@ -1799,22 +1799,22 @@
     if (tocItems.length) gsap.set(tocItems, { opacity: 0, x: 28 });
 
     if (eyebrow) {
-      gsap.to(eyebrow, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out',
+      gsap.to(eyebrow, { opacity: 1, y: 0, duration: 0.6, ease: 'expo.out',
         scrollTrigger: { trigger: eyebrow, start: 'top 85%', once: true } });
     }
     if (weight) {
       ScrollTrigger.create({
         trigger: weight, start: 'top 78%', once: true,
         onEnter: () => {
-          gsap.to(weight, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' });
-          if (phrase) gsap.to(phrase, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.4 });
+          gsap.to(weight, { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out' });
+          if (phrase) gsap.to(phrase, { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out', delay: 0.4 });
           /* Count-up 0 → 86 */
           if (countEl) {
             const target = parseInt(countEl.dataset.countTo || '86', 10);
             const obj = { v: 0 };
             countEl.textContent = '0';
             gsap.to(obj, {
-              v: target, duration: 1.4, ease: 'power3.out',
+              v: target, duration: 1.4, ease: 'expo.out',
               onUpdate: () => { countEl.textContent = String(Math.round(obj.v)); },
               onComplete: () => { countEl.textContent = String(target); },
               delay: 0.3,
@@ -1825,7 +1825,7 @@
     }
     if (tocItems.length) {
       gsap.to(tocItems, {
-        opacity: 1, x: 0, duration: 0.6, ease: 'power3.out', stagger: 0.10,
+        opacity: 1, x: 0, duration: 0.6, ease: 'expo.out', stagger: 0.10,
         scrollTrigger: { trigger: tocItems[0], start: 'top 82%', once: true },
       });
     }
@@ -1853,7 +1853,7 @@
 
     /* Header reveals */
     [eyebrow, title, lead].filter(Boolean).forEach((el, i) => {
-      gsap.to(el, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', delay: i * 0.10,
+      gsap.to(el, { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out', delay: i * 0.10,
         scrollTrigger: { trigger: el, start: 'top 82%', toggleActions: 'play none none reverse' },
       });
     });
@@ -1861,7 +1861,7 @@
     /* 4 cards stagger — narrative order Banking → IT → Legal → Marketing */
     if (cards.length) {
       gsap.to(cards, {
-        opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', stagger: 0.18,
+        opacity: 1, y: 0, duration: 0.75, ease: 'expo.out', stagger: 0.18,
         scrollTrigger: { trigger: cards[0], start: 'top 82%', toggleActions: 'play none none reverse' },
       });
     }
@@ -1877,9 +1877,9 @@
         trigger: pivot, start: 'top 80%', once: true,
         onEnter: () => {
           const tl = gsap.timeline();
-          tl.to(pivot, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, 0);
-          if (pivotClaim) tl.to(pivotClaim, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' }, 0.25);
-          if (pivotOutcome) tl.to(pivotOutcome, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 0.55);
+          tl.to(pivot, { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out' }, 0);
+          if (pivotClaim) tl.to(pivotClaim, { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out' }, 0.25);
+          if (pivotOutcome) tl.to(pivotOutcome, { opacity: 1, y: 0, duration: 0.8, ease: 'expo.out' }, 0.55);
           /* Délice : pulse "le bébé de tout le monde" 1.5s après le reveal */
           tl.add(() => {
             const accent = pivotOutcome && pivotOutcome.querySelector('strong.accent');
@@ -1910,7 +1910,7 @@
     if (claim) gsap.set(claim, { opacity: 0, y: 22 });
 
     [eyebrow, title, lead].filter(Boolean).forEach((el, i) => {
-      gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: i * 0.10,
+      gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: 'expo.out', delay: i * 0.10,
         scrollTrigger: { trigger: el, start: 'top 82%', toggleActions: 'play none none reverse' },
       });
     });
@@ -1925,7 +1925,7 @@
           if (edges.length) tl.to(edges, { strokeDashoffset: 0, duration: 1.2, ease: 'power2.out', stagger: 0.18 }, 0);
           if (nodes.length) tl.to(nodes, { scale: 1, opacity: 1, duration: 0.45, ease: 'back.out(1.8)', stagger: 0.18 }, 0.6);
           if (labels.length) tl.to(labels, { opacity: 0.9, duration: 0.5, ease: 'power2.out', stagger: 0.15 }, 0.85);
-          if (cards.length) tl.to(cards, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.18 }, 0.9);
+          if (cards.length) tl.to(cards, { opacity: 1, y: 0, duration: 0.7, ease: 'expo.out', stagger: 0.18 }, 0.9);
         },
       });
     }
@@ -1933,7 +1933,7 @@
     if (claim) {
       ScrollTrigger.create({
         trigger: claim, start: 'top 80%', once: true,
-        onEnter: () => gsap.to(claim, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }),
+        onEnter: () => gsap.to(claim, { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out' }),
       });
     }
   }
@@ -1963,7 +1963,7 @@
         /* Beat on the accent node (mars 2018 · 6/1/0) */
         const accent = tl.querySelector('.ti-node--accent .ti-dot');
         if (accent) {
-          t.fromTo(accent, { scale: 1 }, { scale: 1.5, duration: 0.25, ease: 'power3.out', yoyo: true, repeat: 1 }, 1.20);
+          t.fromTo(accent, { scale: 1 }, { scale: 1.5, duration: 0.25, ease: 'expo.out', yoyo: true, repeat: 1 }, 1.20);
         }
       },
     });
@@ -1990,7 +1990,7 @@
     if (bridgeReveals.length) {
       gsap.fromTo(bridgeReveals,
         { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out', stagger: 0.18,
+        { opacity: 1, y: 0, duration: 0.95, ease: 'expo.out', stagger: 0.18,
           scrollTrigger: { trigger: bridgeEl, start: 'top 72%', toggleActions: 'play none none reverse' },
         },
       );
@@ -2007,7 +2007,7 @@
     if (finLine) {
       gsap.fromTo(finLine,
         { opacity: 0, y: 22 },
-        { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out',
+        { opacity: 1, y: 0, duration: 0.95, ease: 'expo.out',
           scrollTrigger: { trigger: finLine, start: 'top 78%', toggleActions: 'play none none reverse' },
         },
       );
@@ -2016,7 +2016,7 @@
     if (finPaths.length) {
       gsap.fromTo(finPaths,
         { opacity: 0, y: 28 },
-        { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.14,
+        { opacity: 1, y: 0, duration: 0.85, ease: 'expo.out', stagger: 0.14,
           scrollTrigger: { trigger: finPaths[0], start: 'top 82%', toggleActions: 'play none none reverse' },
         },
       );
@@ -2050,7 +2050,7 @@
   if (lessonCards.length) {
     gsap.set(lessonCards, { opacity: 0, y: 28 });
     gsap.to(lessonCards, {
-      opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.18,
+      opacity: 1, y: 0, duration: 0.85, ease: 'expo.out', stagger: 0.18,
       scrollTrigger: { trigger: lessonCards[0], start: 'top 82%', toggleActions: 'play none none reverse' },
     });
   }
@@ -2112,7 +2112,7 @@
         gsap.to(obj, {
           v: info.value,
           duration: 1.2,
-          ease: 'power3.out',
+          ease: 'expo.out',
           onUpdate: () => { el.textContent = formatNum(obj.v, info); },
           onComplete: () => { el.textContent = info.original; },
         });
