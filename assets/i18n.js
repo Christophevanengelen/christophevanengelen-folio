@@ -39,32 +39,32 @@
     /* CVE 2026-05-04 S0.2 · titre + meta resserrés pour SEO ·
        title < 65 chars (limite SERP Google), desc 155-160 chars max. */
     'home.title': {
-      fr: 'Christophe van Engelen — Senior UX + Design Thinking · Freelance Bruxelles',
-      nl: 'Christophe van Engelen — Senior UX + Design Thinking · Freelance Brussel',
-      en: 'Christophe van Engelen — Senior UX + Design Thinking · Freelance Brussels'
+      fr: 'Christophe van Engelen — Service Design · UX · CX · Freelance Bruxelles',
+      nl: 'Christophe van Engelen — Service Design · UX · CX · Freelance Brussel',
+      en: 'Christophe van Engelen — Service Design · UX · CX · Freelance Brussels'
     },
-    /* CVE 2026-05-11 audit · positioning re-aligned with CV self-statement
-       (Senior UX + Design Thinking · complex digital ecosystems) · plus humble,
-       plus défendable que "Service Design Leader" qui était aspirationnel. */
+    /* CVE 2026-05-11 audit team-review Pack v4-final · consensus de 6 reviewers
+       indépendants (5 Anthropic agents + Codex GPT-5) · score moyen 85/100.
+       Voix Lou Downe / Cagan · humble, française native, end-to-end UI→Partner. */
     'home.metaDesc': {
-      fr: 'Senior UX Designer + Design Thinking · freelance à Bruxelles. Vingt ans à simplifier des écosystèmes digitaux complexes. Cas · SPEOS · HMS Networks · BNP Paribas Fortis.',
-      nl: 'Senior UX Designer + Design Thinking · freelance in Brussel. Twintig jaar complexe digitale ecosystemen vereenvoudigen. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.',
-      en: 'Senior UX Designer + Design Thinking · freelance in Brussels. Twenty years simplifying complex digital ecosystems. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.'
+      fr: 'Service Design · UX · CX freelance à Bruxelles. Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. J\'écoute, je cadre, je tranche. Cas · SPEOS · HMS Networks · BNP Paribas Fortis.',
+      nl: 'Service Design · UX · CX freelance in Brussel. Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Ik luister, kadreer, beslis. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.',
+      en: 'Service Design · UX · CX freelance in Brussels. Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. I listen, I frame, I decide. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.'
     },
     'home.eyebrow': {
-      fr: 'Senior UX · Design Thinking · Bruxelles',
-      nl: 'Senior UX · Design Thinking · Brussel',
-      en: 'Senior UX · Design Thinking · Brussels'
+      fr: 'Service Design · UX · CX · Bruxelles',
+      nl: 'Service Design · UX · CX · Brussel',
+      en: 'Service Design · UX · CX · Brussels'
     },
     'home.h1': {
-      fr: 'J\'aide les équipes à simplifier<br><span class="alt">des écosystèmes digitaux complexes.</span>',
-      nl: 'Ik help teams om<br><span class="alt">complexe digitale ecosystemen te vereenvoudigen.</span>',
-      en: 'I help teams simplify<br><span class="alt">complex digital ecosystems.</span>'
+      fr: 'J\'aide les équipes à transformer<br><span class="alt">un cadrage flou en service que le client signe.</span>',
+      nl: 'Ik help teams om<br><span class="alt">een vaag kader te transformeren in een dienst die de klant tekent.</span>',
+      en: 'I help teams transform<br><span class="alt">a fuzzy brief into a service the client signs.</span>'
     },
     'home.lead': {
-      fr: 'Christophe van Engelen, Senior UX Designer freelance à Bruxelles. Banque, postal industriel, SaaS, legal-tech · là où le système est complexe et le scope flou, j\'écoute, je cadre, je livre.',
-      nl: 'Christophe van Engelen, Senior UX Designer freelance in Brussel. Banking, industriële post, SaaS, legal-tech · daar waar het systeem complex is en de scope vaag, luister ik, cadreer ik, lever ik.',
-      en: 'Christophe van Engelen, Senior UX Designer freelance in Brussels. Banking, industrial postal, SaaS, legal-tech · where the system is complex and the scope unclear, I listen, I frame, I deliver.'
+      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics, téléphonables · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding. Drie publieke cases, telefonisch bereikbaar · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases, references available · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
     },
     'home.casesEyebrow': { fr: 'Travaux sélectionnés', nl: 'Geselecteerd werk', en: 'Selected work' },
     'home.casesH2': {
@@ -2520,17 +2520,17 @@
     'luminus.cta.back': { fr: 'Lire le case BNP →', nl: 'Lees de BNP-case →', en: 'Read the BNP case →' },
 
     /* ============== HOME · OVERRIDES + CROSS-CASE (CVE 2026-05-11) ============== */
-    /* CVE 2026-05-11 · positioning re-aligned with CV (Senior UX + Design Thinking ·
-       écosystèmes digitaux complexes) · plus humble, plus défendable. */
+    /* CVE 2026-05-11 Pack v4-final · consensus team review (5 Anthropic agents +
+       Codex GPT-5) · score moyen 85/100 · voix Lou Downe / Cagan. */
     'home.metaDesc': {
-      fr: 'Senior UX Designer + Design Thinking · freelance à Bruxelles. Vingt ans à simplifier des écosystèmes digitaux complexes. Cas · SPEOS · HMS Networks · BNP Paribas Fortis.',
-      nl: 'Senior UX Designer + Design Thinking · freelance in Brussel. Twintig jaar complexe digitale ecosystemen vereenvoudigen. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.',
-      en: 'Senior UX Designer + Design Thinking · freelance in Brussels. Twenty years simplifying complex digital ecosystems. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.'
+      fr: 'Service Design · UX · CX freelance à Bruxelles. Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. J\'écoute, je cadre, je tranche. Cas · SPEOS · HMS Networks · BNP Paribas Fortis.',
+      nl: 'Service Design · UX · CX freelance in Brussel. Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Ik luister, kadreer, beslis. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.',
+      en: 'Service Design · UX · CX freelance in Brussels. Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. I listen, I frame, I decide. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.'
     },
     'home.lead': {
-      fr: 'Senior UX Designer freelance à Bruxelles. Banque, postal industriel, SaaS, legal-tech · vingt ans à clarifier des écosystèmes complexes. Trois cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      nl: 'Senior UX Designer freelance in Brussel. Banking, industriële post, SaaS, legal-tech · twintig jaar complexe ecosystemen verhelderen. Drie cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      en: 'Senior UX Designer freelance in Brussels. Banking, industrial postal, SaaS, legal-tech · twenty years clarifying complex ecosystems. Three cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
+      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics, téléphonables · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding. Drie publieke cases, telefonisch bereikbaar · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases, references available · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
     },
     'home.casesH2': {
       fr: 'Trois missions. <span class="accent">Trois décisions de production signées.</span>',
@@ -2860,12 +2860,12 @@
     'home.contact': { fr: 'cve@hi-def.be', nl: 'cve@hi-def.be', en: 'cve@hi-def.be' },
 
     /* CVE 2026-05-04 S3.x · trust signals & conversion (sprint S3) */
-    /* CVE 2026-05-11 · pas de date · posture "à l'écoute" plutôt que "à vendre".
-       Pattern senior consultant · on choisit, on ne court pas après. */
+    /* CVE 2026-05-11 Pack v4-final · pill scarcity sans date (Brand Guardian).
+       "Un mandat à la fois" signale la rareté du senior, pas une fenêtre Q3. */
     'home.statusAvailability': {
-      fr: 'À l\'écoute des projets qui ont du sens.',
-      nl: 'Open voor projecten met betekenis.',
-      en: 'Listening for projects that matter.'
+      fr: 'Disponible · briefs sérieux · un mandat à la fois.',
+      nl: 'Beschikbaar · serieuze briefs · één opdracht tegelijk.',
+      en: 'Available · serious briefs · one engagement at a time.'
     },
     'home.trustEyebrow': {
       fr: 'Travaillé avec',
