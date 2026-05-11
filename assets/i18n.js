@@ -39,29 +39,32 @@
     /* CVE 2026-05-04 S0.2 · titre + meta resserrés pour SEO ·
        title < 65 chars (limite SERP Google), desc 155-160 chars max. */
     'home.title': {
-      fr: 'Christophe van Engelen — Service Designer Freelance Bruxelles | UX, CX',
-      nl: 'Christophe van Engelen — Freelance Service Designer Brussel | UX, CX',
-      en: 'Christophe van Engelen — Freelance Service Designer Brussels | UX, CX'
+      fr: 'Christophe van Engelen — Senior UX + Design Thinking · Freelance Bruxelles',
+      nl: 'Christophe van Engelen — Senior UX + Design Thinking · Freelance Brussel',
+      en: 'Christophe van Engelen — Senior UX + Design Thinking · Freelance Brussels'
     },
+    /* CVE 2026-05-11 audit · positioning re-aligned with CV self-statement
+       (Senior UX + Design Thinking · complex digital ecosystems) · plus humble,
+       plus défendable que "Service Design Leader" qui était aspirationnel. */
     'home.metaDesc': {
-      fr: 'Service Designer Leader freelance à Bruxelles. 20 ans d\'expérience en UX, CX et Service Design. J\'aligne business, utilisateurs et IT. Cas : BNP, SPEOS.',
-      nl: 'Freelance Service Design Leader in Brussel. 20 jaar ervaring in UX, CX en Service Design. Ik lijn business, gebruikers en IT uit. Cases: BNP, SPEOS.',
-      en: 'Freelance Service Design Leader in Brussels. 20 years of experience in UX, CX and Service Design. I align business, users and IT. Cases: BNP, SPEOS.'
+      fr: 'Senior UX Designer + Design Thinking · freelance à Bruxelles. Vingt ans à simplifier des écosystèmes digitaux complexes. Cas · SPEOS · HMS Networks · BNP Paribas Fortis.',
+      nl: 'Senior UX Designer + Design Thinking · freelance in Brussel. Twintig jaar complexe digitale ecosystemen vereenvoudigen. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.',
+      en: 'Senior UX Designer + Design Thinking · freelance in Brussels. Twenty years simplifying complex digital ecosystems. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.'
     },
     'home.eyebrow': {
-      fr: 'Christophe van Engelen · Service Design Leader · Bruxelles',
-      nl: 'Christophe van Engelen · Service Design Leader · Brussel',
-      en: 'Christophe van Engelen · Service Design Leader · Brussels'
+      fr: 'Senior UX · Design Thinking · Bruxelles',
+      nl: 'Senior UX · Design Thinking · Brussel',
+      en: 'Senior UX · Design Thinking · Brussels'
     },
     'home.h1': {
-      fr: 'Découvre l\'opportunité business.<br>Livre le service que <span class="alt">quelqu\'un paie.</span>',
-      nl: 'Ontdekt de business-opportuniteit.<br>Levert de dienst <span class="alt">waar iemand voor betaalt.</span>',
-      en: 'Uncovers the business opportunity.<br>Ships the service <span class="alt">someone pays for.</span>'
+      fr: 'J\'aide les équipes à simplifier<br><span class="alt">des écosystèmes digitaux complexes.</span>',
+      nl: 'Ik help teams om<br><span class="alt">complexe digitale ecosystemen te vereenvoudigen.</span>',
+      en: 'I help teams simplify<br><span class="alt">complex digital ecosystems.</span>'
     },
     'home.lead': {
-      fr: 'Christophe van Engelen, Service Designer freelance à Bruxelles. Je travaille upstream — là où une donnée ou une asymétrie stratégique devient un service que quelqu\'un paie.',
-      nl: 'Christophe van Engelen, freelance Service Designer in Brussel. Ik werk upstream — daar waar data of een strategische asymmetrie een dienst wordt waar iemand voor betaalt.',
-      en: 'Christophe van Engelen, freelance Service Designer in Brussels. I work upstream — where data or a strategic asymmetry becomes a service someone pays for.'
+      fr: 'Christophe van Engelen, Senior UX Designer freelance à Bruxelles. Banque, postal industriel, SaaS, legal-tech · là où le système est complexe et le scope flou, j\'écoute, je cadre, je livre.',
+      nl: 'Christophe van Engelen, Senior UX Designer freelance in Brussel. Banking, industriële post, SaaS, legal-tech · daar waar het systeem complex is en de scope vaag, luister ik, cadreer ik, lever ik.',
+      en: 'Christophe van Engelen, Senior UX Designer freelance in Brussels. Banking, industrial postal, SaaS, legal-tech · where the system is complex and the scope unclear, I listen, I frame, I deliver.'
     },
     'home.casesEyebrow': { fr: 'Travaux sélectionnés', nl: 'Geselecteerd werk', en: 'Selected work' },
     'home.casesH2': {
@@ -2516,18 +2519,18 @@
     },
     'luminus.cta.back': { fr: 'Lire le case BNP →', nl: 'Lees de BNP-case →', en: 'Read the BNP case →' },
 
-    /* ============== HOME · OVERRIDES + CROSS-CASE (CVE 2026-05-04) ============== */
-    /* CVE 2026-05-04 S0.2 · meta resserrée (155 chars) avec mots-clés cibles
-       LLM/SEO : Service Design Leader, freelance, Bruxelles, UX, CX, BNP, SPEOS. */
+    /* ============== HOME · OVERRIDES + CROSS-CASE (CVE 2026-05-11) ============== */
+    /* CVE 2026-05-11 · positioning re-aligned with CV (Senior UX + Design Thinking ·
+       écosystèmes digitaux complexes) · plus humble, plus défendable. */
     'home.metaDesc': {
-      fr: 'Service Designer Leader freelance à Bruxelles. 20 ans d\'expérience en UX, CX et Service Design. J\'aligne business, utilisateurs et IT. Cas : BNP, SPEOS.',
-      nl: 'Freelance Service Design Leader in Brussel. 20 jaar ervaring in UX, CX en Service Design. Ik lijn business, gebruikers en IT uit. Cases: BNP, SPEOS.',
-      en: 'Freelance Service Design Leader in Brussels. 20 years of experience in UX, CX and Service Design. I align business, users and IT. Cases: BNP, SPEOS, HMS Networks.'
+      fr: 'Senior UX Designer + Design Thinking · freelance à Bruxelles. Vingt ans à simplifier des écosystèmes digitaux complexes. Cas · SPEOS · HMS Networks · BNP Paribas Fortis.',
+      nl: 'Senior UX Designer + Design Thinking · freelance in Brussel. Twintig jaar complexe digitale ecosystemen vereenvoudigen. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.',
+      en: 'Senior UX Designer + Design Thinking · freelance in Brussels. Twenty years simplifying complex digital ecosystems. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.'
     },
     'home.lead': {
-      fr: 'Vingt ans à transformer une donnée stratégique en service que quelqu\'un signe. Trois cases ci-dessous · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      nl: 'Twintig jaar strategische data omzetten in diensten waar iemand voor tekent. Drie cases hieronder · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      en: 'Twenty years turning strategic data into services someone signs for. Three cases below · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
+      fr: 'Senior UX Designer freelance à Bruxelles. Banque, postal industriel, SaaS, legal-tech · vingt ans à clarifier des écosystèmes complexes. Trois cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      nl: 'Senior UX Designer freelance in Brussel. Banking, industriële post, SaaS, legal-tech · twintig jaar complexe ecosystemen verhelderen. Drie cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
+      en: 'Senior UX Designer freelance in Brussels. Banking, industrial postal, SaaS, legal-tech · twenty years clarifying complex ecosystems. Three cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
     },
     'home.casesH2': {
       fr: 'Trois missions. <span class="accent">Trois décisions de production signées.</span>',
@@ -3200,9 +3203,9 @@
     'home.aboutEyebrow': { fr: 'À propos', nl: 'Over mij', en: 'About' },
     'home.aboutH2': { fr: 'Bio en clair.', nl: 'Bio in het kort.', en: 'Bio in plain words.' },
     'home.about.p1': {
-      fr: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance à <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Bruxelles</span>, <span itemprop="addressCountry">Belgique</span></span>. Vingt ans à transformer une donnée stratégique en service que quelqu\'un signe. Trilingue FR / NL / EN.',
-      nl: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Ukkel</span>, <span itemprop="addressRegion">Brussel</span>, <span itemprop="addressCountry">België</span></span>. Twintig jaar strategische data omzetten in diensten waar iemand voor tekent. Drietalig FR / NL / EN.',
-      en: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Service Design Leader</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Brussels</span>, <span itemprop="addressCountry">Belgium</span></span>. Twenty years turning strategic data into services someone signs for. Trilingual FR / NL / EN.'
+      fr: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer + Design Thinking practitioner</span>, freelance à <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Bruxelles</span>, <span itemprop="addressCountry">Belgique</span></span>. Vingt ans à simplifier des écosystèmes digitaux complexes. Trilingue FR / NL / EN.',
+      nl: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer + Design Thinking practitioner</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Ukkel</span>, <span itemprop="addressRegion">Brussel</span>, <span itemprop="addressCountry">België</span></span>. Twintig jaar complexe digitale ecosystemen vereenvoudigen. Drietalig FR / NL / EN.',
+      en: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer + Design Thinking practitioner</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Brussels</span>, <span itemprop="addressCountry">Belgium</span></span>. Twenty years simplifying complex digital ecosystems. Trilingual FR / NL / EN.'
     },
     'home.about.p2': {
       fr: '<strong>Banque, postal industriel, industrial IoT, legal-tech, produit digital.</strong> Le contexte change, le métier reste. Cinq industries, douze missions, trois cases en ligne.',
