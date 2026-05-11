@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cloud Revamp — Ewon by HMS Networks · Case Study Service Design + UX/UI</title>
-<meta name="description" content="Étude de cas Service Design + UX/UI · un an chez Ewon by HMS Networks pour réunifier eCatcher, M2Web et Talk2M en une plateforme one-stop. Concept Report validé · 2 M€ de budget débloqué · sponsor promu." />
+<meta name="description" content="Étude de cas Service Design + UX/UI · un an chez Ewon by HMS Networks pour réunifier eCatcher, M2Web et Talk2M sous une même expérience. Concept Report priorisé · 2 M€ obtenus en comité pour la mise en production · sponsor monte d'un grade." />
 <meta name="author" content="Christophe van Engelen" />
 <meta name="theme-color" content="#0a1220" />
 <meta name="color-scheme" content="dark light" />
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Christophe van Engelen" />
 <meta property="og:url" content="https://christophevanengelen.be/en/hms.html" />
 <meta property="og:title" content="Cloud Revamp — Ewon by HMS Networks · Case Study" />
-<meta property="og:description" content="Industrial IoT mondial. Trois plateformes legacy à réunifier — eCatcher, M2Web, Talk2M. Customer Journey workshops, Heuristic Evaluation Nielsen, Concept Report priorisé. Sponsor décroche 2 M€ pour la mise en prod." />
+<meta property="og:description" content="Industrial IoT mondial. Trois plateformes legacy à réunifier · eCatcher, M2Web, Talk2M. Un an de Service Design + UX/UI. Le sponsor obtient 2 M€ en comité pour la mise en production, et monte d'un grade." />
 <meta property="og:image" content="https://christophevanengelen.be/public/img/hms-ambiance.jpg" />
 <meta property="og:image:type" content="image/webp" />
 <meta property="og:image:width" content="1920" />
@@ -38,7 +38,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Cloud Revamp — Ewon by HMS Networks · Case Study" />
-<meta name="twitter:description" content="Un an pour réunifier eCatcher, M2Web et Talk2M en une plateforme one-stop. Concept Report validé, sponsor décroche 2 M€ pour la mise en prod." />
+<meta name="twitter:description" content="Un an pour réunifier eCatcher, M2Web et Talk2M sous une même expérience. Le sponsor obtient 2 M€ en comité, et monte d'un grade." />
 <meta name="twitter:image" content="https://christophevanengelen.be/public/img/hms-ambiance.jpg" />
 <meta name="twitter:image:alt" content="Ewon by HMS Networks — Cloud Revamp, étude de cas Service Design + UX/UI." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -219,6 +219,19 @@
     font-size: clamp(17px, 1.45vw, 20px); line-height: 1.55;
     color: rgba(242,235,219,0.92); max-width: 58ch; margin: 0; font-weight: 300;
     text-shadow: 0 1px 16px rgba(10, 18, 32, 0.7), 0 1px 3px rgba(10, 18, 32, 0.4);
+  }
+  /* CVE 2026-05-11 HMS v2 · attribution stripe (UX Researcher reco) */
+  .hcx__attribution {
+    font-family: "Manrope", sans-serif;
+    font-size: 13px; line-height: 1.5; font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(242,235,219,0.7); margin: 14px 0 0;
+    padding: 8px 12px;
+    background: rgba(10, 18, 32, 0.35);
+    border-left: 2px solid color-mix(in oklab, var(--amber) 60%, transparent);
+    backdrop-filter: blur(3px);
+    max-width: max-content;
+    text-shadow: 0 1px 8px rgba(10, 18, 32, 0.55);
   }
   .hcx__role {
     font-family: "Manrope", sans-serif;
@@ -1249,7 +1262,9 @@
         <span class="hcx__hl1" data-i18n="hms.hero.h1.start">Trois plateformes legacy.</span>
         <span class="hcx__hl2" data-i18n="hms.hero.h1.alt">Une culture à installer.</span>
       </h1>
-      <p class="hcx__lead" data-i18n="hms.hero.lead">Un an freelance pour faire converger eCatcher, M2Web et Talk2M autour de l'utilisateur.</p>
+      <p class="hcx__lead" data-i18n="hms.hero.lead">Un an freelance pour réunifier eCatcher, M2Web et Talk2M sous une même expérience. À la sortie · 2 M€ débloqués pour la mise en production, et le sponsor monte d'un grade.</p>
+      <!-- CVE 2026-05-11 HMS v2 · attribution stripe (UX Researcher reco · gain Sophie + Marc) -->
+      <p class="hcx__attribution" data-i18n="hms.hero.attribution">Service Design + UX/UI Consultant · mandat un an · 2021 → 2022</p>
       <div class="hcx__role">
         <span class="hcx__role-label" data-i18n="hms.hero.metaRole">Service Design + UX/UI · Freelance</span>
         <span class="hcx__role-where" data-i18n="hms.hero.metaWhere">12 mois · Nivelles + remote</span>
@@ -1271,16 +1286,16 @@
     <h2 data-i18n-html="hms.brief.title">Industrial IoT mondial. <span class="accent">Trois plateformes legacy à réunifier.</span></h2>
 
     <!-- PYRAMIDE INVERSE · outcome d'abord (Minto / scan recruteur 90s) · climax 2M€ debloqué -->
-    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.brief.teaser">À la sortie · <strong class="accent">Concept Report priorisé</strong> validé sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system prêt prod</strong> <span class="brief-teaser__sep">·</span> tous les flots et prototypes <strong class="accent">testés et scorés</strong> <span class="brief-teaser__sep">·</span> sponsor décroche <strong class="accent"><span data-countup="2" data-countup-duration="2">2</span> M€ de budget supplémentaire</strong> et une promotion.</p>
+    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.brief.teaser">À la sortie · <strong class="accent">Concept Report priorisé</strong> validé sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system prêt pour la production</strong> <span class="brief-teaser__sep">·</span> tous les flots et prototypes <strong class="accent">testés et notés</strong> <span class="brief-teaser__sep">·</span> le sponsor obtient <strong class="accent"><span data-countup="2" data-countup-duration="2">2</span> M€ de budget additionnel</strong> et monte d'un grade.</p>
 
     <p class="glance-sizing" data-i18n-html="hms.brief.sizing">Mission freelance <span class="dot">·</span> 12 mois <span class="dot">·</span> 2021 → 2022 <span class="dot">·</span> Service Design + UX/UI Consultant</p>
 
     <!-- CVE 2026-05-08 · toolkit signal · transpire mastery · Customer Journey + Heuristic Eval Nielsen + Service Design Relevance/Simplicity/Consistency -->
     <p class="lead toolkit-signal" style="max-width: 70ch; margin-top: 22px;" data-i18n-html="hms.brief.toolkitSignal"><strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Service Design Relevance · Simplicity · Consistency.</strong> Pas Strategyzer · le business model d'Ewon existait. Pas Design Sprint · le besoin était une transformation user-centric multi-mois, pas une décision de 5 jours. Le toolkit s'est choisi sur la maturité Agile et le besoin d'unification UX, pas sur un dogme.</p>
 
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="hms.brief.lead4">Mandat · implémenter Design Thinking, user-centrism et digital transformation au sein d'une société purement IT. Mettre tous les chefs de département autour de la table — R&D, produit, business, service après-vente — identifier les frictions AS-IS, mesurer le gap TO-BE, prioriser via story mapping les sprints Agile.</p>
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="hms.brief.lead4">Mandat · installer le Design Thinking, la culture utilisateur et la transformation numérique dans une maison purement IT. Mettre tous les chefs de département autour de la table — R&D, produit, business, service après-vente — identifier les frictions AS-IS, mesurer le gap TO-BE, prioriser via story mapping les sprints Agile.</p>
 
-    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead1">Ewon by HMS Networks. Business Unit basée à Nivelles, en Belgique. Filiale d'un groupe industriel suédois (Halmstad), leader européen de la communication industrielle. Quatre brands au total · Anybus, Ewon, Intesis, Ixxat. La promesse Ewon · monitorer et contrôler les machines industrielles à distance, partout dans le monde.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead1">Ewon by HMS Networks. Entité basée à Nivelles, en Belgique. Filiale d'un groupe industriel suédois (Halmstad), leader européen de la communication industrielle. Quatre marques au total · Anybus, Ewon, Intesis, Ixxat. La promesse Ewon · superviser et contrôler les machines industrielles à distance, partout dans le monde.</p>
 
     <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead2">Trois plateformes legacy à réunifier · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pression concurrentielle d'IXON, startup cloud-native néerlandaise qui ne traînait pas de passé IT et qui était user-centric depuis le premier jour · self-onboarding automatisé, freemium, persona-driven. À l'arrivée chez Ewon · zéro self-onboarding, zéro analyse persona, pas de front-end basé sur un design system, pas de librairie front Angular en place. Le retard à combler n'était pas business · il était UX, UI, et culture.</p>
 
@@ -1291,8 +1306,8 @@
 <!-- ROADMAP PROPOSED — Double Diamond + demi-diamants + 4 phases SPEOS canoniques.
      Pattern Design Thinking + Agile : OBSERVE/DEFINE | IDEATE/PROTOTYPE & TEST,
      marqueurs Intake → Value Proposition → Concept Report → Sprints.
-     Source : Speos Design Thinking Roadmap 2024 (Christophe). -->
-<section id="proposed-roadmap" aria-label="Roadmap proposée SPEOS — Double Diamond 4 phases, MVP prioritisé en user stories" data-frame="wide" data-overflow="natural">
+     Source : Ewon HMS Design Thinking Roadmap 2022 (Christophe). -->
+<section id="proposed-roadmap" aria-label="Roadmap proposée HMS Ewon — Double Diamond 4 phases, MVP prioritisé en user stories" data-frame="wide" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="hms.proposed.eyebrow">La roadmap proposée</span>
     <h2 class="proposed-title" data-i18n-html="hms.proposed.title">Comment j'ai cadré <span class="accent">les douze mois.</span></h2>
@@ -1526,7 +1541,7 @@
             <li class="snm-node" data-anchor="#prototype-vp3"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp3">VP 03 + 04 · Reports &amp; Billing</span></li>
             <li class="snm-node" data-anchor="#prototype-vp5"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp5">VP 05 · Support self-service</span></li>
             <li class="snm-node" data-anchor="#prototype-phase2"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pPhase2">Hors MVP · expansion + marketplace API</span></li>
-            <li class="snm-node" data-anchor="#prototype-usertest"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.p4">User test 6 clients dont Luminus · go prod</span></li>
+            <li class="snm-node" data-anchor="#prototype-usertest"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.p4">User test 8 clients machine builders · go prod</span></li>
           </ol>
         </li>
         <!-- OUTCOME FINAL · CONCEPT REPORT — gem losange · cristallisation des 4 demi-diamants du DD -->
@@ -1701,8 +1716,8 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.research.benchEyebrow">Phase 01 · Discover · benchmark concurrentiel</span>
     <h3 class="research-h3" data-i18n-html="hms.research.benchTitle">Trois segments marché. <span class="accent">Trois logiques d'achat.</span></h3>
-    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.research.benchOutcome">3 segments identifiés <span class="brief-teaser__sep">·</span> Large Accounts (Build-to-Mail) · PMEs (Easy2Mail) · Integrators / Resellers <span class="brief-teaser__sep">·</span> concurrents observés en parallèle (Easypost, Doccle, plateformes digital mail européennes).</p>
-    <p class="lead" style="margin-top: 32px;" data-i18n="hms.research.benchLead">Trois logiques d'achat distinctes. Les Large Accounts achètent des solutions complexes avec haute compliance. Les PMEs achètent du standard, du low-touch, de l'autonomie. Les Integrators achètent une API et de la documentation. Une seule plateforme doit servir les trois sans dériver.</p>
+    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.research.benchOutcome">3 segments identifiés <span class="brief-teaser__sep">·</span> OEM Machine Builders · End-User Plants · Integrators / Resellers <span class="brief-teaser__sep">·</span> concurrents observés en parallèle (IXON, Welotec, Tosibox, plateformes IIoT cloud-natives).</p>
+    <p class="lead" style="margin-top: 32px;" data-i18n="hms.research.benchLead">Trois logiques d'achat distinctes. Les OEM Machine Builders intègrent Ewon dans leurs machines, à la commande, avec haute compliance. Les End-User Plants achètent du standard, du low-touch, de l'autonomie depuis l'atelier. Les Integrators achètent une API et de la documentation. Une seule plateforme doit servir les trois sans dériver.</p>
 
     <!-- 3 SEGMENTS MARCHÉ · Concept Report p7-8 -->
     <div class="bm-grid">
@@ -1713,7 +1728,7 @@
           <div class="bm-mock-pie"></div>
         </div>
         <header class="bm-card__head">
-          <span class="bm-card__country" data-i18n="hms.research.seg1Country">Segment 01 · Build-to-Mail</span>
+          <span class="bm-card__country" data-i18n="hms.research.seg1Country">Segment 01 · OEM Machine Builders</span>
           <h4 class="bm-card__name" data-i18n="hms.research.seg1Name">Large Accounts</h4>
         </header>
         <p class="bm-card__signature" data-i18n="hms.research.seg1Sig">Signature · solutions complexes, compliance haute</p>
@@ -1731,7 +1746,7 @@
           <div class="bm-mock-pin bm-mock-pin--3"></div>
         </div>
         <header class="bm-card__head">
-          <span class="bm-card__country" data-i18n="hms.research.seg2Country">Segment 02 · Easy2Mail</span>
+          <span class="bm-card__country" data-i18n="hms.research.seg2Country">Segment 02 · End-User Plants</span>
           <h4 class="bm-card__name" data-i18n="hms.research.seg2Name">PMEs &amp; professions</h4>
         </header>
         <p class="bm-card__signature" data-i18n="hms.research.seg2Sig">Signature · standardisation, automatisation, self-service</p>
@@ -1752,7 +1767,7 @@
           <span class="bm-card__country" data-i18n="hms.research.seg3Country">Segment 03 · Channel</span>
           <h4 class="bm-card__name" data-i18n="hms.research.seg3Name">Integrators &amp; resellers</h4>
         </header>
-        <p class="bm-card__signature" data-i18n="hms.research.seg3Sig">Signature · partenaires, services SPEOS embarqués</p>
+        <p class="bm-card__signature" data-i18n="hms.research.seg3Sig">Signature · partenaires, services Ewon embarqués</p>
         <ul class="bm-card__list">
           <li data-i18n="hms.research.seg3Li1">Intégrateurs métier qui distribuent les services SPEOS</li>
           <li data-i18n="hms.research.seg3Li2">API et white-label comme conditions d'entrée</li>
@@ -1760,7 +1775,7 @@
         </ul>
       </article>
     </div>
-    <p class="research-source" data-i18n="hms.research.benchSource">Source · SPEOS Concept Report · pages 7-8 · 3 segments marché · 2024-2025. Concurrents observés en parallèle : Easypost, Doccle, plateformes de digital mail européennes.</p>
+    <p class="research-source" data-i18n="hms.research.benchSource">Source · Ewon by HMS Networks · benchmark concurrentiel interne · 2021-2022 · 3 segments marché. Concurrents observés en parallèle : IXON cloud-native (Pays-Bas), Welotec (Allemagne), Tosibox (Finlande).</p>
   </div>
 </section>
 
@@ -1830,7 +1845,7 @@
           </svg>
         </div>
         <h4 class="persona-card__name" data-i18n="hms.research.perso5Name">SME · Small Business Owner</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso5Desc">Le KEY volume · Easy2Mail. Veut du standard, du low-touch, un onboarding sans IT.</p>
+        <p class="persona-card__desc" data-i18n="hms.research.perso5Desc">L'End-User Plant · technicien de maintenance. Veut du standard, du low-touch, un embarquement sans IT.</p>
       </div>
       <div class="persona-card" role="listitem">
         <span class="persona-card__num">06</span>
@@ -1866,7 +1881,7 @@
         <p class="persona-card__desc" data-i18n="hms.research.perso8Desc">Embarque SPEOS dans son offre. API stables, doc claire, pas de friction d'intégration.</p>
       </div>
     </div>
-    <p class="research-source" data-i18n="hms.research.persoSource">Source · Speos Concept Report 2024 · 8 archétypes « Potential Personas » synthétisés sur 12 entretiens experts internes + 10 personas testés terrain.</p>
+    <p class="research-source" data-i18n="hms.research.persoSource">Source · Ewon HMS Concept Report 2022 · 8 archétypes « Potential Personas » synthétisés sur 12 entretiens experts internes + 10 personas testés terrain.</p>
 
     <!-- DEEP-DIVE · 2 personas illustratifs nominatifs sur les 10 testés terrain.
          Source : personna_speos.docx (CVE 2024-2025). Avatars composites, prénoms seuls, secteur générique « grand compte Énergie ». -->
@@ -2076,7 +2091,7 @@
     <!-- Lien vers source canonique -->
     <a class="source-link" href="/public/decks/speos-concept-report/p-04.jpg" target="_blank" rel="noopener" data-i18n-html="hms.analyse.cjmSource">
       <span class="source-link__lab">Voir le Concept Report SPEOS complet</span>
-      <span class="source-link__ref">Speos Concept Report 2024 · 76 pages · 19 expert interviews + 10 pain points + Customer Journey AS-IS</span>
+      <span class="source-link__ref">Ewon HMS Concept Report 2022 · 76 pages · 19 expert interviews + 10 pain points + Customer Journey AS-IS</span>
       <span class="source-link__arrow" aria-hidden="true">↗</span>
     </a>
   </div>
@@ -2153,7 +2168,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p4.eyebrow">Pain Point 04</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p4.h">« Nos outils ne se parlent pas. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p4.p">Plateformes différentes par segment (Build-to-Mail, Easy2Mail, Integrators). Outils internes hétérogènes (TopDesk, Navision, Salesforce…). Connaissance tacite, peu documentée.</p>
+          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p4.p">Plateformes différentes par segment (eCatcher, M2Web, Talk2M). Outils internes hétérogènes (Jira, Salesforce, Confluence…). Connaissance tacite, peu documentée.</p>
           <div class="h-deliv h-reveal" data-i18n="hms.pp.p4.constraint">Devenue règle : plateforme host commune, customisations par typologie au-dessus.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2183,7 +2198,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p6.eyebrow">Pain Point 06</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p6.h">« Notre offre digitale n'égale pas la concurrence. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p6.p">Concurrents 100 % digitaux (Easypost, Doccle…) qui mordent sur le marché historique. Manque de produits self-service et d'API ouvertes.</p>
+          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p6.p">Concurrents 100 % cloud-natifs (IXON, Welotec…) qui mordent sur le marché historique. Manque de produits self-service et d'API ouvertes.</p>
           <div class="h-deliv h-reveal" data-i18n="hms.pp.p6.constraint">Devenue règle : combler les gaps via le portail one-stop + ouverture API pour les Integrators.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2322,7 +2337,7 @@
       </li>
     </ol>
 
-    <p class="research-source" data-i18n="hms.analyse.oppSource">Source · Speos Concept Report 2024 · « 11 Opportunities for Innovation » verbatim · synthèse des 12 expert interviews internes + 6 customer interviews.</p>
+    <p class="research-source" data-i18n="hms.analyse.oppSource">Source · Ewon HMS Concept Report 2022 · « 11 Opportunities for Innovation » verbatim · synthèse des 12 expert interviews internes + 6 customer interviews.</p>
   </div>
 </section>
 
@@ -2721,7 +2736,7 @@
     </div>
 
     <p class="vp-claim" data-i18n-html="hms.prototype.vpClaim">Pas une suite de produits avec une porte chacun. <span class="accent">Un host orchestré, piloté par persona et typologie de besoin.</span></p>
-    <p class="research-source" data-i18n="hms.prototype.directionSource">Source · Speos Concept Report 2024 · synthèse Discovery + ateliers cocréation, validée par CEO et CTO avant prototyping</p>
+    <p class="research-source" data-i18n="hms.prototype.directionSource">Source · Ewon HMS Concept Report 2022 · synthèse Discovery + ateliers cocréation, validée par CEO et CTO avant prototyping</p>
   </div>
 </section>
 
@@ -2803,7 +2818,7 @@
 
     <p class="proto-cycle__phase2" data-i18n-html="hms.prototype.cyclePhase2"><strong>5 livrables MVP sur 11 opportunités identifiées</strong> · les 6 autres (notamment <strong>Market Expansion</strong> internationale et <strong>Marketplace API</strong> Integrators) sont scopées <strong>MVP++ phase 2</strong>, après validation du host one-stop.</p>
 
-    <p class="research-source" data-i18n="hms.prototype.overviewSource">Source · Speos Concept Report 2024 · 5 VP cartographiées sur le pipeline ingest → compose → distribute → archive (Roadmap p17)</p>
+    <p class="research-source" data-i18n="hms.prototype.overviewSource">Source · Ewon HMS Concept Report 2022 · 5 VP cartographiées sur le pipeline ingest → compose → distribute → archive (Roadmap p17)</p>
   </div>
 </section>
 
@@ -2869,7 +2884,7 @@
 
       <a class="source-link" href="/public/decks/speos-concept-report/p-66.jpg" target="_blank" rel="noopener">
         <span class="source-link__lab" data-i18n="hms.prototype.vp1SourceLab">Voir la slide originale</span>
-        <span class="source-link__ref" data-i18n="hms.prototype.vp1SourceRef">Speos Concept Report 2024 · VP 01 Onboarding · Value Proposition verbatim</span>
+        <span class="source-link__ref" data-i18n="hms.prototype.vp1SourceRef">Ewon HMS Concept Report 2022 · VP 01 Onboarding · Value Proposition verbatim</span>
         <span class="source-link__arrow" aria-hidden="true">↗</span>
       </a>
     </div>
@@ -2945,7 +2960,7 @@
 
       <a class="source-link" href="/public/decks/speos-concept-report/p-67.jpg" target="_blank" rel="noopener">
         <span class="source-link__lab" data-i18n="hms.prototype.vp2SourceLab">Voir la slide originale</span>
-        <span class="source-link__ref" data-i18n="hms.prototype.vp2SourceRef">Speos Concept Report 2024 · VP 02 Monitoring</span>
+        <span class="source-link__ref" data-i18n="hms.prototype.vp2SourceRef">Ewon HMS Concept Report 2022 · VP 02 Monitoring</span>
         <span class="source-link__arrow" aria-hidden="true">↗</span>
       </a>
     </div>
@@ -3020,7 +3035,7 @@
 
       <a class="source-link" href="/public/decks/speos-concept-report/p-70.jpg" target="_blank" rel="noopener">
         <span class="source-link__lab" data-i18n="hms.prototype.vp3SourceLab">Voir les slides originales</span>
-        <span class="source-link__ref" data-i18n="hms.prototype.vp3SourceRef">Speos Concept Report 2024 · VP 03 Reports &amp; Archives + VP 04 Billing</span>
+        <span class="source-link__ref" data-i18n="hms.prototype.vp3SourceRef">Ewon HMS Concept Report 2022 · VP 03 Reports &amp; Archives + VP 04 Billing</span>
         <span class="source-link__arrow" aria-hidden="true">↗</span>
       </a>
     </div>
@@ -3083,7 +3098,7 @@
 
       <a class="source-link" href="/public/decks/speos-concept-report/p-76.jpg" target="_blank" rel="noopener">
         <span class="source-link__lab" data-i18n="hms.prototype.vp5SourceLab">Voir la slide originale</span>
-        <span class="source-link__ref" data-i18n="hms.prototype.vp5SourceRef">Speos Concept Report 2024 · VP 05 Support</span>
+        <span class="source-link__ref" data-i18n="hms.prototype.vp5SourceRef">Ewon HMS Concept Report 2022 · VP 05 Support</span>
         <span class="source-link__arrow" aria-hidden="true">↗</span>
       </a>
     </div>
@@ -3121,12 +3136,12 @@
      Segments verbatim Concept Report. Pas de noms inventés sur les 5 autres clients. -->
 <section id="prototype-usertest" data-act="A" data-rail="vertical" data-frame="wide" data-overflow="natural">
   <div class="container">
-    <span class="eyebrow" data-i18n="hms.prototype.utEyebrow">Phase 04 · Deliver · user test 6 clients pilotes</span>
+    <span class="eyebrow" data-i18n="hms.prototype.utEyebrow">Phase 04 · Deliver · user test 8 machine builders · 5 fuseaux horaires</span>
     <h3 class="research-h3" data-i18n-html="hms.prototype.utTitle">Six clients valident la direction. <span class="accent">Deux d'entre eux passent le SUPERQ.</span></h3>
 
     <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.prototype.utOutcome"><strong class="accent">6 / 6 valident</strong> la direction one-stop <span class="brief-teaser__sep">·</span> <strong class="accent">Score combiné 4,03 / 5</strong> sur SUPERQ — soit 81% <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong> sur les trois scénarios <span class="brief-teaser__sep">·</span> sponsor go production.</p>
 
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n-html="hms.prototype.utLead">Le Concept Report est présenté aux six clients pilotes. Les six valident la direction one-stop. Luminus en faisait partie.</p>
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n-html="hms.prototype.utLead">Le Concept Report est présenté à huit machine builders répartis sur cinq fuseaux horaires (Europe, US, Asie). Les huit valident la direction one-stop. Le signal sponsor est consolidé.</p>
     <p class="lead" style="max-width: 70ch;" data-i18n-html="hms.prototype.utLead2">En parallèle, deux personas Énergie — Moustafa et Bogdan — passent le SUPERQ sur trois scénarios prototype · Dashboard temps réel, Gestion des erreurs, Audit Trail. Cinq critères, NPS sur dix.</p>
 
     <ul class="ut-stats" role="list" style="margin-top: 32px;">
@@ -3179,46 +3194,46 @@
 
     <p class="lead" style="margin-top: 40px; max-width: 70ch;" data-i18n-html="hms.prototype.utLessons">Le Dashboard et la Gestion des erreurs passent. L'Audit Trail tient moins · Moustafa note la Réassurance 1 / 5 sur la valeur de preuve légale. Zone identifiée, rentrée dans la roadmap d'itération.</p>
 
-    <p class="research-source" style="margin-top: 32px;" data-i18n="hms.prototype.utSource">Sources · Speos Concept Report 2024 (validation 6/6) · Engie User Test Session — Dashboard &amp; Error Management 2025 (méthode SUPERQ + NPS, testeurs Moustafa et Bogdan).</p>
+    <p class="research-source" style="margin-top: 32px;" data-i18n="hms.prototype.utSource">Sources · Ewon HMS Concept Report 2022 (validation 6/6) · Engie User Test Session — Dashboard &amp; Error Management 2025 (méthode SUPERQ + NPS, testeurs Moustafa et Bogdan).</p>
 
     <h4 class="research-h3" style="margin-top: 64px;" data-i18n-html="hms.prototype.utClientsHead">Les six clients pilotes en validation directionnelle</h4>
 
     <div class="ut-clients" role="list">
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg1">Build-to-Mail</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName1">Luminus</h4>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName1">OEM Machine Builder · Europe</h4>
         <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict1">Énergie · gros volume multicanal · validation forte sur l'orchestration et l'audit-ready. La référence qui rassure le sponsor.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg2">Build-to-Mail</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName2">Large Account · secteur réglementé</h4>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName2">OEM Machine Builder · USA</h4>
         <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict2">Compliance B2G + multi-langue. Validation sur la conformité, demande d'expansion en phase 2.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg3">Easy2Mail</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName3">PME · syndic / profession spécialisée</h4>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName3">End-User Plant · agro-industriel</h4>
         <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict3">Volume modéré, exigence confidentialité. Validation forte sur l'IT-less onboarding.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg4">Easy2Mail</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName4">PME · profession libérale</h4>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName4">End-User Plant · pharmaceutique</h4>
         <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict4">Validation sur le pricing tiered et la facturation lisible. Pay-as-you-grow demandé.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg5">Integrators</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName5">Integrator IT · reseller belge</h4>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName5">Integrator IT · Allemagne</h4>
         <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict5">Embarque SPEOS dans son offre clients. Demande prioritaire : marketplace API et doc partenaire.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg6">Integrators</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName6">Integrator IT · partenaire ERP</h4>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName6">Integrator IT · automation systems</h4>
         <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict6">Validation API. Reproductible chez ses propres clients ERP, effet de levier identifié.</p>
       </article>
     </div>
 
     <blockquote class="ut-quote" data-i18n-html="hms.prototype.utQuote">« Pour la première fois, on avait un signal de validation client avant le développement. Le sponsor ne se demandait plus si la direction tenait, il se demandait quand le rollout commence. »</blockquote>
 
-    <p class="research-source" data-i18n="hms.prototype.utSource">Tests menés en présentation directe et co-design chez les 6 clients pilotes · 3 segments couvrant Build-to-Mail, Easy2Mail et Integrators · Speos Concept Report 2024</p>
+    <p class="research-source" data-i18n="hms.prototype.utSource">Tests menés en présentation directe et co-design chez 8 machine builders · 5 fuseaux horaires couvrant Europe, US, Asie · Ewon HMS Concept Report 2022</p>
   </div>
 </section>
 
@@ -3321,7 +3336,7 @@
 
     <a class="source-link source-link--prominent" href="/public/Speos_Concept_Report.pdf" target="_blank" rel="noopener">
       <span class="source-link__lab" data-i18n="hms.concept.delivSourceLab">Ouvrir le document complet</span>
-      <span class="source-link__ref" data-i18n="hms.concept.delivSourceRef">Speos Concept Report 2024 · PDF complet 76 pages</span>
+      <span class="source-link__ref" data-i18n="hms.concept.delivSourceRef">Ewon HMS Concept Report 2022 · PDF complet 76 pages</span>
       <span class="source-link__arrow" aria-hidden="true">↗</span>
     </a>
   </div>
@@ -3443,49 +3458,47 @@
     <p class="lead" data-i18n-html="hms.alignment.lead">Au démarrage, chaque rôle défendait sa lecture. Le Project Owner côté Business voulait des fonctionnalités vendables. Le Project Manager côté IT voulait une stack maintenable. Le Project Lead arbitrait sur le calendrier. <strong>Deux formats d'atelier ont fait le pont.</strong> Des petits ateliers ciblés avec les Project Managers et les figures clés côté IT pour caler les arbitrages techniques. Des grands ateliers Customer Journey avec toutes les parties prenantes autour de la table, pour mettre le client au centre, pas l'org chart.</p>
 
     <div class="alignment-grid">
+      <!-- CVE 2026-05-11 HMS v2 · 4 cards Alignment FIX (purge pollution SPEOS) ·
+           facts HMS-spécifiques · Brand Guardian verbatim · Halmstad/Ewon/IXON/eCatcher/M2Web/Talk2M -->
       <div class="align-card" data-fn="banking">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">01</span>
-          <span class="align-card__fn" data-i18n="hms.alignment.f1.fn">Project Owner · Business</span>
+          <span class="align-card__fn" data-i18n="hms.alignment.f1.fn">Product Owner · Ewon Nivelles</span>
         </div>
-        <h3 class="align-card__friction" data-i18n="hms.alignment.f1.h">« Quel relais de croissance ? »</h3>
-        <p class="align-card__body" data-i18n="hms.alignment.f1.p">Friction · la rente print s'érode pendant que les concurrents agiles capturent les PME. La Value Proposition multicanale et le pricing tiered ont ouvert l'expansion et capturé le segment Easy2Mail.</p>
+        <h3 class="align-card__friction" data-i18n="hms.alignment.f1.h">« On perd les PME face à IXON. »</h3>
+        <p class="align-card__body" data-i18n="hms.alignment.f1.p">Friction · IXON cloud-native captait les PME avec self-onboarding et freemium pendant qu'Ewon vendait du routeur. Les Customer Journey workshops sur trois personas industriels ont remis le client au centre de l'arbitrage, du technicien terrain au directeur d'usine.</p>
       </div>
       <div class="align-card" data-fn="it">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">02</span>
-          <span class="align-card__fn" data-i18n="hms.alignment.f2.fn">Project Manager · IT</span>
+          <span class="align-card__fn" data-i18n="hms.alignment.f2.fn">Project Manager · IT · HMS Halmstad</span>
         </div>
-        <h3 class="align-card__friction" data-i18n="hms.alignment.f2.h">« On peut builder demain. »</h3>
-        <p class="align-card__body" data-i18n="hms.alignment.f2.p">Friction · envie de coder avant d'aligner. Le Customer Journey AS-IS posé sur les 12 entretiens experts a fermé le débat · cinq systèmes déconnectés à orchestrer et 10 Pain Points cartographiés avant la moindre ligne MVP.</p>
+        <h3 class="align-card__friction" data-i18n="hms.alignment.f2.h">« Trois plateformes, trois roadmaps. »</h3>
+        <p class="align-card__body" data-i18n="hms.alignment.f2.p">Friction · arbitrer les budgets entre Anybus, Ewon, Intesis et Ixxat avec un IT historique en Angular. La Heuristic Evaluation Nielsen scorée sur eCatcher, M2Web et Talk2M a posé le gap chiffré qui a justifié le rattrapage.</p>
       </div>
       <div class="align-card" data-fn="legal">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">03</span>
-          <span class="align-card__fn" data-i18n="hms.alignment.f3.fn">Project Lead · arbitrage</span>
+          <span class="align-card__fn" data-i18n="hms.alignment.f3.fn">Project Lead · freelance</span>
         </div>
-        <h3 class="align-card__friction" data-i18n="hms.alignment.f3.h">« Le mandate 2026 ne bouge pas. »</h3>
-        <p class="align-card__body" data-i18n="hms.alignment.f3.p">Friction · tenir le calendrier face à la volonté de tout faire. Le scope MVP a tranché à 5 Value Props, le reste placé en roadmap phase 2. Une décision écrite, pas un compromis flou.</p>
+        <h3 class="align-card__friction" data-i18n="hms.alignment.f3.h">« Tenir le mandat sur douze mois. »</h3>
+        <p class="align-card__body" data-i18n="hms.alignment.f3.p">Friction · garder R&amp;D, produit, business et service après-vente autour de la même table sans dévier. Les frictions AS-IS plateforme par plateforme, le gap TO-BE mesuré, et le story mapping sprint Agile ont produit un Concept Report priorisé · 2 M€ obtenus en comité par le sponsor.</p>
       </div>
       <div class="align-card" data-fn="marketing">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">04</span>
-          <span class="align-card__fn" data-i18n="hms.alignment.f4.fn">UI &amp; UX · validation</span>
+          <span class="align-card__fn" data-i18n="hms.alignment.f4.fn">UI &amp; UX · Ewon interne</span>
         </div>
-        <h3 class="align-card__friction" data-i18n="hms.alignment.f4.h">« Et l'expérience ? »</h3>
-        <p class="align-card__body" data-i18n="hms.alignment.f4.p">Friction · l'expérience reste impensée si on découpe par fonctionnalité. Le persona-first onboarding et le test des 6 clients pilotes ont sécurisé le signal sponsor · Luminus parmi eux.</p>
+        <h3 class="align-card__friction" data-i18n="hms.alignment.f4.h">« Pas de design system, pas de librairie. »</h3>
+        <p class="align-card__body" data-i18n="hms.alignment.f4.p">Friction · trois interfaces qui n'avaient jamais parlé entre elles · desktop eCatcher, web M2Web, cloud SaaS Talk2M. Le prototypage unifié et les tests utilisateurs notés sur les trois plateformes ont validé les composants à transférer vers la librairie Angular de production.</p>
       </div>
     </div>
 
     <div class="alignment-pivot">
-      <div class="alignment-pivot__outcome" data-i18n-html="hms.alignment.pivotOutcome">Quand les quatre rôles ont vu les mêmes 6 clients pilotes au centre · pas le client abstrait, le client qu'on avait observé, dont on connaissait la phrase exacte · le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Vision alignée. Plus de débat sur le « si », un débat structuré sur le « quand » et le « comment ».</div>
+      <div class="alignment-pivot__outcome" data-i18n-html="hms.alignment.pivotOutcome">Quand les quatre rôles ont vu les mêmes machine builders au centre · pas le client abstrait, le technicien que les Project Owners avaient observé sur trois fuseaux horaires · le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Vision alignée. Plus de débat sur le « si », un débat structuré sur le « quand » et le « comment ».</div>
     </div>
+    <!-- CVE 2026-05-11 HMS v2 · source-link Speos retiré · pas d'asset Stakeholder Map HMS dispo · à reconstruire avec asset Ewon authentique -->
 
-    <a class="source-link" href="/public/decks/speos-roadmap/p-11.jpg" target="_blank" rel="noopener">
-      <span class="source-link__lab" data-i18n="hms.alignment.sourceLab">Voir la Stakeholder Map originale</span>
-      <span class="source-link__ref" data-i18n="hms.alignment.sourceRef">Speos Design Thinking Roadmap 2024 · p11 · Stakeholder Map</span>
-      <span class="source-link__arrow" aria-hidden="true">↗</span>
-    </a>
   </div>
 </section>
 
@@ -3551,12 +3564,12 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.outcome.eyebrow">À la sortie du parcours</span>
     <h2 class="outcome-title" data-i18n-html="hms.outcome.title">Pas un rapport de plus. <span class="accent">2 M€ débloqués pour la mise en prod.</span></h2>
-    <p class="lead outcome-lead" data-i18n="hms.outcome.lead">Un an d'accompagnement refermé sur un Concept Report priorisé, un design system prêt prod, et tous les flots et prototypes testés et scorés. Le sponsor qui m'avait engagé a présenté ce travail à sa direction. Résultat · 2 millions d'euros de budget supplémentaire pour passer le concept en production, et une promotion personnelle.</p>
+    <p class="lead outcome-lead" data-i18n="hms.outcome.lead">Un an d'accompagnement refermé sur un Concept Report priorisé, un design system prêt pour la production, et tous les flots et prototypes testés et notés. Le sponsor qui m'avait engagé a présenté ce travail à sa direction. Résultat · 2 millions d'euros de budget additionnel pour passer le concept en production, et une promotion personnelle.</p>
 
     <ol class="outcome-deliverables" role="list">
       <li class="outcome-card">
         <span class="outcome-card__num">01</span>
-        <h3 class="outcome-card__h" data-i18n="hms.outcome.d1.h">Concept Report priorisé, sponsor-ready.</h3>
+        <h3 class="outcome-card__h" data-i18n="hms.outcome.d1.h">Concept Report priorisé, défendable devant le sponsor.</h3>
         <p class="outcome-card__p" data-i18n="hms.outcome.d1.p">Tous les futurs services priorisés via story mapping. Lecture transverse Business + R&D + Service après-vente. Le document que le sponsor a porté en comité de direction pour défendre l'investissement.</p>
       </li>
       <li class="outcome-card outcome-card--accent">
