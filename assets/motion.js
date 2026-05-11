@@ -2240,6 +2240,134 @@
   })();
 
   /* ──────────────────────────────────────────────────────────
+     CVE 2026-05-11 · P3 Theme warmth narrative arc
+     Apple-tier · l'ambiance du case se réchauffe progressivement à mesure
+     qu'on approche de l'outcome. Subtile · radial gradient amber qui
+     monte d'opacité de 0 (intake) à 0.06 (outcome).
+     ────────────────────────────────────────────────────────── */
+  (function setupNarrativeWarmth() {
+    if (!hasST) return;
+    /* Skip si pas de section outcome (= pas un case) */
+    const outcome = document.querySelector('#outcome, .outcome');
+    const main = document.querySelector('main.case-wrap');
+    if (!outcome || !main) return;
+
+    /* Inject overlay fixed full-viewport · pointer-events none */
+    const warmth = document.createElement('div');
+    warmth.className = 'narrative-warmth';
+    warmth.setAttribute('aria-hidden', 'true');
+    Object.assign(warmth.style, {
+      position: 'fixed',
+      inset: '0',
+      pointerEvents: 'none',
+      zIndex: '1',
+      opacity: '0',
+      background: 'radial-gradient(ellipse 80% 50% at 50% 100%, color-mix(in oklab, var(--amber) 30%, transparent) 0%, transparent 70%)',
+      mixBlendMode: 'screen',
+    });
+    document.body.appendChild(warmth);
+
+    /* ScrollTrigger · animate opacity from 0 at top of case to 0.65 at outcome.
+       Le start = top de la première section après hero, end = top outcome. */
+    const firstAct = document.querySelector('section[data-act], #brief, .case-brief');
+    gsap.fromTo(warmth,
+      { opacity: 0 },
+      {
+        opacity: 0.65,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: firstAct || main,
+          start: 'top center',
+          endTrigger: outcome,
+          end: 'top center',
+          scrub: 0.8,
+        },
+      });
+  })();
+
+  /* ──────────────────────────────────────────────────────────
+     CVE 2026-05-11 · P4 Outcome cinematic reveal
+     H2 clip-path mask + 3 cards stagger depth + light pulse derrière H2.
+     ────────────────────────────────────────────────────────── */
+  (function setupOutcomeCinematic() {
+    if (!hasST) return;
+
+    const outcome = document.querySelector('#outcome, .outcome');
+    if (!outcome) return;
+
+    /* H2 cinematic mask reveal */
+    const title = outcome.querySelector('.outcome-title, .outcome__h2, h2');
+    if (title) {
+      gsap.fromTo(title,
+        { clipPath: 'inset(0 0 100% 0)', y: 24, opacity: 0 },
+        {
+          clipPath: 'inset(0 0 0% 0)', y: 0, opacity: 1,
+          duration: 1.4,
+          ease: 'expo.out',
+          scrollTrigger: {
+            trigger: title,
+            start: 'top 78%',
+            toggleActions: 'play none none reset',
+          },
+        });
+    }
+
+    /* Cards stagger avec depth (Y + scale) */
+    const cards = outcome.querySelectorAll('.outcome-card, .outcome__card');
+    if (cards.length) {
+      gsap.fromTo(cards,
+        { opacity: 0, y: 60, scale: 0.94 },
+        {
+          opacity: 1, y: 0, scale: 1,
+          duration: 1.2,
+          ease: 'expo.out',
+          stagger: 0.12,
+          scrollTrigger: {
+            trigger: cards[0],
+            start: 'top 85%',
+            toggleActions: 'play none none reset',
+          },
+        });
+    }
+
+    /* Radial light pulse derrière H2 · subtle ambient glow */
+    if (title && !title.querySelector('.outcome-pulse')) {
+      const pulse = document.createElement('div');
+      pulse.className = 'outcome-pulse';
+      Object.assign(pulse.style, {
+        position: 'absolute',
+        inset: '-40px -20% -40px -20%',
+        background: 'radial-gradient(ellipse 60% 40% at 50% 50%, color-mix(in oklab, var(--amber) 25%, transparent) 0%, transparent 70%)',
+        pointerEvents: 'none',
+        opacity: '0',
+        zIndex: '0',
+        filter: 'blur(40px)',
+      });
+      /* Wrap title in relative container if not already */
+      const titleParent = title.parentElement;
+      if (titleParent && getComputedStyle(titleParent).position === 'static') {
+        titleParent.style.position = 'relative';
+      }
+      title.style.position = 'relative';
+      title.style.zIndex = '2';
+      titleParent.insertBefore(pulse, title);
+
+      gsap.fromTo(pulse,
+        { opacity: 0, scale: 0.85 },
+        {
+          opacity: 1, scale: 1.05,
+          duration: 1.6,
+          ease: 'expo.out',
+          scrollTrigger: {
+            trigger: title,
+            start: 'top 80%',
+            toggleActions: 'play none none reset',
+          },
+        });
+    }
+  })();
+
+  /* ──────────────────────────────────────────────────────────
      Fallback: no GSAP → simple IO reveal
      ────────────────────────────────────────────────────────── */
   function fallbackIO() {
