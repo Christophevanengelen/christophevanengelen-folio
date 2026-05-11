@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Enterprise Intelligence — BNP Paribas Fortis · Case Study Service Design</title>
-<meta name="description" content="Étude de cas Service Design · la donnée transactionnelle d'une banque devient un service que les PME paient. 6 mois, 1 promesse d'achat signée par Léonidas avant le build." />
+<meta name="description" content="Étude de cas Service Design · 30 % des paiements du pays passaient par BNP. Personne ne les vendait. Six mois de cadrage amont · Léonidas a signé avant la première ligne de code." />
 <meta name="author" content="Christophe van Engelen" />
 <meta name="theme-color" content="#0a1220" />
 <meta name="color-scheme" content="dark light" />
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Christophe van Engelen" />
 <meta property="og:url" content="https://christophevanengelen.be/bnp.html" />
 <meta property="og:title" content="Enterprise Intelligence — BNP Paribas Fortis · Case Study" />
-<meta property="og:description" content="Une banque assise sur 30 % des flux carte en Belgique, incapable de vendre à ses propres PME. L'asymétrie est devenue un service que Léonidas a signé avant le build." />
+<meta property="og:description" content="30 % des paiements du pays passaient par BNP. Personne ne les vendait. Six mois de cadrage amont · Léonidas a signé avant la première ligne de code." />
 <meta property="og:image" content="https://christophevanengelen.be/public/img/og-cover.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
@@ -36,7 +36,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Enterprise Intelligence — BNP Paribas Fortis · Case Study" />
-<meta name="twitter:description" content="30 % des flux carte belges, devenus un service que Léonidas a signé. 6 mois, 1 promesse d'achat avant développement." />
+<meta name="twitter:description" content="30 % des paiements du pays passaient par BNP. Personne ne les vendait. 6 mois · Léonidas a signé avant la première ligne de code." />
 <meta name="twitter:image" content="https://christophevanengelen.be/public/img/og-cover.jpg" />
 <meta name="twitter:image:alt" content="BNP Paribas Fortis — Enterprise Intelligence, étude de cas Service Design." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -215,6 +215,20 @@
     font-size: clamp(17px, 1.45vw, 20px); line-height: 1.55;
     color: rgba(242,235,219,0.92); max-width: 58ch; margin: 0; font-weight: 300;
     text-shadow: 0 1px 16px rgba(10, 18, 32, 0.7), 0 1px 3px rgba(10, 18, 32, 0.4);
+  }
+  /* CVE 2026-05-11 BNP v2 · attribution stripe (UX Researcher reco) ·
+     ligne factuelle sous le lead · signal seniority Sophie + Marc */
+  .hcx__attribution {
+    font-family: "Manrope", sans-serif;
+    font-size: 13px; line-height: 1.5; font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(242,235,219,0.7); margin: 14px 0 0;
+    padding: 8px 12px;
+    background: rgba(10, 18, 32, 0.35);
+    border-left: 2px solid color-mix(in oklab, var(--amber) 60%, transparent);
+    backdrop-filter: blur(3px);
+    max-width: max-content;
+    text-shadow: 0 1px 8px rgba(10, 18, 32, 0.55);
   }
   .hcx__role {
     font-family: "Manrope", sans-serif;
@@ -1217,10 +1231,11 @@
         <span class="hcx__hl1" data-i18n="bnp.hero.h1.start">Enterprise</span>
         <span class="hcx__hl2" data-i18n="bnp.hero.h1.alt">Intelligence.</span>
       </h1>
-      <p class="hcx__lead" data-i18n="bnp.hero.lead">Six mois de service design upstream pour transformer une donnée transactionnelle BNP, dormante dans les serveurs, en service que des PME commerçantes acceptent de payer.</p>
+      <p class="hcx__lead" data-i18n="bnp.hero.lead">Six mois de service design en amont chez BNP Paribas Fortis. La donnée transactionnelle dormait sur les serveurs · à la sortie, des PME commerçantes acceptaient de payer pour y accéder, avant la première ligne de code.</p>
+      <p class="hcx__attribution" data-i18n="bnp.hero.attribution">Lead Service Designer · mandat direct sponsor BNPPF · juin 2018 → janvier 2019</p>
       <div class="hcx__role">
         <span class="hcx__role-label" data-i18n="bnp.hero.metaRole">Service Designer · Freelance</span>
-        <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">6 mois · cadrage stratégique upstream</span>
+        <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">6 mois · cadrage amont · stratégique</span>
       </div>
     </div>
   </div>
@@ -3211,7 +3226,7 @@
 <section id="alignment" data-act="R" data-frame="wide" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.alignment.eyebrow">Frictions stakeholders · Alignement</span>
-    <h2 data-i18n-html="bnp.alignment.h2">Comment quatre départements ont décidé de <span class="accent">porter le même bébé.</span></h2>
+    <h2 data-i18n-html="bnp.alignment.h2">Comment quatre départements ont fini par <span class="accent">défendre le même projet.</span></h2>
     <p class="lead" data-i18n="bnp.alignment.lead">Chaque fonction arrivait avec sa friction propre. Le double diamant n'a pas été qu'une méthode : c'est l'outil qui a calé chaque conversation au bon moment, sur le bon objet, avec le bon arbitrage.</p>
 
     <div class="alignment-grid">

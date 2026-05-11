@@ -125,20 +125,26 @@
     'bnp.nav.pill2': { fr: 'Pour Luminus · 2026', nl: 'Voor Luminus · 2026', en: 'For Luminus · 2026' },
 
     'bnp.hero.eyebrow': {
-      fr: 'New Business Revenue · Service Design',
-      nl: 'New Business Revenue · Service Design',
-      en: 'New Business Revenue · Service Design'
+      fr: 'Service Design · Banque · 2018 — 2019',
+      nl: 'Service Design · Bankwezen · 2018 — 2019',
+      en: 'Service Design · Banking · 2018 — 2019'
+    },
+    /* CVE 2026-05-11 BNP v2 · attribution stripe (UX Researcher reco · +10 pts Sophie) */
+    'bnp.hero.attribution': {
+      fr: 'Lead Service Designer · mandat direct sponsor BNPPF · juin 2018 → janvier 2019',
+      nl: 'Lead Service Designer · direct mandaat BNPPF-sponsor · juni 2018 → januari 2019',
+      en: 'Lead Service Designer · direct sponsor mandate BNPPF · June 2018 → January 2019'
     },
     'bnp.hero.h1.start': { fr: 'Enterprise', nl: 'Enterprise', en: 'Enterprise' },
     'bnp.hero.h1.alt': { fr: 'Intelligence.', nl: 'Intelligence.', en: 'Intelligence.' },
     'bnp.hero.lead': {
-      fr: 'Six mois de service design upstream chez BNP Paribas Fortis. La donnée transactionnelle dormait sur les serveurs · à la sortie, des PME commerçantes acceptaient de payer pour y accéder, avant même le développement.',
-      nl: 'Zes maanden upstream service design bij BNP Paribas Fortis. De transactiedata sluimerde op de servers · aan het einde wilden handelaars-kmo\'s betalen om er toegang toe te krijgen, nog vóór de ontwikkeling.',
-      en: 'Six months of upstream service design at BNP Paribas Fortis. The transactional data was sleeping on the servers · at the exit, SME merchants were willing to pay to access it, even before development.'
+      fr: 'Six mois de service design en amont chez BNP Paribas Fortis. La donnée transactionnelle dormait sur les serveurs · à la sortie, des PME commerçantes acceptaient de payer pour y accéder, avant la première ligne de code.',
+      nl: 'Zes maanden service design vooraan bij BNP Paribas Fortis. De transactiedata sluimerde op de servers · aan het einde wilden handelaars-kmo\'s betalen om er toegang toe te krijgen, nog vóór de eerste regel code.',
+      en: 'Six months of upstream service design at BNP Paribas Fortis. The transactional data was sleeping on the servers · at the exit, SME merchants were willing to pay to access it, before the first line of code.'
     },
     'bnp.hero.metaRole': { fr: 'Service Designer · Freelance', nl: 'Service Designer · Freelance', en: 'Service Designer · Freelance' },
     'bnp.hero.metaWhere': {
-      fr: '6 mois · cadrage stratégique upstream',
+      fr: '6 mois · cadrage amont · stratégique',
       nl: '6 maanden · upstream strategisch kaderwerk',
       en: '6 months · upstream strategic framing'
     },
@@ -179,7 +185,7 @@
     },
     'bnp.fin.contact.eyebrow': { fr: 'Une conversation ?', nl: 'Een gesprek?', en: 'A conversation?' },
     'bnp.fin.contact.sub': {
-      fr: 'Service designer freelance · Bruxelles · disponible pour des missions service design upstream, recherche utilisateur, atelier de cadrage.',
+      fr: 'Service designer freelance · Bruxelles · disponible pour des missions service design en amont, recherche utilisateur, atelier de cadrage.',
       nl: 'Freelance service designer · Brussel · beschikbaar voor opdrachten upstream service design, user research, scoping-workshops.',
       en: 'Freelance service designer · Brussels · available for upstream service design briefs, user research, scoping workshops.'
     },
@@ -899,7 +905,7 @@
       en: '86 pages, <span class="accent">one single call to make.</span>'
     },
     'bnp.concept.delivLead': {
-      fr: 'Tout le travail des quatre phases du Double Diamond, ramassé dans un seul document. Le Concept Report sert d\'argumentation au sponsor exécutif : pas un rapport de recherche, un dossier de décision. Il rejoue le parcours du commerçant, la matière analysée, les quatre rapports prototypés, le scope MVP arrêté en P1/P2, et ouvre directement sur la validation utilisateur.',
+      fr: 'Tout le travail des quatre phases du Double Diamond, ramassé dans un seul document. Le Concept Report sert d\'argumentation au sponsor : pas un rapport de recherche, un dossier de décision. Il rejoue le parcours du commerçant, la matière analysée, les quatre rapports prototypés, le scope MVP arrêté en P1/P2, et ouvre directement sur la validation utilisateur.',
       nl: 'Het volledige werk van de vier Double Diamond fasen, samengevat in één document. Het Concept Report dient als argumentatie voor de executive sponsor : geen onderzoeksrapport, een beslissingsdossier. Het herbespeelt het traject van de handelaar, de geanalyseerde materie, de vier geprototypeerde rapporten, de vastgelegde MVP-scope in P1/P2, en opent rechtstreeks op de gebruikersvalidatie.',
       en: 'All the work of the four Double Diamond phases, gathered in a single document. The Concept Report serves as argumentation for the executive sponsor : not a research report, a decision file. It replays the merchant journey, the analysed matter, the four prototyped reports, the MVP scope locked in P1/P2, and opens directly on user validation.'
     },
@@ -981,7 +987,7 @@
     },
 
     /* ============== CONCEPT 4.4 — Decision pack consolidé ============== */
-    'bnp.dp.eyebrow': { fr: 'Concept · Decision pack pour sponsor exécutif', nl: 'Concept · Decision pack voor executive sponsor', en: 'Concept · Decision pack for executive sponsor' },
+    'bnp.dp.eyebrow': { fr: 'Concept · Decision pack pour sponsor', nl: 'Concept · Decision pack voor executive sponsor', en: 'Concept · Decision pack for executive sponsor' },
     'bnp.dp.title': {
       fr: 'Le pack qui a <span class="accent">fait passer le projet en production.</span>',
       nl: 'Het pack dat <span class="accent">het project in productie liet gaan.</span>',
@@ -1023,7 +1029,7 @@
       en: 'Market Research (Best business location · Opportunities by industry) — out of MVP scope, identified as 2020 expansion axis toward Acquirer share 7→20%.'
     },
     'bnp.dp.source': {
-      fr: 'Decision pack présenté au sponsor exécutif · BNPPF Bank for Entrepreneurs · mars 2018 · décision : MVP en production Q2 2018',
+      fr: 'Decision pack présenté au sponsor · BNPPF Bank for Entrepreneurs · mars 2018 · décision : MVP en production Q2 2018',
       nl: 'Decision pack voorgesteld aan de executive sponsor · BNPPF Bank for Entrepreneurs · maart 2018 · beslissing: MVP in productie Q2 2018',
       en: 'Decision pack presented to the executive sponsor · BNPPF Bank for Entrepreneurs · March 2018 · decision: MVP into production Q2 2018'
     },
@@ -1587,10 +1593,11 @@
        spoilers. Le climax (Léonidas + chiffres) est réservé à la section Result.
        CVE 2026-04-30 night spec : "découvrir les choses petit à petit". */
     'bnp.brief.eyebrow': { fr: 'Le brief', nl: 'De opdracht', en: 'The brief' },
+    /* CVE 2026-05-11 BNP v2 · sujet noble, verbe sec (Brand Guardian reco) */
     'bnp.brief.title': {
-      fr: 'BNP voyait 30 % des paiements du pays.<br><span class="accent">Sans en faire un service.</span>',
-      nl: 'BNP zag 30 % van de betalingen in het land.<br><span class="accent">Zonder er een dienst van te maken.</span>',
-      en: 'BNP saw 30% of all card payments in the country.<br><span class="accent">Without turning that into a service.</span>'
+      fr: '30 % des paiements du pays passaient par BNP.<br><span class="accent">Personne ne les vendait.</span>',
+      nl: '30 % van de betalingen van het land liep via BNP.<br><span class="accent">Niemand verkocht ze.</span>',
+      en: '30% of the country\'s payments ran through BNP.<br><span class="accent">No one was selling them.</span>'
     },
     'bnp.brief.lead1': {
       fr: 'BNP traitait près de 30 % des paiements Bancontact en Belgique, soit une vue privilégiée sur les habitudes d\'achat des consommateurs. Aucun service ne valorisait cette matière auprès des commerçants qui acceptaient ces paiements.',
@@ -1602,10 +1609,11 @@
       nl: 'Sterk op de consumentenkaarten, bleef BNP weinig zichtbaar bij de kmo\'s die ze aanvaardden. Het project moest die kloof dichten met een nieuwe B2B-dienst (van de bank naar haar zakelijke klanten), zonder het bestaande vertrouwen aan te tasten.',
       en: 'Strong on the consumer card side, BNP remained little visible to the SMEs accepting them. The project had to close that gap with a new B2B service (from the bank to its business customers), without eroding the trust already in place.'
     },
+    /* CVE 2026-05-11 BNP v2 · mandat en 4 verbes secs (Brand Guardian + Content Creator) */
     'bnp.brief.lead3': {
-      fr: 'Mon mandat · piloter un parcours design thinking sur six mois, valider ou invalider l\'opportunité par le terrain, aligner quatre fonctions internes (Banking, IT, Legal, Marketing) et défendre la recommandation auprès du sponsor exécutif. Choix d\'entrée méthodologique · Lean Canvas pour cadrer l\'opportunité business avec le sponsor, puis Value Proposition Canvas pour aligner sur la voix du commerçant en atelier. Deux outils, deux moments, un même Design System.',
-      nl: 'Mijn opdracht · zes maanden lang een design thinking traject leiden, de opportuniteit op het terrein bevestigen of weerleggen, vier interne functies (Banking, IT, Legal, Marketing) op één lijn brengen en de aanbeveling verdedigen bij de executive sponsor. Methodologische instap · Lean Canvas om de business-opportuniteit met de sponsor te kaderen, daarna Value Proposition Canvas om af te stemmen op de stem van de handelaar in workshop. Twee tools, twee momenten, één Design System.',
-      en: 'My mandate · lead a six-month design thinking journey, confirm or rule out the opportunity through fieldwork, align four internal functions (Banking, IT, Legal, Marketing) and defend the recommendation to the executive sponsor. Methodological entry · Lean Canvas to frame the business opportunity with the sponsor, then Value Proposition Canvas to align on the merchant\'s voice in workshops. Two tools, two moments, one Design System.'
+      fr: 'Mon mandat tenait en quatre verbes · <strong>cadrer, tester, aligner, défendre</strong>. Six mois pour confronter l\'opportunité au terrain, mettre Banking, IT, Legal et Marketing dans la même pièce, et porter la recommandation jusqu\'au comité. Choix d\'entrée méthodologique · Lean Canvas pour cadrer l\'opportunité business avec le sponsor, puis Value Proposition Canvas pour aligner sur la voix du commerçant en atelier. Deux outils, deux moments, un même Design System.',
+      nl: 'Mijn opdracht in vier werkwoorden · <strong>kaderen, testen, aligneren, verdedigen</strong>. Zes maanden om de opportuniteit aan het terrein te toetsen, Banking, IT, Legal en Marketing in dezelfde ruimte te zetten, en de aanbeveling tot in het comité te dragen. Methodologische instap · Lean Canvas om de business-opportuniteit met de sponsor te kaderen, daarna Value Proposition Canvas om af te stemmen op de stem van de handelaar in workshop. Twee tools, twee momenten, één Design System.',
+      en: 'My mandate held in four verbs · <strong>frame, test, align, defend</strong>. Six months to confront the opportunity with the field, get Banking, IT, Legal and Marketing in the same room, and carry the recommendation up to the steering committee. Methodological entry · Lean Canvas to frame the business opportunity with the sponsor, then Value Proposition Canvas to align on the merchant\'s voice in workshops. Two tools, two moments, one Design System.'
     },
     'bnp.brief.sizing': {
       fr: '6 mois <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> 6 PME terrain <span class="dot">·</span> Service Designer freelance',
@@ -2211,9 +2219,9 @@
       en: 'Stakeholder frictions · Alignment'
     },
     'bnp.alignment.h2': {
-      fr: 'Comment quatre départements ont fini par <span class="accent">porter le même bébé.</span>',
-      nl: 'Hoe vier afdelingen uiteindelijk <span class="accent">dezelfde baby droegen.</span>',
-      en: 'How four departments ended up <span class="accent">carrying the same baby.</span>'
+      fr: 'Comment quatre départements ont fini par <span class="accent">défendre le même projet.</span>',
+      nl: 'Hoe vier afdelingen uiteindelijk <span class="accent">hetzelfde project verdedigden.</span>',
+      en: 'How four departments ended up <span class="accent">defending the same project.</span>'
     },
     'bnp.alignment.lead': {
       fr: 'Chaque fonction arrivait avec sa friction propre. Le Double Diamant a servi à caler chaque conversation au moment où elle pouvait être tenue · pas avant, pas après. Le scope MVP a été arrêté au commerçant solo · la donnée tout-boîte (campagnes marketing) a été placée hors MVP, à la demande du sponsor, pour sécuriser un premier signal commercial avant d\'élargir.',
@@ -2317,9 +2325,9 @@
       en: 'Not an intention. <span class="accent">A written commercial signal.</span>'
     },
     'bnp.outcome.lead': {
-      fr: 'Six mois de service design upstream refermés sur une promesse d\'achat ferme, signée avant le développement. Pas un usability test poli, pas un oui de principe en interview. Une intention écrite, datée, sur le bureau du sponsor exécutif.',
-      nl: 'Zes maanden upstream service design afgesloten met een vaste aankoopbelofte, getekend vóór de ontwikkeling. Geen beleefde usability test, geen ja-in-principe in een interview. Een geschreven intentie, gedateerd, op het bureau van de executive sponsor.',
-      en: 'Six months of upstream service design closed on a firm purchase commitment, signed before development. Not a polite usability test, not a yes-in-principle from an interview. A written intent, dated, on the executive sponsor\'s desk.'
+      fr: 'Six mois de cadrage amont refermés sur une promesse d\'achat ferme, signée avant la première ligne de code. Pas un usability test poli, pas un oui de principe en interview. Une intention écrite, datée, sur le bureau du sponsor.',
+      nl: 'Zes maanden voorafgaand kaderwerk afgesloten met een vaste aankoopbelofte, getekend vóór de eerste regel code. Geen beleefde usability test, geen ja-in-principe in een interview. Een geschreven intentie, gedateerd, op het bureau van de sponsor.',
+      en: 'Six months of upstream framing closed on a firm purchase commitment, signed before the first line of code. Not a polite usability test, not a yes-in-principle from an interview. A written intent, dated, on the sponsor\'s desk.'
     },
     'bnp.outcome.d1.h': { fr: 'Concept Report signé',     nl: 'Concept Report ondertekend', en: 'Concept Report signed' },
     'bnp.outcome.d1.p': {
@@ -2496,7 +2504,7 @@
       en: 'Three things,<br>upfront.'
     },
     'luminus.need.li1': {
-      fr: 'Un sponsor exécutif identifié dès la semaine 1. Sans lui, le dossier de décision de la semaine 12 reste sur une étagère.',
+      fr: 'Un sponsor identifié dès la semaine 1. Sans lui, le dossier de décision de la semaine 12 reste sur une étagère.',
       nl: 'Een geïdentificeerde executive sponsor vanaf week 1. Zonder hem blijft het beslissingsdocument van week 12 op een plank liggen.',
       en: 'An executive sponsor identified from week 1. Without one, the week-12 decision pack stays on a shelf.'
     },
@@ -2956,7 +2964,7 @@
        paramètres clairs (réponse 24h, premier call gratuit, sans engagement) ·
        boost conversion freelance +30-50% selon benchmarks. */
     'home.contactNote': {
-      fr: 'Je réponds en 24h ouvrées. Premier call 30 min, gratuit, sans engagement, pour qualifier votre besoin. Disponible pour des missions service design upstream, recherche utilisateur, ateliers d\'alignement Business / IT à Bruxelles et en remote.',
+      fr: 'Je réponds en 24h ouvrées. Premier call 30 min, gratuit, sans engagement, pour qualifier votre besoin. Disponible pour des missions service design en amont, recherche utilisateur, ateliers d\'alignement Business / IT à Bruxelles et en remote.',
       nl: 'Ik antwoord binnen 24u (werkdagen). Eerste call 30 min, gratis, zonder verbintenis, om uw behoefte te kwalificeren. Beschikbaar voor opdrachten upstream service design, gebruikersonderzoek, alignment workshops Business / IT in Brussel en remote.',
       en: 'I reply within 24h on business days. First call 30 min, free, no commitment, to qualify your need. Available for upstream service design assignments, user research, Business / IT alignment workshops in Brussels and remote.'
     },

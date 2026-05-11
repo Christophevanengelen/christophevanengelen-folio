@@ -216,6 +216,20 @@
     color: rgba(242,235,219,0.92); max-width: 58ch; margin: 0; font-weight: 300;
     text-shadow: 0 1px 16px rgba(10, 18, 32, 0.7), 0 1px 3px rgba(10, 18, 32, 0.4);
   }
+  /* CVE 2026-05-11 BNP v2 · attribution stripe (UX Researcher reco) ·
+     ligne factuelle sous le lead · signal seniority Sophie + Marc */
+  .hcx__attribution {
+    font-family: "Manrope", sans-serif;
+    font-size: 13px; line-height: 1.5; font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(242,235,219,0.7); margin: 14px 0 0;
+    padding: 8px 12px;
+    background: rgba(10, 18, 32, 0.35);
+    border-left: 2px solid color-mix(in oklab, var(--amber) 60%, transparent);
+    backdrop-filter: blur(3px);
+    max-width: max-content;
+    text-shadow: 0 1px 8px rgba(10, 18, 32, 0.55);
+  }
   .hcx__role {
     font-family: "Manrope", sans-serif;
     border-left: 2px solid var(--amber); padding-left: 18px;
@@ -1212,12 +1226,13 @@
       <span data-i18n="bnp.hero.location">Brussels</span>
     </div>
     <div class="hcx__head">
-      <span class="hcx__eyebrow" data-i18n="bnp.hero.eyebrow">New Business Revenue · Service Design</span>
+      <span class="hcx__eyebrow" data-i18n="bnp.hero.eyebrow">Service Design · Banking · 2018 — 2019</span>
       <h1 class="hcx__h1">
         <span class="hcx__hl1" data-i18n="bnp.hero.h1.start">Enterprise</span>
         <span class="hcx__hl2" data-i18n="bnp.hero.h1.alt">Intelligence.</span>
       </h1>
-      <p class="hcx__lead" data-i18n="bnp.hero.lead">Six months of upstream service design at BNP Paribas Fortis. The transactional data was sleeping on the servers · at the exit, SME merchants were willing to pay to access it, even before development.</p>
+      <p class="hcx__lead" data-i18n="bnp.hero.lead">Six months of upstream service design at BNP Paribas Fortis. The transactional data was sleeping on the servers · at the exit, SME merchants were willing to pay to access it, before the first line of code.</p>
+      <p class="hcx__attribution" data-i18n="bnp.hero.attribution">Lead Service Designer · direct sponsor mandate BNPPF · June 2018 → January 2019</p>
       <div class="hcx__role">
         <span class="hcx__role-label" data-i18n="bnp.hero.metaRole">Service Designer · Freelance</span>
         <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">6 months · upstream strategic framing</span>
@@ -1236,10 +1251,10 @@
 <section id="brief" data-act="S" data-frame="narrow" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.brief.eyebrow">The brief</span>
-    <h2 data-i18n-html="bnp.brief.title">BNP saw 30% of all card payments in the country.<br><span class="accent">Without turning that into a service.</span></h2>
+    <h2 data-i18n-html="bnp.brief.title">30% of the country's payments ran through BNP.<br><span class="accent">No one was selling them.</span></h2>
     <p class="lead" style="margin-top: 22px; max-width: 70ch;" data-i18n="bnp.brief.lead1">BNP processed close to 30% of all Bancontact payments in Belgium, an unmatched view of consumer purchasing behaviour. No service was turning that data into value for the merchants accepting those payments.</p>
     <p class="lead" style="max-width: 70ch;" data-i18n="bnp.brief.lead2">Strong on the consumer card side, BNP remained little visible to the SMEs accepting them. The project had to close that gap with a new B2B service (from the bank to its business customers), without eroding the trust already in place.</p>
-    <p class="lead" style="max-width: 70ch;" data-i18n="bnp.brief.lead3">My mandate · lead a six-month design thinking journey, confirm or rule out the opportunity through fieldwork, align four internal functions (Banking, IT, Legal, Marketing) and defend the recommendation to the executive sponsor. Methodological entry · Lean Canvas to frame the business opportunity with the sponsor, then Value Proposition Canvas to align on the merchant's voice in workshops. Two tools, two moments, one Design System.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n="bnp.brief.lead3">My mandate held in four verbs · <strong>frame, test, align, defend</strong>. Six months to confront the opportunity with the field, get Banking, IT, Legal and Marketing in the same room, and carry the recommendation up to the steering committee. Methodological entry · Lean Canvas to frame the business opportunity with the sponsor, then Value Proposition Canvas to align on the merchant's voice in workshops. Two tools, two moments, one Design System.</p>
     <p class="glance-sizing" data-i18n-html="bnp.brief.sizing">6 months <span class="dot">·</span> 4 internal functions <span class="dot">·</span> 6 SMEs on the ground <span class="dot">·</span> freelance Service Designer</p>
 
     <!-- TEASER OUTCOME · CVE 2026-05-03 v9 · UX audit recommend : remonter le climax
@@ -3187,7 +3202,7 @@
 <section id="alignment" data-act="R" data-frame="wide" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.alignment.eyebrow">Stakeholder frictions · Alignment</span>
-    <h2 data-i18n-html="bnp.alignment.h2">How four departments ended up <span class="accent">carrying the same baby.</span></h2>
+    <h2 data-i18n-html="bnp.alignment.h2">How four departments ended up <span class="accent">defending the same project.</span></h2>
     <p class="lead" data-i18n="bnp.alignment.lead">Each function showed up with its own friction. The Double Diamond served to place each conversation at the moment it could be held · not earlier, not later. The MVP scope was locked on the solo merchant · the all-in-one data (marketing campaigns) was placed out of MVP, at the sponsor's request, to secure a first commercial signal before broadening.</p>
 
     <div class="alignment-grid">
@@ -3300,7 +3315,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.outcome.eyebrow">At the close of the journey</span>
     <h2 class="outcome-title" data-i18n-html="bnp.outcome.title">Not an intention. <span class="accent">A written commercial signal.</span></h2>
-    <p class="lead outcome-lead" data-i18n="bnp.outcome.lead">Six months of upstream service design closed on a firm purchase commitment, signed before development. Not a polite usability test, not a yes-in-principle from an interview. A written intent, dated, on the executive sponsor's desk.</p>
+    <p class="lead outcome-lead" data-i18n="bnp.outcome.lead">Six months of upstream framing closed on a firm purchase commitment, signed before the first line of code. Not a polite usability test, not a yes-in-principle from an interview. A written intent, dated, on the sponsor's desk.</p>
 
     <ol class="outcome-deliverables" role="list">
       <li class="outcome-card">
