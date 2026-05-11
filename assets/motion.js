@@ -911,6 +911,51 @@
      à mesure que la section entre dans le viewport. Inspiration Apple
      MacBook Pro · scènes cinématiques au scroll.
      ════════════════════════════════════════════════════════════════════════ */
+  /* SPEOS VP horizontal pinned panels · CVE 2026-05-11 · Apple iPad-pro style.
+     La section pin le viewport, les cards défilent latéralement quand
+     le user scrolle verticalement. Activé seulement sur desktop wide (>900px)
+     pour préserver l'experience scroll-snap mobile native. */
+  const vpShowcase = document.querySelector('.vp-showcase__pinwrap');
+  const vpRail = document.querySelector('.vp-showcase__rail');
+  if (vpShowcase && vpRail && window.matchMedia('(min-width: 900px) and (pointer: fine)').matches) {
+    /* Disable horizontal scroll-snap fallback, switch to GSAP-driven */
+    vpRail.classList.add('is-pinned');
+    const totalScrollX = () => vpRail.scrollWidth - window.innerWidth + 80;
+    gsap.to(vpRail, {
+      x: () => -totalScrollX(),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: vpShowcase,
+        start: 'top top+=80',
+        end: () => '+=' + (totalScrollX() + 200),
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      },
+    });
+  }
+
+  /* Image mask on scroll · CVE 2026-05-11 · pour [data-mask-reveal] · l'image
+     se révèle via un clip-path qui s'ouvre du milieu vers les bords. */
+  document.querySelectorAll('[data-mask-reveal]').forEach((el) => {
+    gsap.set(el, {
+      clipPath: 'polygon(48% 12%, 52% 12%, 52% 88%, 48% 88%)',
+      willChange: 'clip-path',
+    });
+    gsap.to(el, {
+      clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+      ease: 'power2.inOut',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        end: 'top 25%',
+        scrub: 1.2,
+        invalidateOnRefresh: true,
+      },
+    });
+  });
+
   /* macOS Dock effect · CVE 2026-05-11 · trust strip logos scale based on
      cursor proximity. Inspired by Apple macOS Dock. Logos within 120px of
      cursor scale up · the closer, the bigger (max 1.45 at 0px, 1.0 at 120px+).

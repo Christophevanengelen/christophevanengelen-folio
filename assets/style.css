@@ -9896,3 +9896,188 @@ body.home {
 
 /* Typewriter · les chars sont des spans inline-block, hidden initially */
 [data-typewriter] span { will-change: opacity, transform; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   SPEOS VP SHOWCASE · CVE 2026-05-11 · horizontal pinned panels (Apple)
+   La section pin le viewport pendant que les 4 cards défilent latéralement.
+   Pattern Apple Keyboard iPad Pro · scroll vertical = défile horizontal.
+   ════════════════════════════════════════════════════════════════════════ */
+.vp-showcase {
+  padding-block: clamp(80px, 12vh, 140px) 0;
+}
+.vp-showcase__title {
+  font-family: var(--display);
+  font-weight: 200;
+  font-size: clamp(40px, 5.5vw, 80px);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0 0 24px;
+  color: var(--fg);
+}
+.vp-showcase__title .accent { color: var(--amber); font-weight: 600; }
+.vp-showcase__lead {
+  max-width: 64ch;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0 0 56px;
+}
+.vp-showcase__pinwrap {
+  position: relative;
+  overflow: hidden;
+}
+.vp-showcase__rail {
+  display: flex;
+  gap: clamp(20px, 2vw, 40px);
+  padding: 24px clamp(24px, 4vw, 64px) 60px;
+  list-style: none;
+  margin: 0;
+  /* Fallback non-pinned · horizontal scroll-snap */
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding: clamp(24px, 4vw, 64px);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--amber) 30%, transparent) transparent;
+}
+.vp-showcase__rail.is-pinned {
+  overflow: visible;
+  scroll-snap-type: none;
+}
+.vp-showcase__rail::-webkit-scrollbar { height: 6px; }
+.vp-showcase__rail::-webkit-scrollbar-track { background: transparent; }
+.vp-showcase__rail::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--amber) 30%, transparent);
+  border-radius: 3px;
+}
+.vp-showcase__card {
+  flex: 0 0 clamp(300px, 28vw, 460px);
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: clamp(28px, 3vw, 44px);
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--amber) 6%, var(--bg-2)) 0%,
+    var(--bg-2) 100%);
+  border: 1px solid color-mix(in srgb, var(--amber) 18%, transparent);
+  border-radius: 20px;
+  box-shadow: 0 24px 64px rgba(10,18,32,0.35), 0 4px 12px rgba(10,18,32,0.18);
+  position: relative;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1), box-shadow 0.5s;
+  min-height: 340px;
+}
+.vp-showcase__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 80px rgba(10,18,32,0.45), 0 6px 16px rgba(10,18,32,0.25);
+}
+.vp-showcase__num {
+  font-family: var(--display);
+  font-weight: 200;
+  font-size: clamp(48px, 4.5vw, 72px);
+  letter-spacing: -0.04em;
+  color: var(--amber);
+  opacity: 0.85;
+  line-height: 1;
+}
+.vp-showcase__cardtitle {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(24px, 2.2vw, 32px);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--fg);
+  margin: 0;
+}
+.vp-showcase__feature {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0;
+}
+.vp-showcase__tag {
+  position: absolute;
+  top: 20px; right: 20px;
+  padding: 6px 12px;
+  background: rgba(10,18,32,0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 99px;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
+}
+.vp-showcase__link {
+  margin-top: auto;
+  align-self: flex-start;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  text-decoration: none;
+  border: 0;
+  padding-top: 12px;
+}
+.vp-showcase__link:hover { color: var(--amber-deep, var(--amber)); }
+.vp-showcase__card--final {
+  border-color: color-mix(in srgb, var(--amber) 45%, transparent);
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--amber) 12%, var(--bg-2)) 0%,
+    var(--bg-2) 100%);
+}
+@media (max-width: 600px) {
+  .vp-showcase__card { flex-basis: 84vw; min-height: auto; }
+  .vp-showcase__rail { padding: 16px 20px 40px; gap: 16px; }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   IMAGE MASK ON SCROLL · CVE 2026-05-11 · reveal clip-path animé
+   Targets · [data-mask-reveal] · l'image se découvre via un clip-path
+   qui s'ouvre de 50% à 0% au scroll. Premium feel.
+   ════════════════════════════════════════════════════════════════════════ */
+[data-mask-reveal] {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  will-change: clip-path;
+}
+[data-mask-reveal] img,
+[data-mask-reveal] video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* HMS Ambiance · workshop team photo en mask-reveal · spacer narratif */
+.hms-ambiance { padding-block: clamp(60px, 8vh, 100px); }
+.hms-ambiance__figure {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(10,18,32,0.35);
+}
+.hms-ambiance__figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 35%;
+}
+.hms-ambiance__caption {
+  margin-top: 20px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(15px, 1.1vw, 17px);
+  color: var(--fg-soft);
+  max-width: 60ch;
+}
