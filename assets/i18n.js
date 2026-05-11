@@ -2602,9 +2602,9 @@
     'case.hms.cta': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
 
     'footer.copy': {
-      fr: '© Christophe van Engelen, 2026. Artefacts originaux © Speos / bpostgroup 2024-2025.',
-      nl: '© Christophe van Engelen, 2026. Originele artefacten © Speos / bpostgroup 2024-2025.',
-      en: '© Christophe van Engelen, 2026. Original artefacts © Speos / bpostgroup 2024-2025.'
+      fr: '© Christophe van Engelen, 2026. Artefacts originaux © clients respectifs.',
+      nl: '© Christophe van Engelen, 2026. Originele artefacten © respectievelijke klanten.',
+      en: '© Christophe van Engelen, 2026. Original artefacts © respective clients.'
     },
     'footer.forContext': {
       fr: 'Pour Luminus · entretien Service Designer · avril–mai 2026',
