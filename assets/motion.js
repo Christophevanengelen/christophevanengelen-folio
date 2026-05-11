@@ -911,6 +911,67 @@
      à mesure que la section entre dans le viewport. Inspiration Apple
      MacBook Pro · scènes cinématiques au scroll.
      ════════════════════════════════════════════════════════════════════════ */
+  /* macOS Dock effect · CVE 2026-05-11 · trust strip logos scale based on
+     cursor proximity. Inspired by Apple macOS Dock. Logos within 120px of
+     cursor scale up · the closer, the bigger (max 1.45 at 0px, 1.0 at 120px+).
+     Disabled on touch devices. */
+  const dockList = document.querySelector('.home-trust__list--logos');
+  if (dockList && !window.matchMedia('(pointer: coarse)').matches) {
+    const items = dockList.querySelectorAll('.home-trust__item--logo');
+    const MAX_SCALE = 1.45;
+    const RADIUS = 140;
+    dockList.addEventListener('pointermove', (e) => {
+      items.forEach((item) => {
+        const r = item.getBoundingClientRect();
+        const cx = r.left + r.width / 2;
+        const cy = r.top + r.height / 2;
+        const dx = e.clientX - cx;
+        const dy = e.clientY - cy;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const t = Math.max(0, 1 - dist / RADIUS);
+        const scale = 1 + (MAX_SCALE - 1) * t;
+        gsap.to(item, { scale, duration: 0.35, ease: 'power2.out', overwrite: 'auto' });
+      });
+    });
+    dockList.addEventListener('pointerleave', () => {
+      gsap.to(items, { scale: 1, duration: 0.5, ease: 'power2.out' });
+    });
+  }
+
+  /* Typewriter reveal · CVE 2026-05-11 · pour les éléments [data-typewriter]
+     · découpe en chars et reveal letter-by-letter au scroll. Pattern Apple
+     pour les quotes/testimonials et grandes accroches. */
+  document.querySelectorAll('[data-typewriter]').forEach((el) => {
+    const text = el.textContent.trim();
+    el.textContent = '';
+    el.style.minHeight = '1.5em';
+    const frag = document.createDocumentFragment();
+    const spans = [];
+    for (const ch of text) {
+      const span = document.createElement('span');
+      span.textContent = ch;
+      span.style.opacity = '0';
+      span.style.display = 'inline-block';
+      span.style.transform = 'translateY(6px)';
+      if (ch === ' ') span.style.width = '0.28em';
+      frag.appendChild(span);
+      spans.push(span);
+    }
+    el.appendChild(frag);
+    gsap.to(spans, {
+      opacity: 1,
+      y: 0,
+      duration: 0.4,
+      stagger: 0.018,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        toggleActions: 'play none none reset',
+      },
+    });
+  });
+
   /* Apple-style count-up · les chiffres marqués [data-countup] s'incrémentent
      de 0 jusqu'à leur valeur finale quand ils entrent dans le viewport.
      Pattern · climax punch sur les stats des cases (€2M, 76 pages, 6 PME). */
