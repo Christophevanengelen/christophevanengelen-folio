@@ -2933,6 +2933,26 @@
       en: 'Sponsor names and contacts shared on request to recruiter or client.'
     },
 
+    /* CVE 2026-05-12 · Newsletter · 1 mail/mois, Substack-backed */
+    'home.nlEyebrow': { fr: 'Newsletter', nl: 'Nieuwsbrief', en: 'Newsletter' },
+    'home.nlH2': {
+      fr: 'Un mail par mois. Pas plus.',
+      nl: 'Eén mail per maand. Niet meer.',
+      en: 'One email a month. No more.'
+    },
+    'home.nlLead': {
+      fr: 'Les arbitrages Service Design qui ont marché, racontés courts. Lecture 5 minutes. Pas de pub, pas de relance.',
+      nl: 'De Service Design-afwegingen die werkten, kort verteld. 5 minuten lezen. Geen reclame, geen reminders.',
+      en: 'The Service Design trade-offs that worked, told short. 5-minute read. No ads, no follow-ups.'
+    },
+    'home.nlEmailLabel': { fr: 'Votre email', nl: 'Je e-mail', en: 'Your email' },
+    'home.nlBtn': { fr: 'Recevoir', nl: 'Ontvangen', en: 'Subscribe' },
+    'home.nlHint': {
+      fr: 'Désabonnement en un clic, jamais de spam.',
+      nl: 'Uitschrijven in één klik, nooit spam.',
+      en: 'One-click unsubscribe, never spam.'
+    },
+
     'home.contactEyebrow': { fr: 'Contact', nl: 'Contact', en: 'Contact' },
     'home.contactH2': { fr: 'Pour parler d\'un projet.', nl: 'Om over een project te praten.', en: 'To talk about a project.' },
     /* CVE 2026-05-11 audit action #3 · Cal.com primary CTA */

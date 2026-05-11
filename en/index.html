@@ -884,6 +884,37 @@
   </div>
 </section>
 
+<!-- CVE 2026-05-12 · Newsletter · capture email simple, élégant ·
+     POST vers Substack pour validation · CVE doit créer compte Substack
+     christophevanengelen.substack.com (5 min) pour activer. -->
+<section id="newsletter" class="home-newsletter" data-frame="narrow" data-overflow="natural">
+  <div class="container">
+    <span class="eyebrow" data-i18n="home.nlEyebrow">Newsletter</span>
+    <h2 class="home-newsletter__h2" data-i18n="home.nlH2">One email a month. No more.</h2>
+    <p class="home-newsletter__lead" data-i18n="home.nlLead">The Service Design trade-offs that worked, told short. 5-minute read. No ads, no follow-ups.</p>
+
+    <form class="home-newsletter__form"
+          action="https://christophevanengelen.substack.com/subscribe"
+          method="post"
+          target="_blank"
+          rel="noopener"
+          data-event="nl-subscribe">
+      <label class="home-newsletter__label" for="nl-email" data-i18n="home.nlEmailLabel">Your email</label>
+      <div class="home-newsletter__row">
+        <input class="home-newsletter__input"
+               type="email"
+               id="nl-email"
+               name="email"
+               required
+               placeholder="prenom@entreprise.be"
+               autocomplete="email" />
+        <button class="home-newsletter__btn" type="submit" data-i18n="home.nlBtn">Subscribe</button>
+      </div>
+      <p class="home-newsletter__hint" data-i18n="home.nlHint">One-click unsubscribe, never spam.</p>
+    </form>
+  </div>
+</section>
+
 <!-- CONTACT · CVE 2026-05-11 audit action #3 · primary CTA = Premier call (Cal.com) ·
      friction-removal · le client réserve sans email. Secondaires : mail, phone, LinkedIn. -->
 <section id="contact" class="home-contact" data-frame="narrow" data-overflow="natural">
