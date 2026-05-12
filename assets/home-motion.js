@@ -149,12 +149,21 @@
     /* Timeline · cinematic intro avec gsap.from (rend visible par défaut si crash) */
     const tl = gsap.timeline({ delay: 0.1, defaults: { ease: APPLE_EASE } });
 
-    /* Portrait · fade-in pur, smooth & classique
-       · pas de brightness, pas de scale qui clash
-       · l'image apparaît, point. */
+    /* Portrait · cinema focus pull
+       · La caméra glisse sur le sujet, ajuste son focus, le révèle.
+       · blur 10px → 0 (focus settle, sans clash de luminance)
+       · scale 1.02 → 1 (zoom subtil qui se pose)
+       · xPercent -2 → 0 (drift latéral, tracking shot)
+       · 1.8s, easing expo.out depuis le timeline default.
+       Inspiration · focus pull cinematographique. Rare sur le web,
+       signale le craft sans tomber dans le fade banal. */
     if (heroPortraitImg) {
       tl.from(heroPortraitImg, {
         opacity: 0,
+        filter: 'blur(10px)',
+        scale: 1.02,
+        xPercent: -2,
+        transformOrigin: 'center bottom',
         duration: 1.8,
       }, 0);
     }
