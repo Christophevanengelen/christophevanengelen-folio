@@ -8285,6 +8285,7 @@ select:focus-visible {
 .home-trust__item--logo[data-brand="hms"] img        { max-height: 56px; } /* 1.72:1 squarish → boost */
 .home-trust__item--logo[data-brand="digitas"] img    { max-height: 60px; } /* 1.23:1 near-square → boost */
 .home-trust__item--logo[data-brand="wejustice"] img  { max-height: 34px; } /* 4.37:1 wide */
+.home-trust__item--logo[data-brand="ouestce"] img    { max-height: 40px; } /* 3.71:1 mid-wide, mark + wordmark */
 
 @media (max-width: 600px) {
   .home-trust__list { gap: 24px 28px; }
@@ -8295,6 +8296,7 @@ select:focus-visible {
   .home-trust__item--logo[data-brand="hms"] img        { max-height: 38px; }
   .home-trust__item--logo[data-brand="digitas"] img    { max-height: 42px; }
   .home-trust__item--logo[data-brand="wejustice"] img  { max-height: 22px; }
+  .home-trust__item--logo[data-brand="ouestce"] img    { max-height: 26px; }
 }
 
 /* CVE 2026-05-04 S3.4 · mini-CTA conversion entre Cases et Practice ·
