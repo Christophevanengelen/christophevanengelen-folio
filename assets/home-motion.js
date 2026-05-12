@@ -149,11 +149,13 @@
     /* Timeline · cinematic intro avec gsap.from (rend visible par défaut si crash) */
     const tl = gsap.timeline({ delay: 0.1, defaults: { ease: APPLE_EASE } });
 
-    /* Portrait · zoom-out + brightness up · Apple-feel */
+    /* Portrait · fade-in pur, smooth & classique
+       · pas de brightness, pas de scale qui clash
+       · l'image apparaît, point. */
     if (heroPortraitImg) {
       tl.from(heroPortraitImg, {
-        opacity: 0, scale: 1.06, filter: 'brightness(0.85)',
-        duration: 1.6,
+        opacity: 0,
+        duration: 1.8,
       }, 0);
     }
 
