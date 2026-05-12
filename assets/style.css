@@ -8287,7 +8287,10 @@ select:focus-visible {
   align-items: center;
   justify-content: center;
   line-height: 0;
-  /* height retiré · laisse l'img calibrer */
+  /* height réservée · évite le collapse à 0 si lazy-load pas encore
+     déclenché ou si SVG pas encore parsé. Cap supérieur cohérent avec
+     les max-height per-brand (32-38px). */
+  height: 40px;
 }
 .home-trust__item--logo img {
   display: block;
