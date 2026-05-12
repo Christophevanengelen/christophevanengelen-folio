@@ -9516,6 +9516,23 @@ select:focus-visible {
   margin: 12px 0 0;
   opacity: 0.8;
 }
+/* Status message feedback · révélé après submit fetch · succès/erreur */
+.home-newsletter__status {
+  font-family: var(--sans);
+  font-size: 14px;
+  margin: 16px 0 0;
+  min-height: 1.4em;
+  transition: color 200ms ease, opacity 200ms ease;
+}
+.home-newsletter__status:empty { opacity: 0; }
+.home-newsletter__status.is-success {
+  color: #6BCB77; /* vert calme · ton dark UI */
+  font-weight: 500;
+}
+.home-newsletter__status.is-error {
+  color: #E27D60; /* coral · prévient sans alarmer */
+  font-weight: 500;
+}
 
 /* HOME CONTACT · sobre · email + linkedin · pas de bouton vendeur */
 .home-contact {

@@ -973,9 +973,11 @@
   </div>
 </section>
 
-<!-- CVE 2026-05-12 · Newsletter · capture email simple, élégant ·
-     POST vers Substack pour validation · CVE doit créer compte Substack
-     christophevanengelen.substack.com (5 min) pour activer. -->
+<!-- CVE 2026-05-12 · Newsletter end-to-end ·
+     Form POST vers Formsubmit.co (forwarder mail anonyme, free, sans compte)
+     → first submission déclenche email d'activation à hello@christophevanengelen.com
+     → après confirmation 1-clic, toutes les inscriptions arrivent dans la inbox
+     → côté UX, soumission via fetch() + message de succès inline (pas de redirect). -->
 <section id="newsletter" class="home-newsletter" data-frame="narrow" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="home.nlEyebrow">Newsletter</span>
@@ -983,11 +985,18 @@
     <p class="home-newsletter__lead" data-i18n="home.nlLead">Les arbitrages Service Design qui ont marché, racontés courts. Lecture 5 minutes. Pas de pub, pas de relance.</p>
 
     <form class="home-newsletter__form"
-          action="https://christophevanengelen.substack.com/subscribe"
+          action="https://formsubmit.co/ajax/hello@christophevanengelen.com"
           method="post"
-          target="_blank"
-          rel="noopener"
-          data-event="nl-subscribe">
+          data-event="nl-subscribe"
+          id="nl-form">
+      <!-- Formsubmit options · pas de captcha (le honeypot suffit), email
+           template "table" pour rendu propre, subject explicite. -->
+      <input type="hidden" name="_subject" value="Nouvelle inscription newsletter folio">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Honeypot anti-bot · field caché, si rempli, formsubmit drop -->
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
       <label class="home-newsletter__label" for="nl-email" data-i18n="home.nlEmailLabel">Votre email</label>
       <div class="home-newsletter__row">
         <input class="home-newsletter__input"
@@ -1000,9 +1009,77 @@
         <button class="home-newsletter__btn" type="submit" data-i18n="home.nlBtn">Recevoir</button>
       </div>
       <p class="home-newsletter__hint" data-i18n="home.nlHint">Désabonnement en un clic, jamais de spam.</p>
+      <!-- Message de feedback inline · révélé par JS au submit -->
+      <p class="home-newsletter__status" id="nl-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
+
+<!-- Newsletter form handler · soumission AJAX vers Formsubmit, feedback inline -->
+<script>
+(function setupNewsletter() {
+  const form = document.getElementById('nl-form');
+  if (!form) return;
+  const status = document.getElementById('nl-status');
+  const btn = form.querySelector('.home-newsletter__btn');
+  const input = form.querySelector('.home-newsletter__input');
+
+  /* i18n labels selon langue active (fr par défaut) */
+  function getLang() { return document.documentElement.lang || 'fr'; }
+  const messages = {
+    fr: {
+      sending: 'Envoi...',
+      success: 'Merci. Tu reçois le prochain numéro.',
+      error: 'Erreur d\'envoi. Réessaie ou écris-moi directement.',
+      btn: 'Recevoir',
+    },
+    nl: {
+      sending: 'Bezig met versturen...',
+      success: 'Bedankt. Je ontvangt het volgende nummer.',
+      error: 'Verzendfout. Probeer opnieuw of mail me direct.',
+      btn: 'Ontvangen',
+    },
+    en: {
+      sending: 'Sending...',
+      success: 'Thanks. You\'ll get the next issue.',
+      error: 'Submission error. Try again or email me directly.',
+      btn: 'Subscribe',
+    },
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const lang = getLang();
+    const m = messages[lang] || messages.fr;
+    status.textContent = m.sending;
+    status.classList.remove('is-success', 'is-error');
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: input.value,
+          _subject: 'Nouvelle inscription newsletter folio',
+        }),
+      });
+      if (res.ok) {
+        status.textContent = m.success;
+        status.classList.add('is-success');
+        form.reset();
+      } else {
+        throw new Error('HTTP ' + res.status);
+      }
+    } catch (err) {
+      status.textContent = m.error;
+      status.classList.add('is-error');
+    } finally {
+      btn.disabled = false;
+    }
+  });
+})();
+</script>
 
 <!-- CONTACT · CVE 2026-05-11 audit action #3 · primary CTA = Premier call (Cal.com) ·
      friction-removal · le client réserve sans email. Secondaires : mail, phone, LinkedIn. -->
