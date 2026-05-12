@@ -8287,10 +8287,9 @@ select:focus-visible {
   align-items: center;
   justify-content: center;
   line-height: 0;
-  /* height réservée · évite le collapse à 0 si lazy-load pas encore
-     déclenché ou si SVG pas encore parsé. Cap supérieur cohérent avec
-     les max-height per-brand (32-38px). */
-  height: 40px;
+  /* height réservée · 44px pour accommoder HMS/Digitas (40px) sans
+     overflow et garder un peu d'air autour des autres (28-36px). */
+  height: 44px;
 }
 .home-trust__item--logo img {
   display: block;
@@ -8315,17 +8314,20 @@ select:focus-visible {
    logos squarish qui sinon paraissent fins (HMS, Digitas). Les marks
    + wordmarks (WeJustice, Où Est-Ce, Unfold) sont alignés sur les
    wordmark-only (SPEOS, Belfius) pour éviter qu'ils dépassent. */
-.home-trust__item--logo[data-brand="bnp"] img        { height: 36px; } /* 4.76:1 wide, stars need a touch */
-.home-trust__item--logo[data-brand="speos"] img      { height: 32px; } /* 4.34:1 wide */
-.home-trust__item--logo[data-brand="belfius"] img    { height: 32px; } /* 4.63:1 wide */
-.home-trust__item--logo[data-brand="hms"] img        { height: 38px; } /* 1.72:1 squarish */
-.home-trust__item--logo[data-brand="digitas"] img    { height: 38px; } /* 1.23:1 near-square */
-.home-trust__item--logo[data-brand="wejustice"] img  { height: 32px; } /* 4.37:1 wide */
-.home-trust__item--logo[data-brand="ouestce"] img    { height: 32px; } /* 3.71:1 mid-wide */
-.home-trust__item--logo[data-brand="unfold"] img     { height: 32px; } /* 4.375:1 wide */
-.home-trust__item--logo[data-brand="choeke"] img     { height: 32px; } /* 5.19:1 very wide */
-.home-trust__item--logo[data-brand="bizbro"] img     { height: 32px; } /* 3.53:1 mid-wide, mark + wordmark */
-.home-trust__item--logo[data-brand="dcy"] img        { height: 32px; } /* 5.47:1 very wide, mark + wordmark */
+/* Homogénéité visuelle · height + max-width pour qu'aucun logo ne domine.
+   Browser scale-down les logos dépassant max-width tout en gardant ratio.
+   Target · chaque logo occupe ~120-140px × 28-40px (selon ratio). */
+.home-trust__item--logo[data-brand="bnp"] img        { height: 36px; max-width: 130px; } /* 4.76:1 wide */
+.home-trust__item--logo[data-brand="speos"] img      { height: 30px; max-width: 130px; } /* 4.34:1 wide */
+.home-trust__item--logo[data-brand="belfius"] img    { height: 30px; max-width: 130px; } /* 4.63:1 wide */
+.home-trust__item--logo[data-brand="hms"] img        { height: 40px; max-width: 80px;  } /* 1.72:1 squarish */
+.home-trust__item--logo[data-brand="digitas"] img    { height: 40px; max-width: 60px;  } /* 1.23:1 near-square */
+.home-trust__item--logo[data-brand="wejustice"] img  { height: 30px; max-width: 130px; } /* 4.37:1 */
+.home-trust__item--logo[data-brand="ouestce"] img    { height: 32px; max-width: 130px; } /* 3.71:1 mid-wide */
+.home-trust__item--logo[data-brand="unfold"] img     { height: 30px; max-width: 130px; } /* 4.375:1 */
+.home-trust__item--logo[data-brand="choeke"] img     { height: 28px; max-width: 130px; } /* 5.19:1 very wide */
+.home-trust__item--logo[data-brand="bizbro"] img     { height: 34px; max-width: 130px; } /* 3.53:1 */
+.home-trust__item--logo[data-brand="dcy"] img        { height: 28px; max-width: 130px; } /* 5.47:1 very wide */
 
 @media (max-width: 600px) {
   .home-trust__list { gap: 32px; padding-right: 32px; }
