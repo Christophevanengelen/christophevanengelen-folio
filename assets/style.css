@@ -8278,27 +8278,31 @@ select:focus-visible {
   opacity: 1;
 }
 
-/* Optical sizing per logo · viewBox ratio compensé pour poids visuel égal */
-.home-trust__item--logo[data-brand="bnp"] img        { max-height: 44px; } /* 4.76:1 wide, square stars need room */
-.home-trust__item--logo[data-brand="speos"] img      { max-height: 34px; } /* 4.34:1 wide */
-.home-trust__item--logo[data-brand="belfius"] img    { max-height: 34px; } /* 4.63:1 wide */
-.home-trust__item--logo[data-brand="hms"] img        { max-height: 56px; } /* 1.72:1 squarish → boost */
-.home-trust__item--logo[data-brand="digitas"] img    { max-height: 60px; } /* 1.23:1 near-square → boost */
-.home-trust__item--logo[data-brand="wejustice"] img  { max-height: 34px; } /* 4.37:1 wide */
-.home-trust__item--logo[data-brand="ouestce"] img    { max-height: 40px; } /* 3.71:1 mid-wide, mark + wordmark */
-.home-trust__item--logo[data-brand="unfold"] img     { max-height: 38px; } /* 4.375:1 wide, mark + wordmark */
+/* Tight uniformity · range 32→38px (spread 6px seulement)
+   Compromise · uniformité prioritaire avec micro-ajustements pour les
+   logos squarish qui sinon paraissent fins (HMS, Digitas). Les marks
+   + wordmarks (WeJustice, Où Est-Ce, Unfold) sont alignés sur les
+   wordmark-only (SPEOS, Belfius) pour éviter qu'ils dépassent. */
+.home-trust__item--logo[data-brand="bnp"] img        { max-height: 36px; } /* 4.76:1 wide, stars need a touch */
+.home-trust__item--logo[data-brand="speos"] img      { max-height: 32px; } /* 4.34:1 wide */
+.home-trust__item--logo[data-brand="belfius"] img    { max-height: 32px; } /* 4.63:1 wide */
+.home-trust__item--logo[data-brand="hms"] img        { max-height: 38px; } /* 1.72:1 squarish */
+.home-trust__item--logo[data-brand="digitas"] img    { max-height: 38px; } /* 1.23:1 near-square */
+.home-trust__item--logo[data-brand="wejustice"] img  { max-height: 32px; } /* 4.37:1 wide */
+.home-trust__item--logo[data-brand="ouestce"] img    { max-height: 32px; } /* 3.71:1 mid-wide */
+.home-trust__item--logo[data-brand="unfold"] img     { max-height: 32px; } /* 4.375:1 wide */
 
 @media (max-width: 600px) {
-  .home-trust__list { gap: 24px 28px; }
+  .home-trust__list { gap: 20px 24px; }
   .home-trust__item { font-size: 13px; }
-  .home-trust__item--logo[data-brand="bnp"] img        { max-height: 30px; }
+  .home-trust__item--logo[data-brand="bnp"] img        { max-height: 24px; }
   .home-trust__item--logo[data-brand="speos"] img      { max-height: 22px; }
   .home-trust__item--logo[data-brand="belfius"] img    { max-height: 22px; }
-  .home-trust__item--logo[data-brand="hms"] img        { max-height: 38px; }
-  .home-trust__item--logo[data-brand="digitas"] img    { max-height: 42px; }
+  .home-trust__item--logo[data-brand="hms"] img        { max-height: 26px; }
+  .home-trust__item--logo[data-brand="digitas"] img    { max-height: 26px; }
   .home-trust__item--logo[data-brand="wejustice"] img  { max-height: 22px; }
-  .home-trust__item--logo[data-brand="ouestce"] img    { max-height: 26px; }
-  .home-trust__item--logo[data-brand="unfold"] img     { max-height: 24px; }
+  .home-trust__item--logo[data-brand="ouestce"] img    { max-height: 22px; }
+  .home-trust__item--logo[data-brand="unfold"] img     { max-height: 22px; }
 }
 
 /* CVE 2026-05-04 S3.4 · mini-CTA conversion entre Cases et Practice ·
