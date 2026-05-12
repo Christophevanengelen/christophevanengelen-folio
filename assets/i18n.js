@@ -4887,6 +4887,283 @@
       nl: 'U bent hier · Diamant 1 · linkerhelft · 4 mijlpalen',
       en: 'You are here · Diamond 1 · left half · 4 milestones'
     },
+    'hms.concept.delivEyebrow': {
+      fr: 'Le livrable post-DD',
+      nl: 'De post-DD oplevering',
+      en: 'The post-DD deliverable'
+    },
+    'hms.concept.delivPagesLabel': {
+      fr: 'pages structurées',
+      nl: 'gestructureerde pagina\'s',
+      en: 'structured pages'
+    },
+    'hms.concept.delivPhrase': {
+      fr: 'CEO, CTO et équipes ont tout pour décider ensemble.',
+      nl: 'CEO, CTO en teams hebben alles om samen te beslissen.',
+      en: 'CEO, CTO and teams have everything to decide together.'
+    },
+    'hms.concept.delivSourceLab': {
+      fr: 'Document complet disponible sur demande',
+      nl: 'Volledig document beschikbaar op aanvraag',
+      en: 'Full document available on request'
+    },
+    'hms.concept.delivSourceRef': {
+      fr: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS &amp; TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 mockups Phoenix HD + 44 screens dashboard ingénieur.',
+      nl: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS &amp; TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 Phoenix HD-mockups + 44 schermen engineer dashboard.',
+      en: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS &amp; TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 Phoenix HD mockups + 44 engineer dashboard screens.'
+    },
+    'hms.concept.toc1Title': {
+      fr: 'Introduction',
+      nl: 'Introductie',
+      en: 'Introduction'
+    },
+    'hms.concept.toc2Title': {
+      fr: 'Stakeholder Map',
+      nl: 'Stakeholder Map',
+      en: 'Stakeholder Map'
+    },
+    'hms.concept.toc3Title': {
+      fr: 'Segmentation &amp; Personas',
+      nl: 'Segmentatie &amp; Persona\'s',
+      en: 'Segmentation &amp; Personas'
+    },
+    'hms.concept.toc4Title': {
+      fr: 'Journey AS IS vs TO BE',
+      nl: 'Journey AS IS vs TO BE',
+      en: 'Journey AS IS vs TO BE'
+    },
+    'hms.concept.toc5Title': {
+      fr: 'GAP Features · Goals · Questions',
+      nl: 'GAP Features · Goals · Questions',
+      en: 'GAP Features · Goals · Questions'
+    },
+    'hms.concept.toc6Title': {
+      fr: 'Value Proposition',
+      nl: 'Value Proposition',
+      en: 'Value Proposition'
+    },
+    'hms.concept.toc7Title': {
+      fr: 'User Stories',
+      nl: 'User Stories',
+      en: 'User Stories'
+    },
+    'hms.concept.toc8Title': {
+      fr: 'Concept',
+      nl: 'Concept',
+      en: 'Concept'
+    },
+    'hms.concept.toc9Title': {
+      fr: 'ULab Insights',
+      nl: 'ULab Insights',
+      en: 'ULab Insights'
+    },
+    'hms.concept.toc10Title': {
+      fr: 'Prototype',
+      nl: 'Prototype',
+      en: 'Prototype'
+    },
+    'hms.concept.toc11Title': {
+      fr: 'Next Step',
+      nl: 'Next Step',
+      en: 'Next Step'
+    },
+    'hms.outcome.eyebrow': {
+      fr: 'À la sortie du parcours',
+      nl: 'Aan het einde van het traject',
+      en: 'At the end of the journey'
+    },
+    'hms.outcome.title': {
+      fr: 'Pas un rapport de plus. <span class="accent">2 M€ débloqués pour la mise en prod.</span>',
+      nl: 'Geen rapport erbij. <span class="accent">2 M€ vrijgemaakt voor productie.</span>',
+      en: 'Not just another report. <span class="accent">€2M unlocked for production.</span>'
+    },
+    'hms.outcome.lead': {
+      fr: 'Un an d\'accompagnement refermé sur un Concept Report priorisé, un design system prêt pour la production, et tous les flots et prototypes testés et notés. Le sponsor qui m\'avait engagé a présenté ce travail à sa direction. Résultat · 2 millions d\'euros de budget additionnel pour passer le concept en production, et une promotion personnelle.',
+      nl: 'Eén jaar begeleiding afgesloten met een geprioriteerd Concept Report, een design system klaar voor productie, en alle flows en prototypes getest en gescoord. De sponsor die mij aanstelde, presenteerde dit werk aan zijn directie. Resultaat · 2 miljoen euro extra budget om het concept in productie te brengen, en een persoonlijke promotie.',
+      en: 'One year of engagement closed with a prioritised Concept Report, a production-ready design system, and all flows and prototypes tested and scored. The sponsor who hired me presented this work to his leadership. Result · €2 million in additional budget to take the concept to production, and a personal promotion.'
+    },
+    'hms.outcome.d1.h': {
+      fr: 'Concept Report priorisé, défendable devant le sponsor.',
+      nl: 'Geprioriteerd Concept Report, verdedigbaar voor de sponsor.',
+      en: 'Prioritised Concept Report, defensible before the sponsor.'
+    },
+    'hms.outcome.d1.p': {
+      fr: 'Tous les futurs services priorisés via story mapping. Lecture transverse Business + R&D + Service après-vente. Le document que le sponsor a porté en comité de direction pour défendre l\'investissement.',
+      nl: 'Alle toekomstige diensten geprioriteerd via story mapping. Transversale lezing Business + R&D + after-sales. Het document dat de sponsor naar het directiecomité bracht om de investering te verdedigen.',
+      en: 'All future services prioritised via story mapping. Cross-functional reading Business + R&D + after-sales. The document the sponsor took to the executive committee to defend the investment.'
+    },
+    'hms.outcome.d2.h': {
+      fr: 'Design system prêt prod.',
+      nl: 'Design system productieklaar.',
+      en: 'Production-ready design system.'
+    },
+    'hms.outcome.d2.p': {
+      fr: 'Tokens, composants, patterns d\'interaction. Tous les flots et prototypes testés avec des clients réels, scorés sur Simplicité, Utilité, Pertinence, Réassurance, Qualité. Pas une intention de design system. Le matériel qui passe en sprints.',
+      nl: 'Tokens, componenten, interactiepatronen. Alle flows en prototypes getest met echte klanten, gescoord op Eenvoud, Nut, Relevantie, Geruststelling, Kwaliteit. Geen intentie van design system. Het materiaal dat in sprints gaat.',
+      en: 'Tokens, components, interaction patterns. All flows and prototypes tested with real customers, scored on Simplicity, Usefulness, Relevance, Reassurance, Quality. Not a design system intent. The material that goes into sprints.'
+    },
+    'hms.outcome.d3.h': {
+      fr: 'Leadership marché défendu.',
+      nl: 'Marktleiderschap verdedigd.',
+      en: 'Market leadership defended.'
+    },
+    'hms.outcome.d3.p': {
+      fr: 'Face à IXON, cloud-native néerlandais qui visait le même segment industrial IoT, Ewon a installé une posture user-centric défendable. Le toolkit est passé du fournisseur d\'outils techniques à l\'éditeur de plateforme. Position consolidée, pas érodée.',
+      nl: 'Tegenover IXON, de Nederlandse cloud-native speler die hetzelfde industrial IoT-segment viseerde, heeft Ewon een verdedigbare user-centric houding aangenomen. De toolkit verschoof van leverancier van technische tools naar platform-uitgever. Positie verstevigd, niet uitgehold.',
+      en: 'Against IXON, the Dutch cloud-native player targeting the same industrial IoT segment, Ewon established a defensible user-centric posture. The toolkit moved from supplier of technical tools to platform editor. Position consolidated, not eroded.'
+    },
+    'hms.outcome.integrity': {
+      fr: '<strong>Note d\'intégrité.</strong> Le Concept Report a été remis, validé, et présenté en comité de direction par le sponsor qui m\'avait engagé. Le sponsor a obtenu 2 M€ de budget supplémentaire et une promotion personnelle. Le rollout en production est ensuite passé en sprints Agile côté équipes Ewon, après mon départ.',
+      nl: '<strong>Integriteitsnota.</strong> Het Concept Report werd opgeleverd, gevalideerd en gepresenteerd aan het directiecomité door de sponsor die mij had aangesteld. De sponsor verkreeg 2 M€ extra budget en een persoonlijke promotie. De productie-rollout liep daarna in Agile sprints aan de Ewon-zijde, na mijn vertrek.',
+      en: '<strong>Integrity note.</strong> The Concept Report was delivered, validated and presented to the executive committee by the sponsor who hired me. The sponsor secured €2M in additional budget and a personal promotion. The production rollout then ran in Agile sprints on the Ewon side, after my departure.'
+    },
+    'hms.outcome.toolkitSignal': {
+      fr: '<strong>Le succès n\'est pas qu\'un chiffre, c\'est un transfert de culture.</strong> Une société purement IT a accepté de mettre l\'utilisateur au centre. Customer Journey workshops, Heuristic Evaluation Nielsen, Service Design Relevance/Simplicity/Consistency · le toolkit a fait le travail parce qu\'il a été choisi selon la maturité Agile d\'Ewon, pas par dogme. Et le sponsor a décroché le budget pour que ce travail vive en production.',
+      nl: '<strong>Succes is niet enkel een cijfer, het is een cultuuroverdracht.</strong> Een puur IT-bedrijf heeft aanvaard om de gebruiker centraal te zetten. Customer Journey workshops, Heuristic Evaluation Nielsen, Service Design Relevance/Simplicity/Consistency · de toolkit deed het werk omdat hij gekozen werd volgens de Agile-rijpheid van Ewon, niet uit dogma. En de sponsor haalde het budget binnen om dit werk in productie te laten leven.',
+      en: '<strong>Success isn\'t just a number, it\'s a culture transfer.</strong> A pure IT company accepted to put the user at the centre. Customer Journey workshops, Heuristic Evaluation Nielsen, Service Design Relevance/Simplicity/Consistency · the toolkit did the work because it was chosen according to Ewon\'s Agile maturity, not from dogma. And the sponsor secured the budget for this work to live in production.'
+    },
+    'hms.lessons.eyebrow': {
+      fr: 'Ce qu\'Ewon m\'a appris',
+      nl: 'Wat Ewon me geleerd heeft',
+      en: 'What Ewon taught me'
+    },
+    'hms.lessons.h2': {
+      fr: 'Trois leviers <span class="accent">que je rejouerais.</span>',
+      nl: 'Drie hefbomen <span class="accent">die ik opnieuw zou inzetten.</span>',
+      en: 'Three levers <span class="accent">I would replay.</span>'
+    },
+    'hms.lessons.lead': {
+      fr: 'Un an après la livraison, trois choix méthodologiques tiennent encore. <strong>Rien à rejouer autrement</strong> · la mission a tenu son contrat, le sponsor a décroché le budget pour la mise en prod, et l\'organisation a accepté l\'utilisateur comme boussole.',
+      nl: 'Eén jaar na oplevering houden drie methodologische keuzes stand. <strong>Niets om anders te doen</strong> · de opdracht heeft haar contract gehouden, de sponsor heeft het productie-budget binnengehaald, en de organisatie heeft de gebruiker als kompas aanvaard.',
+      en: 'One year after delivery, three methodological choices still hold. <strong>Nothing to replay differently</strong> · the engagement held its contract, the sponsor secured the production budget, and the organisation accepted the user as compass.'
+    },
+    'hms.lessons.l1.h': {
+      fr: 'Le toolkit, pas l\'école.',
+      nl: 'De toolkit, niet de school.',
+      en: 'The toolkit, not the school.'
+    },
+    'hms.lessons.l1.p': {
+      fr: 'Strategyzer, Customer Journey, Heuristic Evaluation Nielsen, Service Blueprint, Design Sprint, story mapping sont des outils du même Design System. La maîtrise, ce n\'est pas d\'en choisir un. C\'est de savoir lequel, à quel moment, avec qui dans la salle. Chez Ewon, Customer Journey workshops + Heuristic Evaluation Nielsen + framework Relevance/Simplicity/Consistency avaient le bon ratio narratif et précision pour faire converger trois plateformes legacy.',
+      nl: 'Strategyzer, Customer Journey, Heuristic Evaluation Nielsen, Service Blueprint, Design Sprint, story mapping zijn tools van hetzelfde Design System. Meesterschap zit niet in het kiezen van één tool. Het zit in weten welke, wanneer, met wie in de zaal. Bij Ewon hadden Customer Journey workshops + Heuristic Evaluation Nielsen + framework Relevance/Simplicity/Consistency de juiste verhouding tussen narratief en precisie om drie legacy-platformen te laten samenkomen.',
+      en: 'Strategyzer, Customer Journey, Heuristic Evaluation Nielsen, Service Blueprint, Design Sprint, story mapping are tools of the same Design System. Mastery isn\'t choosing one. It\'s knowing which, when, with whom in the room. At Ewon, Customer Journey workshops + Heuristic Evaluation Nielsen + Relevance/Simplicity/Consistency framework had the right narrative-to-precision ratio to make three legacy platforms converge.'
+    },
+    'hms.lessons.l2.h': {
+      fr: 'Tous les chefs autour de la table, pas un seul.',
+      nl: 'Alle leiders rond de tafel, niet één.',
+      en: 'All leaders at the table, not one.'
+    },
+    'hms.lessons.l2.p': {
+      fr: 'Une société purement IT n\'écoute pas un consultant qui parle au seul Product Manager. Ce qui a fait basculer Ewon · les ateliers Customer Journey ont réuni R&D, produit, business, service après-vente, support — tous les chefs de département dans la même salle. La Value Proposition n\'a pas été imposée par la direction. Elle est née de la table où chacun reconnaissait son client.',
+      nl: 'Een puur IT-bedrijf luistert niet naar een consultant die enkel met de Product Manager praat. Wat Ewon heeft doen kantelen · de Customer Journey workshops brachten R&D, product, business, after-sales, support samen — alle afdelingshoofden in dezelfde zaal. De Value Proposition werd niet door de directie opgelegd. Ze ontstond aan de tafel waar iedereen zijn klant herkende.',
+      en: 'A pure IT company doesn\'t listen to a consultant talking only to the Product Manager. What tipped Ewon over · the Customer Journey workshops brought together R&D, product, business, after-sales, support — all department heads in the same room. The Value Proposition wasn\'t imposed by leadership. It emerged at the table where each one recognised their customer.'
+    },
+    'hms.lessons.l3.h': {
+      fr: 'Tester et scorer. Pas tester pour rassurer.',
+      nl: 'Testen en scoren. Niet testen om te geruststellen.',
+      en: 'Test and score. Not test to reassure.'
+    },
+    'hms.lessons.l3.p': {
+      fr: 'Tous les flots et tous les prototypes ont été testés avec des clients internationaux et scorés. Un test qui ne donne pas un chiffre n\'est pas un test, c\'est un atelier de réassurance. Le scoring rend les arbitrages défendables en comité, et c\'est ce qui a permis au sponsor de transporter le travail jusqu\'au budget de production.',
+      nl: 'Alle flows en alle prototypes zijn getest met internationale klanten en gescoord. Een test die geen cijfer geeft is geen test, het is een geruststellingsworkshop. Scoring maakt de afwegingen verdedigbaar in comité, en dat is wat de sponsor in staat stelde om het werk tot het productie-budget te dragen.',
+      en: 'All flows and prototypes were tested with international customers and scored. A test that produces no number is not a test, it\'s a reassurance workshop. Scoring makes trade-offs defensible in committee, and that\'s what allowed the sponsor to carry the work all the way to the production budget.'
+    },
+    'hms.triplewin.eyebrow': {
+      fr: 'L\'arbitre de chaque décision',
+      nl: 'De scheidsrechter van elke beslissing',
+      en: 'The arbiter of every decision'
+    },
+    'hms.triplewin.h2': {
+      fr: 'Customer · Business · Tech. <span class="accent">Le triangle qui rejetait les fausses pistes.</span>',
+      nl: 'Customer · Business · Tech. <span class="accent">De driehoek die valse pistes verwierp.</span>',
+      en: 'Customer · Business · Tech. <span class="accent">The triangle that rejected false leads.</span>'
+    },
+    'hms.triplewin.lead': {
+      fr: 'La plateforme ne tenait que si les trois sommets gagnaient. Une idée qui faisait gagner deux et perdre un était écartée. Pas de compromis, pas de moyenne. Trois critères, pas une moyenne.',
+      nl: 'Het platform hield enkel stand als de drie toppen wonnen. Een idee dat er twee liet winnen en één liet verliezen werd verworpen. Geen compromis, geen gemiddelde. Drie criteria, geen gemiddelde.',
+      en: 'The platform only held if the three vertices won. An idea that made two win and one lose was rejected. No compromise, no average. Three criteria, not an average.'
+    },
+    'hms.triplewin.claim': {
+      fr: 'Toute idée qui ne validait pas les <span class="accent">trois sommets</span> était écartée. Trois critères, pas une moyenne.',
+      nl: 'Elk idee dat de <span class="accent">drie toppen</span> niet valideerde werd verworpen. Drie criteria, geen gemiddelde.',
+      en: 'Any idea that did not validate the <span class="accent">three vertices</span> was rejected. Three criteria, not an average.'
+    },
+    'hms.triplewin.c1.who': {
+      fr: 'Customer · 3 segments',
+      nl: 'Customer · 3 segmenten',
+      en: 'Customer · 3 segments'
+    },
+    'hms.triplewin.c1.h': {
+      fr: 'Une porte, pas cinq.',
+      nl: 'Eén deur, geen vijf.',
+      en: 'One door, not five.'
+    },
+    'hms.triplewin.c1.p': {
+      fr: 'OEM Machine Builders, End-User Plants, Integrators. Trois segments, trois entrées dans la même plateforme. Onboarding piloté par persona industriel, autonomie self-service, audit-ready par défaut. Le client arrête de jongler entre eCatcher, M2Web et Talk2M.',
+      nl: 'OEM Machine Builders, End-User Plants, Integrators. Drie segmenten, drie ingangen in hetzelfde platform. Onboarding gestuurd door industriële persona, self-service autonomie, audit-ready by default. De klant stopt met jongleren tussen eCatcher, M2Web en Talk2M.',
+      en: 'OEM Machine Builders, End-User Plants, Integrators. Three segments, three entries into the same platform. Onboarding driven by industrial persona, self-service autonomy, audit-ready by default. The customer stops juggling between eCatcher, M2Web and Talk2M.'
+    },
+    'hms.triplewin.c2.who': {
+      fr: 'Business · Ewon by HMS Networks',
+      nl: 'Business · Ewon by HMS Networks',
+      en: 'Business · Ewon by HMS Networks'
+    },
+    'hms.triplewin.c2.h': {
+      fr: 'Nouveau segment capté, position défendue.',
+      nl: 'Nieuw segment gevangen, positie verdedigd.',
+      en: 'New segment captured, position defended.'
+    },
+    'hms.triplewin.c2.p': {
+      fr: 'Le freemium cloud-native ouvre le segment End-User Plants laissé à IXON. Le portail unifié sur eCatcher, M2Web et Talk2M libère Ewon de la fragmentation legacy. La position de leader IIoT face aux pure players cloud-natives se consolide à l\'approche d\'une décennie de croissance industrial IoT.',
+      nl: 'De cloud-native freemium opent het End-User Plants-segment dat IXON had laten liggen. Het verenigde portaal over eCatcher, M2Web en Talk2M bevrijdt Ewon van de legacy-fragmentatie. De IIoT-leiderspositie tegenover cloud-native pure players verstevigt zich aan de vooravond van een decennium industrial IoT-groei.',
+      en: 'The cloud-native freemium opens the End-User Plants segment left to IXON. The unified portal across eCatcher, M2Web and Talk2M frees Ewon from legacy fragmentation. The IIoT leadership position against cloud-native pure players consolidates as a decade of industrial IoT growth approaches.'
+    },
+    'hms.triplewin.c3.who': {
+      fr: 'Tech · IT &amp; Engineering',
+      nl: 'Tech · IT &amp; Engineering',
+      en: 'Tech · IT &amp; Engineering'
+    },
+    'hms.triplewin.c3.h': {
+      fr: 'Une stack, pas cinq.',
+      nl: 'Eén stack, geen vijf.',
+      en: 'One stack, not five.'
+    },
+    'hms.triplewin.c3.p': {
+      fr: 'L\'orchestration remplace les silos hérités. API-fication par couche, pipeline observable, fallback automatique entre canaux. L\'IT maintient une plateforme, plus cinq dettes héritées.',
+      nl: 'Orchestratie vervangt de geërfde silo\'s. Layered API-fication, observable pipeline, automatische fallback tussen kanalen. IT onderhoudt één platform, geen vijf geërfde schulden meer.',
+      en: 'Orchestration replaces the legacy silos. Layered API-fication, observable pipeline, automatic fallback between channels. IT maintains one platform, not five inherited debts.'
+    },
+    'hms.fin.line': {
+      fr: 'La méthode ne vaut rien tant qu\'elle ne décide rien.',
+      nl: 'Methode is niets waard zolang ze niets beslist.',
+      en: 'Method is worthless until it decides something.'
+    },
+    'hms.fin.signature': {
+      fr: 'Christophe van Engelen · Service Designer · Bruxelles',
+      nl: 'Christophe van Engelen · Service Designer · Brussel',
+      en: 'Christophe van Engelen · Service Designer · Brussels'
+    },
+    'hms.fin.contact.eyebrow': {
+      fr: 'Une conversation ?',
+      nl: 'Een gesprek?',
+      en: 'A conversation?'
+    },
+    'hms.fin.contact.sub': {
+      fr: 'Service designer · Bruxelles · 20+ ans cross-secteurs. Références Ewon disponibles sur demande pour un projet réel.',
+      nl: 'Service designer · Brussel · 20+ jaar cross-sectoraal. Ewon-referenties op aanvraag beschikbaar voor een echt project.',
+      en: 'Service designer · Brussels · 20+ years cross-sector. Ewon references available on request for a real project.'
+    },
+    'hms.fin.ps.label': {
+      fr: 'Postscript · références',
+      nl: 'Postscript · referenties',
+      en: 'Postscript · references'
+    },
+    'hms.fin.ps.text': {
+      fr: 'Références disponibles sur demande pour un projet réel. Les responsables managers Ewon des différents départements — R&D, produit, business, service après-vente, support — savent ce qui s\'est passé pendant ces douze mois. <span class="accent">C\'est ça, la matière du Service Design : des gens qui te rappellent.</span>',
+      nl: 'Referenties op aanvraag beschikbaar voor een echt project. De Ewon-managers van de verschillende afdelingen — R&D, product, business, after-sales, support — weten wat er tijdens die twaalf maanden is gebeurd. <span class="accent">Dat is het materiaal van Service Design: mensen die je terugbellen.</span>',
+      en: 'References available on request for a real project. The Ewon managers from the different departments — R&D, product, business, after-sales, support — know what happened during those twelve months. <span class="accent">That\'s the material of Service Design: people who call you back.</span>'
+    },// 55 entries
+
+
     'hms.chapAnalyse.label': {
       fr: 'Phase 02 · Analyse',
       nl: 'Fase 02 · Analyse',
