@@ -103,13 +103,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px;
+  padding: 32px 24px;
   font-family: var(--display, ui-sans-serif, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
 }
 .nda-gate__panel {
-  max-width: 540px;
+  max-width: 480px;
   width: 100%;
   text-align: center;
+  box-sizing: border-box;
 }
 .nda-gate__eyebrow {
   display: inline-block;
@@ -124,66 +126,93 @@
 .nda-gate__title {
   font-family: var(--display, serif);
   font-weight: 300;
-  font-size: clamp(32px, 5vw, 56px);
+  font-size: clamp(28px, 5vw, 56px);
   letter-spacing: -0.015em;
   line-height: 1.05;
   margin: 0 0 20px;
 }
 .nda-gate__lead {
   font-family: var(--sans, system-ui);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.55;
   color: var(--fg-muted, rgba(242, 235, 219, 0.7));
-  margin: 0 auto 32px;
-  max-width: 440px;
+  margin: 0 auto 28px;
+  max-width: 420px;
 }
 .nda-gate__form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   align-items: stretch;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .nda-gate__row {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-items: stretch;
 }
 .nda-gate__input {
-  flex: 1 1 240px;
+  flex: 1 1 auto;
   min-width: 0;
-  padding: 14px 18px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(242, 235, 219, 0.15);
+  border: 1px solid rgba(242, 235, 219, 0.18);
   border-radius: 8px;
   color: var(--fg, #f2ebdb);
-  font: inherit;
+  font-family: var(--sans, system-ui, sans-serif);
   font-size: 16px;
+  line-height: 1.4;
+  height: 44px;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-text-security: disc;
+  letter-spacing: 0.05em;
+}
+.nda-gate__input::placeholder {
+  color: rgba(242, 235, 219, 0.35);
+  letter-spacing: 0;
+  font-weight: 400;
 }
 .nda-gate__input:focus {
   outline: none;
   border-color: var(--amber, #c76941);
+  box-shadow: 0 0 0 3px rgba(199, 105, 65, 0.18);
 }
 .nda-gate__btn {
-  padding: 14px 24px;
+  flex: 0 0 auto;
+  padding: 0 22px;
+  height: 44px;
   background: var(--amber, #c76941);
   color: var(--bg, #0a1220);
   border: none;
   border-radius: 8px;
-  font: inherit;
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: opacity 200ms;
   white-space: nowrap;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
 }
 .nda-gate__btn:hover { opacity: 0.85; }
+.nda-gate__btn:active { transform: translateY(1px); }
 .nda-gate__btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .nda-gate__error {
   color: #E27D60;
-  font-size: 14px;
+  font-family: var(--sans, system-ui);
+  font-size: 13px;
   min-height: 1.4em;
   margin: 4px 0 0;
+  text-align: center;
 }
 .nda-gate__request {
   display: inline-flex;
@@ -210,8 +239,24 @@
 .nda-gate__back:hover { color: var(--fg, #f2ebdb); }
 .nda-gate-hidden { display: none !important; }
 body.nda-locked { overflow: hidden; }
+
+/* Mobile · stack row + tighter overlay */
 @media (max-width: 600px) {
-  .nda-gate__row { flex-direction: column; }
+  .nda-gate { padding: 24px 18px; align-items: flex-start; padding-top: 12vh; }
+  .nda-gate__panel { max-width: 100%; }
+  .nda-gate__eyebrow { margin-bottom: 18px; }
+  .nda-gate__title { margin-bottom: 14px; }
+  .nda-gate__lead { font-size: 14px; margin-bottom: 22px; }
+  .nda-gate__row { flex-direction: column; gap: 10px; }
+  .nda-gate__input,
+  .nda-gate__btn { width: 100%; height: 46px; }
+  .nda-gate__back { margin-top: 28px; }
+}
+
+/* Tiny screens */
+@media (max-width: 360px) {
+  .nda-gate { padding: 18px 14px; padding-top: 10vh; }
+  .nda-gate__title { font-size: 26px; }
 }
     `;
     const style = document.createElement('style');
@@ -256,9 +301,16 @@ body.nda-locked { overflow: hidden; }
           <div class="nda-gate__row">
             <input type="password"
                    id="nda-gate-input"
+                   name="nda-password"
                    class="nda-gate__input"
                    placeholder="${escapeHtml(t.label)}"
                    autocomplete="off"
+                   autocapitalize="none"
+                   autocorrect="off"
+                   spellcheck="false"
+                   inputmode="text"
+                   enterkeyhint="go"
+                   maxlength="80"
                    required />
             <button type="submit" class="nda-gate__btn">${escapeHtml(t.submit)}</button>
           </div>
@@ -276,7 +328,12 @@ body.nda-locked { overflow: hidden; }
     const form = overlay.querySelector('#nda-gate-form');
     const input = overlay.querySelector('#nda-gate-input');
     const errEl = overlay.querySelector('#nda-gate-error');
-    input.focus();
+    /* Defer focus past first paint to keep INP low and avoid layout thrash · */
+    /* on mobile · skip auto-focus entirely (prevents keyboard pop-up surprise) */
+    const isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (!isCoarse) {
+      requestAnimationFrame(() => requestAnimationFrame(() => input.focus()));
+    }
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       errEl.textContent = '';
@@ -288,7 +345,7 @@ body.nda-locked { overflow: hidden; }
       } else {
         errEl.textContent = t.error;
         input.value = '';
-        input.focus();
+        if (!isCoarse) requestAnimationFrame(() => input.focus());
       }
     });
   }
