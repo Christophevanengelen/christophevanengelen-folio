@@ -5162,6 +5162,247 @@
       nl: 'Referenties op aanvraag beschikbaar voor een echt project. De Ewon-managers van de verschillende afdelingen — R&D, product, business, after-sales, support — weten wat er tijdens die twaalf maanden is gebeurd. <span class="accent">Dat is het materiaal van Service Design: mensen die je terugbellen.</span>',
       en: 'References available on request for a real project. The Ewon managers from the different departments — R&D, product, business, after-sales, support — know what happened during those twelve months. <span class="accent">That\'s the material of Service Design: people who call you back.</span>'
     },// 55 entries
+    'hms.alignment.eyebrow': {
+      fr: 'Stakeholder Map · Alignement',
+      nl: 'Stakeholder Map · Afstemming',
+      en: 'Stakeholder Map · Alignment'
+    },
+    'hms.alignment.h2': {
+      fr: 'Comment Business et IT ont fini par <span class="accent">parler la même langue.</span>',
+      nl: 'Hoe Business en IT uiteindelijk <span class="accent">dezelfde taal spraken.</span>',
+      en: 'How Business and IT eventually <span class="accent">spoke the same language.</span>'
+    },
+    'hms.alignment.lead': {
+      fr: 'Au démarrage, chaque rôle défendait sa lecture. Le Project Owner côté Business voulait des fonctionnalités vendables. Le Project Manager côté IT voulait une stack maintenable. Le Project Lead arbitrait sur le calendrier. <strong>Deux formats d\'atelier ont fait le pont.</strong> Des petits ateliers ciblés avec les Project Managers et les figures clés côté IT pour caler les arbitrages techniques. Des grands ateliers Customer Journey avec toutes les parties prenantes autour de la table, pour mettre le client au centre, pas l\'org chart.',
+      nl: 'Bij de start verdedigde elk rol zijn eigen lezing. De Project Owner aan de Business-zijde wilde verkoopbare features. De Project Manager aan de IT-zijde wilde een onderhoudbare stack. De Project Lead arbitreerde over het tijdpad. <strong>Twee workshop-formaten hebben de brug geslagen.</strong> Kleine gerichte workshops met Project Managers en sleutelfiguren aan IT-zijde om de technische afwegingen vast te leggen. Grote Customer Journey workshops met alle stakeholders rond de tafel, om de klant centraal te zetten in plaats van het org chart.',
+      en: 'At the start, each role defended their own reading. The Project Owner on the Business side wanted sellable features. The Project Manager on the IT side wanted a maintainable stack. The Project Lead arbitrated the timeline. <strong>Two workshop formats bridged it.</strong> Small targeted workshops with Project Managers and key IT figures to lock down technical trade-offs. Large Customer Journey workshops with all stakeholders at the table, to put the customer at the centre, not the org chart.'
+    },
+    'hms.alignment.f1.fn': {
+      fr: 'Product Owner · Ewon Nivelles',
+      nl: 'Product Owner · Ewon Nijvel',
+      en: 'Product Owner · Ewon Nivelles'
+    },
+    'hms.alignment.f1.h': {
+      fr: '« On perd les PME face à IXON. »',
+      nl: '« We verliezen kmo\'s aan IXON. »',
+      en: '« We\'re losing SMEs to IXON. »'
+    },
+    'hms.alignment.f1.p': {
+      fr: 'Friction · IXON cloud-native captait les PME avec self-onboarding et freemium pendant qu\'Ewon vendait du routeur. Les Customer Journey workshops sur trois personas industriels ont remis le client au centre de l\'arbitrage, du technicien terrain au directeur d\'usine.',
+      nl: 'Frictie · het cloud-native IXON ving de kmo\'s met self-onboarding en freemium terwijl Ewon routers verkocht. De Customer Journey workshops rond drie industriële persona\'s zetten de klant terug centraal in de afwegingen, van veldtechnicus tot fabrieksdirecteur.',
+      en: 'Friction · cloud-native IXON was capturing SMEs with self-onboarding and freemium while Ewon was selling routers. The Customer Journey workshops on three industrial personas put the customer back at the centre of trade-offs, from field technician to plant director.'
+    },
+    'hms.alignment.f2.fn': {
+      fr: 'Project Manager · IT · HMS Halmstad',
+      nl: 'Project Manager · IT · HMS Halmstad',
+      en: 'Project Manager · IT · HMS Halmstad'
+    },
+    'hms.alignment.f2.h': {
+      fr: '« Trois plateformes, trois roadmaps. »',
+      nl: '« Drie platformen, drie roadmaps. »',
+      en: '« Three platforms, three roadmaps. »'
+    },
+    'hms.alignment.f2.p': {
+      fr: 'Friction · arbitrer les budgets entre Anybus, Ewon, Intesis et Ixxat avec un IT historique en Angular. La Heuristic Evaluation Nielsen scorée sur eCatcher, M2Web et Talk2M a posé le gap chiffré qui a justifié le rattrapage.',
+      nl: 'Frictie · budgetten afwegen tussen Anybus, Ewon, Intesis en Ixxat met een historische Angular IT-stack. De Heuristic Evaluation Nielsen gescoord op eCatcher, M2Web en Talk2M legde de becijferde gap vast die de inhaalbeweging rechtvaardigde.',
+      en: 'Friction · arbitrating budgets between Anybus, Ewon, Intesis and Ixxat with a legacy Angular IT stack. The Heuristic Evaluation Nielsen scored on eCatcher, M2Web and Talk2M established the quantified gap that justified the catch-up.'
+    },
+    'hms.alignment.f3.fn': {
+      fr: 'Project Lead · freelance',
+      nl: 'Project Lead · freelance',
+      en: 'Project Lead · freelance'
+    },
+    'hms.alignment.f3.h': {
+      fr: '« Tenir le mandat sur douze mois. »',
+      nl: '« Het mandaat twaalf maanden vasthouden. »',
+      en: '« Hold the mandate over twelve months. »'
+    },
+    'hms.alignment.f3.p': {
+      fr: 'Friction · garder R&amp;D, produit, business et service après-vente autour de la même table sans dévier. Les frictions AS-IS plateforme par plateforme, le gap TO-BE mesuré, et le story mapping sprint Agile ont produit un Concept Report priorisé · 2 M€ obtenus en comité par le sponsor.',
+      nl: 'Frictie · R&amp;D, product, business en after-sales rond dezelfde tafel houden zonder af te wijken. De AS-IS frictie platform per platform, de gemeten TO-BE gap, en het story mapping Agile sprint hebben een geprioriteerd Concept Report opgeleverd · 2 M€ binnengehaald in comité door de sponsor.',
+      en: 'Friction · keeping R&amp;D, product, business and after-sales around the same table without drifting. The AS-IS friction per platform, the measured TO-BE gap, and Agile sprint story mapping produced a prioritised Concept Report · €2M secured in committee by the sponsor.'
+    },
+    'hms.alignment.f4.fn': {
+      fr: 'UI &amp; UX · Ewon interne',
+      nl: 'UI &amp; UX · Ewon intern',
+      en: 'UI &amp; UX · Ewon internal'
+    },
+    'hms.alignment.f4.h': {
+      fr: '« Pas de design system, pas de librairie. »',
+      nl: '« Geen design system, geen bibliotheek. »',
+      en: '« No design system, no library. »'
+    },
+    'hms.alignment.f4.p': {
+      fr: 'Friction · trois interfaces qui n\'avaient jamais parlé entre elles · desktop eCatcher, web M2Web, cloud SaaS Talk2M. Le prototypage unifié et les tests utilisateurs notés sur les trois plateformes ont validé les composants à transférer vers la librairie Angular de production.',
+      nl: 'Frictie · drie interfaces die nooit met elkaar hadden gepraat · desktop eCatcher, web M2Web, cloud SaaS Talk2M. De verenigde prototyping en de op de drie platformen gescoorde user tests valideerden de componenten die naar de productie-Angular-bibliotheek konden worden overgedragen.',
+      en: 'Friction · three interfaces that had never spoken to each other · desktop eCatcher, web M2Web, cloud SaaS Talk2M. Unified prototyping and user tests scored across the three platforms validated the components to transfer to the production Angular library.'
+    },
+    'hms.alignment.pivotOutcome': {
+      fr: 'Quand les quatre rôles ont vu les mêmes machine builders au centre · pas le client abstrait, le technicien que les Project Owners avaient observé sur trois fuseaux horaires · le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Vision alignée. Plus de débat sur le « si », un débat structuré sur le « quand » et le « comment ».',
+      nl: 'Toen de vier rollen dezelfde machine builders centraal zagen staan · niet de abstracte klant, maar de technicus die de Project Owners hadden geobserveerd over drie tijdzones · werd het project <strong class="accent">het platform van iedereen</strong>. Visie afgestemd. Geen debat meer over het « of », een gestructureerd debat over het « wanneer » en het « hoe ».',
+      en: 'When the four roles saw the same machine builders at the centre · not the abstract customer, but the technician the Project Owners had observed across three time zones · the project became <strong class="accent">everyone\'s platform</strong>. Vision aligned. No more debate on the « if », a structured debate on the « when » and the « how ».'
+    },
+    'hms.barriers.label': {
+      fr: 'Pain points UX · 6 expert interviews + 8 customer interviews',
+      nl: 'UX pain points · 6 expert interviews + 8 customer interviews',
+      en: 'UX pain points · 6 expert interviews + 8 customer interviews'
+    },
+    'hms.vp.eyebrow': {
+      fr: 'Le contrat de valeur',
+      nl: 'Het waardecontract',
+      en: 'The value contract'
+    },
+    'hms.vp.lede': {
+      fr: 'Avant la VP, chaque rôle défendait sa lecture. Project Owners voulaient des features vendables. Project Managers voulaient une stack maintenable. Les clients juxtaposaient cinq logins. Après, une phrase tient debout : <strong>un host orchestré, des personas reconnus, dix douleurs traduites en cinq livrables MVP, six de plus en MVP++</strong>. C\'est cette VP qui rend l\'Ideation légitime.',
+      nl: 'Voor de VP verdedigde elk rol zijn eigen lezing. Project Owners wilden verkoopbare features. Project Managers wilden een onderhoudbare stack. Klanten jongleerden met vijf logins. Daarna houdt één zin stand · <strong>een georkestreerde host, herkende persona\'s, tien pijnen vertaald in vijf MVP-leveringen, zes erbij in MVP++</strong>. Het is deze VP die de Ideation legitiem maakt.',
+      en: 'Before the VP, each role defended their reading. Project Owners wanted sellable features. Project Managers wanted a maintainable stack. Customers juggled five logins. After, one sentence stands · <strong>an orchestrated host, recognised personas, ten pains translated into five MVP deliverables, six more in MVP++</strong>. This VP is what makes the Ideation legitimate.'
+    },
+    'hms.vp.bridgeText': {
+      fr: 'À la sortie de cette VP, <strong>Project Owners (Business), Project Managers (IT), Operations et Sales</strong> partagent la même phrase, les mêmes deux personas, la même traduction des dix douleurs en cinq livrables MVP. C\'est ce <span class="accent">socle commun</span> qui rend l\'Ideation légitime. On n\'arbitre plus sur le « quoi », on arbitre sur le « quand » et le « comment ».',
+      nl: 'Aan het einde van deze VP delen <strong>Project Owners (Business), Project Managers (IT), Operations en Sales</strong> dezelfde zin, dezelfde twee persona\'s, dezelfde vertaling van de tien pijnen in vijf MVP-leveringen. Dat is de <span class="accent">gemeenschappelijke basis</span> die de Ideation legitiem maakt. Er wordt niet meer afgewogen over het « wat », maar over het « wanneer » en het « hoe ».',
+      en: 'At the end of this VP, <strong>Project Owners (Business), Project Managers (IT), Operations and Sales</strong> share the same sentence, the same two personas, the same translation of the ten pains into five MVP deliverables. This <span class="accent">common foundation</span> is what makes the Ideation legitimate. We no longer arbitrate on the « what », we arbitrate on the « when » and the « how ».'
+    },
+    'hms.vp.bridgeNext': {
+      fr: 'Suite logique <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 directions explorées, une retenue',
+      nl: 'Logische volgende stap <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 verkende richtingen, één weerhouden',
+      en: 'Logical next step <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 directions explored, one retained'
+    },
+    'hms.vp.persona.h': {
+      fr: 'Les 2 personas qui décident',
+      nl: 'De 2 persona\'s die beslissen',
+      en: 'The 2 personas who decide'
+    },
+    'hms.vp.persona.claim': {
+      fr: '10 personas testés terrain · 8 archétypes synthétisés. <span class="accent">Voici 2 d\'entre eux, illustratifs.</span>',
+      nl: '10 persona\'s getest op het terrein · 8 archetypes gesynthetiseerd. <span class="accent">Hier zijn er 2 ter illustratie.</span>',
+      en: '10 personas tested on the field · 8 archetypes synthesised. <span class="accent">Here are 2 of them, illustrative.</span>'
+    },
+    'hms.proposed.eyebrow': {
+      fr: 'La roadmap proposée',
+      nl: 'De voorgestelde roadmap',
+      en: 'The proposed roadmap'
+    },
+    'hms.proposed.title': {
+      fr: 'Comment j\'ai cadré <span class="accent">les douze mois.</span>',
+      nl: 'Hoe ik <span class="accent">de twaalf maanden gekaderd heb.</span>',
+      en: 'How I framed <span class="accent">the twelve months.</span>'
+    },
+    'hms.proposed.lead': {
+      fr: 'De la friction Business ↔ IT à un MVP que tout le monde signe. Quatre actes méthodologiques, ateliers de co-création comme colonne vertébrale, customer focus comme boussole partagée.',
+      nl: 'Van Business ↔ IT-frictie naar een MVP die iedereen ondertekent. Vier methodologische acten, co-creatie workshops als ruggegraat, customer focus als gedeeld kompas.',
+      en: 'From Business ↔ IT friction to an MVP everyone signs. Four methodological acts, co-creation workshops as backbone, customer focus as shared compass.'
+    },
+    'hms.proposed.cap': {
+      fr: 'À la sortie : un MVP one-stop platform priorisé en user stories, signé Project Owners (Business) · Project Managers (IT) · Operations · Sales. Six clients de typologies différentes ont validé le concept. Sponsor go prod. Ce qui suit montre ce qui s\'est joué à chaque étape.',
+      nl: 'Bij de uitgang · een one-stop platform MVP geprioriteerd in user stories, ondertekend door Project Owners (Business) · Project Managers (IT) · Operations · Sales. Zes klanten van verschillende typologieën hebben het concept gevalideerd. Sponsor go prod. Wat volgt toont wat er bij elke stap is gebeurd.',
+      en: 'On exit · a one-stop platform MVP prioritised in user stories, signed by Project Owners (Business) · Project Managers (IT) · Operations · Sales. Six customers of different typologies validated the concept. Sponsor go prod. What follows shows what played out at each step.'
+    },
+    'hms.proposed.storyEyebrow': {
+      fr: 'Le fil conducteur · 4 phases × 4 jalons',
+      nl: 'De rode draad · 4 fasen × 4 mijlpalen',
+      en: 'The narrative thread · 4 phases × 4 milestones'
+    },
+    'hms.proposed.researchLi1': {
+      fr: 'Interviews internes · CEO, CTO, experts 20+ ans',
+      nl: 'Interne interviews · CEO, CTO, 20+ jaar experts',
+      en: 'Internal interviews · CEO, CTO, 20+ years experts'
+    },
+    'hms.proposed.researchLi2': {
+      fr: 'Interviews externes · grands comptes + petits comptes',
+      nl: 'Externe interviews · grote accounts + kleine accounts',
+      en: 'External interviews · large accounts + small accounts'
+    },
+    'hms.proposed.researchLi3': {
+      fr: 'Segmentation marché · 3 segments clients',
+      nl: 'Marktsegmentatie · 3 klantsegmenten',
+      en: 'Market segmentation · 3 customer segments'
+    },
+    'hms.proposed.researchLi4': {
+      fr: 'Personas aux manettes · par typologie',
+      nl: 'Persona\'s aan het roer · per typologie',
+      en: 'Personas at the helm · by typology'
+    },
+    'hms.proposed.analyseLi1': {
+      fr: 'Cartographie friction Project Owners ↔ Project Managers',
+      nl: 'Frictie cartografie Project Owners ↔ Project Managers',
+      en: 'Friction mapping Project Owners ↔ Project Managers'
+    },
+    'hms.proposed.analyseLi2': {
+      fr: 'AS-IS journey · processus séparés et bordéliques',
+      nl: 'AS-IS journey · gescheiden en rommelige processen',
+      en: 'AS-IS journey · separate and messy processes'
+    },
+    'hms.proposed.analyseLi3': {
+      fr: 'Could-Be journey · plateforme unifiée',
+      nl: 'Could-Be journey · verenigd platform',
+      en: 'Could-Be journey · unified platform'
+    },
+    'hms.proposed.analyseLi4': {
+      fr: 'Ateliers de co-création · alignement Business + IT',
+      nl: 'Co-creatie workshops · Business + IT afstemming',
+      en: 'Co-creation workshops · Business + IT alignment'
+    },
+    'hms.proposed.vpLab': {
+      fr: 'Value Proposition · pont',
+      nl: 'Value Proposition · brug',
+      en: 'Value Proposition · bridge'
+    },
+    'hms.proposed.vpLi1': {
+      fr: 'Plateforme host · one-stop shop',
+      nl: 'Host platform · one-stop shop',
+      en: 'Host platform · one-stop shop'
+    },
+    'hms.proposed.vpLi2': {
+      fr: 'Onboarding piloté par objectif + besoins',
+      nl: 'Onboarding gestuurd door doel + behoeften',
+      en: 'Onboarding driven by goal + needs'
+    },
+    'hms.proposed.prototypeLi1': {
+      fr: 'Host commun · couche unifiée',
+      nl: 'Gemeenschappelijke host · verenigde laag',
+      en: 'Common host · unified layer'
+    },
+    'hms.proposed.prototypeLi2': {
+      fr: 'Spécificités par typologie de marché',
+      nl: 'Specifieke kenmerken per markttypologie',
+      en: 'Specifics by market typology'
+    },
+    'hms.proposed.prototypeLi3': {
+      fr: 'Customisations par persona',
+      nl: 'Aanpassingen per persona',
+      en: 'Customisations per persona'
+    },
+    'hms.proposed.prototypeLi4': {
+      fr: 'User tests · 3 segments validés',
+      nl: 'User tests · 3 segmenten gevalideerd',
+      en: 'User tests · 3 segments validated'
+    },
+    'hms.proposed.conceptLi1': {
+      fr: 'Concept report · features + wireframes',
+      nl: 'Concept report · features + wireframes',
+      en: 'Concept report · features + wireframes'
+    },
+    'hms.proposed.conceptLi2': {
+      fr: 'User stories prioritisées · MVP scope',
+      nl: 'Geprioriteerde user stories · MVP scope',
+      en: 'Prioritised user stories · MVP scope'
+    },
+    'hms.proposed.conceptLi3': {
+      fr: 'UX/UI directions par persona',
+      nl: 'UX/UI richtingen per persona',
+      en: 'UX/UI directions per persona'
+    },
+    'hms.proposed.conceptLi4': {
+      fr: 'Decision pack · sponsor + comité de pilotage',
+      nl: 'Decision pack · sponsor + stuurgroep',
+      en: 'Decision pack · sponsor + steering committee'
+    },
+    'hms.proposed.crLab': {
+      fr: 'Concept Report · livrable',
+      nl: 'Concept Report · oplevering',
+      en: 'Concept Report · deliverable'
+    },
+
 
 
     'hms.chapAnalyse.label': {
