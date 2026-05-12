@@ -18,7 +18,7 @@ const ROOT = path.resolve(__dirname, '..');
 const I18N_PATH = path.join(ROOT, 'assets', 'i18n.js');
 const PAGES = ['index.html', 'bnp.html', 'speos.html', 'hms.html'];
 const LANGS = ['nl', 'en'];
-const HOST = 'https://christophevanengelen.be';
+const HOST = 'https://christophevanengelen.com';
 
 /** ========== 1. Charger le dictionnaire i18n ========== */
 function loadDict() {

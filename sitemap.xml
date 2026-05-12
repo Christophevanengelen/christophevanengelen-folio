@@ -9,135 +9,135 @@
 
   <!-- HOME · 3 langues -->
   <url>
-    <loc>https://christophevanengelen.be/</loc>
+    <loc>https://christophevanengelen.com/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/"/>
   </url>
   <url>
-    <loc>https://christophevanengelen.be/nl/</loc>
+    <loc>https://christophevanengelen.com/nl/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/"/>
   </url>
   <url>
-    <loc>https://christophevanengelen.be/en/</loc>
+    <loc>https://christophevanengelen.com/en/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/"/>
   </url>
 
   <!-- BNP CASE · 3 langues -->
   <url>
-    <loc>https://christophevanengelen.be/bnp.html</loc>
+    <loc>https://christophevanengelen.com/bnp.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/bnp.html"/>
   </url>
   <url>
-    <loc>https://christophevanengelen.be/nl/bnp.html</loc>
+    <loc>https://christophevanengelen.com/nl/bnp.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/bnp.html"/>
   </url>
   <url>
-    <loc>https://christophevanengelen.be/en/bnp.html</loc>
+    <loc>https://christophevanengelen.com/en/bnp.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/bnp.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/bnp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/bnp.html"/>
   </url>
 
   <!-- SPEOS CASE · 3 langues -->
   <url>
-    <loc>https://christophevanengelen.be/speos.html</loc>
+    <loc>https://christophevanengelen.com/speos.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/speos.html"/>
   </url>
   <url>
-    <loc>https://christophevanengelen.be/nl/speos.html</loc>
+    <loc>https://christophevanengelen.com/nl/speos.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/speos.html"/>
   </url>
   <url>
-    <loc>https://christophevanengelen.be/en/speos.html</loc>
+    <loc>https://christophevanengelen.com/en/speos.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/speos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/speos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/speos.html"/>
   </url>
 
   <!-- HMS NETWORKS · Ewon Cloud Revamp · 3 langues -->
   <url>
-    <loc>https://christophevanengelen.be/hms.html</loc>
+    <loc>https://christophevanengelen.com/hms.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/hms.html"/>
   </url>
   <url>
-    <loc>https://christophevanengelen.be/nl/hms.html</loc>
+    <loc>https://christophevanengelen.com/nl/hms.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/hms.html"/>
   </url>
   <url>
-    <loc>https://christophevanengelen.be/en/hms.html</loc>
+    <loc>https://christophevanengelen.com/en/hms.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.be/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.be/nl/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.be/en/hms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.be/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://christophevanengelen.com/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://christophevanengelen.com/nl/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://christophevanengelen.com/en/hms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://christophevanengelen.com/hms.html"/>
   </url>
 
   <!-- LUMINUS · pitch · FR uniquement (page custom) -->
   <url>
-    <loc>https://christophevanengelen.be/luminus.html</loc>
+    <loc>https://christophevanengelen.com/luminus.html</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
