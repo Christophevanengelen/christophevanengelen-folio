@@ -1,0 +1,12 @@
+{
+  "name": "christophevanengelen-folio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Folio Christophe van Engelen · Service Design · UX · CX",
+  "scripts": {
+    "build": "node scripts/build-i18n.js"
+  },
+  "dependencies": {
+    "@vercel/kv": "^3.0.0"
+  }
+}

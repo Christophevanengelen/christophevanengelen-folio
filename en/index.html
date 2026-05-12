@@ -938,11 +938,11 @@
   </div>
 </section>
 
-<!-- CVE 2026-05-12 · Newsletter end-to-end ·
-     Form POST vers Formsubmit.co (forwarder mail anonyme, free, sans compte)
-     → first submission déclenche email d'activation à hello@christophevanengelen.com
-     → après confirmation 1-clic, toutes les inscriptions arrivent dans la inbox
-     → côté UX, soumission via fetch() + message de succès inline (pas de redirect). -->
+<!-- CVE 2026-05-12 · Newsletter end-to-end native Vercel ·
+     POST /api/subscribe → Vercel KV storage
+     Admin page · /admin.html (password-protected) pour voir la liste +
+     export CSV + compose newsletter via Gmail BCC.
+     Setup nécessaire côté Vercel · enable KV storage + ADMIN_PASSWORD env var. -->
 <section id="newsletter" class="home-newsletter" data-frame="narrow" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="home.nlEyebrow">Newsletter</span>
@@ -950,16 +950,11 @@
     <p class="home-newsletter__lead" data-i18n="home.nlLead">The Service Design trade-offs that worked, told short. 5-minute read. No ads, no follow-ups.</p>
 
     <form class="home-newsletter__form"
-          action="https://formsubmit.co/ajax/hello@christophevanengelen.com"
+          action="/api/subscribe"
           method="post"
           data-event="nl-subscribe"
           id="nl-form">
-      <!-- Formsubmit options · pas de captcha (le honeypot suffit), email
-           template "table" pour rendu propre, subject explicite. -->
-      <input type="hidden" name="_subject" value="Nouvelle inscription newsletter folio">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <!-- Honeypot anti-bot · field caché, si rempli, formsubmit drop -->
+      <!-- Honeypot anti-bot · field caché, si rempli, API drop silencieux -->
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
       <label class="home-newsletter__label" for="nl-email" data-i18n="home.nlEmailLabel">Your email</label>
@@ -995,20 +990,23 @@
     fr: {
       sending: 'Envoi...',
       success: 'Merci. Tu reçois le prochain numéro.',
-      error: 'Erreur d\'envoi. Réessaie ou écris-moi directement.',
-      btn: 'Recevoir',
+      duplicate: 'Tu es déjà inscrit. Pas besoin de t\'inscrire deux fois.',
+      invalid: 'Email invalide. Vérifie le format.',
+      error: 'Erreur d\'envoi. Réessaie ou écris-moi à hello@christophevanengelen.com',
     },
     nl: {
       sending: 'Bezig met versturen...',
       success: 'Bedankt. Je ontvangt het volgende nummer.',
-      error: 'Verzendfout. Probeer opnieuw of mail me direct.',
-      btn: 'Ontvangen',
+      duplicate: 'Je bent al ingeschreven.',
+      invalid: 'Ongeldig e-mailadres.',
+      error: 'Verzendfout. Probeer opnieuw of mail naar hello@christophevanengelen.com',
     },
     en: {
       sending: 'Sending...',
       success: 'Thanks. You\'ll get the next issue.',
-      error: 'Submission error. Try again or email me directly.',
-      btn: 'Subscribe',
+      duplicate: 'You\'re already subscribed.',
+      invalid: 'Invalid email.',
+      error: 'Submission error. Try again or mail hello@christophevanengelen.com',
     },
   };
 
@@ -1021,24 +1019,36 @@
     btn.disabled = true;
 
     try {
-      const res = await fetch(form.action, {
+      const honey = form.querySelector('input[name="_honey"]');
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
-        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          email: input.value,
-          _subject: 'Nouvelle inscription newsletter folio',
+          email: input.value.trim(),
+          lang,
+          _honey: honey ? honey.value : '',
         }),
       });
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.duplicate) {
+        status.textContent = m.duplicate;
+        status.classList.add('is-success'); /* on traite duplicate comme un succès non-bloquant */
+        form.reset();
+      } else if (res.ok) {
         status.textContent = m.success;
         status.classList.add('is-success');
         form.reset();
+      } else if (res.status === 400) {
+        status.textContent = m.invalid;
+        status.classList.add('is-error');
       } else {
-        throw new Error('HTTP ' + res.status);
+        throw new Error('HTTP ' + res.status + ' ' + (data.error || ''));
       }
     } catch (err) {
       status.textContent = m.error;
       status.classList.add('is-error');
+      console.error('newsletter submit error', err);
     } finally {
       btn.disabled = false;
     }

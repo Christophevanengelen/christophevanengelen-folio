@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Newsletter admin · Christophe van Engelen</title>
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  :root {
+    --bg: #0a1220;
+    --bg-soft: #131c2e;
+    --fg: #f2ebdb;
+    --fg-muted: #b0aa9d;
+    --amber: #c76941;
+    --green: #6BCB77;
+    --coral: #E27D60;
+    --border: rgba(242, 235, 219, 0.12);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    padding: 32px;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 {
+    font-weight: 300;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  .sub {
+    color: var(--fg-muted);
+    margin: 0 0 32px;
+    font-size: 14px;
+  }
+  .panel {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .panel h2 {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+  input[type="password"], input[type="text"], textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--fg);
+    font: inherit;
+    font-size: 15px;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--amber);
+  }
+  textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
+  button {
+    padding: 10px 20px;
+    background: var(--amber);
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 200ms;
+  }
+  button:hover { opacity: 0.85; }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  button.secondary {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--border);
+  }
+  .row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .stat {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(199, 105, 65, 0.1);
+    border: 1px solid rgba(199, 105, 65, 0.3);
+    border-radius: 999px;
+    font-size: 14px;
+  }
+  .stat strong { font-size: 22px; color: var(--amber); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 11px;
+    color: var(--fg-muted);
+  }
+  td.email { font-family: ui-monospace, monospace; color: var(--fg); }
+  td.ts { color: var(--fg-muted); font-size: 13px; }
+  td.lang { color: var(--fg-muted); text-transform: uppercase; font-size: 11px; }
+  .status {
+    margin-top: 12px;
+    font-size: 13px;
+    min-height: 1.4em;
+  }
+  .status.ok { color: var(--green); }
+  .status.err { color: var(--coral); }
+  .hidden { display: none; }
+  .empty { color: var(--fg-muted); font-style: italic; padding: 24px 0; }
+  details { margin-top: 12px; font-size: 13px; color: var(--fg-muted); }
+  details summary { cursor: pointer; user-select: none; }
+  details pre {
+    background: rgba(0,0,0,0.3);
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Newsletter admin</h1>
+  <p class="sub">Liste des inscrits · export CSV · compose mailto BCC</p>
+
+  <!-- Auth panel · password prompt -->
+  <div id="auth" class="panel">
+    <h2>Connexion admin</h2>
+    <div class="row">
+      <input type="password" id="pwd" placeholder="Admin password" autocomplete="off" autofocus />
+      <button id="login">Déverrouiller</button>
+    </div>
+    <p class="status" id="auth-status"></p>
+    <details>
+      <summary>Comment ça marche</summary>
+      <p>Le password est stocké comme env var <code>ADMIN_PASSWORD</code> sur Vercel.</p>
+      <p>Pour le set/reset · <code>vercel env add ADMIN_PASSWORD</code> en CLI, ou via le dashboard Vercel → Project Settings → Environment Variables.</p>
+    </details>
+  </div>
+
+  <!-- Content panel · révélé après auth -->
+  <div id="content" class="hidden">
+    <div class="panel">
+      <h2>Subscribers</h2>
+      <div class="row" style="margin-bottom: 16px;">
+        <span class="stat"><strong id="count">0</strong> inscrits au total</span>
+        <button id="refresh" class="secondary">↻ Rafraîchir</button>
+        <button id="export-csv" class="secondary">⬇ Export CSV</button>
+        <button id="copy-bcc" class="secondary">📋 Copier BCC list</button>
+      </div>
+      <div id="list"></div>
+      <p class="status" id="list-status"></p>
+    </div>
+
+    <div class="panel">
+      <h2>Compose newsletter (mailto BCC)</h2>
+      <p style="font-size: 13px; color: var(--fg-muted); margin: 0 0 16px;">
+        Ouvre Gmail (ou ton mail client) avec tous les abonnés en BCC + ton sujet + ton brouillon préchargé. Tu termines dans Gmail.
+      </p>
+      <div class="row">
+        <input type="text" id="subject" placeholder="Sujet de la newsletter" />
+      </div>
+      <div style="margin-top: 12px;">
+        <textarea id="body" placeholder="Corps de l'email (plain text)"></textarea>
+      </div>
+      <div class="row" style="margin-top: 16px;">
+        <button id="send">📧 Ouvrir Gmail compose</button>
+      </div>
+      <p class="status" id="send-status"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const $ = (s) => document.querySelector(s);
+  const STORAGE_KEY = 'cve_admin_pwd';
+  let subscribers = [];
+
+  /* Try to restore password from sessionStorage · convenience seulement, perdu au tab close */
+  let pwd = sessionStorage.getItem(STORAGE_KEY) || '';
+  if (pwd) {
+    $('#pwd').value = pwd;
+    attemptLogin();
+  }
+
+  $('#login').addEventListener('click', attemptLogin);
+  $('#pwd').addEventListener('keydown', (e) => { if (e.key === 'Enter') attemptLogin(); });
+
+  async function attemptLogin() {
+    const password = $('#pwd').value.trim();
+    if (!password) return;
+    const status = $('#auth-status');
+    status.textContent = 'Connexion...';
+    status.className = 'status';
+
+    try {
+      const res = await fetch('/api/admin', {
+        headers: { 'Authorization': 'Bearer ' + password },
+      });
+      if (res.status === 401) {
+        status.textContent = 'Password incorrect';
+        status.className = 'status err';
+        return;
+      }
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        status.textContent = 'Erreur · ' + (data.error || res.status) + (data.hint ? ' · ' + data.hint : '');
+        status.className = 'status err';
+        return;
+      }
+      const data = await res.json();
+      pwd = password;
+      sessionStorage.setItem(STORAGE_KEY, pwd);
+      showContent(data);
+    } catch (e) {
+      status.textContent = 'Erreur réseau · ' + e.message;
+      status.className = 'status err';
+    }
+  }
+
+  function showContent(data) {
+    $('#auth').classList.add('hidden');
+    $('#content').classList.remove('hidden');
+    renderList(data);
+  }
+
+  function renderList(data) {
+    subscribers = data.records || [];
+    $('#count').textContent = data.count || subscribers.length;
+    const list = $('#list');
+    if (subscribers.length === 0) {
+      list.innerHTML = '<p class="empty">Aucun inscrit pour le moment.</p>';
+      return;
+    }
+    const rows = subscribers.map((r) => {
+      const ts = r.ts ? new Date(r.ts).toLocaleString('fr-BE', { dateStyle: 'medium', timeStyle: 'short' }) : '—';
+      return `<tr>
+        <td class="email">${esc(r.email)}</td>
+        <td class="ts">${esc(ts)}</td>
+        <td class="lang">${esc(r.lang || '')}</td>
+      </tr>`;
+    }).join('');
+    list.innerHTML = `<table>
+      <thead><tr><th>Email</th><th>Date d'inscription</th><th>Langue</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+  }
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+
+  $('#refresh').addEventListener('click', async () => {
+    const status = $('#list-status');
+    status.textContent = 'Rafraîchissement...';
+    status.className = 'status';
+    try {
+      const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
+      const data = await res.json();
+      renderList(data);
+      status.textContent = 'Liste à jour · ' + new Date().toLocaleTimeString('fr-BE');
+      status.className = 'status ok';
+    } catch (e) {
+      status.textContent = 'Erreur · ' + e.message;
+      status.className = 'status err';
+    }
+  });
+
+  $('#export-csv').addEventListener('click', () => {
+    const csv = ['email,ts,lang,ref,ip']
+      .concat(subscribers.map((r) => [
+        r.email, r.ts || '', r.lang || '', r.ref || '', r.ip || ''
+      ].map((v) => '"' + String(v).replace(/"/g, '""') + '"').join(',')))
+      .join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'newsletter-subscribers-' + new Date().toISOString().slice(0, 10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  $('#copy-bcc').addEventListener('click', async () => {
+    const emails = subscribers.map((r) => r.email).join(', ');
+    try {
+      await navigator.clipboard.writeText(emails);
+      const status = $('#list-status');
+      status.textContent = subscribers.length + ' emails copiés dans le presse-papier (séparateur · virgule)';
+      status.className = 'status ok';
+    } catch (e) {
+      alert('Copie échouée · ' + e.message);
+    }
+  });
+
+  $('#send').addEventListener('click', () => {
+    const subject = $('#subject').value.trim();
+    const body = $('#body').value;
+    if (!subject) {
+      const s = $('#send-status');
+      s.textContent = 'Sujet manquant';
+      s.className = 'status err';
+      return;
+    }
+    if (subscribers.length === 0) {
+      const s = $('#send-status');
+      s.textContent = 'Aucun abonné à envoyer';
+      s.className = 'status err';
+      return;
+    }
+    const bcc = subscribers.map((r) => r.email).join(',');
+    /* Gmail web compose URL · ouvre directement Gmail avec BCC pré-rempli */
+    const url = 'https://mail.google.com/mail/?view=cm&fs=1'
+      + '&to=' + encodeURIComponent('hello@christophevanengelen.com')
+      + '&bcc=' + encodeURIComponent(bcc)
+      + '&su=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    window.open(url, '_blank', 'noopener');
+    const s = $('#send-status');
+    s.textContent = 'Gmail ouvert dans un nouvel onglet · ' + subscribers.length + ' destinataires en BCC';
+    s.className = 'status ok';
+  });
+})();
+</script>
+</body>
+</html>
