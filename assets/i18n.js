@@ -2881,11 +2881,6 @@
       nl: 'Gewerkt met',
       en: 'Worked with'
     },
-    'home.casesCta': {
-      fr: 'Un projet en tête ? Premier call <strong>30 min, gratuit</strong>. <a href="mailto:hello@christophevanengelen.com?subject=Projet%20Service%20Design&utm_source=portfolio&utm_medium=cases-cta">hello@christophevanengelen.com →</a>',
-      nl: 'Een project in gedachten? Eerste call <strong>30 min, gratis</strong>. <a href="mailto:hello@christophevanengelen.com?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">hello@christophevanengelen.com →</a>',
-      en: 'Got a project in mind? First call <strong>30 min, free</strong>. <a href="mailto:hello@christophevanengelen.com?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">hello@christophevanengelen.com →</a>'
-    },
     'home.testimonialEyebrow': {
       fr: 'Ce qu\'ils disent',
       nl: 'Wat ze zeggen',
