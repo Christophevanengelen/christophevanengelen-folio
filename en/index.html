@@ -398,40 +398,73 @@
   </div>
 </section>
 
-<!-- TRUST · CVE 2026-05-12 · trust strip homogène
-     · Optical sizing per logo (max-height par logo selon viewBox ratio)
-     · Mono silhouette par défaut, brand color full au hover
-     · Pas d'inline width/height (laisse le CSS gérer pour éviter le crush)
-     · WeJustice et Unfold à venir (SVG fournis plus tard) -->
+<!-- TRUST · CVE 2026-05-12 · trust strip défilant
+     · Marquee infini horizontal · pause au hover
+     · Optical sizing tight (range 32-38px)
+     · Liste dupliquée pour seamless loop · 2e copie aria-hidden -->
 <section class="home-trust" aria-label="Travaillé avec">
   <div class="container">
     <span class="home-trust__eyebrow" data-i18n="home.trustEyebrow">Worked with</span>
-    <ul class="home-trust__list home-trust__list--logos" role="list">
-      <li class="home-trust__item home-trust__item--logo" data-brand="bnp">
-        <img src="/public/img/logos/clients/bnp-paribas-fortis.svg" alt="BNP Paribas Fortis" loading="lazy" />
-      </li>
-      <li class="home-trust__item home-trust__item--logo" data-brand="speos">
-        <img src="/public/img/logos/clients/speos.svg" alt="SPEOS · bpost group" loading="lazy" />
-      </li>
-      <li class="home-trust__item home-trust__item--logo" data-brand="belfius">
-        <img src="/public/img/logos/clients/belfius.svg" alt="Belfius" loading="lazy" />
-      </li>
-      <li class="home-trust__item home-trust__item--logo" data-brand="hms">
-        <img src="/public/img/logos/clients/hms-networks.svg" alt="HMS Networks" loading="lazy" />
-      </li>
-      <li class="home-trust__item home-trust__item--logo" data-brand="digitas">
-        <img src="/public/img/logos/clients/digitas.svg" alt="Digitas" loading="lazy" />
-      </li>
-      <li class="home-trust__item home-trust__item--logo" data-brand="wejustice">
-        <img src="/public/img/logos/clients/wejustice.svg" alt="WeJustice · legal-tech" loading="lazy" />
-      </li>
-      <li class="home-trust__item home-trust__item--logo" data-brand="ouestce">
-        <img src="/public/img/logos/clients/ouestce.svg" alt="Où Est-Ce · UX/UI" loading="lazy" />
-      </li>
-      <li class="home-trust__item home-trust__item--logo" data-brand="unfold">
-        <img src="/public/img/logos/clients/unfold.svg" alt="Unfold · start-up · Partner" loading="lazy" />
-      </li>
-    </ul>
+    <div class="home-trust__scroller">
+      <ul class="home-trust__list home-trust__list--logos" role="list">
+        <li class="home-trust__item home-trust__item--logo" data-brand="bnp">
+          <img src="/public/img/logos/clients/bnp-paribas-fortis.svg" alt="BNP Paribas Fortis" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="speos">
+          <img src="/public/img/logos/clients/speos.svg" alt="SPEOS · bpost group" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="belfius">
+          <img src="/public/img/logos/clients/belfius.svg" alt="Belfius" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="hms">
+          <img src="/public/img/logos/clients/hms-networks.svg" alt="HMS Networks" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="digitas">
+          <img src="/public/img/logos/clients/digitas.svg" alt="Digitas" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="wejustice">
+          <img src="/public/img/logos/clients/wejustice.svg" alt="WeJustice · legal-tech" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="ouestce">
+          <img src="/public/img/logos/clients/ouestce.svg" alt="Où Est-Ce · UX/UI" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="unfold">
+          <img src="/public/img/logos/clients/unfold.svg" alt="Unfold · start-up · Partner" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="choeke">
+          <img src="/public/img/logos/clients/choeke.svg" alt="Choeke" loading="lazy" />
+        </li>
+      </ul>
+      <ul class="home-trust__list home-trust__list--logos" role="list" aria-hidden="true">
+        <li class="home-trust__item home-trust__item--logo" data-brand="bnp">
+          <img src="/public/img/logos/clients/bnp-paribas-fortis.svg" alt="" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="speos">
+          <img src="/public/img/logos/clients/speos.svg" alt="" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="belfius">
+          <img src="/public/img/logos/clients/belfius.svg" alt="" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="hms">
+          <img src="/public/img/logos/clients/hms-networks.svg" alt="" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="digitas">
+          <img src="/public/img/logos/clients/digitas.svg" alt="" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="wejustice">
+          <img src="/public/img/logos/clients/wejustice.svg" alt="" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="ouestce">
+          <img src="/public/img/logos/clients/ouestce.svg" alt="" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="unfold">
+          <img src="/public/img/logos/clients/unfold.svg" alt="" loading="lazy" />
+        </li>
+        <li class="home-trust__item home-trust__item--logo" data-brand="choeke">
+          <img src="/public/img/logos/clients/choeke.svg" alt="" loading="lazy" />
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
