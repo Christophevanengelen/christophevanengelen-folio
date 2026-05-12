@@ -2990,7 +2990,6 @@
       en: 'I reply within 24h on business days. First call 30 min, free, no commitment, to qualify your need. Available for upstream service design assignments, user research, Business / IT alignment workshops in Brussels and remote.'
     },
     'home.footerCopy': { fr: '© Christophe van Engelen, 2026.', nl: '© Christophe van Engelen, 2026.', en: '© Christophe van Engelen, 2026.' },
-    'home.footerLangs': { fr: 'FR · NL · EN', nl: 'FR · NL · EN', en: 'FR · NL · EN' },
     'home.practice.p1': {
       fr: 'Mon métier consiste à mettre les bonnes personnes autour d\'une table, écouter, recadrer le problème, puis dessiner un service qui tient en production. La méthode change selon le contexte. Strategyzer, Customer Journey Mapping, Service Blueprint, Design Sprint sont des outils du même système, pas des écoles concurrentes.',
       nl: 'Mijn werk: de juiste mensen rond een tafel zetten, luisteren, het probleem herformuleren, en dan een dienst tekenen die het in productie houdt. De methode hangt af van de context. Strategyzer, Customer Journey Mapping, Service Blueprint, Design Sprint zijn tools van hetzelfde systeem, geen concurrerende scholen.',
