@@ -5426,9 +5426,9 @@
       en: 'Diamond 1 · crystallisation'
     },
     'hms.chapValueProp.phrase': {
-      fr: '<span class="chap-v2__reject"><span class="chap-v2__strike">Pas</span> une plateforme par segment qui multiplie les portes d\'entrée.</span><span class="chap-v2__affirm">Un host <em>one-stop</em> qui rassemble eCatcher, M2Web, Talk2M sous une expérience unifiée.</span>',
-      nl: '<span class="chap-v2__reject"><span class="chap-v2__strike">Geen</span> platform per segment dat de ingangen vermenigvuldigt.</span><span class="chap-v2__affirm">Eén <em>one-stop</em> host die eCatcher, M2Web, Talk2M bundelt in één ervaring.</span>',
-      en: '<span class="chap-v2__reject"><span class="chap-v2__strike">Not</span> one platform per segment multiplying entry doors.</span><span class="chap-v2__affirm">A <em>one-stop</em> host that brings eCatcher, M2Web, Talk2M into one unified experience.</span>'
+      fr: '<span class="chap-v2__reject"><span class="chap-v2__strike">Pas</span> une plateforme par segment qui multiplie les portes d\'entrée.</span><span class="chap-v2__affirm">Un host <em>one-stop</em>, avec un <em>onboarding piloté par persona industriel</em>, des <em>capacités API-isées</em>, du <em>monitoring et diagnostics sans couture</em>, prêt pour les exigences <em>compliance IEC 62443 / NIST / CRA</em> de demain.</span>',
+      nl: '<span class="chap-v2__reject"><span class="chap-v2__strike">Geen</span> platform per segment dat de ingangen vermenigvuldigt.</span><span class="chap-v2__affirm">Eén <em>one-stop</em> host, met <em>onboarding gestuurd door industriële persona</em>, <em>API-iseerde capaciteiten</em>, <em>monitoring en diagnostics zonder breuk</em>, klaar voor de eisen rond <em>compliance IEC 62443 / NIST / CRA</em> van morgen.</span>',
+      en: '<span class="chap-v2__reject"><span class="chap-v2__strike">Not</span> one platform per segment multiplying entry doors.</span><span class="chap-v2__affirm">A <em>one-stop</em> host, with <em>onboarding driven by industrial persona</em>, <em>API-fied capabilities</em>, <em>seamless monitoring and diagnostics</em>, ready for tomorrow\'s <em>IEC 62443 / NIST / CRA compliance</em> requirements.</span>'
     },
     'hms.chapValueProp.consequences': {
       fr: '<span>Project Owners <span class="chap-v2__arrow">→</span> portail self-service par persona</span><span class="chap-v2__bullet">·</span><span>Project Managers <span class="chap-v2__arrow">→</span> back-office IT contrôlé</span>',
