@@ -2866,7 +2866,7 @@
     'bnp.snm.p2c': { fr: 'Rapport 3 · Evaluating Actions (ROI)', nl: 'Rapport 3 · Evaluating Actions (ROI)', en: 'Report 3 · Evaluating Actions (ROI)' },
     'bnp.snm.p2d': { fr: 'Market Research · phase 2 roadmap', nl: 'Market Research · fase 2 roadmap', en: 'Market Research · phase 2 roadmap' },
     'bnp.snm.p2home': { fr: 'Home · panorama d\'accueil', nl: 'Home · onthaalpanorama', en: 'Home · welcome panorama' },
-    'home.contact': { fr: 'cve@hi-def.be', nl: 'cve@hi-def.be', en: 'cve@hi-def.be' },
+    'home.contact': { fr: 'hello@christophevanengelen.com', nl: 'hello@christophevanengelen.com', en: 'hello@christophevanengelen.com' },
 
     /* CVE 2026-05-04 S3.x · trust signals & conversion (sprint S3) */
     /* CVE 2026-05-11 Pack v4-final · pill scarcity sans date (Brand Guardian).
@@ -2882,9 +2882,9 @@
       en: 'Worked with'
     },
     'home.casesCta': {
-      fr: 'Un projet en tête ? Premier call <strong>30 min, gratuit</strong>. <a href="mailto:cve@hi-def.be?subject=Projet%20Service%20Design&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>',
-      nl: 'Een project in gedachten? Eerste call <strong>30 min, gratis</strong>. <a href="mailto:cve@hi-def.be?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>',
-      en: 'Got a project in mind? First call <strong>30 min, free</strong>. <a href="mailto:cve@hi-def.be?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">cve@hi-def.be →</a>'
+      fr: 'Un projet en tête ? Premier call <strong>30 min, gratuit</strong>. <a href="mailto:hello@christophevanengelen.com?subject=Projet%20Service%20Design&utm_source=portfolio&utm_medium=cases-cta">hello@christophevanengelen.com →</a>',
+      nl: 'Een project in gedachten? Eerste call <strong>30 min, gratis</strong>. <a href="mailto:hello@christophevanengelen.com?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">hello@christophevanengelen.com →</a>',
+      en: 'Got a project in mind? First call <strong>30 min, free</strong>. <a href="mailto:hello@christophevanengelen.com?subject=Service%20Design%20Project&utm_source=portfolio&utm_medium=cases-cta">hello@christophevanengelen.com →</a>'
     },
     'home.testimonialEyebrow': {
       fr: 'Ce qu\'ils disent',
@@ -3249,9 +3249,9 @@
       en: '<strong>The right tool at the right moment.</strong> Strategyzer, Customer Journey, Heuristic Evaluation, Service Blueprint, Design Sprint · tools of the same Design System. Mastery · knowing which one, when, with whom in the room.'
     },
     'home.about.p4': {
-      fr: '<strong>À l\'écoute des projets qui ont du sens.</strong> Premier call 30 min, gratuit, sans engagement. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.',
-      nl: '<strong>Open voor projecten met betekenis.</strong> Eerste call 30 min, gratis, zonder verbintenis. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.',
-      en: '<strong>Listening for projects that matter.</strong> First call 30 min, free, no commitment. <a href="mailto:cve@hi-def.be?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">cve@hi-def.be</a>.'
+      fr: '<strong>À l\'écoute des projets qui ont du sens.</strong> Premier call 30 min, gratuit, sans engagement. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.',
+      nl: '<strong>Open voor projecten met betekenis.</strong> Eerste call 30 min, gratis, zonder verbintenis. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.',
+      en: '<strong>Listening for projects that matter.</strong> First call 30 min, free, no commitment. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.'
     },
 
     /* CVE 2026-05-04 S8.1 · FAQ avec Schema FAQPage · 7 Q&A pour featured snippet */

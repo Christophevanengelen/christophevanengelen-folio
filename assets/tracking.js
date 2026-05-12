@@ -5,7 +5,7 @@
  * (pas d'erreur si Plausible pas encore activé).
  *
  * Usage HTML :
- *   <a href="mailto:cve@hi-def.be" data-event="mailto-cve">cve@hi-def.be</a>
+ *   <a href="mailto:hello@christophevanengelen.com" data-event="mailto-cve">hello@christophevanengelen.com</a>
  *   <a href="https://linkedin..." data-event="linkedin-out" data-event-source="footer">...</a>
  *
  * Goals à créer dans Plausible (Settings > Goals > Custom event) :
