@@ -47,9 +47,9 @@
        indépendants (5 Anthropic agents + Codex GPT-5) · score moyen 85/100.
        Voix Lou Downe / Cagan · humble, française native, end-to-end UI→Partner. */
     'home.metaDesc': {
-      fr: 'Service Design · UX · CX freelance à Bruxelles. Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. J\'écoute, je cadre, je tranche. Cas · SPEOS · HMS Networks · BNP Paribas Fortis.',
-      nl: 'Service Design · UX · CX freelance in Brussel. Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Ik luister, kadreer, beslis. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.',
-      en: 'Service Design · UX · CX freelance in Brussels. Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. I listen, I frame, I decide. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.'
+      fr: 'Service Design · UX · CX freelance à Bruxelles. Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche.',
+      nl: 'Service Design · UX · CX freelance in Brussel. Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, kadreer, beslis.',
+      en: 'Service Design · UX · CX freelance in Brussels. Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide.'
     },
     'home.eyebrow': {
       fr: 'Service Design · UX · CX · Bruxelles',
@@ -62,9 +62,9 @@
       en: 'I help teams transform<br><span class="alt">a fuzzy brief into a service the client signs.</span>'
     },
     'home.lead': {
-      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding. Drie publieke cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
+      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics ci-dessous.',
+      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding. Drie publieke cases hieronder.',
+      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases below.'
     },
     'home.casesEyebrow': { fr: 'Travaux sélectionnés', nl: 'Geselecteerd werk', en: 'Selected work' },
     'home.casesH2': {
@@ -2531,14 +2531,14 @@
     /* CVE 2026-05-11 Pack v4-final · consensus team review (5 Anthropic agents +
        Codex GPT-5) · score moyen 85/100 · voix Lou Downe / Cagan. */
     'home.metaDesc': {
-      fr: 'Service Design · UX · CX freelance à Bruxelles. Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. J\'écoute, je cadre, je tranche. Cas · SPEOS · HMS Networks · BNP Paribas Fortis.',
-      nl: 'Service Design · UX · CX freelance in Brussel. Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Ik luister, kadreer, beslis. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.',
-      en: 'Service Design · UX · CX freelance in Brussels. Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. I listen, I frame, I decide. Cases · SPEOS · HMS Networks · BNP Paribas Fortis.'
+      fr: 'Service Design · UX · CX freelance à Bruxelles. Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche.',
+      nl: 'Service Design · UX · CX freelance in Brussel. Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, kadreer, beslis.',
+      en: 'Service Design · UX · CX freelance in Brussels. Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide.'
     },
     'home.lead': {
-      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding. Drie publieke cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.',
-      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases · SPEOS, Ewon by HMS Networks, BNP Paribas Fortis.'
+      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics ci-dessous.',
+      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding. Drie publieke cases hieronder.',
+      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases below.'
     },
     'home.casesH2': {
       fr: 'Trois missions. <span class="accent">Trois décisions de production signées.</span>',
