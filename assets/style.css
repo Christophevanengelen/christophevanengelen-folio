@@ -8328,6 +8328,8 @@ select:focus-visible {
 .home-trust__item--logo[data-brand="choeke"] img     { height: 28px; max-width: 130px; } /* 5.19:1 very wide */
 .home-trust__item--logo[data-brand="bizbro"] img     { height: 34px; max-width: 130px; } /* 3.53:1 */
 .home-trust__item--logo[data-brand="dcy"] img        { height: 28px; max-width: 130px; } /* 5.47:1 very wide */
+.home-trust__item--logo[data-brand="balanz"] img     { height: 44px; max-width: 80px;  } /* 1.66:1 squarish stacked */
+.home-trust__item--logo[data-brand="xlg"] img        { height: 36px; max-width: 130px; } /* 2.26:1 mid-wide */
 
 @media (max-width: 600px) {
   .home-trust__list { gap: 32px; padding-right: 32px; }

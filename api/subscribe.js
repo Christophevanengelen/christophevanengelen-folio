@@ -68,13 +68,57 @@ export default async function handler(req, res) {
       kv.lpush('subscribers:records', JSON.stringify(record)),
     ]);
 
+    /* Email notification · forward to hello@ inbox via Formsubmit.
+       Best-effort · si fail, on retourne quand même OK car KV a réussi.
+       Formsubmit demande une confirmation 1-clic la première fois. */
+    notifyEmail(record).catch((e) => console.warn('email notify fail', e && e.message));
+
     return res.status(200).json({ ok: true });
   } catch (err) {
-    /* Si Vercel KV pas encore configuré · err contient probablement "KV_REST_API_URL is not defined" */
-    console.error('subscribe error', err && err.message);
-    return res.status(500).json({
-      error: 'Server error',
-      hint: 'Vercel KV pas encore configuré dans le dashboard ?',
-    });
+    /* Si Vercel KV pas encore configuré · fallback · on envoie quand même
+       l'email pour que l'inscription ne soit pas perdue. */
+    console.error('subscribe KV error', err && err.message);
+    const fallbackRecord = {
+      email,
+      ts: new Date().toISOString(),
+      lang,
+      note: 'KV indisponible · fallback email-only',
+    };
+    try {
+      await notifyEmail(fallbackRecord);
+      return res.status(200).json({ ok: true, fallback: 'email-only' });
+    } catch (e2) {
+      return res.status(500).json({
+        error: 'Server error',
+        hint: 'Vercel KV pas encore configuré et email notification a échoué.',
+      });
+    }
   }
+}
+
+/**
+ * Envoie l'email de notification de subscription via Formsubmit.co
+ * Anonymous forwarder · pas de compte requis · CVE confirme 1-clic la première fois.
+ */
+async function notifyEmail(record) {
+  const url = 'https://formsubmit.co/ajax/hello@christophevanengelen.com';
+  const payload = {
+    _subject: 'Nouvelle inscription newsletter folio',
+    _template: 'table',
+    _captcha: 'false',
+    email: record.email,
+    timestamp: record.ts || '',
+    language: record.lang || '',
+    user_agent: record.ua || '',
+    referrer: record.ref || '',
+    ip: record.ip || '',
+    note: record.note || '',
+  };
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error('Formsubmit returned ' + res.status);
+  return res.json().catch(() => ({}));
 }
