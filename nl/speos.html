@@ -1260,6 +1260,71 @@
   </div>
 </section>
 
+<!-- TL;DR · 4 questions du recruteur en 90 secondes (CVE 2026-05-12) -->
+<section id="tldr" data-act="S" data-frame="default" data-overflow="natural">
+  <style>
+    #tldr { padding: 64px 0 32px; }
+    #tldr .tldr-eyebrow {
+      display: inline-block;
+      font-family: var(--sans, system-ui);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--amber, #c76941);
+      margin-bottom: 22px;
+    }
+    #tldr .tldr-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 22px 36px;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 0;
+      border-top: 1px solid rgba(242,235,219,0.12);
+      border-bottom: 1px solid rgba(242,235,219,0.12);
+    }
+    #tldr .tldr-label {
+      font-family: var(--sans, system-ui);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber, #c76941);
+      padding-top: 6px;
+      align-self: start;
+    }
+    #tldr .tldr-text {
+      font-family: var(--display, Georgia, serif);
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--fg, #f2ebdb);
+      margin: 0;
+    }
+    #tldr .tldr-text strong { color: var(--fg, #f2ebdb); font-weight: 600; }
+    @media (max-width: 720px) {
+      #tldr { padding: 48px 0 24px; }
+      #tldr .tldr-grid { grid-template-columns: 1fr; gap: 4px 0; padding: 24px 0; }
+      #tldr .tldr-label { margin-top: 18px; padding-top: 0; }
+      #tldr .tldr-grid > .tldr-label:first-of-type { margin-top: 0; }
+      #tldr .tldr-text { font-size: 16px; margin-bottom: 6px; }
+    }
+  </style>
+  <div class="container">
+    <span class="tldr-eyebrow" data-i18n="speos.tldr.eyebrow">In 90 seconden</span>
+    <div class="tldr-grid">
+      <span class="tldr-label" data-i18n="speos.tldr.l1">Het probleem</span>
+      <p class="tldr-text" data-i18n="speos.tldr.t1">De Belgische post verliest 8 % per jaar. SPEOS, postale dochter van bpost, moest overschakelen naar digitaal zonder zijn print-omzet te breken, en zijn leiderschap verdedigen tegen cloud-native pure-players.</p>
+      <span class="tldr-label" data-i18n="speos.tldr.l2">De spanning</span>
+      <p class="tldr-text" data-i18n="speos.tldr.t2">Business wilde de omzet verdedigen. IT bouwde Agile zonder gebruiker. De UX-functie bestond niet als aparte afdeling. Project Owners en Project Managers spraken nauwelijks met elkaar.</p>
+      <span class="tldr-label" data-i18n="speos.tldr.l3">Wat ik gedaan heb</span>
+      <p class="tldr-text" data-i18n="speos.tldr.t3">Twaalf maanden. 12 interne expert-interviews (CEO, CTO, R&amp;D, Operations). 6 pilootklanten geïnterviewd, waaronder Luminus voor de energiefactuur. Customer Journey workshop fysiek, persona Johnny aan de muur.</p>
+      <span class="tldr-label" data-i18n="speos.tldr.l4">Wat eruit kwam</span>
+      <p class="tldr-text" data-i18n="speos.tldr.t4">Concept Report 76 pagina's ondertekend door sponsor. 6 op 6 klanten valideren. Drie marktsegmenten (Large Accounts, Easy2Mail KMO, API Integrators) geprioriteerd in SAFe sprints. Designteam geïntegreerd in het organigram.</p>
+    </div>
+  </div>
+</section>
+
 <!-- LE BRIEF SPEOS · CVE 2026-05-04 · une société IT pure qui ne savait pas ce
      qu'était l'UX, l'UI, ni le Service Design. Le mandat : installer un studio
      Service Design en interne pour combler le retard de maturité digitale. -->
@@ -1860,12 +1925,10 @@
     </div>
     <p class="research-source" data-i18n="speos.research.persoSource">Bron · Speos Concept Report 2024 · 8 archetypes « Potential Personas » gesynthetiseerd uit 12 interne expertinterviews + 10 op het terrein geteste persona's.</p>
 
-    <!-- DEEP-DIVE · 2 personas illustratifs nominatifs sur les 10 testés terrain.
-         Source : personna_speos.docx (CVE 2024-2025). Avatars composites, prénoms seuls, secteur générique « grand compte Énergie ». -->
+    <!-- DEEP-DIVE · 2 personas illustratifs nominatifs -->
     <div class="personas-deepdive" style="margin-top:64px;padding-top:48px;border-top:1px solid var(--rule);">
       <span class="eyebrow" data-i18n="speos.research.deepdiveEyebrow">Deep-dive · 2 illustratieve persona's</span>
       <h4 class="research-h3" style="margin-top:8px;" data-i18n-html="speos.research.deepdiveHead">Van de 10 op het terrein geteste, <span class="accent">twee die hardop spreken.</span></h4>
-      <p class="lead" style="max-width:70ch;margin-top:16px;" data-i18n="speos.research.deepdiveLead">Acht archetypes synthetiseren is een arbitrage-act. Om de stem niet te verliezen, hou ik twee persona's in deep-dive, die de archetypes #1 IT & Operations Manager en #3 Production Coordinator belichamen zoals waargenomen bij de grote Energie-accounts. Zelfde uren, zelfde angsten, zelfde zinnen in de zaal.</p>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:32px;">
         <article class="vp-pillar vp-pillar--persona">
@@ -1879,7 +1942,6 @@
             <li data-i18n-html="speos.research.deepdiveP1Pain3"><strong>Trage ochtendsupport</strong> · niemand vóór 8u, terwijl zijn batches om 5u30 vertrekken</li>
             <li data-i18n-html="speos.research.deepdiveP1Pain4"><strong>Generieke fouten</strong> · blind debuggen, geen actionable bericht</li>
           </ul>
-          <p class="vp-pillar__src" data-i18n="speos.research.deepdiveP1Src">Samengesteld profiel · 12 interne expertinterviews + 10 op het terrein geteste persona's · 2024-2025</p>
         </article>
 
         <article class="vp-pillar vp-pillar--persona">
@@ -1893,7 +1955,6 @@
             <li data-i18n-html="speos.research.deepdiveP2Pain3"><strong>Blokkerende batches</strong> · geen gedeeltelijke herwerking van een mislukt bestand</li>
             <li data-i18n-html="speos.research.deepdiveP2Pain4"><strong>Trage wijzigingen</strong> · zelfs voor een logo of template, het zijn weken</li>
           </ul>
-          <p class="vp-pillar__src" data-i18n="speos.research.deepdiveP2Src">Samengesteld profiel · 12 interne expertinterviews + 10 op het terrein geteste persona's · 2024-2025</p>
         </article>
       </div>
 
@@ -2092,7 +2153,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p1.eyebrow">Pain Point 01</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p1.h">« Onze onboarding duurt maanden. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p1.p">Integratie van nieuwe klanten die uitloopt. Dringende noden (campagnes, SLA) worden vaak gemist. Manuele processen vertragen elke uitrol.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p1.constraint">Werd designregel: onboarding automatiseren. Self-service gestuurd door doel en noden.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2107,7 +2167,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p2.eyebrow">Pain Point 02</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p2.h">« Alles loopt via manuele workflows. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p2.p">Kettingfouten in facturatie en file handling. Klantcustomisaties die schaalbaarheid blokkeren. API's afwezig of verouderd.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p2.constraint">Werd regel: de basis standaardiseren, de laatste kilometer customiseren per persona.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2122,7 +2181,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p3.eyebrow">Pain Point 03</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p3.h">« De klant moet ons bellen voor de minste wijziging. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p3.p">Geen self-service (campagneconfiguratie, real-time tracking). Niet-intuïtieve interfaces voor niet-techs. Geen transparant portaal om de voortgang te volgen.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p3.constraint">Werd regel: one-stop klantportaal met real-time opvolging + self-service acties per persona.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2137,7 +2195,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p4.eyebrow">Pain Point 04</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p4.h">« Onze tools praten niet met elkaar. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p4.p">Verschillende platformen per segment (Build-to-Mail, Easy2Mail, Integrators). Heterogene interne tools (TopDesk, Navision, Salesforce…). Stilzwijgende kennis, weinig gedocumenteerd.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p4.constraint">Werd regel: gemeenschappelijk hostplatform, customisaties per typologie erbovenop.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2152,7 +2209,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p5.eyebrow">Pain Point 05</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p5.h">« We horen problemen van de klant. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p5.p">Reactieve houding bij incidenten. Geen preventieve alerting. De klant belt, niet omgekeerd.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p5.constraint">Werd regel: proactieve monitoring, alerts aan klantzijde + aan SPEOS-zijde, push-communicatie voor de klant het vraagt.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2167,7 +2223,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p6.eyebrow">Pain Point 06</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p6.h">« Ons digitaal aanbod evenaart de concurrentie niet. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p6.p">100% digitale concurrenten (Easypost, Doccle…) die de historische markt aanbijten. Tekort aan self-service producten en open API's.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p6.constraint">Werd regel: de gaps dichten via het one-stop portaal + API-opening voor de Integrators.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2182,7 +2237,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p7.eyebrow">Pain Point 07</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p7.h">« Eens in prod raakt niemand het nog aan. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p7.p">Klant-setup vastgepind na onboarding. Evoluties beleefd als zware projecten. Geen logica van continue iteratie.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p7.constraint">Werd regel: het aanbod modulariseren. Elke feature onafhankelijk configureerbaar, zonder rebuilds.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2197,7 +2251,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p8.eyebrow">Pain Point 08</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p8.h">« De markt beweegt sneller dan ons aanbod. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p8.p">Druk op de leiderspositie. Digitale platformen die het KMO-segment veroveren. Risico om vast te zitten in de historische key accounts.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p8.constraint">Werd centraal argument: de VP moet het leiderschap verdedigen ÉN een nieuw marktsegment openen.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2212,7 +2265,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p9.eyebrow">Pain Point 09</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p9.h">« De facturatie is ondoorzichtig voor onze klanten. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p9.p">Complexe tariefmodellen. Zware facturen om te ontleden. Wrijving bij vernieuwing, vertrouwensverlies.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p9.constraint">Werd regel: leesbare facturatie via het portaal, breakdown per post + verbruiksdashboard.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2227,7 +2279,6 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="speos.pp.p10.eyebrow">Pain Point 10</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="speos.pp.p10.h">« We blijven kleven aan onze historische rekeningen. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="speos.pp.p10.p">Moeite om de KMO-markt en het Integrators-kanaal te openen. Salesforce gekalibreerd op key accounts. Tooling niet aangepast aan kleine volumes.</p>
           <div class="h-deliv h-reveal" data-i18n="speos.pp.p10.constraint">Werd MVP-argument: KMO veroveren via Easy2Mail en het Integrators-kanaal via API. Geen post meer nodig als kruk.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
@@ -2397,45 +2448,12 @@
     <h2 class="research-h3" data-i18n-html="speos.method.title">Waarom <span class="accent">deze tools, hier.</span></h2>
     <p class="lead" data-i18n="speos.method.lead">Bij SPEOS ben ik niet gestart met een Lean Canvas. Ik startte met een Stakeholder Map en een Customer Journey AS-IS. De context bepaalt de tool, niet andersom. Een early-stage organisatie in digitale transformatie moet zien voor ze verzint. Een Value Proposition kristalliseert na observatie, niet bij de start van een sessie.</p>
 
-    <ul class="method-grid" role="list">
-      <li class="method-card">
-        <span class="method-card__num">01</span>
-        <h3 class="method-card__h" data-i18n="speos.method.c1.h">Stakeholder Map · om de wrijving zichtbaar te maken</h3>
-        <p class="method-card__p" data-i18n="speos.method.c1.p">Voor we een oplossing voorstelden, brachten we in kaart wie beslist, wie uitvoert, wie valideert, wie beïnvloedt. De Project Owner Business en de Project Manager IT hadden nooit in dezelfde zaal gezeten met een gedeeld object. De Stakeholder Map was dat object.</p>
-        <span class="method-card__src" data-i18n="speos.method.c1.src">Bron · Service Design / Stickdorn & Schneider</span>
-      </li>
-      <li class="method-card method-card--accent">
-        <span class="method-card__num">02</span>
-        <h3 class="method-card__h" data-i18n="speos.method.c2.h">Customer Journey AS-IS / TO-BE · om de chaos te tonen</h3>
-        <p class="method-card__p" data-i18n="speos.method.c2.p">De huidige journey wordt neergezet zonder beschuldiging. Vijf fasen, tien pain points geprikt waar ze pijn doen. Dezelfde journey, doelversie, toont waar we naartoe willen. Geen argument. Een visueel bewijs op een muur, dat opinies weerstaat.</p>
-        <span class="method-card__src" data-i18n="speos.method.c2.src">Bron · Service Design Network · NN/G</span>
-      </li>
-      <li class="method-card">
-        <span class="method-card__num">03</span>
-        <h3 class="method-card__h" data-i18n="speos.method.c3.h">Pains / Gains / Tasks · om in de huid te kruipen</h3>
-        <p class="method-card__p" data-i18n="speos.method.c3.p">Strategyzer komt in de toolkit, niet als hoofdingang, als extractietool. Voor elke persona lijsten we de jobs to do, de pains te vermijden, de verwachte gains. Het canvas draagt het project niet, het bereidt het terrein van de VP voor.</p>
-        <span class="method-card__src" data-i18n="speos.method.c3.src">Bron · Strategyzer · Value Proposition Canvas</span>
-      </li>
-      <li class="method-card">
-        <span class="method-card__num">04</span>
-        <h3 class="method-card__h" data-i18n="speos.method.c4.h">Empathy Map + How Might We · om te herformuleren</h3>
-        <p class="method-card__p" data-i18n="speos.method.c4.p">In workshop wordt elke pain point een opportuniteit via « how might we ». De teams stemmen, prioriteren, gooien weg. Geen debat over het canvas, focus op de actie. Dat levert de top 12 HMW die het VP-backlog wordt.</p>
-        <span class="method-card__src" data-i18n="speos.method.c4.src">Bron · IDEO · Stanford d.school</span>
-      </li>
-    </ul>
-
-    <p class="method-claim" data-i18n-html="speos.method.claim">Strategyzer, Customer Journey, Service Blueprint en Design Sprint zijn tools van <strong class="accent">hetzelfde Design System</strong>. De expertise zit niet in er één kiezen. Maar weten welke, op welk moment, met wie in de kamer.</p>
-
-    <!-- TABLEAU Classic vs Best Practice (Sprint 3 · 2026-05-08) ·
-         Recréé en HTML/CSS depuis Methodology_SPEOS.pptx slide 14.
-         Pitch stratégique : pourquoi installer un département UX dédié.
-         Référents anonymisés (CVE 2026-05-07) : pas de noms BNP/Belfius/Engie publics. -->
-    <div class="method-comparison" style="margin-top:64px;padding-top:48px;border-top:1px solid var(--rule);">
+    <!-- TABLEAU Classic vs Best Practice · pourquoi un département UX dédié -->
+    <div class="method-comparison" style="margin-top:48px;">
       <span class="eyebrow" data-i18n="speos.method.compEyebrow">De initiële pitch · waarom een UX-afdeling</span>
       <h3 class="research-h3" style="margin-top:8px;" data-i18n-html="speos.method.compTitle">Classic <span class="accent">vs Best Practice.</span></h3>
-      <p class="lead" style="max-width:70ch;margin-top:16px;" data-i18n="speos.method.compLead">De pitch die ik bij aankomst heb gevoerd om de missie te verantwoorden: tonen hoe de grote Belgische accounts (banking, energy, telecoms) hun UX-functie hebben gestructureerd, en waar SPEOS zich op die lijn bevond. Drie rollen. Twee organisatiewijzen. Eén architectuurkeuze.</p>
 
-      <table class="vp-needs" style="margin-top:32px;">
+      <table class="vp-needs" style="margin-top:24px;">
         <thead>
           <tr>
             <th data-i18n="speos.method.comp.colDim">Dimensie</th>
@@ -2462,8 +2480,7 @@
         </tbody>
       </table>
 
-      <p class="vp-pillar__hint" style="margin-top:24px;" data-i18n-html="speos.method.compNote">Het Best Practice-patroon is <strong>al 15+ jaar uitgerold</strong> in de Verenigde Staten (Amazon, IBM, Capital One) en <strong>10+ jaar</strong> in Europa in complexe sectoren (banking, energy, telecoms). Bij aankomst bij SPEOS herontdekte ik niets: ik transponeerde een geïndustrialiseerd patroon.</p>
-      <p class="research-source" data-i18n="speos.method.compSource">Bron · methodologische pitch CVE gevoerd intern bij SPEOS · 2024.</p>
+      <p class="research-source" style="margin-top:16px;" data-i18n="speos.method.compSource">Bron · methodologische pitch CVE gevoerd intern bij SPEOS · 2024.</p>
     </div>
   </div>
 </section>
@@ -2609,7 +2626,7 @@
     <!-- BAS DE PAGE · alignement obtenu + bascule Ideation -->
     <div class="vp-content__bridge">
       <p class="vp-content__alignement" data-i18n-html="speos.vp.bridgeText">Aan het einde van deze VP delen <strong>Project Owners (Business), Project Managers (IT), Operations en Sales</strong> dezelfde zin, dezelfde twee persona's, dezelfde vertaling van tien pijnen in vijf MVP-livrables. Het is die <span class="accent">gemeenschappelijke basis</span> die de Ideation legitiem maakt. Men arbitreert niet meer over het « wat », men arbitreert over het « wanneer » en het « hoe ».</p>
-      <span class="vp-content__next" data-i18n-html="speos.vp.bridgeNext">Logisch vervolg <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 richtingen verkend, één behouden</span> <strong>Ideation</strong> · Develop · 2 directions explorées, une retenue</span>
+      <span class="vp-content__next" data-i18n-html="speos.vp.bridgeNext">Logisch vervolg <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 richtingen verkend, één behouden</span> <strong>Ideation</strong> · 2 directions, une retenue</span>
     </div>
   </div>
 </section>
@@ -2971,8 +2988,6 @@
 
         <blockquote class="vp-statement" data-i18n-html="speos.prototype.vp3Statement"><span class="vp-statement__lab">Value Proposition · verbatim Concept Report</span>
           <p>Onze <strong>Reports &amp; Archives</strong> helpen de <strong>Finance-, Compliance- en Operations-teams</strong> die <strong>kosten willen beheersen, traceerbaarheid willen garanderen en compliant willen blijven</strong>, door gestructureerde rapporten, centrale archieven en audit-ready bewijzen op één plek aan te bieden.</p></blockquote>
-        <blockquote class="vp-statement vp-statement--secondary" data-i18n-html="speos.prototype.vp4Statement"><span class="vp-statement__lab">Value Proposition Billing · verbatim Concept Report</span>
-          <p>Onze <strong>billing</strong> helpt dezelfde teams door centrale toegang te bieden tot gestructureerde rapporten, juridische bewijzen en gebruiksarchieven, en verkleint manueel werk en foutgevoelige processen.</p></blockquote>
       </div>
 
       <ul class="vp-features" role="list">
@@ -3129,7 +3144,6 @@
     <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.prototype.utOutcome"><strong class="accent">6 / 6 valideren</strong> de one-stop richting <span class="brief-teaser__sep">·</span> <strong class="accent">Gecombineerde score 4,03 / 5</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong></p>
 
     <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n-html="speos.prototype.utLead">Het Concept Report wordt in een gestructureerde presentatie getest bij 6 klanten die de 3 marktsegmenten dekken: Large Accounts (Build-to-Mail), KMO (Easy2Mail), Integrators / Resellers. De zes valideren de one-stop richting. <strong>Eén ervan is Luminus</strong>, een Belgische energiereferentie die het sponsorvertrouwen veilig stelt: het platform is geruststellend nog voor de ontwikkeling.</p>
-    <p class="lead" style="max-width: 70ch;" data-i18n-html="speos.prototype.utLead2">Parallel doorlopen twee Energy-persona's — Moustafa en Bogdan — de SUPERQ op drie prototype-scenario's · Real-time Dashboard, Foutbeheer, Audit Trail.</p>
 
     <ul class="ut-stats" role="list" style="margin-top: 32px;">
       <li class="ut-stat">
@@ -3179,8 +3193,6 @@
       </article>
     </div>
 
-    <p class="lead" style="margin-top: 40px; max-width: 70ch;" data-i18n-html="speos.prototype.utLessons">Het Dashboard en het Foutbeheer slagen. De Audit Trail houdt minder stand · Moustafa scoort de Geruststelling 1 / 5 op de juridische bewijswaarde. Zone geïdentificeerd, sponsor geïnformeerd, MVP++ scope aangepast.</p>
-
     <p class="research-source" style="margin-top: 32px;" data-i18n="speos.prototype.utSource">Tests via directe presentatie en co-design bij de 6 pilootklanten · 3 segmenten Build-to-Mail, Easy2Mail en Integrators · Speos Concept Report 2024</p>
 
     <h4 class="research-h3" style="margin-top: 64px;" data-i18n-html="speos.prototype.utClientsHead">De zes pilootklanten in directionele validatie</h4>
@@ -3219,8 +3231,6 @@
     </div>
 
     <blockquote class="ut-quote" data-i18n-html="speos.prototype.utQuote">Zes klanten op zes valideren de richting vóór de ontwikkeling. De sponsor beslist go-productie op basis van het Concept Report en de SUPERQ-test — gecombineerde score 4,03/5, NPS 9/10.</blockquote>
-
-    <p class="research-source" data-i18n="speos.prototype.utSource">Tests via directe presentatie en co-design bij de 6 pilootklanten · 3 segmenten Build-to-Mail, Easy2Mail en Integrators · Speos Concept Report 2024</p>
   </div>
 </section>
 
@@ -3485,9 +3495,6 @@
     <h2 class="outcome-title" data-i18n-html="speos.outcome.title">Geen intentie. <span class="accent">Een platform klaar om op te schalen.</span></h2>
     <p class="lead outcome-lead" data-i18n="speos.outcome.lead">Zes maanden Design Thinking afgesloten met een Concept Report van 76 pagina's getekend door de sponsor. Zes pilootklanten valideren de drie marktsegmenten. Een geprioriteerde Value Props roadmap, klaar voor sprints. Geen beleefde usability test, geen principieel ja. Een schriftelijke productiebeslissing.</p>
 
-    <!-- CVE 2026-05-04 v6 · climax-stat retiré ici · le 6/6 + Luminus est déjà
-         posé en #prototype-usertest. Évite la 4e répétition narrative. -->
-
     <ol class="outcome-deliverables" role="list">
       <li class="outcome-card">
         <span class="outcome-card__num">01</span>
@@ -3505,9 +3512,6 @@
         <p class="outcome-card__p" data-i18n="speos.outcome.d3.p">Tegenover digital-first spelers die op KMO mikken en internationale spelers die op SaaS line-of-business mikken, blijft SPEOS pionier in B2G-compliance en schaalt via API-hefboom. Positie geconsolideerd, niet uitgehold.</p>
       </li>
     </ol>
-
-    <!-- CVE 2026-05-08 · toolkit signal · outcome = compréhension d'intégration design -->
-    <p class="lead toolkit-signal" style="max-width: 70ch; margin-top: 32px;" data-i18n-html="speos.outcome.toolkitSignal"><strong>De outcome is geen cijfer, het is een begrip.</strong> Een design team (UX, UI, Service Design) geïntegreerd in <strong class="accent">Agile SAFe</strong> en in een lange-termijn roadmap geprioriteerd in opeenvolgende MVPs. <strong class="accent">Vijf IT-teams uitgelijnd op dezelfde Value Proposition</strong>, gebruikerswaarde voor ogen. En deze keer · geen Strategyzer. Het instrument kiest zich naar de maturiteit van digitale transformatie en user-centric.</p>
 
     <p class="outcome-integrity" data-i18n-html="speos.outcome.integrity"><strong>Integriteitsnota.</strong> Het Concept Report werd opgeleverd en gevalideerd. De rollout ging in Agile sprints langs de SPEOS-teams. Wat ik kan beweren stopt aan de uitgang van de Design Thinking-fase · een livrable van 76 pagina's, zes pilootklanten op één lijn, een driehoek Customer · Business · Tech in het groen. De exacte ROI na rollout hangt af van de product- en go-to-market-keuzes die de interne teams na mijn vertrek hebben gemaakt. Ik kan die niet opeisen.</p>
   </div>

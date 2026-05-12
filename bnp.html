@@ -1246,6 +1246,71 @@
   </div>
 </section>
 
+<!-- TL;DR · 4 questions du recruteur en 90 secondes (CVE 2026-05-12) -->
+<section id="tldr" data-act="S" data-frame="default" data-overflow="natural">
+  <style>
+    #tldr { padding: 64px 0 32px; }
+    #tldr .tldr-eyebrow {
+      display: inline-block;
+      font-family: var(--sans, system-ui);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--amber, #c76941);
+      margin-bottom: 22px;
+    }
+    #tldr .tldr-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 22px 36px;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 0;
+      border-top: 1px solid rgba(242,235,219,0.12);
+      border-bottom: 1px solid rgba(242,235,219,0.12);
+    }
+    #tldr .tldr-label {
+      font-family: var(--sans, system-ui);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber, #c76941);
+      padding-top: 6px;
+      align-self: start;
+    }
+    #tldr .tldr-text {
+      font-family: var(--display, Georgia, serif);
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--fg, #f2ebdb);
+      margin: 0;
+    }
+    #tldr .tldr-text strong { color: var(--fg, #f2ebdb); font-weight: 600; }
+    @media (max-width: 720px) {
+      #tldr { padding: 48px 0 24px; }
+      #tldr .tldr-grid { grid-template-columns: 1fr; gap: 4px 0; padding: 24px 0; }
+      #tldr .tldr-label { margin-top: 18px; padding-top: 0; }
+      #tldr .tldr-grid > .tldr-label:first-of-type { margin-top: 0; }
+      #tldr .tldr-text { font-size: 16px; margin-bottom: 6px; }
+    }
+  </style>
+  <div class="container">
+    <span class="tldr-eyebrow" data-i18n="bnp.tldr.eyebrow">En 90 secondes</span>
+    <div class="tldr-grid">
+      <span class="tldr-label" data-i18n="bnp.tldr.l1">Le problème</span>
+      <p class="tldr-text" data-i18n="bnp.tldr.t1">BNP traitait 30 % des paiements Bancontact du pays. Aucun service ne valorisait cette donnée auprès des commerçants qui les acceptaient.</p>
+      <span class="tldr-label" data-i18n="bnp.tldr.l2">La tension</span>
+      <p class="tldr-text" data-i18n="bnp.tldr.t2">Quatre fonctions internes, quatre lectures. Banking voulait protéger la confiance carte. IT cherchait un MVP technique. Legal bloquait sur la donnée. Marketing voulait du brand. Zéro alignement.</p>
+      <span class="tldr-label" data-i18n="bnp.tldr.l3">Ce que j'ai fait</span>
+      <p class="tldr-text" data-i18n="bnp.tldr.t3">Six mois en amont. Stakeholder Map, Customer Journey, Value Proposition Canvas. Six commerçants interviewés sur leur lieu de travail, dont Léonidas.</p>
+      <span class="tldr-label" data-i18n="bnp.tldr.l4">Ce qui en est sorti</span>
+      <p class="tldr-text" data-i18n="bnp.tldr.t4">Concept Report signé. Léonidas a pré-signé une promesse d'achat ferme avant le développement. Quatre fonctions alignées, backlog P1/P2 prêt à entrer en sprints.</p>
+    </div>
+  </div>
+</section>
+
 <!-- LE BRIEF — Setup (cadre du projet, juste après le hero, avant la roadmap méthodologique).
      CVE 2026-05-03 : ordre inversé pour suivre l'arc émotionnel → intellectuel.
      Le lecteur entre par l'enjeu (le 30 %, le mandat) avant de voir la méthode. -->
@@ -2257,7 +2322,7 @@
   <div class="container vp-content">
     <span class="eyebrow vp-content__eyebrow">Le contrat de valeur</span>
     <h2 class="vp-content__title" data-i18n-html="bnp.vp.title">Un dashboard, ce n'est pas <span class="accent">pousser de la donnée.</span><br>C'est raconter une histoire qui décide.</h2>
-    <p class="vp-content__lede" data-i18n-html="bnp.vp.lede">Avant la VP, chaque fonction parlait sa propre langue. Après, une phrase tient debout dans la salle : <strong>l'utilisateur a un objectif, on lui livre un rapport orienté objectif, point</strong>. Plus de cognitive overload, plus de visualisation pour la visualisation. Cette section est l'alignement qui rend la suite légitime.</p>
+    <p class="vp-content__lede" data-i18n-html="bnp.vp.lede">Avant la VP, chaque fonction parlait sa propre langue. Après, une phrase tient debout dans la salle : <strong>l'utilisateur a un objectif, on lui livre un rapport orienté objectif, point</strong>.</p>
 
     <!-- TRIPTYQUE · 3 piliers de la VP : posture / persona / livrables -->
     <div class="vp-content__grid">
@@ -2267,16 +2332,16 @@
         <p class="vp-pillar__claim" data-i18n-html="bnp.vp.posture.claim">Pas une plateforme exploratoire. <span class="accent">Une narration outillée.</span></p>
         <ul class="vp-pillar__list">
           <li data-i18n-html="bnp.vp.posture.l1"><strong>Pas</strong> de pushing data via charts décoratifs.</li>
-          <li data-i18n-html="bnp.vp.posture.l2"><strong>Telling a story</strong> avec la donnée à disposition.</li>
-          <li data-i18n-html="bnp.vp.posture.l3"><strong>Focus</strong> sur l'information pertinente, qui pilote l'action.</li>
+          <li data-i18n-html="bnp.vp.posture.l2"><strong>Telling a story</strong> avec la donnée.</li>
+          <li data-i18n-html="bnp.vp.posture.l3"><strong>Focus</strong> sur l'information qui pilote l'action.</li>
         </ul>
-        <p class="vp-pillar__src" data-i18n="bnp.vp.posture.src">Source · Concept Report mars 2018 · slide « E.I. Concept · Value Proposition »</p>
+        <p class="vp-pillar__src" data-i18n="bnp.vp.posture.src">Source · Concept Report mars 2018 · slide « E.I. Value Proposition »</p>
       </article>
 
       <article class="vp-pillar vp-pillar--persona">
         <div class="vp-pillar__num">02</div>
         <h3 class="vp-pillar__title" data-i18n="bnp.vp.persona.h">Les 3 questions du commerçant</h3>
-        <p class="vp-pillar__claim" data-i18n-html="bnp.vp.persona.claim">Le commerçant ouvre l'app avec <span class="accent">un objectif précis</span>, pas avec l'envie d'explorer.</p>
+        <p class="vp-pillar__claim" data-i18n-html="bnp.vp.persona.claim">Le commerçant ouvre l'app avec <span class="accent">un objectif précis</span>, pas pour explorer.</p>
         <ol class="vp-question-list">
           <li class="vp-question">
             <span class="vp-question__num">Q1</span>
@@ -2291,13 +2356,13 @@
             <p class="vp-question__text" data-i18n="bnp.vp.persona.q3">Comment je m'en sers, ce matin, à 8h, derrière ma caisse ?</p>
           </li>
         </ol>
-        <p class="vp-pillar__hint" data-i18n-html="bnp.vp.persona.hint">Il veut <strong>l'information le plus vite possible</strong>, sans effort. Il n'explorera pas plus de données qu'il ne peut traiter.</p>
+        <p class="vp-pillar__hint" data-i18n-html="bnp.vp.persona.hint">Il veut <strong>l'information le plus vite possible</strong>, sans effort.</p>
       </article>
 
       <article class="vp-pillar vp-pillar--needs">
         <div class="vp-pillar__num">03</div>
         <h3 class="vp-pillar__title" data-i18n="bnp.vp.needs.h">5 besoins → 5 livrables</h3>
-        <p class="vp-pillar__claim" data-i18n-html="bnp.vp.needs.claim">Chaque besoin du commerçant <span class="accent">se mappe à un livrable</span> du futur produit. Pas un de plus.</p>
+        <p class="vp-pillar__claim" data-i18n-html="bnp.vp.needs.claim">Chaque besoin <span class="accent">se mappe à un livrable</span>. Pas un de plus.</p>
         <table class="vp-needs">
           <thead>
             <tr>
@@ -2318,8 +2383,8 @@
 
     <!-- BAS DE PAGE · alignement obtenu + bascule Ideation -->
     <div class="vp-content__bridge">
-      <p class="vp-content__alignement" data-i18n-html="bnp.vp.bridgeText">À la sortie de cette VP, <strong>Banking, IT, Legal et Marketing</strong> partagent la même phrase, le même utilisateur, les mêmes 5 livrables. C'est ce <span class="accent">socle commun</span> qui rend l'idéation légitime — on n'arbitre plus sur le « quoi », on arbitre sur le « comment ».</p>
-      <span class="vp-content__next" data-i18n-html="bnp.vp.bridgeNext">Suite logique <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 4 Goals identifiés en atelier</span>
+      <p class="vp-content__alignement" data-i18n-html="bnp.vp.bridgeText">À la sortie de cette VP, <strong>Banking, IT, Legal et Marketing</strong> partagent la même phrase, le même utilisateur, les mêmes 5 livrables. On n'arbitre plus sur le « quoi », on arbitre sur le « comment ».</p>
+      <span class="vp-content__next" data-i18n-html="bnp.vp.bridgeNext">Suite <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · 4 Goals identifiés en atelier</span>
     </div>
   </div>
 </section>
@@ -2617,11 +2682,11 @@
   <div class="container">
     <div class="goal-section">
       <div class="goal-section__intro">
-        <span class="eyebrow" data-i18n="bnp.prototype.g1Eyebrow">Goal 1 · Performance Analysis · cycle position : Control</span>
+        <span class="eyebrow" data-i18n="bnp.prototype.g1Eyebrow">Goal 1 · Performance Analysis</span>
         <h3 class="goal-section__title" data-i18n-html="bnp.prototype.g1Title">Comment je performe <span class="accent">ce mois-ci ?</span></h3>
-        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g1Lead">Le commerçant ouvre le dashboard, en cinq secondes il a sa lecture du mois : trois KPI lus en un coup d'œil, son shop comparé aux autres du réseau, l'écart vs N-1 mis en lumière. Pas de filtres à manipuler, pas de graphique à construire. La donnée parle, il décide.</p>
+        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g1Lead">Le commerçant ouvre le dashboard, en cinq secondes il a sa lecture du mois : trois KPI, son shop comparé aux autres du réseau, l'écart vs N-1. Pas de filtres, pas de graphique à construire. La donnée parle, il décide.</p>
 
-        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g1ValueProp"><strong>La promesse :</strong> ce que ferait un analyste en 30 minutes (extraire, croiser, visualiser, comparer N-1, écrire la conclusion), le commerçant l'a en 5 secondes. Aucune compétence data requise.</p>
+        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g1ValueProp"><strong>La promesse :</strong> ce que ferait un analyste en 30 minutes (extraire, croiser, comparer N-1, conclure), le commerçant l'a en 5 secondes.</p>
       </div>
 
       <!-- Dashboard mockup natif · charte folio · onglet Performance actif -->
@@ -2726,7 +2791,7 @@
 
         <div class="dash-insight">
           <span class="dash-insight__lab" data-i18n="bnp.prototype.g1WhatLab">What's important</span>
-          <p class="dash-insight__txt" data-i18n="bnp.prototype.g1WhatTxt">In January 2018, your average basket size declined by 7% compared to January 2017, but you had more transactions and revenue. It must be you have more clients or returning visitors however they buy less per visit.</p>
+          <p class="dash-insight__txt" data-i18n="bnp.prototype.g1WhatTxt">In January 2018, average basket declined 7% vs January 2017, but transactions and revenue rose. More clients or returning visitors, buying less per visit.</p>
         </div>
       </div>
     </div>
@@ -2767,7 +2832,7 @@
           <span class="source-strip__num">45</span>
         </a>
       </div>
-      <span class="source-strip__ref" data-i18n="bnp.prototype.g1SourceRef">Concept Report · mars 2018 · pages 40 → 45 · Performance Analysis (3 KPIs · Shop Comparison · What's Important)</span>
+      <span class="source-strip__ref" data-i18n="bnp.prototype.g1SourceRef">Concept Report · mars 2018 · pages 40 → 45 · Performance Analysis</span>
     </div>
   </div>
 </section>
@@ -2777,11 +2842,11 @@
   <div class="container">
     <div class="goal-section">
       <div class="goal-section__intro">
-        <span class="eyebrow" data-i18n="bnp.prototype.g2Eyebrow">Goal 2 · Business Expansion · cycle position : Learn</span>
+        <span class="eyebrow" data-i18n="bnp.prototype.g2Eyebrow">Goal 2 · Business Expansion</span>
         <h3 class="goal-section__title" data-i18n-html="bnp.prototype.g2Title">Comment j'agrandis <span class="accent">mon business ?</span></h3>
-        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g2Lead">Une fois la photo du business prise, le commerçant entre en mode action. Trois cards d'amélioration lui montrent en un seul écran qui sont ses clients réels, qui sont les acquis et les perdus, et d'où ils viennent. Pas de filtre à manipuler, l'info est servie agrégée.</p>
+        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g2Lead">Une fois la photo du business prise, le commerçant entre en mode action. Trois cards lui montrent en un écran qui sont ses clients réels, les acquis, les perdus, et d'où ils viennent. Pas de filtre, l'info est servie agrégée.</p>
 
-        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g2ValueProp"><strong>La promesse :</strong> au lieu d'explorer 20 segments démographiques, le rapport ne montre que les 3 segments qui pèsent — et dit lequel décroche. Le commerçant n'a pas besoin de savoir ce qu'est une cohorte.</p>
+        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g2ValueProp"><strong>La promesse :</strong> au lieu d'explorer 20 segments démographiques, le rapport ne montre que les 3 segments qui pèsent, et dit lequel décroche.</p>
       </div>
 
       <!-- Dashboard mockup natif · charte folio · onglet Improvement actif -->
@@ -2851,8 +2916,8 @@
     </div>
 
     <ul class="goal-section__benefits" role="list">
-      <li data-i18n="bnp.prototype.g2Bene1">Cinq lectures complémentaires couvrent la décision marketing locale.</li>
-      <li data-i18n="bnp.prototype.g2Bene2">Cohérence visuelle : chaque feature ouvre sur un écran type, pas une exploration libre.</li>
+      <li data-i18n="bnp.prototype.g2Bene1">Cinq lectures couvrent la décision marketing locale.</li>
+      <li data-i18n="bnp.prototype.g2Bene2">Chaque feature ouvre sur un écran type, pas une exploration libre.</li>
       <li data-i18n="bnp.prototype.g2Bene3">L'action suggérée est explicite : étendre les heures, cibler une commune, relancer une cohorte.</li>
     </ul>
 
@@ -2889,11 +2954,11 @@
   <div class="container">
     <div class="goal-section">
       <div class="goal-section__intro">
-        <span class="eyebrow" data-i18n="bnp.prototype.g3Eyebrow">Goal 3 · Evaluating Actions · cycle position : Observe</span>
+        <span class="eyebrow" data-i18n="bnp.prototype.g3Eyebrow">Goal 3 · Evaluating Actions</span>
         <h3 class="goal-section__title" data-i18n-html="bnp.prototype.g3Title">L'action que j'ai prise, <span class="accent">elle a marché ?</span></h3>
-        <p class="lead goal-section__lead" data-i18n-html="bnp.prototype.g3Lead">Pour évaluer une action, il faut comparer. Le concept fixe trois fenêtres temps : <strong>même période N-1</strong>, <strong>période précédente</strong>, <strong>même période courante (multi-shops)</strong>. Le rapport calcule le delta sur revenus, transactions, panier moyen — et l'affiche en grand.</p>
+        <p class="lead goal-section__lead" data-i18n-html="bnp.prototype.g3Lead">Trois fenêtres temps de comparaison : <strong>même période N-1</strong>, <strong>période précédente</strong>, <strong>même période courante (multi-shops)</strong>. Le rapport calcule le delta sur revenus, transactions, panier moyen, et l'affiche en grand.</p>
 
-        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g3ValueProp"><strong>La promesse :</strong> aucune arithmétique mentale. Le delta entre deux périodes est calculé côté serveur, affiché en chiffre clair à droite de chaque graphique. Le commerçant lit le résultat, pas la formule.</p>
+        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g3ValueProp"><strong>La promesse :</strong> aucune arithmétique mentale. Le delta est calculé côté serveur, affiché à droite du graphique.</p>
       </div>
 
       <!-- Dashboard mockup natif · charte folio · onglet Comparison actif -->
@@ -2935,7 +3000,7 @@
               <div class="dash-delta">
                 <span class="dash-delta__num" data-i18n="bnp.prototype.g3RevDelta">+80% revenues</span>
                 <span class="dash-delta__sub" data-i18n="bnp.prototype.g3RevSub">(+ €34.000)</span>
-                <p class="dash-delta__note" data-i18n="bnp.prototype.g3RevNote">Le delta entre les deux fenêtres temps s'affiche en grand, à droite du graphique. Le commerçant ne fait pas de calcul mental.</p>
+                <p class="dash-delta__note" data-i18n="bnp.prototype.g3RevNote">Delta affiché en grand, à droite du graphique. Pas de calcul mental.</p>
               </div>
             </div>
             <div class="dash-chart__legend">
@@ -2965,7 +3030,7 @@
               <div class="dash-delta">
                 <span class="dash-delta__num" data-i18n="bnp.prototype.g3TransDelta">+60% transactions</span>
                 <span class="dash-delta__sub" data-i18n="bnp.prototype.g3TransSub">(+ 8.000)</span>
-                <p class="dash-delta__note" data-i18n="bnp.prototype.g3TransNote">Au survol d'un mois, un tooltip indique l'écart précis du point. Le delta global reste visible à droite.</p>
+                <p class="dash-delta__note" data-i18n="bnp.prototype.g3TransNote">Au survol d'un mois, un tooltip indique l'écart précis. Le delta global reste visible à droite.</p>
               </div>
             </div>
           </div>
@@ -2993,7 +3058,7 @@
               <div class="dash-delta">
                 <span class="dash-delta__num" data-i18n="bnp.prototype.g3BasketDelta">+35% average basket</span>
                 <span class="dash-delta__sub" data-i18n="bnp.prototype.g3BasketSub">(+ €34)</span>
-                <p class="dash-delta__note" data-i18n="bnp.prototype.g3BasketNote">L'aire hachurée matérialise le gain entre les deux périodes — la comparaison devient une preuve visuelle.</p>
+                <p class="dash-delta__note" data-i18n="bnp.prototype.g3BasketNote">L'aire hachurée matérialise le gain entre les deux périodes.</p>
               </div>
             </div>
           </div>
@@ -3001,7 +3066,7 @@
 
         <div class="dash-insight">
           <span class="dash-insight__lab" data-i18n="bnp.prototype.g3WhatLab">What's important</span>
-          <p class="dash-insight__txt" data-i18n="bnp.prototype.g3WhatTxt">Le delta période vs période est calculé pour chaque métrique : revenus, transactions, panier moyen. Le commerçant lit l'écart, identifie où l'action a porté, et décide la suite. Les valeurs affichées dans ces wireframes sont illustratives.</p>
+          <p class="dash-insight__txt" data-i18n="bnp.prototype.g3WhatTxt">Le commerçant lit l'écart, identifie où l'action a porté, décide la suite.</p>
         </div>
       </div>
     </div>
@@ -3011,7 +3076,7 @@
       <article class="g3-mode" role="listitem">
         <span class="g3-mode__lab" data-i18n="bnp.prototype.g3ModeALab">Mode A</span>
         <h4 class="g3-mode__name" data-i18n="bnp.prototype.g3ModeAName">Period comparison</h4>
-        <p class="g3-mode__desc" data-i18n="bnp.prototype.g3ModeADesc">Même shop, deux fenêtres temps. « Janvier 2018 vs janvier 2017 » sur revenus, transactions, panier moyen. Le delta est calculé, pas à reconstruire.</p>
+        <p class="g3-mode__desc" data-i18n="bnp.prototype.g3ModeADesc">Même shop, deux fenêtres temps. « Janvier 2018 vs janvier 2017 ». Le delta est calculé, pas à reconstruire.</p>
         <ul class="g3-mode__windows" role="list">
           <li data-i18n="bnp.prototype.g3LastYear">Same period last year</li>
           <li data-i18n="bnp.prototype.g3Prev">Previous period</li>
@@ -3020,7 +3085,7 @@
       <article class="g3-mode g3-mode--accent" role="listitem">
         <span class="g3-mode__lab" data-i18n="bnp.prototype.g3ModeBLab">Mode B</span>
         <h4 class="g3-mode__name" data-i18n="bnp.prototype.g3ModeBName">Shop comparison</h4>
-        <p class="g3-mode__desc" data-i18n="bnp.prototype.g3ModeBDesc">Deux shops du même groupe, même période. Le commerçant pose ses deux meilleurs/moins bons côte-à-côte et lit l'écart d'un coup d'œil. Pas d'exploration, une lecture frontale.</p>
+        <p class="g3-mode__desc" data-i18n="bnp.prototype.g3ModeBDesc">Deux shops du même groupe, même période. Meilleurs et moins bons côte-à-côte, l'écart se lit d'un coup d'œil.</p>
         <ul class="g3-mode__windows" role="list">
           <li data-i18n="bnp.prototype.g3Current">Same period · multi-shops</li>
         </ul>
@@ -3028,9 +3093,9 @@
     </div>
 
     <ul class="goal-section__benefits" role="list">
-      <li data-i18n="bnp.prototype.g3Bene1">Trois fenêtres temps canoniques couvrent les comparaisons utiles : N-1, période précédente, multi-shops.</li>
+      <li data-i18n="bnp.prototype.g3Bene1">Trois fenêtres temps : N-1, période précédente, multi-shops.</li>
       <li data-i18n="bnp.prototype.g3Bene2">Le delta chiffré est calculé à la place du commerçant, pas en self-service.</li>
-      <li data-i18n="bnp.prototype.g3Bene3">La comparaison shop par shop révèle les écarts d'un coup d'œil et oriente la décision.</li>
+      <li data-i18n="bnp.prototype.g3Bene3">La comparaison shop par shop oriente la décision d'un coup d'œil.</li>
     </ul>
 
     <!-- CVE 2026-05-04 · Goal 3 Evaluating Actions s'étale sur 6 pages
@@ -3063,7 +3128,7 @@
           <span class="source-strip__num">58</span>
         </a>
       </div>
-      <span class="source-strip__ref" data-i18n="bnp.prototype.g3SourceRef">Concept Report · mars 2018 · pages 53 → 58 · Time Selection · Shop Comparison · cas Léonidas</span>
+      <span class="source-strip__ref" data-i18n="bnp.prototype.g3SourceRef">Concept Report · mars 2018 · pages 53 → 58 · cas Léonidas</span>
     </div>
   </div>
 </section>

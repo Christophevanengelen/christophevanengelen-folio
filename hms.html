@@ -1252,7 +1252,7 @@
   <div class="hcx__grid">
     <div class="hcx__client">
       <span class="hcx__client-name">Ewon by HMS</span>
-      <span class="hcx__client-period">2021 — 2022</span>
+      <span class="hcx__client-period">2021 · 2022</span>
     </div>
     <div class="hcx__period">
       <span data-i18n="hms.hero.location">Nivelles · Hybrid</span>
@@ -1278,6 +1278,71 @@
   </div>
 </section>
 
+<!-- TL;DR · 4 questions du recruteur en 90 secondes (CVE 2026-05-12) -->
+<section id="tldr" data-act="S" data-frame="default" data-overflow="natural">
+  <style>
+    #tldr { padding: 64px 0 32px; }
+    #tldr .tldr-eyebrow {
+      display: inline-block;
+      font-family: var(--sans, system-ui);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--amber, #c76941);
+      margin-bottom: 22px;
+    }
+    #tldr .tldr-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 22px 36px;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 0;
+      border-top: 1px solid rgba(242,235,219,0.12);
+      border-bottom: 1px solid rgba(242,235,219,0.12);
+    }
+    #tldr .tldr-label {
+      font-family: var(--sans, system-ui);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber, #c76941);
+      padding-top: 6px;
+      align-self: start;
+    }
+    #tldr .tldr-text {
+      font-family: var(--display, Georgia, serif);
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--fg, #f2ebdb);
+      margin: 0;
+    }
+    #tldr .tldr-text strong { color: var(--fg, #f2ebdb); font-weight: 600; }
+    @media (max-width: 720px) {
+      #tldr { padding: 48px 0 24px; }
+      #tldr .tldr-grid { grid-template-columns: 1fr; gap: 4px 0; padding: 24px 0; }
+      #tldr .tldr-label { margin-top: 18px; padding-top: 0; }
+      #tldr .tldr-grid > .tldr-label:first-of-type { margin-top: 0; }
+      #tldr .tldr-text { font-size: 16px; margin-bottom: 6px; }
+    }
+  </style>
+  <div class="container">
+    <span class="tldr-eyebrow" data-i18n="hms.tldr.eyebrow">En 90 secondes</span>
+    <div class="tldr-grid">
+      <span class="tldr-label" data-i18n="hms.tldr.l1">Le problème</span>
+      <p class="tldr-text" data-i18n="hms.tldr.t1">Ewon vendait des routeurs industriels. IXON arrivait avec une plateforme cloud-native sur le même segment IIoT. Trois apps legacy (eCatcher, M2Web, Talk2M) à réunifier sans casser la base installée mondiale.</p>
+      <span class="tldr-label" data-i18n="hms.tldr.l2">La tension</span>
+      <p class="tldr-text" data-i18n="hms.tldr.t2">R&amp;D, produit, business, service après-vente, support · chaque département parlait son propre client. Le Product Manager tranchait seul. Personne ne suivait.</p>
+      <span class="tldr-label" data-i18n="hms.tldr.l3">Ce que j'ai fait</span>
+      <p class="tldr-text" data-i18n="hms.tldr.t3">Douze mois. Tous les chefs de département autour de la table en ateliers Customer Journey. Heuristic Evaluation Nielsen sur les écrans. 8 machine builders testés sur 5 fuseaux horaires.</p>
+      <span class="tldr-label" data-i18n="hms.tldr.l4">Ce qui en est sorti</span>
+      <p class="tldr-text" data-i18n="hms.tldr.t4">Le sponsor a porté le Concept Report en comité de direction. 2 M€ de budget débloqués pour la mise en prod. Le sponsor monte d'un grade. Position leader défendue face à IXON.</p>
+    </div>
+  </div>
+</section>
+
 <!-- LE BRIEF HMS · CVE 2026-05-04 · une société IT pure qui ne savait pas ce
      qu'était l'UX, l'UI, ni le Service Design. Le mandat : installer un studio
      Service Design en interne pour combler le retard de maturité digitale. -->
@@ -1286,21 +1351,15 @@
     <span class="eyebrow" data-i18n="hms.brief.eyebrow">Le brief</span>
     <h2 data-i18n-html="hms.brief.title">Industrial IoT mondial. <span class="accent">Trois plateformes legacy à réunifier.</span></h2>
 
-    <!-- PYRAMIDE INVERSE · outcome d'abord (Minto / scan recruteur 90s) · climax 2M€ debloqué -->
-    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.brief.teaser">À la sortie · <strong class="accent">Concept Report priorisé</strong> validé sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system prêt pour la production</strong> <span class="brief-teaser__sep">·</span> tous les flots et prototypes <strong class="accent">testés et notés</strong> <span class="brief-teaser__sep">·</span> le sponsor obtient <strong class="accent"><span data-countup="2" data-countup-duration="2">2</span> M€ de budget additionnel</strong> et monte d'un grade.</p>
+    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.brief.teaser">À la sortie · <strong class="accent">Concept Report priorisé</strong> validé sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system prêt prod</strong> <span class="brief-teaser__sep">·</span> tous les flots <strong class="accent">testés et notés</strong> <span class="brief-teaser__sep">·</span> sponsor obtient <strong class="accent"><span data-countup="2" data-countup-duration="2">2</span> M€ de budget</strong> et monte d'un grade.</p>
 
     <p class="glance-sizing" data-i18n-html="hms.brief.sizing">Mission freelance <span class="dot">·</span> 12 mois <span class="dot">·</span> 2021 → 2022 <span class="dot">·</span> Service Design + UX/UI Consultant</p>
 
-    <!-- CVE 2026-05-08 · toolkit signal · transpire mastery · Customer Journey + Heuristic Eval Nielsen + Service Design Relevance/Simplicity/Consistency -->
-    <p class="lead toolkit-signal" style="max-width: 70ch; margin-top: 22px;" data-i18n-html="hms.brief.toolkitSignal"><strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Service Design Relevance · Simplicity · Consistency.</strong> Pas Strategyzer · le business model d'Ewon existait. Pas Design Sprint · le besoin était une transformation user-centric multi-mois, pas une décision de 5 jours. Le toolkit s'est choisi sur la maturité Agile et le besoin d'unification UX, pas sur un dogme.</p>
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="hms.brief.lead1">Ewon by HMS Networks, Nivelles. Filiale du groupe industriel suédois Halmstad, leader européen de la communication industrielle. La promesse Ewon · superviser et contrôler des machines industrielles à distance, partout dans le monde.</p>
 
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="hms.brief.lead4">Mandat · installer le Design Thinking, la culture utilisateur et la transformation numérique dans une maison purement IT. Mettre tous les chefs de département autour de la table — R&D, produit, business, service après-vente — identifier les frictions AS-IS, mesurer le gap TO-BE, prioriser via story mapping les sprints Agile.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead2">Trois plateformes legacy à réunifier · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pression d'IXON, startup cloud-native néerlandaise, user-centric depuis le premier jour · self-onboarding, freemium, persona-driven. Chez Ewon · zéro self-onboarding, pas de design system, pas de librairie front Angular. Le retard à combler était UX, UI et culture.</p>
 
-    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead1">Ewon by HMS Networks. Entité basée à Nivelles, en Belgique. Filiale d'un groupe industriel suédois (Halmstad), leader européen de la communication industrielle. Quatre marques au total · Anybus, Ewon, Intesis, Ixxat. La promesse Ewon · superviser et contrôler les machines industrielles à distance, partout dans le monde.</p>
-
-    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead2">Trois plateformes legacy à réunifier · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pression concurrentielle d'IXON, startup cloud-native néerlandaise qui ne traînait pas de passé IT et qui était user-centric depuis le premier jour · self-onboarding automatisé, freemium, persona-driven. À l'arrivée chez Ewon · zéro self-onboarding, zéro analyse persona, pas de front-end basé sur un design system, pas de librairie front Angular en place. Le retard à combler n'était pas business · il était UX, UI, et culture.</p>
-
-    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead3">À l'arrivée · des outils techniques solides, des clients fidèles dans le monde entier, et une vraie envie d'évoluer. Ce qui manquait · une vision produit unifiée, des parcours utilisateurs cohérents entre les trois plateformes, et la culture user-centric qui ferait passer Ewon de fournisseur d'outils à éditeur de plateforme.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead4">Mandat · installer la culture utilisateur dans une maison purement IT. Réunir R&amp;D, produit, business, service après-vente autour de la même table. Identifier les frictions AS-IS, mesurer le gap TO-BE, prioriser le MVP via story mapping.</p>
   </div>
 </section>
 
@@ -1312,7 +1371,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.proposed.eyebrow">La roadmap proposée</span>
     <h2 class="proposed-title" data-i18n-html="hms.proposed.title">Comment j'ai cadré <span class="accent">les douze mois.</span></h2>
-    <p class="lead proposed-lead" data-i18n="hms.proposed.lead">De la friction Business ↔ IT à un MVP que tout le monde signe. Quatre actes méthodologiques, ateliers de co-création comme colonne vertébrale, customer focus comme boussole partagée.</p>
+    <p class="lead proposed-lead" data-i18n="hms.proposed.lead">De la friction Business ↔ IT à un MVP signé. Ateliers de co-création comme colonne vertébrale, customer focus comme boussole.</p>
 
     <!-- Double Diamond + sessions/sprints agiles — diamants 200×200 carrés parfaits -->
     <svg class="proposed-svg" viewBox="0 0 1080 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="proposed-svg-title" preserveAspectRatio="xMidYMid meet">
@@ -1383,48 +1442,48 @@
       <div class="proposed-col" data-zone="research">
         <span class="proposed-col__lab">Research</span>
         <ul class="proposed-col__list">
-          <li data-i18n="hms.proposed.researchLi1">Interviews internes · CEO, CTO, experts 20+ ans</li>
-          <li data-i18n="hms.proposed.researchLi2">Interviews externes · grands comptes + petits comptes</li>
-          <li data-i18n="hms.proposed.researchLi3">Segmentation marché · 3 segments clients</li>
-          <li data-i18n="hms.proposed.researchLi4">Personas aux manettes · par typologie</li>
+          <li data-i18n="hms.proposed.researchLi1">6 expert interviews internes</li>
+          <li data-i18n="hms.proposed.researchLi2">8 customer interviews internationaux</li>
+          <li data-i18n="hms.proposed.researchLi3">3 segments marché</li>
+          <li data-i18n="hms.proposed.researchLi4">Personas par typologie</li>
         </ul>
       </div>
       <span class="proposed-col__sep" aria-hidden="true">›</span>
       <div class="proposed-col" data-zone="analyse">
         <span class="proposed-col__lab">Analyse</span>
         <ul class="proposed-col__list">
-          <li data-i18n="hms.proposed.analyseLi1">Cartographie friction Project Owners ↔ Project Managers</li>
-          <li data-i18n="hms.proposed.analyseLi2">AS-IS journey · processus séparés et bordéliques</li>
+          <li data-i18n="hms.proposed.analyseLi1">Friction Project Owners ↔ Project Managers</li>
+          <li data-i18n="hms.proposed.analyseLi2">AS-IS journey · 10 pain points</li>
           <li data-i18n="hms.proposed.analyseLi3">Could-Be journey · plateforme unifiée</li>
-          <li data-i18n="hms.proposed.analyseLi4">Ateliers de co-création · alignement Business + IT</li>
+          <li data-i18n="hms.proposed.analyseLi4">Ateliers cocréation Business + IT</li>
         </ul>
       </div>
       <span class="proposed-col__sep proposed-col__sep--bridge" aria-hidden="true">▸</span>
       <div class="proposed-col proposed-col--bridge" data-zone="valueprop">
         <span class="proposed-col__lab proposed-col__lab--bridge" data-i18n="hms.proposed.vpLab">Value Proposition · pont</span>
         <ul class="proposed-col__list">
-          <li data-i18n="hms.proposed.vpLi1">Plateforme host · one-stop shop</li>
-          <li data-i18n="hms.proposed.vpLi2">Onboarding piloté par objectif + besoins</li>
+          <li data-i18n="hms.proposed.vpLi1">Host one-stop shop</li>
+          <li data-i18n="hms.proposed.vpLi2">Onboarding piloté par persona</li>
         </ul>
       </div>
       <span class="proposed-col__sep proposed-col__sep--bridge" aria-hidden="true">▸</span>
       <div class="proposed-col" data-zone="prototype">
         <span class="proposed-col__lab">Prototype</span>
         <ul class="proposed-col__list">
-          <li data-i18n="hms.proposed.prototypeLi1">Host commun · couche unifiée</li>
-          <li data-i18n="hms.proposed.prototypeLi2">Spécificités par typologie de marché</li>
+          <li data-i18n="hms.proposed.prototypeLi1">Host commun unifié</li>
+          <li data-i18n="hms.proposed.prototypeLi2">Spécificités par typologie</li>
           <li data-i18n="hms.proposed.prototypeLi3">Customisations par persona</li>
-          <li data-i18n="hms.proposed.prototypeLi4">User tests · 3 segments validés</li>
+          <li data-i18n="hms.proposed.prototypeLi4">User tests · 3 segments</li>
         </ul>
       </div>
       <span class="proposed-col__sep" aria-hidden="true">›</span>
       <div class="proposed-col proposed-col--accent" data-zone="conceptreport">
         <span class="proposed-col__lab proposed-col__lab--cr" data-i18n="hms.proposed.crLab">Concept Report · livrable</span>
         <ul class="proposed-col__list">
-          <li data-i18n="hms.proposed.conceptLi1">Concept report · features + wireframes</li>
-          <li data-i18n="hms.proposed.conceptLi2">User stories prioritisées · MVP scope</li>
-          <li data-i18n="hms.proposed.conceptLi3">UX/UI directions par persona</li>
-          <li data-i18n="hms.proposed.conceptLi4">Decision pack · sponsor + comité de pilotage</li>
+          <li data-i18n="hms.proposed.conceptLi1">Features + wireframes</li>
+          <li data-i18n="hms.proposed.conceptLi2">User stories MVP</li>
+          <li data-i18n="hms.proposed.conceptLi3">UX/UI par persona</li>
+          <li data-i18n="hms.proposed.conceptLi4">Decision pack sponsor</li>
         </ul>
       </div>
     </div>
@@ -1449,8 +1508,8 @@
             <span class="snm-group__name-main" data-i18n="hms.snm.gIntake">Intake</span>
           </span>
           <ol class="snm-group__nodes">
-            <li class="snm-node" data-anchor="#brief"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.intakeTip">Brief intake · cadre du projet</span></li>
-            <li class="snm-node" data-anchor="#proposed-roadmap"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.intakeRoadmap">Roadmap méthodologique</span></li>
+            <li class="snm-node" data-anchor="#brief"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.intakeTip">Brief intake</span></li>
+            <li class="snm-node" data-anchor="#proposed-roadmap"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.intakeRoadmap">Roadmap</span></li>
           </ol>
         </li>
         <!-- PHASE 1 · RESEARCH — D1 H1 (Discover) -->
@@ -1466,10 +1525,10 @@
           <span class="snm-group__name" data-i18n="hms.snm.gResearch">Research</span>
           <span class="snm-progress" aria-hidden="true"></span>
           <ol class="snm-group__nodes">
-            <li class="snm-node" data-anchor="#research-interviews"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.r1">12 expert interviews internes</span></li>
-            <li class="snm-node" data-anchor="#research-customers"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.r2">8 customer interviews internationaux</span></li>
-            <li class="snm-node" data-anchor="#research-benchmark"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.r3">Benchmark · 3 segments marché</span></li>
-            <li class="snm-node" data-anchor="#research-personas"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.r4">3 personas industriels · technicien terrain → directeur d'usine</span></li>
+            <li class="snm-node" data-anchor="#research-interviews"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.r1">6 expert interviews internes</span></li>
+            <li class="snm-node" data-anchor="#research-customers"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.r2">8 customer interviews</span></li>
+            <li class="snm-node" data-anchor="#research-benchmark"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.r3">3 segments marché</span></li>
+            <li class="snm-node" data-anchor="#research-personas"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.r4">2 personas illustratifs · Klaus &amp; Sven</span></li>
           </ol>
         </li>
         <!-- PHASE 2 · ANALYSE — D1 H2 (Define) · VP retirée d'ici, hissée en groupe propre -->
@@ -1485,9 +1544,9 @@
           <span class="snm-group__name" data-i18n="hms.snm.gAnalyse">Analyse</span>
           <span class="snm-progress" aria-hidden="true"></span>
           <ol class="snm-group__nodes">
-            <li class="snm-node" data-anchor="#analyse-cjm"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.a3">AS-IS journey · processus séparés</span></li>
-            <li class="snm-node" data-anchor="#barriers"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.a1">10 Pain Points · friction Business ↔ IT</span></li>
-            <li class="snm-node" data-anchor="#analyse-workshops"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.a4">Ateliers cocréation · Could-Be unifié</span></li>
+            <li class="snm-node" data-anchor="#analyse-cjm"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.a3">AS-IS journey</span></li>
+            <li class="snm-node" data-anchor="#barriers"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.a1">10 Pain Points</span></li>
+            <li class="snm-node" data-anchor="#analyse-workshops"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.a4">Ateliers cocréation</span></li>
           </ol>
         </li>
         <!-- OUTCOME · VALUE PROPOSITION — gem losange · cristallisation de D1 (Research + Analyse) -->
@@ -1502,8 +1561,8 @@
             <span class="snm-group__name-main" data-i18n="hms.snm.gValueProp">VP</span>
           </span>
           <ol class="snm-group__nodes">
-            <li class="snm-node snm-node--accent" data-anchor="#analyse-vp"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.vp">Proposition de valeur · cristallisation D1</span></li>
-            <li class="snm-node" data-anchor="#valueprop-content"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.vpContent">VP déballée · posture · personas · pain→VP</span></li>
+            <li class="snm-node snm-node--accent" data-anchor="#analyse-vp"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.vp">VP cristallisation</span></li>
+            <li class="snm-node" data-anchor="#valueprop-content"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.vpContent">VP déballée</span></li>
           </ol>
         </li>
         <!-- PHASE 3 · IDEATION — D2 H1 (Develop) · ateliers co-créatifs · explorer les pistes -->
@@ -1519,9 +1578,9 @@
           <span class="snm-group__name" data-i18n="hms.snm.gIdeation">Ideation</span>
           <span class="snm-progress" aria-hidden="true"></span>
           <ol class="snm-group__nodes">
-            <li class="snm-node" data-anchor="#chap-ideation"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.iChap">Phase 03 · Ideation · ouverture D2</span></li>
-            <li class="snm-node" data-anchor="#prototype-direction"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.p1">Direction prototype · siloed vs one-stop</span></li>
-            <li class="snm-node" data-anchor="#prototype-overview"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.p2">3 segments × 1 host commun · wall d'atelier</span></li>
+            <li class="snm-node" data-anchor="#chap-ideation"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.iChap">Phase Ideation</span></li>
+            <li class="snm-node" data-anchor="#prototype-direction"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.p1">Silo vs one-stop</span></li>
+            <li class="snm-node" data-anchor="#prototype-overview"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.p2">3 segments · 1 host</span></li>
           </ol>
         </li>
         <!-- PHASE 4 · PROTOTYPE — D2 H2 (Deliver) · prototyping & validation 6 clients -->
@@ -1537,12 +1596,12 @@
           <span class="snm-group__name" data-i18n="hms.snm.gPrototype">Prototype</span>
           <span class="snm-progress" aria-hidden="true"></span>
           <ol class="snm-group__nodes">
-            <li class="snm-node" data-anchor="#prototype-vp1"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp1">VP 01 · Onboarding IT-less</span></li>
-            <li class="snm-node" data-anchor="#prototype-vp2"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp2">VP 02 · Monitoring temps réel</span></li>
-            <li class="snm-node" data-anchor="#prototype-vp3"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp3">VP 03 + 04 · Reports &amp; Billing</span></li>
-            <li class="snm-node" data-anchor="#prototype-vp5"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp5">VP 05 · Support self-service</span></li>
-            <li class="snm-node" data-anchor="#prototype-phase2"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pPhase2">Hors MVP · expansion + marketplace API</span></li>
-            <li class="snm-node" data-anchor="#prototype-usertest"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.p4">User test 8 clients machine builders · go prod</span></li>
+            <li class="snm-node" data-anchor="#prototype-vp1"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp1">VP 01 Onboarding</span></li>
+            <li class="snm-node" data-anchor="#prototype-vp2"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp2">VP 02 Monitoring</span></li>
+            <li class="snm-node" data-anchor="#prototype-vp3"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp3">VP 03+04 Reports/Billing</span></li>
+            <li class="snm-node" data-anchor="#prototype-vp5"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pVp5">VP 05 Support</span></li>
+            <li class="snm-node" data-anchor="#prototype-phase2"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.pPhase2">MVP++</span></li>
+            <li class="snm-node" data-anchor="#prototype-usertest"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.p4">User test 8 clients</span></li>
           </ol>
         </li>
         <!-- OUTCOME FINAL · CONCEPT REPORT — gem losange · cristallisation des 4 demi-diamants du DD -->
@@ -1557,18 +1616,18 @@
             <span class="snm-group__name-main" data-i18n="hms.snm.gConceptReport">Report</span>
           </span>
           <ol class="snm-group__nodes">
-            <li class="snm-node" data-anchor="#chap-concept"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.cChap">Livrable · ouverture post-DD</span></li>
-            <li class="snm-node" data-anchor="#concept-deliverable"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.c1">Concept Report 76 pages · sponsor go prod</span></li>
-            <li class="snm-node" data-anchor="#alignment"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.c2">Alignement Project Owners ⊥ Project Managers</span></li>
-            <li class="snm-node" data-anchor="#concept-triplewin"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.cTW">Triple-Win · Customer · Business · Tech</span></li>
-            <li class="snm-node snm-node--accent" data-anchor="#outcome"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.c3">Outcome · 6 clients valid · go prod sponsor</span></li>
-            <li class="snm-node" data-anchor="#lessons"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.c4">Lessons · traducteur · bébé en main</span></li>
+            <li class="snm-node" data-anchor="#chap-concept"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.cChap">Concept Report</span></li>
+            <li class="snm-node" data-anchor="#concept-deliverable"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.c1">76 pages · sponsor go prod</span></li>
+            <li class="snm-node" data-anchor="#alignment"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.c2">Alignement Business ⊥ IT</span></li>
+            <li class="snm-node" data-anchor="#concept-triplewin"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.cTW">Triple-Win</span></li>
+            <li class="snm-node snm-node--accent" data-anchor="#outcome"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.c3">Outcome · 2 M€ débloqués</span></li>
+            <li class="snm-node" data-anchor="#lessons"><span class="snm-dot"></span><span class="snm-tip" data-i18n="hms.snm.c4">Lessons · trois leviers</span></li>
           </ol>
         </li>
       </ol>
     </nav>
 
-    <p class="proposed-cap" data-i18n="hms.proposed.cap">À la sortie : un MVP one-stop platform priorisé en user stories, signé Project Owners (Business) · Project Managers (IT) · Operations · Sales. Six clients de typologies différentes ont validé le concept. Sponsor go prod. Ce qui suit montre ce qui s'est joué à chaque étape.</p>
+    <p class="proposed-cap" data-i18n="hms.proposed.cap">À la sortie · MVP signé Project Owners, PM IT, Operations, Sales. 8 machine builders valident. Sponsor go prod.</p>
   </div>
 </section>
 
@@ -1578,7 +1637,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.antagonist.eyebrow">L'antagoniste</span>
     <h2 class="hms-antagonist__h2" data-i18n-html="hms.antagonist.h2">Pendant qu'Ewon vendait des routeurs, <span class="accent">IXON vendait une plateforme.</span></h2>
-    <p class="lead hms-antagonist__lead" data-i18n="hms.antagonist.lead">Ewon a vingt ans de comptes-clés fidèles et la promesse industrielle qui va avec · monitorer et contrôler des machines à distance, partout dans le monde. IXON, startup cloud-native néerlandaise, n'avait ni l'historique ni la dette technique. Et le bénéfice de cette absence de passé · une expérience produit pensée user-centric dès le premier jour.</p>
+    <p class="lead hms-antagonist__lead" data-i18n="hms.antagonist.lead">Ewon a vingt ans de comptes-clés fidèles. IXON, startup cloud-native néerlandaise, n'avait ni l'historique ni la dette technique. Et une expérience produit pensée user-centric dès le premier jour.</p>
 
     <div class="hms-antagonist__grid">
       <div class="hms-antagonist__col">
@@ -1601,7 +1660,7 @@
       </div>
     </div>
 
-    <p class="hms-antagonist__consequence" data-i18n-html="hms.antagonist.consequence">Le retard à combler n'était pas business · les machines Ewon tiennent en production sur tous les continents. Le retard était <strong>UX, UI et culture user-centric</strong>. C'est ce diagnostic qui a justifié, à la fin du mandat, les <strong class="accent">2 M€ obtenus en comité de direction</strong> pour passer le concept en production.</p>
+    <p class="hms-antagonist__consequence" data-i18n-html="hms.antagonist.consequence">Le retard n'était pas business · les machines Ewon tournent sur tous les continents. Le retard était <strong>UX, UI et culture</strong>. Ce diagnostic a justifié les <strong class="accent">2 M€ obtenus en comité de direction</strong>.</p>
   </div>
 </section>
 
@@ -1638,8 +1697,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.research.itEyebrow">Phase 01 · Discover · 6 expert interviews</span>
     <h3 class="research-h3" data-reveal="title" data-i18n-html="hms.research.itTitle">On écoute <span class="accent">avant de dessiner.</span></h3>
-    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.research.itOutcome">Six experts internes <span class="brief-teaser__sep">·</span> chefs de département <span class="brief-teaser__sep">·</span> R&D, produit, business, service après-vente, support.</p>
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="hms.research.itLead">Pas pour vendre la méthode. Pour comprendre comment Ewon fabrique son industrial IoT au quotidien, et ce que chaque rôle attend d'une plateforme réunifiée.</p>
+    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.research.itOutcome">Six chefs de département · R&amp;D, produit, business, service après-vente, support.</p>
 
     <ol class="it-grid" role="list">
       <li class="it-card">
@@ -1652,7 +1710,7 @@
         <span class="it-num">01</span>
         <h4 class="it-name" data-i18n="hms.research.it1Name">Le CEO</h4>
         <p class="it-quote" data-i18n="hms.research.it1Quote">« On reste leader, mais le marché bouge. Le digital nous met en concurrence frontale. »</p>
-        <p class="it-context" data-i18n="hms.research.it1Context">Vision marché et vigilance concurrentielle. Veut un produit qui défend la position de leader de l'industrial IoT face à IXON cloud-native.</p>
+        <p class="it-context" data-i18n="hms.research.it1Context">Veut un produit qui défend la position de leader face à IXON cloud-native.</p>
       </li>
       <li class="it-card">
         <div class="it-icon" aria-hidden="true">
@@ -1664,7 +1722,7 @@
         <span class="it-num">02</span>
         <h4 class="it-name" data-i18n="hms.research.it2Name">Le CTO</h4>
         <p class="it-quote" data-i18n="hms.research.it2Quote">« On a des plateformes par segment. Elles ne se parlent pas. »</p>
-        <p class="it-context" data-i18n="hms.research.it2Context">Architecture historique fragmentée. IT fraîchement passée à l'Agile, encore loin de SAFe. Cherche une stack maintenable, pas un patchwork.</p>
+        <p class="it-context" data-i18n="hms.research.it2Context">IT fraîchement passée à l'Agile. Cherche une stack maintenable.</p>
       </li>
       <li class="it-card">
         <div class="it-icon" aria-hidden="true">
@@ -1676,7 +1734,7 @@
         <span class="it-num">03</span>
         <h4 class="it-name" data-i18n="hms.research.it3Name">Project Owners (Business)</h4>
         <p class="it-quote" data-i18n="hms.research.it3Quote">« Je sais ce que veut mon client. L'IT ne m'écoute pas. »</p>
-        <p class="it-context" data-i18n="hms.research.it3Context">Côté Business, propriétaires de l'offre commerciale. Frustrés par des cycles techniques opaques.</p>
+        <p class="it-context" data-i18n="hms.research.it3Context">Propriétaires de l'offre commerciale. Frustrés par les cycles techniques opaques.</p>
       </li>
       <li class="it-card">
         <div class="it-icon" aria-hidden="true">
@@ -1688,7 +1746,7 @@
         <span class="it-num">04</span>
         <h4 class="it-name" data-i18n="hms.research.it4Name">Project Managers (IT)</h4>
         <p class="it-quote" data-i18n="hms.research.it4Quote">« Le Business change d'avis chaque sprint. On livre du flou. »</p>
-        <p class="it-context" data-i18n="hms.research.it4Context">Côté IT, responsables livraison. Frustrés par des specs floues, des retours tardifs et des arbitrages politiques.</p>
+        <p class="it-context" data-i18n="hms.research.it4Context">Responsables livraison. Frustrés par les specs floues et les retours tardifs.</p>
       </li>
       <li class="it-card">
         <div class="it-icon" aria-hidden="true">
@@ -1700,7 +1758,7 @@
         <span class="it-num">05</span>
         <h4 class="it-name" data-i18n="hms.research.it5Name">Experts métier 20+ ans</h4>
         <p class="it-quote" data-i18n="hms.research.it5Quote">« Tout est dans nos têtes. Rien n'est documenté pour un client. »</p>
-        <p class="it-context" data-i18n="hms.research.it5Context">Connaissance tacite du métier postal/print/mailing. Mémoire vivante de l'organisation.</p>
+        <p class="it-context" data-i18n="hms.research.it5Context">Mémoire vivante de l'organisation industrielle.</p>
       </li>
       <li class="it-card">
         <div class="it-icon" aria-hidden="true">
@@ -1712,10 +1770,10 @@
         <span class="it-num">06</span>
         <h4 class="it-name" data-i18n="hms.research.it6Name">Operations &amp; Production</h4>
         <p class="it-quote" data-i18n="hms.research.it6Quote">« On absorbe les ratés en bout de chaîne. Tous les jours. »</p>
-        <p class="it-context" data-i18n="hms.research.it6Context">Bras armé de la livraison. Visibilité directe sur ce qui casse côté client final.</p>
+        <p class="it-context" data-i18n="hms.research.it6Context">Visibilité directe sur ce qui casse côté client final.</p>
       </li>
     </ol>
-    <p class="research-source" data-i18n="hms.research.itSource">6 expert interviews internes Ewon &amp; HMS Halmstad · CEO, CTO, Project Owners (Business), Project Managers (IT), Experts métier 20+ ans, Operations &amp; Production · noms cités dans le Strategic Process Proposal et anonymisés sur ce site · disponibles sur demande dans le cadre d'un projet réel · 2021.</p>
+    <p class="research-source" data-i18n="hms.research.itSource">6 expert interviews Ewon &amp; HMS Halmstad, 2021. Noms anonymisés, disponibles sur demande.</p>
 
   </div>
 </section>
@@ -1739,8 +1797,8 @@
     <span class="eyebrow" data-i18n="hms.research.custEyebrow">Phase 01 · Discover · 8 clients internationaux</span>
     <h3 class="research-h3" data-reveal="title" data-i18n-html="hms.research.custTitle">Huit clients. <span class="accent">Cinq fuseaux horaires.</span></h3>
     <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.research.custOutcome">Machine builders en Europe, US, Asie <span class="brief-teaser__sep">·</span> tous équipés Ewon <span class="brief-teaser__sep">·</span> 22 questions, 6 thèmes par session.</p>
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="hms.research.custLead">Les six experts internes lisent l'organisation. Les huit clients lisent la machine telle qu'elle vit chez eux. C'est cette double écoute qui révèle le vrai parcours de l'utilisateur.</p>
-    <p class="lead" style="max-width: 70ch;" data-i18n-html="hms.research.custLead2"><strong>Aucun ne savait qu'il manquait quelque chose.</strong> Mais tous le décrivaient sans le nommer. Les ateliers Customer Journey ont mis ces mots sur le mur. Et les départements internes l'ont vu pour la première fois.</p>
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="hms.research.custLead">Les six experts internes lisent l'organisation. Les huit clients lisent la machine telle qu'elle vit chez eux. Double écoute qui révèle le vrai parcours.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n-html="hms.research.custLead2"><strong>Aucun ne savait qu'il manquait quelque chose.</strong> Tous le décrivaient sans le nommer. Les ateliers Customer Journey ont mis ces mots sur le mur.</p>
   </div>
 </section>
 
@@ -1750,8 +1808,8 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.research.benchEyebrow">Phase 01 · Discover · benchmark concurrentiel</span>
     <h3 class="research-h3" data-i18n-html="hms.research.benchTitle">Trois segments marché. <span class="accent">Trois logiques d'achat.</span></h3>
-    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.research.benchOutcome">3 segments identifiés <span class="brief-teaser__sep">·</span> OEM Machine Builders · End-User Plants · Integrators / Resellers <span class="brief-teaser__sep">·</span> concurrents observés en parallèle (IXON, Welotec, Tosibox, plateformes IIoT cloud-natives).</p>
-    <p class="lead" style="margin-top: 32px;" data-i18n="hms.research.benchLead">Trois logiques d'achat distinctes. Les OEM Machine Builders intègrent Ewon dans leurs machines, à la commande, avec haute compliance. Les End-User Plants achètent du standard, du low-touch, de l'autonomie depuis l'atelier. Les Integrators achètent une API et de la documentation. Une seule plateforme doit servir les trois sans dériver.</p>
+    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.research.benchOutcome">3 segments · OEM Machine Builders · End-User Plants · Integrators / Resellers <span class="brief-teaser__sep">·</span> concurrents · IXON, Welotec, Tosibox.</p>
+    <p class="lead" style="margin-top: 32px;" data-i18n="hms.research.benchLead">Les OEM Machine Builders intègrent Ewon à la commande, haute compliance. Les End-User Plants achètent du standard, autonomie atelier. Les Integrators achètent API et doc. Une seule plateforme sert les trois.</p>
 
     <!-- 3 SEGMENTS MARCHÉ · Concept Report p7-8 -->
     <div class="bm-grid">
@@ -1767,9 +1825,9 @@
         </header>
         <p class="bm-card__signature" data-i18n="hms.research.seg1Sig">Signature · solutions complexes, compliance haute</p>
         <ul class="bm-card__list">
-          <li data-i18n="hms.research.seg1Li1">Constructeurs de machines automobiles, pharma, agro, packaging</li>
-          <li data-i18n="hms.research.seg1Li2">Flottes massives, intégration Flexy à la commande, déploiement multi-sites</li>
-          <li data-i18n="hms.research.seg1Li3">Standards de compliance industriels élevés (IEC 62443, machinery directive, traçabilité)</li>
+          <li data-i18n="hms.research.seg1Li1">Machines automobiles, pharma, agro, packaging</li>
+          <li data-i18n="hms.research.seg1Li2">Flottes massives, intégration Flexy à la commande</li>
+          <li data-i18n="hms.research.seg1Li3">Compliance IEC 62443, machinery directive</li>
         </ul>
       </article>
       <article class="bm-card">
@@ -1783,11 +1841,11 @@
           <span class="bm-card__country" data-i18n="hms.research.seg2Country">Segment 02 · End-User Plants</span>
           <h4 class="bm-card__name" data-i18n="hms.research.seg2Name">Plants industriels &amp; PMI</h4>
         </header>
-        <p class="bm-card__signature" data-i18n="hms.research.seg2Sig">Signature · standardisation, automatisation, self-service</p>
+        <p class="bm-card__signature" data-i18n="hms.research.seg2Sig">Signature · standardisation, self-service</p>
         <ul class="bm-card__list">
-          <li data-i18n="hms.research.seg2Li1">Usines, ateliers, plants industriels exploitant des machines tierces</li>
-          <li data-i18n="hms.research.seg2Li2">Volumes modestes par site, besoin d'autonomie immédiate sans équipe IT</li>
-          <li data-i18n="hms.research.seg2Li3">Potentiel d'adoption cloud-native élevé, segment laissé ouvert par les pure-players</li>
+          <li data-i18n="hms.research.seg2Li1">Usines, ateliers exploitant des machines tierces</li>
+          <li data-i18n="hms.research.seg2Li2">Volumes modestes, autonomie sans équipe IT</li>
+          <li data-i18n="hms.research.seg2Li3">Segment cloud-native laissé ouvert par les pure-players</li>
         </ul>
       </article>
       <article class="bm-card">
@@ -1801,15 +1859,15 @@
           <span class="bm-card__country" data-i18n="hms.research.seg3Country">Segment 03 · Channel</span>
           <h4 class="bm-card__name" data-i18n="hms.research.seg3Name">Integrators &amp; resellers</h4>
         </header>
-        <p class="bm-card__signature" data-i18n="hms.research.seg3Sig">Signature · partenaires, services Ewon embarqués</p>
+        <p class="bm-card__signature" data-i18n="hms.research.seg3Sig">Signature · partenaires, Ewon embarqué</p>
         <ul class="bm-card__list">
-          <li data-i18n="hms.research.seg3Li1">Intégrateurs IT qui distribuent les passerelles Ewon (Flexy201, Flexy205) avec leur propre service Talk2M embarqué</li>
+          <li data-i18n="hms.research.seg3Li1">Intégrateurs IT distribuant Flexy201/205 avec Talk2M embarqué</li>
           <li data-i18n="hms.research.seg3Li2">API et white-label comme conditions d'entrée</li>
           <li data-i18n="hms.research.seg3Li3">Levier de croissance hors grand-compte historique</li>
         </ul>
       </article>
     </div>
-    <p class="research-source" data-i18n="hms.research.benchSource">Source · Ewon by HMS Networks · benchmark concurrentiel interne · 2021-2022 · 3 segments marché. Concurrents observés en parallèle : IXON cloud-native (Pays-Bas), Welotec (Allemagne), Tosibox (Finlande).</p>
+    <p class="research-source" data-i18n="hms.research.benchSource">Source · Ewon by HMS Networks · benchmark concurrentiel 2021-2022. Concurrents · IXON (Pays-Bas), Welotec (DE), Tosibox (FI).</p>
   </div>
 </section>
 
@@ -1817,146 +1875,36 @@
 <section id="research-personas" data-act="S" data-rail="vertical" data-frame="wide" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="hms.research.persoEyebrow">Phase 01 · Discover · personas</span>
-    <h3 class="research-h3" data-i18n-html="hms.research.persoTitle">6 experts. 8 customer interviews internationaux. <span class="accent">3 personas industriels synthétisés.</span></h3>
-    <p class="lead" data-i18n="hms.research.persoLead">Issues des 6 entretiens experts internes (CEO, CTO, Project Owners Business, Project Managers IT, experts métier 20+ ans, Operations) et des 8 customer interviews internationaux (machine builders sur 5 fuseaux horaires). Synthétisés en archétypes industriels dans le Concept Report. La carte qui a servi de boussole pour prioriser le MVP : à qui on parle, à quel moment du cycle, et avec quel ton.</p>
+    <h3 class="research-h3" data-i18n-html="hms.research.persoTitle">6 experts internes. 8 customer interviews. <span class="accent">2 personas illustratifs.</span></h3>
+    <p class="lead" data-i18n="hms.research.persoLead">Klaus pilote 200 machines distribuées en DACH. Sven tient l'uptime sur 5 fuseaux horaires. Mêmes anxiétés, mêmes phrases dans la salle. Les deux servent de boussole pour prioriser le MVP.</p>
 
-    <div class="personas-grid" role="list">
-      <div class="persona-card" role="listitem">
-        <span class="persona-card__num">01</span>
-        <div class="persona-card__avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="6" rx="1"/>
-            <rect x="3" y="14" width="18" height="6" rx="1"/>
-            <path d="M7 7h.01M7 17h.01"/>
-          </svg>
-        </div>
-        <h4 class="persona-card__name" data-i18n="hms.research.perso1Name">IT &amp; Operations Manager</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso1Desc">Le pivot multicanal. Veut de l'automatisation, des API propres, un time-to-market raccourci.</p>
-      </div>
-      <div class="persona-card" role="listitem">
-        <span class="persona-card__num">02</span>
-        <div class="persona-card__avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="3" width="16" height="18" rx="1.5"/>
-            <path d="M8 7h8M8 11h8M8 15h5"/>
-            <circle cx="16" cy="16" r="1"/>
-          </svg>
-        </div>
-        <h4 class="persona-card__name" data-i18n="hms.research.perso2Name">Plant Operator</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso2Desc">Surveille les machines en temps réel. Veut un cockpit unifié, alertes priorisées, audit trail accessible en deux clics.</p>
-      </div>
-      <div class="persona-card" role="listitem">
-        <span class="persona-card__num">03</span>
-        <div class="persona-card__avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 21V8l9-5 9 5v13"/>
-            <path d="M9 21v-7h6v7"/>
-            <path d="M3 12h18"/>
-          </svg>
-        </div>
-        <h4 class="persona-card__name" data-i18n="hms.research.perso3Name">Maintenance Engineer</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso3Desc">Intervient à distance via tunnel Talk2M. Tient l'uptime machine, balance maintenance préventive et curative à travers 5 fuseaux horaires.</p>
-      </div>
-      <div class="persona-card persona-card--key" role="listitem">
-        <span class="persona-card__num">04</span>
-        <div class="persona-card__avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 21V7l8-4 8 4v14"/>
-            <path d="M8 11h2M14 11h2M8 15h2M14 15h2M11 21v-4h2v4"/>
-          </svg>
-        </div>
-        <h4 class="persona-card__name" data-i18n="hms.research.perso4Name">Large Account Decision-Maker</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso4Desc">Le KEY · manufacturing, automotive, énergie, pharma. Renouvelle, escalade, signe. Aligne le vendor IoT sur ses objectifs production.</p>
-      </div>
-      <div class="persona-card persona-card--key" role="listitem">
-        <span class="persona-card__num">05</span>
-        <div class="persona-card__avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l1.5-4h15L21 9"/>
-            <path d="M4 9v11h16V9"/>
-            <path d="M10 20v-5h4v5"/>
-            <circle cx="7" cy="13" r="1"/>
-          </svg>
-        </div>
-        <h4 class="persona-card__name" data-i18n="hms.research.perso5Name">End-User Plant Manager</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso5Desc">Le segment freemium · usine moyenne, 5-50 machines. Veut du standard, du low-touch, un onboarding sans équipe IT dédiée.</p>
-      </div>
-      <div class="persona-card" role="listitem">
-        <span class="persona-card__num">06</span>
-        <div class="persona-card__avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3l3 5h5l-4 4 1.5 6L12 15l-5.5 3L8 12 4 8h5z"/>
-          </svg>
-        </div>
-        <h4 class="persona-card__name" data-i18n="hms.research.perso6Name">OEM Machine Builder</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso6Desc">Constructeur de machines spécialisées. Embarque les routeurs Ewon dans son offre. IP machine non-négociable, doc API et SDK exigeants.</p>
-      </div>
-      <div class="persona-card" role="listitem">
-        <span class="persona-card__num">07</span>
-        <div class="persona-card__avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 21V3M3 21h18"/>
-            <path d="M7 17v-5M11 17v-9M15 17v-3M19 17V7"/>
-          </svg>
-        </div>
-        <h4 class="persona-card__name" data-i18n="hms.research.perso7Name">Operations &amp; Analytics Lead</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso7Desc">Optimise par site, par ligne et par machine. Veut de la télémétrie actionnable cross-protocole, pas un dump CSV.</p>
-      </div>
-      <div class="persona-card" role="listitem">
-        <span class="persona-card__num">08</span>
-        <div class="persona-card__avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 3h2v6H9zM13 3h2v6h-2z"/>
-            <rect x="4" y="9" width="16" height="6" rx="1"/>
-            <path d="M9 15v6h2v-6M13 15v6h2v-6"/>
-          </svg>
-        </div>
-        <h4 class="persona-card__name" data-i18n="hms.research.perso8Name">Integrator &amp; IT Partner</h4>
-        <p class="persona-card__desc" data-i18n="hms.research.perso8Desc">Embarque Talk2M dans son offre. API stables, doc claire, pas de friction d'intégration côté machines clientes.</p>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:40px;">
+      <article class="vp-pillar vp-pillar--persona">
+        <div class="vp-pillar__num">01</div>
+        <h5 class="vp-pillar__title" data-i18n-html="hms.research.deepdiveP1Name">Klaus · 48 ans</h5>
+        <p class="vp-pillar__claim" data-i18n-html="hms.research.deepdiveP1Role">Plant Manager · <span class="accent">OEM Machine Builder DACH</span></p>
+        <blockquote style="margin:20px 0;padding-left:16px;border-left:3px solid var(--amber);font-style:italic;color:var(--fg);" data-i18n="hms.research.deepdiveP1Quote">« Quand une machine tombe à 3h du matin à Atlanta, j'ai besoin de voir le tunnel Talk2M, pas de chercher quel login marche. »</blockquote>
+        <ul class="vp-pillar__list">
+          <li data-i18n-html="hms.research.deepdiveP1Pain1"><strong>Trois logins</strong> · eCatcher, M2Web, Talk2M</li>
+          <li data-i18n-html="hms.research.deepdiveP1Pain2"><strong>Tunnel cassé silencieux</strong> · la passerelle Flexy perd la connexion sans alerter</li>
+          <li data-i18n-html="hms.research.deepdiveP1Pain3"><strong>Multi-site multi-fuseaux</strong> · 200 machines, pas de vue fleet unifiée</li>
+        </ul>
+      </article>
+
+      <article class="vp-pillar vp-pillar--persona">
+        <div class="vp-pillar__num">02</div>
+        <h5 class="vp-pillar__title" data-i18n-html="hms.research.deepdiveP2Name">Sven · 55 ans</h5>
+        <p class="vp-pillar__claim" data-i18n-html="hms.research.deepdiveP2Role">Field Service Engineer · <span class="accent">End-User Plant Operator</span></p>
+        <blockquote style="margin:20px 0;padding-left:16px;border-left:3px solid var(--amber);font-style:italic;color:var(--fg);" data-i18n="hms.research.deepdiveP2Quote">« Mon job c'est de tenir l'uptime de 200 machines distribuées. Si l'outil de monitoring me parle pas, je suis dans le noir. »</blockquote>
+        <ul class="vp-pillar__list">
+          <li data-i18n-html="hms.research.deepdiveP2Pain1"><strong>Pas de vue fleet</strong> · 5 protocoles industriels, aucun dashboard cross-protocole</li>
+          <li data-i18n-html="hms.research.deepdiveP2Pain2"><strong>Pas d'audit trail</strong> · obligation IEC 62443, rien dans l'UI pour produire la preuve</li>
+          <li data-i18n-html="hms.research.deepdiveP2Pain3"><strong>Onboarding lent</strong> · deux semaines pour activer un nouveau site sur Talk2M</li>
+        </ul>
+      </article>
     </div>
-    <p class="research-source" data-i18n="hms.research.persoSource">Source · Ewon HMS Concept Report 2022 · archétypes industriels synthétisés sur 6 entretiens experts internes + 8 customer interviews internationaux.</p>
 
-    <!-- DEEP-DIVE · 2 personas illustratifs nominatifs sur les 10 testés terrain.
-         Personas HMS-authentiques · Plant Manager DACH + Field Service Engineer OEM.
-         Source · Phoenix AS-IS Analysis HMS 2021-2022, 8 archétypes synthétisés. -->
-    <div class="personas-deepdive" style="margin-top:64px;padding-top:48px;border-top:1px solid var(--rule);">
-      <span class="eyebrow" data-i18n="hms.research.deepdiveEyebrow">Deep-dive · 2 personas illustratifs</span>
-      <h4 class="research-h3" style="margin-top:8px;" data-i18n-html="hms.research.deepdiveHead">Sur les 10 testés terrain, <span class="accent">deux qui parlent à voix haute.</span></h4>
-      <p class="lead" style="max-width:70ch;margin-top:16px;" data-i18n="hms.research.deepdiveLead">Synthétiser huit archétypes est un acte d'arbitrage. Pour ne pas perdre la voix, je garde deux personas en deep-dive · le Plant Manager DACH qui pilote 200 machines distribuées, et le Field Service Engineer OEM qui embarque Talk2M dans son offre. Mêmes horaires, mêmes anxiétés, mêmes phrases dans la salle.</p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:32px;">
-        <article class="vp-pillar vp-pillar--persona">
-          <div class="vp-pillar__num">01</div>
-          <h5 class="vp-pillar__title" data-i18n-html="hms.research.deepdiveP1Name">Klaus · 48 ans</h5>
-          <p class="vp-pillar__claim" data-i18n-html="hms.research.deepdiveP1Role">Plant Manager · <span class="accent">OEM Machine Builder DACH</span></p>
-          <blockquote style="margin:20px 0;padding-left:16px;border-left:3px solid var(--amber);font-style:italic;color:var(--fg);" data-i18n="hms.research.deepdiveP1Quote">« Quand une machine tombe à 3h du matin à Atlanta, j'ai besoin de voir le tunnel Talk2M, pas de chercher quel login marche. »</blockquote>
-          <ul class="vp-pillar__list">
-            <li data-i18n-html="hms.research.deepdiveP1Pain1"><strong>Trois logins</strong> · eCatcher pour debug, M2Web pour techniciens, Talk2M pour supervision · trois passwords à se souvenir</li>
-            <li data-i18n-html="hms.research.deepdiveP1Pain2"><strong>Tunnel cassé silencieux</strong> · la passerelle Flexy perd la connexion VPN sans alerter</li>
-            <li data-i18n-html="hms.research.deepdiveP1Pain3"><strong>Multi-site multi-fuseaux</strong> · 200 machines distribuées, pas de vue unifiée du fleet</li>
-            <li data-i18n-html="hms.research.deepdiveP1Pain4"><strong>Diagnostic à l'aveugle</strong> · logs cloisonnés par plateforme, pas de corrélation cross-stacks</li>
-          </ul>
-          <p class="vp-pillar__src" data-i18n="hms.research.deepdiveP1Src">Profil composite · 6 entretiens experts internes + 8 customer interviews internationaux · 2021-2022</p>
-        </article>
-
-        <article class="vp-pillar vp-pillar--persona">
-          <div class="vp-pillar__num">02</div>
-          <h5 class="vp-pillar__title" data-i18n-html="hms.research.deepdiveP2Name">Sven · 55 ans</h5>
-          <p class="vp-pillar__claim" data-i18n-html="hms.research.deepdiveP2Role">Field Service Engineer · <span class="accent">End-User Plant Operator</span></p>
-          <blockquote style="margin:20px 0;padding-left:16px;border-left:3px solid var(--amber);font-style:italic;color:var(--fg);" data-i18n="hms.research.deepdiveP2Quote">« Mon job c'est de tenir l'uptime de 200 machines distribuées. Si l'outil de monitoring me parle pas, je suis dans le noir. »</blockquote>
-          <ul class="vp-pillar__list">
-            <li data-i18n-html="hms.research.deepdiveP2Pain1"><strong>Pas de vue fleet</strong> · 200 machines, 5 protocoles industriels différents, aucun dashboard cross-protocole</li>
-            <li data-i18n-html="hms.research.deepdiveP2Pain2"><strong>Latence cloud SaaS</strong> · Talk2M coupe en pic d'activité, les alertes arrivent en retard</li>
-            <li data-i18n-html="hms.research.deepdiveP2Pain3"><strong>Pas d'audit trail</strong> · obligation IEC 62443 + SOC 2, rien dans l'UI pour produire la preuve</li>
-            <li data-i18n-html="hms.research.deepdiveP2Pain4"><strong>Onboarding lent</strong> · deux semaines pour activer un nouveau site sur Talk2M</li>
-          </ul>
-          <p class="vp-pillar__src" data-i18n="hms.research.deepdiveP2Src">Profil composite · 6 entretiens experts internes + 8 customer interviews internationaux · 2021-2022</p>
-        </article>
-      </div>
-
-      <p class="research-source" style="margin-top:32px;" data-i18n="hms.research.deepdiveSource">Source · Phoenix AS-IS &amp; TO-BE Analysis · HMS Cloud Revamp 2021-2022 · 6 entretiens experts internes + 8 customer interviews internationaux · personas industriels deep-dive sur eCatcher, M2Web et Talk2M.</p>
-    </div>
+    <p class="research-source" style="margin-top:32px;" data-i18n="hms.research.deepdiveSource">Source · Phoenix AS-IS &amp; TO-BE Analysis HMS 2021-2022 · 6 expert interviews internes + 8 customer interviews internationaux · profils composites.</p>
   </div>
 </section>
 
@@ -1997,12 +1945,12 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.analyse.cjmEyebrow">Phase 02 · Define · Customer Journey wall</span>
     <h3 class="research-h3" data-reveal="title" data-i18n-html="hms.analyse.cjmTitle">Le mur a remplacé <span class="accent">le PowerPoint.</span></h3>
-    <p class="lead" data-i18n="hms.analyse.cjmLead">Six experts internes. Huit clients. Tous les départements autour de la même table. Les frictions ne sont plus discutées · elles sont épinglées. Là où elles bloquent vraiment.</p>
+    <p class="lead" data-i18n="hms.analyse.cjmLead">Tous les départements autour de la même table. Les frictions ne sont plus discutées · elles sont épinglées.</p>
 
     <!-- CVE 2026-05-08 · workshop CJM wall hero image · Apple-style artefact dominant -->
     <figure class="cjm-hero" style="margin: 32px 0 40px; max-width: 100%;">
       <img src="public/img/hms/workshop-cjm-wall.jpeg" alt="Customer Journey wall · post-its de pain points et d'opportunités épinglés en atelier avec toutes les parties prenantes Ewon" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 12px;" />
-      <figcaption class="cjm-hero__caption" style="margin-top: 12px; font-family: var(--display); font-size: 15px; color: var(--fg-soft); font-style: italic;">L'artefact original · Customer Journey Phoenix · novembre 2021. Personas au centre, frictions et opportunités posées en atelier par tous les chefs de département.</figcaption>
+      <figcaption class="cjm-hero__caption" style="margin-top: 12px; font-family: var(--display); font-size: 15px; color: var(--fg-soft); font-style: italic;">Customer Journey Phoenix · novembre 2021. Personas au centre, frictions posées par tous les chefs de département.</figcaption>
     </figure>
 
     <!-- CJM stage : 5 phases × sentiment line × 10 pain points overlaid -->
@@ -2030,27 +1978,27 @@
         <li class="cjm-stage" data-phase="01">
           <span class="cjm-stage__num">01</span>
           <h4 class="cjm-stage__name" data-i18n="hms.cjm.s1Name">Découverte</h4>
-          <p class="cjm-stage__desc" data-i18n="hms.cjm.s1Desc">Le prospect identifie un besoin de supervision distante ou de connectivité machine. Première recherche, comparaison concurrentielle (IXON, Welotec, Tosibox).</p>
+          <p class="cjm-stage__desc" data-i18n="hms.cjm.s1Desc">Comparaison IXON, Welotec, Tosibox.</p>
         </li>
         <li class="cjm-stage" data-phase="02">
           <span class="cjm-stage__num">02</span>
           <h4 class="cjm-stage__name" data-i18n="hms.cjm.s2Name">Contact &amp; brief</h4>
-          <p class="cjm-stage__desc" data-i18n="hms.cjm.s2Desc">Premier échange commercial. Cadrage du projet, devis, signature.</p>
+          <p class="cjm-stage__desc" data-i18n="hms.cjm.s2Desc">Cadrage, devis, signature.</p>
         </li>
         <li class="cjm-stage" data-phase="03">
           <span class="cjm-stage__num">03</span>
           <h4 class="cjm-stage__name" data-i18n="hms.cjm.s3Name">Onboarding</h4>
-          <p class="cjm-stage__desc" data-i18n="hms.cjm.s3Desc">Intégration technique. Setup compte Talk2M. Première mise en service de la passerelle Flexy, validation du tunnel sécurisé.</p>
+          <p class="cjm-stage__desc" data-i18n="hms.cjm.s3Desc">Setup Talk2M. Mise en service Flexy, tunnel sécurisé.</p>
         </li>
         <li class="cjm-stage" data-phase="04">
           <span class="cjm-stage__num">04</span>
           <h4 class="cjm-stage__name" data-i18n="hms.cjm.s4Name">Exploitation</h4>
-          <p class="cjm-stage__desc" data-i18n="hms.cjm.s4Desc">Supervision distante de la flotte. Diagnostics, alertes en temps réel, interventions correctives. Audit trail des sessions distantes pour la compliance.</p>
+          <p class="cjm-stage__desc" data-i18n="hms.cjm.s4Desc">Diagnostics, alertes, audit trail compliance.</p>
         </li>
         <li class="cjm-stage" data-phase="05">
           <span class="cjm-stage__num">05</span>
           <h4 class="cjm-stage__name" data-i18n="hms.cjm.s5Name">Suivi &amp; expansion</h4>
-          <p class="cjm-stage__desc" data-i18n="hms.cjm.s5Desc">Reporting SLA. Support self-service. Facturation par volume de machines. Montée en flotte, ouverture de nouvelles usines et nouvelles géographies.</p>
+          <p class="cjm-stage__desc" data-i18n="hms.cjm.s5Desc">Reporting SLA, support self-service, facturation volume.</p>
         </li>
       </ol>
 
@@ -2109,23 +2057,10 @@
       </ol>
     </div>
 
-    <!-- CVE 2026-05-11 HMS C-rewrite · CJM workshop industriel · l'image montre un mur d'atelier
-         générique avec stickers · sert d'illustration de la méthode "show don't tell" appliquée sur HMS -->
-    <figure class="cjm-artefact">
-      <a class="cjm-artefact__link" href="public/img/hms/workshop-cjm-wall.jpeg" target="_blank" rel="noopener" aria-label="Voir le mur d'atelier Customer Journey en taille réelle">
-        <img class="cjm-artefact__img"
-             src="public/img/hms/workshop-cjm-wall.jpeg"
-             alt="Mur d'atelier Customer Journey workshop · persona machine builder au centre · stickers de pain points et d'opportunités posés par toutes les parties prenantes HMS · R&amp;D, produit, business, service après-vente, support"
-             loading="lazy"/>
-        <span class="cjm-artefact__zoom" aria-hidden="true">↗ Voir en taille réelle</span>
-      </a>
-      <figcaption class="cjm-artefact__caption" data-i18n="hms.analyse.cjmArtefactCaption">L'artefact original. Persona machine builder au centre, stickers de pain points et d'opportunités posés en atelier par toutes les parties prenantes HMS. C'est ce mur qui a remplacé les slides PowerPoint comme langage commun entre R&amp;D, produit, business et service après-vente.</figcaption>
-    </figure>
-
     <!-- Référence canonique · livrables réels HMS dispo sur demande -->
     <a class="source-link" href="#" data-i18n-html="hms.analyse.cjmSource" onclick="event.preventDefault();">
       <span class="source-link__lab">Référence sur demande</span>
-      <span class="source-link__ref">HMS Heuristic Evaluation 29 slides · Phoenix AS-IS &amp; TO-BE Analysis 43 pages · Roadmap HMS 40 pages · 6 mockups Phoenix HD · 44 screens dashboard ingénieur · 12 photos workshop day 2.</span>
+      <span class="source-link__ref">HMS Heuristic Evaluation 29 slides · Phoenix AS-IS &amp; TO-BE 43 pages · Roadmap 40 pages · 6 mockups Phoenix HD · 44 screens dashboard.</span>
       <span class="source-link__arrow" aria-hidden="true">↗</span>
     </a>
   </div>
@@ -2148,7 +2083,7 @@
     <span class="h-dot"></span>
     <span class="h-dot"></span>
   </div>
-  <span class="h-section-label" data-i18n="hms.barriers.label">Pain points UX · 6 expert interviews + 8 customer interviews</span>
+  <span class="h-section-label" data-i18n="hms.barriers.label">10 Pain Points · 6 experts + 8 clients</span>
   <div class="h-track">
 
     <!-- PAIN POINT 01 — Time-to-Market Delays -->
@@ -2157,8 +2092,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p1.eyebrow">Pain Point 01</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p1.h">« L'onboarding nous prend des mois. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p1.p">Intégration de nouveaux clients qui s'étire. Besoins urgents (campagnes, SLA) souvent ratés. Processus manuels qui ralentissent chaque déploiement.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p1.constraint">Devenue règle de design : automatiser l'onboarding. Self-service guidé par objectif et besoins.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p1.constraint">Règle · self-service guidé par objectif.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">01</span><span class="barrier-theme" data-i18n="hms.pp.p1.theme">Time-to-Market</span></div>
@@ -2172,8 +2106,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p2.eyebrow">Pain Point 02</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p2.h">« Tout passe par des workflows manuels. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p2.p">Erreurs en chaîne sur la facturation et le file handling. Customisations clients qui empêchent la scalabilité. APIs absentes ou outdated.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p2.constraint">Devenue règle : standardiser la base, customiser le dernier kilomètre par persona.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p2.constraint">Règle · base standard, dernier kilomètre par persona.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">02</span><span class="barrier-theme" data-i18n="hms.pp.p2.theme">Automation</span></div>
@@ -2187,8 +2120,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p3.eyebrow">Pain Point 03</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p3.h">« Le client doit nous appeler pour la moindre modif. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p3.p">Pas de self-service (configuration campagne, tracking temps réel). Interfaces non-intuitives pour les non-techs. Pas de portail transparent pour suivre l'avancement.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p3.constraint">Devenue règle : portail client one-stop avec suivi temps réel + actions self-service par persona.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p3.constraint">Règle · portail one-stop, self-service par persona.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">03</span><span class="barrier-theme" data-i18n="hms.pp.p3.theme">Autonomy</span></div>
@@ -2202,8 +2134,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p4.eyebrow">Pain Point 04</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p4.h">« Nos outils ne se parlent pas. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p4.p">Plateformes différentes par segment (eCatcher, M2Web, Talk2M). Outils internes hétérogènes (Jira, Salesforce, Confluence…). Connaissance tacite, peu documentée.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p4.constraint">Devenue règle : plateforme host commune, customisations par typologie au-dessus.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p4.constraint">Règle · host commun, customisations par typologie.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">04</span><span class="barrier-theme" data-i18n="hms.pp.p4.theme">Fragmentation</span></div>
@@ -2217,8 +2148,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p5.eyebrow">Pain Point 05</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p5.h">« On apprend les problèmes par le client. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p5.p">Posture réactive sur les incidents. Pas d'alerting préventif. Le client appelle, pas l'inverse.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p5.constraint">Devenue règle · monitoring proactif des passerelles Flexy, alertes côté machine builder + côté plateforme Ewon, notification push avant que le client ne décroche son téléphone.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p5.constraint">Règle · alertes Flexy avant que le client n'appelle.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">05</span><span class="barrier-theme" data-i18n="hms.pp.p5.theme">Proactivity</span></div>
@@ -2232,8 +2162,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p6.eyebrow">Pain Point 06</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p6.h">« Notre offre digitale n'égale pas la concurrence. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p6.p">Concurrents 100 % cloud-natifs (IXON, Welotec…) qui mordent sur le marché historique. Manque de produits self-service et d'API ouvertes.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p6.constraint">Devenue règle : combler les gaps via le portail one-stop + ouverture API pour les Integrators.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p6.constraint">Règle · portail one-stop + API Integrators.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">06</span><span class="barrier-theme" data-i18n="hms.pp.p6.theme">Digital gaps</span></div>
@@ -2247,8 +2176,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p7.eyebrow">Pain Point 07</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p7.h">« Une fois en prod, plus personne ne touche. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p7.p">Setup client figé après onboarding. Évolutions vécues comme des projets lourds. Aucune logique d'itération continue.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p7.constraint">Devenue règle : modulariser l'offre. Chaque feature configurable indépendamment, sans rebuilds.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p7.constraint">Règle · features modulaires, configurables sans rebuilds.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">07</span><span class="barrier-theme" data-i18n="hms.pp.p7.theme">Rigidity</span></div>
@@ -2262,8 +2190,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p8.eyebrow">Pain Point 08</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p8.h">« Le marché bouge plus vite que notre offre. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p8.p">Pression sur la position de leader. Plateformes digitales qui captent le segment PME. Risque de cantonnement aux grands comptes historiques.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p8.constraint">Devenue argument central : la VP doit défendre le leadership ET ouvrir un nouveau segment marché.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p8.constraint">Argument · la VP défend le leadership ET ouvre un segment.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">08</span><span class="barrier-theme" data-i18n="hms.pp.p8.theme">Competition</span></div>
@@ -2277,8 +2204,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p9.eyebrow">Pain Point 09</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p9.h">« La facturation est opaque pour nos clients. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p9.p">Modèles tarifaires complexes. Factures lourdes à décortiquer. Friction au moment du renew, perte de confiance.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p9.constraint">Devenue règle : facturation lisible côté portail, breakdown par poste + dashboard suivi consommation.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p9.constraint">Règle · facturation lisible, breakdown par poste.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">09</span><span class="barrier-theme" data-i18n="hms.pp.p9.theme">Billing</span></div>
@@ -2292,8 +2218,7 @@
         <div class="h-panel-text">
           <span class="h-eyebrow h-reveal" data-i18n="hms.pp.p10.eyebrow">Pain Point 10</span>
           <h2 class="h-title h-reveal h-parallax-slow" data-i18n="hms.pp.p10.h">« On reste collé à nos comptes historiques. »</h2>
-          <p class="h-lead h-reveal" data-i18n-html="hms.pp.p10.p">Difficulté à ouvrir le marché PME et le canal Integrators. Force commerciale calibrée pour le grand-compte. Outillage non adapté aux petits volumes.</p>
-          <div class="h-deliv h-reveal" data-i18n="hms.pp.p10.constraint">Devenue argument MVP · capter les End-User Plants via un freemium cloud-native côté Talk2M, et les Integrators via une API publique. Plus besoin de passer par les commerciaux historiques pour la moindre activation.</div>
+          <div class="h-deliv h-reveal" data-i18n="hms.pp.p10.constraint">Argument · End-User Plants par freemium Talk2M, Integrators par API.</div>
         </div>
         <div class="h-panel-visual h-reveal h-parallax-fast">
           <div class="barrier-watermark"><span class="barrier-num">10</span><span class="barrier-theme" data-i18n="hms.pp.p10.theme">Expansion</span></div>
@@ -2311,67 +2236,65 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.analyse.oppEyebrow">Analyse · 11 opportunités</span>
     <h3 class="research-h3" data-i18n-html="hms.analyse.oppTitle">Des douleurs <span class="accent">aux chances.</span></h3>
-    <p class="lead" data-i18n-html="hms.analyse.oppLead">Le passage des dix pain points aux <strong>onze opportunités</strong> est l'arbitrage clé de la phase Analyse. Pas de raccourci : chaque douleur a été reformulée en chance d'innover, sourcée verbatim dans le Concept Report. Ces onze pistes ne sont pas toutes scopées MVP. Cinq deviendront des Value Props livrables, six seront placées en MVP++ phase 2.</p>
+    <p class="lead" data-i18n-html="hms.analyse.oppLead">10 pain points reformulés en <strong>11 opportunités</strong>, sourcées verbatim Concept Report. 5 deviennent Value Props MVP. 6 placées MVP++ phase 2.</p>
 
     <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:32px;list-style:none;padding:0;" role="list">
       <li class="ws-card" data-opp="01" style="padding:24px;">
         <span class="ws-num">01</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp1Name">Enhanced Customer Experience</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp1Desc">Self-service, real-time tracking, personalized dashboards par segment.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp1Desc">Self-service, real-time tracking, dashboards par segment.</p>
       </li>
       <li class="ws-card" data-opp="02" style="padding:24px;">
         <span class="ws-num">02</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp2Name">Automation &amp; Scalability</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp2Desc">Automate repetitive tasks, intégrations API, self-onboarding pour les SMEs.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp2Desc">API, self-onboarding pour les SMEs.</p>
       </li>
       <li class="ws-card" data-opp="03" style="padding:24px;">
         <span class="ws-num">03</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp3Name">Multi-Channel Integration</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp3Desc">Email, SMS, print unifiés. Fallback automatique si un canal échoue.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp3Desc">Email, SMS, print unifiés. Fallback automatique.</p>
       </li>
       <li class="ws-card" data-opp="04" style="padding:24px;">
         <span class="ws-num">04</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp4Name">Data-Driven Insights</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp4Desc">Reporting BI, behaviors clients analysés, sector-specific insights.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp4Desc">Reporting BI, behaviors clients, sector-specific insights.</p>
       </li>
       <li class="ws-card" data-opp="05" style="padding:24px;">
         <span class="ws-num">05</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp5Name">Flexible Pricing Models</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp5Desc">Tiered Basic / Gold / Custom. Pay-as-you-go ou subscription pour les SMEs.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp5Desc">Basic / Gold / Custom. Pay-as-you-go pour les SMEs.</p>
       </li>
       <li class="ws-card" data-opp="06" style="padding:24px;">
         <span class="ws-num">06</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp6Name">Market Expansion</h4>
-        <p class="ws-desc" data-i18n-html="hms.analyse.opp6Desc">Multi-langue, multi-région, compliance industrielle adaptée par juridiction · IEC 62443 (EU), NIST (US), CE marking, FCC. <em>MVP++.</em></p>
+        <p class="ws-desc" data-i18n-html="hms.analyse.opp6Desc">Multi-langue, compliance par juridiction · IEC 62443, NIST, CE, FCC. <em>MVP++.</em></p>
       </li>
       <li class="ws-card" data-opp="07" style="padding:24px;">
         <span class="ws-num">07</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp7Name">Proactive Customer Engagement</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp7Desc">Predictive analytics, alertes proactives avant que le client appelle.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp7Desc">Predictive analytics, alertes avant que le client appelle.</p>
       </li>
       <li class="ws-card" data-opp="08" style="padding:24px;">
         <span class="ws-num">08</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp8Name">Standardization with Flexibility</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp8Desc">Templates réutilisables + modular add-ons pour Large Accounts.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp8Desc">Templates + modular add-ons pour Large Accounts.</p>
       </li>
       <li class="ws-card" data-opp="09" style="padding:24px;">
         <span class="ws-num">09</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp9Name">Innovation in Product Offerings</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp9Desc">Consent management, drag-and-drop builders, payment integrations.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp9Desc">Consent management, builders, payment integrations.</p>
       </li>
       <li class="ws-card" data-opp="10" style="padding:24px;">
         <span class="ws-num">10</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp10Name">Unified Client Portal</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.opp10Desc">Tracking + billing + reporting + ticketing en un seul portail. Open API marketplace.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.opp10Desc">Tracking + billing + reporting + ticketing en un seul portail.</p>
       </li>
       <li class="ws-card" data-opp="11" style="padding:24px;">
         <span class="ws-num">11</span>
         <h4 class="ws-name" data-i18n="hms.analyse.opp11Name">Competitive Differentiation</h4>
-        <p class="ws-desc" data-i18n-html="hms.analyse.opp11Desc">Advanced analytics, fallback mechanisms, positionnement « One Stop Shop ». <em>MVP++.</em></p>
+        <p class="ws-desc" data-i18n-html="hms.analyse.opp11Desc">Advanced analytics, positionnement One-Stop Shop. <em>MVP++.</em></p>
       </li>
     </ol>
-
-    <p class="research-source" data-i18n="hms.analyse.oppSource">Source · Ewon HMS Concept Report 2022 · « Opportunities for Innovation » verbatim · synthèse des 6 expert interviews internes + 8 customer interviews internationaux.</p>
   </div>
 </section>
 
@@ -2383,7 +2306,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.analyse.wsEyebrow">Analyse · ateliers cocréation</span>
     <h3 class="research-h3" data-i18n-html="hms.analyse.wsTitle">Le langage commun. <span class="accent">En atelier, pas en canvas.</span></h3>
-    <p class="lead" data-i18n-html="hms.analyse.wsLead">Pour aligner Business, IT et Operations sur la voix du client, il a fallu sortir des slides. <strong>Deux régimes d'atelier</strong> ont rythmé la phase Analyse. Des <strong>petits ateliers ciblés</strong> avec les Project Managers et les figures clés côté IT pour caler les arbitrages techniques, en groupe restreint, au tableau. Des <strong>grands ateliers Customer Journey</strong> avec toutes les parties prenantes autour de la table — Business, IT, Operations, Customer Service — pour mettre le client au centre, pas l'org chart. Quatre formats au total, chacun avec un livrable concret. C'est par ces ateliers que la VP est apparue, pas par un canvas théorique.</p>
+    <p class="lead" data-i18n-html="hms.analyse.wsLead">Deux régimes d'atelier. <strong>Petits ateliers ciblés</strong> avec les Project Managers IT, au tableau. <strong>Grands ateliers Customer Journey</strong> avec Business, IT, Operations, Customer Service autour de la table. Quatre formats, quatre livrables. La VP est sortie de là.</p>
 
     <ol class="ws-grid" role="list">
       <li class="ws-card" data-ws="01">
@@ -2397,8 +2320,8 @@
         </div>
         <span class="ws-num">01</span>
         <h4 class="ws-name" data-i18n="hms.analyse.ws1Name">Empathy mapping cross-département</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.ws1Desc">Project Owners et Project Managers à la même table. Chaque équipe construit l'empathy map d'une persona client, puis confronte sa lecture. Effet immédiat : on découvre qu'on parle du même utilisateur, pas du même contrat.</p>
-        <p class="ws-output" data-i18n="hms.analyse.ws1Output">Output : 6 empathy maps consolidées · langage user partagé.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.ws1Desc">Project Owners et Project Managers à la même table. Chacun construit l'empathy map d'un persona, puis confronte sa lecture. On découvre qu'on parle du même utilisateur.</p>
+        <p class="ws-output" data-i18n="hms.analyse.ws1Output">Output · 6 empathy maps consolidées.</p>
       </li>
 
       <li class="ws-card" data-ws="02">
@@ -2414,8 +2337,8 @@
         </div>
         <span class="ws-num">02</span>
         <h4 class="ws-name" data-i18n="hms.analyse.ws2Name">Customer Journey workshops</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.ws2Desc">Reconstruire la journey end-to-end avec les vrais acteurs internes (sales, ops, support, IT). Chaque touchpoint est validé par celui qui le tient. Les pain points sortent à l'oral, sont épinglés au mur.</p>
-        <p class="ws-output" data-i18n="hms.analyse.ws2Output">Output : journey 5 phases · 10 pain points cartographiés · ownership clair par étape.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.ws2Desc">Reconstruire la journey end-to-end avec sales, ops, support, IT. Chaque touchpoint est validé par celui qui le tient. Pain points épinglés au mur.</p>
+        <p class="ws-output" data-i18n="hms.analyse.ws2Output">Output · journey 5 phases · 10 pain points · ownership clair.</p>
       </li>
 
       <li class="ws-card" data-ws="03">
@@ -2428,8 +2351,8 @@
         </div>
         <span class="ws-num">03</span>
         <h4 class="ws-name" data-i18n="hms.analyse.ws3Name">"How might we" sessions</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.ws3Desc">Chaque pain point est reformulé en opportunité. Les équipes votent les "how might we" qui méritent un MVP. Pas de débat sur le canvas, focus sur l'action priorisée.</p>
-        <p class="ws-output" data-i18n="hms.analyse.ws3Output">Output : top 12 HMW · scoring impact / effort · backlog VP.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.ws3Desc">Chaque pain point reformulé en opportunité. Les équipes votent les HMW qui méritent un MVP. Focus action.</p>
+        <p class="ws-output" data-i18n="hms.analyse.ws3Output">Output · top 12 HMW · scoring impact/effort · backlog VP.</p>
       </li>
 
       <li class="ws-card" data-ws="04">
@@ -2443,95 +2366,13 @@
         </div>
         <span class="ws-num">04</span>
         <h4 class="ws-name" data-i18n="hms.analyse.ws4Name">VP synthesis workshop</h4>
-        <p class="ws-desc" data-i18n="hms.analyse.ws4Desc">Le workshop final qui condense les outputs précédents en une seule formulation de VP. Chacun défend, ajuste, signe. Sortie de salle = VP partagée IT + Business + Innovation.</p>
-        <p class="ws-output" data-i18n="hms.analyse.ws4Output">Output : VP en 1 phrase · alignement signé · go pour Diamant 2.</p>
+        <p class="ws-desc" data-i18n="hms.analyse.ws4Desc">Workshop final · condenser les outputs en une formulation de VP. Chacun défend, ajuste, signe.</p>
+        <p class="ws-output" data-i18n="hms.analyse.ws4Output">Output · VP en 1 phrase · alignement signé.</p>
       </li>
     </ol>
-
-    <p class="research-source" data-i18n="hms.analyse.wsSource">Approche Service Design · Customer Journey + Pain Points overlay · adaptée à une organisation early-Agile en change management. Pas de Lean Canvas. La parole et l'atelier comme outils.</p>
   </div>
 </section>
 
-
-<!-- METHODOLOGY CHOICE · HMS — pourquoi ce toolkit ici, pas un autre.
-     CVE 2026-05-04 v3 · pas de comparaison écrite avec l'autre case.
-     Le lecteur fait le lien lui-même par juxtaposition. Show don't tell. -->
-<section id="methodology-choice" data-act="T" data-rail="vertical" data-frame="default" data-overflow="natural">
-  <div class="container">
-    <span class="eyebrow" data-i18n="hms.method.eyebrow">Le toolkit, pas l'école</span>
-    <h2 class="research-h3" data-i18n-html="hms.method.title">Pourquoi <span class="accent">ces outils-là, ici.</span></h2>
-    <p class="lead" data-i18n="hms.method.lead">Sur HMS, je ne suis pas entré par un Lean Canvas · le business model d'Ewon existait. Je ne suis pas entré par un Design Sprint non plus · le besoin était une transformation multi-mois, pas une décision de 5 jours. Je suis entré par une Heuristic Evaluation Nielsen sur eCatcher, M2Web et Talk2M, puis par des Customer Journey workshops worldwide. Le contexte commande l'outil, pas l'inverse. Une organisation IT-pure en bascule user-centric a besoin de voir ses propres frictions avant d'imaginer ce qu'IXON livre déjà.</p>
-
-    <ul class="method-grid" role="list">
-      <li class="method-card">
-        <span class="method-card__num">01</span>
-        <h3 class="method-card__h" data-i18n="hms.method.c1.h">Stakeholder Map · pour rendre la friction visible</h3>
-        <p class="method-card__p" data-i18n="hms.method.c1.p">Avant de proposer une solution, on a cartographié qui décide, qui exécute, qui valide, qui influence. Le Project Owner Business et le Project Manager IT n'avaient jamais été assis dans la même salle avec un objet partagé. La Stakeholder Map a été cet objet.</p>
-        <span class="method-card__src" data-i18n="hms.method.c1.src">Source · Service Design / Stickdorn &amp; Schneider</span>
-      </li>
-      <li class="method-card method-card--accent">
-        <span class="method-card__num">02</span>
-        <h3 class="method-card__h" data-i18n="hms.method.c2.h">Customer Journey AS-IS / TO-BE · pour montrer le bordel</h3>
-        <p class="method-card__p" data-i18n="hms.method.c2.p">La journey actuelle est posée sans accuser. Cinq phases, dix pain points épinglés là où ils font mal. La même journey, version cible, montre où on veut aller. Pas un argument. Une preuve visuelle posée sur un mur, qui résiste aux opinions.</p>
-        <span class="method-card__src" data-i18n="hms.method.c2.src">Source · Service Design Network · NN/G</span>
-      </li>
-      <li class="method-card">
-        <span class="method-card__num">03</span>
-        <h3 class="method-card__h" data-i18n="hms.method.c3.h">Pains / Gains / Tasks · pour entrer dans la peau</h3>
-        <p class="method-card__p" data-i18n="hms.method.c3.p">Strategyzer entre dans le toolkit, pas comme entrée principale, comme outil d'extraction. Pour chaque persona, on liste les jobs à faire, les pains à éviter, les gains attendus. Le canvas ne porte pas le projet, il prépare le terrain de la VP.</p>
-        <span class="method-card__src" data-i18n="hms.method.c3.src">Source · Strategyzer · Value Proposition Canvas</span>
-      </li>
-      <li class="method-card">
-        <span class="method-card__num">04</span>
-        <h3 class="method-card__h" data-i18n="hms.method.c4.h">Empathy Map + How Might We · pour reformuler</h3>
-        <p class="method-card__p" data-i18n="hms.method.c4.p">En atelier, chaque pain point se transforme en opportunité par la formule « how might we ». Les équipes votent, priorisent, jettent. Pas de débat sur le canvas, focus sur l'action. C'est ce qui produit le top 12 HMW qui devient le backlog VP.</p>
-        <span class="method-card__src" data-i18n="hms.method.c4.src">Source · IDEO · Stanford d.school</span>
-      </li>
-    </ul>
-
-    <p class="method-claim" data-i18n-html="hms.method.claim">Strategyzer, Customer Journey, Service Blueprint, Design Sprint sont des outils du <strong class="accent">même Design System</strong>. La maîtrise, ce n'est pas d'en choisir un. C'est de savoir lequel, à quel moment, avec qui dans la salle.</p>
-
-    <!-- TABLEAU Classic vs Best Practice (Sprint 3 · 2026-05-08) ·
-         Recréé en HTML/CSS depuis Methodology_HMS.pptx slide 14.
-         Pitch stratégique : pourquoi installer un département UX dédié.
-         Référents Ewon by HMS Networks anonymisés · pas de noms publics. -->
-    <div class="method-comparison" style="margin-top:64px;padding-top:48px;border-top:1px solid var(--rule);">
-      <span class="eyebrow" data-i18n="hms.method.compEyebrow">Le pitch initial · pourquoi un département UX</span>
-      <h3 class="research-h3" style="margin-top:8px;" data-i18n-html="hms.method.compTitle">Classic <span class="accent">vs Best Practice.</span></h3>
-      <p class="lead" style="max-width:70ch;margin-top:16px;" data-i18n="hms.method.compLead">Le pitch que j'ai porté à l'arrivée pour justifier la mission · montrer comment les industriels SaaS européens (Siemens, ABB, Bosch ConnectedCare) ont structuré leur fonction UX, et où HMS / Ewon se trouvait sur cette ligne. Trois rôles. Deux modes d'organisation. Un choix d'architecture.</p>
-
-      <table class="vp-needs" style="margin-top:32px;">
-        <thead>
-          <tr>
-            <th data-i18n="hms.method.comp.colDim">Dimension</th>
-            <th data-i18n="hms.method.comp.colClassic">Classic approach</th>
-            <th data-i18n="hms.method.comp.colBest">Best Practice (grands comptes belges · banking, energy, telecoms)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-i18n-html="hms.method.comp.r1Dim"><strong>Business (ROI)</strong></td>
-            <td data-i18n="hms.method.comp.r1Classic">Define needs.</td>
-            <td data-i18n="hms.method.comp.r1Best">Work with UX to define expectations.</td>
-          </tr>
-          <tr>
-            <td data-i18n-html="hms.method.comp.r2Dim"><strong>IT (Technology)</strong></td>
-            <td data-i18n="hms.method.comp.r2Classic">Implements solutions.</td>
-            <td data-i18n="hms.method.comp.r2Best">Focus on architecture &amp; delivery.</td>
-          </tr>
-          <tr>
-            <td data-i18n-html="hms.method.comp.r3Dim"><strong>UX (Users)</strong></td>
-            <td data-i18n="hms.method.comp.r3Classic">Rare or integrated into IT.</td>
-            <td data-i18n-html="hms.method.comp.r3Best"><strong>Dedicated, cross-functional, strategic department.</strong></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p class="vp-pillar__hint" style="margin-top:24px;" data-i18n-html="hms.method.compNote">Le pattern département UX dédié est <strong>déployé depuis 15+ ans</strong> aux États-Unis (PTC, Rockwell Automation, Honeywell) et <strong>10+ ans</strong> en Europe dans les industriels SaaS (Siemens MindSphere, Bosch ConnectedCare, ABB Ability). À l'arrivée chez HMS, je ne réinventais rien · je transposais un pattern industrialisé chez un leader belge encore organisé en silos IT.</p>
-      <p class="research-source" data-i18n="hms.method.compSource">Source · Strategic Process Proposal CVE · pitch méthodologique porté à l'interne HMS / Ewon · 2021.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ANALYSE 05 · HMS — CLIFFHANGER VP cristallisation.
      Une convergence narrative light :
@@ -2607,7 +2448,7 @@
   <div class="container vp-content">
     <span class="eyebrow vp-content__eyebrow" data-i18n="hms.vp.eyebrow">Le contrat de valeur</span>
     <h2 class="vp-content__title" data-i18n-html="hms.vp.title">Une plateforme, ce n'est pas <span class="accent">cinq portes d'entrée.</span><br>C'est une orchestration qui se règle sur le persona devant elle.</h2>
-    <p class="vp-content__lede" data-i18n-html="hms.vp.lede">Avant la VP, chaque rôle défendait sa lecture. Project Owners voulaient des features vendables. Project Managers voulaient une stack maintenable. Les clients juxtaposaient cinq logins. Après, une phrase tient debout : <strong>un host orchestré, des personas reconnus, dix douleurs traduites en cinq livrables MVP, six de plus en MVP++</strong>. C'est cette VP qui rend l'Ideation légitime.</p>
+    <p class="vp-content__lede" data-i18n-html="hms.vp.lede">Avant · chaque rôle défendait sa lecture. Les clients juxtaposaient cinq logins. Après · <strong>un host orchestré, deux personas reconnus, dix douleurs traduites en cinq livrables MVP</strong>.</p>
 
     <!-- TRIPTYQUE · 3 piliers : posture / 2 personas illustratifs / traduction 10→11→5 -->
     <div class="vp-content__grid">
@@ -2617,44 +2458,44 @@
         <h3 class="vp-pillar__title" data-i18n="hms.vp.posture.h">La posture</h3>
         <p class="vp-pillar__claim" data-i18n-html="hms.vp.posture.claim">Pas une plateforme par segment. <span class="accent">Une plateforme orchestrée.</span></p>
         <ul class="vp-pillar__list">
-          <li data-i18n-html="hms.vp.posture.l1"><strong>Pas</strong> 5 produits avec 5 logins, 5 back-offices, 5 supports.</li>
-          <li data-i18n-html="hms.vp.posture.l2"><strong>Un host one-stop</strong> avec onboarding piloté par persona et typologie.</li>
-          <li data-i18n-html="hms.vp.posture.l3"><strong>Capacités API-isées</strong> partagées par les 3 segments en dessous.</li>
-          <li data-i18n-html="hms.vp.posture.l4"><strong>Monitoring et diagnostics</strong> sans couture, fallback cellular/ethernet automatique sur les passerelles.</li>
-          <li data-i18n-html="hms.vp.posture.l5"><strong>Compliance ready</strong> pour les exigences IEC 62443, NIST et Cyber Resilience Act de demain.</li>
+          <li data-i18n-html="hms.vp.posture.l1"><strong>Pas</strong> 5 produits avec 5 logins, 5 back-offices.</li>
+          <li data-i18n-html="hms.vp.posture.l2"><strong>Un host one-stop</strong>, onboarding piloté par persona.</li>
+          <li data-i18n-html="hms.vp.posture.l3"><strong>Capacités API-isées</strong> partagées par les 3 segments.</li>
+          <li data-i18n-html="hms.vp.posture.l4"><strong>Monitoring sans couture</strong>, fallback cellular/ethernet automatique.</li>
+          <li data-i18n-html="hms.vp.posture.l5"><strong>Compliance ready</strong> IEC 62443, NIST, Cyber Resilience Act.</li>
         </ul>
-        <p class="vp-pillar__src" data-i18n="hms.vp.posture.src">Source · Strategic Process Proposal HMS 2021 · slide « VP statement » verbatim · Relevance · Simplicity · Consistency</p>
+        <p class="vp-pillar__src" data-i18n="hms.vp.posture.src">Source · Strategic Process Proposal HMS 2021 · Relevance · Simplicity · Consistency</p>
       </article>
 
       <article class="vp-pillar vp-pillar--persona">
         <div class="vp-pillar__num">02</div>
         <h3 class="vp-pillar__title" data-i18n="hms.vp.persona.h">Les 2 personas qui décident</h3>
-        <p class="vp-pillar__claim" data-i18n-html="hms.vp.persona.claim">10 personas testés terrain · 8 archétypes synthétisés. <span class="accent">Voici 2 d'entre eux, illustratifs.</span></p>
+        <p class="vp-pillar__claim" data-i18n-html="hms.vp.persona.claim">10 personas testés terrain. <span class="accent">Voici 2 d'entre eux.</span></p>
 
         <ol class="vp-question-list">
           <li class="vp-question">
             <span class="vp-question__num">01</span>
             <p class="vp-question__text" data-i18n-html="hms.vp.persona.p1">
-              <strong>Klaus</strong> · 48 ans · Plant Manager · OEM Machine Builder DACH<br>
-              <em>« Quand une machine tombe à 3h du matin à Atlanta, j'ai besoin de voir le tunnel Talk2M, pas de chercher quel login marche. »</em>
+              <strong>Klaus</strong> · Plant Manager · OEM DACH<br>
+              <em>« Voir le tunnel Talk2M, pas chercher quel login marche. »</em>
             </p>
           </li>
           <li class="vp-question">
             <span class="vp-question__num">02</span>
             <p class="vp-question__text" data-i18n-html="hms.vp.persona.p2">
-              <strong>Sven</strong> · 55 ans · Field Service Engineer · End-User Plant Operator<br>
-              <em>« Mon job c'est de tenir l'uptime de 200 machines distribuées. Si l'outil de monitoring me parle pas, je suis dans le noir. »</em>
+              <strong>Sven</strong> · Field Service Engineer · End-User Plant<br>
+              <em>« Tenir l'uptime de 200 machines. Si l'outil parle pas, je suis dans le noir. »</em>
             </p>
           </li>
         </ol>
 
-        <p class="vp-pillar__hint" data-i18n-html="hms.vp.persona.hint">Trois <strong>jobs-to-be-done</strong> partagés : reprendre la main sur le fleet, réduire les zones d'ombre cross-protocole, disposer d'outils calés sur les fuseaux horaires d'usine (24/7 multi-sites) et les enjeux compliance IEC 62443 / SOC 2.</p>
+        <p class="vp-pillar__hint" data-i18n-html="hms.vp.persona.hint">Trois <strong>jobs-to-be-done</strong> · reprendre la main sur le fleet, réduire les zones d'ombre cross-protocole, tenir IEC 62443.</p>
       </article>
 
       <article class="vp-pillar vp-pillar--needs">
         <div class="vp-pillar__num">03</div>
         <h3 class="vp-pillar__title" data-i18n="hms.vp.translate.h">10 douleurs → 11 chances → 5 VPs MVP</h3>
-        <p class="vp-pillar__claim" data-i18n-html="hms.vp.translate.claim">La mécanique du Concept Report verbatim. <span class="accent">Les 10 pain points produisent 11 opportunités, dont 5 livrables sont scopés MVP, 6 placés MVP++.</span></p>
+        <p class="vp-pillar__claim" data-i18n-html="hms.vp.translate.claim"><span class="accent">5 livrables scopés MVP, 6 placés MVP++.</span></p>
 
         <table class="vp-needs">
           <thead>
@@ -2664,27 +2505,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td data-i18n="hms.vp.translate.r1n">1. Time-to-Market Delays</td><td data-i18n-html="hms.vp.translate.r1v"><strong>VP 01 Onboarding</strong> · IT-less</td></tr>
-            <tr><td data-i18n="hms.vp.translate.r2n">2. Lack of Automation</td><td data-i18n-html="hms.vp.translate.r2v">VP 01 Onboarding</td></tr>
-            <tr><td data-i18n="hms.vp.translate.r3n">3. Customer Autonomy</td><td data-i18n-html="hms.vp.translate.r3v"><strong>VP 02 Monitoring</strong> · real-time</td></tr>
-            <tr><td data-i18n="hms.vp.translate.r4n">4. Platform Fragmentation</td><td data-i18n-html="hms.vp.translate.r4v"><strong>VP 03 Audit Trail &amp; Diagnostics</strong></td></tr>
-            <tr><td data-i18n="hms.vp.translate.r5n">5. Lack of Proactivity</td><td data-i18n-html="hms.vp.translate.r5v">VP 02 Monitoring</td></tr>
+            <tr><td data-i18n="hms.vp.translate.r1n">1. Time-to-Market</td><td data-i18n-html="hms.vp.translate.r1v"><strong>VP 01 Onboarding</strong></td></tr>
+            <tr><td data-i18n="hms.vp.translate.r2n">2. Automation</td><td data-i18n-html="hms.vp.translate.r2v">VP 01 Onboarding</td></tr>
+            <tr><td data-i18n="hms.vp.translate.r3n">3. Customer Autonomy</td><td data-i18n-html="hms.vp.translate.r3v"><strong>VP 02 Monitoring</strong></td></tr>
+            <tr><td data-i18n="hms.vp.translate.r4n">4. Fragmentation</td><td data-i18n-html="hms.vp.translate.r4v"><strong>VP 03 Audit Trail</strong></td></tr>
+            <tr><td data-i18n="hms.vp.translate.r5n">5. Proactivity</td><td data-i18n-html="hms.vp.translate.r5v">VP 02 Monitoring</td></tr>
             <tr><td data-i18n="hms.vp.translate.r6n">6. No Design System</td><td data-i18n-html="hms.vp.translate.r6v">VP 03 Audit Trail</td></tr>
-            <tr><td data-i18n="hms.vp.translate.r7n">7. Service Rigidity</td><td data-i18n-html="hms.vp.translate.r7v"><strong>VP 05 Support</strong> · self-service</td></tr>
-            <tr><td data-i18n="hms.vp.translate.r8n">8. IXON Competitive Pressure</td><td data-i18n-html="hms.vp.translate.r8v">VP 02 + VP 05</td></tr>
-            <tr><td data-i18n="hms.vp.translate.r9n">9. SLA Reporting Complexity</td><td data-i18n-html="hms.vp.translate.r9v"><strong>VP 04 Service Level Reporting</strong> · tiered</td></tr>
-            <tr><td data-i18n="hms.vp.translate.r10n">10. End-User Plants Expansion</td><td data-i18n-html="hms.vp.translate.r10v"><em>placé MVP++</em></td></tr>
+            <tr><td data-i18n="hms.vp.translate.r7n">7. Rigidity</td><td data-i18n-html="hms.vp.translate.r7v"><strong>VP 05 Support</strong></td></tr>
+            <tr><td data-i18n="hms.vp.translate.r8n">8. IXON Pressure</td><td data-i18n-html="hms.vp.translate.r8v">VP 02 + VP 05</td></tr>
+            <tr><td data-i18n="hms.vp.translate.r9n">9. SLA Reporting</td><td data-i18n-html="hms.vp.translate.r9v"><strong>VP 04 SLR</strong></td></tr>
+            <tr><td data-i18n="hms.vp.translate.r10n">10. Expansion</td><td data-i18n-html="hms.vp.translate.r10v"><em>MVP++</em></td></tr>
           </tbody>
         </table>
 
-        <p class="vp-pillar__hint" data-i18n-html="hms.vp.translate.mvpScope"><strong>MVP / MVP++ scope.</strong> 5 livrables MVP couvrent les 6 phases du Customer Lifecycle. Les opportunités <em>Market Expansion</em> et <em>Marketplace API Integrators</em> sont scopées <strong>MVP++ phase 2</strong>, post-validation host one-stop.</p>
+        <p class="vp-pillar__hint" data-i18n-html="hms.vp.translate.mvpScope"><strong>5 livrables MVP</strong>. <em>Market Expansion</em> et <em>Marketplace API</em> scopées <strong>MVP++ phase 2</strong>.</p>
       </article>
     </div>
 
     <!-- BAS DE PAGE · alignement obtenu + bascule Ideation -->
     <div class="vp-content__bridge">
-      <p class="vp-content__alignement" data-i18n-html="hms.vp.bridgeText">À la sortie de cette VP, <strong>Project Owners (Business), Project Managers (IT), Operations et Sales</strong> partagent la même phrase, les mêmes deux personas, la même traduction des dix douleurs en cinq livrables MVP. C'est ce <span class="accent">socle commun</span> qui rend l'Ideation légitime. On n'arbitre plus sur le « quoi », on arbitre sur le « quand » et le « comment ».</p>
-      <span class="vp-content__next" data-i18n-html="hms.vp.bridgeNext">Suite logique <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 directions explorées, une retenue</span>
+      <p class="vp-content__alignement" data-i18n-html="hms.vp.bridgeText">À la sortie · <strong>Project Owners, Project Managers IT, Operations, Sales</strong> partagent la même phrase et les mêmes deux personas. On arbitre sur le « quand » et le « comment ».</p>
+      <span class="vp-content__next" data-i18n-html="hms.vp.bridgeNext">Suite <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · 2 directions explorées, une retenue</span>
     </div>
   </div>
 </section>
@@ -2723,7 +2564,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.prototype.directionEyebrow">Prototype · premiers drafts</span>
     <h2 class="vp-hero__title" data-i18n-html="hms.prototype.directionTitle">Deux directions explorées. <span class="accent">Une retenue.</span></h2>
-    <p class="lead vp-hero__lead" data-i18n-html="hms.prototype.directionLead">À la sortie des ateliers Customer Journey, deux pistes étaient sur la table. À gauche, conserver chaque plateforme dans son silo (eCatcher desktop, M2Web web, Talk2M cloud) avec son propre login et son propre back-office. Solution rapide à livrer mais qui reproduit la fragmentation que les machine builders pointaient eux-mêmes en interview. À droite, un host one-stop avec un onboarding piloté par persona industriel (du technicien terrain au directeur d'usine), et les fonctions API-isées en dessous. C'est la deuxième direction qui a été retenue, validée par le sponsor, puis testée chez huit machine builders sur cinq fuseaux horaires. <strong>La direction silo aurait livré en six mois. La direction one-stop a doublé le temps de dev.</strong> Le sponsor a accepté le coût parce qu'<strong class="accent">elle ferme la porte que IXON laissait ouverte sur les End-User Plants</strong>.</p>
+    <p class="lead vp-hero__lead" data-i18n-html="hms.prototype.directionLead">À gauche · garder chaque plateforme en silo. Rapide, mais reproduit la fragmentation. À droite · host one-stop, onboarding par persona, fonctions API-isées. <strong>Silo livrait en six mois, one-stop a doublé le temps de dev.</strong> Le sponsor a accepté · <strong class="accent">elle ferme la porte qu'IXON laissait ouverte sur les End-User Plants</strong>.</p>
 
     <div class="vp-compare">
       <article class="vp-compare__card vp-compare__card--bad">
@@ -2744,7 +2585,7 @@
             </div>
           </div>
         </div>
-        <p class="vp-compare__note" data-i18n="hms.prototype.vpBadNote">Cinq apps cloisonnées, cinq logins, cinq supports. Le client jongle, l'IT maintient cinq stacks, le Business vend cinq produits au lieu d'une plateforme. La solution la plus rapide à livrer, mais celle qui reproduit la fragmentation pointée par les 12 entretiens experts.</p>
+        <p class="vp-compare__note" data-i18n="hms.prototype.vpBadNote">Cinq apps, cinq logins, cinq supports. Le client jongle, l'IT maintient cinq stacks. La solution la plus rapide, mais qui reproduit la fragmentation pointée en interview.</p>
       </article>
 
       <article class="vp-compare__card vp-compare__card--good">
@@ -2765,12 +2606,11 @@
             <div class="vp-mock__notif vp-mock__notif--ok"><span class="vp-mock__notif-dot"></span>Rapport SLA mensuel prêt à valider.</div>
           </div>
         </div>
-        <p class="vp-compare__note" data-i18n="hms.prototype.vpGoodNote">Aucun choix à faire. La plateforme reconnaît Joseph, son rôle, ses tâches, son segment. KPI et notifications sont déjà cadrés sur ses goals. Une stack pour l'IT, une plateforme pour le Business, une page d'accueil pour chaque persona.</p>
+        <p class="vp-compare__note" data-i18n="hms.prototype.vpGoodNote">La plateforme reconnaît Joseph, son rôle, son segment. KPI et notifications cadrés sur ses goals. Une stack pour l'IT, une plateforme pour le Business, une page d'accueil par persona.</p>
       </article>
     </div>
 
-    <p class="vp-claim" data-i18n-html="hms.prototype.vpClaim">Pas une suite de produits avec une porte chacun. <span class="accent">Un host orchestré, piloté par persona et typologie de besoin.</span></p>
-    <p class="research-source" data-i18n="hms.prototype.directionSource">Source · Strategic Process Proposal HMS · synthèse Discovery + Heuristic Evaluation Nielsen 29 slides + Customer Journey workshops worldwide, validée par CEO et CTO avant le prototyping Phoenix.</p>
+    <p class="vp-claim" data-i18n-html="hms.prototype.vpClaim">Pas une suite de produits. <span class="accent">Un host orchestré, piloté par persona.</span></p>
   </div>
 </section>
 
@@ -2780,12 +2620,11 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.prototype.overviewEyebrow">Phase 03 · Develop · Cloud Revamp</span>
     <h2 class="proto-overview__title" data-reveal="title" data-i18n-html="hms.prototype.overviewTitle">Trois plateformes, <span class="accent">une seule expérience.</span></h2>
-    <p class="lead proto-overview__lead" data-i18n="hms.prototype.overviewLead">eCatcher, M2Web, Talk2M · trois cultures techniques, trois interfaces, un seul utilisateur. Le Cloud Revamp les fait converger autour de la machine, pas autour de l'org chart.</p>
+    <p class="lead proto-overview__lead" data-i18n="hms.prototype.overviewLead">eCatcher, M2Web, Talk2M · trois interfaces, un seul utilisateur. Le Cloud Revamp les fait converger autour de la machine.</p>
 
-    <!-- CVE 2026-05-08 · Cloud Revamp final design · proof point visuel Apple-style -->
     <figure class="proto-hero" style="margin: 32px 0 40px;">
       <img src="public/img/hms/cloud-revamp-final.png" alt="Ewon Cloud Revamp · interface unifiée · device dashboard avec KPIs, alerts, device info" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 24px 64px rgba(10,18,32,0.4);" />
-      <figcaption class="proto-hero__caption" style="margin-top: 12px; font-family: var(--display); font-size: 15px; color: var(--fg-soft); font-style: italic;">Le design final · 29 slides d'Heuristic Evaluation Nielsen, 6 mockups HD, un design system prêt prod.</figcaption>
+      <figcaption class="proto-hero__caption" style="margin-top: 12px; font-family: var(--display); font-size: 15px; color: var(--fg-soft); font-style: italic;">Design final · 29 slides Heuristic Evaluation Nielsen, 6 mockups HD.</figcaption>
     </figure>
 
     <!-- Cycle 5 VP en boucle continue mappées au customer lifecycle -->
@@ -2848,11 +2687,9 @@
       </svg>
     </div>
 
-    <p class="proto-cycle__caption" data-i18n-html="hms.prototype.cycleCaption">Cinq Value Props qui forment <strong>une seule boucle d'expérience</strong>. Le client entre par l'onboarding, monitore en continu, archive ses preuves, paie ce qu'il consomme, et résout ses incidents en self-service. Le cycle reboucle sur le prochain produit, le prochain volume, le prochain canal.</p>
+    <p class="proto-cycle__caption" data-i18n-html="hms.prototype.cycleCaption">Cinq Value Props qui forment <strong>une boucle d'expérience</strong>. Onboarding, monitoring, archives, billing, support self-service.</p>
 
-    <p class="proto-cycle__phase2" data-i18n-html="hms.prototype.cyclePhase2"><strong>5 livrables MVP sur 11 opportunités identifiées</strong> · les 6 autres (notamment <strong>Market Expansion</strong> internationale et <strong>Marketplace API</strong> Integrators) sont scopées <strong>MVP++ phase 2</strong>, après validation du host one-stop.</p>
-
-    <p class="research-source" data-i18n="hms.prototype.overviewSource">Source · Strategic Process Proposal HMS + Roadmap HMS 40p · 5 VP cartographiées sur le cycle industrial IoT Connect → Monitor → Diagnose → Control → Optimize.</p>
+    <p class="proto-cycle__phase2" data-i18n-html="hms.prototype.cyclePhase2"><strong>5 livrables MVP sur 11 opportunités</strong> · les 6 autres (<strong>Market Expansion</strong>, <strong>Marketplace API</strong>) scopées <strong>MVP++ phase 2</strong>.</p>
   </div>
 </section>
 
@@ -2867,7 +2704,7 @@
 
         <blockquote class="vp-statement" data-i18n-html="hms.prototype.vp1Statement">
           <span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span>
-          <p>Notre <strong>self-onboarding industriel</strong> aide les <strong>Plant Operators et machine builders</strong> qui veulent <strong>raccorder une nouvelle machine sans appeler l'IT</strong>, en supprimant les dépendances historiques et en accélérant la mise en service sur les passerelles Flexy.</p>
+          <p>Notre <strong>self-onboarding industriel</strong> aide les <strong>Plant Operators et machine builders</strong> à <strong>raccorder une nouvelle machine sans appeler l'IT</strong> · accélère la mise en service sur passerelles Flexy.</p>
         </blockquote>
       </div>
 
@@ -2875,17 +2712,17 @@
         <li class="vp-feature">
           <span class="vp-feature__num">01</span>
           <h4 class="vp-feature__h" data-i18n="hms.prototype.vp1F1h">Self-service raccordement Flexy</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp1F1p">Le machine builder configure et raccorde ses passerelles Flexy lui-même, sans ouvrir de ticket IT. Source · Strategic Process Proposal HMS · pilier Simplicity verbatim.</p>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp1F1p">Le machine builder configure ses passerelles lui-même, sans ticket IT.</p>
         </li>
         <li class="vp-feature">
           <span class="vp-feature__num">02</span>
           <h4 class="vp-feature__h" data-i18n="hms.prototype.vp1F2h">Persona-driven dashboards</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp1F2p">Vues sur mesure pour OEM Machine Builders, End-User Plants et Integrators IT. Le wizard sait qui est devant lui — technicien terrain, directeur d'usine ou partenaire commercial.</p>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp1F2p">Vues sur mesure pour OEM, End-User Plants, Integrators. Le wizard sait qui est devant lui.</p>
         </li>
         <li class="vp-feature">
           <span class="vp-feature__num">03</span>
-          <h4 class="vp-feature__h" data-i18n="hms.prototype.vp1F3h">Self-onboarding pour les End-User Plants</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp1F3p">Process simplifié pour les plants industriels qui n'ont pas d'équipe IT dédiée. Source · framework Relevance/Simplicity/Consistency verbatim · ferme la porte que IXON laisse ouverte.</p>
+          <h4 class="vp-feature__h" data-i18n="hms.prototype.vp1F3h">Self-onboarding End-User Plants</h4>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp1F3p">Process simplifié pour les plants sans équipe IT dédiée. Ferme la porte qu'IXON laisse ouverte.</p>
         </li>
       </ul>
 
@@ -2937,7 +2774,7 @@
 
         <blockquote class="vp-statement" data-i18n-html="hms.prototype.vp2Statement">
           <span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span>
-          <p>Notre <strong>monitoring temps réel</strong> aide les <strong>machine builders et leurs end-user plants</strong> qui veulent <strong>tracer l'état des machines à distance avec confiance</strong>, en fournissant une visibilité end-to-end sur le tunnel Talk2M, des alertes proactives sur les passerelles Flexy, et en réduisant la dépendance aux interventions terrain.</p>
+          <p><strong>Monitoring temps réel</strong> · machine builders et end-user plants tracent l'état des machines à distance · visibilité end-to-end Talk2M, alertes proactives Flexy.</p>
         </blockquote>
       </div>
 
@@ -2945,17 +2782,17 @@
         <li class="vp-feature">
           <span class="vp-feature__num">01</span>
           <h4 class="vp-feature__h" data-i18n="hms.prototype.vp2F1h">End-to-end visibility</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp2F1p">Le pipeline Connect → Monitor → Diagnose → Control est rendu observable étape par étape. Plus besoin d'appeler le support pour savoir où en est une machine à 5 fuseaux horaires.</p>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp2F1p">Pipeline Connect → Monitor → Diagnose → Control observable. Plus d'appel support à 5 fuseaux horaires.</p>
         </li>
         <li class="vp-feature">
           <span class="vp-feature__num">02</span>
           <h4 class="vp-feature__h" data-i18n="hms.prototype.vp2F2h">Proactive alerts</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp2F2p">Le système notifie l'incident avant que le machine builder ne s'en aperçoive. Source · pilier Consistency · alertes pousshées par SMS ou e-mail avant la perte de production.</p>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp2F2p">Le système notifie avant que le machine builder ne s'en aperçoive. SMS ou e-mail.</p>
         </li>
         <li class="vp-feature">
           <span class="vp-feature__num">03</span>
-          <h4 class="vp-feature__h" data-i18n="hms.prototype.vp2F3h">Fallback automatique multi-canal</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp2F3p">Si le canal VPN principal échoue, fallback automatique sur cellular en un clic. Source · pilier Relevance · ne jamais laisser le machine builder sans signal sur sa machine.</p>
+          <h4 class="vp-feature__h" data-i18n="hms.prototype.vp2F3h">Fallback multi-canal</h4>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp2F3p">Si le VPN échoue, fallback cellular en un clic.</p>
         </li>
       </ul>
 
@@ -3014,11 +2851,11 @@
 
         <blockquote class="vp-statement" data-i18n-html="hms.prototype.vp3Statement">
           <span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span>
-          <p>Nos <strong>Audit Trail &amp; Diagnostics</strong> aident les <strong>équipes Compliance, Operations et Engineering</strong> qui ont besoin de <strong>tracer chaque session distante et rester conformes</strong>, en délivrant des logs signés Talk2M, des archives centralisées et des preuves audit-ready pour IEC 62443 et SOC 2, accessibles à un seul endroit.</p>
+          <p><strong>Audit Trail &amp; Diagnostics</strong> aident <strong>Compliance, Operations, Engineering</strong> à <strong>tracer chaque session et rester conformes</strong> · logs signés Talk2M, preuves IEC 62443 et SOC 2.</p>
         </blockquote>
         <blockquote class="vp-statement vp-statement--secondary" data-i18n-html="hms.prototype.vp4Statement">
-          <span class="vp-statement__lab">Value Proposition Service Level Reporting · verbatim Strategic Process Proposal HMS</span>
-          <p>Notre <strong>Service Level Reporting</strong> aide les mêmes équipes en délivrant un accès centralisé aux rapports d'uptime des passerelles Flexy, aux preuves de connectivité par site et aux historiques de maintenance, réduisant le travail manuel et le risque de litige sur les SLA contractuels.</p>
+          <span class="vp-statement__lab">Service Level Reporting</span>
+          <p><strong>Service Level Reporting</strong> centralise les rapports d'uptime Flexy et preuves de connectivité par site.</p>
         </blockquote>
       </div>
 
@@ -3026,17 +2863,17 @@
         <li class="vp-feature">
           <span class="vp-feature__num">01</span>
           <h4 class="vp-feature__h" data-i18n="hms.prototype.vp3F1h">Audit-ready by default</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp3F1p">Chaque session distante génère ses traces signées. Audit-ready par défaut. Conformité IEC 62443 pour la sécurité industrielle et SOC 2 pour la confiance cloud.</p>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp3F1p">Chaque session distante génère ses traces signées. Conformité IEC 62443 et SOC 2.</p>
         </li>
         <li class="vp-feature">
           <span class="vp-feature__num">02</span>
           <h4 class="vp-feature__h" data-i18n="hms.prototype.vp3F2h">Pricing tiered transparent</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp3F2p">Niveaux Basic / Gold / Custom selon volume de machines. Pay-as-you-go ou subscription pour les End-User Plants. Source · pilier Simplicity verbatim · ouvre la porte aux PMEs sans grille tarifaire opaque.</p>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp3F2p">Basic / Gold / Custom selon volume. Pay-as-you-go pour les End-User Plants.</p>
         </li>
         <li class="vp-feature">
           <span class="vp-feature__num">03</span>
           <h4 class="vp-feature__h" data-i18n="hms.prototype.vp3F3h">Réconciliation uptime ↔ SLA</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp3F3p">Chaque ligne de facture pointe vers les logs Talk2M de la période. Les équipes Operations arrêtent de réconcilier des CSV à la main. Source · pilier Consistency · transparence contractuelle bout-en-bout.</p>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp3F3p">Chaque ligne de facture pointe vers les logs Talk2M. Plus de CSV réconcilié à la main.</p>
         </li>
       </ul>
 
@@ -3047,21 +2884,21 @@
             <div class="speos-mock__table">
               <span class="speos-mock__log-head">Billing history · 5 invoices</span>
               <div class="speos-mock__t-head"><span>ID</span><span>Date</span><span>Tenant</span><span>Amount</span><span>Status</span></div>
-              <div class="speos-mock__t-row"><span>#1846325</span><span>01 May</span><span>Province du Hainaut</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--warn">Pending</span></div>
-              <div class="speos-mock__t-row"><span>#1846328</span><span>01 Apr</span><span>Province du Hainaut</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--good">Paid</span></div>
-              <div class="speos-mock__t-row"><span>#1846329</span><span>01 Mar</span><span>Province du Hainaut</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--good">Paid</span></div>
-              <div class="speos-mock__t-row"><span>#1846330</span><span>01 Feb</span><span>Province du Hainaut</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--good">Paid</span></div>
-              <div class="speos-mock__t-row"><span>#1846331</span><span>01 Jan</span><span>Province du Hainaut</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--good">Paid</span></div>
+              <div class="speos-mock__t-row"><span>#1846325</span><span>01 May</span><span>Bauer Compressor</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--warn">Pending</span></div>
+              <div class="speos-mock__t-row"><span>#1846328</span><span>01 Apr</span><span>Bauer Compressor</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--good">Paid</span></div>
+              <div class="speos-mock__t-row"><span>#1846329</span><span>01 Mar</span><span>Bauer Compressor</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--good">Paid</span></div>
+              <div class="speos-mock__t-row"><span>#1846330</span><span>01 Feb</span><span>Bauer Compressor</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--good">Paid</span></div>
+              <div class="speos-mock__t-row"><span>#1846331</span><span>01 Jan</span><span>Bauer Compressor</span><span>€1.000</span><span class="speos-mock__pill speos-mock__pill--good">Paid</span></div>
             </div>
             <div class="speos-mock__detail">
               <span class="speos-mock__log-head">#1846325 · breakdown</span>
-              <div class="speos-mock__t-row"><span>Ville d'Ath</span><span class="speos-mock__amount">€100</span></div>
-              <div class="speos-mock__t-row"><span>Ville de Charleroi</span><span class="speos-mock__amount">€100</span></div>
-              <div class="speos-mock__t-row"><span>Ville de La Louvière</span><span class="speos-mock__amount">€100</span></div>
-              <div class="speos-mock__t-row"><span>Ville de Mons</span><span class="speos-mock__amount">€200</span></div>
-              <div class="speos-mock__t-row"><span>Ville de Soignies</span><span class="speos-mock__amount">€100</span></div>
-              <div class="speos-mock__t-row"><span>Ville de Thuin</span><span class="speos-mock__amount">€200</span></div>
-              <div class="speos-mock__t-row"><span>Ville de Mouscron</span><span class="speos-mock__amount">€200</span></div>
+              <div class="speos-mock__t-row"><span>Site Atlanta</span><span class="speos-mock__amount">€200</span></div>
+              <div class="speos-mock__t-row"><span>Site Munich</span><span class="speos-mock__amount">€200</span></div>
+              <div class="speos-mock__t-row"><span>Site Lyon</span><span class="speos-mock__amount">€100</span></div>
+              <div class="speos-mock__t-row"><span>Site Shanghai</span><span class="speos-mock__amount">€200</span></div>
+              <div class="speos-mock__t-row"><span>Site Tokyo</span><span class="speos-mock__amount">€100</span></div>
+              <div class="speos-mock__t-row"><span>Site Helsinki</span><span class="speos-mock__amount">€100</span></div>
+              <div class="speos-mock__t-row"><span>Site Stockholm</span><span class="speos-mock__amount">€100</span></div>
               <div class="speos-mock__t-row speos-mock__t-row--total"><span>Total</span><span class="speos-mock__amount">€1.000</span></div>
               <span class="speos-mock__doc-preview">📄 invoice-preview.pdf</span>
             </div>
@@ -3088,7 +2925,7 @@
 
         <blockquote class="vp-statement" data-i18n-html="hms.prototype.vp5Statement">
           <span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span>
-          <p>Notre <strong>plateforme de support intégrée</strong> aide les <strong>machine builders et leurs end-user plants qui gèrent des passerelles Flexy critiques</strong> (production continue, lignes industrielles, sites multi-fuseaux), qui veulent <strong>plus d'autonomie, de visibilité et une résolution plus rapide</strong> de leurs incidents techniques, en offrant un portail self-service avec création de tickets, suivi temps réel, priorités SLA et accès direct aux équipes Engineering Halmstad quand nécessaire — à la différence des modèles legacy qui reposent sur des appels téléphoniques et des goulots humains.</p>
+          <p>Notre <strong>plateforme de support intégrée</strong> donne <strong>plus d'autonomie et une résolution rapide</strong> aux machine builders et end-user plants sur passerelles Flexy critiques · portail self-service, tickets, SLA, accès direct Engineering Halmstad.</p>
         </blockquote>
       </div>
 
@@ -3096,17 +2933,17 @@
         <li class="vp-feature">
           <span class="vp-feature__num">01</span>
           <h4 class="vp-feature__h" data-i18n="hms.prototype.vp5F1h">Portail self-service</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp5F1p">Création de tickets, suivi live, knowledge base par persona industriel (technicien terrain, directeur d'usine, integrator). L'utilisateur résout d'abord, escalade si nécessaire.</p>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp5F1p">Tickets, suivi live, knowledge base par persona. L'utilisateur résout d'abord.</p>
         </li>
         <li class="vp-feature">
           <span class="vp-feature__num">02</span>
-          <h4 class="vp-feature__h" data-i18n="hms.prototype.vp5F2h">Escalation 3 tiers structurée</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp5F2p">Tier 1 self-service · Tier 2 Ewon support sur SLA · Tier 3 accès Engineering Halmstad. Le bottleneck humain devient un escalator.</p>
+          <h4 class="vp-feature__h" data-i18n="hms.prototype.vp5F2h">Escalation 3 tiers</h4>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp5F2p">Tier 1 self-service · Tier 2 Ewon SLA · Tier 3 Engineering Halmstad.</p>
         </li>
         <li class="vp-feature">
           <span class="vp-feature__num">03</span>
-          <h4 class="vp-feature__h" data-i18n="hms.prototype.vp5F3h">Unified ticketing cross-VP</h4>
-          <p class="vp-feature__p" data-i18n="hms.prototype.vp5F3p">Un même portail pour onboarding Flexy, monitoring Talk2M, diagnostics et SLA reporting. Source · pilier Consistency · une seule porte d'entrée pour toute l'expérience Ewon.</p>
+          <h4 class="vp-feature__h" data-i18n="hms.prototype.vp5F3h">Unified ticketing</h4>
+          <p class="vp-feature__p" data-i18n="hms.prototype.vp5F3p">Un portail pour Flexy onboarding, Talk2M monitoring, diagnostics, SLA reporting.</p>
         </li>
       </ul>
 
@@ -3172,13 +3009,12 @@
      Personas HMS authentiques (Klaus, Sven). Scénarios IIoT (Connect, Diagnose, Audit). -->
 <section id="prototype-usertest" data-act="A" data-rail="vertical" data-frame="wide" data-overflow="natural">
   <div class="container">
-    <span class="eyebrow" data-i18n="hms.prototype.utEyebrow">Phase 04 · Deliver · user test 8 machine builders · 5 fuseaux horaires</span>
-    <h3 class="research-h3" data-i18n-html="hms.prototype.utTitle">Huit machine builders valident la direction. <span class="accent">Deux personas passent l'évaluation détaillée.</span></h3>
+    <span class="eyebrow" data-i18n="hms.prototype.utEyebrow">Phase 04 · Deliver · 8 machine builders · 5 fuseaux horaires</span>
+    <h3 class="research-h3" data-i18n-html="hms.prototype.utTitle">Huit machine builders valident. <span class="accent">Klaus et Sven scorent la grille détaillée.</span></h3>
 
-    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.prototype.utOutcome"><strong class="accent">8 / 8 valident</strong> la direction one-stop <span class="brief-teaser__sep">·</span> <strong class="accent">Score combiné 4,03 / 5</strong> sur la grille Heuristique Nielsen — soit 81% <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong> sur les trois scénarios <span class="brief-teaser__sep">·</span> sponsor go production.</p>
+    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.prototype.utOutcome"><strong class="accent">8 / 8 valident</strong> la direction one-stop <span class="brief-teaser__sep">·</span> <strong class="accent">Score combiné 4,03 / 5</strong> · 81% <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong> <span class="brief-teaser__sep">·</span> sponsor go production.</p>
 
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n-html="hms.prototype.utLead">Le Concept Report est présenté à huit machine builders répartis sur cinq fuseaux horaires (Europe, US, Asie). Les huit valident la direction one-stop. Le signal sponsor est consolidé.</p>
-    <p class="lead" style="max-width: 70ch;" data-i18n-html="hms.prototype.utLead2">En parallèle, Klaus (Plant Manager DACH) et Sven (Field Service Engineer End-User Plant) passent la grille Heuristic Evaluation Nielsen sur trois scénarios prototype · Connect machine, Diagnose offline gateway, Audit fleet. Cinq critères Relevance · Simplicity · Consistency · Reassurance · Quality, NPS sur dix.</p>
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n-html="hms.prototype.utLead">Concept Report présenté à 8 machine builders sur 5 fuseaux horaires. Klaus et Sven scorent trois scénarios · Connect, Diagnose, Audit.</p>
 
     <ul class="ut-stats" role="list" style="margin-top: 32px;">
       <li class="ut-stat">
@@ -3187,11 +3023,11 @@
       </li>
       <li class="ut-stat">
         <span class="ut-stat__num">4,03/5</span>
-        <span class="ut-stat__label" data-i18n="hms.prototype.utStat2">Score Heuristique combiné · 81%</span>
+        <span class="ut-stat__label" data-i18n="hms.prototype.utStat2">Score combiné Heuristique · 81%</span>
       </li>
       <li class="ut-stat">
         <span class="ut-stat__num">9/10</span>
-        <span class="ut-stat__label" data-i18n="hms.prototype.utStat3">NPS · Promoteur sur 3 scénarios</span>
+        <span class="ut-stat__label" data-i18n="hms.prototype.utStat3">NPS · 3 scénarios</span>
       </li>
     </ul>
 
@@ -3199,77 +3035,75 @@
       <article class="vp-pillar">
         <div class="vp-pillar__num">01</div>
         <h4 class="vp-pillar__title" data-i18n="hms.prototype.utScenA">Connect machine</h4>
-        <p class="vp-pillar__claim" data-i18n-html="hms.prototype.utScenAClaim">Score combiné <span class="accent">4,4 / 5 — 88%</span></p>
+        <p class="vp-pillar__claim" data-i18n-html="hms.prototype.utScenAClaim">Score combiné <span class="accent">4,4 / 5 · 88%</span></p>
         <ul class="vp-pillar__list">
-          <li data-i18n-html="hms.prototype.utScenAL1"><strong>Klaus · 4,0 / 5</strong> · Simplicité, utilité, pertinence, qualité validées</li>
-          <li data-i18n-html="hms.prototype.utScenAL2"><strong>Sven · 4,8 / 5</strong> · NPS 9/10 sur le scénario onboarding</li>
-          <li data-i18n-html="hms.prototype.utScenAL3">Scénario · raccorder une nouvelle machine au tunnel Talk2M en moins de 10 minutes, sans appeler l'IT</li>
+          <li data-i18n-html="hms.prototype.utScenAL1"><strong>Klaus · 4,0 / 5</strong></li>
+          <li data-i18n-html="hms.prototype.utScenAL2"><strong>Sven · 4,8 / 5</strong> · NPS 9/10</li>
+          <li data-i18n-html="hms.prototype.utScenAL3">Raccorder une machine au tunnel Talk2M en moins de 10 minutes</li>
         </ul>
       </article>
       <article class="vp-pillar">
         <div class="vp-pillar__num">02</div>
         <h4 class="vp-pillar__title" data-i18n="hms.prototype.utScenB">Diagnose offline gateway</h4>
-        <p class="vp-pillar__claim" data-i18n-html="hms.prototype.utScenBClaim">Score combiné <span class="accent">4,1 / 5 — 82%</span></p>
+        <p class="vp-pillar__claim" data-i18n-html="hms.prototype.utScenBClaim">Score combiné <span class="accent">4,1 / 5 · 82%</span></p>
         <ul class="vp-pillar__list">
-          <li data-i18n-html="hms.prototype.utScenBL1"><strong>Klaus · 3,7 / 5</strong> · Réassurance basse (3,0) sur la décision de fallback cellular</li>
-          <li data-i18n-html="hms.prototype.utScenBL2"><strong>Sven · 4,5 / 5</strong> · Simplicité et qualité maximales sur la séquence de diagnostic</li>
-          <li data-i18n-html="hms.prototype.utScenBL3">Scénario · une passerelle Flexy hors ligne · isoler, basculer en cellular, replacer sans bloquer le site</li>
+          <li data-i18n-html="hms.prototype.utScenBL1"><strong>Klaus · 3,7 / 5</strong> · réassurance basse sur fallback cellular</li>
+          <li data-i18n-html="hms.prototype.utScenBL2"><strong>Sven · 4,5 / 5</strong></li>
+          <li data-i18n-html="hms.prototype.utScenBL3">Flexy hors ligne · isoler, basculer cellular, replacer</li>
         </ul>
       </article>
       <article class="vp-pillar">
         <div class="vp-pillar__num">03</div>
         <h4 class="vp-pillar__title" data-i18n="hms.prototype.utScenC">Audit fleet · IEC 62443</h4>
-        <p class="vp-pillar__claim" data-i18n-html="hms.prototype.utScenCClaim">Score combiné <span class="accent">3,6 / 5 — 72%</span></p>
+        <p class="vp-pillar__claim" data-i18n-html="hms.prototype.utScenCClaim">Score combiné <span class="accent">3,6 / 5 · 72%</span></p>
         <ul class="vp-pillar__list">
-          <li data-i18n-html="hms.prototype.utScenCL1"><strong>Klaus · 3,2 / 5</strong> · Réassurance à 1 / 5 sur la valeur de preuve compliance</li>
-          <li data-i18n-html="hms.prototype.utScenCL2"><strong>Sven · 4,0 / 5</strong> · NPS toujours 9/10, mais zone à retravailler</li>
-          <li data-i18n-html="hms.prototype.utScenCL3">Scénario · produire l'audit trail d'une intervention machine à un auditeur IEC 62443 deux semaines après l'intervention</li>
+          <li data-i18n-html="hms.prototype.utScenCL1"><strong>Klaus · 3,2 / 5</strong> · réassurance 1 / 5 sur preuve compliance</li>
+          <li data-i18n-html="hms.prototype.utScenCL2"><strong>Sven · 4,0 / 5</strong></li>
+          <li data-i18n-html="hms.prototype.utScenCL3">Produire l'audit trail à un auditeur IEC 62443</li>
         </ul>
       </article>
     </div>
 
-    <p class="lead" style="margin-top: 40px; max-width: 70ch;" data-i18n-html="hms.prototype.utLessons">Connect machine et Diagnose offline gateway passent. L'Audit fleet IEC 62443 tient moins · Klaus note la Réassurance 1 / 5 sur la valeur de preuve compliance. Zone identifiée, rentrée dans la roadmap d'itération MVP++ et reportée à la phase post-déploiement.</p>
+    <p class="lead" style="margin-top: 40px; max-width: 70ch;" data-i18n-html="hms.prototype.utLessons">Connect et Diagnose passent. Audit fleet IEC 62443 tient moins. Zone reportée à la roadmap MVP++.</p>
 
-    <p class="research-source" style="margin-top: 32px;" data-i18n="hms.prototype.utSource">Sources · Ewon HMS Concept Report 2022 (validation 8/8 machine builders) · Phoenix User Test Sessions — Connect &amp; Diagnose 2022 (méthode Heuristic Evaluation Nielsen + NPS, testeurs Klaus Plant Manager DACH et Sven Field Service Engineer).</p>
-
-    <h4 class="research-h3" style="margin-top: 64px;" data-i18n-html="hms.prototype.utClientsHead">Les huit machine builders en validation directionnelle</h4>
+    <h4 class="research-h3" style="margin-top: 64px;" data-i18n-html="hms.prototype.utClientsHead">Les huit machine builders en validation</h4>
 
     <div class="ut-clients" role="list">
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg1">OEM Machine Builder</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName1">OEM Machine Builder · DACH</h4>
-        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict1">Constructeur de presses industrielles · gros parc déployé · validation forte sur l'orchestration cross-plateformes et l'audit-ready. La référence qui rassure le sponsor.</p>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName1">OEM presses · DACH</h4>
+        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict1">Gros parc. Validation orchestration et audit-ready.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg2">OEM Machine Builder</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName2">OEM Machine Builder · USA</h4>
-        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict2">Compliance NIST + multi-fuseaux. Validation sur la conformité industrielle, demande d'expansion API en phase 2.</p>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName2">OEM · USA</h4>
+        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict2">Compliance NIST. Demande API phase 2.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg3">End-User Plant</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName3">End-User Plant · agro-industriel</h4>
-        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict3">50 machines distribuées, exigence uptime 99,5%. Validation forte sur l'onboarding IT-less et le monitoring temps réel.</p>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName3">End-User · agro</h4>
+        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict3">50 machines, uptime 99,5%. Validation onboarding IT-less.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg4">End-User Plant</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName4">End-User Plant · pharma</h4>
-        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict4">Validation sur le freemium tiered et la facturation lisible par site. Pay-as-you-grow par nombre de machines demandé.</p>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName4">End-User · pharma</h4>
+        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict4">Validation freemium tiered, pay-as-you-grow.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg5">Integrator</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName5">Integrator IT · Allemagne</h4>
-        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict5">Embarque Talk2M dans son offre clients industriels. Demande prioritaire · marketplace API et documentation partenaire SDK.</p>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName5">Integrator · Allemagne</h4>
+        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict5">Embarque Talk2M. Demande marketplace API.</p>
       </article>
       <article class="ut-client" role="listitem">
         <span class="ut-client__seg" data-i18n="hms.prototype.utSeg6">Integrator</span>
-        <h4 class="ut-client__name" data-i18n="hms.prototype.utName6">Integrator IT · automation systems</h4>
-        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict6">Validation API. Reproductible chez ses propres clients SCADA/MES, effet de levier identifié pour la couche orchestration.</p>
+        <h4 class="ut-client__name" data-i18n="hms.prototype.utName6">Integrator · automation</h4>
+        <p class="ut-client__verdict" data-i18n="hms.prototype.utVerdict6">Validation API. Reproductible chez ses clients SCADA/MES.</p>
       </article>
     </div>
 
-    <blockquote class="ut-quote" data-i18n-html="hms.prototype.utQuote">« Pour la première fois, on avait un signal de validation client avant le développement. Le sponsor ne se demandait plus si la direction tenait, il se demandait quand le rollout commence. »</blockquote>
+    <blockquote class="ut-quote" data-i18n-html="hms.prototype.utQuote">« Pour la première fois, on avait un signal client avant le développement. Le sponsor ne se demandait plus si la direction tenait, il se demandait quand le rollout commence. »</blockquote>
 
-    <p class="research-source" data-i18n="hms.prototype.utSource">Tests menés en présentation directe et co-design chez 8 machine builders · 5 fuseaux horaires couvrant Europe, US, Asie · Ewon HMS Concept Report 2022</p>
+    <p class="research-source" data-i18n="hms.prototype.utSource">8 machine builders · 5 fuseaux horaires Europe, US, Asie · Ewon HMS Concept Report 2022</p>
   </div>
 </section>
 
@@ -3491,18 +3325,16 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.alignment.eyebrow">Stakeholder Map · Alignement</span>
     <h2 data-i18n-html="hms.alignment.h2">Comment Business et IT ont fini par <span class="accent">parler la même langue.</span></h2>
-    <p class="lead" data-i18n-html="hms.alignment.lead">Au démarrage, chaque rôle défendait sa lecture. Le Project Owner côté Business voulait des fonctionnalités vendables. Le Project Manager côté IT voulait une stack maintenable. Le Project Lead arbitrait sur le calendrier. <strong>Deux formats d'atelier ont fait le pont.</strong> Des petits ateliers ciblés avec les Project Managers et les figures clés côté IT pour caler les arbitrages techniques. Des grands ateliers Customer Journey avec toutes les parties prenantes autour de la table, pour mettre le client au centre, pas l'org chart.</p>
+    <p class="lead" data-i18n-html="hms.alignment.lead">Project Owner Business voulait des fonctionnalités vendables. Project Manager IT voulait une stack maintenable. Deux formats d'atelier ont fait le pont.</p>
 
     <div class="alignment-grid">
-      <!-- CVE 2026-05-11 HMS v2 · 4 cards Alignment FIX (purge pollution HMS) ·
-           facts HMS-spécifiques · Brand Guardian verbatim · Halmstad/Ewon/IXON/eCatcher/M2Web/Talk2M -->
       <div class="align-card" data-fn="banking">
         <div class="align-card__head">
           <span class="align-card__num" aria-hidden="true">01</span>
           <span class="align-card__fn" data-i18n="hms.alignment.f1.fn">Product Owner · Ewon Nivelles</span>
         </div>
         <h3 class="align-card__friction" data-i18n="hms.alignment.f1.h">« On perd les PME face à IXON. »</h3>
-        <p class="align-card__body" data-i18n="hms.alignment.f1.p">Friction · IXON cloud-native captait les PME avec self-onboarding et freemium pendant qu'Ewon vendait du routeur. Les Customer Journey workshops sur trois personas industriels ont remis le client au centre de l'arbitrage, du technicien terrain au directeur d'usine.</p>
+        <p class="align-card__body" data-i18n="hms.alignment.f1.p">IXON cloud-native captait les PME avec self-onboarding et freemium. Les Customer Journey workshops ont remis le technicien terrain et le directeur d'usine au centre de l'arbitrage.</p>
       </div>
       <div class="align-card" data-fn="it">
         <div class="align-card__head">
@@ -3510,7 +3342,7 @@
           <span class="align-card__fn" data-i18n="hms.alignment.f2.fn">Project Manager · IT · HMS Halmstad</span>
         </div>
         <h3 class="align-card__friction" data-i18n="hms.alignment.f2.h">« Trois plateformes, trois roadmaps. »</h3>
-        <p class="align-card__body" data-i18n="hms.alignment.f2.p">Friction · arbitrer les budgets entre Anybus, Ewon, Intesis et Ixxat avec un IT historique en Angular. La Heuristic Evaluation Nielsen scorée sur eCatcher, M2Web et Talk2M a posé le gap chiffré qui a justifié le rattrapage.</p>
+        <p class="align-card__body" data-i18n="hms.alignment.f2.p">Arbitrer les budgets entre Anybus, Ewon, Intesis et Ixxat. L'Heuristic Evaluation Nielsen scorée sur eCatcher, M2Web et Talk2M a posé le gap chiffré.</p>
       </div>
       <div class="align-card" data-fn="legal">
         <div class="align-card__head">
@@ -3518,7 +3350,7 @@
           <span class="align-card__fn" data-i18n="hms.alignment.f3.fn">Project Lead · freelance</span>
         </div>
         <h3 class="align-card__friction" data-i18n="hms.alignment.f3.h">« Tenir le mandat sur douze mois. »</h3>
-        <p class="align-card__body" data-i18n="hms.alignment.f3.p">Friction · garder R&amp;D, produit, business et service après-vente autour de la même table sans dévier. Les frictions AS-IS plateforme par plateforme, le gap TO-BE mesuré, et le story mapping sprint Agile ont produit un Concept Report priorisé · 2 M€ obtenus en comité par le sponsor.</p>
+        <p class="align-card__body" data-i18n="hms.alignment.f3.p">Garder R&amp;D, produit, business et service après-vente autour de la même table. Le story mapping a produit un Concept Report priorisé · 2 M€ obtenus en comité par le sponsor.</p>
       </div>
       <div class="align-card" data-fn="marketing">
         <div class="align-card__head">
@@ -3526,12 +3358,12 @@
           <span class="align-card__fn" data-i18n="hms.alignment.f4.fn">UI &amp; UX · Ewon interne</span>
         </div>
         <h3 class="align-card__friction" data-i18n="hms.alignment.f4.h">« Pas de design system, pas de librairie. »</h3>
-        <p class="align-card__body" data-i18n="hms.alignment.f4.p">Friction · trois interfaces qui n'avaient jamais parlé entre elles · desktop eCatcher, web M2Web, cloud SaaS Talk2M. Le prototypage unifié et les tests utilisateurs notés sur les trois plateformes ont validé les composants à transférer vers la librairie Angular de production.</p>
+        <p class="align-card__body" data-i18n="hms.alignment.f4.p">Trois interfaces qui n'avaient jamais parlé entre elles. Le prototypage unifié a validé les composants à transférer vers la librairie Angular de production.</p>
       </div>
     </div>
 
     <div class="alignment-pivot">
-      <div class="alignment-pivot__outcome" data-i18n-html="hms.alignment.pivotOutcome">Quand les quatre rôles ont vu les mêmes machine builders au centre · pas le client abstrait, le technicien que les Project Owners avaient observé sur trois fuseaux horaires · le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Vision alignée. Plus de débat sur le « si », un débat structuré sur le « quand » et le « comment ».</div>
+      <div class="alignment-pivot__outcome" data-i18n-html="hms.alignment.pivotOutcome">Quand les quatre rôles ont vu les mêmes machine builders au centre, le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Plus de débat sur le « si ».</div>
     </div>
     <!-- CVE 2026-05-11 HMS v2 · source-link HMS retiré · pas d'asset Stakeholder Map HMS dispo · à reconstruire avec asset Ewon authentique -->
 
@@ -3579,7 +3411,7 @@
           <span class="triplewin-card__num" aria-hidden="true">02</span>
           <span class="triplewin-card__who" data-i18n="hms.triplewin.c2.who">Business · Ewon by HMS Networks</span>
           <h3 class="triplewin-card__h" data-i18n="hms.triplewin.c2.h">Nouveau segment capté, position défendue.</h3>
-          <p class="triplewin-card__p" data-i18n="hms.triplewin.c2.p">Le freemium cloud-native ouvre le segment End-User Plants laissé à IXON. Le portail unifié sur eCatcher, M2Web et Talk2M libère Ewon de la fragmentation legacy. La position de leader IIoT face aux pure players cloud-natives se consolide à l'approche d'une décennie de croissance industrial IoT.</p>
+          <p class="triplewin-card__p" data-i18n="hms.triplewin.c2.p">Le freemium cloud-native ouvre le segment End-User Plants laissé à IXON. Le portail unifié sur eCatcher, M2Web et Talk2M libère Ewon de la fragmentation legacy. Position de leader IIoT consolidée face aux pure players cloud-natives.</p>
         </li>
         <li class="triplewin-card" data-fn="cardholder">
           <span class="triplewin-card__num" aria-hidden="true">03</span>
@@ -3600,30 +3432,27 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.outcome.eyebrow">À la sortie du parcours</span>
     <h2 class="outcome-title" data-i18n-html="hms.outcome.title">Pas un rapport de plus. <span class="accent">2 M€ débloqués pour la mise en prod.</span></h2>
-    <p class="lead outcome-lead" data-i18n="hms.outcome.lead">Un an d'accompagnement refermé sur un Concept Report priorisé, un design system prêt pour la production, et tous les flots et prototypes testés et notés. Le sponsor qui m'avait engagé a présenté ce travail à sa direction. Résultat · 2 millions d'euros de budget additionnel pour passer le concept en production, et une promotion personnelle.</p>
+    <p class="lead outcome-lead" data-i18n="hms.outcome.lead">Un an refermé sur un Concept Report priorisé, un design system prêt prod, tous les flots testés et notés. Le sponsor a porté ce travail à sa direction. Résultat · 2 M€ de budget additionnel pour la mise en production, et une promotion personnelle.</p>
 
     <ol class="outcome-deliverables" role="list">
       <li class="outcome-card">
         <span class="outcome-card__num">01</span>
         <h3 class="outcome-card__h" data-i18n="hms.outcome.d1.h">Concept Report priorisé, défendable devant le sponsor.</h3>
-        <p class="outcome-card__p" data-i18n="hms.outcome.d1.p">Tous les futurs services priorisés via story mapping. Lecture transverse Business + R&D + Service après-vente. Le document que le sponsor a porté en comité de direction pour défendre l'investissement.</p>
+        <p class="outcome-card__p" data-i18n="hms.outcome.d1.p">Tous les futurs services priorisés via story mapping. Lecture transverse Business, R&amp;D, service après-vente. Le document porté en comité de direction.</p>
       </li>
       <li class="outcome-card outcome-card--accent">
         <span class="outcome-card__num">02</span>
         <h3 class="outcome-card__h" data-i18n="hms.outcome.d2.h">Design system prêt prod.</h3>
-        <p class="outcome-card__p" data-i18n="hms.outcome.d2.p">Tokens, composants, patterns d'interaction. Tous les flots et prototypes testés avec des clients réels, scorés sur Simplicité, Utilité, Pertinence, Réassurance, Qualité. Pas une intention de design system. Le matériel qui passe en sprints.</p>
+        <p class="outcome-card__p" data-i18n="hms.outcome.d2.p">Tokens, composants, patterns. Tous les flots testés avec des clients réels, scorés sur Simplicité, Utilité, Pertinence, Réassurance, Qualité.</p>
       </li>
       <li class="outcome-card">
         <span class="outcome-card__num">03</span>
         <h3 class="outcome-card__h" data-i18n="hms.outcome.d3.h">Leadership marché défendu.</h3>
-        <p class="outcome-card__p" data-i18n="hms.outcome.d3.p">Face à IXON, cloud-native néerlandais qui visait le même segment industrial IoT, Ewon a installé une posture user-centric défendable. Le toolkit est passé du fournisseur d'outils techniques à l'éditeur de plateforme. Position consolidée, pas érodée.</p>
+        <p class="outcome-card__p" data-i18n="hms.outcome.d3.p">Face à IXON cloud-native néerlandais sur le même segment IIoT, Ewon a installé une posture user-centric défendable. Position consolidée, pas érodée.</p>
       </li>
     </ol>
 
-    <!-- CVE 2026-05-08 · toolkit signal HMS · culture user-centric installée + 2M€ -->
-    <p class="lead toolkit-signal" style="max-width: 70ch; margin-top: 32px;" data-i18n-html="hms.outcome.toolkitSignal"><strong>Le succès n'est pas qu'un chiffre, c'est un transfert de culture.</strong> Une société purement IT a accepté de mettre l'utilisateur au centre. Customer Journey workshops, Heuristic Evaluation Nielsen, Service Design Relevance/Simplicity/Consistency · le toolkit a fait le travail parce qu'il a été choisi selon la maturité Agile d'Ewon, pas par dogme. Et le sponsor a décroché le budget pour que ce travail vive en production.</p>
-
-    <p class="outcome-integrity" data-i18n-html="hms.outcome.integrity"><strong>Note d'intégrité.</strong> Le Concept Report a été remis, validé, et présenté en comité de direction par le sponsor qui m'avait engagé. Le sponsor a obtenu 2 M€ de budget supplémentaire et une promotion personnelle. Le rollout en production est ensuite passé en sprints Agile côté équipes Ewon, après mon départ.</p>
+    <p class="outcome-integrity" data-i18n-html="hms.outcome.integrity"><strong>Note d'intégrité.</strong> Le Concept Report a été remis, validé, présenté en comité par le sponsor. 2 M€ de budget et promotion personnelle. Le rollout est ensuite passé en sprints Agile côté équipes Ewon, après mon départ.</p>
   </div>
 </section>
 
@@ -3634,23 +3463,23 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.lessons.eyebrow">Ce qu'Ewon m'a appris</span>
     <h2 data-i18n-html="hms.lessons.h2">Trois leviers <span class="accent">que je rejouerais.</span></h2>
-    <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n-html="hms.lessons.lead">Un an après la livraison, trois choix méthodologiques tiennent encore. <strong>Rien à rejouer autrement</strong> · la mission a tenu son contrat, le sponsor a décroché le budget pour la mise en prod, et l'organisation a accepté l'utilisateur comme boussole.</p>
+    <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n-html="hms.lessons.lead">Un an après la livraison, trois choix tiennent encore. La mission a tenu son contrat, le sponsor a décroché le budget, l'organisation a accepté l'utilisateur comme boussole.</p>
 
     <div class="lessons-grid">
       <div class="lesson-card">
         <div class="lesson-num">01</div>
-        <h3 class="lesson-claim" data-i18n="hms.lessons.l1.h">Le toolkit, pas l'école.</h3>
-        <p class="lesson-body" data-i18n="hms.lessons.l1.p">Strategyzer, Customer Journey, Heuristic Evaluation Nielsen, Service Blueprint, Design Sprint, story mapping sont des outils du même Design System. La maîtrise, ce n'est pas d'en choisir un. C'est de savoir lequel, à quel moment, avec qui dans la salle. Chez Ewon, Customer Journey workshops + Heuristic Evaluation Nielsen + framework Relevance/Simplicity/Consistency avaient le bon ratio narratif et précision pour faire converger trois plateformes legacy.</p>
+        <h3 class="lesson-claim" data-i18n="hms.lessons.l1.h">Le bon outil à la bonne place.</h3>
+        <p class="lesson-body" data-i18n="hms.lessons.l1.p">Chez Ewon, Customer Journey workshops, Heuristic Evaluation Nielsen et le framework Relevance / Simplicity / Consistency avaient le bon ratio narratif et précision pour faire converger trois plateformes legacy.</p>
       </div>
       <div class="lesson-card lesson-card--accent">
         <div class="lesson-num">02</div>
         <h3 class="lesson-claim" data-i18n="hms.lessons.l2.h">Tous les chefs autour de la table, pas un seul.</h3>
-        <p class="lesson-body" data-i18n="hms.lessons.l2.p">Une société purement IT n'écoute pas un consultant qui parle au seul Product Manager. Ce qui a fait basculer Ewon · les ateliers Customer Journey ont réuni R&D, produit, business, service après-vente, support — tous les chefs de département dans la même salle. La Value Proposition n'a pas été imposée par la direction. Elle est née de la table où chacun reconnaissait son client.</p>
+        <p class="lesson-body" data-i18n="hms.lessons.l2.p">Une société purement IT n'écoute pas un consultant qui parle au seul Product Manager. Les ateliers Customer Journey ont réuni R&amp;D, produit, business, service après-vente, support. La VP est née de la table où chacun reconnaissait son client.</p>
       </div>
       <div class="lesson-card">
         <div class="lesson-num">03</div>
         <h3 class="lesson-claim" data-i18n="hms.lessons.l3.h">Tester et scorer. Pas tester pour rassurer.</h3>
-        <p class="lesson-body" data-i18n="hms.lessons.l3.p">Tous les flots et tous les prototypes ont été testés avec des clients internationaux et scorés. Un test qui ne donne pas un chiffre n'est pas un test, c'est un atelier de réassurance. Le scoring rend les arbitrages défendables en comité, et c'est ce qui a permis au sponsor de transporter le travail jusqu'au budget de production.</p>
+        <p class="lesson-body" data-i18n="hms.lessons.l3.p">Tous les flots ont été testés avec des clients internationaux et scorés. Un test sans chiffre n'est pas un test. Le scoring rend les arbitrages défendables en comité.</p>
       </div>
     </div>
   </div>
@@ -3661,7 +3490,7 @@
 <section id="fin-royale" class="fin-royale" data-act="R" data-rail="vertical" data-frame="narrow" data-overflow="natural">
   <div class="fin-royale__postscript">
     <span class="fin-royale__ps-label" data-i18n="hms.fin.ps.label">Postscript · références</span>
-    <p class="fin-royale__ps-text" data-i18n-html="hms.fin.ps.text">Références disponibles sur demande pour un projet réel. Les responsables managers Ewon des différents départements — R&D, produit, business, service après-vente, support — savent ce qui s'est passé pendant ces douze mois. <span class="accent">C'est ça, la matière du Service Design : des gens qui te rappellent.</span></p>
+    <p class="fin-royale__ps-text" data-i18n-html="hms.fin.ps.text">Références disponibles sur demande pour un projet réel. Les responsables managers Ewon · R&amp;D, produit, business, service après-vente, support · savent ce qui s'est passé pendant ces douze mois. <span class="accent">C'est ça, la matière du Service Design · des gens qui te rappellent.</span></p>
   </div>
 
   <div class="fin-royale__close">

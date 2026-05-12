@@ -1246,6 +1246,71 @@
   </div>
 </section>
 
+<!-- TL;DR · 4 questions du recruteur en 90 secondes (CVE 2026-05-12) -->
+<section id="tldr" data-act="S" data-frame="default" data-overflow="natural">
+  <style>
+    #tldr { padding: 64px 0 32px; }
+    #tldr .tldr-eyebrow {
+      display: inline-block;
+      font-family: var(--sans, system-ui);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--amber, #c76941);
+      margin-bottom: 22px;
+    }
+    #tldr .tldr-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 22px 36px;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 0;
+      border-top: 1px solid rgba(242,235,219,0.12);
+      border-bottom: 1px solid rgba(242,235,219,0.12);
+    }
+    #tldr .tldr-label {
+      font-family: var(--sans, system-ui);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber, #c76941);
+      padding-top: 6px;
+      align-self: start;
+    }
+    #tldr .tldr-text {
+      font-family: var(--display, Georgia, serif);
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--fg, #f2ebdb);
+      margin: 0;
+    }
+    #tldr .tldr-text strong { color: var(--fg, #f2ebdb); font-weight: 600; }
+    @media (max-width: 720px) {
+      #tldr { padding: 48px 0 24px; }
+      #tldr .tldr-grid { grid-template-columns: 1fr; gap: 4px 0; padding: 24px 0; }
+      #tldr .tldr-label { margin-top: 18px; padding-top: 0; }
+      #tldr .tldr-grid > .tldr-label:first-of-type { margin-top: 0; }
+      #tldr .tldr-text { font-size: 16px; margin-bottom: 6px; }
+    }
+  </style>
+  <div class="container">
+    <span class="tldr-eyebrow" data-i18n="bnp.tldr.eyebrow">In 90 seconds</span>
+    <div class="tldr-grid">
+      <span class="tldr-label" data-i18n="bnp.tldr.l1">The problem</span>
+      <p class="tldr-text" data-i18n="bnp.tldr.t1">BNP processed 30% of the country's Bancontact payments. No service was extracting value from this data for the merchants who accepted them.</p>
+      <span class="tldr-label" data-i18n="bnp.tldr.l2">The tension</span>
+      <p class="tldr-text" data-i18n="bnp.tldr.t2">Four internal functions, four readings. Banking wanted to protect card trust. IT was looking for a technical MVP. Legal blocked on data. Marketing wanted brand. Zero alignment.</p>
+      <span class="tldr-label" data-i18n="bnp.tldr.l3">What I did</span>
+      <p class="tldr-text" data-i18n="bnp.tldr.t3">Six months upstream. Stakeholder Map, Customer Journey, Value Proposition Canvas. Six merchants interviewed at their workplace, including Léonidas.</p>
+      <span class="tldr-label" data-i18n="bnp.tldr.l4">What came out of it</span>
+      <p class="tldr-text" data-i18n="bnp.tldr.t4">Concept Report signed. Léonidas pre-signed a firm purchase commitment before development. Four functions aligned, P1/P2 backlog ready for sprints.</p>
+    </div>
+  </div>
+</section>
+
 <!-- LE BRIEF — Setup (cadre du projet, juste après le hero, avant la roadmap méthodologique).
      CVE 2026-05-03 : ordre inversé pour suivre l'arc émotionnel → intellectuel.
      Le lecteur entre par l'enjeu (le 30 %, le mandat) avant de voir la méthode. -->
@@ -2306,7 +2371,7 @@
     <!-- BAS DE PAGE · alignement obtenu + bascule Ideation -->
     <div class="vp-content__bridge">
       <p class="vp-content__alignement" data-i18n-html="bnp.vp.bridgeText">At the end of this VP, <strong>Banking, IT, Legal and Marketing</strong> share the same sentence, the same user, the same 5 deliverables. It's this <span class="accent">common ground</span> that makes ideation legitimate: we no longer arbitrate on the "what", we arbitrate on the "how".</p>
-      <span class="vp-content__next" data-i18n-html="bnp.vp.bridgeNext">Next step <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 4 Goals identified in workshop</span> <strong>Ideation</strong> · Develop · 4 Goals identifiés en atelier</span>
+      <span class="vp-content__next" data-i18n-html="bnp.vp.bridgeNext">Next step <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 4 Goals identified in workshop</span> <strong>Ideation</strong> · 4 Goals identifiés en atelier</span>
     </div>
   </div>
 </section>

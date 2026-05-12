@@ -1592,6 +1592,32 @@
     /* LE BRIEF + LE CATALYSEUR — 2 sections vertical, ouvrent l'histoire sans
        spoilers. Le climax (Léonidas + chiffres) est réservé à la section Result.
        CVE 2026-04-30 night spec : "découvrir les choses petit à petit". */
+    /* CVE 2026-05-12 · TL;DR Hero · 4 questions du recruteur en 90 secondes (BNP) */
+    'bnp.tldr.eyebrow': { fr: 'En 90 secondes', nl: 'In 90 seconden', en: 'In 90 seconds' },
+    'bnp.tldr.l1': { fr: 'Le problème', nl: 'Het probleem', en: 'The problem' },
+    'bnp.tldr.l2': { fr: 'La tension', nl: 'De spanning', en: 'The tension' },
+    'bnp.tldr.l3': { fr: 'Ce que j\'ai fait', nl: 'Wat ik gedaan heb', en: 'What I did' },
+    'bnp.tldr.l4': { fr: 'Ce qui en est sorti', nl: 'Wat eruit kwam', en: 'What came out of it' },
+    'bnp.tldr.t1': {
+      fr: 'BNP traitait 30 % des paiements Bancontact du pays. Aucun service ne valorisait cette donnée auprès des commerçants qui les acceptaient.',
+      nl: 'BNP verwerkte 30 % van de Bancontact-betalingen van het land. Geen enkele dienst valoriseerde deze data voor de handelaars die ze accepteerden.',
+      en: 'BNP processed 30% of the country\'s Bancontact payments. No service was extracting value from this data for the merchants who accepted them.'
+    },
+    'bnp.tldr.t2': {
+      fr: 'Quatre fonctions internes, quatre lectures. Banking voulait protéger la confiance carte. IT cherchait un MVP technique. Legal bloquait sur la donnée. Marketing voulait du brand. Zéro alignement.',
+      nl: 'Vier interne functies, vier lezingen. Banking wilde het kaartvertrouwen beschermen. IT zocht een technische MVP. Legal blokkeerde op data. Marketing wilde brand. Nul afstemming.',
+      en: 'Four internal functions, four readings. Banking wanted to protect card trust. IT was looking for a technical MVP. Legal blocked on data. Marketing wanted brand. Zero alignment.'
+    },
+    'bnp.tldr.t3': {
+      fr: 'Six mois en amont. Stakeholder Map, Customer Journey, Value Proposition Canvas. Six commerçants interviewés sur leur lieu de travail, dont Léonidas.',
+      nl: 'Zes maanden vooraf. Stakeholder Map, Customer Journey, Value Proposition Canvas. Zes handelaars geïnterviewd op hun werkplek, waaronder Léonidas.',
+      en: 'Six months upstream. Stakeholder Map, Customer Journey, Value Proposition Canvas. Six merchants interviewed at their workplace, including Léonidas.'
+    },
+    'bnp.tldr.t4': {
+      fr: 'Concept Report signé. Léonidas a pré-signé une promesse d\'achat ferme avant le développement. Quatre fonctions alignées, backlog P1/P2 prêt à entrer en sprints.',
+      nl: 'Concept Report ondertekend. Léonidas heeft een vaste aankoopbelofte voorgetekend vóór de ontwikkeling. Vier functies afgestemd, backlog P1/P2 klaar voor sprints.',
+      en: 'Concept Report signed. Léonidas pre-signed a firm purchase commitment before development. Four functions aligned, P1/P2 backlog ready for sprints.'
+    },
     'bnp.brief.eyebrow': { fr: 'Le brief', nl: 'De opdracht', en: 'The brief' },
     /* CVE 2026-05-11 BNP v2 · sujet noble, verbe sec (Brand Guardian reco) */
     'bnp.brief.title': {
@@ -3562,6 +3588,32 @@
       nl: 'Industriële post. <span class="accent">Een UX-functie te installeren.</span>',
       en: 'Industrial postal. <span class="accent">A UX function to install.</span>'
     },
+    /* CVE 2026-05-12 · TL;DR Hero · 4 questions du recruteur en 90 secondes (SPEOS) */
+    'speos.tldr.eyebrow': { fr: 'En 90 secondes', nl: 'In 90 seconden', en: 'In 90 seconds' },
+    'speos.tldr.l1': { fr: 'Le problème', nl: 'Het probleem', en: 'The problem' },
+    'speos.tldr.l2': { fr: 'La tension', nl: 'De spanning', en: 'The tension' },
+    'speos.tldr.l3': { fr: 'Ce que j\'ai fait', nl: 'Wat ik gedaan heb', en: 'What I did' },
+    'speos.tldr.l4': { fr: 'Ce qui en est sorti', nl: 'Wat eruit kwam', en: 'What came out of it' },
+    'speos.tldr.t1': {
+      fr: 'Le courrier belge perd 8 % par an. SPEOS, filiale postale de bpost, devait basculer vers le digital sans casser sa rente print, et défendre son leadership face aux pure-players cloud-natives.',
+      nl: 'De Belgische post verliest 8 % per jaar. SPEOS, postale dochter van bpost, moest overschakelen naar digitaal zonder zijn print-omzet te breken, en zijn leiderschap verdedigen tegen cloud-native pure-players.',
+      en: 'Belgian mail loses 8% per year. SPEOS, postal subsidiary of bpost, had to shift to digital without breaking its print revenue, and defend its leadership against cloud-native pure-players.'
+    },
+    'speos.tldr.t2': {
+      fr: 'Le Business voulait défendre le revenu. L\'IT bâtissait Agile sans utilisateur. La fonction UX n\'existait pas en département dédié. Project Owners et Project Managers se parlaient à peine.',
+      nl: 'Business wilde de omzet verdedigen. IT bouwde Agile zonder gebruiker. De UX-functie bestond niet als aparte afdeling. Project Owners en Project Managers spraken nauwelijks met elkaar.',
+      en: 'Business wanted to defend revenue. IT was building Agile without users. The UX function did not exist as a dedicated department. Project Owners and Project Managers barely spoke to each other.'
+    },
+    'speos.tldr.t3': {
+      fr: 'Douze mois. 12 entretiens experts internes (CEO, CTO, R&amp;D, Operations). 6 clients pilotes interviewés, dont Luminus sur la facture énergie. Customer Journey workshop physique, persona Johnny au mur.',
+      nl: 'Twaalf maanden. 12 interne expert-interviews (CEO, CTO, R&amp;D, Operations). 6 pilootklanten geïnterviewd, waaronder Luminus voor de energiefactuur. Customer Journey workshop fysiek, persona Johnny aan de muur.',
+      en: 'Twelve months. 12 internal expert interviews (CEO, CTO, R&amp;D, Operations). 6 pilot customers interviewed, including Luminus on energy billing. Physical Customer Journey workshop, persona Johnny on the wall.'
+    },
+    'speos.tldr.t4': {
+      fr: 'Concept Report 76 pages signé sponsor. 6 sur 6 clients valident. Trois segments marché (Large Accounts, Easy2Mail PME, API Integrators) priorisés en sprints SAFe. Équipe design intégrée à l\'organigramme.',
+      nl: 'Concept Report 76 pagina\'s ondertekend door sponsor. 6 op 6 klanten valideren. Drie marktsegmenten (Large Accounts, Easy2Mail KMO, API Integrators) geprioriteerd in SAFe sprints. Designteam geïntegreerd in het organigram.',
+      en: '76-page Concept Report signed by sponsor. 6 out of 6 customers validate. Three market segments (Large Accounts, Easy2Mail SMEs, API Integrators) prioritised in SAFe sprints. Design team integrated into the org chart.'
+    },
     'speos.chapConcept.consequences': {
       fr: '<span>76 pages structurées</span>\n      <span class="chap-final__bullet">·</span>\n      <span>12 entretiens experts internes</span>\n      <span class="chap-final__bullet">·</span>\n      <span>3 segments × 6 clients pilotes</span>\n      <span class="chap-final__bullet">·</span>\n      <span>6 sur 6 valident la direction</span>',
       nl: '<span>76 gestructureerde pagina\'s</span>\n      <span class="chap-final__bullet">·</span>\n      <span>12 interne expertinterviews</span>\n      <span class="chap-final__bullet">·</span>\n      <span>3 segmenten × 6 pilootklanten</span>\n      <span class="chap-final__bullet">·</span>\n      <span>6 op 6 valideren de richting</span>',
@@ -4836,6 +4888,32 @@
       fr: 'Industrial IoT mondial. <span class="accent">Trois plateformes legacy à réunifier.</span>',
       nl: 'Wereldwijde Industrial IoT. <span class="accent">Drie legacy-platformen om te verenigen.</span>',
       en: 'Global Industrial IoT. <span class="accent">Three legacy platforms to unify.</span>'
+    },
+    /* CVE 2026-05-12 · TL;DR Hero · 4 questions du recruteur en 90 secondes (HMS) */
+    'hms.tldr.eyebrow': { fr: 'En 90 secondes', nl: 'In 90 seconden', en: 'In 90 seconds' },
+    'hms.tldr.l1': { fr: 'Le problème', nl: 'Het probleem', en: 'The problem' },
+    'hms.tldr.l2': { fr: 'La tension', nl: 'De spanning', en: 'The tension' },
+    'hms.tldr.l3': { fr: 'Ce que j\'ai fait', nl: 'Wat ik gedaan heb', en: 'What I did' },
+    'hms.tldr.l4': { fr: 'Ce qui en est sorti', nl: 'Wat eruit kwam', en: 'What came out of it' },
+    'hms.tldr.t1': {
+      fr: 'Ewon vendait des routeurs industriels. IXON arrivait avec une plateforme cloud-native sur le même segment IIoT. Trois apps legacy (eCatcher, M2Web, Talk2M) à réunifier sans casser la base installée mondiale.',
+      nl: 'Ewon verkocht industriële routers. IXON kwam aan met een cloud-native platform op hetzelfde IIoT-segment. Drie legacy apps (eCatcher, M2Web, Talk2M) te verenigen zonder de wereldwijde geïnstalleerde basis te breken.',
+      en: 'Ewon sold industrial routers. IXON arrived with a cloud-native platform on the same IIoT segment. Three legacy apps (eCatcher, M2Web, Talk2M) to reunify without breaking the worldwide installed base.'
+    },
+    'hms.tldr.t2': {
+      fr: 'R&amp;D, produit, business, service après-vente, support · chaque département parlait son propre client. Le Product Manager tranchait seul. Personne ne suivait.',
+      nl: 'R&amp;D, product, business, after-sales, support · elke afdeling sprak haar eigen klant. De Product Manager besliste alleen. Niemand volgde.',
+      en: 'R&amp;D, product, business, after-sales, support · each department spoke to its own customer. The Product Manager decided alone. No one followed.'
+    },
+    'hms.tldr.t3': {
+      fr: 'Douze mois. Tous les chefs de département autour de la table en ateliers Customer Journey. Heuristic Evaluation Nielsen sur les écrans. 8 machine builders testés sur 5 fuseaux horaires.',
+      nl: 'Twaalf maanden. Alle afdelingshoofden rond de tafel in Customer Journey workshops. Heuristische Evaluatie Nielsen op de schermen. 8 machinebouwers getest in 5 tijdzones.',
+      en: 'Twelve months. All department heads around the table in Customer Journey workshops. Nielsen Heuristic Evaluation on the screens. 8 machine builders tested across 5 time zones.'
+    },
+    'hms.tldr.t4': {
+      fr: 'Le sponsor a porté le Concept Report en comité de direction. 2 M€ de budget débloqués pour la mise en prod. Le sponsor monte d\'un grade. Position leader défendue face à IXON.',
+      nl: 'De sponsor bracht het Concept Report naar het directiecomité. 2 M€ budget vrijgemaakt voor productie. De sponsor klimt een graad. Leiderspositie verdedigd tegen IXON.',
+      en: 'The sponsor brought the Concept Report to the executive committee. €2M budget unlocked for production rollout. The sponsor moves up a grade. Leader position defended against IXON.'
     },
     'hms.brief.lead1': {
       fr: 'Ewon by HMS Networks. Entité basée à Nivelles, en Belgique. Filiale d\'un groupe industriel suédois (Halmstad), leader européen de la communication industrielle. Quatre marques au total · Anybus, Ewon, Ixxat, Intesis.',
