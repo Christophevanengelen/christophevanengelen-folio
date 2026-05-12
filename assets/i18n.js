@@ -4662,6 +4662,295 @@
       en: 'The Best Practice pattern has been <strong>deployed for 15+ years</strong> in the United States (Amazon, IBM, Capital One) and <strong>10+ years</strong> in Europe in complex sectors (banking, energy, telecoms). On arrival at SPEOS, I was not reinventing anything: I was transposing an industrialised pattern.'
     },
     'speos.method.compSource': { fr: 'Source · pitch méthodologique CVE porté à l\'interne SPEOS · 2024.', nl: 'Bron · methodologische pitch CVE gevoerd intern bij SPEOS · 2024.', en: 'Source · CVE methodological pitch carried internally at SPEOS · 2024.' },
+    'speos.research.custEyebrow': {
+      fr: 'Phase 01 · Discover · 6 clients pilotes',
+      nl: 'Fase 01 · Discover · 6 pilootklanten',
+      en: 'Phase 01 · Discover · 6 pilot clients'
+    },
+    'speos.research.custTitle': {
+      fr: 'Six clients. <span class="accent">Trois segments. Une seule plateforme à la fin.</span>',
+      nl: 'Zes klanten. <span class="accent">Drie segmenten. Eén platform aan het einde.</span>',
+      en: 'Six clients. <span class="accent">Three segments. One platform at the end.</span>'
+    },
+    'speos.research.custOutcome': {
+      fr: 'Build-to-Mail · Easy2Mail · Channel <span class="brief-teaser__sep">·</span> deux comptes par segment <span class="brief-teaser__sep">·</span> 22 questions, 6 thèmes',
+      nl: 'Build-to-Mail · Easy2Mail · Channel <span class="brief-teaser__sep">·</span> twee klanten per segment <span class="brief-teaser__sep">·</span> 22 vragen, 6 thema\'s',
+      en: 'Build-to-Mail · Easy2Mail · Channel <span class="brief-teaser__sep">·</span> two accounts per segment <span class="brief-teaser__sep">·</span> 22 questions, 6 themes'
+    },
+    'speos.research.custLead': {
+      fr: 'Les douze experts internes lisent l\'organisation. Les six clients lisent le service tel qu\'il vit chez eux. C\'est cette double écoute qui révèle le vrai parcours · ce que SPEOS croit livrer face à ce que le client reçoit vraiment.',
+      nl: 'De twaalf interne experts lezen de organisatie. De zes klanten lezen de dienst zoals die bij hen leeft. Deze dubbele luisterhouding onthult het echte traject · wat SPEOS denkt te leveren tegenover wat de klant werkelijk ontvangt.',
+      en: 'The twelve internal experts read the organisation. The six clients read the service as they experience it. This dual listening reveals the true journey · what SPEOS believes it delivers versus what the client actually receives.'
+    },
+    'speos.research.custLead2': {
+      fr: '<strong>Les mêmes six reviennent en user test final.</strong> On referme la boucle avec ceux qui l\'ont ouverte. C\'est ce qui transforme une intention en signal mesurable.',
+      nl: '<strong>Dezelfde zes komen terug voor de finale user test.</strong> We sluiten de lus met wie hem geopend heeft. Dat is wat een intentie omzet in een meetbaar signaal.',
+      en: '<strong>The same six return for the final user test.</strong> We close the loop with those who opened it. That\'s what turns intent into measurable signal.'
+    },
+    'speos.research.custSource': {
+      fr: 'Source · Customer Interview Guide tenu en session · Concept Report SPEOS 2024 pour la cartographie 3 segments · les six mêmes clients reviennent en user test final.',
+      nl: 'Bron · Customer Interview Guide gehouden in sessie · Concept Report SPEOS 2024 voor de cartografie 3 segmenten · dezelfde zes klanten komen terug voor de finale user test.',
+      en: 'Source · Customer Interview Guide held in session · Concept Report SPEOS 2024 for the 3 segments mapping · the same six clients return for the final user test.'
+    },
+    'speos.prototype.utOutcome': {
+      fr: '<strong class="accent">6 / 6 valident</strong> la direction one-stop <span class="brief-teaser__sep">·</span> <strong class="accent">Score combiné 4,03 / 5</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong>',
+      nl: '<strong class="accent">6 / 6 valideren</strong> de one-stop richting <span class="brief-teaser__sep">·</span> <strong class="accent">Gecombineerde score 4,03 / 5</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong>',
+      en: '<strong class="accent">6 / 6 validate</strong> the one-stop direction <span class="brief-teaser__sep">·</span> <strong class="accent">Combined score 4.03 / 5</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong>'
+    },
+    'speos.prototype.utLead2': {
+      fr: 'En parallèle, deux personas Énergie — Moustafa et Bogdan — passent le SUPERQ sur trois scénarios prototype · Dashboard temps réel, Gestion des erreurs, Audit Trail.',
+      nl: 'Parallel doorlopen twee Energy-persona\'s — Moustafa en Bogdan — de SUPERQ op drie prototype-scenario\'s · Real-time Dashboard, Foutbeheer, Audit Trail.',
+      en: 'In parallel, two Energy personas — Moustafa and Bogdan — go through SUPERQ on three prototype scenarios · Real-time Dashboard, Error Handling, Audit Trail.'
+    },
+    'speos.prototype.utScenA': {
+      fr: 'Dashboard temps réel',
+      nl: 'Real-time Dashboard',
+      en: 'Real-time Dashboard'
+    },
+    'speos.prototype.utScenAClaim': {
+      fr: 'Score combiné <span class="accent">4,4 / 5 — 88%</span>',
+      nl: 'Gecombineerde score <span class="accent">4,4 / 5 — 88%</span>',
+      en: 'Combined score <span class="accent">4.4 / 5 — 88%</span>'
+    },
+    'speos.prototype.utScenAL1': {
+      fr: '<strong>Moustafa · 4,0 / 5</strong> · Simplicité, utilité, pertinence, qualité validées',
+      nl: '<strong>Moustafa · 4,0 / 5</strong> · Eenvoud, nut, relevantie, kwaliteit gevalideerd',
+      en: '<strong>Moustafa · 4.0 / 5</strong> · Simplicity, usefulness, relevance, quality validated'
+    },
+    'speos.prototype.utScenAL2': {
+      fr: '<strong>Bogdan · 4,8 / 5</strong> · NPS 9/10 sur le scénario',
+      nl: '<strong>Bogdan · 4,8 / 5</strong> · NPS 9/10 op het scenario',
+      en: '<strong>Bogdan · 4.8 / 5</strong> · NPS 9/10 on the scenario'
+    },
+    'speos.prototype.utScenAL3': {
+      fr: 'Scénario · déposer un gros lot via SFTP, suivre le traitement en direct',
+      nl: 'Scenario · een grote batch indienen via SFTP, de verwerking live volgen',
+      en: 'Scenario · submit a large batch via SFTP, follow processing live'
+    },
+    'speos.prototype.utScenB': {
+      fr: 'Gestion des erreurs',
+      nl: 'Foutbeheer',
+      en: 'Error Handling'
+    },
+    'speos.prototype.utScenBClaim': {
+      fr: 'Score combiné <span class="accent">4,1 / 5 — 82%</span>',
+      nl: 'Gecombineerde score <span class="accent">4,1 / 5 — 82%</span>',
+      en: 'Combined score <span class="accent">4.1 / 5 — 82%</span>'
+    },
+    'speos.prototype.utScenBL1': {
+      fr: '<strong>Moustafa · 3,7 / 5</strong> · Réassurance basse (3,0) sur la décision rapide',
+      nl: '<strong>Moustafa · 3,7 / 5</strong> · Lage geruststelling (3,0) bij de snelle beslissing',
+      en: '<strong>Moustafa · 3.7 / 5</strong> · Low reassurance (3.0) on the quick decision'
+    },
+    'speos.prototype.utScenBL2': {
+      fr: '<strong>Bogdan · 4,5 / 5</strong> · Simplicité et qualité maximales',
+      nl: '<strong>Bogdan · 4,5 / 5</strong> · Maximale eenvoud en kwaliteit',
+      en: '<strong>Bogdan · 4.5 / 5</strong> · Maximum simplicity and quality'
+    },
+    'speos.prototype.utScenBL3': {
+      fr: 'Scénario · un fichier rejeté, isoler, retraiter, replacer sans bloquer le batch',
+      nl: 'Scenario · een afgewezen bestand isoleren, opnieuw verwerken, herplaatsen zonder de batch te blokkeren',
+      en: 'Scenario · an isolated rejected file, reprocess, replace without blocking the batch'
+    },
+    'speos.prototype.utScenC': {
+      fr: 'Audit Trail / Traçabilité',
+      nl: 'Audit Trail / Traceerbaarheid',
+      en: 'Audit Trail / Traceability'
+    },
+    'speos.prototype.utScenCClaim': {
+      fr: 'Score combiné <span class="accent">3,6 / 5 — 72%</span>',
+      nl: 'Gecombineerde score <span class="accent">3,6 / 5 — 72%</span>',
+      en: 'Combined score <span class="accent">3.6 / 5 — 72%</span>'
+    },
+    'speos.prototype.utScenCL1': {
+      fr: '<strong>Moustafa · 3,2 / 5</strong> · Réassurance à 1 / 5 sur la valeur de preuve légale',
+      nl: '<strong>Moustafa · 3,2 / 5</strong> · Geruststelling op 1 / 5 voor de juridische bewijswaarde',
+      en: '<strong>Moustafa · 3.2 / 5</strong> · Reassurance at 1 / 5 on legal proof value'
+    },
+    'speos.prototype.utScenCL2': {
+      fr: '<strong>Bogdan · 4,0 / 5</strong> · NPS toujours 9/10, mais zone à retravailler',
+      nl: '<strong>Bogdan · 4,0 / 5</strong> · NPS nog steeds 9/10, maar zone om aan te scherpen',
+      en: '<strong>Bogdan · 4.0 / 5</strong> · NPS still 9/10, but area to refine'
+    },
+    'speos.prototype.utScenCL3': {
+      fr: 'Scénario · produire une preuve de dépôt à un service juridique deux semaines après l\'envoi',
+      nl: 'Scenario · twee weken na verzending een bewijs van indiening leveren aan een juridische dienst',
+      en: 'Scenario · produce a proof of submission to a legal department two weeks after sending'
+    },
+    'speos.prototype.utLessons': {
+      fr: 'Le Dashboard et la Gestion des erreurs passent. L\'Audit Trail tient moins · Moustafa note la Réassurance 1 / 5 sur la valeur de preuve légale. Zone identifiée, sponsor informé, scope MVP++ ajusté.',
+      nl: 'Het Dashboard en het Foutbeheer slagen. De Audit Trail houdt minder stand · Moustafa scoort de Geruststelling 1 / 5 op de juridische bewijswaarde. Zone geïdentificeerd, sponsor geïnformeerd, MVP++ scope aangepast.',
+      en: 'The Dashboard and Error Handling pass. Audit Trail holds up less well · Moustafa rates Reassurance 1 / 5 on legal proof value. Area identified, sponsor informed, MVP++ scope adjusted.'
+    },
+    'speos.prototype.utClientsHead': {
+      fr: 'Les six clients pilotes en validation directionnelle',
+      nl: 'De zes pilootklanten in directionele validatie',
+      en: 'The six pilot clients in directional validation'
+    },
+    'hms.hero.location': {
+      fr: 'Nivelles · Hybrid',
+      nl: 'Nijvel · Hybrid',
+      en: 'Nivelles · Hybrid'
+    },
+    'hms.hero.eyebrow': {
+      fr: 'Service Design + UX/UI · Case 03',
+      nl: 'Service Design + UX/UI · Case 03',
+      en: 'Service Design + UX/UI · Case 03'
+    },
+    'hms.hero.h1.start': {
+      fr: 'Trois plateformes legacy.',
+      nl: 'Drie legacy-platformen.',
+      en: 'Three legacy platforms.'
+    },
+    'hms.hero.h1.alt': {
+      fr: 'Une culture à installer.',
+      nl: 'Eén cultuur om te installeren.',
+      en: 'A culture to install.'
+    },
+    'hms.hero.lead': {
+      fr: 'Un an freelance pour réunifier eCatcher, M2Web et Talk2M sous une même expérience. À la sortie · 2 M€ débloqués pour la mise en production, et le sponsor monte d\'un grade.',
+      nl: 'Eén jaar freelance om eCatcher, M2Web en Talk2M te verenigen onder één enkele ervaring. Bij vertrek · 2 M€ vrijgemaakt voor productie, en de sponsor stijgt een rang.',
+      en: 'One freelance year to unify eCatcher, M2Web and Talk2M under one experience. On exit · €2M unlocked for production, and the sponsor moves up a grade.'
+    },
+    'hms.hero.attribution': {
+      fr: 'Service Design + UX/UI Consultant · mandat un an · 2021 → 2022',
+      nl: 'Service Design + UX/UI Consultant · mandaat één jaar · 2021 → 2022',
+      en: 'Service Design + UX/UI Consultant · one-year mandate · 2021 → 2022'
+    },
+    'hms.hero.metaRole': {
+      fr: 'Service Design + UX/UI · Freelance',
+      nl: 'Service Design + UX/UI · Freelance',
+      en: 'Service Design + UX/UI · Freelance'
+    },
+    'hms.hero.metaWhere': {
+      fr: '12 mois · Nivelles + remote',
+      nl: '12 maanden · Nijvel + remote',
+      en: '12 months · Nivelles + remote'
+    },
+    'hms.brief.eyebrow': {
+      fr: 'Le brief',
+      nl: 'De brief',
+      en: 'The brief'
+    },
+    'hms.brief.title': {
+      fr: 'Industrial IoT mondial. <span class="accent">Trois plateformes legacy à réunifier.</span>',
+      nl: 'Wereldwijde Industrial IoT. <span class="accent">Drie legacy-platformen om te verenigen.</span>',
+      en: 'Global Industrial IoT. <span class="accent">Three legacy platforms to unify.</span>'
+    },
+    'hms.brief.lead1': {
+      fr: 'Ewon by HMS Networks. Entité basée à Nivelles, en Belgique. Filiale d\'un groupe industriel suédois (Halmstad), leader européen de la communication industrielle. Quatre marques au total · Anybus, Ewon, Ixxat, Intesis.',
+      nl: 'Ewon by HMS Networks. Entiteit gevestigd in Nijvel, België. Dochteronderneming van een Zweedse industriële groep (Halmstad), Europese leider in industriële communicatie. Vier merken in totaal · Anybus, Ewon, Ixxat, Intesis.',
+      en: 'Ewon by HMS Networks. Entity based in Nivelles, Belgium. Subsidiary of a Swedish industrial group (Halmstad), European leader in industrial communication. Four brands in total · Anybus, Ewon, Ixxat, Intesis.'
+    },
+    'hms.brief.lead2': {
+      fr: 'Trois plateformes legacy à réunifier · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pression concurrentielle d\'IXON, startup cloud-native néerlandaise qui ne traînait pas de passé IT et qui était en train de prendre des parts.',
+      nl: 'Drie legacy-platformen om te verenigen · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Concurrentiedruk van IXON, een Nederlandse cloud-native start-up zonder IT-erfenis die marktaandeel pakte.',
+      en: 'Three legacy platforms to unify · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Competitive pressure from IXON, a Dutch cloud-native start-up with no IT legacy that was gaining market share.'
+    },
+    'hms.brief.lead3': {
+      fr: 'À l\'arrivée · des outils techniques solides, des clients fidèles dans le monde entier, et une vraie envie d\'évoluer. Ce qui manquait · une vision produit unifiée, des parcours utilisateurs cohérents et une culture user-centric installée durablement.',
+      nl: 'Bij aankomst · solide technische tools, trouwe klanten wereldwijd, en een echte wens om te evolueren. Wat ontbrak · een gebundelde productvisie, samenhangende gebruikerstrajecten en een duurzaam verankerde user-centric cultuur.',
+      en: 'On arrival · solid technical tools, loyal customers worldwide, and a real desire to evolve. What was missing · a unified product vision, coherent user journeys, and a sustainably embedded user-centric culture.'
+    },
+    'hms.brief.lead4': {
+      fr: 'Mandat · installer le Design Thinking, la culture utilisateur et la transformation numérique dans une maison purement IT. Mettre tous les chefs de département autour de la table — R&D, produit, business — et faire émerger un Concept Report priorisé que le sponsor pouvait défendre devant le board.',
+      nl: 'Mandaat · Design Thinking, gebruikerscultuur en digitale transformatie installeren in een puur IT-huis. Alle afdelingshoofden rond de tafel zetten — R&D, product, business — en een geprioriteerd Concept Report doen ontstaan dat de sponsor voor het bestuur kon verdedigen.',
+      en: 'Mandate · install Design Thinking, user culture and digital transformation into a pure IT shop. Bring all department heads to the table — R&D, product, business — and produce a prioritised Concept Report that the sponsor could defend to the board.'
+    },
+    'hms.brief.sizing': {
+      fr: 'Mission freelance <span class="dot">·</span> 12 mois <span class="dot">·</span> 2021 → 2022 <span class="dot">·</span> Service Design + UX/UI Consultant',
+      nl: 'Freelance opdracht <span class="dot">·</span> 12 maanden <span class="dot">·</span> 2021 → 2022 <span class="dot">·</span> Service Design + UX/UI Consultant',
+      en: 'Freelance engagement <span class="dot">·</span> 12 months <span class="dot">·</span> 2021 → 2022 <span class="dot">·</span> Service Design + UX/UI Consultant'
+    },
+    'hms.brief.teaser': {
+      fr: 'À la sortie · <strong class="accent">Concept Report priorisé</strong> validé sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system prêt pour la production</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">2 M€ débloqués</strong> pour la mise en prod.',
+      nl: 'Bij vertrek · <strong class="accent">Geprioriteerd Concept Report</strong> goedgekeurd door sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system klaar voor productie</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">2 M€ vrijgemaakt</strong> voor productie.',
+      en: 'On exit · <strong class="accent">Prioritised Concept Report</strong> sponsor-validated <span class="brief-teaser__sep">·</span> <strong class="accent">design system ready for production</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">€2M unlocked</strong> for production.'
+    },
+    'hms.brief.toolkitSignal': {
+      fr: '<strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Service Design Relevance · Simplicity · Consistency.</strong> Pas Strategyzer · le business model d\'Ewon existait. Pas Design Sprint · le mandat était l\'unification durable, pas un MVP en cinq jours.',
+      nl: '<strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Service Design Relevance · Simplicity · Consistency.</strong> Geen Strategyzer · het business model van Ewon bestond al. Geen Design Sprint · het mandaat was duurzame unificatie, geen vijfdaagse MVP.',
+      en: '<strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Service Design Relevance · Simplicity · Consistency.</strong> No Strategyzer · Ewon\'s business model existed. No Design Sprint · the mandate was lasting unification, not a five-day MVP.'
+    },
+    'hms.chapResearch.label': {
+      fr: 'Phase 01 · Research',
+      nl: 'Fase 01 · Research',
+      en: 'Phase 01 · Research'
+    },
+    'hms.chapResearch.overline': {
+      fr: 'Discover · Observe &amp; Understand',
+      nl: 'Discover · Observeren &amp; Begrijpen',
+      en: 'Discover · Observe &amp; Understand'
+    },
+    'hms.chapResearch.ddCap': {
+      fr: 'Vous êtes ici · Diamant 1 · moitié gauche · 4 jalons',
+      nl: 'U bent hier · Diamant 1 · linkerhelft · 4 mijlpalen',
+      en: 'You are here · Diamond 1 · left half · 4 milestones'
+    },
+    'hms.chapAnalyse.label': {
+      fr: 'Phase 02 · Analyse',
+      nl: 'Fase 02 · Analyse',
+      en: 'Phase 02 · Analyse'
+    },
+    'hms.chapAnalyse.overline': {
+      fr: 'Discover · Define',
+      nl: 'Discover · Define',
+      en: 'Discover · Define'
+    },
+    'hms.chapAnalyse.ddCap': {
+      fr: 'Vous êtes ici · Diamant 1 · moitié droite · 4 jalons',
+      nl: 'U bent hier · Diamant 1 · rechterhelft · 4 mijlpalen',
+      en: 'You are here · Diamond 1 · right half · 4 milestones'
+    },
+    'hms.chapValueProp.eyebrow': {
+      fr: 'Diamant 1 · cristallisation',
+      nl: 'Diamant 1 · kristallisatie',
+      en: 'Diamond 1 · crystallisation'
+    },
+    'hms.chapValueProp.phrase': {
+      fr: '<span class="chap-v2__reject"><span class="chap-v2__strike">Pas</span> une plateforme par segment qui multiplie les portes d\'entrée.</span><span class="chap-v2__affirm">Un host <em>one-stop</em> qui rassemble eCatcher, M2Web, Talk2M sous une expérience unifiée.</span>',
+      nl: '<span class="chap-v2__reject"><span class="chap-v2__strike">Geen</span> platform per segment dat de ingangen vermenigvuldigt.</span><span class="chap-v2__affirm">Eén <em>one-stop</em> host die eCatcher, M2Web, Talk2M bundelt in één ervaring.</span>',
+      en: '<span class="chap-v2__reject"><span class="chap-v2__strike">Not</span> one platform per segment multiplying entry doors.</span><span class="chap-v2__affirm">A <em>one-stop</em> host that brings eCatcher, M2Web, Talk2M into one unified experience.</span>'
+    },
+    'hms.chapValueProp.consequences': {
+      fr: '<span>Project Owners <span class="chap-v2__arrow">→</span> portail self-service par persona</span><span class="chap-v2__bullet">·</span><span>Project Managers <span class="chap-v2__arrow">→</span> back-office IT contrôlé</span>',
+      nl: '<span>Project Owners <span class="chap-v2__arrow">→</span> self-service portaal per persona</span><span class="chap-v2__bullet">·</span><span>Project Managers <span class="chap-v2__arrow">→</span> gecontroleerde IT back-office</span>',
+      en: '<span>Project Owners <span class="chap-v2__arrow">→</span> self-service portal per persona</span><span class="chap-v2__bullet">·</span><span>Project Managers <span class="chap-v2__arrow">→</span> controlled IT back-office</span>'
+    },
+    'hms.chapIdeation.label': {
+      fr: 'Phase 03 · Ideation',
+      nl: 'Fase 03 · Ideation',
+      en: 'Phase 03 · Ideation'
+    },
+    'hms.chapIdeation.overline': {
+      fr: 'Develop · ateliers co-créatifs · explorer les pistes',
+      nl: 'Develop · co-creatieve workshops · pistes verkennen',
+      en: 'Develop · co-creative workshops · explore directions'
+    },
+    'hms.chapIdeation.ddCap': {
+      fr: 'Vous êtes ici · Diamant 2 · moitié gauche · Develop',
+      nl: 'U bent hier · Diamant 2 · linkerhelft · Develop',
+      en: 'You are here · Diamond 2 · left half · Develop'
+    },
+    'hms.chapConcept.eyebrow': {
+      fr: 'Le moment de bascule sponsor',
+      nl: 'Het kantelmoment voor de sponsor',
+      en: 'The sponsor\'s tipping point'
+    },
+    'hms.chapConcept.phrase': {
+      fr: '<span class="chap-v2__reject"><span class="chap-v2__strike">Plus</span> à imaginer.</span><span class="chap-v2__affirm">Le sponsor voit <em>où il investit</em>, et six clients lui disent <em>que ça vaut le coup</em>.</span>',
+      nl: '<span class="chap-v2__reject"><span class="chap-v2__strike">Niets</span> meer om voor te stellen.</span><span class="chap-v2__affirm">De sponsor ziet <em>waar hij investeert</em>, en zes klanten vertellen hem <em>dat het de moeite waard is</em>.</span>',
+      en: '<span class="chap-v2__reject"><span class="chap-v2__strike">Nothing</span> more to imagine.</span><span class="chap-v2__affirm">The sponsor sees <em>where he\'s investing</em>, and six clients tell him <em>it\'s worth it</em>.</span>'
+    },
+    'hms.chapConcept.consequences': {
+      fr: '<span>76 pages structurées</span><span class="chap-v2__bullet">·</span><span>12 entretiens experts internes</span><span class="chap-v2__bullet">·</span><span>3 segments validés</span>',
+      nl: '<span>76 gestructureerde pagina\'s</span><span class="chap-v2__bullet">·</span><span>12 interne expertinterviews</span><span class="chap-v2__bullet">·</span><span>3 gevalideerde segmenten</span>',
+      en: '<span>76 structured pages</span><span class="chap-v2__bullet">·</span><span>12 internal expert interviews</span><span class="chap-v2__bullet">·</span><span>3 validated segments</span>'
+    },
+
+// 25 entries
+
+
 
   };
 
