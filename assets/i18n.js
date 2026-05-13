@@ -57,9 +57,9 @@
       en: 'Service Design · UX · CX · Brussels'
     },
     'home.h1': {
-      fr: 'J\'aide les équipes à transformer<br><span class="alt">un cadrage flou en service que le client signe.</span>',
-      nl: 'Ik help teams om<br><span class="alt">een vaag kader te transformeren in een dienst die de klant tekent.</span>',
-      en: 'I help teams transform<br><span class="alt">a fuzzy brief into a service the client signs.</span>'
+      fr: 'J\'aide les équipes à transformer<br><span class="alt">une intention stratégique en service que quelqu\'un signe.</span>',
+      nl: 'Ik help teams om<br><span class="alt">een strategische intentie te transformeren in een dienst die iemand tekent.</span>',
+      en: 'I help teams turn<br><span class="alt">a strategic intent into a service someone signs.</span>'
     },
     'home.lead': {
       fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics ci-dessous.',
