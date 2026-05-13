@@ -1604,9 +1604,9 @@
       en: 'BNP processed 30% of the country\'s Bancontact payments. No service was extracting value from this data for the merchants who accepted them.'
     },
     'bnp.tldr.t2': {
-      fr: 'Quatre fonctions internes, quatre lectures. Banking voulait protéger la confiance carte. IT cherchait un MVP technique. Legal bloquait sur la donnée. Marketing voulait du brand. Zéro alignement.',
-      nl: 'Vier interne functies, vier lezingen. Banking wilde het kaartvertrouwen beschermen. IT zocht een technische MVP. Legal blokkeerde op data. Marketing wilde brand. Nul afstemming.',
-      en: 'Four internal functions, four readings. Banking wanted to protect card trust. IT was looking for a technical MVP. Legal blocked on data. Marketing wanted brand. Zero alignment.'
+      fr: 'Quatre fonctions, quatre lectures légitimes. Banking pensait confiance carte. IT pensait MVP. Legal arbitrait la donnée. Marketing pensait brand. Quatre voix à faire converger sur un seul scope.',
+      nl: 'Vier functies, vier legitieme lezingen. Banking dacht kaartvertrouwen. IT dacht MVP. Legal arbitreerde de data. Marketing dacht brand. Vier stemmen om op één scope te laten samenkomen.',
+      en: 'Four functions, four legitimate readings. Banking thought card trust. IT thought MVP. Legal arbitrated the data. Marketing thought brand. Four voices to converge on a single scope.'
     },
     'bnp.tldr.t3': {
       fr: 'Six mois en amont. Stakeholder Map, Customer Journey, Value Proposition Canvas. Six commerçants interviewés sur leur lieu de travail, dont Léonidas.',
@@ -3537,9 +3537,9 @@
       en: 'Belgian mail loses 8% per year. SPEOS, postal subsidiary of bpost, had to shift to digital without breaking its print revenue, and defend its leadership against cloud-native pure-players.'
     },
     'speos.tldr.t2': {
-      fr: 'Le Business voulait défendre le revenu. L\'IT bâtissait Agile sans utilisateur. La fonction UX n\'existait pas en département dédié. Project Owners et Project Managers se parlaient à peine.',
-      nl: 'Business wilde de omzet verdedigen. IT bouwde Agile zonder gebruiker. De UX-functie bestond niet als aparte afdeling. Project Owners en Project Managers spraken nauwelijks met elkaar.',
-      en: 'Business wanted to defend revenue. IT was building Agile without users. The UX function did not exist as a dedicated department. Project Owners and Project Managers barely spoke to each other.'
+      fr: 'Le Business défendait le revenu. L\'IT bâtissait l\'Agile en parallèle. La fonction UX n\'existait pas encore en département dédié. Trois mondes à faire entrer dans la même conversation.',
+      nl: 'Business verdedigde de omzet. IT bouwde Agile in parallel. De UX-functie bestond nog niet als aparte afdeling. Drie werelden om in hetzelfde gesprek samen te brengen.',
+      en: 'Business was defending revenue. IT was building Agile in parallel. The UX function did not yet exist as a dedicated department. Three worlds to bring into the same conversation.'
     },
     'speos.tldr.t3': {
       fr: 'Douze mois. 12 entretiens experts internes (CEO, CTO, R&amp;D, Operations). 6 clients pilotes interviewés, dont Luminus sur la facture énergie. Customer Journey workshop physique, persona Johnny au mur.',
@@ -4838,9 +4838,9 @@
       en: 'Ewon sold industrial routers. IXON arrived with a cloud-native platform on the same IIoT segment. Three legacy apps (eCatcher, M2Web, Talk2M) to reunify without breaking the worldwide installed base.'
     },
     'hms.tldr.t2': {
-      fr: 'R&amp;D, produit, business, service après-vente, support · chaque département parlait son propre client. Le Product Manager tranchait seul. Personne ne suivait.',
-      nl: 'R&amp;D, product, business, after-sales, support · elke afdeling sprak haar eigen klant. De Product Manager besliste alleen. Niemand volgde.',
-      en: 'R&amp;D, product, business, after-sales, support · each department spoke to its own customer. The Product Manager decided alone. No one followed.'
+      fr: 'R&amp;D, produit, business, service après-vente, support · cinq départements, cinq lectures du client. Cinq voix à réunir dans la même salle.',
+      nl: 'R&amp;D, product, business, after-sales, support · vijf afdelingen, vijf lezingen van de klant. Vijf stemmen om in dezelfde kamer samen te brengen.',
+      en: 'R&amp;D, product, business, after-sales, support · five departments, five readings of the customer. Five voices to bring into the same room.'
     },
     'hms.tldr.t3': {
       fr: 'Douze mois. Tous les chefs de département autour de la table en ateliers Customer Journey. Heuristic Evaluation Nielsen sur les écrans. 8 machine builders testés sur 5 fuseaux horaires.',
