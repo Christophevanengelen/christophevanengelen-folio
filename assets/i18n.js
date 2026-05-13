@@ -57,9 +57,9 @@
       en: 'Service Design · UX · CX · Brussels'
     },
     'home.h1': {
-      fr: 'J\'aide les équipes à transformer<br><span class="alt">une intention stratégique en service que le sponsor signe.</span>',
-      nl: 'Ik help teams om<br><span class="alt">een strategische intentie te transformeren in een dienst die de sponsor tekent.</span>',
-      en: 'I help teams turn<br><span class="alt">a strategic intent into a service the sponsor signs.</span>'
+      fr: 'Aligner les parties prenantes sur la value proposition.<br><span class="alt">Livrer une expérience que les utilisateurs adorent.</span>',
+      nl: 'Stakeholders uitlijnen op de value proposition.<br><span class="alt">Een ervaring leveren waar gebruikers van houden.</span>',
+      en: 'Align stakeholders around the value proposition.<br><span class="alt">Deliver an experience users love.</span>'
     },
     'home.lead': {
       fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics ci-dessous.',
