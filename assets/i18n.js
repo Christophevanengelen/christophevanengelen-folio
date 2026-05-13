@@ -2907,53 +2907,6 @@
       nl: 'Gewerkt met',
       en: 'Worked with'
     },
-    'home.testimonialEyebrow': {
-      fr: 'Ce qu\'ils disent',
-      nl: 'Wat ze zeggen',
-      en: 'What they say'
-    },
-    'home.testimonialH2': {
-      fr: 'Trois sponsors. Trois décisions signées.',
-      nl: 'Drie sponsors. Drie getekende beslissingen.',
-      en: 'Three sponsors. Three signed decisions.'
-    },
-    /* BNP */
-    'home.testimonial.bnpClient': { fr: 'BNP Paribas Fortis · 2018 — 2019', nl: 'BNP Paribas Fortis · 2018 — 2019', en: 'BNP Paribas Fortis · 2018 — 2019' },
-    'home.testimonial.bnpQuote': {
-      fr: '« Christophe a aligné Banking, IT, Legal et Marketing en six mois. Léonidas a signé avant la première ligne de code. »',
-      nl: '« Christophe heeft Banking, IT, Legal en Marketing in zes maanden uitgelijnd. Léonidas heeft getekend nog vóór de eerste regel code. »',
-      en: '"Christophe aligned Banking, IT, Legal and Marketing in six months. Léonidas signed before the first line of code."'
-    },
-    'home.testimonial.bnpName': { fr: 'Sponsor projet', nl: 'Projectsponsor', en: 'Project sponsor' },
-    'home.testimonial.bnpRole': { fr: 'Enterprise Intelligence · BNP Paribas Fortis', nl: 'Enterprise Intelligence · BNP Paribas Fortis', en: 'Enterprise Intelligence · BNP Paribas Fortis' },
-    'home.testimonial.bnpLink': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
-    /* SPEOS */
-    'home.testimonial.speosClient': { fr: 'SPEOS · bpost group · 2024 — 2025', nl: 'SPEOS · bpost group · 2024 — 2025', en: 'SPEOS · bpost group · 2024 — 2025' },
-    'home.testimonial.speosQuote': {
-      fr: '« Christophe a posé une méthode là où chacun parlait sa langue. Six clients pilotes ont validé. Le sponsor a donné le go prod. »',
-      nl: '« Christophe heeft een methode neergezet waar iedereen zijn eigen taal sprak. Zes pilootklanten valideerden. De sponsor gaf het productie-go. »',
-      en: '"Christophe laid down a method where everyone spoke their own language. Six pilot customers validated. The sponsor gave the production go."'
-    },
-    'home.testimonial.speosName': { fr: 'Sponsor digital', nl: 'Digitaal sponsor', en: 'Digital sponsor' },
-    'home.testimonial.speosRole': { fr: 'One-Stop Platform · SPEOS', nl: 'One-Stop Platform · SPEOS', en: 'One-Stop Platform · SPEOS' },
-    'home.testimonial.speosLink': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
-    /* HMS */
-    'home.testimonial.hmsClient': { fr: 'Ewon by HMS Networks · 2021 — 2022', nl: 'Ewon by HMS Networks · 2021 — 2022', en: 'Ewon by HMS Networks · 2021 — 2022' },
-    'home.testimonial.hmsQuote': {
-      fr: '« Trois plateformes legacy, trois équipes, un seul concept au bout. Le board a débloqué 2 M€ pour la mise en prod. »',
-      nl: '« Drie legacy-platformen, drie teams, één concept aan het eind. De board heeft 2 M€ vrijgemaakt voor productie. »',
-      en: '"Three legacy platforms, three teams, one single concept at the end. The board released €2M for production."'
-    },
-    'home.testimonial.hmsName': { fr: 'Product Lead', nl: 'Product Lead', en: 'Product Lead' },
-    'home.testimonial.hmsRole': { fr: 'Cloud Revamp · Ewon by HMS Networks', nl: 'Cloud Revamp · Ewon by HMS Networks', en: 'Cloud Revamp · Ewon by HMS Networks' },
-    'home.testimonial.hmsLink': { fr: 'Lire le case →', nl: 'Lees de case →', en: 'Read the case →' },
-
-    'home.testimonialNote': {
-      fr: 'Noms et coordonnées des sponsors fournis sur demande à recruteur ou client.',
-      nl: 'Namen en contactgegevens van sponsors worden op aanvraag aan recruiter of klant verstrekt.',
-      en: 'Sponsor names and contacts shared on request to recruiter or client.'
-    },
-
     /* CVE 2026-05-12 · Newsletter · 1 mail/mois, Substack-backed */
     'home.nlEyebrow': { fr: 'Newsletter', nl: 'Nieuwsbrief', en: 'Newsletter' },
     'home.nlH2': {
