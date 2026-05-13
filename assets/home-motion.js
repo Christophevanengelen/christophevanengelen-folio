@@ -242,7 +242,6 @@
       '.home-testimonial__card',
       '.home-practice__line',
       '.home-formats__card',
-      '.home-fit__col',
       '.home-track__item',
       '.home-about__bio p',
       '.home-faq__item',
@@ -270,7 +269,7 @@
     });
 
     /* Big h2 · mask reveal cinematic */
-    document.querySelectorAll('.home-cases__h2, .home-testimonial__h2, .home-practice__h2, .home-formats__h2, .home-fit__h2, .home-track__h2, .home-about__h2, .home-faq__h2, .home-contact__h2, .home-awards__h2').forEach((h) => {
+    document.querySelectorAll('.home-cases__h2, .home-testimonial__h2, .home-practice__h2, .home-formats__h2, .home-track__h2, .home-about__h2, .home-faq__h2, .home-contact__h2, .home-awards__h2').forEach((h) => {
       gsap.fromTo(h,
         { clipPath: 'inset(0 0 100% 0)', y: 16, opacity: 0 },
         {

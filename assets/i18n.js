@@ -3079,22 +3079,6 @@
       en: 'Indicative rates excl. VAT · adjusted to context. <a href="#contact">First call free</a> to scope it.'
     },
 
-    'home.fitEyebrow': { fr: 'Fit', nl: 'Fit', en: 'Fit' },
-    'home.fitH2': { fr: 'Bon match. Pas bon match.', nl: 'Goede match. Geen match.', en: 'Good fit. Not a fit.' },
-    'home.fitLead': { fr: 'La transparence évite trois mois de friction.', nl: 'Transparantie bespaart drie maanden frictie.', en: 'Transparency saves three months of friction.' },
-    'home.fit.yesTag': { fr: 'Bon match', nl: 'Goede match', en: 'Good fit' },
-    'home.fit.noTag': { fr: 'Pas bon match', nl: 'Geen match', en: 'Not a fit' },
-    'home.fit.yes1': { fr: 'Vous voulez un design leader autonome, pas un exécutant.', nl: 'Je wil een autonome design leader, geen uitvoerder.', en: 'You want an autonomous design leader, not an executor.' },
-    'home.fit.yes2': { fr: 'Business et IT ne sont pas d\'accord et il faut trancher.', nl: 'Business en IT zijn het oneens en er moet beslist worden.', en: 'Business and IT disagree and a call has to be made.' },
-    'home.fit.yes3': { fr: 'Vous avez un sponsor interne qui couvre la mission.', nl: 'Je hebt een interne sponsor die de opdracht dekt.', en: 'You have an internal sponsor who covers the mission.' },
-    'home.fit.yes4': { fr: 'Le sujet engage de la prod, du budget, ou un pivot stratégique.', nl: 'Het onderwerp raakt productie, budget of een strategische pivot.', en: 'The topic involves production, budget, or a strategic pivot.' },
-    'home.fit.yes5': { fr: 'Vous acceptez qu\'une recherche puisse remettre le scope en cause.', nl: 'Je aanvaardt dat onderzoek de scope ter discussie kan stellen.', en: 'You accept that research might question the scope.' },
-    'home.fit.no1': { fr: 'Vous cherchez un UX designer en délivery sur backlog Jira.', nl: 'Je zoekt een UX designer in delivery op een Jira-backlog.', en: 'You\'re looking for a UX designer delivering on a Jira backlog.' },
-    'home.fit.no2': { fr: 'Le scope, le concept et la roadmap sont déjà figés à signer.', nl: 'Scope, concept en roadmap liggen al vast en hoeven enkel getekend.', en: 'Scope, concept and roadmap are already locked, just sign here.' },
-    'home.fit.no3': { fr: 'L\'achat passe par appel d\'offres lowest-bid sans cadrage.', nl: 'Inkoop verloopt via lowest-bid aanbesteding zonder afbakening.', en: 'Procurement goes through lowest-bid tendering without framing.' },
-    'home.fit.no4': { fr: 'La recherche utilisateur est vue comme une case à cocher.', nl: 'Gebruikersonderzoek wordt gezien als een hokje om af te vinken.', en: 'User research is seen as a box to tick.' },
-    'home.fit.no5': { fr: 'Le besoin est purement graphique, brand ou pixel-perfect.', nl: 'De behoefte is puur grafisch, brand of pixel-perfect.', en: 'The need is purely graphic, brand or pixel-perfect.' },
-
     /* CVE 2026-05-04 S4.3 · "Voir tout l'historique" disclosure pour 4 missions
        2006-2015 masquées par défaut. */
     'home.trackMoreSummary': {
