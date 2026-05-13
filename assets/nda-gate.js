@@ -20,15 +20,15 @@
  *   <script src="/assets/nda-gate.js" data-case="bnp" defer></script>
  * Le script gate la page <body> tant que pas unlocked.
  *
- * Password actuel · "folio-2026" (à changer si compromis).
+ * Password actuel · "hlhylu54" (rotation CVE 2026-05-13, à changer si compromis).
  * Hash SHA-256 ci-dessous, calculé via crypto.subtle.
  */
 
 (function () {
   'use strict';
 
-  /* SHA-256 du password "folio-2026" (lowercase) en hex */
-  const PASSWORD_HASH = '94fce34b413251483d9568bd5af84267f2b1c8ae718531034db67b5cb0198e3e';
+  /* SHA-256 du password "hlhylu54" (lowercase) en hex */
+  const PASSWORD_HASH = '3ec10ab00faf9b0650fc6d36b12a0555c96f5c38c5ca6f585ff2c4b58e1df1cc';
   const TOKEN_KEY = 'cve-nda-access';
   const TOKEN_VALID_DAYS = 60; /* le token expire après 60 jours */
 
