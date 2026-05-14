@@ -2935,15 +2935,12 @@
       nl: '30 minuten aan de telefoon. Gratis. Zonder verbintenis. Om af te toetsen of het een goede match is.',
       en: '30 minutes on the phone. Free. No commitment. To check if we\'re a good fit.'
     },
-    'home.contactCtaLabel': {
-      fr: 'Réserver un premier call de 30 min',
-      nl: 'Boek een eerste call van 30 min',
-      en: 'Book a 30-min first call'
-    },
+    /* home.contactCtaLabel retiré 2026-05-14 · le bouton CTA a été remplacé
+       par un embed Cal.com inline (calendrier directement dans la page). */
     'home.contactCtaMeta': {
-      fr: 'Calendrier en direct · réponse en 24 h ouvrées sinon.',
-      nl: 'Agenda live · anders antwoord binnen 24u (werkdagen).',
-      en: 'Live calendar · otherwise reply within 24h on business days.'
+      fr: 'Calendrier en direct ci-dessus. Si aucun créneau ne colle, réponse en 24 h ouvrées par email.',
+      nl: 'Live agenda hierboven. Als geen slot past, antwoord binnen 24u (werkdagen) per e-mail.',
+      en: 'Live calendar above. If no slot fits, reply within 24h on business days by email.'
     },
     'home.contactAltLabel': {
       fr: 'Ou par les canaux directs :',

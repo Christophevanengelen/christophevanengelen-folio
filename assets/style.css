@@ -9351,34 +9351,34 @@ select:focus-visible {
 .home-contact__primary {
   margin: 0 0 clamp(32px, 5vh, 48px);
 }
-.home-contact__cta {
-  display: inline-flex;
+/* CVE 2026-05-14 · Cal.com inline embed container · le calendrier vit
+   dans la page. Hauteur min calibrée pour afficher la grille mois +
+   créneaux sans scroll interne. */
+.home-contact__cal-embed {
+  width: 100%;
+  min-height: 740px;
+  margin: 0 0 16px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--bg) 96%, var(--fg));
+  border: 1px solid var(--border);
+  position: relative;
+}
+/* Placeholder pendant chargement Cal.js (~10 KB) · évite le saut de layout */
+.home-contact__cal-embed:empty::before {
+  content: "Chargement du calendrier…";
+  position: absolute;
+  inset: 0;
+  display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 18px 28px;
+  justify-content: center;
   font-family: var(--sans);
-  font-size: clamp(15px, 1.2vw, 17px);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: #fff;
-  background: var(--amber);
-  border-radius: 999px;
-  border: 1px solid var(--amber);
-  transition: transform 220ms ease, box-shadow 280ms ease, background 220ms ease;
-  box-shadow: 0 4px 18px color-mix(in oklab, var(--amber) 28%, transparent);
+  font-size: 14px;
+  color: var(--fg-soft);
+  opacity: 0.6;
 }
-.home-contact__cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 26px color-mix(in oklab, var(--amber) 40%, transparent);
-  background: color-mix(in oklab, var(--amber) 85%, #000);
-}
-.home-contact__cta-arrow {
-  font-size: 1.1em;
-  transition: transform 220ms ease;
-}
-.home-contact__cta:hover .home-contact__cta-arrow {
-  transform: translateX(4px);
+@media (max-width: 720px) {
+  .home-contact__cal-embed { min-height: 880px; }
 }
 .home-contact__cta-meta {
   margin: 12px 0 0;
