@@ -303,7 +303,7 @@
       "name": "Combien de temps avant de pouvoir démarrer ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cela dépend du projet et de la valeur en jeu. Je réponds en 24h ouvrées. Premier call 30 min gratuit, sans engagement, pour qualifier le besoin et la fit. Pour un brief qui a du sens, je sais faire bouger l'agenda · démarrage habituel en 2 à 4 semaines."
+        "text": "Cela dépend du projet et de la valeur en jeu. Je réponds en 24h ouvrées. Premier call 30 min gratuit, sans engagement, pour qualifier l'enjeu et la fit. Si l'enjeu est cadré et l'agenda urgent, je peux faire bouger les choses · démarrage habituel en 2 à 4 semaines."
       }
     },
     {
@@ -829,7 +829,7 @@
           <summary class="home-faq__q" itemprop="name" data-i18n="home.faq.q4">Combien de temps avant de pouvoir démarrer ?</summary>
           <div class="home-faq__a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text" data-i18n-html="home.faq.a4">
-              <p><strong>Cela dépend du projet et de la valeur en jeu.</strong> Réponse en 24h ouvrées. Premier call 30 min gratuit. Pour un brief qui a du sens, je sais faire bouger l'agenda · démarrage habituel en 2 à 4 semaines.</p>
+              <p><strong>Cela dépend du projet et de la valeur en jeu.</strong> Réponse en 24h ouvrées. Premier call 30 min gratuit. Si l'enjeu est cadré et l'agenda urgent, je peux faire bouger les choses · démarrage habituel en 2 à 4 semaines.</p>
             </div>
           </div>
         </details>
@@ -1079,17 +1079,27 @@
   if (!btn) return;
   const footer = document.querySelector('.home-footer');
   const hero = document.querySelector('.home-hero');
+  /* CVE 2026-05-14 · cacher aussi le floating CTA quand l'utilisateur
+     est arrivé dans la section #contact où vit le widget Cal inline ·
+     pointer ↓ vers "où on est déjà" est déroutant. */
+  const contact = document.querySelector('#contact');
   const heroH = () => (hero ? hero.getBoundingClientRect().height : window.innerHeight * 0.6);
   let raf = null;
   const update = () => {
     raf = null;
     const scrolledPastHero = window.scrollY > heroH() * 0.55;
     let footerVisible = false;
+    let contactVisible = false;
     if (footer) {
       const fRect = footer.getBoundingClientRect();
       footerVisible = fRect.top < window.innerHeight - 40;
     }
-    if (footerVisible) {
+    if (contact) {
+      const cRect = contact.getBoundingClientRect();
+      /* contact "visible" quand son top entre dans le viewport (avec marge 120px) */
+      contactVisible = cRect.top < window.innerHeight - 120 && cRect.bottom > 120;
+    }
+    if (footerVisible || contactVisible) {
       btn.classList.remove('is-visible');
       btn.classList.add('is-hidden');
     } else if (scrolledPastHero) {

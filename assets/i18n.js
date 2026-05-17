@@ -3231,9 +3231,9 @@
     },
     'home.faq.q4': { fr: 'Combien de temps avant de pouvoir démarrer ?', nl: 'Hoe lang voor je kan starten?', en: 'How long before you can start?' },
     'home.faq.a4': {
-      fr: '<p><strong>Cela dépend du projet et de la valeur en jeu.</strong> Réponse en 24h ouvrées. Premier call 30 min gratuit. Pour un brief qui a du sens, je sais faire bouger l\'agenda · démarrage habituel en 2 à 4 semaines.</p>',
-      nl: '<p><strong>Hangt af van het project en de waarde die op het spel staat.</strong> Antwoord binnen 24u (werkdagen). Eerste call 30 min gratis. Voor een brief die telt, kan ik de agenda doen schuiven · gewoonlijke start in 2 tot 4 weken.</p>',
-      en: '<p><strong>It depends on the project and the value at stake.</strong> Reply within 24h business days. First call 30 min free. For a brief that matters, I can move the calendar · usual start in 2 to 4 weeks.</p>'
+      fr: '<p><strong>Cela dépend du projet et de la valeur en jeu.</strong> Réponse en 24h ouvrées. Premier call 30 min gratuit. Si l\'enjeu est cadré et l\'agenda urgent, je peux faire bouger les choses · démarrage habituel en 2 à 4 semaines.</p>',
+      nl: '<p><strong>Hangt af van het project en de waarde die op het spel staat.</strong> Antwoord binnen 24u (werkdagen). Eerste call 30 min gratis. Als de inzet helder en de agenda dringend is, kan ik dingen in beweging brengen · gewoonlijke start in 2 tot 4 weken.</p>',
+      en: '<p><strong>It depends on the project and the value at stake.</strong> Reply within 24h business days. First call 30 min free. If the stake is framed and the agenda urgent, I can move things forward · usual start in 2 to 4 weeks.</p>'
     },
     'home.faq.q5': { fr: 'Tarifs et modèle de facturation ?', nl: 'Tarieven en facturatiemodel?', en: 'Rates and billing model?' },
     'home.faq.a5': {
@@ -4855,19 +4855,19 @@
       en: 'Ewon by HMS Networks. Entity based in Nivelles, Belgium. Subsidiary of a Swedish industrial group (Halmstad), European leader in industrial communication. Four brands in total · Anybus, Ewon, Ixxat, Intesis.'
     },
     'hms.brief.lead2': {
-      fr: 'Trois plateformes legacy à réunifier · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pression concurrentielle d\'IXON, startup cloud-native néerlandaise qui ne traînait pas de passé IT et qui était en train de prendre des parts.',
-      nl: 'Drie legacy-platformen om te verenigen · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Concurrentiedruk van IXON, een Nederlandse cloud-native start-up zonder IT-erfenis die marktaandeel pakte.',
-      en: 'Three legacy platforms to unify · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Competitive pressure from IXON, a Dutch cloud-native start-up with no IT legacy that was gaining market share.'
+      fr: 'Trois plateformes legacy à réunifier · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pression d\'IXON, startup cloud-native néerlandaise, user-centric depuis le premier jour · self-onboarding, freemium, persona-driven. Chez Ewon · plateformes orientées back-office IT, sans self-onboarding ni design system encore en place. UX, UI et culture user-centric · trois fronts simultanés à activer.',
+      nl: 'Drie legacy-platformen om te verenigen · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Druk van IXON, Nederlandse cloud-native start-up, user-centric vanaf dag één · self-onboarding, freemium, persona-driven. Bij Ewon · platformen gericht op IT-backoffice, zonder self-onboarding of design system al opgezet. UX, UI en user-centric cultuur · drie gelijktijdige fronten om te activeren.',
+      en: 'Three legacy platforms to unify · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pressure from IXON, a Dutch cloud-native start-up, user-centric from day one · self-onboarding, freemium, persona-driven. At Ewon · platforms built for IT back-office, with self-onboarding and a design system still to put in place. UX, UI and user-centric culture · three simultaneous fronts to activate.'
     },
     'hms.brief.lead3': {
-      fr: 'À l\'arrivée · des outils techniques solides, des clients fidèles dans le monde entier, et une vraie envie d\'évoluer. Ce qui manquait · une vision produit unifiée, des parcours utilisateurs cohérents et une culture user-centric installée durablement.',
-      nl: 'Bij aankomst · solide technische tools, trouwe klanten wereldwijd, en een echte wens om te evolueren. Wat ontbrak · een gebundelde productvisie, samenhangende gebruikerstrajecten en een duurzaam verankerde user-centric cultuur.',
-      en: 'On arrival · solid technical tools, loyal customers worldwide, and a real desire to evolve. What was missing · a unified product vision, coherent user journeys, and a sustainably embedded user-centric culture.'
+      fr: 'À l\'arrivée · des outils techniques solides, des clients fidèles dans le monde entier, et une vraie envie d\'évoluer. Ce qui restait à activer · une vision produit unifiée, des parcours utilisateurs cohérents et une culture user-centric installée durablement.',
+      nl: 'Bij aankomst · solide technische tools, trouwe klanten wereldwijd, en een echte wens om te evolueren. Wat nog te activeren bleef · een gebundelde productvisie, samenhangende gebruikerstrajecten en een duurzaam verankerde user-centric cultuur.',
+      en: 'On arrival · solid technical tools, loyal customers worldwide, and a real desire to evolve. What remained to activate · a unified product vision, coherent user journeys, and a sustainably embedded user-centric culture.'
     },
     'hms.brief.lead4': {
-      fr: 'Mandat · installer le Design Thinking, la culture utilisateur et la transformation numérique dans une maison purement IT. Mettre tous les chefs de département autour de la table — R&D, produit, business — et faire émerger un Concept Report priorisé que le sponsor pouvait défendre devant le board.',
-      nl: 'Mandaat · Design Thinking, gebruikerscultuur en digitale transformatie installeren in een puur IT-huis. Alle afdelingshoofden rond de tafel zetten — R&D, product, business — en een geprioriteerd Concept Report doen ontstaan dat de sponsor voor het bestuur kon verdedigen.',
-      en: 'Mandate · install Design Thinking, user culture and digital transformation into a pure IT shop. Bring all department heads to the table — R&D, product, business — and produce a prioritised Concept Report that the sponsor could defend to the board.'
+      fr: 'Mandat · installer le Design Thinking, la culture utilisateur et la transformation numérique dans une organisation historiquement IT-first. Mettre tous les chefs de département autour de la table · R&D, produit, business · et faire émerger un Concept Report priorisé que le sponsor pouvait défendre devant le board.',
+      nl: 'Mandaat · Design Thinking, gebruikerscultuur en digitale transformatie installeren in een historisch IT-first organisatie. Alle afdelingshoofden rond de tafel brengen · R&D, product, business · en een geprioriteerd Concept Report doen ontstaan dat de sponsor voor het bestuur kon verdedigen.',
+      en: 'Mandate · install Design Thinking, user culture and digital transformation into a historically IT-first organisation. Bring all department heads to the table · R&D, product, business · and produce a prioritised Concept Report that the sponsor could defend to the board.'
     },
     'hms.brief.sizing': {
       fr: 'Mission freelance <span class="dot">·</span> 12 mois <span class="dot">·</span> 2021 → 2022 <span class="dot">·</span> Service Design + UX/UI Consultant',
@@ -5476,6 +5476,1853 @@
       fr: '<span>76 pages structurées</span><span class="chap-v2__bullet">·</span><span>12 entretiens experts internes</span><span class="chap-v2__bullet">·</span><span>3 segments validés</span>',
       nl: '<span>76 gestructureerde pagina\'s</span><span class="chap-v2__bullet">·</span><span>12 interne expertinterviews</span><span class="chap-v2__bullet">·</span><span>3 gevalideerde segmenten</span>',
       en: '<span>76 structured pages</span><span class="chap-v2__bullet">·</span><span>12 internal expert interviews</span><span class="chap-v2__bullet">·</span><span>3 validated segments</span>'
+    },
+
+
+// CVE 2026-05-17 · HMS i18n batch complete · 366 keys NL + EN
+
+    /* Section · hms.research.* */
+    'hms.research.benchEyebrow': {
+      fr: 'Phase 01 · Discover · benchmark concurrentiel',
+      nl: 'Fase 01 · Discover · competitive benchmark',
+      en: 'Phase 01 · Discover · competitive benchmark'
+    },
+    'hms.research.benchLead': {
+      fr: 'Les OEM Machine Builders intègrent Ewon à la commande, haute compliance. Les End-User Plants achètent du standard, autonomie atelier. Les Integrators achètent API et doc. Une seule plateforme sert les trois.',
+      nl: 'OEM Machine Builders integreren Ewon bij de bestelling, hoge compliance. End-User Plants kopen standaard, werkplaatsautonomie. Integrators kopen API en documentatie. Eén platform bedient de drie.',
+      en: 'OEM Machine Builders integrate Ewon at order, high compliance. End-User Plants buy standard, workshop autonomy. Integrators buy API and docs. A single platform serves the three.'
+    },
+    'hms.research.benchOutcome': {
+      fr: '3 segments · OEM Machine Builders · End-User Plants · Integrators / Resellers <span class="brief-teaser__sep">·</span> concurrents · IXON, Welotec, Tosibox.',
+      nl: '3 segmenten · OEM Machine Builders · End-User Plants · Integrators / Resellers <span class="brief-teaser__sep">·</span> concurrenten · IXON, Welotec, Tosibox.',
+      en: '3 segments · OEM Machine Builders · End-User Plants · Integrators / Resellers <span class="brief-teaser__sep">·</span> competitors · IXON, Welotec, Tosibox.'
+    },
+    'hms.research.benchSource': {
+      fr: 'Source · Ewon by HMS Networks · benchmark concurrentiel 2021-2022. Concurrents · IXON (Pays-Bas), Welotec (DE), Tosibox (FI).',
+      nl: 'Bron · Ewon by HMS Networks · competitive benchmark 2021-2022. Concurrenten · IXON (Nederland), Welotec (DE), Tosibox (FI).',
+      en: 'Source · Ewon by HMS Networks · competitive benchmark 2021-2022. Competitors · IXON (Netherlands), Welotec (DE), Tosibox (FI).'
+    },
+    'hms.research.benchTitle': {
+      fr: 'Trois segments marché. <span class="accent">Trois logiques d\'achat.</span>',
+      nl: 'Drie marktsegmenten. <span class="accent">Drie aankooplogica\'s.</span>',
+      en: 'Three market segments. <span class="accent">Three buying logics.</span>'
+    },
+    'hms.research.custEyebrow': {
+      fr: 'Phase 01 · Discover · 8 clients internationaux',
+      nl: 'Fase 01 · Discover · 8 internationale klanten',
+      en: 'Phase 01 · Discover · 8 international customers'
+    },
+    'hms.research.custLead': {
+      fr: 'Les six experts internes lisent l\'organisation. Les huit clients lisent la machine telle qu\'elle vit chez eux. Double écoute qui révèle le vrai parcours.',
+      nl: 'De zes interne experts lezen de organisatie. De acht klanten lezen de machine zoals ze bij hen leeft. Dubbele luistering die de echte journey blootlegt.',
+      en: 'The six internal experts read the organisation. The eight customers read the machine as it lives at their site. Double listening that reveals the real journey.'
+    },
+    'hms.research.custLead2': {
+      fr: '<strong>Aucun ne savait qu\'il manquait quelque chose.</strong> Tous le décrivaient sans le nommer. Les ateliers Customer Journey ont mis ces mots sur le mur.',
+      nl: '<strong>Niemand wist dat er iets ontbrak.</strong> Allen beschreven het zonder het te benoemen. De Customer Journey workshops hebben die woorden op de muur gezet.',
+      en: '<strong>None knew something was missing.</strong> All described it without naming it. The Customer Journey workshops put those words on the wall.'
+    },
+    'hms.research.custOutcome': {
+      fr: 'Machine builders en Europe, US, Asie <span class="brief-teaser__sep">·</span> tous équipés Ewon <span class="brief-teaser__sep">·</span> 22 questions, 6 thèmes par session.',
+      nl: 'Machine builders in Europa, US, Azië <span class="brief-teaser__sep">·</span> allen uitgerust met Ewon <span class="brief-teaser__sep">·</span> 22 vragen, 6 thema\'s per sessie.',
+      en: 'Machine builders in Europe, US, Asia <span class="brief-teaser__sep">·</span> all equipped with Ewon <span class="brief-teaser__sep">·</span> 22 questions, 6 themes per session.'
+    },
+    'hms.research.custTitle': {
+      fr: 'Huit clients. <span class="accent">Cinq fuseaux horaires.</span>',
+      nl: 'Acht klanten. <span class="accent">Vijf tijdzones.</span>',
+      en: 'Eight customers. <span class="accent">Five time zones.</span>'
+    },
+    'hms.research.deepdiveP1Name': {
+      fr: 'Klaus · 48 ans',
+      nl: 'Klaus · 48 jaar',
+      en: 'Klaus · 48 years old'
+    },
+    'hms.research.deepdiveP1Pain1': {
+      fr: '<strong>Trois logins</strong> · eCatcher, M2Web, Talk2M',
+      nl: '<strong>Drie logins</strong> · eCatcher, M2Web, Talk2M',
+      en: '<strong>Three logins</strong> · eCatcher, M2Web, Talk2M'
+    },
+    'hms.research.deepdiveP1Pain2': {
+      fr: '<strong>Tunnel cassé silencieux</strong> · la passerelle Flexy perd la connexion sans alerter',
+      nl: '<strong>Stil gebroken tunnel</strong> · de Flexy gateway verliest de connectie zonder waarschuwing',
+      en: '<strong>Silently broken tunnel</strong> · the Flexy gateway loses the connection without alerting'
+    },
+    'hms.research.deepdiveP1Pain3': {
+      fr: '<strong>Multi-site multi-fuseaux</strong> · 200 machines, pas de vue fleet unifiée',
+      nl: '<strong>Multi-site multi-tijdzone</strong> · 200 machines, geen geünificeerde fleet view',
+      en: '<strong>Multi-site multi-timezone</strong> · 200 machines, no unified fleet view'
+    },
+    'hms.research.deepdiveP1Quote': {
+      fr: '« Quand une machine tombe à 3h du matin à Atlanta, j\'ai besoin de voir le tunnel Talk2M, pas de chercher quel login marche. »',
+      nl: '« Als een machine om 3 uur \'s nachts in Atlanta uitvalt, moet ik de Talk2M tunnel kunnen zien, niet zoeken welke login werkt. »',
+      en: '"When a machine drops at 3am in Atlanta, I need to see the Talk2M tunnel, not hunt for which login works."'
+    },
+    'hms.research.deepdiveP1Role': {
+      fr: 'Plant Manager · <span class="accent">OEM Machine Builder DACH</span>',
+      nl: 'Plant Manager · <span class="accent">OEM Machine Builder DACH</span>',
+      en: 'Plant Manager · <span class="accent">OEM Machine Builder DACH</span>'
+    },
+    'hms.research.deepdiveP2Name': {
+      fr: 'Sven · 55 ans',
+      nl: 'Sven · 55 jaar',
+      en: 'Sven · 55 years old'
+    },
+    'hms.research.deepdiveP2Pain1': {
+      fr: '<strong>Pas de vue fleet</strong> · 5 protocoles industriels, aucun dashboard cross-protocole',
+      nl: '<strong>Geen fleet view</strong> · 5 industriële protocollen, geen cross-protocol dashboard',
+      en: '<strong>No fleet view</strong> · 5 industrial protocols, no cross-protocol dashboard'
+    },
+    'hms.research.deepdiveP2Pain2': {
+      fr: '<strong>Pas d\'audit trail</strong> · obligation IEC 62443, rien dans l\'UI pour produire la preuve',
+      nl: '<strong>Geen audit trail</strong> · IEC 62443 verplichting, niets in de UI om het bewijs te produceren',
+      en: '<strong>No audit trail</strong> · IEC 62443 obligation, nothing in the UI to produce the evidence'
+    },
+    'hms.research.deepdiveP2Pain3': {
+      fr: '<strong>Onboarding lent</strong> · deux semaines pour activer un nouveau site sur Talk2M',
+      nl: '<strong>Trage onboarding</strong> · twee weken om een nieuwe site op Talk2M te activeren',
+      en: '<strong>Slow onboarding</strong> · two weeks to activate a new site on Talk2M'
+    },
+    'hms.research.deepdiveP2Quote': {
+      fr: '« Mon job c\'est de tenir l\'uptime de 200 machines distribuées. Si l\'outil de monitoring me parle pas, je suis dans le noir. »',
+      nl: '« Mijn job is de uptime van 200 verspreide machines volhouden. Als de monitoring tool niet tegen mij praat, sta ik in het donker. »',
+      en: '"My job is to hold the uptime of 200 distributed machines. If the monitoring tool does not speak to me, I am in the dark."'
+    },
+    'hms.research.deepdiveP2Role': {
+      fr: 'Field Service Engineer · <span class="accent">End-User Plant Operator</span>',
+      nl: 'Field Service Engineer · <span class="accent">End-User Plant Operator</span>',
+      en: 'Field Service Engineer · <span class="accent">End-User Plant Operator</span>'
+    },
+    'hms.research.deepdiveSource': {
+      fr: 'Source · Phoenix AS-IS &amp; TO-BE Analysis HMS 2021-2022 · 6 expert interviews internes + 8 customer interviews internationaux · profils composites.',
+      nl: 'Bron · Phoenix AS-IS &amp; TO-BE Analysis HMS 2021-2022 · 6 interne expert interviews + 8 internationale customer interviews · composietprofielen.',
+      en: 'Source · Phoenix AS-IS &amp; TO-BE Analysis HMS 2021-2022 · 6 internal expert interviews + 8 international customer interviews · composite profiles.'
+    },
+    'hms.research.it1Context': {
+      fr: 'Veut un produit qui défend la position de leader face à IXON cloud-native.',
+      nl: 'Wil een product dat de leiderspositie verdedigt tegenover een cloud-native IXON.',
+      en: 'Wants a product that defends the leader position against a cloud-native IXON.'
+    },
+    'hms.research.it1Name': {
+      fr: 'Le CEO',
+      nl: 'De CEO',
+      en: 'The CEO'
+    },
+    'hms.research.it1Quote': {
+      fr: '« On reste leader, mais le marché bouge. Le digital nous met en concurrence frontale. »',
+      nl: '« We blijven leider, maar de markt beweegt. Digitaal zet ons in directe concurrentie. »',
+      en: '"We remain leader, but the market is moving. Digital puts us in direct competition."'
+    },
+    'hms.research.it2Context': {
+      fr: 'IT fraîchement passée à l\'Agile. Cherche une stack maintenable.',
+      nl: 'IT recent overgestapt op Agile. Op zoek naar een onderhoudbare stack.',
+      en: 'IT freshly moved to Agile. Looking for a maintainable stack.'
+    },
+    'hms.research.it2Name': {
+      fr: 'Le CTO',
+      nl: 'De CTO',
+      en: 'The CTO'
+    },
+    'hms.research.it2Quote': {
+      fr: '« On a des plateformes par segment. Elles ne se parlent pas. »',
+      nl: '« We hebben platformen per segment. Ze praten niet met elkaar. »',
+      en: '"We have platforms per segment. They do not talk to each other."'
+    },
+    'hms.research.it3Context': {
+      fr: 'Propriétaires de l\'offre commerciale. Frustrés par les cycles techniques opaques.',
+      nl: 'Eigenaars van het commercieel aanbod. Gefrustreerd door ondoorzichtige technische cycli.',
+      en: 'Owners of the commercial offer. Frustrated by opaque technical cycles.'
+    },
+    'hms.research.it3Name': {
+      fr: 'Project Owners (Business)',
+      nl: 'Project Owners (Business)',
+      en: 'Project Owners (Business)'
+    },
+    'hms.research.it3Quote': {
+      fr: '« Je sais ce que veut mon client. L\'IT ne m\'écoute pas. »',
+      nl: '« Ik weet wat mijn klant wil. IT luistert niet naar mij. »',
+      en: '"I know what my customer wants. IT does not listen to me."'
+    },
+    'hms.research.it4Context': {
+      fr: 'Responsables livraison. Frustrés par les specs floues et les retours tardifs.',
+      nl: 'Verantwoordelijk voor de oplevering. Gefrustreerd door vage specs en late feedback.',
+      en: 'In charge of delivery. Frustrated by fuzzy specs and late feedback.'
+    },
+    'hms.research.it4Name': {
+      fr: 'Project Managers (IT)',
+      nl: 'Project Managers (IT)',
+      en: 'Project Managers (IT)'
+    },
+    'hms.research.it4Quote': {
+      fr: '« Le Business change d\'avis chaque sprint. On livre du flou. »',
+      nl: '« Business verandert elke sprint van mening. We leveren onscherpte. »',
+      en: '"Business changes its mind every sprint. We deliver fuzziness."'
+    },
+    'hms.research.it5Context': {
+      fr: 'Mémoire vivante de l\'organisation industrielle.',
+      nl: 'Levend geheugen van de industriële organisatie.',
+      en: 'Living memory of the industrial organisation.'
+    },
+    'hms.research.it5Name': {
+      fr: 'Experts métier 20+ ans',
+      nl: 'Domeinexperts 20+ jaar',
+      en: 'Domain experts 20+ years'
+    },
+    'hms.research.it5Quote': {
+      fr: '« Tout est dans nos têtes. Rien n\'est documenté pour un client. »',
+      nl: '« Alles zit in onze hoofden. Niets is gedocumenteerd voor een klant. »',
+      en: '"Everything is in our heads. Nothing is documented for a customer."'
+    },
+    'hms.research.it6Context': {
+      fr: 'Visibilité directe sur ce qui casse côté client final.',
+      nl: 'Directe zichtbaarheid op wat stuk gaat aan de eindklantkant.',
+      en: 'Direct visibility on what breaks at the end-customer side.'
+    },
+    'hms.research.it6Name': {
+      fr: 'Operations &amp; Production',
+      nl: 'Operations &amp; Production',
+      en: 'Operations &amp; Production'
+    },
+    'hms.research.it6Quote': {
+      fr: '« On absorbe les ratés en bout de chaîne. Tous les jours. »',
+      nl: '« We vangen de fouten op aan het einde van de keten. Elke dag. »',
+      en: '"We absorb the misfires at the end of the chain. Every day."'
+    },
+    'hms.research.itEyebrow': {
+      fr: 'Phase 01 · Discover · 6 expert interviews',
+      nl: 'Fase 01 · Discover · 6 expert interviews',
+      en: 'Phase 01 · Discover · 6 expert interviews'
+    },
+    'hms.research.itOutcome': {
+      fr: 'Six chefs de département · R&amp;D, produit, business, service après-vente, support.',
+      nl: 'Zes departementshoofden · R&amp;D, product, business, after-sales, support.',
+      en: 'Six department heads · R&amp;D, product, business, after-sales, support.'
+    },
+    'hms.research.itSource': {
+      fr: '6 expert interviews Ewon &amp; HMS Halmstad, 2021. Noms anonymisés, disponibles sur demande.',
+      nl: '6 expert interviews Ewon &amp; HMS Halmstad, 2021. Namen geanonimiseerd, op aanvraag beschikbaar.',
+      en: '6 expert interviews Ewon &amp; HMS Halmstad, 2021. Names anonymised, available on request.'
+    },
+    'hms.research.itTitle': {
+      fr: 'On écoute <span class="accent">avant de dessiner.</span>',
+      nl: 'Eerst luisteren, <span class="accent">dan tekenen.</span>',
+      en: 'Listen first, <span class="accent">then design.</span>'
+    },
+    'hms.research.persoEyebrow': {
+      fr: 'Phase 01 · Discover · personas',
+      nl: 'Fase 01 · Discover · personas',
+      en: 'Phase 01 · Discover · personas'
+    },
+    'hms.research.persoLead': {
+      fr: 'Klaus pilote 200 machines distribuées en DACH. Sven tient l\'uptime sur 5 fuseaux horaires. Mêmes anxiétés, mêmes phrases dans la salle. Les deux servent de boussole pour prioriser le MVP.',
+      nl: 'Klaus stuurt 200 machines verdeeld over DACH. Sven houdt de uptime over 5 tijdzones. Dezelfde angsten, dezelfde zinnen in de zaal. Beide dienen als kompas om de MVP te prioriteren.',
+      en: 'Klaus pilots 200 machines distributed across DACH. Sven holds the uptime over 5 time zones. Same anxieties, same phrases in the room. Both serve as a compass to prioritise the MVP.'
+    },
+    'hms.research.persoTitle': {
+      fr: '6 experts internes. 8 customer interviews. <span class="accent">2 personas illustratifs.</span>',
+      nl: '6 interne experts. 8 customer interviews. <span class="accent">2 illustratieve personas.</span>',
+      en: '6 internal experts. 8 customer interviews. <span class="accent">2 illustrative personas.</span>'
+    },
+    'hms.research.seg1Country': {
+      fr: 'Segment 01 · OEM Machine Builders',
+      nl: 'Segment 01 · OEM Machine Builders',
+      en: 'Segment 01 · OEM Machine Builders'
+    },
+    'hms.research.seg1Li1': {
+      fr: 'Machines automobiles, pharma, agro, packaging',
+      nl: 'Machines automotive, pharma, agro, packaging',
+      en: 'Machines for automotive, pharma, agro, packaging'
+    },
+    'hms.research.seg1Li2': {
+      fr: 'Flottes massives, intégration Flexy à la commande',
+      nl: 'Massieve vloten, Flexy-integratie bij de bestelling',
+      en: 'Massive fleets, Flexy integration at order'
+    },
+    'hms.research.seg1Li3': {
+      fr: 'Compliance IEC 62443, machinery directive',
+      nl: 'Compliance IEC 62443, machinery directive',
+      en: 'Compliance IEC 62443, machinery directive'
+    },
+    'hms.research.seg1Name': {
+      fr: 'Large Accounts',
+      nl: 'Large Accounts',
+      en: 'Large Accounts'
+    },
+    'hms.research.seg1Sig': {
+      fr: 'Signature · solutions complexes, compliance haute',
+      nl: 'Signatuur · complexe oplossingen, hoge compliance',
+      en: 'Signature · complex solutions, high compliance'
+    },
+    'hms.research.seg2Country': {
+      fr: 'Segment 02 · End-User Plants',
+      nl: 'Segment 02 · End-User Plants',
+      en: 'Segment 02 · End-User Plants'
+    },
+    'hms.research.seg2Li1': {
+      fr: 'Usines, ateliers exploitant des machines tierces',
+      nl: 'Fabrieken, ateliers die machines van derden uitbaten',
+      en: 'Factories, workshops operating third-party machines'
+    },
+    'hms.research.seg2Li2': {
+      fr: 'Volumes modestes, autonomie sans équipe IT',
+      nl: 'Bescheiden volumes, autonomie zonder IT-team',
+      en: 'Modest volumes, autonomy without IT team'
+    },
+    'hms.research.seg2Li3': {
+      fr: 'Segment cloud-native laissé ouvert par les pure-players',
+      nl: 'Cloud-native segment opengelaten door de pure-players',
+      en: 'Cloud-native segment left open by the pure-players'
+    },
+    'hms.research.seg2Name': {
+      fr: 'Plants industriels &amp; PMI',
+      nl: 'Industriële plants &amp; KMO',
+      en: 'Industrial plants &amp; SMEs'
+    },
+    'hms.research.seg2Sig': {
+      fr: 'Signature · standardisation, self-service',
+      nl: 'Signatuur · standaardisatie, self-service',
+      en: 'Signature · standardisation, self-service'
+    },
+    'hms.research.seg3Country': {
+      fr: 'Segment 03 · Channel',
+      nl: 'Segment 03 · Channel',
+      en: 'Segment 03 · Channel'
+    },
+    'hms.research.seg3Li1': {
+      fr: 'Intégrateurs IT distribuant Flexy201/205 avec Talk2M embarqué',
+      nl: 'IT-integrators die Flexy201/205 distribueren met embedded Talk2M',
+      en: 'IT integrators distributing Flexy201/205 with embedded Talk2M'
+    },
+    'hms.research.seg3Li2': {
+      fr: 'API et white-label comme conditions d\'entrée',
+      nl: 'API en white-label als toetredingsvoorwaarden',
+      en: 'API and white-label as entry conditions'
+    },
+    'hms.research.seg3Li3': {
+      fr: 'Levier de croissance hors grand-compte historique',
+      nl: 'Groeihefboom buiten de historische key accounts',
+      en: 'Growth lever beyond the historical key accounts'
+    },
+    'hms.research.seg3Name': {
+      fr: 'Integrators &amp; resellers',
+      nl: 'Integrators &amp; resellers',
+      en: 'Integrators &amp; resellers'
+    },
+    'hms.research.seg3Sig': {
+      fr: 'Signature · partenaires, Ewon embarqué',
+      nl: 'Signatuur · partners, embedded Ewon',
+      en: 'Signature · partners, embedded Ewon'
+    },
+
+    /* Section · hms.cjm.* */
+    'hms.cjm.pp1': {
+      fr: 'Competitive Pressure',
+      nl: 'Competitive Pressure',
+      en: 'Competitive Pressure'
+    },
+    'hms.cjm.pp10': {
+      fr: 'Expansion Challenges',
+      nl: 'Expansion Challenges',
+      en: 'Expansion Challenges'
+    },
+    'hms.cjm.pp10Hint': {
+      fr: 'Difficile d\'aller au-delà du grand-compte historique.',
+      nl: 'Moeilijk om verder te gaan dan de historische key accounts.',
+      en: 'Hard to move beyond the historical key accounts.'
+    },
+    'hms.cjm.pp1Hint': {
+      fr: 'Le marché bouge plus vite que l\'offre.',
+      nl: 'De markt beweegt sneller dan het aanbod.',
+      en: 'The market moves faster than the offer.'
+    },
+    'hms.cjm.pp2': {
+      fr: 'Time-to-Market Delays',
+      nl: 'Time-to-Market Delays',
+      en: 'Time-to-Market Delays'
+    },
+    'hms.cjm.pp2Hint': {
+      fr: 'Onboarding qui prend plusieurs mois.',
+      nl: 'Onboarding die meerdere maanden duurt.',
+      en: 'Onboarding that takes months.'
+    },
+    'hms.cjm.pp3': {
+      fr: 'Tool Complexity &amp; Fragmentation',
+      nl: 'Tool Complexity &amp; Fragmentation',
+      en: 'Tool Complexity &amp; Fragmentation'
+    },
+    'hms.cjm.pp3Hint': {
+      fr: 'Plateformes par segment, ne se parlent pas.',
+      nl: 'Platformen per segment, praten niet met elkaar.',
+      en: 'Platforms by segment, do not talk to each other.'
+    },
+    'hms.cjm.pp4': {
+      fr: 'Lack of Automation &amp; Standardization',
+      nl: 'Lack of Automation &amp; Standardization',
+      en: 'Lack of Automation &amp; Standardization'
+    },
+    'hms.cjm.pp4Hint': {
+      fr: 'Workflows manuels, erreurs en chaîne.',
+      nl: 'Handmatige workflows, fouten in keten.',
+      en: 'Manual workflows, chained errors.'
+    },
+    'hms.cjm.pp5': {
+      fr: 'Gaps in Digital Solutions',
+      nl: 'Gaps in Digital Solutions',
+      en: 'Gaps in Digital Solutions'
+    },
+    'hms.cjm.pp5Hint': {
+      fr: 'APIs absentes ou outdated.',
+      nl: 'API\'s afwezig of outdated.',
+      en: 'APIs missing or outdated.'
+    },
+    'hms.cjm.pp6': {
+      fr: 'Customer Autonomy Challenges',
+      nl: 'Customer Autonomy Challenges',
+      en: 'Customer Autonomy Challenges'
+    },
+    'hms.cjm.pp6Hint': {
+      fr: 'Pas de self-service, dépendance aux équipes.',
+      nl: 'Geen self-service, afhankelijkheid van de teams.',
+      en: 'No self-service, dependence on the teams.'
+    },
+    'hms.cjm.pp7': {
+      fr: 'Lack of Proactivity',
+      nl: 'Lack of Proactivity',
+      en: 'Lack of Proactivity'
+    },
+    'hms.cjm.pp7Hint': {
+      fr: 'Le client appelle, pas l\'inverse.',
+      nl: 'De klant belt, niet andersom.',
+      en: 'The customer calls, not the other way around.'
+    },
+    'hms.cjm.pp8': {
+      fr: 'Service Rigidity',
+      nl: 'Service Rigidity',
+      en: 'Service Rigidity'
+    },
+    'hms.cjm.pp8Hint': {
+      fr: 'Customisations difficiles à faire évoluer.',
+      nl: 'Customizations moeilijk te laten evolueren.',
+      en: 'Customisations hard to evolve.'
+    },
+    'hms.cjm.pp9': {
+      fr: 'Billing Complexity',
+      nl: 'Billing Complexity',
+      en: 'Billing Complexity'
+    },
+    'hms.cjm.pp9Hint': {
+      fr: 'Modèles tarifaires opaques pour le client.',
+      nl: 'Ondoorzichtige prijsmodellen voor de klant.',
+      en: 'Opaque pricing models for the customer.'
+    },
+    'hms.cjm.s1Desc': {
+      fr: 'Comparaison IXON, Welotec, Tosibox.',
+      nl: 'Vergelijking IXON, Welotec, Tosibox.',
+      en: 'Comparison IXON, Welotec, Tosibox.'
+    },
+    'hms.cjm.s1Name': {
+      fr: 'Découverte',
+      nl: 'Ontdekking',
+      en: 'Discovery'
+    },
+    'hms.cjm.s2Desc': {
+      fr: 'Cadrage, devis, signature.',
+      nl: 'Kadering, offerte, ondertekening.',
+      en: 'Scoping, quote, signature.'
+    },
+    'hms.cjm.s2Name': {
+      fr: 'Contact &amp; brief',
+      nl: 'Contact &amp; brief',
+      en: 'Contact &amp; brief'
+    },
+    'hms.cjm.s3Desc': {
+      fr: 'Setup Talk2M. Mise en service Flexy, tunnel sécurisé.',
+      nl: 'Setup Talk2M. Inproductiename Flexy, beveiligde tunnel.',
+      en: 'Talk2M setup. Flexy commissioning, secured tunnel.'
+    },
+    'hms.cjm.s3Name': {
+      fr: 'Onboarding',
+      nl: 'Onboarding',
+      en: 'Onboarding'
+    },
+    'hms.cjm.s4Desc': {
+      fr: 'Diagnostics, alertes, audit trail compliance.',
+      nl: 'Diagnostiek, alerts, compliance audit trail.',
+      en: 'Diagnostics, alerts, compliance audit trail.'
+    },
+    'hms.cjm.s4Name': {
+      fr: 'Exploitation',
+      nl: 'Exploitatie',
+      en: 'Operations'
+    },
+    'hms.cjm.s5Desc': {
+      fr: 'Reporting SLA, support self-service, facturation volume.',
+      nl: 'SLA reporting, self-service support, facturatie op volume.',
+      en: 'SLA reporting, self-service support, volume billing.'
+    },
+    'hms.cjm.s5Name': {
+      fr: 'Suivi &amp; expansion',
+      nl: 'Opvolging &amp; uitbreiding',
+      en: 'Follow-up &amp; expansion'
+    },
+
+    /* Section · hms.analyse.* */
+    'hms.analyse.cjmEyebrow': {
+      fr: 'Phase 02 · Define · Customer Journey wall',
+      nl: 'Fase 02 · Define · Customer Journey wall',
+      en: 'Phase 02 · Define · Customer Journey wall'
+    },
+    'hms.analyse.cjmLead': {
+      fr: 'Tous les départements autour de la même table. Les frictions ne sont plus discutées · elles sont épinglées.',
+      nl: 'Alle afdelingen rond dezelfde tafel. Frustraties worden niet meer besproken · ze worden vastgeprikt.',
+      en: 'Every department around the same table. Frictions are no longer debated · they are pinned.'
+    },
+    'hms.analyse.cjmSource': {
+      fr: '<span class="source-link__lab">Référence sur demande</span> <span class="source-link__ref">HMS Heuristic Evaluation 29 slides · Phoenix AS-IS &amp; TO-BE 43 pages · Roadmap 40 pages · 6 mockups Phoenix HD · 44 screens dashboard.</span> <span class="source-link__arrow" aria-hidden="true">↗</span>',
+      nl: '<span class="source-link__lab">Referentie op aanvraag</span> <span class="source-link__ref">HMS Heuristic Evaluation 29 slides · Phoenix AS-IS &amp; TO-BE 43 pagina\'s · Roadmap 40 pagina\'s · 6 mockups Phoenix HD · 44 screens dashboard.</span> <span class="source-link__arrow" aria-hidden="true">↗</span>',
+      en: '<span class="source-link__lab">Reference on request</span> <span class="source-link__ref">HMS Heuristic Evaluation 29 slides · Phoenix AS-IS &amp; TO-BE 43 pages · Roadmap 40 pages · 6 Phoenix HD mockups · 44 dashboard screens.</span> <span class="source-link__arrow" aria-hidden="true">↗</span>'
+    },
+    'hms.analyse.cjmTitle': {
+      fr: 'Le mur a remplacé <span class="accent">le PowerPoint.</span>',
+      nl: 'De muur heeft <span class="accent">de PowerPoint vervangen.</span>',
+      en: 'The wall replaced <span class="accent">the PowerPoint.</span>'
+    },
+    'hms.analyse.opp10Desc': {
+      fr: 'Tracking + billing + reporting + ticketing en un seul portail.',
+      nl: 'Tracking + billing + reporting + ticketing in één portaal.',
+      en: 'Tracking + billing + reporting + ticketing in a single portal.'
+    },
+    'hms.analyse.opp10Name': {
+      fr: 'Unified Client Portal',
+      nl: 'Unified Client Portal',
+      en: 'Unified Client Portal'
+    },
+    'hms.analyse.opp11Desc': {
+      fr: 'Advanced analytics, positionnement One-Stop Shop. <em>MVP++.</em>',
+      nl: 'Advanced analytics, One-Stop Shop positionering. <em>MVP++.</em>',
+      en: 'Advanced analytics, One-Stop Shop positioning. <em>MVP++.</em>'
+    },
+    'hms.analyse.opp11Name': {
+      fr: 'Competitive Differentiation',
+      nl: 'Competitive Differentiation',
+      en: 'Competitive Differentiation'
+    },
+    'hms.analyse.opp1Desc': {
+      fr: 'Self-service, real-time tracking, dashboards par segment.',
+      nl: 'Self-service, real-time tracking, dashboards per segment.',
+      en: 'Self-service, real-time tracking, dashboards by segment.'
+    },
+    'hms.analyse.opp1Name': {
+      fr: 'Enhanced Customer Experience',
+      nl: 'Enhanced Customer Experience',
+      en: 'Enhanced Customer Experience'
+    },
+    'hms.analyse.opp2Desc': {
+      fr: 'API, self-onboarding pour les SMEs.',
+      nl: 'API, self-onboarding voor SMEs.',
+      en: 'API, self-onboarding for SMEs.'
+    },
+    'hms.analyse.opp2Name': {
+      fr: 'Automation &amp; Scalability',
+      nl: 'Automation &amp; Scalability',
+      en: 'Automation &amp; Scalability'
+    },
+    'hms.analyse.opp3Desc': {
+      fr: 'Email, SMS, print unifiés. Fallback automatique.',
+      nl: 'E-mail, SMS, print verenigd. Automatische fallback.',
+      en: 'Email, SMS, print unified. Automatic fallback.'
+    },
+    'hms.analyse.opp3Name': {
+      fr: 'Multi-Channel Integration',
+      nl: 'Multi-Channel Integration',
+      en: 'Multi-Channel Integration'
+    },
+    'hms.analyse.opp4Desc': {
+      fr: 'Reporting BI, behaviors clients, sector-specific insights.',
+      nl: 'BI reporting, klantgedrag, sectorspecifieke inzichten.',
+      en: 'BI reporting, customer behaviours, sector-specific insights.'
+    },
+    'hms.analyse.opp4Name': {
+      fr: 'Data-Driven Insights',
+      nl: 'Data-Driven Insights',
+      en: 'Data-Driven Insights'
+    },
+    'hms.analyse.opp5Desc': {
+      fr: 'Basic / Gold / Custom. Pay-as-you-go pour les SMEs.',
+      nl: 'Basic / Gold / Custom. Pay-as-you-go voor SMEs.',
+      en: 'Basic / Gold / Custom. Pay-as-you-go for SMEs.'
+    },
+    'hms.analyse.opp5Name': {
+      fr: 'Flexible Pricing Models',
+      nl: 'Flexible Pricing Models',
+      en: 'Flexible Pricing Models'
+    },
+    'hms.analyse.opp6Desc': {
+      fr: 'Multi-langue, compliance par juridiction · IEC 62443, NIST, CE, FCC. <em>MVP++.</em>',
+      nl: 'Meertalig, compliance per jurisdictie · IEC 62443, NIST, CE, FCC. <em>MVP++.</em>',
+      en: 'Multi-language, compliance by jurisdiction · IEC 62443, NIST, CE, FCC. <em>MVP++.</em>'
+    },
+    'hms.analyse.opp6Name': {
+      fr: 'Market Expansion',
+      nl: 'Market Expansion',
+      en: 'Market Expansion'
+    },
+    'hms.analyse.opp7Desc': {
+      fr: 'Predictive analytics, alertes avant que le client appelle.',
+      nl: 'Predictive analytics, alerts voor de klant belt.',
+      en: 'Predictive analytics, alerts before the customer calls.'
+    },
+    'hms.analyse.opp7Name': {
+      fr: 'Proactive Customer Engagement',
+      nl: 'Proactive Customer Engagement',
+      en: 'Proactive Customer Engagement'
+    },
+    'hms.analyse.opp8Desc': {
+      fr: 'Templates + modular add-ons pour Large Accounts.',
+      nl: 'Templates + modulaire add-ons voor Large Accounts.',
+      en: 'Templates + modular add-ons for Large Accounts.'
+    },
+    'hms.analyse.opp8Name': {
+      fr: 'Standardization with Flexibility',
+      nl: 'Standardization with Flexibility',
+      en: 'Standardization with Flexibility'
+    },
+    'hms.analyse.opp9Desc': {
+      fr: 'Consent management, builders, payment integrations.',
+      nl: 'Consent management, builders, payment integrations.',
+      en: 'Consent management, builders, payment integrations.'
+    },
+    'hms.analyse.opp9Name': {
+      fr: 'Innovation in Product Offerings',
+      nl: 'Innovation in Product Offerings',
+      en: 'Innovation in Product Offerings'
+    },
+    'hms.analyse.oppEyebrow': {
+      fr: 'Analyse · 11 opportunités',
+      nl: 'Analyse · 11 opportuniteiten',
+      en: 'Analysis · 11 opportunities'
+    },
+    'hms.analyse.oppLead': {
+      fr: '10 pain points reformulés en <strong>11 opportunités</strong>, sourcées verbatim Concept Report. 5 deviennent Value Props MVP. 6 placées MVP++ phase 2.',
+      nl: '10 pain points geherformuleerd als <strong>11 opportuniteiten</strong>, verbatim uit het Concept Report. 5 worden Value Props MVP. 6 verschoven naar MVP++ fase 2.',
+      en: '10 pain points reframed into <strong>11 opportunities</strong>, sourced verbatim from the Concept Report. 5 become MVP Value Props. 6 placed in MVP++ phase 2.'
+    },
+    'hms.analyse.oppTitle': {
+      fr: 'Des douleurs <span class="accent">aux chances.</span>',
+      nl: 'Van pijnpunten <span class="accent">naar kansen.</span>',
+      en: 'From pains <span class="accent">to opportunities.</span>'
+    },
+    'hms.analyse.vpCliffhanger': {
+      fr: 'Tout converge sur <span class="accent">une seule VP.</span>',
+      nl: 'Alles convergeert naar <span class="accent">één enkele VP.</span>',
+      en: 'Everything converges on <span class="accent">a single VP.</span>'
+    },
+    'hms.analyse.vpConvergeIntro': {
+      fr: 'Douze experts internes. Six clients interviewés. Dix personas testés terrain. Trois segments marché. Dix pain points cartographiés. Quatre ateliers cocréation. Tout converge. Pas vers un canvas, vers une phrase.',
+      nl: 'Twaalf interne experts. Zes geïnterviewde klanten. Tien personas getest in het veld. Drie marktsegmenten. Tien gecarteerde pain points. Vier co-creatie workshops. Alles convergeert. Niet naar een canvas, maar naar één zin.',
+      en: 'Twelve internal experts. Six customers interviewed. Ten personas field-tested. Three market segments. Ten pain points mapped. Four co-creation workshops. Everything converges. Not on a canvas, on one sentence.'
+    },
+    'hms.analyse.vpEyebrow': {
+      fr: 'Au bout du diamant 1',
+      nl: 'Aan het einde van diamant 1',
+      en: 'End of diamond 1'
+    },
+    'hms.analyse.vpSource': {
+      fr: 'Source · Strategic Process Proposal HMS 2021 · synthèse Discovery + Heuristic Evaluation Nielsen 29 slides + Customer Journey workshops worldwide.',
+      nl: 'Bron · Strategic Process Proposal HMS 2021 · synthese Discovery + Heuristic Evaluation Nielsen 29 slides + Customer Journey workshops worldwide.',
+      en: 'Source · Strategic Process Proposal HMS 2021 · Discovery synthesis + Heuristic Evaluation Nielsen 29 slides + Customer Journey workshops worldwide.'
+    },
+    'hms.analyse.ws1Desc': {
+      fr: 'Project Owners et Project Managers à la même table. Chacun construit l\'empathy map d\'un persona, puis confronte sa lecture. On découvre qu\'on parle du même utilisateur.',
+      nl: 'Project Owners en Project Managers aan dezelfde tafel. Iedereen bouwt de empathy map van een persona, daarna confronteren we de lezingen. We ontdekken dat we het over dezelfde gebruiker hebben.',
+      en: 'Project Owners and Project Managers at the same table. Each builds the empathy map of a persona, then confronts their reading. We discover we are talking about the same user.'
+    },
+    'hms.analyse.ws1Name': {
+      fr: 'Empathy mapping cross-département',
+      nl: 'Empathy mapping cross-departement',
+      en: 'Cross-department empathy mapping'
+    },
+    'hms.analyse.ws1Output': {
+      fr: 'Output · 6 empathy maps consolidées.',
+      nl: 'Output · 6 geconsolideerde empathy maps.',
+      en: 'Output · 6 consolidated empathy maps.'
+    },
+    'hms.analyse.ws2Desc': {
+      fr: 'Reconstruire la journey end-to-end avec sales, ops, support, IT. Chaque touchpoint est validé par celui qui le tient. Pain points épinglés au mur.',
+      nl: 'De end-to-end journey reconstrueren met sales, ops, support, IT. Elk touchpoint wordt gevalideerd door wie het bezit. Pain points op de muur vastgeprikt.',
+      en: 'Rebuild the end-to-end journey with sales, ops, support, IT. Every touchpoint is validated by the person who owns it. Pain points pinned on the wall.'
+    },
+    'hms.analyse.ws2Name': {
+      fr: 'Customer Journey workshops',
+      nl: 'Customer Journey workshops',
+      en: 'Customer Journey workshops'
+    },
+    'hms.analyse.ws2Output': {
+      fr: 'Output · journey 5 phases · 10 pain points · ownership clair.',
+      nl: 'Output · journey 5 fases · 10 pain points · helder ownership.',
+      en: 'Output · journey 5 phases · 10 pain points · clear ownership.'
+    },
+    'hms.analyse.ws3Desc': {
+      fr: 'Chaque pain point reformulé en opportunité. Les équipes votent les HMW qui méritent un MVP. Focus action.',
+      nl: 'Elke pain point geherformuleerd als opportuniteit. De teams stemmen voor de HMW die een MVP verdienen. Actiegericht.',
+      en: 'Every pain point reframed as an opportunity. Teams vote on the HMW worth an MVP. Action focused.'
+    },
+    'hms.analyse.ws3Name': {
+      fr: '"How might we" sessions',
+      nl: '"How might we" sessions',
+      en: '"How might we" sessions'
+    },
+    'hms.analyse.ws3Output': {
+      fr: 'Output · top 12 HMW · scoring impact/effort · backlog VP.',
+      nl: 'Output · top 12 HMW · impact/effort scoring · VP backlog.',
+      en: 'Output · top 12 HMW · impact/effort scoring · VP backlog.'
+    },
+    'hms.analyse.ws4Desc': {
+      fr: 'Workshop final · condenser les outputs en une formulation de VP. Chacun défend, ajuste, signe.',
+      nl: 'Slotworkshop · de outputs condenseren in één VP-formulering. Iedereen verdedigt, past aan, ondertekent.',
+      en: 'Final workshop · condense the outputs into a single VP statement. Each defends, adjusts, signs.'
+    },
+    'hms.analyse.ws4Name': {
+      fr: 'VP synthesis workshop',
+      nl: 'VP synthesis workshop',
+      en: 'VP synthesis workshop'
+    },
+    'hms.analyse.ws4Output': {
+      fr: 'Output · VP en 1 phrase · alignement signé.',
+      nl: 'Output · VP in 1 zin · ondertekende alignment.',
+      en: 'Output · VP in 1 sentence · signed alignment.'
+    },
+    'hms.analyse.wsEyebrow': {
+      fr: 'Analyse · ateliers cocréation',
+      nl: 'Analyse · co-creatie workshops',
+      en: 'Analysis · co-creation workshops'
+    },
+    'hms.analyse.wsLead': {
+      fr: 'Deux régimes d\'atelier. <strong>Petits ateliers ciblés</strong> avec les Project Managers IT, au tableau. <strong>Grands ateliers Customer Journey</strong> avec Business, IT, Operations, Customer Service autour de la table. Quatre formats, quatre livrables. La VP est sortie de là.',
+      nl: 'Twee workshopregimes. <strong>Kleine gerichte workshops</strong> met de IT Project Managers, aan het bord. <strong>Grote Customer Journey workshops</strong> met Business, IT, Operations, Customer Service rond de tafel. Vier formats, vier opleveringen. Daaruit kwam de VP.',
+      en: 'Two workshop regimes. <strong>Small focused workshops</strong> with IT Project Managers, at the whiteboard. <strong>Large Customer Journey workshops</strong> with Business, IT, Operations, Customer Service around the table. Four formats, four deliverables. The VP came out of there.'
+    },
+    'hms.analyse.wsTitle': {
+      fr: 'Le langage commun. <span class="accent">En atelier, pas en canvas.</span>',
+      nl: 'De gemeenschappelijke taal. <span class="accent">In de workshop, niet op een canvas.</span>',
+      en: 'Shared language. <span class="accent">In the workshop, not on a canvas.</span>'
+    },
+
+    /* Section · hms.pp.* */
+    'hms.pp.p1.constraint': {
+      fr: 'Règle · self-service guidé par objectif.',
+      nl: 'Regel · self-service gestuurd door doel.',
+      en: 'Rule · self-service guided by goal.'
+    },
+    'hms.pp.p1.eyebrow': {
+      fr: 'Pain Point 01',
+      nl: 'Pain Point 01',
+      en: 'Pain Point 01'
+    },
+    'hms.pp.p1.h': {
+      fr: '« L\'onboarding nous prend des mois. »',
+      nl: '« Onze onboarding duurt maanden. »',
+      en: '"Onboarding takes us months."'
+    },
+    'hms.pp.p1.theme': {
+      fr: 'Time-to-Market',
+      nl: 'Time-to-Market',
+      en: 'Time-to-Market'
+    },
+    'hms.pp.p10.constraint': {
+      fr: 'Argument · End-User Plants par freemium Talk2M, Integrators par API.',
+      nl: 'Argument · End-User Plants via freemium Talk2M, Integrators via API.',
+      en: 'Argument · End-User Plants via freemium Talk2M, Integrators via API.'
+    },
+    'hms.pp.p10.eyebrow': {
+      fr: 'Pain Point 10',
+      nl: 'Pain Point 10',
+      en: 'Pain Point 10'
+    },
+    'hms.pp.p10.h': {
+      fr: '« On reste collé à nos comptes historiques. »',
+      nl: '« We blijven vasthangen aan onze historische accounts. »',
+      en: '"We stay stuck on our historical accounts."'
+    },
+    'hms.pp.p10.theme': {
+      fr: 'Expansion',
+      nl: 'Expansion',
+      en: 'Expansion'
+    },
+    'hms.pp.p2.constraint': {
+      fr: 'Règle · base standard, dernier kilomètre par persona.',
+      nl: 'Regel · standaardbasis, laatste kilometer per persona.',
+      en: 'Rule · standard base, last mile per persona.'
+    },
+    'hms.pp.p2.eyebrow': {
+      fr: 'Pain Point 02',
+      nl: 'Pain Point 02',
+      en: 'Pain Point 02'
+    },
+    'hms.pp.p2.h': {
+      fr: '« Tout passe par des workflows manuels. »',
+      nl: '« Alles loopt via handmatige workflows. »',
+      en: '"Everything goes through manual workflows."'
+    },
+    'hms.pp.p2.theme': {
+      fr: 'Automation',
+      nl: 'Automation',
+      en: 'Automation'
+    },
+    'hms.pp.p3.constraint': {
+      fr: 'Règle · portail one-stop, self-service par persona.',
+      nl: 'Regel · one-stop portaal, self-service per persona.',
+      en: 'Rule · one-stop portal, self-service by persona.'
+    },
+    'hms.pp.p3.eyebrow': {
+      fr: 'Pain Point 03',
+      nl: 'Pain Point 03',
+      en: 'Pain Point 03'
+    },
+    'hms.pp.p3.h': {
+      fr: '« Le client doit nous appeler pour la moindre modif. »',
+      nl: '« De klant moet ons bellen voor elke kleine aanpassing. »',
+      en: '"The customer has to call us for the smallest change."'
+    },
+    'hms.pp.p3.theme': {
+      fr: 'Autonomy',
+      nl: 'Autonomy',
+      en: 'Autonomy'
+    },
+    'hms.pp.p4.constraint': {
+      fr: 'Règle · host commun, customisations par typologie.',
+      nl: 'Regel · gemeenschappelijke host, customizations per typologie.',
+      en: 'Rule · shared host, customisations by typology.'
+    },
+    'hms.pp.p4.eyebrow': {
+      fr: 'Pain Point 04',
+      nl: 'Pain Point 04',
+      en: 'Pain Point 04'
+    },
+    'hms.pp.p4.h': {
+      fr: '« Nos outils ne se parlent pas. »',
+      nl: '« Onze tools praten niet met elkaar. »',
+      en: '"Our tools do not talk to each other."'
+    },
+    'hms.pp.p4.theme': {
+      fr: 'Fragmentation',
+      nl: 'Fragmentation',
+      en: 'Fragmentation'
+    },
+    'hms.pp.p5.constraint': {
+      fr: 'Règle · alertes Flexy avant que le client n\'appelle.',
+      nl: 'Regel · Flexy alerts voor de klant belt.',
+      en: 'Rule · Flexy alerts before the customer calls.'
+    },
+    'hms.pp.p5.eyebrow': {
+      fr: 'Pain Point 05',
+      nl: 'Pain Point 05',
+      en: 'Pain Point 05'
+    },
+    'hms.pp.p5.h': {
+      fr: '« On apprend les problèmes par le client. »',
+      nl: '« We horen de problemen via de klant. »',
+      en: '"We learn about problems from the customer."'
+    },
+    'hms.pp.p5.theme': {
+      fr: 'Proactivity',
+      nl: 'Proactivity',
+      en: 'Proactivity'
+    },
+    'hms.pp.p6.constraint': {
+      fr: 'Règle · portail one-stop + API Integrators.',
+      nl: 'Regel · one-stop portaal + API Integrators.',
+      en: 'Rule · one-stop portal + Integrators API.'
+    },
+    'hms.pp.p6.eyebrow': {
+      fr: 'Pain Point 06',
+      nl: 'Pain Point 06',
+      en: 'Pain Point 06'
+    },
+    'hms.pp.p6.h': {
+      fr: '« Notre offre digitale n\'égale pas la concurrence. »',
+      nl: '« Ons digitale aanbod evenaart de concurrentie niet. »',
+      en: '"Our digital offer does not match the competition."'
+    },
+    'hms.pp.p6.theme': {
+      fr: 'Digital gaps',
+      nl: 'Digital gaps',
+      en: 'Digital gaps'
+    },
+    'hms.pp.p7.constraint': {
+      fr: 'Règle · features modulaires, configurables sans rebuilds.',
+      nl: 'Regel · modulaire features, configureerbaar zonder rebuilds.',
+      en: 'Rule · modular features, configurable without rebuilds.'
+    },
+    'hms.pp.p7.eyebrow': {
+      fr: 'Pain Point 07',
+      nl: 'Pain Point 07',
+      en: 'Pain Point 07'
+    },
+    'hms.pp.p7.h': {
+      fr: '« Une fois en prod, plus personne ne touche. »',
+      nl: '« Eenmaal in productie raakt niemand er nog aan. »',
+      en: '"Once in production, nobody touches it."'
+    },
+    'hms.pp.p7.theme': {
+      fr: 'Rigidity',
+      nl: 'Rigidity',
+      en: 'Rigidity'
+    },
+    'hms.pp.p8.constraint': {
+      fr: 'Argument · la VP défend le leadership ET ouvre un segment.',
+      nl: 'Argument · de VP verdedigt het leiderschap EN opent een segment.',
+      en: 'Argument · the VP defends leadership AND opens a segment.'
+    },
+    'hms.pp.p8.eyebrow': {
+      fr: 'Pain Point 08',
+      nl: 'Pain Point 08',
+      en: 'Pain Point 08'
+    },
+    'hms.pp.p8.h': {
+      fr: '« Le marché bouge plus vite que notre offre. »',
+      nl: '« De markt beweegt sneller dan ons aanbod. »',
+      en: '"The market moves faster than our offer."'
+    },
+    'hms.pp.p8.theme': {
+      fr: 'Competition',
+      nl: 'Competition',
+      en: 'Competition'
+    },
+    'hms.pp.p9.constraint': {
+      fr: 'Règle · facturation lisible, breakdown par poste.',
+      nl: 'Regel · leesbare facturatie, breakdown per post.',
+      en: 'Rule · readable billing, line-item breakdown.'
+    },
+    'hms.pp.p9.eyebrow': {
+      fr: 'Pain Point 09',
+      nl: 'Pain Point 09',
+      en: 'Pain Point 09'
+    },
+    'hms.pp.p9.h': {
+      fr: '« La facturation est opaque pour nos clients. »',
+      nl: '« De facturatie is ondoorzichtig voor onze klanten. »',
+      en: '"Billing is opaque for our customers."'
+    },
+    'hms.pp.p9.theme': {
+      fr: 'Billing',
+      nl: 'Billing',
+      en: 'Billing'
+    },
+
+    /* Section · hms.vp.* */
+    'hms.vp.persona.hint': {
+      fr: 'Trois <strong>jobs-to-be-done</strong> · reprendre la main sur le fleet, réduire les zones d\'ombre cross-protocole, tenir IEC 62443.',
+      nl: 'Drie <strong>jobs-to-be-done</strong> · de fleet terug onder controle krijgen, de blinde vlekken cross-protocol verkleinen, IEC 62443 volhouden.',
+      en: 'Three <strong>jobs-to-be-done</strong> · regain control of the fleet, reduce cross-protocol blind spots, hold IEC 62443.'
+    },
+    'hms.vp.persona.p1': {
+      fr: '<strong>Klaus</strong> · Plant Manager · OEM DACH<br> <em>« Voir le tunnel Talk2M, pas chercher quel login marche. »</em>',
+      nl: '<strong>Klaus</strong> · Plant Manager · OEM DACH<br> <em>« De Talk2M tunnel zien, niet zoeken welke login werkt. »</em>',
+      en: '<strong>Klaus</strong> · Plant Manager · OEM DACH<br> <em>"See the Talk2M tunnel, not hunt for which login works."</em>'
+    },
+    'hms.vp.persona.p2': {
+      fr: '<strong>Sven</strong> · Field Service Engineer · End-User Plant<br> <em>« Tenir l\'uptime de 200 machines. Si l\'outil parle pas, je suis dans le noir. »</em>',
+      nl: '<strong>Sven</strong> · Field Service Engineer · End-User Plant<br> <em>« De uptime van 200 machines volhouden. Als de tool niet praat, sta ik in het donker. »</em>',
+      en: '<strong>Sven</strong> · Field Service Engineer · End-User Plant<br> <em>"Hold the uptime of 200 machines. If the tool does not speak, I am in the dark."</em>'
+    },
+    'hms.vp.posture.claim': {
+      fr: 'Pas une plateforme par segment. <span class="accent">Une plateforme orchestrée.</span>',
+      nl: 'Geen platform per segment. <span class="accent">Eén georchestreerd platform.</span>',
+      en: 'Not one platform per segment. <span class="accent">One orchestrated platform.</span>'
+    },
+    'hms.vp.posture.h': {
+      fr: 'La posture',
+      nl: 'De posture',
+      en: 'The posture'
+    },
+    'hms.vp.posture.l1': {
+      fr: '<strong>Pas</strong> 5 produits avec 5 logins, 5 back-offices.',
+      nl: '<strong>Geen</strong> 5 producten met 5 logins, 5 back-offices.',
+      en: '<strong>Not</strong> 5 products with 5 logins, 5 back-offices.'
+    },
+    'hms.vp.posture.l2': {
+      fr: '<strong>Un host one-stop</strong>, onboarding piloté par persona.',
+      nl: '<strong>Eén one-stop host</strong>, onboarding gestuurd door persona.',
+      en: '<strong>A one-stop host</strong>, onboarding driven by persona.'
+    },
+    'hms.vp.posture.l3': {
+      fr: '<strong>Capacités API-isées</strong> partagées par les 3 segments.',
+      nl: '<strong>API-gedragen capaciteiten</strong> gedeeld door de 3 segmenten.',
+      en: '<strong>API-driven capabilities</strong> shared by the 3 segments.'
+    },
+    'hms.vp.posture.l4': {
+      fr: '<strong>Monitoring sans couture</strong>, fallback cellular/ethernet automatique.',
+      nl: '<strong>Naadloze monitoring</strong>, automatische cellular/ethernet fallback.',
+      en: '<strong>Seamless monitoring</strong>, automatic cellular/ethernet fallback.'
+    },
+    'hms.vp.posture.l5': {
+      fr: '<strong>Compliance ready</strong> IEC 62443, NIST, Cyber Resilience Act.',
+      nl: '<strong>Compliance ready</strong> IEC 62443, NIST, Cyber Resilience Act.',
+      en: '<strong>Compliance ready</strong> IEC 62443, NIST, Cyber Resilience Act.'
+    },
+    'hms.vp.posture.src': {
+      fr: 'Source · Strategic Process Proposal HMS 2021 · Relevance · Simplicity · Consistency',
+      nl: 'Bron · Strategic Process Proposal HMS 2021 · Relevance · Simplicity · Consistency',
+      en: 'Source · Strategic Process Proposal HMS 2021 · Relevance · Simplicity · Consistency'
+    },
+    'hms.vp.title': {
+      fr: 'Une plateforme, ce n\'est pas <span class="accent">cinq portes d\'entrée.</span><br>C\'est une orchestration qui se règle sur le persona devant elle.',
+      nl: 'Een platform is geen <span class="accent">vijf voordeuren.</span><br>Het is een orchestratie die zich afstemt op de persona die voor haar staat.',
+      en: 'A platform is not <span class="accent">five front doors.</span><br>It is an orchestration that tunes itself to the persona in front of it.'
+    },
+    'hms.vp.translate.claim': {
+      fr: '<span class="accent">5 livrables scopés MVP, 6 placés MVP++.</span>',
+      nl: '<span class="accent">5 opleveringen in MVP scope, 6 in MVP++.</span>',
+      en: '<span class="accent">5 deliverables scoped for MVP, 6 placed in MVP++.</span>'
+    },
+    'hms.vp.translate.colPain': {
+      fr: '10 Pain Points',
+      nl: '10 Pain Points',
+      en: '10 Pain Points'
+    },
+    'hms.vp.translate.colVp': {
+      fr: '5 VPs MVP livrées',
+      nl: '5 MVP VP\'s opgeleverd',
+      en: '5 MVP VPs delivered'
+    },
+    'hms.vp.translate.h': {
+      fr: '10 douleurs → 11 chances → 5 VPs MVP',
+      nl: '10 pijnpunten → 11 kansen → 5 MVP VP\'s',
+      en: '10 pains → 11 opportunities → 5 MVP VPs'
+    },
+    'hms.vp.translate.mvpScope': {
+      fr: '<strong>5 livrables MVP</strong>. <em>Market Expansion</em> et <em>Marketplace API</em> scopées <strong>MVP++ phase 2</strong>.',
+      nl: '<strong>5 MVP opleveringen</strong>. <em>Market Expansion</em> en <em>Marketplace API</em> in scope van <strong>MVP++ fase 2</strong>.',
+      en: '<strong>5 MVP deliverables</strong>. <em>Market Expansion</em> and <em>Marketplace API</em> scoped to <strong>MVP++ phase 2</strong>.'
+    },
+    'hms.vp.translate.r10n': {
+      fr: '10. Expansion',
+      nl: '10. Expansion',
+      en: '10. Expansion'
+    },
+    'hms.vp.translate.r10v': {
+      fr: '<em>MVP++</em>',
+      nl: '<em>MVP++</em>',
+      en: '<em>MVP++</em>'
+    },
+    'hms.vp.translate.r1n': {
+      fr: '1. Time-to-Market',
+      nl: '1. Time-to-Market',
+      en: '1. Time-to-Market'
+    },
+    'hms.vp.translate.r1v': {
+      fr: '<strong>VP 01 Onboarding</strong>',
+      nl: '<strong>VP 01 Onboarding</strong>',
+      en: '<strong>VP 01 Onboarding</strong>'
+    },
+    'hms.vp.translate.r2n': {
+      fr: '2. Automation',
+      nl: '2. Automation',
+      en: '2. Automation'
+    },
+    'hms.vp.translate.r2v': {
+      fr: 'VP 01 Onboarding',
+      nl: 'VP 01 Onboarding',
+      en: 'VP 01 Onboarding'
+    },
+    'hms.vp.translate.r3n': {
+      fr: '3. Customer Autonomy',
+      nl: '3. Customer Autonomy',
+      en: '3. Customer Autonomy'
+    },
+    'hms.vp.translate.r3v': {
+      fr: '<strong>VP 02 Monitoring</strong>',
+      nl: '<strong>VP 02 Monitoring</strong>',
+      en: '<strong>VP 02 Monitoring</strong>'
+    },
+    'hms.vp.translate.r4n': {
+      fr: '4. Fragmentation',
+      nl: '4. Fragmentation',
+      en: '4. Fragmentation'
+    },
+    'hms.vp.translate.r4v': {
+      fr: '<strong>VP 03 Audit Trail</strong>',
+      nl: '<strong>VP 03 Audit Trail</strong>',
+      en: '<strong>VP 03 Audit Trail</strong>'
+    },
+    'hms.vp.translate.r5n': {
+      fr: '5. Proactivity',
+      nl: '5. Proactivity',
+      en: '5. Proactivity'
+    },
+    'hms.vp.translate.r5v': {
+      fr: 'VP 02 Monitoring',
+      nl: 'VP 02 Monitoring',
+      en: 'VP 02 Monitoring'
+    },
+    'hms.vp.translate.r6n': {
+      fr: '6. No Design System',
+      nl: '6. No Design System',
+      en: '6. No Design System'
+    },
+    'hms.vp.translate.r6v': {
+      fr: 'VP 03 Audit Trail',
+      nl: 'VP 03 Audit Trail',
+      en: 'VP 03 Audit Trail'
+    },
+    'hms.vp.translate.r7n': {
+      fr: '7. Rigidity',
+      nl: '7. Rigidity',
+      en: '7. Rigidity'
+    },
+    'hms.vp.translate.r7v': {
+      fr: '<strong>VP 05 Support</strong>',
+      nl: '<strong>VP 05 Support</strong>',
+      en: '<strong>VP 05 Support</strong>'
+    },
+    'hms.vp.translate.r8n': {
+      fr: '8. IXON Pressure',
+      nl: '8. IXON Pressure',
+      en: '8. IXON Pressure'
+    },
+    'hms.vp.translate.r8v': {
+      fr: 'VP 02 + VP 05',
+      nl: 'VP 02 + VP 05',
+      en: 'VP 02 + VP 05'
+    },
+    'hms.vp.translate.r9n': {
+      fr: '9. SLA Reporting',
+      nl: '9. SLA Reporting',
+      en: '9. SLA Reporting'
+    },
+    'hms.vp.translate.r9v': {
+      fr: '<strong>VP 04 SLR</strong>',
+      nl: '<strong>VP 04 SLR</strong>',
+      en: '<strong>VP 04 SLR</strong>'
+    },
+
+    /* Section · hms.prototype.* */
+    'hms.prototype.cycleCaption': {
+      fr: 'Cinq Value Props qui forment <strong>une boucle d\'expérience</strong>. Onboarding, monitoring, archives, billing, support self-service.',
+      nl: 'Vijf Value Props die <strong>één ervaringslus</strong> vormen. Onboarding, monitoring, archieven, billing, self-service support.',
+      en: 'Five Value Props that form <strong>a single experience loop</strong>. Onboarding, monitoring, archives, billing, self-service support.'
+    },
+    'hms.prototype.cyclePhase2': {
+      fr: '<strong>5 livrables MVP sur 11 opportunités</strong> · les 6 autres (<strong>Market Expansion</strong>, <strong>Marketplace API</strong>) scopées <strong>MVP++ phase 2</strong>.',
+      nl: '<strong>5 MVP opleveringen op 11 opportuniteiten</strong> · de 6 andere (<strong>Market Expansion</strong>, <strong>Marketplace API</strong>) in scope van <strong>MVP++ fase 2</strong>.',
+      en: '<strong>5 MVP deliverables out of 11 opportunities</strong> · the 6 others (<strong>Market Expansion</strong>, <strong>Marketplace API</strong>) scoped to <strong>MVP++ phase 2</strong>.'
+    },
+    'hms.prototype.directionEyebrow': {
+      fr: 'Prototype · premiers drafts',
+      nl: 'Prototype · eerste drafts',
+      en: 'Prototype · first drafts'
+    },
+    'hms.prototype.directionLead': {
+      fr: 'À gauche · garder chaque plateforme en silo. Rapide, mais reproduit la fragmentation. À droite · host one-stop, onboarding par persona, fonctions API-isées. <strong>Silo livrait en six mois, one-stop a doublé le temps de dev.</strong> Le sponsor a accepté · <strong class="accent">elle ferme la porte qu\'IXON laissait ouverte sur les End-User Plants</strong>.',
+      nl: 'Links · elk platform in silo houden. Snel, maar reproduceert de fragmentatie. Rechts · one-stop host, onboarding per persona, API-gedreven functies. <strong>Silo leverde in zes maanden, one-stop verdubbelde de ontwikkeltijd.</strong> De sponsor heeft aanvaard · <strong class="accent">het sluit de deur die IXON open liet bij de End-User Plants</strong>.',
+      en: 'On the left · keep each platform in a silo. Fast, but reproduces the fragmentation. On the right · one-stop host, onboarding by persona, API-driven functions. <strong>Silo delivered in six months, one-stop doubled the dev time.</strong> The sponsor accepted · <strong class="accent">it closes the door IXON was leaving open on End-User Plants</strong>.'
+    },
+    'hms.prototype.directionTitle': {
+      fr: 'Deux directions explorées. <span class="accent">Une retenue.</span>',
+      nl: 'Twee richtingen verkend. <span class="accent">Eén weerhouden.</span>',
+      en: 'Two directions explored. <span class="accent">One retained.</span>'
+    },
+    'hms.prototype.overviewEyebrow': {
+      fr: 'Phase 03 · Develop · Cloud Revamp',
+      nl: 'Fase 03 · Develop · Cloud Revamp',
+      en: 'Phase 03 · Develop · Cloud Revamp'
+    },
+    'hms.prototype.overviewLead': {
+      fr: 'eCatcher, M2Web, Talk2M · trois interfaces, un seul utilisateur. Le Cloud Revamp les fait converger autour de la machine.',
+      nl: 'eCatcher, M2Web, Talk2M · drie interfaces, één gebruiker. De Cloud Revamp laat ze convergeren rond de machine.',
+      en: 'eCatcher, M2Web, Talk2M · three interfaces, one user. The Cloud Revamp brings them to converge around the machine.'
+    },
+    'hms.prototype.overviewTitle': {
+      fr: 'Trois plateformes, <span class="accent">une seule expérience.</span>',
+      nl: 'Drie platformen, <span class="accent">één enkele ervaring.</span>',
+      en: 'Three platforms, <span class="accent">a single experience.</span>'
+    },
+    'hms.prototype.p2Eyebrow': {
+      fr: 'MVP++ · phase 2 · horizon 2026-2027',
+      nl: 'MVP++ · fase 2 · horizon 2026-2027',
+      en: 'MVP++ · phase 2 · 2026-2027 horizon'
+    },
+    'hms.prototype.p2Feat1Desc': {
+      fr: 'Multi-langue, multi-région, compliance industrielle par juridiction · IEC 62443 (EU), NIST (US), CE / FCC. La stack API et le pricing freemium rendent l\'expansion économiquement viable, là où la dépendance au marché DACH la plafonnait.',
+      nl: 'Meertalig, multi-regio, industriële compliance per jurisdictie · IEC 62443 (EU), NIST (US), CE / FCC. De API-stack en de freemium pricing maken de uitbreiding economisch haalbaar, daar waar de afhankelijkheid van de DACH-markt ze plafonneerde.',
+      en: 'Multi-language, multi-region, industrial compliance by jurisdiction · IEC 62443 (EU), NIST (US), CE / FCC. The API stack and freemium pricing make expansion economically viable, where dependence on the DACH market used to cap it.'
+    },
+    'hms.prototype.p2Feat1Name': {
+      fr: 'Expansion internationale',
+      nl: 'Internationale uitbreiding',
+      en: 'International expansion'
+    },
+    'hms.prototype.p2Feat2Desc': {
+      fr: 'Le 3e segment Concept Report, Integrators et Resellers, embarque les Value Props dans leur propre offre. Le marketplace expose les API, la doc et le pricing partenaire. Croissance par effet de levier.',
+      nl: 'Het 3e segment van het Concept Report, Integrators en Resellers, integreert de Value Props in hun eigen aanbod. De marketplace toont de API\'s, de documentatie en de partner-pricing. Groei via hefboomeffect.',
+      en: 'The 3rd Concept Report segment, Integrators and Resellers, embeds the Value Props into their own offer. The marketplace exposes the APIs, the docs and the partner pricing. Growth through leverage.'
+    },
+    'hms.prototype.p2Feat2Name': {
+      fr: 'Marketplace API · Integrators',
+      nl: 'Marketplace API · Integrators',
+      en: 'Marketplace API · Integrators'
+    },
+    'hms.prototype.p2Lead': {
+      fr: 'Deux capacités identifiées en Discovery, placées hors MVP. Elles n\'attendent que la consolidation du host pour s\'activer. Source : Concept Report · Opportunity 6 (Market Expansion) + Opportunity 11 (Competitive Differentiation).',
+      nl: 'Twee capaciteiten geïdentificeerd in Discovery, buiten MVP geplaatst. Ze wachten enkel op de consolidatie van de host om te activeren. Bron · Concept Report · Opportunity 6 (Market Expansion) + Opportunity 11 (Competitive Differentiation).',
+      en: 'Two capabilities identified in Discovery, placed outside the MVP. They only wait on the consolidation of the host to activate. Source · Concept Report · Opportunity 6 (Market Expansion) + Opportunity 11 (Competitive Differentiation).'
+    },
+    'hms.prototype.p2Tag': {
+      fr: 'Roadmap horizon 2026-2027 · post-MVP rollout',
+      nl: 'Roadmap horizon 2026-2027 · post-MVP rollout',
+      en: 'Roadmap 2026-2027 horizon · post-MVP rollout'
+    },
+    'hms.prototype.p2Title': {
+      fr: 'Après le host one-stop, <span class="accent">l\'écosystème.</span>',
+      nl: 'Na de one-stop host, <span class="accent">het ecosysteem.</span>',
+      en: 'After the one-stop host, <span class="accent">the ecosystem.</span>'
+    },
+    'hms.prototype.utClientsHead': {
+      fr: 'Les huit machine builders en validation',
+      nl: 'De acht machine builders in validatie',
+      en: 'The eight machine builders in validation'
+    },
+    'hms.prototype.utEyebrow': {
+      fr: 'Phase 04 · Deliver · 8 machine builders · 5 fuseaux horaires',
+      nl: 'Fase 04 · Deliver · 8 machine builders · 5 tijdzones',
+      en: 'Phase 04 · Deliver · 8 machine builders · 5 time zones'
+    },
+    'hms.prototype.utLead': {
+      fr: 'Concept Report présenté à 8 machine builders sur 5 fuseaux horaires. Klaus et Sven scorent trois scénarios · Connect, Diagnose, Audit.',
+      nl: 'Concept Report voorgesteld aan 8 machine builders over 5 tijdzones. Klaus en Sven scoren drie scenario\'s · Connect, Diagnose, Audit.',
+      en: 'Concept Report presented to 8 machine builders across 5 time zones. Klaus and Sven score three scenarios · Connect, Diagnose, Audit.'
+    },
+    'hms.prototype.utLessons': {
+      fr: 'Connect et Diagnose passent. Audit fleet IEC 62443 tient moins. Zone reportée à la roadmap MVP++.',
+      nl: 'Connect en Diagnose komen door. Audit fleet IEC 62443 houdt minder stand. Zone verplaatst naar de MVP++ roadmap.',
+      en: 'Connect and Diagnose pass. Audit fleet IEC 62443 holds less. Zone deferred to the MVP++ roadmap.'
+    },
+    'hms.prototype.utName1': {
+      fr: 'OEM presses · DACH',
+      nl: 'OEM presses · DACH',
+      en: 'OEM presses · DACH'
+    },
+    'hms.prototype.utName2': {
+      fr: 'OEM · USA',
+      nl: 'OEM · USA',
+      en: 'OEM · USA'
+    },
+    'hms.prototype.utName3': {
+      fr: 'End-User · agro',
+      nl: 'End-User · agro',
+      en: 'End-User · agro'
+    },
+    'hms.prototype.utName4': {
+      fr: 'End-User · pharma',
+      nl: 'End-User · pharma',
+      en: 'End-User · pharma'
+    },
+    'hms.prototype.utName5': {
+      fr: 'Integrator · Allemagne',
+      nl: 'Integrator · Duitsland',
+      en: 'Integrator · Germany'
+    },
+    'hms.prototype.utName6': {
+      fr: 'Integrator · automation',
+      nl: 'Integrator · automation',
+      en: 'Integrator · automation'
+    },
+    'hms.prototype.utOutcome': {
+      fr: '<strong class="accent">8 / 8 valident</strong> la direction one-stop <span class="brief-teaser__sep">·</span> <strong class="accent">Score combiné 4,03 / 5</strong> · 81% <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong> <span class="brief-teaser__sep">·</span> sponsor go production.',
+      nl: '<strong class="accent">8 / 8 valideren</strong> de one-stop richting <span class="brief-teaser__sep">·</span> <strong class="accent">Gecombineerde score 4,03 / 5</strong> · 81% <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong> <span class="brief-teaser__sep">·</span> sponsor geeft go voor productie.',
+      en: '<strong class="accent">8 / 8 validate</strong> the one-stop direction <span class="brief-teaser__sep">·</span> <strong class="accent">Combined score 4.03 / 5</strong> · 81% <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong> <span class="brief-teaser__sep">·</span> sponsor green-lights production.'
+    },
+    'hms.prototype.utQuote': {
+      fr: '« Pour la première fois, on avait un signal client avant le développement. Le sponsor ne se demandait plus si la direction tenait, il se demandait quand le rollout commence. »',
+      nl: '« Voor het eerst hadden we een klantsignaal voor de ontwikkeling. De sponsor vroeg zich niet meer af of de richting klopte, hij vroeg zich af wanneer de rollout begint. »',
+      en: '"For the first time, we had a customer signal before development. The sponsor was no longer asking whether the direction held, he was asking when the rollout starts."'
+    },
+    'hms.prototype.utScenA': {
+      fr: 'Connect machine',
+      nl: 'Connect machine',
+      en: 'Connect machine'
+    },
+    'hms.prototype.utScenAClaim': {
+      fr: 'Score combiné <span class="accent">4,4 / 5 · 88%</span>',
+      nl: 'Gecombineerde score <span class="accent">4,4 / 5 · 88%</span>',
+      en: 'Combined score <span class="accent">4.4 / 5 · 88%</span>'
+    },
+    'hms.prototype.utScenAL1': {
+      fr: '<strong>Klaus · 4,0 / 5</strong>',
+      nl: '<strong>Klaus · 4,0 / 5</strong>',
+      en: '<strong>Klaus · 4.0 / 5</strong>'
+    },
+    'hms.prototype.utScenAL2': {
+      fr: '<strong>Sven · 4,8 / 5</strong> · NPS 9/10',
+      nl: '<strong>Sven · 4,8 / 5</strong> · NPS 9/10',
+      en: '<strong>Sven · 4.8 / 5</strong> · NPS 9/10'
+    },
+    'hms.prototype.utScenAL3': {
+      fr: 'Raccorder une machine au tunnel Talk2M en moins de 10 minutes',
+      nl: 'Een machine aansluiten op de Talk2M tunnel in minder dan 10 minuten',
+      en: 'Connect a machine to the Talk2M tunnel in under 10 minutes'
+    },
+    'hms.prototype.utScenB': {
+      fr: 'Diagnose offline gateway',
+      nl: 'Diagnose offline gateway',
+      en: 'Diagnose offline gateway'
+    },
+    'hms.prototype.utScenBClaim': {
+      fr: 'Score combiné <span class="accent">4,1 / 5 · 82%</span>',
+      nl: 'Gecombineerde score <span class="accent">4,1 / 5 · 82%</span>',
+      en: 'Combined score <span class="accent">4.1 / 5 · 82%</span>'
+    },
+    'hms.prototype.utScenBL1': {
+      fr: '<strong>Klaus · 3,7 / 5</strong> · réassurance basse sur fallback cellular',
+      nl: '<strong>Klaus · 3,7 / 5</strong> · lage geruststelling op cellular fallback',
+      en: '<strong>Klaus · 3.7 / 5</strong> · low reassurance on cellular fallback'
+    },
+    'hms.prototype.utScenBL2': {
+      fr: '<strong>Sven · 4,5 / 5</strong>',
+      nl: '<strong>Sven · 4,5 / 5</strong>',
+      en: '<strong>Sven · 4.5 / 5</strong>'
+    },
+    'hms.prototype.utScenBL3': {
+      fr: 'Flexy hors ligne · isoler, basculer cellular, replacer',
+      nl: 'Flexy offline · isoleren, overschakelen naar cellular, terugplaatsen',
+      en: 'Flexy offline · isolate, switch to cellular, restore'
+    },
+    'hms.prototype.utScenC': {
+      fr: 'Audit fleet · IEC 62443',
+      nl: 'Audit fleet · IEC 62443',
+      en: 'Audit fleet · IEC 62443'
+    },
+    'hms.prototype.utScenCClaim': {
+      fr: 'Score combiné <span class="accent">3,6 / 5 · 72%</span>',
+      nl: 'Gecombineerde score <span class="accent">3,6 / 5 · 72%</span>',
+      en: 'Combined score <span class="accent">3.6 / 5 · 72%</span>'
+    },
+    'hms.prototype.utScenCL1': {
+      fr: '<strong>Klaus · 3,2 / 5</strong> · réassurance 1 / 5 sur preuve compliance',
+      nl: '<strong>Klaus · 3,2 / 5</strong> · geruststelling 1 / 5 op compliance-bewijs',
+      en: '<strong>Klaus · 3.2 / 5</strong> · reassurance 1 / 5 on compliance evidence'
+    },
+    'hms.prototype.utScenCL2': {
+      fr: '<strong>Sven · 4,0 / 5</strong>',
+      nl: '<strong>Sven · 4,0 / 5</strong>',
+      en: '<strong>Sven · 4.0 / 5</strong>'
+    },
+    'hms.prototype.utScenCL3': {
+      fr: 'Produire l\'audit trail à un auditeur IEC 62443',
+      nl: 'De audit trail voorleggen aan een IEC 62443 auditor',
+      en: 'Produce the audit trail to an IEC 62443 auditor'
+    },
+    'hms.prototype.utSeg1': {
+      fr: 'OEM Machine Builder',
+      nl: 'OEM Machine Builder',
+      en: 'OEM Machine Builder'
+    },
+    'hms.prototype.utSeg2': {
+      fr: 'OEM Machine Builder',
+      nl: 'OEM Machine Builder',
+      en: 'OEM Machine Builder'
+    },
+    'hms.prototype.utSeg3': {
+      fr: 'End-User Plant',
+      nl: 'End-User Plant',
+      en: 'End-User Plant'
+    },
+    'hms.prototype.utSeg4': {
+      fr: 'End-User Plant',
+      nl: 'End-User Plant',
+      en: 'End-User Plant'
+    },
+    'hms.prototype.utSeg5': {
+      fr: 'Integrator',
+      nl: 'Integrator',
+      en: 'Integrator'
+    },
+    'hms.prototype.utSeg6': {
+      fr: 'Integrator',
+      nl: 'Integrator',
+      en: 'Integrator'
+    },
+    'hms.prototype.utSource': {
+      fr: '8 machine builders · 5 fuseaux horaires Europe, US, Asie · Ewon HMS Concept Report 2022',
+      nl: '8 machine builders · 5 tijdzones Europa, US, Azië · Ewon HMS Concept Report 2022',
+      en: '8 machine builders · 5 time zones Europe, US, Asia · Ewon HMS Concept Report 2022'
+    },
+    'hms.prototype.utStat1': {
+      fr: 'Machine builders valident',
+      nl: 'Machine builders valideren',
+      en: 'Machine builders validate'
+    },
+    'hms.prototype.utStat2': {
+      fr: 'Score combiné Heuristique · 81%',
+      nl: 'Gecombineerde Heuristic score · 81%',
+      en: 'Combined Heuristic score · 81%'
+    },
+    'hms.prototype.utStat3': {
+      fr: 'NPS · 3 scénarios',
+      nl: 'NPS · 3 scenario\'s',
+      en: 'NPS · 3 scenarios'
+    },
+    'hms.prototype.utTitle': {
+      fr: 'Huit machine builders valident. <span class="accent">Klaus et Sven scorent la grille détaillée.</span>',
+      nl: 'Acht machine builders valideren. <span class="accent">Klaus en Sven scoren het gedetailleerde grid.</span>',
+      en: 'Eight machine builders validate. <span class="accent">Klaus and Sven score the detailed grid.</span>'
+    },
+    'hms.prototype.utVerdict1': {
+      fr: 'Gros parc. Validation orchestration et audit-ready.',
+      nl: 'Grote vloot. Validatie van orchestratie en audit-ready.',
+      en: 'Large fleet. Validates orchestration and audit-ready.'
+    },
+    'hms.prototype.utVerdict2': {
+      fr: 'Compliance NIST. Demande API phase 2.',
+      nl: 'NIST compliance. Vraagt API in fase 2.',
+      en: 'NIST compliance. Requests API in phase 2.'
+    },
+    'hms.prototype.utVerdict3': {
+      fr: '50 machines, uptime 99,5%. Validation onboarding IT-less.',
+      nl: '50 machines, uptime 99,5%. Validatie van IT-less onboarding.',
+      en: '50 machines, 99.5% uptime. Validates IT-less onboarding.'
+    },
+    'hms.prototype.utVerdict4': {
+      fr: 'Validation freemium tiered, pay-as-you-grow.',
+      nl: 'Validatie van freemium tiered, pay-as-you-grow.',
+      en: 'Validates freemium tiered, pay-as-you-grow.'
+    },
+    'hms.prototype.utVerdict5': {
+      fr: 'Embarque Talk2M. Demande marketplace API.',
+      nl: 'Integreert Talk2M. Vraagt marketplace API.',
+      en: 'Embeds Talk2M. Requests marketplace API.'
+    },
+    'hms.prototype.utVerdict6': {
+      fr: 'Validation API. Reproductible chez ses clients SCADA/MES.',
+      nl: 'API validatie. Reproduceerbaar bij zijn SCADA/MES klanten.',
+      en: 'Validates API. Reproducible across his SCADA/MES customers.'
+    },
+    'hms.prototype.vp1Eyebrow': {
+      fr: 'VP 01 · Onboarding',
+      nl: 'VP 01 · Onboarding',
+      en: 'VP 01 · Onboarding'
+    },
+    'hms.prototype.vp1F1h': {
+      fr: 'Self-service raccordement Flexy',
+      nl: 'Self-service Flexy-aansluiting',
+      en: 'Self-service Flexy connection'
+    },
+    'hms.prototype.vp1F1p': {
+      fr: 'Le machine builder configure ses passerelles lui-même, sans ticket IT.',
+      nl: 'De machine builder configureert zelf zijn gateways, zonder IT-ticket.',
+      en: 'The machine builder configures gateways himself, no IT ticket.'
+    },
+    'hms.prototype.vp1F2h': {
+      fr: 'Persona-driven dashboards',
+      nl: 'Persona-driven dashboards',
+      en: 'Persona-driven dashboards'
+    },
+    'hms.prototype.vp1F2p': {
+      fr: 'Vues sur mesure pour OEM, End-User Plants, Integrators. Le wizard sait qui est devant lui.',
+      nl: 'Views op maat voor OEM, End-User Plants, Integrators. De wizard weet wie er voor hem zit.',
+      en: 'Tailored views for OEMs, End-User Plants, Integrators. The wizard knows who is in front of it.'
+    },
+    'hms.prototype.vp1F3h': {
+      fr: 'Self-onboarding End-User Plants',
+      nl: 'Self-onboarding End-User Plants',
+      en: 'Self-onboarding End-User Plants'
+    },
+    'hms.prototype.vp1F3p': {
+      fr: 'Process simplifié pour les plants sans équipe IT dédiée. Ferme la porte qu\'IXON laisse ouverte.',
+      nl: 'Vereenvoudigd proces voor plants zonder eigen IT-team. Sluit de deur die IXON open laat.',
+      en: 'Simplified process for plants without a dedicated IT team. Closes the door IXON leaves open.'
+    },
+    'hms.prototype.vp1SourceLab': {
+      fr: 'Référence sur demande',
+      nl: 'Referentie op aanvraag',
+      en: 'Reference on request'
+    },
+    'hms.prototype.vp1SourceRef': {
+      fr: 'HMS Strategic Process Proposal 2021 · VP 01 Self-Onboarding industriel · framework Relevance/Simplicity/Consistency',
+      nl: 'HMS Strategic Process Proposal 2021 · VP 01 Industriële Self-Onboarding · framework Relevance/Simplicity/Consistency',
+      en: 'HMS Strategic Process Proposal 2021 · VP 01 Industrial Self-Onboarding · Relevance/Simplicity/Consistency framework'
+    },
+    'hms.prototype.vp1Statement': {
+      fr: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p>Notre <strong>self-onboarding industriel</strong> aide les <strong>Plant Operators et machine builders</strong> à <strong>raccorder une nouvelle machine sans appeler l\'IT</strong> · accélère la mise en service sur passerelles Flexy.</p>',
+      nl: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p>Onze <strong>industriële self-onboarding</strong> helpt <strong>Plant Operators en machine builders</strong> om <strong>een nieuwe machine aan te sluiten zonder IT te bellen</strong> · versnelt de inproductiename op Flexy-gateways.</p>',
+      en: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p>Our <strong>industrial self-onboarding</strong> helps <strong>Plant Operators and machine builders</strong> <strong>connect a new machine without calling IT</strong> · accelerates commissioning on Flexy gateways.</p>'
+    },
+    'hms.prototype.vp1Title': {
+      fr: 'Démarrer sans <span class="accent">passer par l\'IT.</span>',
+      nl: 'Starten zonder <span class="accent">langs IT te gaan.</span>',
+      en: 'Start without <span class="accent">going through IT.</span>'
+    },
+    'hms.prototype.vp2Eyebrow': {
+      fr: 'VP 02 · Monitoring',
+      nl: 'VP 02 · Monitoring',
+      en: 'VP 02 · Monitoring'
+    },
+    'hms.prototype.vp2F1h': {
+      fr: 'End-to-end visibility',
+      nl: 'End-to-end visibility',
+      en: 'End-to-end visibility'
+    },
+    'hms.prototype.vp2F1p': {
+      fr: 'Pipeline Connect → Monitor → Diagnose → Control observable. Plus d\'appel support à 5 fuseaux horaires.',
+      nl: 'Pipeline Connect → Monitor → Diagnose → Control observeerbaar. Geen support-call meer over 5 tijdzones.',
+      en: 'Pipeline Connect → Monitor → Diagnose → Control observable. No more support call across 5 time zones.'
+    },
+    'hms.prototype.vp2F2h': {
+      fr: 'Proactive alerts',
+      nl: 'Proactive alerts',
+      en: 'Proactive alerts'
+    },
+    'hms.prototype.vp2F2p': {
+      fr: 'Le système notifie avant que le machine builder ne s\'en aperçoive. SMS ou e-mail.',
+      nl: 'Het systeem verwittigt voor de machine builder het merkt. SMS of e-mail.',
+      en: 'The system notifies before the machine builder notices. SMS or email.'
+    },
+    'hms.prototype.vp2F3h': {
+      fr: 'Fallback multi-canal',
+      nl: 'Multi-channel fallback',
+      en: 'Multi-channel fallback'
+    },
+    'hms.prototype.vp2F3p': {
+      fr: 'Si le VPN échoue, fallback cellular en un clic.',
+      nl: 'Als de VPN faalt, cellular fallback met één klik.',
+      en: 'If the VPN fails, cellular fallback in one click.'
+    },
+    'hms.prototype.vp2SourceLab': {
+      fr: 'Référence sur demande',
+      nl: 'Referentie op aanvraag',
+      en: 'Reference on request'
+    },
+    'hms.prototype.vp2SourceRef': {
+      fr: 'HMS Heuristic Evaluation 2021 · VP 02 Remote Monitoring · Talk2M pipeline observable end-to-end',
+      nl: 'HMS Heuristic Evaluation 2021 · VP 02 Remote Monitoring · Talk2M pipeline observable end-to-end',
+      en: 'HMS Heuristic Evaluation 2021 · VP 02 Remote Monitoring · Talk2M pipeline observable end-to-end'
+    },
+    'hms.prototype.vp2Statement': {
+      fr: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p><strong>Monitoring temps réel</strong> · machine builders et end-user plants tracent l\'état des machines à distance · visibilité end-to-end Talk2M, alertes proactives Flexy.</p>',
+      nl: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p><strong>Real-time monitoring</strong> · machine builders en end-user plants volgen de staat van de machines op afstand · end-to-end zichtbaarheid via Talk2M, proactieve Flexy-alerts.</p>',
+      en: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p><strong>Real-time monitoring</strong> · machine builders and end-user plants track the state of machines remotely · end-to-end Talk2M visibility, proactive Flexy alerts.</p>'
+    },
+    'hms.prototype.vp2Title': {
+      fr: 'Voir les flux <span class="accent">en direct.</span>',
+      nl: 'De flows zien <span class="accent">in real-time.</span>',
+      en: 'See the flows <span class="accent">live.</span>'
+    },
+    'hms.prototype.vp3Eyebrow': {
+      fr: 'VP 03 + VP 04 · Reports &amp; Billing',
+      nl: 'VP 03 + VP 04 · Reports &amp; Billing',
+      en: 'VP 03 + VP 04 · Reports &amp; Billing'
+    },
+    'hms.prototype.vp3F1h': {
+      fr: 'Audit-ready by default',
+      nl: 'Audit-ready by default',
+      en: 'Audit-ready by default'
+    },
+    'hms.prototype.vp3F1p': {
+      fr: 'Chaque session distante génère ses traces signées. Conformité IEC 62443 et SOC 2.',
+      nl: 'Elke remote sessie genereert ondertekende traces. Conform IEC 62443 en SOC 2.',
+      en: 'Every remote session generates signed traces. Compliant with IEC 62443 and SOC 2.'
+    },
+    'hms.prototype.vp3F2h': {
+      fr: 'Pricing tiered transparent',
+      nl: 'Transparante tiered pricing',
+      en: 'Transparent tiered pricing'
+    },
+    'hms.prototype.vp3F2p': {
+      fr: 'Basic / Gold / Custom selon volume. Pay-as-you-go pour les End-User Plants.',
+      nl: 'Basic / Gold / Custom volgens volume. Pay-as-you-go voor End-User Plants.',
+      en: 'Basic / Gold / Custom by volume. Pay-as-you-go for End-User Plants.'
+    },
+    'hms.prototype.vp3F3h': {
+      fr: 'Réconciliation uptime ↔ SLA',
+      nl: 'Uptime ↔ SLA reconciliatie',
+      en: 'Uptime ↔ SLA reconciliation'
+    },
+    'hms.prototype.vp3F3p': {
+      fr: 'Chaque ligne de facture pointe vers les logs Talk2M. Plus de CSV réconcilié à la main.',
+      nl: 'Elke factuurlijn verwijst naar de Talk2M logs. Geen CSV meer manueel reconciliëren.',
+      en: 'Every billing line points to the Talk2M logs. No more CSV reconciled by hand.'
+    },
+    'hms.prototype.vp3SourceLab': {
+      fr: 'Référence sur demande',
+      nl: 'Referentie op aanvraag',
+      en: 'Reference on request'
+    },
+    'hms.prototype.vp3SourceRef': {
+      fr: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail &amp; Diagnostics + VP 04 Service Level Reporting',
+      nl: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail &amp; Diagnostics + VP 04 Service Level Reporting',
+      en: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail &amp; Diagnostics + VP 04 Service Level Reporting'
+    },
+    'hms.prototype.vp3Statement': {
+      fr: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p><strong>Audit Trail &amp; Diagnostics</strong> aident <strong>Compliance, Operations, Engineering</strong> à <strong>tracer chaque session et rester conformes</strong> · logs signés Talk2M, preuves IEC 62443 et SOC 2.</p>',
+      nl: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p><strong>Audit Trail &amp; Diagnostics</strong> helpen <strong>Compliance, Operations, Engineering</strong> om <strong>elke sessie te tracen en compliant te blijven</strong> · ondertekende Talk2M logs, bewijsstukken IEC 62443 en SOC 2.</p>',
+      en: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p><strong>Audit Trail &amp; Diagnostics</strong> help <strong>Compliance, Operations, Engineering</strong> <strong>trace every session and stay compliant</strong> · signed Talk2M logs, IEC 62443 and SOC 2 evidence.</p>'
+    },
+    'hms.prototype.vp3Title': {
+      fr: 'Tracer, archiver, <span class="accent">facturer juste.</span>',
+      nl: 'Tracen, archiveren, <span class="accent">juist factureren.</span>',
+      en: 'Trace, archive, <span class="accent">bill accurately.</span>'
+    },
+    'hms.prototype.vp4Statement': {
+      fr: '<span class="vp-statement__lab">Service Level Reporting</span> <p><strong>Service Level Reporting</strong> centralise les rapports d\'uptime Flexy et preuves de connectivité par site.</p>',
+      nl: '<span class="vp-statement__lab">Service Level Reporting</span> <p><strong>Service Level Reporting</strong> centraliseert de Flexy uptime-rapporten en connectiviteitsbewijzen per site.</p>',
+      en: '<span class="vp-statement__lab">Service Level Reporting</span> <p><strong>Service Level Reporting</strong> centralises Flexy uptime reports and connectivity evidence per site.</p>'
+    },
+    'hms.prototype.vp5Eyebrow': {
+      fr: 'VP 05 · Support',
+      nl: 'VP 05 · Support',
+      en: 'VP 05 · Support'
+    },
+    'hms.prototype.vp5F1h': {
+      fr: 'Portail self-service',
+      nl: 'Self-service portaal',
+      en: 'Self-service portal'
+    },
+    'hms.prototype.vp5F1p': {
+      fr: 'Tickets, suivi live, knowledge base par persona. L\'utilisateur résout d\'abord.',
+      nl: 'Tickets, live opvolging, knowledge base per persona. De gebruiker lost eerst zelf op.',
+      en: 'Tickets, live tracking, knowledge base by persona. The user resolves first.'
+    },
+    'hms.prototype.vp5F2h': {
+      fr: 'Escalation 3 tiers',
+      nl: 'Escalation 3 tiers',
+      en: 'Escalation 3 tiers'
+    },
+    'hms.prototype.vp5F2p': {
+      fr: 'Tier 1 self-service · Tier 2 Ewon SLA · Tier 3 Engineering Halmstad.',
+      nl: 'Tier 1 self-service · Tier 2 Ewon SLA · Tier 3 Engineering Halmstad.',
+      en: 'Tier 1 self-service · Tier 2 Ewon SLA · Tier 3 Halmstad Engineering.'
+    },
+    'hms.prototype.vp5F3h': {
+      fr: 'Unified ticketing',
+      nl: 'Unified ticketing',
+      en: 'Unified ticketing'
+    },
+    'hms.prototype.vp5F3p': {
+      fr: 'Un portail pour Flexy onboarding, Talk2M monitoring, diagnostics, SLA reporting.',
+      nl: 'Eén portaal voor Flexy onboarding, Talk2M monitoring, diagnostiek, SLA reporting.',
+      en: 'One portal for Flexy onboarding, Talk2M monitoring, diagnostics, SLA reporting.'
+    },
+    'hms.prototype.vp5SourceLab': {
+      fr: 'Référence sur demande',
+      nl: 'Referentie op aanvraag',
+      en: 'Reference on request'
+    },
+    'hms.prototype.vp5SourceRef': {
+      fr: 'HMS Strategic Process Proposal 2021 · VP 05 Support self-service + Ewon SLA Tier 2',
+      nl: 'HMS Strategic Process Proposal 2021 · VP 05 Support self-service + Ewon SLA Tier 2',
+      en: 'HMS Strategic Process Proposal 2021 · VP 05 Self-service Support + Ewon SLA Tier 2'
+    },
+    'hms.prototype.vp5Statement': {
+      fr: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p>Notre <strong>plateforme de support intégrée</strong> donne <strong>plus d\'autonomie et une résolution rapide</strong> aux machine builders et end-user plants sur passerelles Flexy critiques · portail self-service, tickets, SLA, accès direct Engineering Halmstad.</p>',
+      nl: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p>Ons <strong>geïntegreerd support-platform</strong> geeft <strong>meer autonomie en snelle oplossing</strong> aan machine builders en end-user plants op kritieke Flexy-gateways · self-service portaal, tickets, SLA, directe toegang Engineering Halmstad.</p>',
+      en: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p>Our <strong>integrated support platform</strong> gives <strong>more autonomy and fast resolution</strong> to machine builders and end-user plants on critical Flexy gateways · self-service portal, tickets, SLA, direct access to Halmstad Engineering.</p>'
+    },
+    'hms.prototype.vp5Title': {
+      fr: 'Résoudre <span class="accent">sans appeler.</span>',
+      nl: 'Oplossen <span class="accent">zonder te bellen.</span>',
+      en: 'Resolve <span class="accent">without calling.</span>'
+    },
+    'hms.prototype.vpBadName': {
+      fr: 'Silo as-is',
+      nl: 'Silo as-is',
+      en: 'Silo as-is'
+    },
+    'hms.prototype.vpBadNote': {
+      fr: 'Cinq apps, cinq logins, cinq supports. Le client jongle, l\'IT maintient cinq stacks. La solution la plus rapide, mais qui reproduit la fragmentation pointée en interview.',
+      nl: 'Vijf apps, vijf logins, vijf supports. De klant jongleert, de IT onderhoudt vijf stacks. De snelste oplossing, maar reproduceert de fragmentatie die in interviews naar boven kwam.',
+      en: 'Five apps, five logins, five supports. The customer juggles, IT maintains five stacks. The fastest solution, but reproduces the fragmentation surfaced in interviews.'
+    },
+    'hms.prototype.vpBadVerdict': {
+      fr: 'Une porte par produit',
+      nl: 'Eén deur per product',
+      en: 'One door per product'
+    },
+    'hms.prototype.vpClaim': {
+      fr: 'Pas une suite de produits. <span class="accent">Un host orchestré, piloté par persona.</span>',
+      nl: 'Geen suite van producten. <span class="accent">Eén georchestreerde host, gestuurd door persona.</span>',
+      en: 'Not a suite of products. <span class="accent">An orchestrated host, driven by persona.</span>'
+    },
+    'hms.prototype.vpGoodName': {
+      fr: 'Plateforme orchestrée',
+      nl: 'Georchestreerd platform',
+      en: 'Orchestrated platform'
+    },
+    'hms.prototype.vpGoodNote': {
+      fr: 'La plateforme reconnaît Joseph, son rôle, son segment. KPI et notifications cadrés sur ses goals. Une stack pour l\'IT, une plateforme pour le Business, une page d\'accueil par persona.',
+      nl: 'Het platform herkent Joseph, zijn rol, zijn segment. KPI\'s en notificaties gekaderd op zijn doelen. Eén stack voor IT, één platform voor Business, één homepage per persona.',
+      en: 'The platform recognises Joseph, his role, his segment. KPIs and notifications framed by his goals. One stack for IT, one platform for Business, one home page per persona.'
+    },
+    'hms.prototype.vpGoodVerdict': {
+      fr: 'One-stop platform',
+      nl: 'One-stop platform',
+      en: 'One-stop platform'
+    },
+
+    /* Section · hms.snm.* */
+    'hms.snm.a1': {
+      fr: '10 Pain Points',
+      nl: '10 Pain Points',
+      en: '10 Pain Points'
+    },
+    'hms.snm.a3': {
+      fr: 'AS-IS journey',
+      nl: 'AS-IS journey',
+      en: 'AS-IS journey'
+    },
+    'hms.snm.a4': {
+      fr: 'Ateliers cocréation',
+      nl: 'Co-creatie workshops',
+      en: 'Co-creation workshops'
+    },
+    'hms.snm.c1': {
+      fr: '76 pages · sponsor go prod',
+      nl: '76 pagina\'s · sponsor go productie',
+      en: '76 pages · sponsor go production'
+    },
+    'hms.snm.c2': {
+      fr: 'Alignement Business ⊥ IT',
+      nl: 'Alignment Business ⊥ IT',
+      en: 'Business ⊥ IT alignment'
+    },
+    'hms.snm.c3': {
+      fr: 'Outcome · 2 M€ débloqués',
+      nl: 'Outcome · 2 M€ vrijgemaakt',
+      en: 'Outcome · 2 M€ unlocked'
+    },
+    'hms.snm.c4': {
+      fr: 'Lessons · trois leviers',
+      nl: 'Lessons · drie hefbomen',
+      en: 'Lessons · three levers'
+    },
+    'hms.snm.cChap': {
+      fr: 'Concept Report',
+      nl: 'Concept Report',
+      en: 'Concept Report'
+    },
+    'hms.snm.cTW': {
+      fr: 'Triple-Win',
+      nl: 'Triple-Win',
+      en: 'Triple-Win'
+    },
+    'hms.snm.gAnalyse': {
+      fr: 'Analyse',
+      nl: 'Analyse',
+      en: 'Analysis'
+    },
+    'hms.snm.gConceptReport': {
+      fr: 'Report',
+      nl: 'Report',
+      en: 'Report'
+    },
+    'hms.snm.gIdeation': {
+      fr: 'Ideation',
+      nl: 'Ideation',
+      en: 'Ideation'
+    },
+    'hms.snm.gIntake': {
+      fr: 'Intake',
+      nl: 'Intake',
+      en: 'Intake'
+    },
+    'hms.snm.gPrototype': {
+      fr: 'Prototype',
+      nl: 'Prototype',
+      en: 'Prototype'
+    },
+    'hms.snm.gResearch': {
+      fr: 'Research',
+      nl: 'Research',
+      en: 'Research'
+    },
+    'hms.snm.gValueProp': {
+      fr: 'VP',
+      nl: 'VP',
+      en: 'VP'
+    },
+    'hms.snm.iChap': {
+      fr: 'Phase Ideation',
+      nl: 'Fase Ideation',
+      en: 'Phase Ideation'
+    },
+    'hms.snm.intakeRoadmap': {
+      fr: 'Roadmap',
+      nl: 'Roadmap',
+      en: 'Roadmap'
+    },
+    'hms.snm.intakeTip': {
+      fr: 'Brief intake',
+      nl: 'Brief intake',
+      en: 'Brief intake'
+    },
+    'hms.snm.p1': {
+      fr: 'Silo vs one-stop',
+      nl: 'Silo vs one-stop',
+      en: 'Silo vs one-stop'
+    },
+    'hms.snm.p2': {
+      fr: '3 segments · 1 host',
+      nl: '3 segmenten · 1 host',
+      en: '3 segments · 1 host'
+    },
+    'hms.snm.p4': {
+      fr: 'User test 8 clients',
+      nl: 'User test 8 klanten',
+      en: 'User test 8 customers'
+    },
+    'hms.snm.pPhase2': {
+      fr: 'MVP++',
+      nl: 'MVP++',
+      en: 'MVP++'
+    },
+    'hms.snm.pVp1': {
+      fr: 'VP 01 Onboarding',
+      nl: 'VP 01 Onboarding',
+      en: 'VP 01 Onboarding'
+    },
+    'hms.snm.pVp2': {
+      fr: 'VP 02 Monitoring',
+      nl: 'VP 02 Monitoring',
+      en: 'VP 02 Monitoring'
+    },
+    'hms.snm.pVp3': {
+      fr: 'VP 03+04 Reports/Billing',
+      nl: 'VP 03+04 Reports/Billing',
+      en: 'VP 03+04 Reports/Billing'
+    },
+    'hms.snm.pVp5': {
+      fr: 'VP 05 Support',
+      nl: 'VP 05 Support',
+      en: 'VP 05 Support'
+    },
+    'hms.snm.r1': {
+      fr: '6 expert interviews internes',
+      nl: '6 interne expert interviews',
+      en: '6 internal expert interviews'
+    },
+    'hms.snm.r2': {
+      fr: '8 customer interviews',
+      nl: '8 customer interviews',
+      en: '8 customer interviews'
+    },
+    'hms.snm.r3': {
+      fr: '3 segments marché',
+      nl: '3 marktsegmenten',
+      en: '3 market segments'
+    },
+    'hms.snm.r4': {
+      fr: '2 personas illustratifs · Klaus &amp; Sven',
+      nl: '2 illustratieve personas · Klaus &amp; Sven',
+      en: '2 illustrative personas · Klaus &amp; Sven'
+    },
+    'hms.snm.vp': {
+      fr: 'VP cristallisation',
+      nl: 'VP kristallisatie',
+      en: 'VP crystallisation'
+    },
+    'hms.snm.vpContent': {
+      fr: 'VP déballée',
+      nl: 'VP uitgepakt',
+      en: 'VP unpacked'
     },
 
 // 25 entries
