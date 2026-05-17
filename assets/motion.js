@@ -912,12 +912,24 @@
      MacBook Pro · scènes cinématiques au scroll.
      ════════════════════════════════════════════════════════════════════════ */
   /* SPEOS VP horizontal pinned panels · CVE 2026-05-11 · Apple iPad-pro style.
-     La section pin le viewport, les cards défilent latéralement quand
-     le user scrolle verticalement. Activé seulement sur desktop wide (>900px)
-     pour préserver l'experience scroll-snap mobile native. */
-  const vpShowcase = document.querySelector('.vp-showcase__pinwrap');
+     Pattern · la section entière pin le viewport, le titre reste visible
+     en haut tandis que les cards défilent latéralement quand l'utilisateur
+     scrolle verticalement.
+
+     CVE 2026-05-14 FIX · le trigger pinnait juste .vp-showcase__pinwrap
+     (sans le titre), ce qui causait un overlap visuel · pendant la phase
+     transitoire de pin, le titre dans .container restait en flow normal
+     et était recouvert par les cards qui glissaient.
+
+     Correction · trigger = .vp-showcase (toute la section), start = top top,
+     pinSpacing custom pour que la section pin avec titre + cards visibles
+     ensemble.
+
+     Activé seulement sur desktop wide (>900px) · sur mobile/tablet, le rail
+     conserve son scroll-snap horizontal CSS natif (plus naturel au touch). */
+  const vpSection = document.querySelector('#speos-vp-showcase');
   const vpRail = document.querySelector('.vp-showcase__rail');
-  if (vpShowcase && vpRail && window.matchMedia('(min-width: 900px) and (pointer: fine)').matches) {
+  if (vpSection && vpRail && window.matchMedia('(min-width: 900px) and (pointer: fine)').matches) {
     /* Disable horizontal scroll-snap fallback, switch to GSAP-driven */
     vpRail.classList.add('is-pinned');
     const totalScrollX = () => vpRail.scrollWidth - window.innerWidth + 80;
@@ -925,8 +937,8 @@
       x: () => -totalScrollX(),
       ease: 'none',
       scrollTrigger: {
-        trigger: vpShowcase,
-        start: 'top top+=80',
+        trigger: vpSection,
+        start: 'top top',
         end: () => '+=' + (totalScrollX() + 200),
         scrub: 1,
         pin: true,
