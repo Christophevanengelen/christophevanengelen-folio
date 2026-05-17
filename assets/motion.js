@@ -911,42 +911,19 @@
      à mesure que la section entre dans le viewport. Inspiration Apple
      MacBook Pro · scènes cinématiques au scroll.
      ════════════════════════════════════════════════════════════════════════ */
-  /* SPEOS VP horizontal pinned panels · CVE 2026-05-11 · Apple iPad-pro style.
-     Pattern · la section entière pin le viewport, le titre reste visible
-     en haut tandis que les cards défilent latéralement quand l'utilisateur
-     scrolle verticalement.
+  /* SPEOS VP horizontal panels · CVE 2026-05-14 · pin GSAP DÉSACTIVÉ.
+     Historique · une animation pin verticale → translate horizontal (pattern
+     iPad Pro) avait été câblée 2026-05-11. Deux tentatives de fix (trigger
+     pinwrap puis trigger section) n'ont pas résolu le bug · soit le titre
+     overlap les cards, soit le pin n'engage pas assez longtemps et le user
+     scrolle past la section avant que les 4 cards aient défilé.
 
-     CVE 2026-05-14 FIX · le trigger pinnait juste .vp-showcase__pinwrap
-     (sans le titre), ce qui causait un overlap visuel · pendant la phase
-     transitoire de pin, le titre dans .container restait en flow normal
-     et était recouvert par les cards qui glissaient.
-
-     Correction · trigger = .vp-showcase (toute la section), start = top top,
-     pinSpacing custom pour que la section pin avec titre + cards visibles
-     ensemble.
-
-     Activé seulement sur desktop wide (>900px) · sur mobile/tablet, le rail
-     conserve son scroll-snap horizontal CSS natif (plus naturel au touch). */
-  const vpSection = document.querySelector('#speos-vp-showcase');
-  const vpRail = document.querySelector('.vp-showcase__rail');
-  if (vpSection && vpRail && window.matchMedia('(min-width: 900px) and (pointer: fine)').matches) {
-    /* Disable horizontal scroll-snap fallback, switch to GSAP-driven */
-    vpRail.classList.add('is-pinned');
-    const totalScrollX = () => vpRail.scrollWidth - window.innerWidth + 80;
-    gsap.to(vpRail, {
-      x: () => -totalScrollX(),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: vpSection,
-        start: 'top top',
-        end: () => '+=' + (totalScrollX() + 200),
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-    });
-  }
+     Décision · scroll horizontal CSS natif (overflow-x: auto + scroll-snap
+     mandatory) sur toutes plateformes. Le rail est déjà configuré pour ça
+     en fallback (cf. .vp-showcase__rail dans style.css). L'utilisateur swipe
+     latéralement avec trackpad ou touch. Pas de cinématique pin, mais zéro
+     bug et UX prédictible. À rebuild proprement en CSS Grid (titre left +
+     cards right inside same pinned section) si l'effet manque. */
 
   /* Image mask on scroll · CVE 2026-05-11 · pour [data-mask-reveal] · l'image
      se révèle via un clip-path qui s'ouvre du milieu vers les bords. */
