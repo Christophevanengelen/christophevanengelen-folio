@@ -3,18 +3,22 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Newsletter admin · Christophe van Engelen</title>
+<title>Admin · Christophe van Engelen</title>
 <meta name="robots" content="noindex, nofollow" />
 <style>
   :root {
     --bg: #0a1220;
     --bg-soft: #131c2e;
+    --bg-card: #182236;
     --fg: #f2ebdb;
     --fg-muted: #b0aa9d;
+    --fg-dim: #8a8579;
     --amber: #c76941;
+    --amber-soft: rgba(199, 105, 65, 0.12);
     --green: #6BCB77;
     --coral: #E27D60;
     --border: rgba(242, 235, 219, 0.12);
+    --border-strong: rgba(242, 235, 219, 0.22);
   }
   * { box-sizing: border-box; }
   body {
@@ -22,21 +26,45 @@
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     background: var(--bg);
     color: var(--fg);
-    padding: 32px;
+    padding: 24px;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 1100px; margin: 0 auto; }
-  h1 {
-    font-weight: 300;
-    font-size: 28px;
-    letter-spacing: -0.01em;
-    margin: 0 0 8px;
+  .wrap { max-width: 1180px; margin: 0 auto; }
+
+  /* Header */
+  .head {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    margin-bottom: 24px;
   }
-  .sub {
-    color: var(--fg-muted);
-    margin: 0 0 32px;
-    font-size: 14px;
+  .head h1 {
+    font-weight: 300; font-size: 26px; letter-spacing: -0.01em;
+    margin: 0;
   }
+  .head .sub { color: var(--fg-muted); font-size: 13px; margin-top: 2px; }
+  .head-meta { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--fg-dim); }
+  .head-meta button {
+    background: transparent; border: 1px solid var(--border); color: var(--fg-muted);
+    padding: 6px 10px; border-radius: 6px; font-size: 12px; cursor: pointer;
+  }
+  .head-meta button:hover { color: var(--fg); border-color: var(--border-strong); }
+
+  /* Tabs */
+  .tabs {
+    display: flex; gap: 4px; border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .tab {
+    background: transparent; border: 0; padding: 12px 18px;
+    color: var(--fg-muted); font: inherit; font-size: 14px; font-weight: 500;
+    cursor: pointer; border-bottom: 2px solid transparent;
+    transition: color 200ms, border-color 200ms;
+  }
+  .tab:hover { color: var(--fg); }
+  .tab.is-active { color: var(--amber); border-bottom-color: var(--amber); }
+
+  /* Panel + section */
   .panel {
     background: var(--bg-soft);
     border: 1px solid var(--border);
@@ -45,183 +73,375 @@
     margin-bottom: 16px;
   }
   .panel h2 {
-    font-weight: 500;
-    font-size: 16px;
-    margin: 0 0 16px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--amber);
+    font-weight: 500; font-size: 13px; margin: 0 0 16px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber);
   }
+  .panel-row {
+    display: flex; gap: 12px; align-items: center;
+    flex-wrap: wrap; margin-bottom: 16px;
+  }
+
+  /* Auth */
+  .auth-card {
+    max-width: 480px; margin: 80px auto; padding: 32px;
+    background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px;
+  }
+  .auth-card h1 { font-weight: 300; font-size: 22px; margin: 0 0 6px; }
+  .auth-card .sub { color: var(--fg-muted); font-size: 13px; margin: 0 0 24px; }
   input[type="password"], input[type="text"], textarea {
-    width: 100%;
-    padding: 12px 16px;
+    width: 100%; padding: 12px 14px;
     background: rgba(0, 0, 0, 0.25);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--fg);
-    font: inherit;
-    font-size: 15px;
+    border: 1px solid var(--border); border-radius: 8px;
+    color: var(--fg); font: inherit; font-size: 14px;
   }
-  input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--amber);
-  }
+  input:focus, textarea:focus { outline: none; border-color: var(--amber); }
   textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
-  button {
-    padding: 10px 20px;
-    background: var(--amber);
-    color: var(--bg);
-    border: none;
-    border-radius: 8px;
-    font: inherit;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 200ms;
+  .btn {
+    padding: 10px 18px; background: var(--amber); color: var(--bg);
+    border: none; border-radius: 8px; font: inherit; font-weight: 600;
+    cursor: pointer; transition: opacity 200ms;
   }
-  button:hover { opacity: 0.85; }
-  button:disabled { opacity: 0.4; cursor: not-allowed; }
-  button.secondary {
-    background: transparent;
-    color: var(--fg);
-    border: 1px solid var(--border);
+  .btn:hover { opacity: 0.85; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn.secondary {
+    background: transparent; color: var(--fg); border: 1px solid var(--border);
   }
-  .row {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    flex-wrap: wrap;
+  .btn.secondary:hover { border-color: var(--amber); color: var(--amber); }
+
+  /* KPI grid */
+  .kpis {
+    display: grid; gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    margin-bottom: 16px;
   }
-  .stat {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 8px;
-    padding: 8px 16px;
-    background: rgba(199, 105, 65, 0.1);
-    border: 1px solid rgba(199, 105, 65, 0.3);
-    border-radius: 999px;
-    font-size: 14px;
+  .kpi {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 18px;
+    display: flex; flex-direction: column; gap: 4px;
   }
-  .stat strong { font-size: 22px; color: var(--amber); }
+  .kpi-label {
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--fg-dim); font-weight: 500;
+  }
+  .kpi-value {
+    font-size: 28px; font-weight: 300; letter-spacing: -0.01em;
+    color: var(--fg); line-height: 1;
+  }
+  .kpi-delta { font-size: 12px; color: var(--fg-muted); }
+  .kpi-delta.up { color: var(--green); }
+  .kpi-delta.down { color: var(--coral); }
+
+  /* Two-column grid for breakdowns */
+  .two-col {
+    display: grid; gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* Lang split bar */
+  .lang-bar {
+    display: flex; height: 32px; border-radius: 8px; overflow: hidden;
+    background: rgba(0,0,0,0.25);
+    margin-bottom: 12px;
+  }
+  .lang-bar > div {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 600; color: var(--bg);
+    transition: width 600ms cubic-bezier(.16,1,.3,1);
+  }
+  .lang-fr { background: var(--amber); }
+  .lang-nl { background: var(--green); }
+  .lang-en { background: #5B7DB1; }
+  .lang-other { background: var(--fg-dim); }
+  .lang-legend { display: flex; gap: 16px; font-size: 12px; color: var(--fg-muted); flex-wrap: wrap; }
+  .lang-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .lang-legend .dot { width: 10px; height: 10px; border-radius: 2px; }
+
+  /* Top list (referrers, pages, countries) */
+  .top-list { list-style: none; padding: 0; margin: 0; }
+  .top-list li {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 8px 0; border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .top-list li:last-child { border-bottom: none; }
+  .top-list .name {
+    color: var(--fg); font-family: ui-monospace, monospace;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    flex: 1; padding-right: 12px;
+  }
+  .top-list .count { color: var(--amber); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* Sparkline */
+  .spark-wrap { padding: 8px 0; }
+  .spark { width: 100%; height: 60px; display: block; }
+  .spark path { fill: var(--amber-soft); }
+  .spark .line { fill: none; stroke: var(--amber); stroke-width: 1.5; }
+  .spark-meta { display: flex; justify-content: space-between; font-size: 11px; color: var(--fg-dim); margin-top: 8px; }
+
+  /* Table subscribers */
   table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 16px;
-    font-size: 14px;
+    width: 100%; border-collapse: collapse;
+    margin-top: 12px; font-size: 13px;
   }
   th, td {
-    padding: 12px 16px;
-    text-align: left;
+    padding: 10px 12px; text-align: left;
     border-bottom: 1px solid var(--border);
   }
   th {
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    font-size: 11px;
-    color: var(--fg-muted);
+    font-weight: 500; text-transform: uppercase;
+    letter-spacing: 0.04em; font-size: 10px; color: var(--fg-dim);
   }
   td.email { font-family: ui-monospace, monospace; color: var(--fg); }
-  td.ts { color: var(--fg-muted); font-size: 13px; }
-  td.lang { color: var(--fg-muted); text-transform: uppercase; font-size: 11px; }
-  .status {
-    margin-top: 12px;
-    font-size: 13px;
-    min-height: 1.4em;
-  }
+  td.ts { color: var(--fg-muted); font-size: 12px; white-space: nowrap; }
+  td.lang { color: var(--fg-muted); text-transform: uppercase; font-size: 10px; }
+
+  /* Status / empty / loading */
+  .status { margin-top: 12px; font-size: 13px; min-height: 1.4em; }
   .status.ok { color: var(--green); }
   .status.err { color: var(--coral); }
-  .hidden { display: none; }
-  .empty { color: var(--fg-muted); font-style: italic; padding: 24px 0; }
-  details { margin-top: 12px; font-size: 13px; color: var(--fg-muted); }
+  .empty { color: var(--fg-muted); font-style: italic; padding: 24px 0; text-align: center; }
+  .loading { color: var(--fg-muted); padding: 12px 0; font-size: 13px; }
+  .config-warn {
+    background: rgba(226, 125, 96, 0.08); border: 1px solid rgba(226, 125, 96, 0.3);
+    border-radius: 8px; padding: 16px; margin-bottom: 16px;
+    font-size: 13px; color: var(--fg);
+  }
+  .config-warn code {
+    background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;
+    font-size: 12px;
+  }
+
+  /* Hidden helper */
+  .hidden { display: none !important; }
+
+  /* Details/code */
+  details { margin-top: 12px; font-size: 12px; color: var(--fg-muted); }
   details summary { cursor: pointer; user-select: none; }
   details pre {
-    background: rgba(0,0,0,0.3);
-    padding: 12px;
-    border-radius: 6px;
-    overflow-x: auto;
-    font-size: 12px;
-    margin-top: 8px;
+    background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px;
+    overflow-x: auto; font-size: 11px; margin-top: 8px;
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 16px; }
+    .head h1 { font-size: 22px; }
+    .panel { padding: 18px; }
+    .kpi-value { font-size: 24px; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Newsletter admin</h1>
-  <p class="sub">Liste des inscrits · export CSV · compose mailto BCC</p>
 
-  <!-- Auth panel · password prompt -->
-  <div id="auth" class="panel">
-    <h2>Connexion admin</h2>
-    <div class="row">
-      <input type="password" id="pwd" placeholder="Admin password" autocomplete="off" autofocus />
-      <button id="login">Déverrouiller</button>
-    </div>
-    <p class="status" id="auth-status"></p>
-    <details>
-      <summary>Comment ça marche</summary>
-      <p>Le password est stocké comme env var <code>ADMIN_PASSWORD</code> sur Vercel.</p>
-      <p>Pour le set/reset · <code>vercel env add ADMIN_PASSWORD</code> en CLI, ou via le dashboard Vercel → Project Settings → Environment Variables.</p>
-    </details>
+<!-- Auth gate -->
+<div id="auth" class="auth-card">
+  <h1>Admin</h1>
+  <p class="sub">Newsletter subscribers + analytics traffic</p>
+  <div class="panel-row">
+    <input type="password" id="pwd" placeholder="Admin password" autocomplete="off" autofocus />
   </div>
-
-  <!-- Content panel · révélé après auth -->
-  <div id="content" class="hidden">
-    <div class="panel">
-      <h2>Subscribers</h2>
-      <div class="row" style="margin-bottom: 16px;">
-        <span class="stat"><strong id="count">0</strong> inscrits au total</span>
-        <button id="refresh" class="secondary">↻ Rafraîchir</button>
-        <button id="export-csv" class="secondary">⬇ Export CSV</button>
-        <button id="copy-bcc" class="secondary">📋 Copier BCC list</button>
-      </div>
-      <div id="list"></div>
-      <p class="status" id="list-status"></p>
-    </div>
-
-    <div class="panel">
-      <h2>Compose newsletter (mailto BCC)</h2>
-      <p style="font-size: 13px; color: var(--fg-muted); margin: 0 0 16px;">
-        Ouvre Gmail (ou ton mail client) avec tous les abonnés en BCC + ton sujet + ton brouillon préchargé. Tu termines dans Gmail.
-      </p>
-      <div class="row">
-        <input type="text" id="subject" placeholder="Sujet de la newsletter" />
-      </div>
-      <div style="margin-top: 12px;">
-        <textarea id="body" placeholder="Corps de l'email (plain text)"></textarea>
-      </div>
-      <div class="row" style="margin-top: 16px;">
-        <button id="send">📧 Ouvrir Gmail compose</button>
-      </div>
-      <p class="status" id="send-status"></p>
-    </div>
+  <div class="panel-row">
+    <button id="login" class="btn">Déverrouiller</button>
   </div>
+  <p class="status" id="auth-status"></p>
+  <details>
+    <summary>Setup env vars</summary>
+    <p>Password env var <code>ADMIN_PASSWORD</code> sur Vercel.</p>
+    <p>Pour l'onglet Analytics · <code>VERCEL_TOKEN</code>, <code>VERCEL_PROJECT_ID</code>, <code>VERCEL_TEAM_ID</code>.</p>
+    <p>Pour les welcome emails · <code>RESEND_API_KEY</code> + <code>WELCOME_FROM_EMAIL</code>.</p>
+    <p>Set via <code>vercel env add</code> ou dashboard Vercel → Project Settings → Environment Variables.</p>
+  </details>
 </div>
+
+<!-- Main app · hidden until auth -->
+<div id="app" class="wrap hidden">
+
+  <div class="head">
+    <div>
+      <h1>Admin · folio</h1>
+      <p class="sub">Newsletter + analytics · <span id="last-updated">jamais rafraîchi</span></p>
+    </div>
+    <div class="head-meta">
+      <button id="refresh-all">↻ Tout rafraîchir</button>
+      <button id="logout">Logout</button>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs" role="tablist">
+    <button class="tab is-active" data-tab="newsletter" role="tab">Newsletter</button>
+    <button class="tab" data-tab="analytics" role="tab">Analytics</button>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- TAB · NEWSLETTER                                              -->
+  <!-- ============================================================ -->
+  <section id="tab-newsletter" data-tab-content="newsletter">
+    <!-- KPI cards -->
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">Total inscrits</span>
+        <span class="kpi-value" id="nl-total">—</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">7 derniers jours</span>
+        <span class="kpi-value" id="nl-last7">—</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">30 derniers jours</span>
+        <span class="kpi-value" id="nl-last30">—</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Croissance m/m</span>
+        <span class="kpi-value" id="nl-growth">—</span>
+        <span class="kpi-delta" id="nl-growth-detail"></span>
+      </div>
+    </div>
+
+    <!-- Two col · lang + referrers -->
+    <div class="two-col">
+      <div class="panel">
+        <h2>Répartition langue</h2>
+        <div class="lang-bar" id="nl-lang-bar"></div>
+        <div class="lang-legend" id="nl-lang-legend"></div>
+      </div>
+      <div class="panel">
+        <h2>Top referrers</h2>
+        <ul class="top-list" id="nl-top-refs"><li class="loading">—</li></ul>
+      </div>
+    </div>
+
+    <!-- Sparkline 30j -->
+    <div class="panel">
+      <h2>Inscriptions · 30 jours</h2>
+      <div class="spark-wrap">
+        <svg class="spark" id="nl-spark" viewBox="0 0 300 60" preserveAspectRatio="none"></svg>
+        <div class="spark-meta">
+          <span id="nl-spark-from">—</span>
+          <span id="nl-spark-to">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscribers list + actions -->
+    <div class="panel">
+      <h2>Subscribers · 50 derniers</h2>
+      <div class="panel-row">
+        <button id="nl-export-csv" class="btn secondary">⬇ Export CSV (tous)</button>
+        <button id="nl-copy-bcc" class="btn secondary">📋 Copier BCC</button>
+        <button id="nl-compose" class="btn secondary">📧 Compose newsletter</button>
+      </div>
+      <div id="nl-list"></div>
+      <p class="status" id="nl-list-status"></p>
+    </div>
+
+    <!-- Compose mailto · modal-ish dans la même section -->
+    <div class="panel hidden" id="compose-panel">
+      <h2>Compose newsletter (Gmail compose)</h2>
+      <p style="font-size: 13px; color: var(--fg-muted); margin: 0 0 12px;">
+        Ouvre Gmail avec tous les abonnés en BCC + sujet + brouillon. Tu termines dans Gmail.
+      </p>
+      <input type="text" id="compose-subject" placeholder="Sujet" style="margin-bottom: 12px;" />
+      <textarea id="compose-body" placeholder="Corps de l'email (plain text)"></textarea>
+      <div class="panel-row" style="margin-top: 12px;">
+        <button id="compose-send" class="btn">📧 Ouvrir Gmail</button>
+        <button id="compose-close" class="btn secondary">Annuler</button>
+      </div>
+      <p class="status" id="compose-status"></p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB · ANALYTICS                                               -->
+  <!-- ============================================================ -->
+  <section id="tab-analytics" data-tab-content="analytics" class="hidden">
+    <div id="an-config-warn" class="config-warn hidden"></div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">Visiteurs uniques · 30j</span>
+        <span class="kpi-value" id="an-visitors">—</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Pages vues · 30j</span>
+        <span class="kpi-value" id="an-pageviews">—</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Période</span>
+        <span class="kpi-value" style="font-size:14px;" id="an-range">—</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <h2>Top pages</h2>
+        <ul class="top-list" id="an-pages"><li class="loading">—</li></ul>
+      </div>
+      <div class="panel">
+        <h2>Top referrers</h2>
+        <ul class="top-list" id="an-refs"><li class="loading">—</li></ul>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <h2>Top countries</h2>
+        <ul class="top-list" id="an-countries"><li class="loading">—</li></ul>
+      </div>
+      <div class="panel">
+        <h2>Devices</h2>
+        <ul class="top-list" id="an-devices"><li class="loading">—</li></ul>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Répartition langue · trafic</h2>
+      <div class="lang-bar" id="an-lang-bar"></div>
+      <div class="lang-legend" id="an-lang-legend"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Visiteurs · 30 jours</h2>
+      <div class="spark-wrap">
+        <svg class="spark" id="an-spark" viewBox="0 0 300 60" preserveAspectRatio="none"></svg>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /#app -->
 
 <script>
 (function () {
+  'use strict';
   const $ = (s) => document.querySelector(s);
+  const $$ = (s) => document.querySelectorAll(s);
   const STORAGE_KEY = 'cve_admin_pwd';
-  let subscribers = [];
-
-  /* Try to restore password from sessionStorage · convenience seulement, perdu au tab close */
   let pwd = sessionStorage.getItem(STORAGE_KEY) || '';
-  if (pwd) {
-    $('#pwd').value = pwd;
-    attemptLogin();
+  let statsCache = null;
+
+  /* ============================================================
+     AUTH
+     ============================================================ */
+  function bindAuth() {
+    $('#login').addEventListener('click', login);
+    $('#pwd').addEventListener('keydown', (e) => { if (e.key === 'Enter') login(); });
+    $('#logout').addEventListener('click', logout);
+
+    if (pwd) {
+      $('#pwd').value = pwd;
+      login();
+    }
   }
 
-  $('#login').addEventListener('click', attemptLogin);
-  $('#pwd').addEventListener('keydown', (e) => { if (e.key === 'Enter') attemptLogin(); });
-
-  async function attemptLogin() {
+  async function login() {
     const password = $('#pwd').value.trim();
     if (!password) return;
     const status = $('#auth-status');
     status.textContent = 'Connexion...';
     status.className = 'status';
-
     try {
-      const res = await fetch('/api/admin', {
+      const res = await fetch('/api/admin/stats', {
         headers: { 'Authorization': 'Bearer ' + password },
       });
       if (res.status === 401) {
@@ -231,35 +451,94 @@
       }
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        status.textContent = 'Erreur · ' + (data.error || res.status) + (data.hint ? ' · ' + data.hint : '');
+        status.textContent = 'Erreur · ' + (data.error || res.status);
         status.className = 'status err';
         return;
       }
-      const data = await res.json();
+      const stats = await res.json();
       pwd = password;
       sessionStorage.setItem(STORAGE_KEY, pwd);
-      showContent(data);
+      $('#auth').classList.add('hidden');
+      $('#app').classList.remove('hidden');
+      renderNewsletter(stats);
+      statsCache = stats;
+      updateLastRefreshed();
     } catch (e) {
       status.textContent = 'Erreur réseau · ' + e.message;
       status.className = 'status err';
     }
   }
 
-  function showContent(data) {
-    $('#auth').classList.add('hidden');
-    $('#content').classList.remove('hidden');
-    renderList(data);
+  function logout() {
+    sessionStorage.removeItem(STORAGE_KEY);
+    pwd = '';
+    $('#app').classList.add('hidden');
+    $('#auth').classList.remove('hidden');
+    $('#pwd').value = '';
+    $('#pwd').focus();
   }
 
-  function renderList(data) {
-    subscribers = data.records || [];
-    $('#count').textContent = data.count || subscribers.length;
-    const list = $('#list');
-    if (subscribers.length === 0) {
-      list.innerHTML = '<p class="empty">Aucun inscrit pour le moment.</p>';
+  /* ============================================================
+     TABS
+     ============================================================ */
+  function bindTabs() {
+    $$('.tab').forEach((btn) => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    });
+  }
+
+  function switchTab(name) {
+    $$('.tab').forEach((b) => b.classList.toggle('is-active', b.dataset.tab === name));
+    $$('[data-tab-content]').forEach((s) => s.classList.toggle('hidden', s.dataset.tabContent !== name));
+    if (name === 'analytics' && !window.__analyticsLoaded) {
+      loadAnalytics();
+      window.__analyticsLoaded = true;
+    }
+  }
+
+  /* ============================================================
+     NEWSLETTER · render KPIs + lang + refs + sparkline + list
+     ============================================================ */
+  function renderNewsletter(s) {
+    $('#nl-total').textContent = formatNum(s.total);
+    $('#nl-last7').textContent = formatNum(s.last7);
+    $('#nl-last30').textContent = formatNum(s.last30);
+
+    const growth = $('#nl-growth');
+    const growthDetail = $('#nl-growth-detail');
+    growth.textContent = (s.growthPct > 0 ? '+' : '') + s.growthPct + '%';
+    growth.className = 'kpi-value';
+    if (s.growthPct > 0) {
+      growth.style.color = 'var(--green)';
+      growthDetail.className = 'kpi-delta up';
+    } else if (s.growthPct < 0) {
+      growth.style.color = 'var(--coral)';
+      growthDetail.className = 'kpi-delta down';
+    } else {
+      growth.style.color = 'var(--fg)';
+      growthDetail.className = 'kpi-delta';
+    }
+    growthDetail.textContent = `${s.last30} ce mois · ${s.prev30} mois précédent`;
+
+    renderLangBar('#nl-lang-bar', '#nl-lang-legend', s.langSplit);
+    renderTopList('#nl-top-refs', s.topReferrers, 'host');
+    renderSparkline('#nl-spark', s.daily);
+
+    if (s.daily && s.daily.length) {
+      $('#nl-spark-from').textContent = formatShortDate(s.daily[0].date);
+      $('#nl-spark-to').textContent = formatShortDate(s.daily[s.daily.length - 1].date);
+    }
+
+    renderRecentList(s.recent || []);
+  }
+
+  function renderRecentList(records) {
+    const wrap = $('#nl-list');
+    if (!records.length) {
+      wrap.innerHTML = '<p class="empty">Aucun inscrit pour le moment.</p>';
       return;
     }
-    const rows = subscribers.map((r) => {
+    const rows = records.map((r) => {
       const ts = r.ts ? new Date(r.ts).toLocaleString('fr-BE', { dateStyle: 'medium', timeStyle: 'short' }) : '—';
       return `<tr>
         <td class="email">${esc(r.email)}</td>
@@ -267,88 +546,255 @@
         <td class="lang">${esc(r.lang || '')}</td>
       </tr>`;
     }).join('');
-    list.innerHTML = `<table>
-      <thead><tr><th>Email</th><th>Date d'inscription</th><th>Langue</th></tr></thead>
+    wrap.innerHTML = `<table>
+      <thead><tr><th>Email</th><th>Date</th><th>Lang</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
   }
 
+  /* ============================================================
+     ANALYTICS · fetch + render
+     ============================================================ */
+  async function loadAnalytics() {
+    const warn = $('#an-config-warn');
+    warn.classList.add('hidden');
+    try {
+      const res = await fetch('/api/admin/analytics', {
+        headers: { 'Authorization': 'Bearer ' + pwd },
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        warn.classList.remove('hidden');
+        warn.innerHTML = `<strong>Erreur · ${res.status}</strong> · ${esc(data.error || data.detail || 'inconnue')}`;
+        return;
+      }
+      const data = await res.json();
+      if (!data.configured) {
+        warn.classList.remove('hidden');
+        warn.innerHTML = `<strong>Setup requis</strong> · ${esc(data.hint)} <br><br>
+          Env vars à ajouter sur Vercel · <code>VERCEL_TOKEN</code> · <code>VERCEL_PROJECT_ID</code> · <code>VERCEL_TEAM_ID</code>.<br>
+          Token · vercel.com/account/tokens → Create · scope Read Analytics.`;
+        return;
+      }
+      if (!data.enabled) {
+        warn.classList.remove('hidden');
+        warn.innerHTML = `<strong>Web Analytics pas activé</strong> · ${esc(data.hint)}<br>
+          ${data.debug ? '<br><code>' + esc(data.debug) + '</code>' : ''}`;
+        return;
+      }
+      renderAnalytics(data);
+    } catch (e) {
+      warn.classList.remove('hidden');
+      warn.innerHTML = `<strong>Erreur réseau</strong> · ${esc(e.message)}`;
+    }
+  }
+
+  function renderAnalytics(d) {
+    $('#an-visitors').textContent = formatNum(d.visitors);
+    $('#an-pageviews').textContent = formatNum(d.pageviews);
+    if (d.range) {
+      $('#an-range').textContent = formatShortDate(d.range.from) + ' → ' + formatShortDate(d.range.to);
+    }
+    renderTopList('#an-pages', d.topPages, 'path');
+    renderTopList('#an-refs', d.topReferrers, 'host');
+    renderTopList('#an-countries', d.countries, 'name');
+    renderTopList('#an-devices', d.devices, 'name');
+    renderLangBar('#an-lang-bar', '#an-lang-legend', d.langSplit);
+    renderSparkline('#an-spark', d.daily);
+  }
+
+  /* ============================================================
+     RENDER HELPERS · langBar / topList / sparkline
+     ============================================================ */
+  function renderLangBar(barSel, legendSel, split) {
+    const bar = $(barSel);
+    const legend = $(legendSel);
+    const total = (split.fr || 0) + (split.nl || 0) + (split.en || 0) + (split.other || 0);
+    bar.innerHTML = '';
+    legend.innerHTML = '';
+    if (!total) {
+      bar.innerHTML = '<div style="width:100%;background:rgba(255,255,255,0.06);color:var(--fg-muted);">(aucune donnée)</div>';
+      return;
+    }
+    const langs = [
+      { key: 'fr', cls: 'lang-fr', name: 'FR' },
+      { key: 'nl', cls: 'lang-nl', name: 'NL' },
+      { key: 'en', cls: 'lang-en', name: 'EN' },
+      { key: 'other', cls: 'lang-other', name: 'Autre' },
+    ];
+    langs.forEach((l) => {
+      const v = split[l.key] || 0;
+      if (!v) return;
+      const pct = Math.round((v / total) * 100);
+      const div = document.createElement('div');
+      div.className = l.cls;
+      div.style.width = pct + '%';
+      div.textContent = pct >= 8 ? pct + '%' : '';
+      bar.appendChild(div);
+
+      const item = document.createElement('span');
+      item.innerHTML = `<span class="dot ${l.cls}"></span>${l.name} · <strong>${v}</strong> (${pct}%)`;
+      legend.appendChild(item);
+    });
+  }
+
+  function renderTopList(sel, items, nameKey) {
+    const ul = $(sel);
+    ul.innerHTML = '';
+    if (!items || !items.length) {
+      ul.innerHTML = '<li class="empty">(aucune donnée)</li>';
+      return;
+    }
+    items.forEach((it) => {
+      const li = document.createElement('li');
+      const name = it[nameKey] || it.name || '(direct)';
+      li.innerHTML = `<span class="name" title="${esc(name)}">${esc(name)}</span><span class="count">${formatNum(it.count)}</span>`;
+      ul.appendChild(li);
+    });
+  }
+
+  function renderSparkline(sel, daily) {
+    const svg = $(sel);
+    svg.innerHTML = '';
+    if (!daily || !daily.length) return;
+    const W = 300, H = 60, PAD = 4;
+    const maxVal = Math.max(1, ...daily.map((d) => d.count));
+    const stepX = (W - 2 * PAD) / Math.max(1, daily.length - 1);
+    const pts = daily.map((d, i) => [
+      PAD + i * stepX,
+      H - PAD - (d.count / maxVal) * (H - 2 * PAD),
+    ]);
+    const linePath = pts.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+    const areaPath = linePath + ` L${pts[pts.length - 1][0].toFixed(1)},${H - PAD} L${pts[0][0].toFixed(1)},${H - PAD} Z`;
+    const ns = 'http://www.w3.org/2000/svg';
+    const area = document.createElementNS(ns, 'path');
+    area.setAttribute('d', areaPath);
+    svg.appendChild(area);
+    const line = document.createElementNS(ns, 'path');
+    line.setAttribute('d', linePath);
+    line.setAttribute('class', 'line');
+    svg.appendChild(line);
+  }
+
+  /* ============================================================
+     ACTIONS · CSV / BCC / Compose
+     ============================================================ */
+  function bindNewsletterActions() {
+    $('#nl-export-csv').addEventListener('click', exportCsv);
+    $('#nl-copy-bcc').addEventListener('click', copyBcc);
+    $('#nl-compose').addEventListener('click', () => $('#compose-panel').classList.toggle('hidden'));
+    $('#compose-close').addEventListener('click', () => $('#compose-panel').classList.add('hidden'));
+    $('#compose-send').addEventListener('click', composeSend);
+    $('#refresh-all').addEventListener('click', refreshAll);
+  }
+
+  async function exportCsv() {
+    /* Fetch all records via /api/admin (legacy endpoint returns full list) */
+    try {
+      const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
+      const data = await res.json();
+      const records = data.records || [];
+      const csv = ['email,ts,lang,ref,ip']
+        .concat(records.map((r) => [
+          r.email, r.ts || '', r.lang || '', r.ref || '', r.ip || ''
+        ].map((v) => '"' + String(v).replace(/"/g, '""') + '"').join(',')))
+        .join('\n');
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'newsletter-subscribers-' + new Date().toISOString().slice(0, 10) + '.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+      flash('#nl-list-status', records.length + ' lignes exportées', 'ok');
+    } catch (e) {
+      flash('#nl-list-status', 'Export échoué · ' + e.message, 'err');
+    }
+  }
+
+  async function copyBcc() {
+    try {
+      const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
+      const data = await res.json();
+      const emails = (data.records || []).map((r) => r.email).join(', ');
+      await navigator.clipboard.writeText(emails);
+      flash('#nl-list-status', (data.records || []).length + ' emails copiés', 'ok');
+    } catch (e) {
+      flash('#nl-list-status', 'Copie échouée · ' + e.message, 'err');
+    }
+  }
+
+  async function composeSend() {
+    const subject = $('#compose-subject').value.trim();
+    const body = $('#compose-body').value;
+    if (!subject) return flash('#compose-status', 'Sujet manquant', 'err');
+    try {
+      const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
+      const data = await res.json();
+      const records = data.records || [];
+      if (!records.length) return flash('#compose-status', 'Aucun abonné', 'err');
+      const bcc = records.map((r) => r.email).join(',');
+      const url = 'https://mail.google.com/mail/?view=cm&fs=1'
+        + '&to=' + encodeURIComponent('hello@christophevanengelen.com')
+        + '&bcc=' + encodeURIComponent(bcc)
+        + '&su=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+      window.open(url, '_blank', 'noopener');
+      flash('#compose-status', 'Gmail ouvert · ' + records.length + ' destinataires en BCC', 'ok');
+    } catch (e) {
+      flash('#compose-status', 'Erreur · ' + e.message, 'err');
+    }
+  }
+
+  async function refreshAll() {
+    try {
+      const res = await fetch('/api/admin/stats', { headers: { 'Authorization': 'Bearer ' + pwd } });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const stats = await res.json();
+      renderNewsletter(stats);
+      statsCache = stats;
+      if (window.__analyticsLoaded) loadAnalytics();
+      updateLastRefreshed();
+    } catch (e) {
+      flash('#nl-list-status', 'Refresh échoué · ' + e.message, 'err');
+    }
+  }
+
+  /* ============================================================
+     UTIL
+     ============================================================ */
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
     }[c]));
   }
+  function formatNum(n) {
+    if (n == null || isNaN(n)) return '—';
+    return new Intl.NumberFormat('fr-BE').format(n);
+  }
+  function formatShortDate(d) {
+    if (!d) return '';
+    const dt = new Date(d);
+    if (isNaN(dt)) return d;
+    return dt.toLocaleDateString('fr-BE', { day: '2-digit', month: 'short' });
+  }
+  function flash(sel, text, cls) {
+    const el = $(sel);
+    if (!el) return;
+    el.textContent = text;
+    el.className = 'status ' + (cls || '');
+  }
+  function updateLastRefreshed() {
+    const el = $('#last-updated');
+    el.textContent = 'rafraîchi à ' + new Date().toLocaleTimeString('fr-BE');
+  }
 
-  $('#refresh').addEventListener('click', async () => {
-    const status = $('#list-status');
-    status.textContent = 'Rafraîchissement...';
-    status.className = 'status';
-    try {
-      const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
-      const data = await res.json();
-      renderList(data);
-      status.textContent = 'Liste à jour · ' + new Date().toLocaleTimeString('fr-BE');
-      status.className = 'status ok';
-    } catch (e) {
-      status.textContent = 'Erreur · ' + e.message;
-      status.className = 'status err';
-    }
-  });
-
-  $('#export-csv').addEventListener('click', () => {
-    const csv = ['email,ts,lang,ref,ip']
-      .concat(subscribers.map((r) => [
-        r.email, r.ts || '', r.lang || '', r.ref || '', r.ip || ''
-      ].map((v) => '"' + String(v).replace(/"/g, '""') + '"').join(',')))
-      .join('\n');
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'newsletter-subscribers-' + new Date().toISOString().slice(0, 10) + '.csv';
-    a.click();
-    URL.revokeObjectURL(url);
-  });
-
-  $('#copy-bcc').addEventListener('click', async () => {
-    const emails = subscribers.map((r) => r.email).join(', ');
-    try {
-      await navigator.clipboard.writeText(emails);
-      const status = $('#list-status');
-      status.textContent = subscribers.length + ' emails copiés dans le presse-papier (séparateur · virgule)';
-      status.className = 'status ok';
-    } catch (e) {
-      alert('Copie échouée · ' + e.message);
-    }
-  });
-
-  $('#send').addEventListener('click', () => {
-    const subject = $('#subject').value.trim();
-    const body = $('#body').value;
-    if (!subject) {
-      const s = $('#send-status');
-      s.textContent = 'Sujet manquant';
-      s.className = 'status err';
-      return;
-    }
-    if (subscribers.length === 0) {
-      const s = $('#send-status');
-      s.textContent = 'Aucun abonné à envoyer';
-      s.className = 'status err';
-      return;
-    }
-    const bcc = subscribers.map((r) => r.email).join(',');
-    /* Gmail web compose URL · ouvre directement Gmail avec BCC pré-rempli */
-    const url = 'https://mail.google.com/mail/?view=cm&fs=1'
-      + '&to=' + encodeURIComponent('hello@christophevanengelen.com')
-      + '&bcc=' + encodeURIComponent(bcc)
-      + '&su=' + encodeURIComponent(subject)
-      + '&body=' + encodeURIComponent(body);
-    window.open(url, '_blank', 'noopener');
-    const s = $('#send-status');
-    s.textContent = 'Gmail ouvert dans un nouvel onglet · ' + subscribers.length + ' destinataires en BCC';
-    s.className = 'status ok';
-  });
+  /* ============================================================
+     INIT
+     ============================================================ */
+  bindAuth();
+  bindTabs();
+  bindNewsletterActions();
 })();
 </script>
 </body>

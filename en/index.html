@@ -978,10 +978,13 @@ Cal.ns["30min"]("inline", {
 <script src="/assets/i18n.js?v=20260518-s32" defer></script>
 <script src="/assets/theme.js?v=20260518-s32"></script>
 
-<!-- CVE 2026-05-04 S7.1 · Plausible Analytics (à activer après création compte) ·
-     RGPD-friendly, no-cookie, ~1.4 KB. Décommente une fois domaine ajouté
-     dans plausible.io/sites. Goals : "mailto-cve", "linkedin-out", "lire-case",
-     "lang-switch" déclenchés via tracking.js ci-dessous. -->
+<!-- CVE 2026-05-18 · Vercel Web Analytics · RGPD-friendly, no-cookie.
+     Activation requise dans Vercel dashboard · Settings → Analytics → Enable.
+     KPIs lus depuis /api/admin/analytics (token VERCEL_TOKEN env var). -->
+<script defer src="/_vercel/insights/script.js"></script>
+
+<!-- CVE 2026-05-04 S7.1 · Plausible Analytics (alternative, désactivée 2026-05-18).
+     Garder le commentaire pour rollback si Vercel Analytics insuffisant. -->
 <!-- <script defer data-domain="christophevanengelen.com" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script> -->
 <!-- <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script> -->
 

@@ -73,6 +73,10 @@ export default async function handler(req, res) {
        Formsubmit demande une confirmation 1-clic la première fois. */
     notifyEmail(record).catch((e) => console.warn('email notify fail', e && e.message));
 
+    /* Auto-welcome email · CVE 2026-05-18 · via Resend si configuré.
+       Best-effort, silencieux si pas de RESEND_API_KEY · pas de fail subscribe. */
+    sendWelcomeEmail(email, lang).catch((e) => console.warn('welcome email fail', e && e.message));
+
     return res.status(200).json({ ok: true });
   } catch (err) {
     /* Si Vercel KV pas encore configuré · fallback · on envoie quand même
@@ -121,4 +125,83 @@ async function notifyEmail(record) {
   });
   if (!res.ok) throw new Error('Formsubmit returned ' + res.status);
   return res.json().catch(() => ({}));
+}
+
+/**
+ * Auto-welcome email · CVE 2026-05-18 · via Resend.com.
+ * No-op si RESEND_API_KEY ou WELCOME_FROM_EMAIL absent · CVE peut activer plus tard.
+ *
+ * Setup CVE ·
+ *   1. Compte resend.com · gratuit 100 emails/jour · 3000/mois
+ *   2. Vérifier le domaine christophevanengelen.com (DKIM + SPF DNS records)
+ *   3. Créer API key
+ *   4. Set env vars · vercel env add RESEND_API_KEY / WELCOME_FROM_EMAIL=hello@christophevanengelen.com
+ *
+ * Si Resend pas dispo · fallback silencieux. L'inscription reste enregistrée.
+ */
+async function sendWelcomeEmail(email, lang) {
+  const apiKey = process.env.RESEND_API_KEY;
+  const fromEmail = process.env.WELCOME_FROM_EMAIL;
+  if (!apiKey || !fromEmail) return; /* not configured · noop */
+
+  const messages = {
+    fr: {
+      subject: 'Bienvenue · arbitrages Service Design',
+      body: `Bonjour,
+
+Merci pour ton inscription · un mail par mois, pas plus.
+Ce que tu vas recevoir · arbitrages Service Design qui ont marché, racontés courts. Lecture 5 minutes. Pas de pub, pas de relance.
+
+Le prochain numéro arrive dans les semaines qui viennent. Si tu veux discuter d'un projet entre-temps · réponds à cet email ou booke un appel · https://cal.com/christophevanengelen/30min
+
+À bientôt,
+Christophe`,
+    },
+    nl: {
+      subject: 'Welkom · Service Design afwegingen',
+      body: `Hallo,
+
+Bedankt voor je inschrijving · één mail per maand, niet meer.
+Wat je gaat ontvangen · Service Design afwegingen die werkten, kort verteld. 5 minuten leestijd. Geen reclame, geen follow-up.
+
+Het volgende nummer komt binnen enkele weken. Wil je een project bespreken in de tussentijd · antwoord op deze mail of boek een call · https://cal.com/christophevanengelen/30min
+
+Tot snel,
+Christophe`,
+    },
+    en: {
+      subject: 'Welcome · Service Design trade-offs',
+      body: `Hi,
+
+Thanks for subscribing · one mail per month, no more.
+What you'll get · Service Design trade-offs that worked, told short. 5-minute reads. No ads, no follow-ups.
+
+Next issue arrives in the coming weeks. Want to discuss a project before then · reply to this mail or book a call · https://cal.com/christophevanengelen/30min
+
+Talk soon,
+Christophe`,
+    },
+  };
+
+  const msg = messages[lang] || messages.fr;
+
+  const r = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: fromEmail,
+      to: email,
+      subject: msg.subject,
+      text: msg.body,
+    }),
+  });
+
+  if (!r.ok) {
+    const errBody = await r.text().catch(() => '');
+    throw new Error(`Resend returned ${r.status}: ${errBody.slice(0, 200)}`);
+  }
+  return r.json().catch(() => ({}));
 }
