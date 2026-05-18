@@ -89,14 +89,7 @@
     'bnp.hero.location': { fr: 'Bruxelles', nl: 'Brussel', en: 'Brussels' },
     /* ============== BRIDGE — jaquette → histoire ============== */
     /* ============== FIN ROYALE — onboarding intelligent (NEW 2026-04-30 s2) ============== */
-    /* CVE 2026-05-03 v9 · ligne d'or renforcée · audit Storyteller :
-       la version "La donnée vaut ce qu'on en fait" était générique (data analyst).
-       Nouvelle version signe le service designer · contient "décision". */
-    'bnp.fin.line': {
-      fr: 'La donnée ne vaut rien tant qu\'elle ne décide rien.',
-      nl: 'Data is niets waard zolang ze niets beslist.',
-      en: 'Data is worth nothing until it decides something.'
-    },
+    /* CVE 2026-05-18 · bnp.fin.line supprimé · cf. feedback_voix_pas_de_claim_aphorisme_fin_royale */
     'bnp.fin.contact.eyebrow': { fr: 'Une conversation ?', nl: 'Een gesprek?', en: 'A conversation?' },
     /* CVE 2026-05-17 NN-brutal · cut énumération "service design en amont, recherche
        utilisateur, atelier de cadrage" (déjà dit dans Formats home). -12 mots. */
@@ -890,9 +883,9 @@
     'bnp.triplewin.c3.who': { fr: 'The Cardholder · End Consumer', nl: 'The Cardholder · Eindconsument', en: 'The Cardholder · End Consumer' },
     'bnp.triplewin.c3.h':   { fr: 'Aucune donnée individuelle exposée.', nl: 'Geen individuele data blootgesteld.', en: 'No individual data exposed.' },
     'bnp.triplewin.c3.p': {
-      fr: 'Statistiques agrégées seulement, jamais une transaction nominative. GDPR dérisqué dès la value prop, validé Legal &amp; Compliance avant le build.',
-      nl: 'Enkel geaggregeerde statistieken, nooit een nominale transactie. GDPR gederisicood vanaf de value prop, gevalideerd door Legal &amp; Compliance vóór de build.',
-      en: 'Aggregated statistics only, never a named transaction. GDPR de-risked from the value prop onwards, validated by Legal &amp; Compliance before build.'
+      fr: 'Statistiques agrégées seulement, jamais une transaction nominative. GDPR dérisqué dès la value prop, validé Legal & Compliance avant le build.',
+      nl: 'Enkel geaggregeerde statistieken, nooit een nominale transactie. GDPR gederisicood vanaf de value prop, gevalideerd door Legal & Compliance vóór de build.',
+      en: 'Aggregated statistics only, never a named transaction. GDPR de-risked from the value prop onwards, validated by Legal & Compliance before build.'
     },
     'bnp.triplewin.claim': {
       fr: 'Toute idée qui ne validait pas les <span class="accent">trois sommets</span> était écartée. Trois critères, pas une moyenne.',
@@ -1211,7 +1204,7 @@
       en: 'A different maturity, a different toolkit. Stakeholder Map, Customer Journey AS-IS and 10 Pain Points for an early-stage transformation, all the way to 6 pre-validating pilot customers including Luminus.'
     },
 
-    'speos.chapResearch.overline': { fr: 'Discover · Observe &amp; Understand', nl: 'Discover · Observe &amp; Understand', en: 'Discover · Observe &amp; Understand' },
+    'speos.chapResearch.overline': { fr: 'Discover · Observe & Understand', nl: 'Discover · Observe & Understand', en: 'Discover · Observe & Understand' },
     'speos.chapResearch.label': { fr: 'Phase 01 · Research', nl: 'Fase 01 · Research', en: 'Phase 01 · Research' },
     'speos.chapResearch.ddCap': { fr: 'Vous êtes ici · Diamant 1 · moitié gauche · 4 jalons', nl: 'Hier ben je · Diamant 1 · linkerhelft · 4 mijlpalen', en: 'You are here · Diamond 1 · left half · 4 milestones' },
 
@@ -1265,8 +1258,7 @@
     'speos.lessons.l2.h': { fr: 'Rentrer par le Business, installer avec l\'IT.', nl: 'Binnenkomen via Business, installeren met IT.', en: 'Enter via Business, install with IT.' },
     'speos.lessons.l3.h': { fr: 'Show don\'t tell. L\'artefact bat le slide.', nl: 'Show don\'t tell. Het artefact wint van de slide.', en: 'Show don\'t tell. The artefact beats the slide.' },
 
-    /* Fin-royale SPEOS */
-    'speos.fin.line': { fr: 'La méthode ne vaut rien tant qu\'elle ne décide rien.', nl: 'De methode is niets waard zolang ze niets beslist.', en: 'A method is worth nothing until it decides something.' },
+    /* Fin-royale SPEOS · CVE 2026-05-18 · speos.fin.line supprimé · cf. feedback_voix_pas_de_claim_aphorisme_fin_royale */
     'speos.fin.signature': { fr: 'Christophe van Engelen · Service Designer · Bruxelles', nl: 'Christophe van Engelen · Service Designer · Brussel', en: 'Christophe van Engelen · Service Designer · Brussels' },
     'speos.fin.contact.eyebrow': { fr: 'Une conversation ?', nl: 'Een gesprek?', en: 'A conversation?' },
 
@@ -1509,37 +1501,6 @@
       nl: '<strong>Drie cases online. Drie getekende productiebeslissingen.</strong><span class="home-practice__sub">BNP · Léonidas getekend vóór de build. SPEOS · zes pilootklanten valideren. HMS · 2 M€ vrijgemaakt voor productie.</span>',
       en: '<strong>Three cases online. Three signed production decisions.</strong><span class="home-practice__sub">BNP · Léonidas signed before the build. SPEOS · six pilot customers validate. HMS · €2M secured for production.</span>'
     },
-    /* CVE 2026-05-11 audit action #1 · 3 formats commercial + Bon match / Pas bon match */
-    'home.formatsEyebrow': { fr: 'Formats', nl: 'Formats', en: 'Formats' },
-    'home.formatsH2': { fr: 'Trois façons de m\'engager.', nl: 'Drie manieren om met mij te werken.', en: 'Three ways to engage me.' },
-    'home.formatsLead': { fr: 'Le scope dicte le format. Pas l\'inverse.', nl: 'De scope dicteert het format. Niet andersom.', en: 'The scope dictates the format. Not the other way around.' },
-    'home.formats.durationLabel': { fr: 'Durée', nl: 'Duur', en: 'Duration' },
-    'home.formats.outputLabel': { fr: 'Livrable', nl: 'Oplevering', en: 'Output' },
-    'home.formats.budgetLabel': { fr: 'Ordre de grandeur', nl: 'Orde van grootte', en: 'Ballpark' },
-    'home.formats.f1Tag': { fr: 'Format 01', nl: 'Format 01', en: 'Format 01' },
-    'home.formats.f1Title': { fr: 'Sprint Discovery.', nl: 'Discovery Sprint.', en: 'Discovery Sprint.' },
-    'home.formats.f1Pitch': { fr: 'Une question stratégique, une semaine, une réponse défendable.', nl: 'Eén strategische vraag, één week, één verdedigbaar antwoord.', en: 'One strategic question, one week, one defensible answer.' },
-    'home.formats.f1Duration': { fr: '1 à 2 semaines', nl: '1 tot 2 weken', en: '1 to 2 weeks' },
-    'home.formats.f1Output': { fr: 'Synthèse + recommandation + roadmap court terme', nl: 'Synthese + aanbeveling + korte-termijn roadmap', en: 'Synthesis + recommendation + short-term roadmap' },
-    'home.formats.f1Budget': { fr: '<strong>8 — 15 k€</strong> · forfait', nl: '<strong>8 — 15 k€</strong> · forfait', en: '<strong>€8 — 15k</strong> · fixed' },
-    'home.formats.f2Tag': { fr: 'Format 02 · le plus demandé', nl: 'Format 02 · meest gevraagd', en: 'Format 02 · most requested' },
-    'home.formats.f2Title': { fr: 'Discovery + Concept.', nl: 'Discovery + Concept.', en: 'Discovery + Concept.' },
-    'home.formats.f2Pitch': { fr: 'De l\'écoute terrain au scope MVP signé. Le format des trois cases en ligne.', nl: 'Van veldonderzoek tot ondertekende MVP-scope. Het format van de drie cases online.', en: 'From field listening to a signed MVP scope. The format of the three live cases.' },
-    'home.formats.f2Duration': { fr: '3 à 6 mois', nl: '3 tot 6 maanden', en: '3 to 6 months' },
-    'home.formats.f2Output': { fr: 'Insights · Customer Journey · Value Proposition · Concept testé · roadmap', nl: 'Inzichten · Customer Journey · Value Proposition · Getest concept · roadmap', en: 'Insights · Customer Journey · Value Proposition · Tested concept · roadmap' },
-    'home.formats.f2Budget': { fr: '<strong>60 — 120 k€</strong> · TJM senior', nl: '<strong>60 — 120 k€</strong> · senior dagtarief', en: '<strong>€60 — 120k</strong> · senior day rate' },
-    'home.formats.f3Tag': { fr: 'Format 03', nl: 'Format 03', en: 'Format 03' },
-    'home.formats.f3Title': { fr: 'Advisory continu.', nl: 'Doorlopende advisory.', en: 'Ongoing advisory.' },
-    'home.formats.f3Pitch': { fr: 'Un design leader externe pour vos comités produit et arbitrages.', nl: 'Een externe design leader voor jullie productcomités en afwegingen.', en: 'An outside design leader for your product committees and trade-offs.' },
-    'home.formats.f3Duration': { fr: '2 à 4 jours / mois', nl: '2 tot 4 dagen / maand', en: '2 to 4 days / month' },
-    'home.formats.f3Output': { fr: 'Coaching équipe · revue critique · arbitrage scope', nl: 'Team coaching · kritische review · scope-afweging', en: 'Team coaching · critical review · scope arbitration' },
-    'home.formats.f3Budget': { fr: '<strong>3 — 6 k€</strong> · forfait mensuel', nl: '<strong>3 — 6 k€</strong> · maandelijks forfait', en: '<strong>€3 — 6k</strong> · monthly retainer' },
-    'home.formatsNote': {
-      fr: 'Tarifs indicatifs hors TVA · ajustés selon contexte. <a href="#contact">Premier call gratuit</a> pour cadrer.',
-      nl: 'Indicatieve tarieven excl. BTW · aangepast aan de context. <a href="#contact">Eerste call gratis</a> om af te bakenen.',
-      en: 'Indicative rates excl. VAT · adjusted to context. <a href="#contact">First call free</a> to scope it.'
-    },
-
     /* CVE 2026-05-04 S4.3 · "Voir tout l'historique" disclosure pour 4 missions
        2006-2015 masquées par défaut. */
     'home.trackMoreSummary': {
@@ -2024,9 +1985,9 @@
       en: 'Business was defending revenue. IT was building Agile in parallel. The UX function did not yet exist as a dedicated department. Three worlds to bring into the same conversation.'
     },
     'speos.tldr.t3': {
-      fr: '12 entretiens experts internes (CEO, CTO, R&amp;D, Operations). 6 clients pilotes interviewés, dont Luminus sur la facture énergie. Customer Journey workshop physique, persona Johnny au mur.',
-      nl: '12 interne expert-interviews (CEO, CTO, R&amp;D, Operations). 6 pilootklanten geïnterviewd, waaronder Luminus voor de energiefactuur. Customer Journey workshop fysiek, persona Johnny aan de muur.',
-      en: '12 internal expert interviews (CEO, CTO, R&amp;D, Operations). 6 pilot customers interviewed, including Luminus on energy billing. Physical Customer Journey workshop, persona Johnny on the wall.'
+      fr: '12 entretiens experts internes (CEO, CTO, R&D, Operations). 6 clients pilotes interviewés, dont Luminus sur la facture énergie. Customer Journey workshop physique, persona Johnny au mur.',
+      nl: '12 interne expert-interviews (CEO, CTO, R&D, Operations). 6 pilootklanten geïnterviewd, waaronder Luminus voor de energiefactuur. Customer Journey workshop fysiek, persona Johnny aan de muur.',
+      en: '12 internal expert interviews (CEO, CTO, R&D, Operations). 6 pilot customers interviewed, including Luminus on energy billing. Physical Customer Journey workshop, persona Johnny on the wall.'
     },
     'speos.tldr.t4': {
       fr: 'Concept Report 76 pages signé sponsor. 6 sur 6 clients valident. Trois segments marché (Large Accounts, Easy2Mail PME, API Integrators) priorisés en sprints SAFe. Équipe design intégrée à l\'organigramme.',
@@ -2316,11 +2277,6 @@
       fr: 'Cinq Value Props qui forment <strong>une seule boucle d\'expérience</strong>. Le client entre par l\'onboarding, monitore en continu, archive ses preuves, paie ce qu\'il consomme, et résout ses incidents en self-service. Le cycle reboucle sur le prochain produit, le prochain volume, le prochain canal.',
       nl: 'Vijf Value Props die <strong>één enkele ervaringslus</strong> vormen. De klant komt binnen via onboarding, monitort doorlopend, archiveert zijn bewijzen, betaalt wat hij verbruikt, en lost zijn incidenten op in self-service. De cyclus loopt opnieuw voor het volgende product, volume, kanaal.',
       en: 'Five Value Props forming <strong>a single experience loop</strong>. The client enters through onboarding, monitors continuously, archives proofs, pays for what they consume, and resolves incidents in self-service. The cycle loops back on the next product, the next volume, the next channel.'
-    },
-    'speos.prototype.cyclePhase2': {
-      fr: '<strong>5 livrables MVP sur 11 opportunités identifiées</strong> · les 6 autres (notamment <strong>Market Expansion</strong> internationale et <strong>Marketplace API</strong> Integrators) sont scopées <strong>MVP++ phase 2</strong>, après validation du host one-stop.',
-      nl: '<strong>5 MVP-livrables op 11 geïdentificeerde opportuniteiten</strong> · de 6 andere (met name <strong>Market Expansion</strong> internationaal en <strong>Marketplace API</strong> Integrators) zijn gescoped <strong>MVP++ fase 2</strong>, na validatie van de one-stop host.',
-      en: '<strong>5 MVP deliverables out of 11 identified opportunities</strong> · the 6 others (notably <strong>Market Expansion</strong> international and <strong>Marketplace API</strong> Integrators) are scoped <strong>MVP++ phase 2</strong>, after one-stop host validation.'
     },
     'speos.prototype.directionEyebrow': { fr: 'Phase 03 · Develop · 2 directions explorées', nl: 'Fase 03 · Develop · 2 verkende richtingen', en: 'Phase 03 · Develop · 2 directions explored' },
     'speos.prototype.directionLead': {
@@ -2951,7 +2907,7 @@
     },
     'speos.analyse.opp1Name': { fr: 'Enhanced Customer Experience', nl: 'Enhanced Customer Experience', en: 'Enhanced Customer Experience' },
     'speos.analyse.opp1Desc': { fr: 'Self-service, real-time tracking, personalized dashboards par segment.', nl: 'Self-service, real-time tracking, personalized dashboards per segment.', en: 'Self-service, real-time tracking, personalized dashboards per segment.' },
-    'speos.analyse.opp2Name': { fr: 'Automation &amp; Scalability', nl: 'Automation &amp; Scalability', en: 'Automation &amp; Scalability' },
+    'speos.analyse.opp2Name': { fr: 'Automation & Scalability', nl: 'Automation & Scalability', en: 'Automation & Scalability' },
     'speos.analyse.opp2Desc': { fr: 'Automate repetitive tasks, intégrations API, self-onboarding pour les SMEs.', nl: 'Automate repetitive tasks, API-integraties, self-onboarding voor KMO\'s.', en: 'Automate repetitive tasks, API integrations, self-onboarding for SMEs.' },
     'speos.analyse.opp3Name': { fr: 'Multi-Channel Integration', nl: 'Multi-Channel Integration', en: 'Multi-Channel Integration' },
     'speos.analyse.opp3Desc': { fr: 'Email, SMS, print unifiés. Fallback automatique si un canal échoue.', nl: 'Email, SMS, print verenigd. Automatische fallback als een kanaal faalt.', en: 'Email, SMS, print unified. Automatic fallback if a channel fails.' },
@@ -2982,7 +2938,7 @@
     'speos.method.comp.r1Best': { fr: 'Work with UX to define expectations.', nl: 'Werkt met UX om verwachtingen te definiëren.', en: 'Work with UX to define expectations.' },
     'speos.method.comp.r2Dim': { fr: '<strong>IT (Technology)</strong>', nl: '<strong>IT (Technology)</strong>', en: '<strong>IT (Technology)</strong>' },
     'speos.method.comp.r2Classic': { fr: 'Implements solutions.', nl: 'Implementeert oplossingen.', en: 'Implements solutions.' },
-    'speos.method.comp.r2Best': { fr: 'Focus on architecture &amp; delivery.', nl: 'Focus op architectuur &amp; delivery.', en: 'Focus on architecture &amp; delivery.' },
+    'speos.method.comp.r2Best': { fr: 'Focus on architecture & delivery.', nl: 'Focus op architectuur & delivery.', en: 'Focus on architecture & delivery.' },
     'speos.method.comp.r3Dim': { fr: '<strong>UX (Users)</strong>', nl: '<strong>UX (Users)</strong>', en: '<strong>UX (Users)</strong>' },
     'speos.method.comp.r3Classic': { fr: 'Rare or integrated into IT.', nl: 'Zeldzaam of in IT geïntegreerd.', en: 'Rare or integrated into IT.' },
     'speos.method.comp.r3Best': { fr: '<strong>Dedicated, cross-functional, strategic department.</strong>', nl: '<strong>Toegewijde, cross-functionele, strategische afdeling.</strong>', en: '<strong>Dedicated, cross-functional, strategic department.</strong>' },
@@ -3158,9 +3114,9 @@
       en: 'Ewon sold industrial routers. IXON arrived with a cloud-native platform on the same IIoT segment. Three legacy apps (eCatcher, M2Web, Talk2M) to reunify without breaking the worldwide installed base.'
     },
     'hms.tldr.t2': {
-      fr: 'R&amp;D, produit, business, service après-vente, support · cinq départements, cinq lectures du client. Cinq voix à réunir dans la même salle.',
-      nl: 'R&amp;D, product, business, after-sales, support · vijf afdelingen, vijf lezingen van de klant. Vijf stemmen om in dezelfde kamer samen te brengen.',
-      en: 'R&amp;D, product, business, after-sales, support · five departments, five readings of the customer. Five voices to bring into the same room.'
+      fr: 'R&D, produit, business, service après-vente, support · cinq départements, cinq lectures du client. Cinq voix à réunir dans la même salle.',
+      nl: 'R&D, product, business, after-sales, support · vijf afdelingen, vijf lezingen van de klant. Vijf stemmen om in dezelfde kamer samen te brengen.',
+      en: 'R&D, product, business, after-sales, support · five departments, five readings of the customer. Five voices to bring into the same room.'
     },
     'hms.tldr.t3': {
       fr: 'Douze mois. Tous les chefs de département autour de la table en ateliers Customer Journey. Heuristic Evaluation Nielsen sur les écrans. 8 machine builders testés sur 5 fuseaux horaires.',
@@ -3203,9 +3159,9 @@
       en: 'Phase 01 · Research'
     },
     'hms.chapResearch.overline': {
-      fr: 'Discover · Observe &amp; Understand',
-      nl: 'Discover · Observeren &amp; Begrijpen',
-      en: 'Discover · Observe &amp; Understand'
+      fr: 'Discover · Observe & Understand',
+      nl: 'Discover · Observeren & Begrijpen',
+      en: 'Discover · Observe & Understand'
     },
     'hms.chapResearch.ddCap': {
       fr: 'Vous êtes ici · Diamant 1 · moitié gauche · 4 jalons',
@@ -3233,9 +3189,9 @@
       en: 'Full document available on request'
     },
     'hms.concept.delivSourceRef': {
-      fr: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS &amp; TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 mockups Phoenix HD + 44 screens dashboard ingénieur.',
-      nl: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS &amp; TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 Phoenix HD-mockups + 44 schermen engineer dashboard.',
-      en: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS &amp; TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 Phoenix HD mockups + 44 engineer dashboard screens.'
+      fr: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS & TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 mockups Phoenix HD + 44 screens dashboard ingénieur.',
+      nl: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS & TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 Phoenix HD-mockups + 44 schermen engineer dashboard.',
+      en: 'HMS Strategic Process Proposal 14p + HMS Design Thinking Strategy 14p + Phoenix AS-IS & TO-BE 43p + Heuristic Evaluation 29 slides + Roadmap HMS 40p + 6 Phoenix HD mockups + 44 engineer dashboard screens.'
     },
     'hms.concept.toc1Title': {
       fr: 'Introduction',
@@ -3248,9 +3204,9 @@
       en: 'Stakeholder Map'
     },
     'hms.concept.toc3Title': {
-      fr: 'Segmentation &amp; Personas',
-      nl: 'Segmentatie &amp; Persona\'s',
-      en: 'Segmentation &amp; Personas'
+      fr: 'Segmentation & Personas',
+      nl: 'Segmentatie & Persona\'s',
+      en: 'Segmentation & Personas'
     },
     'hms.concept.toc4Title': {
       fr: 'Journey AS IS vs TO BE',
@@ -3438,9 +3394,9 @@
       en: 'The cloud-native freemium opens the End-User Plants segment left to IXON. The unified portal across eCatcher, M2Web and Talk2M frees Ewon from legacy fragmentation. The IIoT leadership position against cloud-native pure players consolidates as a decade of industrial IoT growth approaches.'
     },
     'hms.triplewin.c3.who': {
-      fr: 'Tech · IT &amp; Engineering',
-      nl: 'Tech · IT &amp; Engineering',
-      en: 'Tech · IT &amp; Engineering'
+      fr: 'Tech · IT & Engineering',
+      nl: 'Tech · IT & Engineering',
+      en: 'Tech · IT & Engineering'
     },
     'hms.triplewin.c3.h': {
       fr: 'Une stack, pas cinq.',
@@ -3452,11 +3408,7 @@
       nl: 'Orchestratie vervangt de geërfde silo\'s. Layered API-fication, observable pipeline, automatische fallback tussen kanalen. IT onderhoudt één platform, geen vijf geërfde schulden meer.',
       en: 'Orchestration replaces the legacy silos. Layered API-fication, observable pipeline, automatic fallback between channels. IT maintains one platform, not five inherited debts.'
     },
-    'hms.fin.line': {
-      fr: 'La méthode ne vaut rien tant qu\'elle ne décide rien.',
-      nl: 'Methode is niets waard zolang ze niets beslist.',
-      en: 'Method is worthless until it decides something.'
-    },
+    /* CVE 2026-05-18 · hms.fin.line supprimé · cf. feedback_voix_pas_de_claim_aphorisme_fin_royale */
     'hms.fin.signature': {
       fr: 'Christophe van Engelen · Service Designer · Bruxelles',
       nl: 'Christophe van Engelen · Service Designer · Brussel',
@@ -3538,14 +3490,14 @@
       en: '« Hold the mandate over twelve months. »'
     },
     'hms.alignment.f3.p': {
-      fr: 'Friction · garder R&amp;D, produit, business et service après-vente autour de la même table sans dévier. Les frictions AS-IS plateforme par plateforme, le gap TO-BE mesuré, et le story mapping sprint Agile ont produit un Concept Report priorisé · 2 M€ obtenus en comité par le sponsor.',
-      nl: 'Frictie · R&amp;D, product, business en after-sales rond dezelfde tafel houden zonder af te wijken. De AS-IS frictie platform per platform, de gemeten TO-BE gap, en het story mapping Agile sprint hebben een geprioriteerd Concept Report opgeleverd · 2 M€ binnengehaald in comité door de sponsor.',
-      en: 'Friction · keeping R&amp;D, product, business and after-sales around the same table without drifting. The AS-IS friction per platform, the measured TO-BE gap, and Agile sprint story mapping produced a prioritised Concept Report · €2M secured in committee by the sponsor.'
+      fr: 'Friction · garder R&D, produit, business et service après-vente autour de la même table sans dévier. Les frictions AS-IS plateforme par plateforme, le gap TO-BE mesuré, et le story mapping sprint Agile ont produit un Concept Report priorisé · 2 M€ obtenus en comité par le sponsor.',
+      nl: 'Frictie · R&D, product, business en after-sales rond dezelfde tafel houden zonder af te wijken. De AS-IS frictie platform per platform, de gemeten TO-BE gap, en het story mapping Agile sprint hebben een geprioriteerd Concept Report opgeleverd · 2 M€ binnengehaald in comité door de sponsor.',
+      en: 'Friction · keeping R&D, product, business and after-sales around the same table without drifting. The AS-IS friction per platform, the measured TO-BE gap, and Agile sprint story mapping produced a prioritised Concept Report · €2M secured in committee by the sponsor.'
     },
     'hms.alignment.f4.fn': {
-      fr: 'UI &amp; UX · Ewon interne',
-      nl: 'UI &amp; UX · Ewon intern',
-      en: 'UI &amp; UX · Ewon internal'
+      fr: 'UI & UX · Ewon interne',
+      nl: 'UI & UX · Ewon intern',
+      en: 'UI & UX · Ewon internal'
     },
     'hms.alignment.f4.h': {
       fr: '« Pas de design system, pas de librairie. »',
@@ -3976,9 +3928,9 @@
       en: 'Direct visibility on what breaks at the end-customer side.'
     },
     'hms.research.it6Name': {
-      fr: 'Operations &amp; Production',
-      nl: 'Operations &amp; Production',
-      en: 'Operations &amp; Production'
+      fr: 'Operations & Production',
+      nl: 'Operations & Production',
+      en: 'Operations & Production'
     },
     'hms.research.it6Quote': {
       fr: '« On absorbe les ratés en bout de chaîne. Tous les jours. »',
@@ -4066,9 +4018,9 @@
       en: 'Cloud-native segment left open by the pure-players'
     },
     'hms.research.seg2Name': {
-      fr: 'Plants industriels &amp; PMI',
-      nl: 'Industriële plants &amp; KMO',
-      en: 'Industrial plants &amp; SMEs'
+      fr: 'Plants industriels & PMI',
+      nl: 'Industriële plants & KMO',
+      en: 'Industrial plants & SMEs'
     },
     'hms.research.seg2Sig': {
       fr: 'Signature · standardisation, self-service',
@@ -4096,9 +4048,9 @@
       en: 'Growth lever beyond the historical key accounts'
     },
     'hms.research.seg3Name': {
-      fr: 'Integrators &amp; resellers',
-      nl: 'Integrators &amp; resellers',
-      en: 'Integrators &amp; resellers'
+      fr: 'Integrators & resellers',
+      nl: 'Integrators & resellers',
+      en: 'Integrators & resellers'
     },
     'hms.research.seg3Sig': {
       fr: 'Signature · partenaires, Ewon embarqué',
@@ -4138,9 +4090,9 @@
       en: 'Onboarding that takes months.'
     },
     'hms.cjm.pp3': {
-      fr: 'Tool Complexity &amp; Fragmentation',
-      nl: 'Tool Complexity &amp; Fragmentation',
-      en: 'Tool Complexity &amp; Fragmentation'
+      fr: 'Tool Complexity & Fragmentation',
+      nl: 'Tool Complexity & Fragmentation',
+      en: 'Tool Complexity & Fragmentation'
     },
     'hms.cjm.pp3Hint': {
       fr: 'Plateformes par segment, ne se parlent pas.',
@@ -4148,9 +4100,9 @@
       en: 'Platforms by segment, do not talk to each other.'
     },
     'hms.cjm.pp4': {
-      fr: 'Lack of Automation &amp; Standardization',
-      nl: 'Lack of Automation &amp; Standardization',
-      en: 'Lack of Automation &amp; Standardization'
+      fr: 'Lack of Automation & Standardization',
+      nl: 'Lack of Automation & Standardization',
+      en: 'Lack of Automation & Standardization'
     },
     'hms.cjm.pp4Hint': {
       fr: 'Workflows manuels, erreurs en chaîne.',
@@ -4223,9 +4175,9 @@
       en: 'Scoping, quote, signature.'
     },
     'hms.cjm.s2Name': {
-      fr: 'Contact &amp; brief',
-      nl: 'Contact &amp; brief',
-      en: 'Contact &amp; brief'
+      fr: 'Contact & brief',
+      nl: 'Contact & brief',
+      en: 'Contact & brief'
     },
     'hms.cjm.s3Desc': {
       fr: 'Setup Talk2M. Mise en service Flexy, tunnel sécurisé.',
@@ -4253,9 +4205,9 @@
       en: 'SLA reporting, self-service support, volume billing.'
     },
     'hms.cjm.s5Name': {
-      fr: 'Suivi &amp; expansion',
-      nl: 'Opvolging &amp; uitbreiding',
-      en: 'Follow-up &amp; expansion'
+      fr: 'Suivi & expansion',
+      nl: 'Opvolging & uitbreiding',
+      en: 'Follow-up & expansion'
     },
 
     /* Section · hms.analyse.* */
@@ -4315,9 +4267,9 @@
       en: 'API, self-onboarding for SMEs.'
     },
     'hms.analyse.opp2Name': {
-      fr: 'Automation &amp; Scalability',
-      nl: 'Automation &amp; Scalability',
-      en: 'Automation &amp; Scalability'
+      fr: 'Automation & Scalability',
+      nl: 'Automation & Scalability',
+      en: 'Automation & Scalability'
     },
     'hms.analyse.opp3Desc': {
       fr: 'Email, SMS, print unifiés. Fallback automatique.',
@@ -4886,14 +4838,9 @@
 
     /* Section · hms.prototype.* */
     'hms.prototype.cycleCaption': {
-      fr: 'Cinq Value Props qui forment <strong>une boucle d\'expérience</strong>. Onboarding, monitoring, archives, billing, support self-service.',
-      nl: 'Vijf Value Props die <strong>één ervaringslus</strong> vormen. Onboarding, monitoring, archieven, billing, self-service support.',
-      en: 'Five Value Props that form <strong>a single experience loop</strong>. Onboarding, monitoring, archives, billing, self-service support.'
-    },
-    'hms.prototype.cyclePhase2': {
-      fr: '<strong>5 livrables MVP sur 11 opportunités</strong> · les 6 autres (<strong>Market Expansion</strong>, <strong>Marketplace API</strong>) scopées <strong>MVP++ phase 2</strong>.',
-      nl: '<strong>5 MVP opleveringen op 11 opportuniteiten</strong> · de 6 andere (<strong>Market Expansion</strong>, <strong>Marketplace API</strong>) in scope van <strong>MVP++ fase 2</strong>.',
-      en: '<strong>5 MVP deliverables out of 11 opportunities</strong> · the 6 others (<strong>Market Expansion</strong>, <strong>Marketplace API</strong>) scoped to <strong>MVP++ phase 2</strong>.'
+      fr: 'Cinq Value Props · <strong>boucle machine builder</strong>. Pairing Flexy, observabilité flotte, traces signées, facture réconciliée, diagnostic in-app.',
+      nl: 'Vijf Value Props · <strong>machinebouwer-lus</strong>. Flexy-pairing, vloot-observability, gesigneerde logs, gereconcilieerde facturen, in-app diagnose.',
+      en: 'Five Value Props · <strong>a machine builder loop</strong>. Flexy pairing, fleet observability, signed audit trail, reconciled invoicing, in-app diagnostics.'
     },
     'hms.prototype.directionEyebrow': {
       fr: 'Prototype · premiers drafts',
@@ -5291,9 +5238,9 @@
       en: 'See the flows <span class="accent">live.</span>'
     },
     'hms.prototype.vp3Eyebrow': {
-      fr: 'VP 03 + VP 04 · Reports &amp; Billing',
-      nl: 'VP 03 + VP 04 · Reports &amp; Billing',
-      en: 'VP 03 + VP 04 · Reports &amp; Billing'
+      fr: 'VP 03 + VP 04 · Reports & Billing',
+      nl: 'VP 03 + VP 04 · Reports & Billing',
+      en: 'VP 03 + VP 04 · Reports & Billing'
     },
     'hms.prototype.vp3F1h': {
       fr: 'Audit-ready by default',
@@ -5331,9 +5278,9 @@
       en: 'Reference on request'
     },
     'hms.prototype.vp3SourceRef': {
-      fr: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail &amp; Diagnostics + VP 04 Service Level Reporting',
-      nl: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail &amp; Diagnostics + VP 04 Service Level Reporting',
-      en: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail &amp; Diagnostics + VP 04 Service Level Reporting'
+      fr: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail & Diagnostics + VP 04 Service Level Reporting',
+      nl: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail & Diagnostics + VP 04 Service Level Reporting',
+      en: 'HMS Heuristic Evaluation 2021 · VP 03 Audit Trail & Diagnostics + VP 04 Service Level Reporting'
     },
     'hms.prototype.vp3Statement': {
       fr: '<span class="vp-statement__lab">Value Proposition · verbatim Strategic Process Proposal HMS</span> <p><strong>Audit Trail &amp; Diagnostics</strong> aident <strong>Compliance, Operations, Engineering</strong> à <strong>tracer chaque session et rester conformes</strong> · logs signés Talk2M, preuves IEC 62443 et SOC 2.</p>',
@@ -5593,9 +5540,9 @@
       en: '3 market segments'
     },
     'hms.snm.r4': {
-      fr: '2 personas illustratifs · Klaus &amp; Sven',
-      nl: '2 illustratieve personas · Klaus &amp; Sven',
-      en: '2 illustrative personas · Klaus &amp; Sven'
+      fr: '2 personas illustratifs · Klaus & Sven',
+      nl: '2 illustratieve personas · Klaus & Sven',
+      en: '2 illustrative personas · Klaus & Sven'
     },
     'hms.snm.vp': {
       fr: 'VP cristallisation',

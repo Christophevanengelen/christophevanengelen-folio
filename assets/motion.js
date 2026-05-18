@@ -1613,7 +1613,6 @@
     const sec = document.querySelector('.fin-royale');
     if (!sec) return;
     const psText = sec.querySelector('.fin-royale__ps-text');
-    const closeLine = sec.querySelector('.fin-royale__line');
     const path = sec.querySelector('.fin-royale__path');
     const sub = sec.querySelector('.fin-royale__path-sub');
     const sig = sec.querySelector('.fin-royale__signature');
@@ -1651,33 +1650,6 @@
         trigger: sec, start: 'top 75%', once: true,
         onEnter: () => {
           gsap.to(words, { opacity: 1, y: 0, duration: 0.5, ease: 'expo.out', stagger: 0.06 });
-        },
-      });
-    }
-
-    /* Closing line · typewriter effect */
-    if (closeLine && !isReduced) {
-      const text = closeLine.textContent.trim();
-      ScrollTrigger.create({
-        trigger: closeLine, start: 'top 80%', once: true,
-        onEnter: () => {
-          closeLine.textContent = '';
-          closeLine.classList.add('is-typing');
-          let i = 0;
-          const tick = () => {
-            if (i <= text.length) {
-              closeLine.textContent = text.slice(0, i);
-              i++;
-              setTimeout(tick, 38);
-            } else {
-              closeLine.classList.remove('is-typing');
-              closeLine.classList.add('is-typed');
-              /* Pulse subtle amber après fin du typing */
-              setTimeout(() => closeLine.classList.add('is-glowing'), 400);
-            }
-          };
-          /* Délai avant typing pour laisser le postscript respirer */
-          setTimeout(tick, 600);
         },
       });
     }
@@ -1938,18 +1910,8 @@
   /* ── Fin Royale : close line, paths, signature — sequential entry */
   const finEl = document.querySelector('.fin-royale');
   if (finEl) {
-    const finLine = finEl.querySelector('.fin-royale__line');
     const finPaths = finEl.querySelectorAll('.fin-royale__path');
     const finSig = finEl.querySelector('.fin-royale__signature');
-
-    if (finLine) {
-      gsap.fromTo(finLine,
-        { opacity: 0, y: 22 },
-        { opacity: 1, y: 0, duration: 0.95, ease: 'expo.out',
-          scrollTrigger: { trigger: finLine, start: 'top 78%', toggleActions: 'play none none reverse' },
-        },
-      );
-    }
 
     if (finPaths.length) {
       gsap.fromTo(finPaths,

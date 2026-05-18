@@ -5196,11 +5196,13 @@ html.theme-light .goal-cycle__lab--active { fill: #ffffff; }
   .storyline.is-stuck .snm-group__name::before { font-size: 12px; }
 }
 @media (max-width: 540px) {
-  /* Hide name text on very small, keep only number + mini DD */
-  .storyline.is-stuck .snm-group__name { font-size: 0; gap: 0; }
-  .storyline.is-stuck .snm-group__name::before { font-size: 14px; }
+  /* CVE 2026-05-18 · mobile · diamants seuls.
+     Cache labels + counters · garde seulement les gems (INTAKE/VP/CR)
+     et les dd-pill (connecteurs entre phases). */
+  .storyline.is-stuck .snm-group__name { display: none; }
   .storyline.is-stuck .dd-pill { width: 30px; }
   .storyline.is-stuck .snm-group--bridge .dd-pill { width: 24px; }
+  .storyline.is-stuck .snm-group { padding: 10px 4px; gap: 4px; }
 }
 
 @media (max-width: 760px) {
@@ -6708,22 +6710,8 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
   justify-content: center;
 }
 
-/* CVE 2026-05-03 · FIN ROYALE délice · typewriter + particules + hover details */
-.fin-royale__line.is-typing::after {
-  content: "▍";
-  display: inline-block;
-  margin-left: 4px;
-  color: var(--amber);
-  animation: fr-cursor 0.6s steps(2) infinite;
-}
-@keyframes fr-cursor {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
-}
-.fin-royale__line.is-glowing {
-  text-shadow: 0 0 24px color-mix(in srgb, var(--amber) 25%, transparent);
-  transition: text-shadow 1.2s ease;
-}
+/* CVE 2026-05-03 · FIN ROYALE délice · particules + hover details
+   CVE 2026-05-18 · cut .fin-royale__line typewriter+glow rules (claim aphorisme retiré) */
 .fin-royale .fr-word {
   display: inline-block;
 }
@@ -6774,7 +6762,6 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
   100% { transform: translateY(-95vh) scale(0.4); opacity: 0; }
 }
 .fin-royale__signature,
-.fin-royale__close,
 .fin-royale__paths,
 .fin-royale__postscript {
   position: relative;
@@ -6782,7 +6769,6 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
 }
 @media (prefers-reduced-motion: reduce) {
   .fin-royale__particles { display: none; }
-  .fin-royale__line.is-typing::after { display: none; }
 }
 .fin-royale__path-sub {
   font-family: var(--sans);
@@ -6798,20 +6784,6 @@ footer .sig { color: var(--fg-muted); font-size: 12px; margin-top: 50px; padding
   width: 1px; height: 60px;
   background: linear-gradient(to bottom, transparent, var(--amber), transparent);
   opacity: 0.35;
-}
-.fin-royale__close {
-  max-width: 70ch;
-  margin: 0 auto;
-  text-align: center;
-}
-.fin-royale__line {
-  font-family: var(--display);
-  font-weight: 200;
-  font-size: clamp(28px, 4vw, 56px);
-  line-height: 1.18;
-  letter-spacing: -0.025em;
-  color: var(--fg);
-  margin: 0;
 }
 .fin-royale__paths {
   display: grid;
@@ -8772,146 +8744,7 @@ select:focus-visible {
   .home-practice__sub { font-size: 14px; margin-top: 8px; }
 }
 
-/* HOME FORMATS · CVE 2026-05-11 audit action #1 · 3 cards sobres avec
-   meta dl · pattern Apple-pricing-page · centre = format featured. */
-.home-formats {
-  padding-block: clamp(80px, 12vh, 140px);
-  border-top: 1px solid var(--border);
-}
-.home-formats .eyebrow {
-  display: block;
-  font-family: var(--sans);
-  font-size: var(--font-micro);
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 24px;
-}
-.home-formats__h2 {
-  font-family: var(--display);
-  font-weight: 300;
-  font-size: clamp(28px, 3.5vw, 44px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: 0 0 12px;
-  color: var(--fg);
-}
-.home-formats__lead {
-  font-family: var(--display);
-  font-weight: 300;
-  font-size: clamp(16px, 1.4vw, 19px);
-  line-height: 1.55;
-  color: var(--fg-muted);
-  margin: 0 0 clamp(40px, 6vh, 64px);
-  max-width: 56ch;
-}
-.home-formats__list {
-  list-style: none;
-  margin: 0; padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(16px, 2vw, 28px);
-}
-.home-formats__card {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: clamp(24px, 3vw, 36px);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--bg);
-  transition: border-color 220ms ease, transform 280ms ease;
-}
-.home-formats__card:hover {
-  border-color: color-mix(in oklab, var(--amber) 35%, var(--border));
-  transform: translateY(-2px);
-}
-.home-formats__card--featured {
-  border-color: color-mix(in oklab, var(--amber) 45%, var(--border));
-  background: color-mix(in oklab, var(--amber) 4%, var(--bg));
-}
-.home-formats__tag {
-  font-family: var(--sans);
-  font-size: var(--font-micro);
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--amber);
-  opacity: 0.9;
-}
-.home-formats__title {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(22px, 2.2vw, 28px);
-  line-height: 1.2;
-  letter-spacing: -0.012em;
-  color: var(--fg);
-  margin: 0;
-}
-.home-formats__pitch {
-  font-family: var(--display);
-  font-weight: 300;
-  font-size: clamp(15px, 1.2vw, 17px);
-  line-height: 1.55;
-  color: var(--fg-muted);
-  margin: 0 0 8px;
-  min-height: 3.3em;
-}
-.home-formats__meta {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 0;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-}
-.home-formats__row {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 12px;
-  align-items: baseline;
-}
-.home-formats__row dt {
-  font-family: var(--sans);
-  font-size: var(--font-micro);
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--fg-muted);
-  margin: 0;
-}
-.home-formats__row dd {
-  font-family: var(--display);
-  font-weight: 300;
-  font-size: clamp(14px, 1.1vw, 16px);
-  line-height: 1.45;
-  color: var(--fg);
-  margin: 0;
-}
-.home-formats__row dd strong {
-  font-weight: 500;
-  color: var(--fg);
-}
-.home-formats__note {
-  margin: clamp(28px, 4vh, 40px) 0 0;
-  font-family: var(--sans);
-  font-size: clamp(13px, 1vw, 14px);
-  line-height: 1.55;
-  color: var(--fg-muted);
-  text-align: center;
-}
-.home-formats__note a {
-  color: var(--amber);
-  border-bottom: 1px solid color-mix(in oklab, var(--amber) 30%, transparent);
-}
-.home-formats__note a:hover {
-  border-bottom-color: var(--amber);
-}
-@media (max-width: 960px) {
-  .home-formats__list { grid-template-columns: 1fr; }
-  .home-formats__pitch { min-height: 0; }
-}
+/* CVE 2026-05-18 · HOME FORMATS dead CSS retiré · section pricing removed 2026-05-17 */
 
 /* HOME TRACK · liste textuelle 3 colonnes · format CV européen */
 .home-track {
