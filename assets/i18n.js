@@ -16,19 +16,6 @@
       en: 'Skip to main content'
     },
     'nav.brand': { fr: 'Christophe van Engelen', nl: 'Christophe van Engelen', en: 'Christophe van Engelen' },
-    'nav.role': { fr: 'Service Designer · Freelance', nl: 'Service Designer · Freelance', en: 'Service Designer · Freelance' },
-    'nav.cases': { fr: 'Études de cas', nl: 'Case studies', en: 'Case studies' },
-    'nav.back': { fr: '← Retour au portfolio', nl: '← Terug naar portfolio', en: '← Back to portfolio' },
-    'nav.backCase': { fr: '← Retour au case BNP', nl: '← Terug naar BNP-case', en: '← Back to BNP case' },
-    'nav.luminusPill': { fr: 'Pitch Luminus', nl: 'Luminus-pitch', en: 'Luminus pitch' },
-
-    'footer.thanks': { fr: 'Merci.', nl: 'Dank u.', en: 'Thank you.' },
-    'footer.lookForward': { fr: 'Au plaisir de la conversation.', nl: 'Ik kijk uit naar het gesprek.', en: 'I look forward to the conversation.' },
-    'footer.contact': { fr: 'Contact', nl: 'Contact', en: 'Contact' },
-    'footer.for': { fr: 'Préparé pour', nl: 'Voorbereid voor', en: 'Prepared for' },
-    'footer.forCompany': { fr: 'Luminus', nl: 'Luminus', en: 'Luminus' },
-    'footer.forSubtitle': { fr: 'Entretien Service Designer', nl: 'Sollicitatiegesprek Service Designer', en: 'Service Designer interview' },
-    'footer.forDate': { fr: 'Avril 2026', nl: 'April 2026', en: 'April 2026' },
     'footer.copy': {
       fr: '© Christophe van Engelen, 2026. Artefacts originaux © BNP Paribas Fortis 2017–2018, repris ici pour illustration de portfolio.',
       nl: '© Christophe van Engelen, 2026. Originele artefacten © BNP Paribas Fortis 2017–2018, hier gebruikt ter illustratie van portfolio.',
@@ -36,21 +23,6 @@
     },
 
     /* ============== PORTFOLIO INDEX ============== */
-    /* CVE 2026-05-04 S0.2 · titre + meta resserrés pour SEO ·
-       title < 65 chars (limite SERP Google), desc 155-160 chars max. */
-    'home.title': {
-      fr: 'Christophe van Engelen — Service Design · UX · CX · Freelance Bruxelles',
-      nl: 'Christophe van Engelen — Service Design · UX · CX · Freelance Brussel',
-      en: 'Christophe van Engelen — Service Design · UX · CX · Freelance Brussels'
-    },
-    /* CVE 2026-05-11 audit team-review Pack v4-final · consensus de 6 reviewers
-       indépendants (5 Anthropic agents + Codex GPT-5) · score moyen 85/100.
-       Voix Lou Downe / Cagan · humble, française native, end-to-end UI→Partner. */
-    'home.metaDesc': {
-      fr: 'Service Design · UX · CX freelance à Bruxelles. Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche.',
-      nl: 'Service Design · UX · CX freelance in Brussel. Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, kadreer, beslis.',
-      en: 'Service Design · UX · CX freelance in Brussels. Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide.'
-    },
     'home.eyebrow': {
       fr: 'Service Design · UX · CX · Bruxelles',
       nl: 'Service Design · UX · CX · Brussel',
@@ -67,18 +39,6 @@
       en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases below.'
     },
     'home.casesEyebrow': { fr: 'Travaux sélectionnés', nl: 'Geselecteerd werk', en: 'Selected work' },
-    'home.casesH2': {
-      fr: 'Deux missions. <span class="accent">Deux décisions de production signées.</span>',
-      nl: 'Twee opdrachten. <span class="accent">Twee getekende productiebeslissingen.</span>',
-      en: 'Two missions. <span class="accent">Two signed production decisions.</span>'
-    },
-    'home.casesIntro': {
-      fr: 'Cliquez la carte pour ouvrir le cas. Pour Luminus, j\'ai écrit séparément ma manière d\'aborder les 90 premiers jours du rôle.',
-      nl: 'Klik op de kaart om de case te openen. Voor Luminus schreef ik apart mijn aanpak voor de eerste 90 dagen van de rol.',
-      en: 'Click the card to open the case. For Luminus, I wrote separately how I would approach the first 90 days of the role.'
-    },
-    'home.openCase': { fr: 'Ouvrir le cas →', nl: 'Open de case →', en: 'Open the case →' },
-
     /* Deck flipper UI */
     'deck.cta': { fr: 'Parcourir le deck source', nl: 'Bron-deck doorbladeren', en: 'Browse the source deck' },
     'deck.prev': { fr: 'Précédent', nl: 'Vorige', en: 'Previous' },
@@ -89,15 +49,6 @@
       nl: '← → om te navigeren · Esc om te sluiten',
       en: '← → to navigate · Esc to close'
     },
-    'home.luminusCTA': {
-      fr: 'Voir comment j\'aborderais le rôle chez Luminus →',
-      nl: 'Zie hoe ik de rol bij Luminus zou aanpakken →',
-      en: 'See how I\'d approach the role at Luminus →'
-    },
-    'home.year': { fr: 'Année', nl: 'Jaar', en: 'Year' },
-    'home.role': { fr: 'Rôle', nl: 'Rol', en: 'Role' },
-    'home.client': { fr: 'Client', nl: 'Klant', en: 'Client' },
-
     'case.bnp.tag': { fr: 'Cas principal', nl: 'Hoofdcase', en: 'Headline case' },
     'case.bnp.title': { fr: 'Enterprise Intelligence.', nl: 'Enterprise Intelligence.', en: 'Enterprise Intelligence.' },
     'case.bnp.subtitle': {
@@ -108,21 +59,6 @@
     'case.bnp.client': { fr: 'BNP Paribas Fortis', nl: 'BNP Paribas Fortis', en: 'BNP Paribas Fortis' },
     'case.bnp.year': { fr: '2018 – 2019', nl: '2018 – 2019', en: '2018 – 2019' },
     'case.bnp.role': { fr: 'Service Designer · Freelance', nl: 'Service Designer · Freelance', en: 'Service Designer · Freelance' },
-
-    /* ============== BNP CASE STUDY ============== */
-    'bnp.title': {
-      fr: 'Enterprise Intelligence chez BNP Paribas Fortis · Étude de cas Service Design par Christophe van Engelen',
-      nl: 'Enterprise Intelligence bij BNP Paribas Fortis · Service Design Case Study door Christophe van Engelen',
-      en: 'Enterprise Intelligence at BNP Paribas Fortis · Service Design Case Study by Christophe van Engelen'
-    },
-    'bnp.metaDesc': {
-      fr: 'Étude de cas en service design : la donnée transactionnelle d\'une banque devient un service payant pour les PME. Recherche réelle, wireframes réels, résultats Léonidas réels.',
-      nl: 'Service design case study : de transactiedata van een bank wordt een betalende dienst voor kmo\'s. Echt onderzoek, echte wireframes, echte Léonidas-resultaten.',
-      en: 'Service design case study : a bank\'s transactional data turned into a paying service for SME merchants. Real research, real wireframes, real Léonidas results.'
-    },
-
-    'bnp.nav.pill1': { fr: 'Service Design · Étude de cas', nl: 'Service Design · Case Study', en: 'Service Design · Case Study' },
-    'bnp.nav.pill2': { fr: 'Pour Luminus · 2026', nl: 'Voor Luminus · 2026', en: 'For Luminus · 2026' },
 
     'bnp.hero.eyebrow': {
       fr: 'Service Design · Banque · 2018 — 2019',
@@ -137,10 +73,12 @@
     },
     'bnp.hero.h1.start': { fr: 'Enterprise', nl: 'Enterprise', en: 'Enterprise' },
     'bnp.hero.h1.alt': { fr: 'Intelligence.', nl: 'Intelligence.', en: 'Intelligence.' },
+    /* CVE 2026-05-17 NN-brutal · cut "Six mois..." (déjà dans sizing chip + attribution) ·
+       cut "à la sortie..." (déjà dans brief.teaser). Mécanisme seul. -32 mots. */
     'bnp.hero.lead': {
-      fr: 'Six mois de service design en amont chez BNP Paribas Fortis. La donnée transactionnelle dormait sur les serveurs · à la sortie, des PME commerçantes acceptaient de payer pour y accéder, avant la première ligne de code.',
-      nl: 'Zes maanden service design vooraan bij BNP Paribas Fortis. De transactiedata sluimerde op de servers · aan het einde wilden handelaars-kmo\'s betalen om er toegang toe te krijgen, nog vóór de eerste regel code.',
-      en: 'Six months of upstream service design at BNP Paribas Fortis. The transactional data was sleeping on the servers · at the exit, SME merchants were willing to pay to access it, before the first line of code.'
+      fr: 'La donnée transactionnelle dormait sur les serveurs. À la sortie, des PME commerçantes acceptaient de payer pour y accéder, avant la première ligne de code.',
+      nl: 'De transactiedata sluimerde op de servers. Aan het einde wilden handelaars-kmo\'s betalen om er toegang toe te krijgen, nog vóór de eerste regel code.',
+      en: 'Transactional data was sleeping on the servers. At the exit, SME merchants were willing to pay for access, before the first line of code.'
     },
     'bnp.hero.metaRole': { fr: 'Service Designer · Freelance', nl: 'Service Designer · Freelance', en: 'Service Designer · Freelance' },
     'bnp.hero.metaWhere': {
@@ -149,25 +87,7 @@
       en: '6 months · upstream strategic framing'
     },
     'bnp.hero.location': { fr: 'Bruxelles', nl: 'Brussel', en: 'Brussels' },
-    'bnp.hero.cap': { fr: 'Vision canal · Concept Report · Slide 02', nl: 'Kanaalvisie · Concept Report · Slide 02', en: 'Channel vision · Concept Report · Slide 02' },
-    'bnp.hero.hook': {
-      fr: 'Comment une donnée bancaire est devenue un service que quelqu\'un a accepté de payer.',
-      nl: 'Hoe bankdata een dienst werd die iemand bereid was te betalen.',
-      en: 'How banking data became a service someone agreed to pay for.'
-    },
-
     /* ============== BRIDGE — jaquette → histoire ============== */
-    'bnp.bridge.phrase': {
-      fr: 'Six mois. Une enquête. Un commerçant qui dit oui.',
-      nl: 'Zes maanden. Een onderzoek. Een handelaar die ja zegt.',
-      en: 'Six months. One investigation. A merchant who says yes.'
-    },
-    'bnp.bridge.sub': {
-      fr: 'Une asymétrie de données · un processus design thinking · un premier paiement.',
-      nl: 'Een data-asymmetrie · een design thinking-traject · een eerste betaling.',
-      en: 'A data asymmetry · a design thinking process · a first payment.'
-    },
-
     /* ============== FIN ROYALE — onboarding intelligent (NEW 2026-04-30 s2) ============== */
     /* CVE 2026-05-03 v9 · ligne d'or renforcée · audit Storyteller :
        la version "La donnée vaut ce qu'on en fait" était générique (data analyst).
@@ -177,27 +97,25 @@
       nl: 'Data is niets waard zolang ze niets beslist.',
       en: 'Data is worth nothing until it decides something.'
     },
-    'bnp.fin.next.eyebrow': { fr: 'Et après ?', nl: 'Wat daarna?', en: 'What\'s next?' },
-    'bnp.fin.next.title': {
-      fr: 'Comment j\'aborderais Luminus.',
-      nl: 'Hoe ik Luminus zou aanpakken.',
-      en: 'How I\'d approach Luminus.'
-    },
     'bnp.fin.contact.eyebrow': { fr: 'Une conversation ?', nl: 'Een gesprek?', en: 'A conversation?' },
+    /* CVE 2026-05-17 NN-brutal · cut énumération "service design en amont, recherche
+       utilisateur, atelier de cadrage" (déjà dit dans Formats home). -12 mots. */
     'bnp.fin.contact.sub': {
-      fr: 'Service designer freelance · Bruxelles · disponible pour des missions service design en amont, recherche utilisateur, atelier de cadrage.',
-      nl: 'Freelance service designer · Brussel · beschikbaar voor opdrachten upstream service design, user research, scoping-workshops.',
-      en: 'Freelance service designer · Brussels · available for upstream service design briefs, user research, scoping workshops.'
+      fr: 'Service designer freelance · Bruxelles · cadrage amont.',
+      nl: 'Freelance service designer · Brussel · upstream framing.',
+      en: 'Freelance service designer · Brussels · upstream framing.'
     },
     'bnp.fin.ps.label': {
       fr: 'Postscript · sept ans plus tard',
       nl: 'Postscriptum · zeven jaar later',
       en: 'Postscript · seven years later'
     },
+    /* CVE 2026-05-17 NN-brutal · cut "Le reste, c'est du bruit" (claim final qui restate
+       le triangle déjà dit). -10 mots. */
     'bnp.fin.ps.text': {
-      fr: 'Je ressors ce dossier quand un sponsor me demande ce que vaut un projet en amont. La réponse tient dans le triangle : si les trois sommets gagnent, on garde. Sinon, on jette. <span class="accent">Le reste, c\'est du bruit.</span>',
-      nl: 'Ik haal dit dossier weer boven wanneer een sponsor me vraagt wat een upstream-project waard is. Het antwoord zit in de driehoek : winnen de drie hoekpunten, dan houden we het. Zo niet, weg ermee. <span class="accent">De rest is ruis.</span>',
-      en: 'I bring this case back out whenever a sponsor asks what an upstream project is worth. The answer sits inside the triangle : if the three vertices win, we keep it. Otherwise, we drop it. <span class="accent">The rest is noise.</span>'
+      fr: 'Je ressors ce dossier quand un sponsor me demande ce que vaut un projet en amont. La réponse tient dans le triangle : <span class="accent">si les trois sommets gagnent, on garde. Sinon, on jette.</span>',
+      nl: 'Ik haal dit dossier weer boven wanneer een sponsor me vraagt wat een upstream-project waard is. Het antwoord zit in de driehoek : <span class="accent">winnen de drie hoekpunten, dan houden we het. Zo niet, weg ermee.</span>',
+      en: 'I bring this case back out whenever a sponsor asks what an upstream project is worth. The answer sits inside the triangle : <span class="accent">if the three vertices win, we keep it. Otherwise, we drop it.</span>'
     },
     'bnp.fin.signature': {
       fr: 'Christophe van Engelen · Service Designer · Bruxelles',
@@ -214,15 +132,18 @@
     /* ============== RESEARCH subsections : Benchmark + Targeting + Personas ============== */
     /* ============== RESEARCH 1.1 — Six interviews PME terrain ============== */
     'bnp.research.itEyebrow': { fr: 'Research · interviews PME terrain', nl: 'Research · kmo-interviews op het terrein', en: 'Research · SME field interviews' },
+    /* CVE 2026-05-17 v3 · NNG · titre Six×3 rhétorique remplacé par insight substantiel ·
+       Léonidas dedans (hire-magnet). Lead · cut énumération des 6 types (cards la portent
+       déjà), garde la méthode. -28 mots total. */
     'bnp.research.itTitle': {
-      fr: 'Six entrepreneurs. <span class="accent">Six magasins. Six matins.</span>',
-      nl: 'Zes ondernemers. <span class="accent">Zes winkels. Zes ochtenden.</span>',
-      en: 'Six entrepreneurs. <span class="accent">Six shops. Six mornings.</span>'
+      fr: 'Six commerçants sur leur sol. <span class="accent">Léonidas parmi eux.</span>',
+      nl: 'Zes handelaars op hun werkvloer. <span class="accent">Léonidas onder hen.</span>',
+      en: 'Six shopkeepers on their floor. <span class="accent">Léonidas among them.</span>'
     },
     'bnp.research.itLead': {
-      fr: 'Pas un sondage en ligne. Pas un focus group. Six commerçants rencontrés sur leur sol — chocolatier, restaurateur, retailer mode, libéral, multi-shops franchisé, BFE smaller corporate. Une heure et demie chacun, derrière la caisse, à observer ce qui se décide vraiment dans la journée.',
-      nl: 'Geen online enquête. Geen focusgroep. Zes merchants ontmoet op hun werkvloer — chocolatier, restaurateur, mode-retailer, vrij beroep, multi-shop franchisenemer, BFE smaller corporate. Anderhalf uur elk, achter de toonbank, om te observeren wat er echt op een dag beslist wordt.',
-      en: 'No online survey. No focus group. Six shopkeepers met on their floor — chocolatier, restaurateur, fashion retailer, liberal professional, multi-shop franchisee, BFE smaller corporate. Ninety minutes each, behind the counter, watching what actually gets decided in a day.'
+      fr: 'Une heure et demie chacun, derrière la caisse, à observer ce qui se décide dans la journée.',
+      nl: 'Anderhalf uur elk, achter de toonbank, om te observeren wat er op een dag beslist wordt.',
+      en: 'Ninety minutes each, behind the counter, watching what gets decided in a day.'
     },
     'bnp.research.it1Name':    { fr: 'Le chocolatier multi-shops', nl: 'De multi-shop chocolatier', en: 'The multi-shop chocolatier' },
     'bnp.research.it1Quote':   { fr: '« Je vois mes ventes, mais pas qui les fait. »', nl: '« Ik zie mijn verkopen, maar niet wie ze doet. »', en: '"I see my sales, but not who makes them."' },
@@ -242,22 +163,17 @@
     'bnp.research.it6Name':    { fr: 'La PME corporate', nl: 'De corporate kmo', en: 'The corporate SME' },
     'bnp.research.it6Quote':   { fr: '« On a un BI interne. Mais c\'est pour le finance. Pas le terrain. »', nl: '« We hebben een interne BI. Maar voor finance. Niet voor het terrein. »', en: '"We have an internal BI. But for finance. Not for the floor."' },
     'bnp.research.it6Context': { fr: 'BFE smaller corporate, 40 employés. Outils existent mais inadaptés au manager opérationnel terrain.', nl: 'BFE smaller corporate, 40 werknemers. Tools bestaan maar passen niet bij de operationele terrein-manager.', en: 'BFE smaller corporate, 40 employees. Tools exist but unfit for the operational floor manager.' },
-    'bnp.research.itSource': {
-      fr: 'Six interviews qualitatives · 1h30 chacune · juin-août 2017 · transcripts validés en peer review',
-      nl: 'Zes kwalitatieve interviews · 1u30 elk · juni-augustus 2017 · transcripts gevalideerd in peer review',
-      en: 'Six qualitative interviews · 90 min each · June-August 2017 · transcripts validated in peer review'
-    },
-
     'bnp.research.benchEyebrow': { fr: 'Research · Benchmark', nl: 'Research · Benchmark', en: 'Research · Benchmark' },
     'bnp.research.benchTitle': {
       fr: 'Trois benchmarks <span class="accent">live.</span>',
       nl: 'Drie <span class="accent">live</span> benchmarks.',
       en: 'Three <span class="accent">live</span> benchmarks.'
     },
+    /* CVE 2026-05-17 v2 NNG · -5 mots · cut question rhétorique */
     'bnp.research.benchLead': {
-      fr: 'Qu\'est-ce qui marche ailleurs ? Trois acteurs étudiés. Trois signatures distinctes — chacun isolé sur son angle de force.',
-      nl: 'Wat werkt elders ? Drie spelers bestudeerd. Drie onderscheidende handtekeningen — elk gericht op hun sterkste hoek.',
-      en: 'What works elsewhere ? Three players studied. Three distinct signatures — each isolated on its angle of strength.'
+      fr: 'Trois acteurs étudiés, trois signatures distinctes · chacun isolé sur son angle de force.',
+      nl: 'Drie spelers bestudeerd, drie onderscheidende handtekeningen · elk gericht op hun sterkste hoek.',
+      en: 'Three players studied, three distinct signatures · each isolated on its angle of strength.'
     },
     'bnp.research.barclaysSig': { fr: 'Signature · marketplace d\'apps', nl: 'Signatuur · app marketplace', en: 'Signature · app marketplace' },
     'bnp.research.proximusSig': { fr: 'Signature · geolocation flows', nl: 'Signatuur · geolocatie-flows', en: 'Signature · geolocation flows' },
@@ -268,124 +184,21 @@
     'bnp.research.proximus1': { fr: 'Visual design très soigné', nl: 'Zeer aantrekkelijk visueel ontwerp', en: 'Very appealing visual design' },
     'bnp.research.proximus2': { fr: 'Mouvement consommateur via géolocalisation', nl: 'Consumentenbeweging via geolocatie', en: 'Consumer movement via geolocation' },
     'bnp.research.bbva1': { fr: 'API d\'accès aux données statistiques anonymisées via le POS provider', nl: 'API voor anonieme statistische data via de POS-provider', en: 'API to anonymous statistical data via POS provider' },
-    'bnp.research.benchSource': {
-      fr: 'Source · Ideation Report · pages 3-4 · 30 octobre 2017',
-      nl: 'Bron · Ideation Report · pagina\'s 3-4 · 30 oktober 2017',
-      en: 'Source · Ideation Report · pages 3-4 · October 30, 2017'
-    },
-
-    'bnp.research.targetEyebrow': { fr: 'Research · Targeting', nl: 'Research · Targeting', en: 'Research · Targeting' },
-    'bnp.research.targetTitle': {
-      fr: 'Qui est <span class="accent">vraiment</span> intéressé ?',
-      nl: 'Wie is <span class="accent">echt</span> geïnteresseerd ?',
-      en: 'Who is <span class="accent">really</span> interested ?'
-    },
-    'bnp.research.targetLead': {
-      fr: 'Quatre segments cartographiés sur leur appétit pour Enterprise Intelligence. Le KEY TARGET sort net : B2C avec plusieurs boutiques, peu de support data interne. Très intéressé.',
-      nl: 'Vier segmenten in kaart gebracht op hun appetijt voor Enterprise Intelligence. Het KEY TARGET komt scherp naar voren : B2C met meerdere winkels, weinig interne data-support. Zeer geïnteresseerd.',
-      en: 'Four segments mapped on their appetite for Enterprise Intelligence. The KEY TARGET comes out clean : B2C with several shops, little/no internal data support. Very interested.'
-    },
-    'bnp.research.segKey': { fr: 'Key target', nl: 'Key target', en: 'Key target' },
-    'bnp.research.segSecondary': { fr: 'Secondary', nl: 'Secondary', en: 'Secondary' },
-    'bnp.research.segThird': { fr: 'Third', nl: 'Third', en: 'Third' },
-    'bnp.research.segOut': { fr: 'Out of scope', nl: 'Out of scope', en: 'Out of scope' },
-    'bnp.research.seg1Name': { fr: 'B2C · plusieurs boutiques · peu/pas de support data', nl: 'B2C · meerdere winkels · weinig/geen data-support', en: 'B2C · several shops · little/no data support' },
-    'bnp.research.seg1Verdict': { fr: 'Très intéressé · à prendre en compte pour écrire le concept', nl: 'Zeer geïnteresseerd · meenemen om het concept te schrijven', en: 'Very interested · take into consideration to write the concept' },
-    'bnp.research.seg2Name': { fr: 'B2C · une seule boutique', nl: 'B2C · één winkel', en: 'B2C · single shop' },
-    'bnp.research.seg2Verdict': { fr: 'Peut être intrigué · capter l\'intérêt avec accompagnement', nl: 'Kan geïntrigeerd worden · interesse vangen met begeleiding', en: 'Can be intrigued · catch their interest with guidance' },
-    'bnp.research.seg3Name': { fr: 'B2C · plusieurs boutiques · support data fort', nl: 'B2C · meerdere winkels · sterke data-support', en: 'B2C · several shops · strong data support' },
-    'bnp.research.seg3Verdict': { fr: 'Pas intéressé · déjà couvert par leurs outils existants', nl: 'Niet geïnteresseerd · al gedekt door hun bestaande tools', en: 'Not interested · already covered by their existing tools' },
-    'bnp.research.seg4Name': { fr: 'Entreprises B2B', nl: 'B2B-bedrijven', en: 'B2B businesses' },
-    'bnp.research.seg4Verdict': { fr: 'Pas intéressé · les data de facturation couvrent déjà leurs besoins', nl: 'Niet geïnteresseerd · facturatiedata dekt hun behoeften al', en: 'Not interested · invoicing data already covers their needs' },
-    'bnp.research.targetSource': {
-      fr: 'Source · Ideation Report · pages 5-6 · « Levels of Interest »',
-      nl: 'Bron · Ideation Report · pagina\'s 5-6 · « Levels of Interest »',
-      en: 'Source · Ideation Report · pages 5-6 · "Levels of Interest"'
-    },
-
-    'bnp.research.persoEyebrow': { fr: 'Research · Personas', nl: 'Research · Personas', en: 'Research · Personas' },
+    /* CVE 2026-05-17 v3 · CVE rectif · ce sont des SEGMENTS, pas des personas.
+       Persona = individu nommé avec photo/âge/story. Ici ce sont des types marché.
+       Label corrigé. Titre factualisé · 9 segments + 1 key target (info de substance,
+       pas effet rhétorique). */
+    'bnp.research.persoEyebrow': { fr: 'Research · Segments B2B', nl: 'Research · B2B-segmenten', en: 'Research · B2B segments' },
     'bnp.research.persoTitle': {
-      fr: 'Neuf personas B2B, <span class="accent">pas un de plus.</span>',
-      nl: 'Negen B2B-personas, <span class="accent">geen één meer.</span>',
-      en: 'Nine B2B personas, <span class="accent">not one more.</span>'
+      fr: 'Neuf segments. <span class="accent">Un key target.</span>',
+      nl: 'Negen segmenten. <span class="accent">Eén key target.</span>',
+      en: 'Nine segments. <span class="accent">One key target.</span>'
     },
     'bnp.research.persoLead': {
-      fr: 'Du Liberal Pro au Corporate Banking SME. Une bibliothèque construite sur les interviews + les matrices de segmentation, qui a survécu au projet et a servi à d\'autres initiatives BNP B2B.',
-      nl: 'Van Liberal Pro tot Corporate Banking SME. Een bibliotheek gebouwd op de interviews + segmentatiematrices, die het project overleefde en werd gebruikt door andere BNP B2B-initiatieven.',
-      en: 'From Liberal Pro to Corporate Banking SME. A library built on interviews + segmentation matrices, that outlived the project and was reused by other BNP B2B initiatives.'
+      fr: 'Du Liberal Pro au Corporate Banking SME. Cartographie construite sur les interviews + la matrice Levels of Interest (Ideation Report, oct. 2017) · le key target retenu pour le concept · <strong>B2C multi-shops sans support data interne</strong>.',
+      nl: 'Van Liberal Pro tot Corporate Banking SME. Cartografie gebouwd op de interviews + de Levels of Interest-matrix (Ideation Report, okt. 2017) · het weerhouden key target voor het concept · <strong>B2C multi-shops zonder interne datasupport</strong>.',
+      en: 'From Liberal Pro to Corporate Banking SME. Map built on the interviews + the Levels of Interest matrix (Ideation Report, Oct 2017) · key target retained for the concept · <strong>B2C multi-shops without internal data support</strong>.'
     },
-    'bnp.research.persoCap': {
-      fr: '9 personas B2B · provisional research-backed · Concept Report p34',
-      nl: '9 B2B-personas · provisional research-backed · Concept Report p34',
-      en: '9 B2B personas · provisional research-backed · Concept Report p34'
-    },
-
-    /* ============== ANALYSE subsections : AS-IS + GAP + VPC/Lean ============== */
-    'bnp.analyse.asisEyebrow': { fr: 'Analyse · AS-IS journey', nl: 'Analyse · AS-IS journey', en: 'Analyse · AS-IS journey' },
-    'bnp.analyse.asisTitle': {
-      fr: 'Quinze étapes <span class="accent">avant le premier insight.</span>',
-      nl: 'Vijftien stappen <span class="accent">vóór het eerste inzicht.</span>',
-      en: 'Fifteen steps <span class="accent">before the first insight.</span>'
-    },
-    'bnp.analyse.asisLead': {
-      fr: 'Le journey end-to-end d\'un commerçant non-EBB. Quinze étapes étalées sur 1 à 3 jours juste pour onboarder. Chiffre qui a tué le débat « on peut builder demain ».',
-      nl: 'De end-to-end journey van een niet-EBB-merchant. Vijftien stappen verspreid over 1 tot 3 dagen, enkel om aan boord te komen. Het cijfer dat het « we kunnen morgen bouwen »-debat sloot.',
-      en: 'The end-to-end journey of a non-EBB merchant. Fifteen steps spread over 1 to 3 days just to onboard. The figure that killed the « we can build it tomorrow » debate.'
-    },
-    'bnp.analyse.asisCap': {
-      fr: 'AS-IS journey · PME non-enregistrée · 15 étapes · 1-3 jours · Concept Report p75',
-      nl: 'AS-IS journey · niet-geregistreerde kmo · 15 stappen · 1-3 dagen · Concept Report p75',
-      en: 'AS-IS journey · unregistered SME · 15 steps · 1-3 days · Concept Report p75'
-    },
-    /* AS-IS flow natif — 15 steps en 3 phases temporelles */
-    'bnp.analyse.asisFlowTitle': { fr: '15 étapes onboarding non-EBB en 3 phases', nl: '15 onboarding-stappen non-EBB in 3 fases', en: '15 non-EBB onboarding steps in 3 phases' },
-    'bnp.analyse.asisPhase1':    { fr: 'Jour 1 · Découverte',     nl: 'Dag 1 · Ontdekking',       en: 'Day 1 · Discovery' },
-    'bnp.analyse.asisPhase2':    { fr: 'Jour 2 · Setup bancaire', nl: 'Dag 2 · Bank-setup',       en: 'Day 2 · Bank setup' },
-    'bnp.analyse.asisPhase3':    { fr: 'Jour 3 · Activation E.I.', nl: 'Dag 3 · E.I.-activatie',  en: 'Day 3 · E.I. activation' },
-    'bnp.analyse.asisStep1':     { fr: 'Découvre l\'offre',        nl: 'Ontdekt het aanbod',      en: 'Discovers the offer' },
-    'bnp.analyse.asisStep2':     { fr: 'Cherche infos site',       nl: 'Zoekt info op site',      en: 'Looks up info on site' },
-    'bnp.analyse.asisStep3':     { fr: 'Compare concurrence',      nl: 'Vergelijkt concurrentie', en: 'Compares competitors' },
-    'bnp.analyse.asisStep4':     { fr: 'Décide d\'essayer',         nl: 'Beslist te proberen',     en: 'Decides to try' },
-    'bnp.analyse.asisStep5':     { fr: 'Demande RDV agence',       nl: 'Vraagt afspraak agentschap', en: 'Requests branch appointment' },
-    'bnp.analyse.asisStep6':     { fr: 'RDV agence physique',      nl: 'Fysieke afspraak agentschap', en: 'Physical branch meeting' },
-    'bnp.analyse.asisStep7':     { fr: 'Documents identité',       nl: 'Identiteitsdocumenten',   en: 'ID documents' },
-    'bnp.analyse.asisStep8':     { fr: 'Ouvre compte pro',         nl: 'Opent zakelijke rekening', en: 'Opens business account' },
-    'bnp.analyse.asisStep9':     { fr: 'Attente activation',       nl: 'Wacht op activatie',      en: 'Waits for activation' },
-    'bnp.analyse.asisStep10':    { fr: 'Reçoit codes EBB',         nl: 'Ontvangt EBB-codes',      en: 'Receives EBB codes' },
-    'bnp.analyse.asisStep11':    { fr: 'Login Easy Banking',       nl: 'Login Easy Banking',      en: 'Easy Banking login' },
-    'bnp.analyse.asisStep12':    { fr: 'Cherche E.I. dans menu',   nl: 'Zoekt E.I. in menu',      en: 'Hunts for E.I. in menu' },
-    'bnp.analyse.asisStep13':    { fr: 'Active service',           nl: 'Activeert dienst',        en: 'Activates service' },
-    'bnp.analyse.asisStep14':    { fr: 'Attente données J+1',      nl: 'Wacht data D+1',          en: 'Waits for D+1 data' },
-    'bnp.analyse.asisStep15':    { fr: 'Premier insight',          nl: 'Eerste insight',          en: 'First insight' },
-    'bnp.analyse.asisFrictions': { fr: 'frictions critiques identifiées · cibles MVP P1', nl: 'kritieke fricties geïdentificeerd · MVP P1-doelen', en: 'critical frictions identified · MVP P1 targets' },
-    'bnp.analyse.asisSource': {
-      fr: 'Référence interne · Concept Report p75 — flow journey redessiné à la charte du folio',
-      nl: 'Interne referentie · Concept Report p75 — flow journey hertekend in de folio-stijl',
-      en: 'Internal reference · Concept Report p75 — journey flow redrawn in the folio design system'
-    },
-
-    'bnp.analyse.gapEyebrow': { fr: 'Analyse · GAP & Could-Be', nl: 'Analyse · GAP & Could-Be', en: 'Analyse · GAP & Could-Be' },
-    'bnp.analyse.gapTitle': {
-      fr: 'De l\'AS-IS <span class="accent">au Could-Be.</span>',
-      nl: 'Van AS-IS <span class="accent">naar Could-Be.</span>',
-      en: 'From AS-IS <span class="accent">to Could-Be.</span>'
-    },
-    'bnp.analyse.gapLead': {
-      fr: 'Cinq journeys end-to-end dessinés, un par point d\'entrée : non-enregistré · enregistré nouveau EBB · utilisateur EBB existant · via deep link · via app launcher. Le GAP entre l\'AS-IS et le Could-Be devient la backlog du MVP onboarding.',
-      nl: 'Vijf end-to-end journeys getekend, één per instappunt : niet-geregistreerd · geregistreerd nieuw EBB · bestaande EBB-gebruiker · via deep link · via app launcher. De GAP tussen AS-IS en Could-Be wordt de MVP onboarding-backlog.',
-      en: 'Five end-to-end journeys drawn, one per entry point : unregistered · registered new EBB · existing EBB user · via deep link · via app launcher. The GAP between AS-IS and Could-Be becomes the MVP onboarding backlog.'
-    },
-    'bnp.analyse.gap1': { fr: 'Non-enregistré · 15 étapes', nl: 'Niet-geregistreerd · 15 stappen', en: 'Unregistered · 15 steps' },
-    'bnp.analyse.gap2': { fr: 'Enregistré · nouveau EBB', nl: 'Geregistreerd · nieuw EBB', en: 'Registered · new EBB' },
-    'bnp.analyse.gap3': { fr: 'EBB existant · deep link', nl: 'Bestaande EBB · deep link', en: 'Existing EBB · deep link' },
-    'bnp.analyse.gap4': { fr: 'App launcher', nl: 'App launcher', en: 'App launcher' },
-    'bnp.analyse.gap5': { fr: 'Contract manager flow', nl: 'Contract manager flow', en: 'Contract manager flow' },
-    'bnp.analyse.gapSource': {
-      fr: 'Source · Concept Report · 5 journeys end-to-end',
-      nl: 'Bron · Concept Report · 5 end-to-end journeys',
-      en: 'Source · Concept Report · 5 end-to-end journeys'
-    },
-
     /* ============== ANALYSE 2.3 — Typologie des données BNP fusionnées ============== */
     'bnp.analyse.dataEyebrow': {
       fr: 'Analyse · Typologie des données',
@@ -397,10 +210,11 @@
       nl: 'Drie databronnen. <span class="accent">Een grondstof om te kruisen.</span>',
       en: 'Three data sources. <span class="accent">Raw material to transform.</span>'
     },
+    /* CVE 2026-05-17 v2 NNG · -25 mots · cut "Il a fallu les organiser" + raccourci */
     'bnp.analyse.dataLead': {
-      fr: 'BNP avait <strong>trois familles de données</strong> sur ses commerçants : transactions Bancontact, profils carte des consommateurs, comptes bancaires. Brutes, elles ne valaient rien pour un commerçant. Il a fallu les organiser sur trois axes lisibles, vérifier leur qualité, les combiner. C\'est l\'agrégation qui a fait émerger six lectures actionnables, chacune calée sur un type de persona.',
-      nl: 'BNP had <strong>drie families gegevens</strong> over haar handelaars : Bancontact-transacties, kaartprofielen van consumenten, bankrekeningen. Ruw waren ze waardeloos voor een handelaar. Het vereiste organiseren op drie leesbare assen, kwaliteit controleren, combineren. De aggregatie deed zes actionable lezingen verschijnen, elk afgestemd op een type persona.',
-      en: 'BNP had <strong>three families of data</strong> on its merchants : Bancontact transactions, consumer card profiles, bank accounts. Raw, they were worthless to a merchant. We had to organise them on three readable axes, check their quality, combine them. Aggregation surfaced six actionable readings, each tied to a persona type.'
+      fr: '<strong>Trois familles de données</strong> sur les commerçants · transactions Bancontact, profils carte des consommateurs, comptes bancaires. Brutes, elles ne valent rien. Croisées, elles produisent six lectures actionnables, chacune calée sur un type de persona.',
+      nl: '<strong>Drie families gegevens</strong> over de handelaars · Bancontact-transacties, kaartprofielen van consumenten, bankrekeningen. Ruw zijn ze waardeloos. Gekruist leveren ze zes bruikbare lezingen op, elk afgestemd op een type persona.',
+      en: '<strong>Three families of data</strong> on merchants · Bancontact transactions, consumer card profiles, bank accounts. Raw, they\'re worthless. Cross-referenced, they produce six actionable readings, each tied to a persona type.'
     },
     'bnp.analyse.dataSvgTitle': {
       fr: 'Schéma de Venn — typologie données BNP fusionnées en six insights actionnables',
@@ -433,12 +247,6 @@
     'bnp.analyse.dataZone6': { fr: 'Area ∩ Sector',             nl: 'Area ∩ Sector',              en: 'Area ∩ Sector'             },
     'bnp.analyse.dataOpp6':  { fr: 'New portfolio offers',      nl: 'New portfolio offers',       en: 'New portfolio offers'      },
     'bnp.analyse.dataHint6': { fr: 'Non-clients dans mon secteur et ma zone', nl: 'Niet-klanten in mijn sector en zone', en: 'Non-customers in my sector and area' },
-    'bnp.analyse.dataSource': {
-      fr: 'Référence interne · Concept Report mars 2018, p24 — typologie redessinée à la charte du folio',
-      nl: 'Interne referentie · Concept Report maart 2018, p24 — typologie hertekend in de folio-stijl',
-      en: 'Internal reference · Concept Report March 2018, p24 — typology redrawn in folio style'
-    },
-
     /* ============== ANALYSE 2.5 — VALUE PROPOSITION buildup ============== */
     /* CVE 2026-05-03 · zéro doublon : analyse-vp suspend, le statement vit dans chap-valueprop. */
     'bnp.analyse.vpEyebrow': {
@@ -451,21 +259,11 @@
       nl: 'Eén overtuiging <span class="accent">komt naar voren.</span>',
       en: 'A single conviction <span class="accent">emerges.</span>'
     },
+    /* CVE 2026-05-17 v2 NNG · -10 mots */
     'bnp.analyse.vpPyramidIntro': {
-      fr: 'La transformation, en image : à gauche le dashboard classique qui pousse de la donnée. À droite le rapport orienté objectif, qui produit des insights actionnables.',
-      nl: 'De transformatie, in beeld : links het klassieke dashboard dat data pusht. Rechts het doelgerichte rapport, dat actionable insights produceert.',
-      en: 'The transformation, in pictures : on the left the classic dashboard pushing data. On the right the goal-oriented report producing actionable insights.'
-    },
-    /* Legacy keys gardées (orphelins inertes) */
-    'bnp.analyse.vpTitle': {
-      fr: 'Pas de la donnée à explorer.<br><span class="accent">Un récit qui décide.</span>',
-      nl: 'Geen data om te verkennen.<br><span class="accent">Een verhaal dat beslist.</span>',
-      en: 'Not data to explore.<br><span class="accent">A story that decides.</span>'
-    },
-    'bnp.analyse.vpLead': {
-      fr: 'Un dashboard, ce n\'est pas pousser de la donnée brute par graphiques et visualisations. C\'est <strong>raconter une histoire</strong> avec la donnée, qui résonne pour le commerçant et soutient sa <strong>prise de décision</strong>. Au bout du premier diamant, c\'est ce concept qui a aligné les quatre fonctions internes avant d\'attaquer le prototypage.',
-      nl: 'Een dashboard is geen ruwe data pushen via grafieken en visualisaties. Het is <strong>een verhaal vertellen</strong> met de data, dat resoneert voor de handelaar en zijn <strong>besluitvorming</strong> ondersteunt. Aan het einde van het eerste diamant heeft dat concept de vier interne functies op één lijn gebracht voor het prototypen.',
-      en: 'A dashboard is not about pushing raw data through charts and visualisations. It\'s about <strong>telling a story</strong> with the data that resonates with the merchant and supports their <strong>decision-making</strong>. At the close of the first diamond, this concept aligned the four internal functions before we moved to prototyping.'
+      fr: 'Gauche · dashboard classique qui pousse de la donnée. Droite · rapport orienté objectif qui produit des insights actionnables.',
+      nl: 'Links · klassiek dashboard dat data pusht. Rechts · doelgericht rapport dat actionable insights produceert.',
+      en: 'Left · classic dashboard pushing data. Right · goal-oriented report producing actionable insights.'
     },
     'bnp.analyse.vpVerdictBad': {
       fr: 'Mauvaise direction',
@@ -487,31 +285,23 @@
       nl: 'De Enterprise Intelligence-aanpak. Data afgestemd op persona, omgezet in gepersonaliseerde informatie, die de inzicht produceert.',
       en: 'The Enterprise Intelligence approach. Data customised per persona, turned into personalised information, that yields the insight.'
     },
-    'bnp.analyse.vpBadVerdict': { fr: 'Cognitive overload', nl: 'Cognitive overload', en: 'Cognitive overload' },
-    'bnp.analyse.vpBadName':    { fr: 'Data exploration',   nl: 'Data exploration',   en: 'Data exploration'   },
+    /* CVE 2026-05-17 rectif · le POC data exploration venait de Marketing, testé chez
+       clients pilotes, rejeté par SteerCo. CVE a recadré l'approche via la VP. Les 2 cards
+       sont une comparaison séquentielle (avant/après recadrage), pas parallèle. */
+    'bnp.analyse.vpBadVerdict': { fr: 'Rejeté en SteerCo', nl: 'Verworpen in SteerCo', en: 'Rejected at SteerCo' },
+    'bnp.analyse.vpBadName':    { fr: 'POC Marketing · Data exploration', nl: 'POC Marketing · Data exploration', en: 'Marketing POC · Data exploration' },
     'bnp.analyse.vpBadNote': {
-      fr: 'Filtres contextuels + 5 dimensions démographiques. Le commerçant doit construire sa propre lecture. Personne ne le fait deux fois.',
-      nl: 'Contextuele filters + 5 demografische dimensies. De handelaar moet zelf zijn lezing bouwen. Niemand doet dat twee keer.',
-      en: 'Contextual filters + 5 demographic dimensions. The merchant has to build their own reading. Nobody does it twice.'
+      fr: 'Premier POC porté par Marketing · filtres contextuels + 5 dimensions démographiques. Testé chez clients pilotes, rejeté par le SteerCo. Le commerçant devait construire sa propre lecture.',
+      nl: 'Eerste POC gedragen door Marketing · contextuele filters + 5 demografische dimensies. Getest bij pilotklanten, verworpen door de SteerCo. De handelaar moest zelf zijn lezing bouwen.',
+      en: 'First POC carried by Marketing · contextual filters + 5 demographic dimensions. Tested with pilot clients, rejected by the SteerCo. The merchant had to build their own reading.'
     },
-    'bnp.analyse.vpGoodVerdict': { fr: 'Focused information', nl: 'Focused information', en: 'Focused information' },
-    'bnp.analyse.vpGoodName':    { fr: 'Goal-oriented report', nl: 'Goal-oriented report', en: 'Goal-oriented report' },
+    'bnp.analyse.vpGoodVerdict': { fr: 'Validé par les clients', nl: 'Goedgekeurd door klanten', en: 'Validated by clients' },
+    'bnp.analyse.vpGoodName':    { fr: 'VP recadrée · Goal-oriented report', nl: 'VP heroriënteerd · Goal-oriented report', en: 'VP refocused · Goal-oriented report' },
     'bnp.analyse.vpGoodNote': {
-      fr: 'Quatre KPI calés sur quatre objectifs business. Le rouge demande une décision tout de suite. L\'orange signale un point à surveiller. Le vert confirme ce qui marche. Une lecture, une décision.',
-      nl: 'Vier KPI\'s afgestemd op vier business-doelen. Het rood vraagt onmiddellijk een beslissing. Het oranje signaleert een aandachtspunt. Het groen bevestigt wat werkt. Eén lezing, één beslissing.',
-      en: 'Four KPIs tied to four business goals. Red asks for a decision now. Orange flags a watchpoint. Green confirms what works. One read, one decision.'
+      fr: 'Recadrage post-VP · quatre KPI sur quatre objectifs business. Rouge · décision tout de suite. Orange · point à surveiller. Vert · ce qui marche. Une lecture, une décision.',
+      nl: 'Herkadering na VP · vier KPI\'s op vier businessdoelen. Rood · beslissing nu. Oranje · aandachtspunt. Groen · wat werkt. Eén lezing, één beslissing.',
+      en: 'Post-VP refocus · four KPIs on four business goals. Red · decide now. Orange · watchpoint. Green · what works. One read, one decision.'
     },
-    'bnp.analyse.vpClaim': {
-      fr: 'Pas un système exploratoire de métriques. <span class="accent">Des rapports orientés objectifs, avec des outcomes actionnables.</span>',
-      nl: 'Geen verkennend metrieksysteem. <span class="accent">Doelgerichte rapporten met actionable outcomes.</span>',
-      en: 'Not an exploratory metrics system. <span class="accent">Goal-oriented reports with actionable outcomes.</span>'
-    },
-    'bnp.analyse.vpSource': {
-      fr: 'Source · Concept Report mars 2018, p27-31 — value proposition Enterprise Intelligence',
-      nl: 'Bron · Concept Report maart 2018, p27-31 — value proposition Enterprise Intelligence',
-      en: 'Source · Concept Report March 2018, p27-31 — value proposition Enterprise Intelligence'
-    },
-
     /* ============== ANALYSE 2.4a — Value Proposition Canvas natif ============== */
     'bnp.analyse.vpcEyebrow': { fr: 'Analyse · Value Proposition Canvas', nl: 'Analyse · Value Proposition Canvas', en: 'Analyse · Value Proposition Canvas' },
     'bnp.analyse.vpcTitle': {
@@ -519,10 +309,11 @@
       nl: 'De <span class="accent">Jobs · Pains · Gains</span> van de merchant in kaart brengen.',
       en: 'Mapping the merchant\'s <span class="accent">Jobs · Pains · Gains</span>.'
     },
+    /* CVE 2026-05-17 v2 NNG · -12 mots · cut warmup "Avant la solution, la friction" */
     'bnp.analyse.vpcLead': {
-      fr: 'Avant la solution, la friction. Le Value Proposition Canvas confronte les jobs du commerçant (mieux connaître ses clients, calibrer ses actions) à l\'offre BNP. Chaque feature MVP doit cocher au moins un Pain Reliever ou un Gain Creator. Sinon, elle dégage du scope.',
-      nl: 'Voor de oplossing, de wrijving. De Value Proposition Canvas zet de jobs van de merchant (klanten beter kennen, acties kalibreren) tegenover het BNP-aanbod. Elke MVP-feature moet minstens één Pain Reliever of Gain Creator afvinken. Anders verlaat ze de scope.',
-      en: 'Before the solution, the friction. The Value Proposition Canvas pits the merchant\'s jobs (knowing customers better, calibrating actions) against the BNP offer. Every MVP feature must tick at least one Pain Reliever or Gain Creator. Otherwise it leaves the scope.'
+      fr: 'Le Value Proposition Canvas confronte les jobs du commerçant (mieux connaître ses clients, calibrer ses actions) à l\'offre BNP. Chaque feature MVP doit cocher au moins un Pain Reliever ou un Gain Creator. Sinon, hors scope.',
+      nl: 'De Value Proposition Canvas zet de jobs van de handelaar (klanten beter kennen, acties kalibreren) tegenover het BNP-aanbod. Elke MVP-feature moet minstens één Pain Reliever of Gain Creator afvinken. Anders buiten scope.',
+      en: 'The Value Proposition Canvas pits the merchant\'s jobs (knowing customers better, calibrating actions) against the BNP offer. Every MVP feature must tick at least one Pain Reliever or Gain Creator. Otherwise, out of scope.'
     },
     'bnp.analyse.vpcCustHead':  { fr: 'Profil commerçant', nl: 'Merchant-profiel', en: 'Merchant profile' },
     'bnp.analyse.vpcCustName':  { fr: 'Jobs to be done',   nl: 'Jobs to be done',   en: 'Jobs to be done' },
@@ -552,220 +343,78 @@
       en: '<span class="source-link__lab">View original slide</span><span class="source-link__ref">Ideation Report · October 2017 · page 12 (canvas with persona and workshop sticky notes)</span><span class="source-link__arrow" aria-hidden="true">↗</span>'
     },
 
-    /* ============== PROTOTYPE subsections : Vision + 4 axes + Spotfire POC ============== */
-    'bnp.prototype.visionEyebrow': { fr: 'Prototype · Channel vision', nl: 'Prototype · Channel vision', en: 'Prototype · Channel vision' },
-    'bnp.prototype.visionTitle': {
-      fr: 'Du transactionnel <span class="accent">à l\'insightful.</span>',
-      nl: 'Van transactioneel <span class="accent">naar insightful.</span>',
-      en: 'From transactional <span class="accent">to insightful.</span>'
-    },
-    'bnp.prototype.visionLead': {
-      fr: 'La vision canal BNP — passer d\'une expérience transactionnelle à une expérience d\'insights. Personalised & insightful advice. La data de la banque devient un service de conseil.',
-      nl: 'De BNP-kanaalvisie — van een transactionele ervaring naar een insights-ervaring. Personalised & insightful advice. De data van de bank wordt een adviesdienst.',
-      en: 'BNP\'s channel vision — from a transactional experience to an insights experience. Personalised & insightful advice. The bank\'s data becomes an advisory service.'
-    },
-    'bnp.prototype.visionCap': {
-      fr: 'Channel vision · Du transactionnel à l\'insightful · Concept Report p3',
-      nl: 'Channel vision · Van transactioneel naar insightful · Concept Report p3',
-      en: 'Channel vision · From transactional to insightful · Concept Report p3'
-    },
-    'bnp.prototype.visionSource': {
-      fr: 'Source · Concept Report · pages 2-3 · 1ᵉʳ mars 2018',
-      nl: 'Bron · Concept Report · pagina\'s 2-3 · 1 maart 2018',
-      en: 'Source · Concept Report · pages 2-3 · March 1, 2018'
-    },
-
-    'bnp.prototype.vennEyebrow': {
-      fr: 'Prototype · agrégation des données BNP',
-      nl: 'Prototype · BNP-data-aggregatie',
-      en: 'Prototype · BNP data aggregation'
-    },
-    'bnp.prototype.vennTitle': {
-      fr: 'Pas une intuition. <span class="accent">Trois axes de données BNP, superposés.</span>',
-      nl: 'Geen onderbuikgevoel. <span class="accent">Drie BNP-data-assen, gestapeld.</span>',
-      en: 'Not a hunch. <span class="accent">Three BNP data axes, layered.</span>'
-    },
-    'bnp.prototype.vennLead': {
-      fr: 'Trois axes de données déjà disponibles à la banque : <strong>clients</strong>, <strong>zone</strong>, <strong>secteur</strong>. Leurs chevauchements font émerger six opportunités concrètes. C\'est l\'agrégation qui crée la valeur, pas la donnée brute.',
-      nl: 'Drie data-assen die de bank al in handen had : <strong>klanten</strong>, <strong>zone</strong>, <strong>sector</strong>. Hun overlappingen brengen zes concrete kansen aan het licht. De aggregatie creëert de waarde, niet de ruwe data.',
-      en: 'Three data axes the bank already had on hand : <strong>customers</strong>, <strong>area</strong>, <strong>sector</strong>. Their overlaps surface six concrete opportunities. Aggregation creates the value, not the raw data.'
-    },
-    'bnp.prototype.vennCaption': {
-      fr: 'Référence interne · Concept Report mars 2018, p24 — redessiné à la charte du folio',
-      nl: 'Interne referentie · Concept Report maart 2018, p24 — hertekend in de folio-stijl',
-      en: 'Internal reference · Concept Report March 2018, p24 — redrawn in the folio design system'
-    },
-    'bnp.prototype.vennSvgTitle': {
-      fr: 'Schéma de Venn — agrégation données BNP en six opportunités',
-      nl: 'Venn-diagram — BNP-data-aggregatie in zes kansen',
-      en: 'Venn diagram — BNP data aggregation into six opportunities'
-    },
-    'bnp.prototype.vennSvgDesc': {
-      fr: 'Trois cercles superposés Customers, Area, Sector — leurs chevauchements produisent six opportunités business : crosselling diversification, loyalty, expansion, crosselling, opening hours, new portfolio offers.',
-      nl: 'Drie overlappende cirkels Customers, Area, Sector — de overlappingen produceren zes business-kansen: crosselling diversification, loyalty, expansion, crosselling, opening hours, new portfolio offers.',
-      en: 'Three overlapping circles Customers, Area, Sector — their overlaps produce six business opportunities: crosselling diversification, loyalty, expansion, crosselling, opening hours, new portfolio offers.'
-    },
-    'bnp.prototype.vennAxisCustomers': { fr: 'CUSTOMERS', nl: 'CUSTOMERS', en: 'CUSTOMERS' },
-    'bnp.prototype.vennAxisArea':      { fr: 'AREA',      nl: 'AREA',      en: 'AREA' },
-    'bnp.prototype.vennAxisSector':    { fr: 'SECTOR',    nl: 'SECTOR',    en: 'SECTOR' },
-
-    'bnp.prototype.vennZone1': { fr: 'Customers seuls',           nl: 'Customers alleen',          en: 'Customers only' },
-    'bnp.prototype.vennOpp1':  { fr: 'Crosselling diversification', nl: 'Crosselling diversification', en: 'Crosselling diversification' },
-    'bnp.prototype.vennHint1': { fr: 'Non clients en autre secteur et zone', nl: 'Niet-klanten in andere sector en zone', en: 'Non-customers in other sector and area' },
-
-    'bnp.prototype.vennZone2': { fr: 'Customers ∩ Area',  nl: 'Customers ∩ Area',  en: 'Customers ∩ Area' },
-    'bnp.prototype.vennOpp2':  { fr: 'Crosselling',       nl: 'Crosselling',       en: 'Crosselling' },
-    'bnp.prototype.vennHint2': { fr: 'Non clients dans ma zone', nl: 'Niet-klanten in mijn zone', en: 'Non-customers in my area' },
-
-    'bnp.prototype.vennZone3': { fr: 'Area seul',         nl: 'Area alleen',       en: 'Area only' },
-    'bnp.prototype.vennOpp3':  { fr: 'Opening hours',     nl: 'Opening hours',     en: 'Opening hours' },
-    'bnp.prototype.vennHint3': { fr: 'Non clients dans ma zone', nl: 'Niet-klanten in mijn zone', en: 'Non-customers in my area' },
-
-    'bnp.prototype.vennZone4': { fr: 'Customers ∩ Sector ∩ Area', nl: 'Customers ∩ Sector ∩ Area', en: 'Customers ∩ Sector ∩ Area' },
-    'bnp.prototype.vennOpp4':  { fr: 'Loyalty',           nl: 'Loyalty',           en: 'Loyalty' },
-    'bnp.prototype.vennHint4': { fr: 'Mes clients dans mon secteur et zone', nl: 'Mijn klanten in mijn sector en zone', en: 'My customers in my sector and area' },
-
-    'bnp.prototype.vennZone5': { fr: 'Customers ∩ Sector', nl: 'Customers ∩ Sector', en: 'Customers ∩ Sector' },
-    'bnp.prototype.vennOpp5':  { fr: 'Expansion',         nl: 'Expansion',         en: 'Expansion' },
-    'bnp.prototype.vennHint5': { fr: 'Mes clients dans mon secteur', nl: 'Mijn klanten in mijn sector', en: 'My customers in my sector' },
-
-    'bnp.prototype.vennZone6': { fr: 'Area ∩ Sector',     nl: 'Area ∩ Sector',     en: 'Area ∩ Sector' },
-    'bnp.prototype.vennOpp6':  { fr: 'New portfolio offers', nl: 'New portfolio offers', en: 'New portfolio offers' },
-    'bnp.prototype.vennHint6': { fr: 'Non clients dans mon secteur et zone', nl: 'Niet-klanten in mijn sector en zone', en: 'Non-customers in my sector and area' },
-
-    'bnp.prototype.relevantEyebrow': {
-      fr: 'Prototype · priorisation',
-      nl: 'Prototype · prioritering',
-      en: 'Prototype · prioritisation'
-    },
-    'bnp.prototype.relevantTitle': {
-      fr: 'Des six opportunités, <span class="accent">quatre features priorisées.</span>',
-      nl: 'Van zes kansen, <span class="accent">vier geprioriteerde features.</span>',
-      en: 'Of the six opportunities, <span class="accent">four prioritised features.</span>'
-    },
-    'bnp.prototype.relevantLead': {
-      fr: 'Sur les six opportunités cartographiées, quatre se sont imposées comme prioritaires pour le MVP. Celles que la donnée BNP éclaire le plus directement. Une feature par axe, prête à entrer dans le prototype Spotfire.',
-      nl: 'Van de zes in kaart gebrachte kansen drongen vier zich op als prioritair voor de MVP. Die welke de BNP-data het meest rechtstreeks verheldert. Eén feature per as, klaar om in het Spotfire-prototype te belanden.',
-      en: 'Of the six opportunities mapped, four emerged as priorities for the MVP. The ones BNP data lights up most directly. One feature per axis, ready to enter the Spotfire prototype.'
-    },
-    'bnp.prototype.axe1Name': { fr: 'Advanced profiling', nl: 'Advanced profiling', en: 'Advanced profiling' },
-    'bnp.prototype.axe1Desc': {
-      fr: 'Origine · profil socio · revenus · trends spending → cross-selling, marketing local',
-      nl: 'Herkomst · socio-profiel · inkomen · spending trends → cross-selling, lokale marketing',
-      en: 'Origin · socio profile · income · spending trends → cross-selling, local marketing'
-    },
-    'bnp.prototype.axe2Name': { fr: 'Loyalty ranking', nl: 'Loyalty ranking', en: 'Loyalty ranking' },
-    'bnp.prototype.axe2Desc': {
-      fr: 'Nombre transactions par client → ranker la fidélité, tracker l\'évolution',
-      nl: 'Aantal transacties per klant → loyalty ranken, evolutie tracken',
-      en: 'Transactions per customer → rank loyalty, track evolution'
-    },
-    'bnp.prototype.axe3Name': { fr: 'Help for marketing', nl: 'Help for marketing', en: 'Help for marketing' },
-    'bnp.prototype.axe3Desc': {
-      fr: 'Origine clients · part de marché → opportunités locales, expansion trackée',
-      nl: 'Klantherkomst · marktaandeel → lokale opportuniteiten, getrackte expansie',
-      en: 'Customer origin · market share → local opportunities, tracked expansion'
-    },
-    'bnp.prototype.axe4Name': { fr: 'POS & competitors comparison', nl: 'POS & concurrenten-vergelijking', en: 'POS & competitors comparison' },
-    'bnp.prototype.axe4Desc': {
-      fr: 'Volume clients · trafic · revenus → opening hours, market share, brand performance',
-      nl: 'Klantvolume · traffic · omzet → opening hours, marktaandeel, brand performance',
-      en: 'Customer volume · traffic · revenue → opening hours, market share, brand performance'
-    },
-    'bnp.prototype.relevantSource': {
-      fr: 'Source · Concept Report · page 41 · « Why our data are relevant »',
-      nl: 'Bron · Concept Report · pagina 41 · « Why our data are relevant »',
-      en: 'Source · Concept Report · page 41 · "Why our data are relevant"'
-    },
-
-    /* ============== PROTOTYPE 01 — premiers drafts wireframes (2 directions) ============== */
+    /* CVE 2026-05-17 rectif · POC Marketing rejeté par SteerCo → VP recadrée.
+       Pas deux directions parallèles · une séquence (POC rejet → VP recadrage). */
     'bnp.prototype.directionEyebrow': {
-      fr: 'Prototype · premiers drafts',
-      nl: 'Prototype · eerste drafts',
-      en: 'Prototype · first drafts'
+      fr: 'Prototype · arbitrage post-POC',
+      nl: 'Prototype · arbitrage na POC',
+      en: 'Prototype · post-POC arbitration'
     },
     'bnp.prototype.directionTitle': {
-      fr: 'Deux directions explorées. <span class="accent">Une retenue.</span>',
-      nl: 'Twee richtingen verkend. <span class="accent">Eén weerhouden.</span>',
-      en: 'Two directions explored. <span class="accent">One retained.</span>'
+      fr: 'Le POC Marketing rejeté. <span class="accent">La VP a recadré.</span>',
+      nl: 'De Marketing-POC verworpen. <span class="accent">De VP heeft heroriënteerd.</span>',
+      en: 'The Marketing POC rejected. <span class="accent">The VP refocused it.</span>'
     },
     'bnp.prototype.directionLead': {
-      fr: 'Les premiers wireframes ont matérialisé le concept en deux directions opposées. La gauche pousse la donnée brute par graphiques et filtres : cognitive overload garanti, le commerçant doit construire sa propre lecture. La droite pose quatre KPI calés sur quatre objectifs business : une lecture, une décision. C\'est cette deuxième direction qui a été retenue pour le prototype Spotfire.',
-      nl: 'De eerste wireframes hebben het concept in twee tegenovergestelde richtingen gematerialiseerd. Links pusht ruwe data via grafieken en filters : cognitive overload gegarandeerd, de handelaar moet zijn eigen lezing bouwen. Rechts plaatst vier KPI\'s afgestemd op vier business-doelen : één lezing, één beslissing. Het is die tweede richting die voor het Spotfire-prototype is weerhouden.',
-      en: 'The first wireframes materialised the concept in two opposing directions. The left pushes raw data through charts and filters : cognitive overload guaranteed, the merchant has to build their own reading. The right lays four KPIs tied to four business goals : one read, one decision. It\'s this second direction that was retained for the Spotfire prototype.'
+      fr: 'Marketing portait un premier POC data exploration. Rejeté par les clients pilotes et le SteerCo. La VP a recadré · une lecture, une décision.',
+      nl: 'Marketing droeg een eerste data-exploration-POC. Verworpen door pilotklanten en SteerCo. De VP heeft heroriënteerd · één lezing, één beslissing.',
+      en: 'Marketing carried an initial data-exploration POC. Rejected by pilot clients and the SteerCo. The VP refocused · one read, one decision.'
     },
-    'bnp.prototype.directionSource': {
-      fr: 'Source · Concept Report mars 2018, p30-31 — premiers wireframes Enterprise Intelligence',
-      nl: 'Bron · Concept Report maart 2018, p30-31 — eerste wireframes Enterprise Intelligence',
-      en: 'Source · Concept Report March 2018, p30-31 — first wireframes Enterprise Intelligence'
+    /* CVE 2026-05-17 rectif · l'atelier Goals a eu lieu APRÈS la définition de la VP,
+       avec Marketing, pour trier les features candidates. 18 candidats au mur, 10 verts
+       retenus MVP, 8 gris hors MVP. Consolidés en 3 rapports + 1 phase 2. */
+    'bnp.prototype.overviewEyebrow': {
+      fr: 'Prototype · atelier Goals avec Marketing',
+      nl: 'Prototype · Goals-workshop met Marketing',
+      en: 'Prototype · Goals workshop with Marketing'
     },
-
-    /* ============== PROTOTYPE 02 — overview wall + 4 goals strip ============== */
-    'bnp.prototype.overviewEyebrow': { fr: 'Prototype · 4 goals identifiés',                nl: 'Prototype · 4 doelen geïdentificeerd',      en: 'Prototype · 4 goals identified' },
     'bnp.prototype.overviewTitle': {
-      fr: 'Du wall d\'atelier <span class="accent">aux 4 rapports priorisés.</span>',
-      nl: 'Van de werkmuur <span class="accent">naar de 4 geprioriteerde rapporten.</span>',
-      en: 'From the workshop wall <span class="accent">to the 4 prioritised reports.</span>'
+      fr: 'Après la VP · <span class="accent">atelier Goals avec Marketing.</span>',
+      nl: 'Na de VP · <span class="accent">Goals-workshop met Marketing.</span>',
+      en: 'After the VP · <span class="accent">Goals workshop with Marketing.</span>'
     },
     'bnp.prototype.overviewLead': {
-      fr: 'Le wall ci-dessous, c\'est le moment où toutes les features candidates ont été étalées et regroupées en grandes intentions. Chaque rapport correspond à un objectif business du commerçant, avec son propre type de données pertinentes. Trois retenues pour le MVP, une placée en roadmap phase 2.',
-      nl: 'De muur hieronder is het moment waarop alle kandidaat-features werden uitgespreid en gegroepeerd in grote intenties. Elk rapport komt overeen met een business-doel van de handelaar, met eigen relevante data. Drie weerhouden voor de MVP, één geplaatst in roadmap fase 2.',
-      en: 'The wall below is the moment when every candidate feature was spread out and grouped into core intents. Each report maps to a merchant business goal, with its own relevant data. Three retained for the MVP, one placed in the phase 2 roadmap.'
+      fr: 'Dix-huit features candidates au mur. Dix retenues pour le MVP (vertes), huit hors MVP (grises). Consolidées en trois rapports + un en phase 2.',
+      nl: 'Achttien kandidaat-features aan de muur. Tien weerhouden voor MVP (groen), acht buiten MVP (grijs). Geconsolideerd in drie rapporten + één in fase 2.',
+      en: 'Eighteen candidate features on the wall. Ten retained for MVP (green), eight out of MVP (grey). Consolidated into three reports + one in phase 2.'
     },
-    'bnp.prototype.overviewCycle1': { fr: 'Control business state',  nl: 'Control business state',  en: 'Control business state' },
-    'bnp.prototype.overviewName1':  { fr: 'Performance Analysis',     nl: 'Performance Analysis',     en: 'Performance Analysis' },
-    'bnp.prototype.overviewQ1':     { fr: '« Comment je performe ce mois-ci ? »', nl: '« Hoe presteer ik deze maand? »', en: '"How am I performing this month?"' },
-    'bnp.prototype.overviewCycle2': { fr: 'Learn & take actions',     nl: 'Learn & take actions',     en: 'Learn & take actions' },
-    'bnp.prototype.overviewName2':  { fr: 'Business Expansion',       nl: 'Business Expansion',       en: 'Business Expansion' },
-    'bnp.prototype.overviewQ2':     { fr: '« Comment j\'agrandis mon business ? »', nl: '« Hoe laat ik mijn business groeien? »', en: '"How do I grow my business?"' },
-    'bnp.prototype.overviewCycle3': { fr: 'Observe impact of actions', nl: 'Observe impact of actions', en: 'Observe impact of actions' },
-    'bnp.prototype.overviewName3':  { fr: 'Evaluating Actions',        nl: 'Evaluating Actions',        en: 'Evaluating Actions' },
-    'bnp.prototype.overviewQ3':     { fr: '« L\'action que j\'ai prise, elle a marché ? »', nl: '« De actie die ik heb genomen, heeft die gewerkt? »', en: '"The action I took, did it work?"' },
-    'bnp.prototype.overviewCycle4': { fr: 'Phase 2 · roadmap',         nl: 'Fase 2 · roadmap',         en: 'Phase 2 · roadmap' },
-    'bnp.prototype.overviewName4':  { fr: 'Market Research',           nl: 'Market Research',           en: 'Market Research' },
-    'bnp.prototype.overviewQ4':     { fr: '« Où ouvrir le prochain shop ? »', nl: '« Waar open ik mijn volgende winkel? »', en: '"Where do I open my next shop?"' },
-    'bnp.prototype.overviewSource': {
-      fr: 'Référence · Concept Report mars 2018, p37 — wall d\'atelier original',
-      nl: 'Referentie · Concept Report maart 2018, p37 — originele werkmuur',
-      en: 'Reference · Concept Report March 2018, p37 — original workshop wall'
-    },
-
-    /* ============== PROTOTYPE · cycle hero (3 goals reliés en boucle) ============== */
-    'bnp.prototype.cycleG1Phase': { fr: 'Control business state',  nl: 'Control business state',  en: 'Control business state' },
-    'bnp.prototype.cycleG1Name':  { fr: 'Performance Analysis',     nl: 'Performance Analysis',     en: 'Performance Analysis' },
-    'bnp.prototype.cycleG1Q':     { fr: '« Comment je performe ce mois-ci ? »', nl: '« Hoe presteer ik deze maand? »', en: '"How am I performing this month?"' },
-    'bnp.prototype.cycleG2Phase': { fr: 'Learn & take actions',     nl: 'Learn & take actions',     en: 'Learn & take actions' },
-    'bnp.prototype.cycleG2Name':  { fr: 'Business Expansion',       nl: 'Business Expansion',       en: 'Business Expansion' },
-    'bnp.prototype.cycleG2Q':     { fr: '« Comment j\'agrandis mon business ? »', nl: '« Hoe laat ik mijn business groeien? »', en: '"How do I grow my business?"' },
-    'bnp.prototype.cycleG3Phase': { fr: 'Observe impact of actions', nl: 'Observe impact of actions', en: 'Observe impact of actions' },
-    'bnp.prototype.cycleG3Name':  { fr: 'Evaluating Actions',        nl: 'Evaluating Actions',        en: 'Evaluating Actions' },
-    'bnp.prototype.cycleG3Q':     { fr: '« L\'action que j\'ai prise, elle a marché ? »', nl: '« De actie die ik heb genomen, heeft die gewerkt? »', en: '"The action I took, did it work?"' },
+    /* CVE 2026-05-17 NN-brutal · cut "Trois lectures coachées, un flux" (re-statement) ·
+       -22 mots. */
     'bnp.prototype.cycleCaption': {
-      fr: 'Trois rapports qui forment <strong>une seule boucle de décision</strong>. Le commerçant entre par la question qui le préoccupe ce jour-là — et chaque rapport le ramène vers l\'action, puis vers la mesure. Pas de big data à explorer : trois lectures coachées, un seul flux de décision.',
-      nl: 'Drie rapporten die <strong>één enkele beslissingsloop</strong> vormen. De handelaar stapt in via de vraag die hem die dag bezighoudt — en elk rapport brengt hem terug naar de actie, dan naar de meting. Geen big data om te verkennen : drie gecoachte lezingen, één beslissingsstroom.',
-      en: 'Three reports that form <strong>a single decision loop</strong>. The merchant enters through the question on his mind that day — and each report brings him back to action, then to measurement. No big data to explore : three coached reads, one decision flow.'
+      fr: 'Trois rapports, <strong>une seule boucle de décision</strong>. Question du jour · action · mesure.',
+      nl: 'Drie rapporten, <strong>één beslissingsloop</strong>. Vraag van de dag · actie · meting.',
+      en: 'Three reports, <strong>one decision loop</strong>. Day\'s question · action · measurement.'
     },
-    'bnp.prototype.cyclePhase2': {
-      fr: '<strong>Goal 4 · Market Research</strong> — « Où ouvrir le prochain shop ? » — identifié hors scope MVP, placé en roadmap phase 2.',
-      nl: '<strong>Doel 4 · Market Research</strong> — « Waar open ik mijn volgende winkel? » — geïdentificeerd buiten MVP-scope, geplaatst in roadmap fase 2.',
-      en: '<strong>Goal 4 · Market Research</strong> — "Where do I open my next shop?" — identified out of MVP scope, placed in phase 2 roadmap.'
+    /* CVE 2026-05-17 · Phase 2 card · 4 clés enfants individuelles (au lieu d'1 clé bloc html). */
+    'bnp.prototype.phase2Badge': { fr: 'PHASE 2', nl: 'FASE 2', en: 'PHASE 2' },
+    'bnp.prototype.phase2Name': { fr: 'Market Research', nl: 'Marktonderzoek', en: 'Market Research' },
+    'bnp.prototype.phase2Q': {
+      fr: '« Où ouvrir le prochain shop ? »',
+      nl: '« Waar open ik de volgende winkel? »',
+      en: '"Where do I open the next shop?"'
+    },
+    'bnp.prototype.phase2Note': {
+      fr: 'Hors MVP · roadmap phase 2.',
+      nl: 'Buiten MVP · roadmap fase 2.',
+      en: 'Out of MVP · phase 2 roadmap.'
     },
 
     /* ============== PROTOTYPE · value prop par goal (no big data, coached reads) ============== */
+    /* CVE 2026-05-17 v2 NNG · 3 ValueProp compressés · -45 mots total */
     'bnp.prototype.g1ValueProp': {
-      fr: '<strong>La promesse :</strong> ce que ferait un analyste en 30 minutes (extraire, croiser, visualiser, comparer N-1, écrire la conclusion), le commerçant l\'a en 5 secondes. Aucune compétence data requise.',
-      nl: '<strong>De belofte :</strong> wat een analist in 30 minuten zou doen (extraheren, kruisen, visualiseren, N-1 vergelijken, conclusie schrijven), heeft de handelaar in 5 seconden. Geen data-vaardigheid vereist.',
-      en: '<strong>The promise :</strong> what an analyst would do in 30 minutes (extract, cross-reference, visualise, compare to last year, write the conclusion), the merchant has in 5 seconds. No data skill required.'
+      fr: '<strong>La promesse :</strong> 5 secondes pour ce qu\'un analyste ferait en 30 minutes. Aucune compétence data requise.',
+      nl: '<strong>De belofte :</strong> 5 seconden voor wat een analist in 30 minuten zou doen. Geen data-vaardigheid vereist.',
+      en: '<strong>The promise :</strong> 5 seconds for what an analyst would do in 30 minutes. No data skill required.'
     },
     'bnp.prototype.g2ValueProp': {
-      fr: '<strong>La promesse :</strong> au lieu d\'explorer 20 segments démographiques, le rapport ne montre que les 3 segments qui pèsent — et dit lequel décroche. Le commerçant n\'a pas besoin de savoir ce qu\'est une cohorte.',
-      nl: '<strong>De belofte :</strong> in plaats van 20 demografische segmenten te verkennen, toont het rapport alleen de 3 die ertoe doen — en zegt welke afhaakt. De handelaar hoeft niet te weten wat een cohort is.',
-      en: '<strong>The promise :</strong> instead of exploring 20 demographic segments, the report shows only the 3 that matter — and tells which one is slipping. The merchant doesn\'t need to know what a cohort is.'
+      fr: '<strong>La promesse :</strong> au lieu d\'explorer 20 segments démographiques, le rapport ne montre que les 3 qui pèsent — et dit lequel décroche.',
+      nl: '<strong>De belofte :</strong> in plaats van 20 demografische segmenten te verkennen, toont het rapport alleen de 3 die ertoe doen — en zegt welke afhaakt.',
+      en: '<strong>The promise :</strong> instead of exploring 20 demographic segments, the report shows only the 3 that matter — and tells which one is slipping.'
     },
     'bnp.prototype.g3ValueProp': {
-      fr: '<strong>La promesse :</strong> aucune arithmétique mentale. Le delta entre deux périodes est calculé côté serveur, affiché en chiffre clair à droite de chaque graphique. Le commerçant lit le résultat, pas la formule.',
-      nl: '<strong>De belofte :</strong> geen mentaal rekenwerk. Het verschil tussen twee periodes wordt aan serverzijde berekend, in duidelijke cijfers rechts van elke grafiek getoond. De handelaar leest het resultaat, niet de formule.',
-      en: '<strong>The promise :</strong> no mental arithmetic. The delta between two periods is computed server-side, shown in clear numbers next to each chart. The merchant reads the result, not the formula.'
+      fr: '<strong>La promesse :</strong> aucune arithmétique mentale. Le delta est calculé côté serveur, affiché à droite du graphique.',
+      nl: '<strong>De belofte :</strong> geen mentaal rekenwerk. Het verschil wordt aan serverzijde berekend, rechts van elke grafiek getoond.',
+      en: '<strong>The promise :</strong> no mental arithmetic. The delta is computed server-side, shown next to each chart.'
     },
 
     /* ============== PROTOTYPE 03 — Goal 1 Performance Analysis ============== */
@@ -775,10 +424,11 @@
       nl: 'Hoe presteer ik <span class="accent">deze maand?</span>',
       en: 'How am I performing <span class="accent">this month?</span>'
     },
+    /* CVE 2026-05-17 v2 NNG · -20 mots · cut warmup "Le commerçant ouvre le dashboard" */
     'bnp.prototype.g1Lead': {
-      fr: 'Le commerçant ouvre le dashboard, en cinq secondes il a sa lecture du mois : trois KPI lus en un coup d\'œil, son shop comparé aux autres du réseau, l\'écart vs N-1 mis en lumière. Pas de filtres à manipuler, pas de graphique à construire. La donnée parle, il décide.',
-      nl: 'De handelaar opent het dashboard, in vijf seconden heeft hij zijn maandlezing : drie KPI\'s in één oogopslag, zijn winkel vergeleken met de andere van het netwerk, het verschil vs N-1 in beeld gebracht. Geen filters te manipuleren, geen grafiek te bouwen. De data spreekt, hij beslist.',
-      en: 'The merchant opens the dashboard, in five seconds he has his read of the month : three KPIs at a glance, his shop compared to the network, the gap vs last year highlighted. No filters to manipulate, no chart to build. The data speaks, he decides.'
+      fr: 'Cinq secondes pour la lecture du mois · trois KPI, son shop comparé au réseau, l\'écart vs N-1 mis en lumière. Pas de filtres, pas de graphique à construire. La donnée parle, il décide.',
+      nl: 'Vijf seconden voor de maandlezing · drie KPI\'s, zijn winkel vergeleken met het netwerk, het verschil vs N-1 belicht. Geen filters, geen grafiek te bouwen. De data spreekt, hij beslist.',
+      en: 'Five seconds for the monthly read · three KPIs, his shop compared to the network, the gap vs N-1 highlighted. No filters, no chart to build. The data speaks, he decides.'
     },
     'bnp.prototype.g1KpiTrans':  { fr: 'Transactions',         nl: 'Transactions',         en: 'Transactions' },
     'bnp.prototype.g1KpiRev':    { fr: 'Revenue',              nl: 'Revenue',              en: 'Revenue' },
@@ -806,21 +456,12 @@
       nl: 'Hoe laat ik <span class="accent">mijn business groeien?</span>',
       en: 'How do I grow <span class="accent">my business?</span>'
     },
+    /* CVE 2026-05-17 v2 NNG · -20 mots · cut warmup "Une fois la photo du business prise" */
     'bnp.prototype.g2Lead': {
-      fr: 'Une fois la photo du business prise, le commerçant entre en mode action. Cinq lectures coachées l\'aident à décider quoi changer concrètement : qui sont mes clients réels, quand achètent-ils, ceux qui reviennent, ceux qui partent, et quand j\'ouvre. Chaque feature pointe vers une décision concrète.',
-      nl: 'Eens de foto van de business genomen, gaat de handelaar in actiemodus. Vijf gecoachte lezingen helpen hem concreet te beslissen wat te veranderen : wie zijn mijn echte klanten, wanneer kopen ze, wie komt terug, wie vertrekt, wanneer ben ik open. Elke feature wijst naar een concrete beslissing.',
-      en: 'Once the picture of the business is taken, the merchant moves to action mode. Five coached reads help him decide concretely what to change : who my real customers are, when they buy, who returns, who leaves, and when I open. Each feature points to a concrete call.'
+      fr: 'Mode action · cinq lectures coachées pour décider quoi changer. Qui sont mes vrais clients, quand achètent-ils, qui revient, qui part, quand j\'ouvre. Chaque feature pointe vers une décision.',
+      nl: 'Actiemodus · vijf begeleide lezingen om te beslissen wat te veranderen. Wie zijn mijn echte klanten, wanneer kopen ze, wie komt terug, wie vertrekt, wanneer open ik. Elke feature wijst naar een beslissing.',
+      en: 'Action mode · five coached reads to decide what to change. Who are my real customers, when do they buy, who returns, who leaves, when do I open. Each feature points to a decision.'
     },
-    'bnp.prototype.g2Feat1Name': { fr: 'Personas', nl: 'Personas', en: 'Personas' },
-    'bnp.prototype.g2Feat1Desc': { fr: 'Profil socio-démographique des acheteurs réels. Âge, genre, langue, revenu, taille de famille, origine géographique.', nl: 'Sociodemografisch profiel van de echte kopers. Leeftijd, gender, taal, inkomen, gezinsgrootte, geografische herkomst.', en: 'Socio-demographic profile of actual buyers. Age, gender, language, income, family size, geographic origin.' },
-    'bnp.prototype.g2Feat2Name': { fr: 'Spending Patterns', nl: 'Spending Patterns', en: 'Spending Patterns' },
-    'bnp.prototype.g2Feat2Desc': { fr: 'Quand achètent-ils, combien dépensent-ils en moyenne, sur quelles catégories. Heatmap horaire et hebdomadaire.', nl: 'Wanneer kopen ze, hoeveel besteden ze gemiddeld, in welke categorieën. Heatmap per uur en per week.', en: 'When they buy, how much they spend on average, in which categories. Hourly and weekly heatmap.' },
-    'bnp.prototype.g2Feat3Name': { fr: 'Customer Retention', nl: 'Customer Retention', en: 'Customer Retention' },
-    'bnp.prototype.g2Feat3Desc': { fr: 'Qui revient, qui ne revient plus. Cohorte des clients fidèles vs ceux à reconquérir.', nl: 'Wie komt terug, wie niet meer. Cohorte trouwe klanten versus klanten om terug te winnen.', en: 'Who comes back, who does not. Loyal customer cohort versus those to win back.' },
-    'bnp.prototype.g2Feat4Name': { fr: 'Customer Origin', nl: 'Customer Origin', en: 'Customer Origin' },
-    'bnp.prototype.g2Feat4Desc': { fr: 'Carte des codes postaux d\'origine. D\'où viennent vos clients, quelle commune cibler en marketing local.', nl: 'Kaart van postcodes van herkomst. Waar uw klanten vandaan komen, welke gemeente te targeten in lokale marketing.', en: 'Map of postcode origins. Where your customers come from, which commune to target in local marketing.' },
-    'bnp.prototype.g2Feat5Name': { fr: 'Open Hours Efficiency', nl: 'Open Hours Efficiency', en: 'Open Hours Efficiency' },
-    'bnp.prototype.g2Feat5Desc': { fr: 'Trafic carte heure par heure. L\'amplitude actuelle est-elle calée sur la fréquentation réelle ?', nl: 'Kaartverkeer per uur. Is de huidige openingsamplitude afgestemd op de werkelijke bezoekersaantallen?', en: 'Hourly card traffic. Are current opening hours aligned with actual footfall?' },
     'bnp.prototype.g2Bene1': { fr: 'Cinq lectures complémentaires couvrent la décision marketing locale.', nl: 'Vijf complementaire lezingen dekken de lokale marketingbeslissing.', en: 'Five complementary reads cover the local marketing call.' },
     'bnp.prototype.g2Bene2': { fr: 'Cohérence visuelle : chaque feature ouvre sur un écran type, pas une exploration libre.', nl: 'Visuele coherentie : elke feature opent op een vast scherm, geen vrije exploratie.', en: 'Visual coherence : each feature opens on a fixed screen, not free exploration.' },
     'bnp.prototype.g2Bene3': { fr: 'L\'action suggérée est explicite : étendre les heures, cibler une commune, relancer une cohorte.', nl: 'De voorgestelde actie is expliciet : verlengen van openingsuren, een gemeente targeten, een cohort heractiveren.', en: 'The suggested action is explicit : extend hours, target a commune, re-engage a cohort.' },
@@ -834,10 +475,11 @@
       nl: 'De actie die ik heb genomen, <span class="accent">heeft die gewerkt?</span>',
       en: 'The action I took, <span class="accent">did it work?</span>'
     },
+    /* CVE 2026-05-17 v2 NNG · -11 mots · phrase plus directe */
     'bnp.prototype.g3Lead': {
-      fr: 'Pour évaluer une action, il faut comparer. Le concept fixe trois fenêtres temps : <strong>même période N-1</strong>, <strong>période précédente</strong>, <strong>même période courante (multi-shops)</strong>. Sur ce socle, le co-design avec Léonidas a posé le test décisif.',
-      nl: 'Om een actie te evalueren, moet je vergelijken. Het concept legt drie tijdsvensters vast : <strong>zelfde periode N-1</strong>, <strong>vorige periode</strong>, <strong>zelfde lopende periode (multi-shops)</strong>. Op die basis heeft de co-design met Léonidas de beslissende test gelegd.',
-      en: 'To evaluate an action, you need to compare. The concept fixes three time windows : <strong>same period last year</strong>, <strong>previous period</strong>, <strong>same current period (multi-shops)</strong>. On this foundation, the Léonidas co-design ran the decisive test.'
+      fr: 'Pour évaluer une action, il faut comparer. Trois fenêtres temps · <strong>même période N-1</strong>, <strong>période précédente</strong>, <strong>même période courante (multi-shops)</strong>. Co-design avec Léonidas sur ce socle.',
+      nl: 'Om een actie te evalueren, moet je vergelijken. Drie tijdsvensters · <strong>zelfde periode N-1</strong>, <strong>vorige periode</strong>, <strong>zelfde lopende periode (multi-shops)</strong>. Co-design met Léonidas op die basis.',
+      en: 'To evaluate an action, you have to compare. Three time windows · <strong>same period N-1</strong>, <strong>previous period</strong>, <strong>same period current (multi-shops)</strong>. Co-design with Léonidas on this foundation.'
     },
     'bnp.prototype.g3LastYear': { fr: 'Same period last year',             nl: 'Same period last year',             en: 'Same period last year' },
     'bnp.prototype.g3Prev':     { fr: 'Previous period',                    nl: 'Previous period',                    en: 'Previous period' },
@@ -869,10 +511,11 @@
       nl: 'Waar open ik <span class="accent">de volgende winkel?</span>',
       en: 'Where do I open <span class="accent">the next shop?</span>'
     },
+    /* CVE 2026-05-17 v2 NNG · -16 mots */
     'bnp.prototype.g4Lead': {
-      fr: 'Le quatrième goal vise une décision plus stratégique : où implanter une nouvelle boutique, sur quelle vertical étendre l\'enseigne. Hors scope MVP — la donnée est là, mais le service demande un cran de maturité supplémentaire côté sponsor. Identifié comme axe d\'expansion phase 2, horizon 2020.',
-      nl: 'Het vierde doel mikt op een meer strategische beslissing : waar een nieuwe winkel openen, in welke verticale de keten uitbreiden. Buiten MVP-scope — de data is er, maar de dienst vraagt een trapje extra maturiteit aan sponsor-zijde. Geïdentificeerd als expansie-as fase 2, horizon 2020.',
-      en: 'The fourth goal targets a more strategic call : where to open a new shop, in which vertical to extend the chain. Out of MVP scope — the data exists, but the service requires another step of sponsor maturity. Identified as a phase 2 expansion axis, 2020 horizon.'
+      fr: 'Décision stratégique · où implanter une nouvelle boutique, sur quelle vertical étendre. Hors scope MVP · la donnée est là, le service demande un cran de maturité côté sponsor. Phase 2, horizon 2020.',
+      nl: 'Strategische beslissing · waar een nieuwe winkel openen, in welke verticale uitbreiden. Buiten MVP-scope · de data is er, de dienst vraagt een extra maturiteit aan sponsorzijde. Fase 2, horizon 2020.',
+      en: 'Strategic decision · where to open a new shop, in which vertical to extend. Out of MVP scope · the data is there, the service requires another level of sponsor maturity. Phase 2, horizon 2020.'
     },
     'bnp.prototype.g4Feat1Name': { fr: 'Best business location', nl: 'Best business location', en: 'Best business location' },
     'bnp.prototype.g4Feat1Desc': { fr: 'Cartographie des zones où la donnée transactionnelle révèle une demande non couverte. Le commerçant choisit son prochain emplacement avec une preuve, pas une intuition.', nl: 'Cartografie van zones waar transactiedata een onbediende vraag onthult. De handelaar kiest zijn volgende locatie met bewijs, geen intuïtie.', en: 'Mapping of zones where transactional data reveals uncovered demand. The merchant picks his next location with evidence, not intuition.' },
@@ -897,189 +540,8 @@
     'bnp.concept.toc5Title': { fr: 'Develop · 4 goals · ateliers', nl: 'Develop · 4 doelen · workshops', en: 'Develop · 4 goals · workshops' },
     'bnp.concept.toc6Title': { fr: 'Deliver · wireframes · POC', nl: 'Deliver · wireframes · POC', en: 'Deliver · wireframes · POC' },
     'bnp.concept.toc7Title': { fr: 'MVP · user stories · roadmap', nl: 'MVP · user stories · roadmap', en: 'MVP · user stories · roadmap' },
-    /* Legacy (orphelins inertes) */
-    'bnp.concept.delivEyebrowLegacy': { fr: 'Concept · livrable de fin de parcours', nl: 'Concept · oplevering einde traject',  en: 'Concept · journey deliverable' },
-    'bnp.concept.delivTitle': {
-      fr: '86 pages, <span class="accent">une seule décision à prendre.</span>',
-      nl: '86 pagina\'s, <span class="accent">één enkele beslissing te nemen.</span>',
-      en: '86 pages, <span class="accent">one single call to make.</span>'
-    },
-    'bnp.concept.delivLead': {
-      fr: 'Tout le travail des quatre phases du Double Diamond, ramassé dans un seul document. Le Concept Report sert d\'argumentation au sponsor : pas un rapport de recherche, un dossier de décision. Il rejoue le parcours du commerçant, la matière analysée, les quatre rapports prototypés, le scope MVP arrêté en P1/P2, et ouvre directement sur la validation utilisateur.',
-      nl: 'Het volledige werk van de vier Double Diamond fasen, samengevat in één document. Het Concept Report dient als argumentatie voor de executive sponsor : geen onderzoeksrapport, een beslissingsdossier. Het herbespeelt het traject van de handelaar, de geanalyseerde materie, de vier geprototypeerde rapporten, de vastgelegde MVP-scope in P1/P2, en opent rechtstreeks op de gebruikersvalidatie.',
-      en: 'All the work of the four Double Diamond phases, gathered in a single document. The Concept Report serves as argumentation for the executive sponsor : not a research report, a decision file. It replays the merchant journey, the analysed matter, the four prototyped reports, the MVP scope locked in P1/P2, and opens directly on user validation.'
-    },
-    'bnp.concept.delivPhase1': { fr: 'Research',  nl: 'Research',  en: 'Research' },
-    'bnp.concept.delivPhase2': { fr: 'Analyse',   nl: 'Analyse',   en: 'Analyse' },
-    'bnp.concept.delivPhase3': { fr: 'Prototype', nl: 'Prototype', en: 'Prototype' },
-    'bnp.concept.delivPhase4': { fr: 'Concept',   nl: 'Concept',   en: 'Concept' },
-    'bnp.concept.delivP1L1': { fr: '6 interviews PME terrain',                nl: '6 kmo-interviews op het terrein',         en: '6 SME field interviews' },
-    'bnp.concept.delivP1L2': { fr: 'Benchmark Barclays · Proximus · BBVA',    nl: 'Benchmark Barclays · Proximus · BBVA',    en: 'Benchmark Barclays · Proximus · BBVA' },
-    'bnp.concept.delivP1L3': { fr: '9 personas B2B livrés',                   nl: '9 B2B-personas opgeleverd',                en: '9 B2B personas delivered' },
-    'bnp.concept.delivP2L1': { fr: '3 sources de données fusionnées',         nl: '3 datasources samengevoegd',               en: '3 data sources fused' },
-    'bnp.concept.delivP2L2': { fr: '6 Key Barriers identifiées',              nl: '6 Key Barriers geïdentificeerd',           en: '6 Key Barriers identified' },
-    'bnp.concept.delivP2L3': { fr: 'Value proposition statement',             nl: 'Value proposition statement',              en: 'Value proposition statement' },
-    'bnp.concept.delivP3L1': { fr: '4 goals priorisés (3 MVP · 1 phase 2)',   nl: '4 doelen geprioriteerd (3 MVP · 1 fase 2)', en: '4 goals prioritised (3 MVP · 1 phase 2)' },
-    'bnp.concept.delivP3L2': { fr: 'Wireframes goal par goal',                nl: 'Wireframes per doel',                      en: 'Wireframes goal by goal' },
-    'bnp.concept.delivP3L3': { fr: 'POC Spotfire cliquable',                  nl: 'Klikbare Spotfire POC',                    en: 'Clickable Spotfire POC' },
-    'bnp.concept.delivP4L1': { fr: 'Concept Report 86 pages signé',           nl: 'Concept Report 86 pagina\'s ondertekend', en: 'Concept Report 86 pages signed' },
-    'bnp.concept.delivP4L2': { fr: 'User stories prioritisées P1/P2',         nl: 'User stories geprioriteerd P1/P2',         en: 'User stories prioritised P1/P2' },
-    'bnp.concept.delivP4L3': { fr: 'MVP scope arrêté · prêt pour user test',  nl: 'MVP-scope vastgelegd · klaar voor user test', en: 'MVP scope locked · ready for user test' },
-    'bnp.concept.delivClaim': {
-      fr: 'Le sponsor n\'a plus à imaginer le service. Il a un <span class="accent">prototype clickable, des stories prioritisées, un MVP arrêté</span>. Il ne lui reste qu\'à valider la dernière chose qui manque : la voix du commerçant.',
-      nl: 'De sponsor hoeft de dienst niet meer in te beelden. Hij heeft een <span class="accent">klikbaar prototype, geprioriteerde stories, een vastgelegde MVP</span>. Hem rest alleen het laatste te valideren : de stem van de handelaar.',
-      en: 'The sponsor no longer has to imagine the service. He has a <span class="accent">clickable prototype, prioritised stories, a locked MVP</span>. All he has left is to validate the last missing piece : the merchant\'s voice.'
-    },
     'bnp.concept.delivSourceLab': { fr: 'Ouvrir le document complet',                       nl: 'Open het volledige document',           en: 'Open the full document' },
     'bnp.concept.delivSourceRef': { fr: 'Concept Report · mars 2018 · PDF complet 86 pages', nl: 'Concept Report · maart 2018 · volledige PDF 86 pagina\'s', en: 'Concept Report · March 2018 · full PDF 86 pages' },
-
-    'bnp.prototype.spotfireEyebrow': { fr: 'Prototype · Spotfire POC', nl: 'Prototype · Spotfire POC', en: 'Prototype · Spotfire POC' },
-    'bnp.prototype.spotfireTitle': {
-      fr: 'Trois lectures coachées <span class="accent">par graphique.</span>',
-      nl: 'Drie begeleide lezingen <span class="accent">per diagram.</span>',
-      en: 'Three coached reads <span class="accent">per chart.</span>'
-    },
-    'bnp.prototype.spotfireLead': {
-      fr: 'IT proposait 47 indicateurs. J\'ai dit non. Trois lectures coachées par graphique, parce que les six barrières en interview disaient toutes la même chose : un commerçant ne sait pas quoi faire avec des chiffres bruts. Le détail qui change tout : chaque graphique entouré d\'une annotation « What\'s important » qui suggère une décision concrète.',
-      nl: 'IT stelde 47 indicatoren voor. Ik zei nee. Drie begeleide lezingen per diagram, omdat de zes barrières uit de interviews allemaal hetzelfde zeiden : een merchant weet niet wat te doen met ruwe cijfers. Het detail dat alles verandert : elk diagram omringd door een « What\'s important »-annotatie die een concrete beslissing voorstelt.',
-      en: 'IT proposed 47 indicators. I said no. Three coached reads per chart, because the six interview barriers all said the same thing : a shopkeeper doesn\'t know what to do with raw numbers. The detail that changes everything : each chart wrapped in a « What\'s important » annotation that suggests a concrete decision.'
-    },
-    'bnp.prototype.spotfireCap': {
-      fr: 'Dashboard KPI Principles · POC Spotfire · 4 goals · Concept Report p42',
-      nl: 'Dashboard KPI Principles · POC Spotfire · 4 goals · Concept Report p42',
-      en: 'Dashboard KPI Principles · POC Spotfire · 4 goals · Concept Report p42'
-    },
-    'bnp.prototype.spotfireSource': {
-      fr: 'Source · Concept Report · pages 42-44 · « Dashboard Principles »',
-      nl: 'Bron · Concept Report · pagina\'s 42-44 · « Dashboard Principles »',
-      en: 'Source · Concept Report · pages 42-44 · "Dashboard Principles"'
-    },
-
-    /* ============== PROTOTYPE 3.1 — Service blueprint 5 journeys ============== */
-    /* ============== PROTOTYPE 3.2 — Sprint design 3 goals coachés ============== */
-    'bnp.prototype.sdEyebrow': { fr: 'Prototype · Sprint design', nl: 'Prototype · Sprint design', en: 'Prototype · Sprint design' },
-    'bnp.prototype.sdTitle': {
-      fr: 'Trois goals coachés. <span class="accent">Trois sprints. Trois questions du commerçant.</span>',
-      nl: 'Drie gecoachte goals. <span class="accent">Drie sprints. Drie merchant-vragen.</span>',
-      en: 'Three coached goals. <span class="accent">Three sprints. Three shopkeeper questions.</span>'
-    },
-    'bnp.prototype.sdLead': {
-      fr: 'Le service blueprint posé, on a découpé le concept en trois sprints design — un par goal. Chaque sprint répond à une question concrète du commerçant. Pas une feature isolée : une lecture coachée du dashboard sur cette question.',
-      nl: 'Service blueprint gelegd, we knipten het concept in drie design sprints — één per goal. Elke sprint beantwoordt een concrete merchant-vraag. Geen geïsoleerde feature: een gecoachte lezing van het dashboard rond die vraag.',
-      en: 'With the service blueprint in place, we sliced the concept into three design sprints — one per goal. Each sprint answers a concrete shopkeeper question. Not an isolated feature: a coached read of the dashboard on that question.'
-    },
-    'bnp.prototype.sdSprint1': { fr: 'Sprint 1 · 2 semaines', nl: 'Sprint 1 · 2 weken', en: 'Sprint 1 · 2 weeks' },
-    'bnp.prototype.sdSprint2': { fr: 'Sprint 2 · 2 semaines', nl: 'Sprint 2 · 2 weken', en: 'Sprint 2 · 2 weeks' },
-    'bnp.prototype.sdSprint3': { fr: 'Sprint 3 · 2 semaines', nl: 'Sprint 3 · 2 weken', en: 'Sprint 3 · 2 weeks' },
-    'bnp.prototype.sd1Name':   { fr: 'Performance Analysis', nl: 'Performance Analysis', en: 'Performance Analysis' },
-    'bnp.prototype.sd1Q':      { fr: '« Comment je performe ce mois-ci ? »', nl: '« Hoe presteer ik deze maand ? »', en: '"How am I performing this month ?"' },
-    'bnp.prototype.sd1Out':    { fr: '3 KPIs · shop ranking · monthly trends · annotation what\'s important', nl: '3 KPI\'s · shop ranking · monthly trends · what\'s important annotatie', en: '3 KPIs · shop ranking · monthly trends · what\'s important annotation' },
-    'bnp.prototype.sd2Name':   { fr: 'Business Expansion', nl: 'Business Expansion', en: 'Business Expansion' },
-    'bnp.prototype.sd2Q':      { fr: '« Comment j\'agrandis mon business ? »', nl: '« Hoe vergroot ik mijn business ? »', en: '"How do I grow my business ?"' },
-    'bnp.prototype.sd2Out':    { fr: 'Cycle Control / Learn / Observe · personas · spending patterns · open hours', nl: 'Cyclus Control / Learn / Observe · personas · spending patterns · open hours', en: 'Cycle Control / Learn / Observe · personas · spending patterns · open hours' },
-    'bnp.prototype.sd3Name':   { fr: 'Evaluating Actions', nl: 'Evaluating Actions', en: 'Evaluating Actions' },
-    'bnp.prototype.sd3Q':      { fr: '« L\'action que j\'ai prise — elle a marché ? »', nl: '« De actie die ik heb genomen — werkte die ? »', en: '"The action I took — did it work ?"' },
-    'bnp.prototype.sd3Out':    { fr: 'Time selection 3 fenêtres · shop comparison · period comparison · maintained customers', nl: 'Time selection 3 vensters · shop comparison · period comparison · maintained customers', en: 'Time selection 3 windows · shop comparison · period comparison · maintained customers' },
-    'bnp.prototype.sdSource': {
-      fr: 'Trois sprints design successifs · co-animés avec le PO IT et le sponsor · janvier-mars 2018',
-      nl: 'Drie opeenvolgende design sprints · co-gefaciliteerd met de IT PO en de sponsor · januari-maart 2018',
-      en: 'Three successive design sprints · co-facilitated with the IT PO and the sponsor · January-March 2018'
-    },
-
-    /* ============== CONCEPT 4.4 — Decision pack consolidé ============== */
-    'bnp.dp.eyebrow': { fr: 'Concept · Decision pack pour sponsor', nl: 'Concept · Decision pack voor executive sponsor', en: 'Concept · Decision pack for executive sponsor' },
-    'bnp.dp.title': {
-      fr: 'Le pack qui a <span class="accent">fait passer le projet en production.</span>',
-      nl: 'Het pack dat <span class="accent">het project in productie liet gaan.</span>',
-      en: 'The pack that <span class="accent">moved the project into production.</span>'
-    },
-    'bnp.dp.lead': {
-      fr: 'À la sortie de la phase Concept, un seul livrable atterrissait sur le bureau du sponsor : un decision pack qui contenait tout — la VP signée, les 3 goals MVP prototypés, le climax Léonidas chiffré, le scope MVP arrêté en P1/P2, le budget sprint, la roadmap phase 2. Une seule réunion. Une seule décision.',
-      nl: 'Aan het einde van de Concept-fase landde één enkel deliverable op het bureau van de sponsor: een decision pack met alles erin — de getekende VP, de 3 geprototypeerde MVP-goals, de gekwantificeerde Léonidas-climax, de MVP-scope vastgelegd in P1/P2, het sprint-budget, de fase 2-roadmap. Eén meeting. Eén beslissing.',
-      en: 'Out of the Concept phase, a single deliverable landed on the sponsor\'s desk: a decision pack with everything inside — signed VP, 3 prototyped MVP goals, the Léonidas climax quantified, the MVP scope locked in P1/P2, the sprint budget, the phase 2 roadmap. One meeting. One decision.'
-    },
-    'bnp.dp.i1Name': { fr: 'VP signée + Lean Canvas', nl: 'Getekende VP + Lean Canvas', en: 'Signed VP + Lean Canvas' },
-    'bnp.dp.i1Desc': {
-      fr: '+15-25% de revenue PME pour qui suit les rapports. Triple Win Bank · Retailer · Cardholder.',
-      nl: '+15-25% kmo-omzet voor wie de rapporten volgt. Triple Win Bank · Retailer · Cardholder.',
-      en: '+15-25% SME revenue for those who follow the reports. Triple Win Bank · Retailer · Cardholder.'
-    },
-    'bnp.dp.i2Name': { fr: '3 Goals prototypés Spotfire', nl: '3 geprototypeerde Spotfire-goals', en: '3 Goals prototyped on Spotfire' },
-    'bnp.dp.i2Desc': {
-      fr: 'Performance · Business Expansion · Evaluating Actions. Wireframes spec InVision livrés au studio interne.',
-      nl: 'Performance · Business Expansion · Evaluating Actions. Wireframes spec InVision opgeleverd aan de interne studio.',
-      en: 'Performance · Business Expansion · Evaluating Actions. Wireframes spec InVision handed to the in-house studio.'
-    },
-    'bnp.dp.i3Name': { fr: 'Climax Léonidas chiffré', nl: 'Gekwantificeerde Léonidas-climax', en: 'Léonidas climax quantified' },
-    'bnp.dp.i3Desc': {
-      fr: '+80% revenue · +€34k en 6 mois · 6/1/0. Le seul cas de promesse d\'achat ferme avant le développement, sur ce projet, à BNP.',
-      nl: '+80% omzet · +€34k op 6 maanden · 6/1/0. Het enige geval van een harde aankoopbelofte voor de ontwikkeling, op dit project, bij BNP.',
-      en: '+80% revenue · +€34k in 6 months · 6/1/0. The only case of a firm purchase commitment before development, on this project, at BNP.'
-    },
-    'bnp.dp.i4Name': { fr: 'MVP scope arrêté · P1/P2', nl: 'Vastgelegde MVP-scope · P1/P2', en: 'MVP scope locked · P1/P2' },
-    'bnp.dp.i4Desc': {
-      fr: '12 user stories P1 (sprints 1-3) · 4 user stories P2 (Marketing tout-boîte · Market Research). Backlog signé Banking, IT, Legal, Marketing.',
-      nl: '12 user stories P1 (sprints 1-3) · 4 user stories P2 (Marketing tout-boîte · Market Research). Backlog ondertekend door Banking, IT, Legal, Marketing.',
-      en: '12 P1 user stories (sprints 1-3) · 4 P2 user stories (Marketing tout-boîte · Market Research). Backlog signed by Banking, IT, Legal, Marketing.'
-    },
-    'bnp.dp.i5Name': { fr: 'Goal 4 · roadmap phase 2', nl: 'Goal 4 · roadmap fase 2', en: 'Goal 4 · phase 2 roadmap' },
-    'bnp.dp.i5Desc': {
-      fr: 'Market Research (Best business location · Opportunities by industry) — out of MVP scope, identifié comme axe d\'expansion 2020 vers Acquirer share 7→20%.',
-      nl: 'Market Research (Best business location · Opportunities by industry) — buiten MVP-scope, geïdentificeerd als expansie-as 2020 richting Acquirer share 7→20%.',
-      en: 'Market Research (Best business location · Opportunities by industry) — out of MVP scope, identified as 2020 expansion axis toward Acquirer share 7→20%.'
-    },
-    'bnp.dp.source': {
-      fr: 'Decision pack présenté au sponsor · BNPPF Bank for Entrepreneurs · mars 2018 · décision : MVP en production Q2 2018',
-      nl: 'Decision pack voorgesteld aan de executive sponsor · BNPPF Bank for Entrepreneurs · maart 2018 · beslissing: MVP in productie Q2 2018',
-      en: 'Decision pack presented to the executive sponsor · BNPPF Bank for Entrepreneurs · March 2018 · decision: MVP into production Q2 2018'
-    },
-
-    'bnp.prototype.bpEyebrow': { fr: 'Prototype · Service blueprint', nl: 'Prototype · Service blueprint', en: 'Prototype · Service blueprint' },
-    'bnp.prototype.bpTitle': {
-      fr: 'Cinq journeys end-to-end. <span class="accent">Une seule promesse.</span>',
-      nl: 'Vijf end-to-end journeys. <span class="accent">Eén belofte.</span>',
-      en: 'Five end-to-end journeys. <span class="accent">One promise.</span>'
-    },
-    'bnp.prototype.bpLead': {
-      fr: 'Avant de dessiner un écran, j\'ai posé le service au complet. Cinq journeys end-to-end qui couvrent l\'onboarding non-EBB, la première connexion, la lecture d\'un goal, la prise de décision, et le retour avec un nouveau résultat. Côté backstage : qui pousse la donnée, qui la calcule, qui la rafraîchit.',
-      nl: 'Voor er een scherm getekend werd, lag de hele service al neer. Vijf end-to-end journeys: onboarding non-EBB, eerste login, lezen van een goal, beslissing nemen, en terugkomen met een nieuw resultaat. Backstage: wie pusht de data, wie berekent ze, wie refresht ze.',
-      en: 'Before drawing a single screen, I laid out the whole service. Five end-to-end journeys: non-EBB onboarding, first login, reading a goal, making a call, coming back with a new outcome. Backstage: who pushes the data, who computes it, who refreshes it.'
-    },
-    'bnp.prototype.bp1Name': { fr: 'Onboarding non-EBB', nl: 'Onboarding non-EBB', en: 'Non-EBB onboarding' },
-    'bnp.prototype.bp1Desc': {
-      fr: 'Du compte commerçant à l\'activation Enterprise Intelligence — 15 étapes nettoyées, 5 frictions retirées.',
-      nl: 'Van merchant-account naar activatie Enterprise Intelligence — 15 stappen opgekuist, 5 fricties weggehaald.',
-      en: 'From merchant account to Enterprise Intelligence activation — 15 steps cleaned, 5 frictions removed.'
-    },
-    'bnp.prototype.bp2Name': { fr: 'Première lecture', nl: 'Eerste raadpleging', en: 'First read' },
-    'bnp.prototype.bp2Desc': {
-      fr: 'Login Easy Banking Business → home E.I. → premier goal coaché. Zéro tutoriel, l\'interface guide.',
-      nl: 'Login Easy Banking Business → home E.I. → eerste gecoachte goal. Geen tutorial, het scherm leidt.',
-      en: 'Easy Banking Business login → E.I. home → first coached goal. No tutorial — the interface guides.'
-    },
-    'bnp.prototype.bp3Name': { fr: 'Décision business', nl: 'Business-beslissing', en: 'Business call' },
-    'bnp.prototype.bp3Desc': {
-      fr: 'Du KPI au geste : campagne Marketing tout-boîte, ajustement opening hours, repositionnement panier.',
-      nl: 'Van KPI naar actie: Marketing tout-boîte campagne, opening hours bijstellen, basket herpositioneren.',
-      en: 'From KPI to action: Marketing tout-boîte campaign, opening hours adjustment, basket repositioning.'
-    },
-    'bnp.prototype.bp4Name': { fr: 'Retour mesuré', nl: 'Gemeten terugkeer', en: 'Measured return' },
-    'bnp.prototype.bp4Desc': {
-      fr: 'Le mois suivant, le commerçant revient et lit l\'effet de sa décision. Boucle fermée.',
-      nl: 'De volgende maand komt de merchant terug en leest het effect van zijn beslissing. Lus gesloten.',
-      en: 'Next month, the shopkeeper returns and reads the effect of his call. Loop closed.'
-    },
-    'bnp.prototype.bp5Name': { fr: 'Backstage data', nl: 'Backstage data', en: 'Backstage data' },
-    'bnp.prototype.bp5Desc': {
-      fr: 'ATOS pousse la donnée transactionnelle, IT calcule les agrégats, BNP push les insights dans EBB. Un seul SLA visible côté commerçant.',
-      nl: 'ATOS pusht de transactionele data, IT berekent de aggregaten, BNP pusht de insights in EBB. Eén SLA zichtbaar aan de merchant.',
-      en: 'ATOS pushes transactional data, IT computes aggregates, BNP pushes insights into EBB. One SLA visible to the merchant.'
-    },
-    'bnp.prototype.bpSource': {
-      fr: 'Référence interne · Service blueprint atelier · novembre 2017',
-      nl: 'Interne referentie · Service blueprint workshop · november 2017',
-      en: 'Internal reference · Service blueprint workshop · November 2017'
-    },
 
     /* ============== PROTOTYPE 3.4 — User test 6 PME ============== */
     'bnp.prototype.utEyebrow': { fr: 'Prototype · User test 6 PME', nl: 'Prototype · User test 6 kmo\'s', en: 'Prototype · 6 SME user test' },
@@ -1088,10 +550,12 @@
       nl: 'Zes merchants. <span class="accent">Eén harde aankoopbelofte.</span>',
       en: 'Six shopkeepers. <span class="accent">One firm purchase commitment.</span>'
     },
+    /* CVE 2026-05-17 NN-brutal · cut "Pas un usability test poli. Une validation commerciale"
+       (claim final qui restate le fact). Fait sec, mécanisme + outcome. -14 mots. */
     'bnp.prototype.utLead': {
-      fr: 'Le prototype Spotfire est testé avec six PME. Les six lisent leur dashboard sans aide. Cinq disent oui à un pilote. <strong>Un — le groupe Léonidas — accepte de signer une promesse d\'achat ferme.</strong> Pas un usability test poli. Une validation commerciale.',
-      nl: 'Het Spotfire-prototype wordt getest met zes kmo\'s. Alle zes lezen hun dashboard zonder hulp. Vijf zeggen ja tegen een pilot. <strong>Eén — de Léonidas-groep — tekent een harde aankoopbelofte.</strong> Geen beleefde usability test. Een commerciële validatie.',
-      en: 'The Spotfire prototype is tested with six SMEs. All six read their dashboard unaided. Five say yes to a pilot. <strong>One — the Léonidas group — signs a firm purchase commitment.</strong> Not a polite usability test. A commercial validation.'
+      fr: 'Six PME testent le prototype Spotfire sans aide. <strong>Un — le groupe Léonidas — signe une promesse d\'achat ferme.</strong>',
+      nl: 'Zes kmo\'s testen het Spotfire-prototype zonder hulp. <strong>Eén — de Léonidas-groep — tekent een vaste aankoopbelofte.</strong>',
+      en: 'Six SMEs test the Spotfire prototype unaided. <strong>One — the Léonidas group — signs a firm purchase commitment.</strong>'
     },
     'bnp.prototype.utStat1': { fr: 'PME testées',                       nl: 'Kmo\'s getest',                        en: 'SMEs tested' },
     'bnp.prototype.utStat2': { fr: 'Promesse d\'achat signée (Léonidas)', nl: 'Aankoopbelofte getekend (Léonidas)',  en: 'Purchase commitment signed (Léonidas)' },
@@ -1101,115 +565,13 @@
       nl: 'De sponsor heeft getekend. Zes kmo\'s zijn getest · één heeft zich geëngageerd, vijf hebben geweigerd. De go-productie werd genomen op basis van het schriftelijke engagement van de groep Léonidas, gedateerd vóór de ontwikkeling.',
       en: 'The sponsor signed. Six SMEs were tested · one committed, five declined. The go-production decision was made on the written commitment of the Léonidas group, dated before development.'
     },
-    'bnp.prototype.utSource': {
-      fr: 'Tests menés en co-design avec le groupe Léonidas · janvier-juin 2018',
-      nl: 'Tests uitgevoerd in co-design met de Léonidas-groep · januari-juni 2018',
-      en: 'Tests run in co-design with the Léonidas group · January-June 2018'
-    },
-
-    /* ============== CONCEPT 4.2 — User stories prioritisées ============== */
-    'bnp.concept.usEyebrow': { fr: 'Concept · User stories prioritisées', nl: 'Concept · Geprioriteerde user stories', en: 'Concept · Prioritised user stories' },
-    'bnp.concept.usTitle': {
-      fr: 'Du Concept Report <span class="accent">au backlog signable.</span>',
-      nl: 'Van Concept Report <span class="accent">naar tekenbaar backlog.</span>',
-      en: 'From Concept Report <span class="accent">to a signable backlog.</span>'
-    },
-    'bnp.concept.usLead': {
-      fr: 'Le Concept Report seul ne se développe pas. Chaque goal est cassé en user stories prioritisées, scope MVP arrêté, frontière P1/P2 dessinée. Le sponsor lit ce qui sera livré au sprint 1, le développement lit ce qu\'il code lundi matin.',
-      nl: 'Het Concept Report alleen wordt niet ontwikkeld. Elke goal wordt opgesplitst in geprioriteerde user stories, MVP-scope vastgelegd, P1/P2-grens getrokken. De sponsor leest wat er in sprint 1 wordt opgeleverd, de devs lezen wat ze maandagochtend coderen.',
-      en: 'The Concept Report alone doesn\'t get built. Each goal is broken into prioritised user stories, MVP scope locked, P1/P2 boundary drawn. The sponsor reads what ships in sprint 1, the dev team reads what they code Monday morning.'
-    },
-    'bnp.concept.us1Name': { fr: 'Performance Analysis · MVP scope', nl: 'Performance Analysis · MVP-scope', en: 'Performance Analysis · MVP scope' },
-    'bnp.concept.us1Desc': {
-      fr: '« En tant que commerçant, je veux voir transactions · revenus · panier moyen sur le mois écoulé pour décider où agir. » <strong>5 stories · livrable sprint 1.</strong>',
-      nl: '« Als merchant wil ik transacties · omzet · gemiddelde basket van de afgelopen maand zien om te beslissen waar ik optreed. » <strong>5 stories · oplevering sprint 1.</strong>',
-      en: '"As a shopkeeper, I want to see transactions · revenue · average basket for last month to decide where to act." <strong>5 stories · sprint 1 delivery.</strong>'
-    },
-    'bnp.concept.us2Name': { fr: 'Shop Comparison · MVP scope', nl: 'Shop Comparison · MVP-scope', en: 'Shop Comparison · MVP scope' },
-    'bnp.concept.us2Desc': {
-      fr: '« En tant que groupe multi-shops, je veux comparer mes points de vente entre eux pour repérer celui qui décroche. » <strong>4 stories · livrable sprint 2.</strong>',
-      nl: '« Als multi-shop groep wil ik mijn verkooppunten onderling vergelijken om te zien welke loslaat. » <strong>4 stories · oplevering sprint 2.</strong>',
-      en: '"As a multi-shop group, I want to compare my points of sale to spot the one falling behind." <strong>4 stories · sprint 2 delivery.</strong>'
-    },
-    'bnp.concept.us3Name': { fr: 'Period Comparison · MVP scope', nl: 'Period Comparison · MVP-scope', en: 'Period Comparison · MVP scope' },
-    'bnp.concept.us3Desc': {
-      fr: '« En tant que commerçant, je veux confronter ce mois au même mois N-1 pour mesurer ce qui a changé. » <strong>3 stories · livrable sprint 3.</strong>',
-      nl: '« Als merchant wil ik deze maand vergelijken met dezelfde maand N-1 om te meten wat veranderd is. » <strong>3 stories · oplevering sprint 3.</strong>',
-      en: '"As a shopkeeper, I want this month set against the same month last year to measure what changed." <strong>3 stories · sprint 3 delivery.</strong>'
-    },
-    'bnp.concept.us4Name': { fr: 'Marketing tout-boîte · phase 2', nl: 'Marketing tout-boîte · fase 2', en: 'Marketing tout-boîte · phase 2' },
-    'bnp.concept.us4Desc': {
-      fr: '« En tant que commerçant, je veux cibler une campagne par source-commune sans toucher aux données personnelles. » <strong>Out of MVP, roadmap 2020.</strong>',
-      nl: '« Als merchant wil ik een campagne per source-commune targeten zonder persoonsgegevens aan te raken. » <strong>Buiten MVP, roadmap 2020.</strong>',
-      en: '"As a shopkeeper, I want to target a campaign by source-commune without touching personal data." <strong>Out of MVP, 2020 roadmap.</strong>'
-    },
-    'bnp.concept.usSource': {
-      fr: 'Backlog co-rédigé avec le PO IT · validé par Banking, Legal et Marketing · mars 2018',
-      nl: 'Backlog samen geschreven met de IT-PO · gevalideerd door Banking, Legal en Marketing · maart 2018',
-      en: 'Backlog co-written with the IT PO · validated by Banking, Legal and Marketing · March 2018'
-    },
-
-    /* ============== CONCEPT 4.3 — User flows + UX/UI directions ============== */
-    'bnp.concept.ufEyebrow': { fr: 'Concept · User flows + UX/UI', nl: 'Concept · User flows + UX/UI', en: 'Concept · User flows + UX/UI' },
-    'bnp.concept.ufTitle': {
-      fr: 'Des wireframes <span class="accent">aux directions UI livrées au studio.</span>',
-      nl: 'Van wireframes <span class="accent">naar UI-richtingen geleverd aan de studio.</span>',
-      en: 'From wireframes <span class="accent">to UI directions handed to the studio.</span>'
-    },
-    'bnp.concept.ufLead': {
-      fr: 'Trois user flows tracés bout-en-bout : Performance, Comparison, Reporting. Chaque écran avec ses états, ses erreurs, ses chargements. Trois directions UI proposées au studio interne — typographie, palette, motion. La direction retenue est celle qui héritait du système Easy Banking Business pour zéro friction d\'apprentissage.',
-      nl: 'Drie user flows end-to-end uitgewerkt: Performance, Comparison, Reporting. Elk scherm met states, errors, loadings. Drie UI-richtingen voorgesteld aan de interne studio — typografie, palet, motion. De gekozen richting erft van het Easy Banking Business design system voor nul leerwrijving.',
-      en: 'Three end-to-end user flows: Performance, Comparison, Reporting. Each screen with its states, errors, loadings. Three UI directions handed to the in-house studio — typography, palette, motion. The retained direction inherits from the Easy Banking Business system, for zero learning friction.'
-    },
-    'bnp.concept.uf1Name': { fr: 'Flow Performance', nl: 'Flow Performance', en: 'Performance flow' },
-    'bnp.concept.uf1Desc': {
-      fr: 'Login EBB → home E.I. → goal Performance → drill-down KPI → décision suggérée. 4 écrans, 8 états, 2 fallbacks data-not-ready.',
-      nl: 'Login EBB → home E.I. → goal Performance → KPI drill-down → voorgestelde beslissing. 4 schermen, 8 states, 2 fallbacks data-not-ready.',
-      en: 'EBB login → E.I. home → Performance goal → KPI drill-down → suggested call. 4 screens, 8 states, 2 data-not-ready fallbacks.'
-    },
-    'bnp.concept.uf2Name': { fr: 'Flow Comparison', nl: 'Flow Comparison', en: 'Comparison flow' },
-    'bnp.concept.uf2Desc': {
-      fr: 'Multi-shops switch → comparaison à plat → tri par signal d\'écart → focus sur le shop qui décroche. 5 écrans, 3 états vides bien storytellés.',
-      nl: 'Multi-shops switch → vlakke vergelijking → sorteren op afwijking → focus op de shop die loslaat. 5 schermen, 3 lege states goed verteld.',
-      en: 'Multi-shop switch → flat comparison → sort by deviation → focus on the shop falling behind. 5 screens, 3 empty states told well.'
-    },
-    'bnp.concept.uf3Name': { fr: 'Flow Reporting', nl: 'Flow Reporting', en: 'Reporting flow' },
-    'bnp.concept.uf3Desc': {
-      fr: 'Période → comparaison N vs N-1 → annotation « what\'s important » → export PDF prêt à présenter au comptable. Boucle fermée.',
-      nl: 'Periode → vergelijking N vs N-1 → annotatie « what\'s important » → PDF-export klaar voor de boekhouder. Lus gesloten.',
-      en: 'Period → N vs N-1 comparison → "what\'s important" annotation → PDF export ready for the accountant. Loop closed.'
-    },
-    'bnp.concept.uf4Name': { fr: 'Direction visuelle retenue', nl: 'Gekozen visuele richting', en: 'Visual direction retained' },
-    'bnp.concept.uf4Desc': {
-      fr: 'Héritée du design system Easy Banking Business · typo BNP corporate · palette ambre + neutres · motion sobre. Zéro friction d\'apprentissage pour les commerçants déjà clients EBB.',
-      nl: 'Geërfd van het Easy Banking Business design system · BNP-corporate typografie · palet amber + neutralen · sobere motion. Nul leerwrijving voor merchants die al EBB-klant zijn.',
-      en: 'Inherited from the Easy Banking Business design system · BNP corporate typography · amber + neutrals palette · sober motion. Zero learning friction for merchants who already use EBB.'
-    },
-    'bnp.concept.ufSource': {
-      fr: 'Wireframes Sketch + spec InVision · transmission au studio interne BNP · mars 2018',
-      nl: 'Wireframes Sketch + spec InVision · doorgegeven aan de interne BNP-studio · maart 2018',
-      en: 'Sketch wireframes + InVision spec · handed to the in-house BNP studio · March 2018'
-    },
-
     /* ============== CHAPTERS — 4 phases Double Diamond (Research/Analyse/Prototype/Concept) ============== */
     'bnp.chapResearch.overline': { fr: 'Discover · récolter la matière du terrain', nl: 'Discover · het materiaal van het terrein verzamelen', en: 'Discover · gather raw material from the field' },
     'bnp.chapResearch.ddCap':    { fr: 'Vous êtes ici · Diamant 1 · moitié gauche · 4 jalons', nl: 'U bent hier · Diamant 1 · linkerhelft · 4 mijlpalen', en: 'You are here · Diamond 1 · left half · 4 milestones' },
     'bnp.chapResearch.label': { fr: 'Phase 01 · Research', nl: 'Fase 01 · Research', en: 'Phase 01 · Research' },
-    'bnp.chapResearch.title': { fr: 'Le terrain enseigne.', nl: 'Het terrein leert.', en: 'The ground teaches.' },
-    'bnp.chapResearch.lead': {
-      fr: 'Comprendre avant de proposer.',
-      nl: 'Begrijpen voor je voorstelt.',
-      en: 'Understand before proposing.'
-    },
     'bnp.chapAnalyse.overline': { fr: 'Define · resserrer le focus, argumenter', nl: 'Define · de focus aanscherpen, argumenteren', en: 'Define · sharpen the focus, build the argument' },
     'bnp.chapAnalyse.ddCap':    { fr: 'Vous êtes ici · Diamant 1 · moitié droite · 4 jalons', nl: 'U bent hier · Diamant 1 · rechterhelft · 4 mijlpalen', en: 'You are here · Diamond 1 · right half · 4 milestones' },
     'bnp.chapAnalyse.label': { fr: 'Phase 02 · Analyse', nl: 'Fase 02 · Analyse', en: 'Phase 02 · Analyse' },
-    'bnp.chapAnalyse.title': { fr: 'Le bon problème.', nl: 'Het juiste probleem.', en: 'The right problem.' },
-    'bnp.chapAnalyse.lead': {
-      fr: 'Reformuler avant de construire.',
-      nl: 'Herkaderen voor je bouwt.',
-      en: 'Reframe before building.'
-    },
     /* CVE 2026-05-03 · canonical narrative DD · chap-prototype = D2 H2 (Deliver) */
     'bnp.chapPrototype.overline': { fr: 'Deliver · prototyping & testing · valider avec les clients', nl: 'Deliver · prototyping & testing · valideren met klanten', en: 'Deliver · prototyping & testing · validate with clients' },
     'bnp.chapPrototype.label': { fr: 'Phase 04 · Prototype', nl: 'Fase 04 · Prototype', en: 'Phase 04 · Prototype' },
@@ -1219,12 +581,6 @@
     'bnp.chapIdeation.ddCap':    { fr: 'Vous êtes ici · Diamant 2 · moitié gauche · Develop', nl: 'U bent hier · Diamant 2 · linkerhelft · Develop', en: 'You are here · Diamond 2 · left half · Develop' },
     /* Legacy (orphelins inertes mais conservés) */
     'bnp.chapPrototype.ddCap':    { fr: 'Vous êtes ici · Diamant 2 · moitié droite · 4 jalons', nl: 'U bent hier · Diamant 2 · rechterhelft · 4 mijlpalen', en: 'You are here · Diamond 2 · right half · 4 milestones' },
-    'bnp.chapPrototype.title': { fr: 'Pas un dashboard. Un service.', nl: 'Geen dashboard. Een dienst.', en: 'Not a dashboard. A service.' },
-    'bnp.chapPrototype.lead': {
-      fr: 'Chaque écran, une décision.',
-      nl: 'Elk scherm, een beslissing.',
-      en: 'Each screen, a decision.'
-    },
     /* CVE 2026-05-03 · chap-concept WOW MOMENT statement géant typographique (mirror VP) */
     'bnp.chapConcept.eyebrow': { fr: 'Diamant 2 · cristallisation finale', nl: 'Diamant 2 · finale kristallisatie', en: 'Diamond 2 · final crystallization' },
     'bnp.chapConcept.phrase': {
@@ -1237,24 +593,6 @@
       nl: '<span>86 ondertekende pagina\'s</span><span class="chap-vp-statement__bullet">·</span><span>4 afgestemde functies</span><span class="chap-vp-statement__bullet">·</span><span>1 kmo tekent vooraf</span>',
       en: '<span>86 signed pages</span><span class="chap-vp-statement__bullet">·</span><span>4 functions aligned</span><span class="chap-vp-statement__bullet">·</span><span>1 SME pre-signs</span>'
     },
-    /* Legacy gardées (orphelines mais inertes) */
-    'bnp.chapConcept.overline': { fr: 'Livrable post-DD · 86 pages signées', nl: 'Oplevering post-DD · 86 ondertekende pagina\'s', en: 'Post-DD deliverable · 86 signed pages' },
-    'bnp.chapConcept.label':    { fr: 'Le sponsor voit où il investit', nl: 'De sponsor ziet waarin hij investeert', en: 'The sponsor sees where they invest' },
-    'bnp.chapConcept.main':     { fr: 'Concept Report', nl: 'Concept Report', en: 'Concept Report' },
-    'bnp.chapConcept.sub':      { fr: 'Réflexion sourcée · alignement interne · traction de marché', nl: 'Onderbouwde reflectie · interne afstemming · markttractie', en: 'Sourced rationale · internal alignment · market traction' },
-    /* Anciennes clés gardées (orphelines mais inertes) */
-    'bnp.chapConcept.ddCap':    { fr: 'Vous êtes ici · Diamant 2 · moitié droite · 4 jalons', nl: 'U bent hier · Diamant 2 · rechterhelft · 4 mijlpalen', en: 'You are here · Diamond 2 · right half · 4 milestones' },
-    'bnp.chapConcept.title': {
-      fr: 'Quatre goals. Un dashboard qui raconte.',
-      nl: 'Vier goals. Eén dashboard dat een verhaal vertelt.',
-      en: 'Four goals. One dashboard that tells a story.'
-    },
-    'bnp.chapConcept.lead': {
-      fr: 'Le sponsor n\'a plus à imaginer.',
-      nl: 'De sponsor hoeft zich niets meer in te beelden.',
-      en: 'The sponsor stops imagining.'
-    },
-
     /* CVE 2026-05-03 · chap-valueprop NEW (outcome divider · cristallisation 2 fragments) */
     /* CVE 2026-05-03 · WOW MOMENT · statement canonique géant + footer 3 conséquences */
     'bnp.chapValueProp.eyebrow': { fr: 'Diamant 1 · cristallisation', nl: 'Diamant 1 · kristallisatie', en: 'Diamond 1 · crystallization' },
@@ -1268,165 +606,19 @@
       nl: '<span>Stakeholders <span class="chap-vp-statement__arrow">→</span> empathie handelaar</span><span class="chap-vp-statement__bullet">·</span><span>Product <span class="chap-vp-statement__arrow">→</span> MVP in het vizier</span><span class="chap-vp-statement__bullet">·</span><span>Build <span class="chap-vp-statement__arrow">→</span> legitieme ideation</span>',
       en: '<span>Stakeholders <span class="chap-vp-statement__arrow">→</span> merchant empathy</span><span class="chap-vp-statement__bullet">·</span><span>Product <span class="chap-vp-statement__arrow">→</span> MVP in sight</span><span class="chap-vp-statement__bullet">·</span><span>Build <span class="chap-vp-statement__arrow">→</span> legitimate ideation</span>'
     },
-    /* Legacy gardées (orphelines inertes) */
-    'bnp.chapValueProp.overline': { fr: 'Cristallisation D1', nl: 'Kristallisatie D1', en: 'D1 crystallization' },
-    'bnp.chapValueProp.label':    { fr: 'Stakeholders dans la peau du commerçant', nl: 'Stakeholders in de schoenen van de handelaar', en: 'Stakeholders in the merchant\'s shoes' },
-    'bnp.chapValueProp.main':     { fr: 'Value Proposition', nl: 'Value Proposition', en: 'Value Proposition' },
-    'bnp.chapValueProp.statement': {
-      fr: 'Pas la donnée à explorer — un rapport clé en main, aligné sur l\'objectif du commerçant.',
-      nl: 'Geen data om te verkennen — een kant-en-klaar rapport, afgestemd op het doel van de handelaar.',
-      en: 'Not data to explore — a turnkey report, aligned on the merchant\'s goal.'
-    },
-    'bnp.chapValueProp.sub':      { fr: 'Cristallisation', nl: 'Kristallisatie', en: 'Crystallization' },
-
-    /* Snm-nav · sub-labels pour les outcome gems · narrative canonique CVE */
-    'bnp.snm.gValuePropSub':     { fr: 'Outcome D1 · preuve chiffrée', nl: 'Outcome D1 · cijfermatig bewijs', en: 'Outcome D1 · quantified proof' },
-    'bnp.snm.gConceptReportSub': { fr: 'Outcome final · décision sponsor', nl: 'Finale outcome · sponsorbeslissing', en: 'Final outcome · sponsor decision' },
-
-    /* ============== CONCEPT VP STATEMENT — citation premium Concept Report p31 ============== */
-    'bnp.conceptVp.eyebrow': { fr: 'Concept Report · page 31', nl: 'Concept Report · pagina 31', en: 'Concept Report · page 31' },
-    'bnp.conceptVp.quote': {
-      fr: 'Un dashboard, ce n\'est pas pousser de la donnée. C\'est <span class="accent">raconter une histoire</span> avec les chiffres et les insights — qui aide le commerçant à décider et déclenche l\'action.',
-      nl: 'Een dashboard is geen data pushen. Het is <span class="accent">een verhaal vertellen</span> met de cijfers en insights — dat de merchant helpt beslissen en actie triggert.',
-      en: 'A dashboard is not about pushing data. It\'s about <span class="accent">telling a story</span> with the data and insights at hand — that supports decision-making and drives action.'
-    },
-
-    /* ============== CONCEPT 4.1 — Goals Overview (wall p37) ============== */
-    'bnp.concept.overviewEyebrow': { fr: 'Concept · 4 goals identifiés', nl: 'Concept · 4 goals geïdentificeerd', en: 'Concept · 4 goals identified' },
-    'bnp.concept.overviewTitle': {
-      fr: 'Du brainstorming <span class="accent">au scope arrêté.</span>',
-      nl: 'Van brainstorming <span class="accent">naar vastgelegde scope.</span>',
-      en: 'From brainstorm <span class="accent">to locked scope.</span>'
-    },
-    'bnp.concept.overviewLead': {
-      fr: 'L\'atelier a posé toutes les questions auxquelles un commerçant veut répondre avec sa donnée transactionnelle. Vingt features brutes. Quatre regroupements. Trois priorisés MVP, un repoussé en phase 2.',
-      nl: 'De workshop stelde alle vragen die een merchant met zijn transactionele data wil beantwoorden. Twintig ruwe features. Vier groeperingen. Drie geprioriteerd voor MVP, één doorgeschoven naar fase 2.',
-      en: 'The workshop laid out every question a shopkeeper wants his transactional data to answer. Twenty raw features. Four groupings. Three prioritised for MVP, one pushed to phase 2.'
-    },
-    'bnp.concept.goal1Status':   { fr: 'MVP scope',     nl: 'MVP-scope',    en: 'MVP scope' },
-    'bnp.concept.goal1Name':     { fr: 'Performance Analysis', nl: 'Performance Analysis', en: 'Performance Analysis' },
-    'bnp.concept.goal1Features': { fr: 'Shop ranking · Basket evolution · Daily traffic', nl: 'Shop ranking · Basket evolution · Daily traffic', en: 'Shop ranking · Basket evolution · Daily traffic' },
-    'bnp.concept.goal2Status':   { fr: 'MVP scope',     nl: 'MVP-scope',    en: 'MVP scope' },
-    'bnp.concept.goal2Name':     { fr: 'Business Expansion', nl: 'Business Expansion', en: 'Business Expansion' },
-    'bnp.concept.goal2Features': { fr: 'Personas · Spending patterns · Customer retention · Customer origin · Open hours efficiency', nl: 'Personas · Spending patterns · Customer retention · Customer origin · Open hours efficiency', en: 'Personas · Spending patterns · Customer retention · Customer origin · Open hours efficiency' },
-    'bnp.concept.goal3Status':   { fr: 'MVP scope',     nl: 'MVP-scope',    en: 'MVP scope' },
-    'bnp.concept.goal3Name':     { fr: 'Evaluating Actions', nl: 'Evaluating Actions', en: 'Evaluating Actions' },
-    'bnp.concept.goal3Features': { fr: 'Evaluate marketing channel · Plan + track campaign · Event organisation', nl: 'Evaluate marketing channel · Plan + track campaign · Event organisation', en: 'Evaluate marketing channel · Plan + track campaign · Event organisation' },
-    'bnp.concept.goal4Status':   { fr: 'Phase 2 · roadmap', nl: 'Fase 2 · roadmap', en: 'Phase 2 · roadmap' },
-    'bnp.concept.goal4Name':     { fr: 'Market Research', nl: 'Market Research', en: 'Market Research' },
-    'bnp.concept.goal4Features': { fr: 'Best business location · Opportunities by industry', nl: 'Best business location · Opportunities by industry', en: 'Best business location · Opportunities by industry' },
-    'bnp.concept.overviewSource': {
-      fr: 'Référence interne · Concept Report mars 2018, wall atelier p37 — redessiné à la charte du folio',
-      nl: 'Interne referentie · Concept Report maart 2018, workshop wall p37 — hertekend in de folio-stijl',
-      en: 'Internal reference · Concept Report March 2018, workshop wall p37 — redrawn in the folio design system'
-    },
-
-    /* ============== CONCEPT 4.2 — Goal 1 Performance Analysis ============== */
-    'bnp.concept.g1Eyebrow': { fr: 'Goal 1 · Performance Analysis', nl: 'Goal 1 · Performance Analysis', en: 'Goal 1 · Performance Analysis' },
-    'bnp.concept.g1Title': {
-      fr: 'Comment je performe <span class="accent">ce mois-ci ?</span>',
-      nl: 'Hoe presteer ik <span class="accent">deze maand ?</span>',
-      en: 'How am I performing <span class="accent">this month ?</span>'
-    },
-    'bnp.concept.g1Lead': {
-      fr: 'Trois KPIs en haut, une comparaison shop par shop, une courbe vs le même mois N-1. Pas une exploration. Une décision par écran. Et chaque graphique entouré d\'une annotation « What\'s important » qui suggère où agir.',
-      nl: 'Drie KPI\'s bovenaan, een shop-per-shop-vergelijking, een curve vs dezelfde maand N-1. Geen verkenning. Eén beslissing per scherm. En elke grafiek omringd door een « What\'s important »-annotatie die suggereert waar op te treden.',
-      en: 'Three KPIs at the top, a shop-by-shop comparison, a curve vs the same month last year. Not exploration. One call per screen. And every chart surrounded by a "What\'s important" annotation suggesting where to act.'
-    },
-    'bnp.concept.g1Branch': { fr: 'Branch',       nl: 'Filiaal',      en: 'Branch' },
-    'bnp.concept.g1Trans':  { fr: 'Transactions', nl: 'Transacties',  en: 'Transactions' },
-    'bnp.concept.g1Rev':    { fr: 'Revenue',      nl: 'Omzet',        en: 'Revenue' },
-    'bnp.concept.g1Share':  { fr: 'Part',         nl: 'Aandeel',      en: 'Share' },
-    'bnp.concept.g1WhatLab': { fr: 'What\'s important', nl: 'What\'s important', en: 'What\'s important' },
-    'bnp.concept.g1WhatTxt': {
-      fr: 'En janvier 2018, votre panier moyen a chuté de 7% par rapport à janvier 2017, mais vous avez plus de transactions et plus de revenu. C\'est probablement que vous avez plus de clients ou de visiteurs récurrents — ils achètent moins par visite.',
-      nl: 'In januari 2018 daalde uw gemiddelde basket met 7% tegenover januari 2017, maar u had meer transacties en meer omzet. Waarschijnlijk hebt u meer klanten of terugkerende bezoekers — ze kopen minder per bezoek.',
-      en: 'In January 2018, your average basket size declined by 7% compared to January 2017, but you had more transactions and revenue. It must be you have more clients or returning visitors — however, they buy less per visit.'
-    },
-    'bnp.concept.g1Source': {
-      fr: 'Référence interne · Concept Report p41-44 — redessiné à la charte du folio',
-      nl: 'Interne referentie · Concept Report p41-44 — hertekend in de folio-stijl',
-      en: 'Internal reference · Concept Report p41-44 — redrawn in the folio design system'
-    },
-
-    /* ============== CONCEPT 4.3 — Goal 2 Business Expansion (cycle 3 cellules) ============== */
-    'bnp.concept.g2Eyebrow': { fr: 'Goal 2 · Business Expansion', nl: 'Goal 2 · Business Expansion', en: 'Goal 2 · Business Expansion' },
-    'bnp.concept.g2Title': {
-      fr: 'Mesurer l\'effet, <span class="accent">refermer la boucle.</span>',
-      nl: 'Het effect meten, <span class="accent">de lus sluiten.</span>',
-      en: 'Measure the effect, <span class="accent">close the loop.</span>'
-    },
-    'bnp.concept.g2Lead': {
-      fr: 'Le commerçant ne consomme pas la donnée — il l\'utilise. Trois temps répétés en boucle : prendre la photo de mon business, agir, revenir vérifier l\'effet. Chaque feature de Goal 2 sert un de ces trois temps.',
-      nl: 'De merchant consumeert de data niet — hij gebruikt ze. Drie tempo\'s in lus: foto van mijn business, actie, terugkomen om het effect te checken. Elke Goal 2-feature bedient één van die drie tempo\'s.',
-      en: 'The shopkeeper doesn\'t consume data — he uses it. Three loops: snapshot my business, act, come back and check the effect. Every Goal 2 feature serves one of those three beats.'
-    },
-    'bnp.concept.g2CycleTitle': { fr: 'Cycle Business Expansion en trois temps', nl: 'Business Expansion cyclus in drie tempo\'s', en: 'Business Expansion cycle in three beats' },
-    'bnp.concept.g2Step1': { fr: 'Control business state', nl: 'Control business state', en: 'Control business state' },
-    'bnp.concept.g2Hint1': { fr: 'Photo du business · personas · spending patterns', nl: 'Business-foto · personas · spending patterns', en: 'Business snapshot · personas · spending patterns' },
-    'bnp.concept.g2Step2': { fr: 'Learn & take actions', nl: 'Learn & take actions', en: 'Learn & take actions' },
-    'bnp.concept.g2Hint2': { fr: 'Décisions guidées · campagnes · opening hours · paniers', nl: 'Geleide beslissingen · campagnes · opening hours · baskets', en: 'Guided calls · campaigns · opening hours · baskets' },
-    'bnp.concept.g2Step3': { fr: 'Observe impact of actions', nl: 'Observe impact of actions', en: 'Observe impact of actions' },
-    'bnp.concept.g2Hint3': { fr: 'Customer retention · origin · maintained customers', nl: 'Customer retention · origin · maintained customers', en: 'Customer retention · origin · maintained customers' },
-    'bnp.concept.g2Source': {
-      fr: 'Référence interne · Concept Report p46 — schéma cycle redessiné à la charte du folio',
-      nl: 'Interne referentie · Concept Report p46 — cyclusschema hertekend in de folio-stijl',
-      en: 'Internal reference · Concept Report p46 — cycle diagram redrawn in the folio design system'
-    },
-
-    /* ============== CONCEPT 4.4 — Goal 3 Evaluating Actions + climax Léonidas ============== */
-    'bnp.concept.g3Eyebrow': { fr: 'Goal 3 · Evaluating Actions · climax', nl: 'Goal 3 · Evaluating Actions · climax', en: 'Goal 3 · Evaluating Actions · climax' },
-    'bnp.concept.g3Title': {
-      fr: 'Trois fenêtres temps. <span class="accent">Une preuve d\'usage.</span>',
-      nl: 'Drie tijdvensters. <span class="accent">Eén gebruiksbewijs.</span>',
-      en: 'Three time windows. <span class="accent">One proof of use.</span>'
-    },
-    'bnp.concept.g3Lead': {
-      fr: 'Pour évaluer une action, il faut comparer. Le concept fixe trois fenêtres temps canoniques : <strong>même période N-1</strong>, <strong>période précédente</strong>, <strong>même période courante (multi-shops)</strong>. Sur ce socle, le co-design avec Léonidas a posé le test décisif.',
-      nl: 'Om een actie te evalueren, moet je vergelijken. Het concept legt drie canonieke tijdvensters vast: <strong>zelfde periode N-1</strong>, <strong>vorige periode</strong>, <strong>zelfde periode huidig (multi-shops)</strong>. Op die fundering legde de co-design met Léonidas de doorslaggevende test.',
-      en: 'To evaluate an action, you compare. The concept locks three canonical time windows: <strong>same period last year</strong>, <strong>previous period</strong>, <strong>same period current (multi-shops)</strong>. On that foundation, the Léonidas co-design ran the decisive test.'
-    },
-    'bnp.concept.g3LastYear': { fr: 'Même période · N-1', nl: 'Zelfde periode · N-1', en: 'Same period · last year' },
-    'bnp.concept.g3Prev':     { fr: 'Période précédente', nl: 'Vorige periode',      en: 'Previous period' },
-    'bnp.concept.g3Current':  { fr: 'Même période · multi-shops', nl: 'Zelfde periode · multi-shops', en: 'Same period · multi-shops' },
-    'bnp.concept.g3ClimaxEyebrow': { fr: 'Co-design Léonidas · Jan→Jun 2017', nl: 'Co-design Léonidas · Jan→Jun 2017', en: 'Co-design Léonidas · Jan→Jun 2017' },
-    'bnp.concept.g3ClimaxTitle': {
-      fr: 'Le test qui a décidé le sponsor.',
-      nl: 'De test die de sponsor deed beslissen.',
-      en: 'The test that made the sponsor decide.'
-    },
-    'bnp.concept.g3Stat1': { fr: 'Revenue increase',     nl: 'Omzetstijging',        en: 'Revenue increase' },
-    'bnp.concept.g3Stat2': { fr: 'en six mois',          nl: 'op zes maanden',       en: 'over six months' },
-    'bnp.concept.g3Stat3': { fr: 'Average basket size',  nl: 'Gemiddelde basket',    en: 'Average basket size' },
-    'bnp.concept.g3Stat4': { fr: 'Maintained customers', nl: 'Behouden klanten',     en: 'Maintained customers' },
-    'bnp.concept.g3ClimaxCaption': {
-      fr: 'Wolluwé Saint-Pierre <strong>35% de market share</strong> vs Ixelles <strong>10%</strong>. Le manager général de Léonidas ne discute plus du <em>si</em>, il signe le <em>quand</em>. Six PME testées · une promesse d\'achat ferme · zéro refus. Le signal qui manquait au sponsor.',
-      nl: 'Sint-Pieters-Woluwe <strong>35% marktaandeel</strong> vs Elsene <strong>10%</strong>. De algemeen directeur van Léonidas discussieert niet meer over het <em>of</em>, hij tekent het <em>wanneer</em>. Zes kmo\'s getest · één harde aankoopbelofte · nul weigeringen. Het signaal dat de sponsor miste.',
-      en: 'Wolluwé Saint-Pierre <strong>35% market share</strong> vs Ixelles <strong>10%</strong>. The Léonidas general manager stops debating <em>if</em>, he signs the <em>when</em>. Six SMEs tested · one firm purchase commitment · zero refusals. The signal the sponsor was missing.'
-    },
-    'bnp.concept.g3Source': {
-      fr: 'Référence interne · Concept Report p53-58 — Time Selection + Shop Comparison + Period Comparison redessinés',
-      nl: 'Interne referentie · Concept Report p53-58 — Time Selection + Shop Comparison + Period Comparison hertekend',
-      en: 'Internal reference · Concept Report p53-58 — Time Selection + Shop Comparison + Period Comparison redrawn'
-    },
-
     /* ============== CHAPTER S — Situation (NEW 2026-04-30 s2 — STAR 4 acts) ============== */
     /* STORY NAV sticky — 4 phases × 4 jalons, juste les noms d'ateliers/deliverables */
     'bnp.snm.gResearch':   { fr: 'Research',  nl: 'Research',  en: 'Research' },
     'bnp.snm.gAnalyse':    { fr: 'Analyse',   nl: 'Analyse',   en: 'Analyse' },
     'bnp.snm.gPrototype':  { fr: 'Prototype', nl: 'Prototype', en: 'Prototype' },
-    'bnp.snm.gConcept':    { fr: 'Concept',   nl: 'Concept',   en: 'Concept' },
     'bnp.snm.r1': { fr: '6 interviews PME terrain', nl: '6 kmo-interviews op het terrein', en: '6 SME field interviews' },
     'bnp.snm.r2': { fr: 'Benchmark concurrents (Barclays, Proximus, BBVA)', nl: 'Benchmark concurrenten (Barclays, Proximus, BBVA)', en: 'Competitors benchmark (Barclays, Proximus, BBVA)' },
-    'bnp.snm.r3': { fr: 'Analyse marché B2B + segments', nl: 'B2B-marktanalyse + segmenten', en: 'B2B market analysis + segments' },
-    'bnp.snm.r4': { fr: '9 personas B2B livrés', nl: '9 B2B-personas opgeleverd', en: '9 B2B personas delivered' },
+    'bnp.snm.r4': { fr: '9 segments B2B identifiés', nl: '9 B2B-segmenten geïdentificeerd', en: '9 B2B segments identified' },
     'bnp.snm.a1': { fr: '6 Key Barriers identifiées', nl: '6 Key Barriers geïdentificeerd', en: '6 Key Barriers identified' },
-    'bnp.snm.a2': { fr: 'AS-IS journey · 15 étapes onboarding', nl: 'AS-IS journey · 15 onboarding-stappen', en: 'AS-IS journey · 15 onboarding steps' },
     'bnp.snm.a3': { fr: 'Could-Be journey + GAP analyse', nl: 'Could-Be journey + GAP-analyse', en: 'Could-Be journey + GAP analysis' },
     'bnp.snm.a4': { fr: 'Value Proposition Canvas + Lean Canvas', nl: 'Value Proposition Canvas + Lean Canvas', en: 'Value Proposition Canvas + Lean Canvas' },
     'bnp.snm.p1': { fr: 'Service blueprint · 5 journeys end-to-end', nl: 'Service blueprint · 5 end-to-end journeys', en: 'Service blueprint · 5 end-to-end journeys' },
     'bnp.snm.p2': { fr: 'Sprint design · 3 goals coachés', nl: 'Sprint design · 3 gecoachte goals', en: 'Sprint design · 3 coached goals' },
-    'bnp.snm.p3': { fr: 'Prototype Spotfire · POC dashboard', nl: 'Prototype Spotfire · POC dashboard', en: 'Spotfire prototype · POC dashboard' },
     'bnp.snm.p4': { fr: 'User test 6 PME · validation hypothèses', nl: 'User test 6 kmo\'s · hypothesevalidatie', en: 'User test 6 SMEs · hypothesis validation' },
     'bnp.snm.gIntake':    { fr: 'Intake', nl: 'Intake', en: 'Intake' },
     'bnp.snm.intakeTip':  { fr: 'Brief intake · cadre du projet', nl: 'Brief intake · projectkader', en: 'Brief intake · project frame' },
@@ -1438,13 +630,10 @@
     'bnp.snm.iChap': { fr: 'Phase 03 · Ideation · ouverture D2', nl: 'Fase 03 · Ideation · opening D2', en: 'Phase 03 · Ideation · D2 opening' },
     'bnp.snm.pChap': { fr: 'Phase 04 · Prototype · ouverture validation', nl: 'Fase 04 · Prototype · opening validatie', en: 'Phase 04 · Prototype · validation opening' },
     'bnp.snm.cChap': { fr: 'Livrable · ouverture post-DD', nl: 'Livrable · opening post-DD', en: 'Deliverable · opening post-DD' },
-    'bnp.snm.cFin': { fr: 'Bilan & contact', nl: 'Slot & contact', en: 'Wrap-up & contact' },
     'bnp.snm.c1':  { fr: 'Concept Report signé · argumentation sponsor', nl: 'Concept Report ondertekend · sponsorargumentatie', en: 'Concept Report signed · sponsor argumentation' },
     'bnp.snm.c2':  { fr: 'Stakeholder alignment · « le bébé de tout le monde »', nl: 'Stakeholder alignment · « ieders kindje »', en: 'Stakeholder alignment · "everyone\'s baby"' },
     'bnp.snm.cTW': { fr: 'Triple-Win · arbitre de chaque décision', nl: 'Triple-Win · scheidsrechter van elke beslissing', en: 'Triple-Win · arbiter of every decision' },
     'bnp.snm.c3':  { fr: 'Outcome · signal commercial écrit', nl: 'Outcome · geschreven commercieel signaal', en: 'Outcome · written commercial signal' },
-    'bnp.snm.c4':  { fr: 'Lessons learned', nl: 'Lessons learned', en: 'Lessons learned' },
-
     /* PROPOSED ROADMAP — vue d'ensemble entre Hero et Chapter S */
     'bnp.proposed.eyebrow': {
       fr: 'La roadmap proposée',
@@ -1461,31 +650,10 @@
       nl: 'Van de opportuniteit tot het marktsignaal. Een methodologisch traject in vier akten, van Design Thinking tot een prototype getest in reële omstandigheden.',
       en: 'From opportunity to market signal. A four-act methodological journey, from Design Thinking through to a prototype tested under real conditions.'
     },
-    'bnp.proposed.bandStrat': {
-      fr: 'Strategic digital guidelines & frameworks',
-      nl: 'Strategic digital guidelines & frameworks',
-      en: 'Strategic digital guidelines & frameworks'
-    },
-    'bnp.proposed.bandResearch': {
-      fr: 'Market & user research',
-      nl: 'Market & user research',
-      en: 'Market & user research'
-    },
-    'bnp.proposed.bandConcept': { fr: 'Concept design', nl: 'Concept design', en: 'Concept design' },
-    'bnp.proposed.bandUx': { fr: 'UX & UI design', nl: 'UX & UI design', en: 'UX & UI design' },
-    'bnp.proposed.phaseIdea': { fr: 'Idea to maturity', nl: 'Idea to maturity', en: 'Idea to maturity' },
-    'bnp.proposed.phaseInception': { fr: 'Inception', nl: 'Inception', en: 'Inception' },
-    'bnp.proposed.phaseAgile': { fr: 'Agile project', nl: 'Agile project', en: 'Agile project' },
-
-    'bnp.proposed.colResearch': { fr: 'Research', nl: 'Research', en: 'Research' },
-    'bnp.proposed.colAnalyse': { fr: 'Analyse', nl: 'Analyse', en: 'Analyse' },
-    'bnp.proposed.colPrototype': { fr: 'Prototype', nl: 'Prototype', en: 'Prototype' },
-    'bnp.proposed.colConcept': { fr: 'Concept', nl: 'Concept', en: 'Concept' },
-
     'bnp.proposed.researchLi1': { fr: 'Interviews PME', nl: 'Kmo-interviews', en: 'SME interviews' },
     'bnp.proposed.researchLi2': { fr: 'Benchmark', nl: 'Benchmark', en: 'Benchmark' },
     'bnp.proposed.researchLi3': { fr: 'Segments B2B', nl: 'B2B-segmenten', en: 'B2B segments' },
-    'bnp.proposed.researchLi4': { fr: 'Personas', nl: 'Personas', en: 'Personas' },
+    'bnp.proposed.researchLi4': { fr: 'Segments B2B', nl: 'B2B-segmenten', en: 'B2B segments' },
 
     'bnp.proposed.analyseLi1': { fr: 'Key barriers', nl: 'Key barriers', en: 'Key barriers' },
     'bnp.proposed.analyseLi2': { fr: 'AS-IS journey', nl: 'AS-IS journey', en: 'AS-IS journey' },
@@ -1513,79 +681,11 @@
       nl: 'De rode draad · zes maanden in 12 mijlpalen',
       en: 'The thread · six months in 12 milestones'
     },
-    'bnp.psl.j1.when': { fr: 'Q3 2017', nl: 'Q3 2017', en: 'Q3 2017' },
-    'bnp.psl.j1.what': { fr: 'Brief reçu', nl: 'Briefing ontvangen', en: 'Brief received' },
-    'bnp.psl.j2.when': { fr: 'Sept. 2017', nl: 'Sept. 2017', en: 'Sept 2017' },
-    'bnp.psl.j2.what': { fr: 'Catalyseur · Marketing appelle', nl: 'Aanleiding · Marketing belt', en: 'Catalyst · Marketing calls' },
-    'bnp.psl.j3.when': { fr: 'Oct. 2017', nl: 'Okt. 2017', en: 'Oct 2017' },
-    'bnp.psl.j3.what': { fr: '6 PME interviewées · 6 Key Barriers', nl: '6 kmo\'s geïnterviewd · 6 Key Barriers', en: '6 SMEs interviewed · 6 Key Barriers' },
-    'bnp.psl.j4.when': { fr: 'Oct. 2017', nl: 'Okt. 2017', en: 'Oct 2017' },
-    'bnp.psl.j4.what': { fr: '9 personas B2B livrés', nl: '9 B2B-personas opgeleverd', en: '9 B2B personas delivered' },
-    'bnp.psl.j5.when': { fr: '30 oct. 2017', nl: '30 okt. 2017', en: 'Oct 30, 2017' },
-    'bnp.psl.j5.what': { fr: 'Lean Canvas signé · Triple Win', nl: 'Lean Canvas getekend · Triple Win', en: 'Lean Canvas signed off · Triple Win' },
-    'bnp.psl.j6.when': { fr: 'Nov. 2017', nl: 'Nov. 2017', en: 'Nov 2017' },
-    'bnp.psl.j6.what': { fr: 'VP +15-25 % CA · 4 rapports', nl: 'VP +15-25 % omzet · 4 rapporten', en: 'VP +15-25% revenue · 4 reports' },
-    'bnp.psl.j7.when': { fr: 'Déc. 2017', nl: 'Dec. 2017', en: 'Dec 2017' },
-    'bnp.psl.j7.what': { fr: 'Service blueprint · 5 journeys', nl: 'Service blueprint · 5 journeys', en: 'Service blueprint · 5 journeys' },
-    'bnp.psl.j8.when': { fr: 'Janv. 2018', nl: 'Jan. 2018', en: 'Jan 2018' },
-    'bnp.psl.j8.what': { fr: '47→7 indicateurs · sprint design', nl: '47→7 indicatoren · sprint design', en: '47→7 indicators · sprint design' },
-    'bnp.psl.j9.when': { fr: 'Févr. 2018', nl: 'Feb. 2018', en: 'Feb 2018' },
-    'bnp.psl.j9.what': { fr: 'Prototype Spotfire · POC dashboard', nl: 'Spotfire-prototype · POC dashboard', en: 'Spotfire prototype · POC dashboard' },
-    'bnp.psl.j10.when': { fr: 'Mars 2018', nl: 'Maart 2018', en: 'March 2018' },
-    'bnp.psl.j10.what': { fr: '6 testées · 1 promesse · 0 refus', nl: '6 getest · 1 belofte · 0 weigeringen', en: '6 tested · 1 commitment · 0 refusals' },
-    'bnp.psl.j11.when': { fr: 'Mars 2018', nl: 'Maart 2018', en: 'March 2018' },
-    'bnp.psl.j11.what': { fr: 'Concept Report · decision pack', nl: 'Concept Report · decision pack', en: 'Concept Report · decision pack' },
-    'bnp.psl.j12.when': { fr: 'Q2 2018', nl: 'Q2 2018', en: 'Q2 2018' },
-    'bnp.psl.j12.what': { fr: 'Sponsor go production', nl: 'Sponsor go productie', en: 'Sponsor go production' },
-
+    /* CVE 2026-05-17 v2 NNG · -22 mots · cut glossaire MVP + meta-narration */
     'bnp.proposed.cap': {
-      fr: 'À la sortie : un MVP (un produit minimum viable, le périmètre prêt à embarquer en agile) prioritisé en user stories, signé Banking · IT · Legal · Marketing. Ce qui suit dans le case montre ce qui s\'est joué à chaque étape.',
-      nl: 'Aan de uitgang : een MVP (een Minimum Viable Product, de minimale scope klaar om in agile uitgerold te worden) geprioriteerd in user stories, ondertekend door Banking · IT · Legal · Marketing. Wat volgt toont wat er bij elke stap gespeeld werd.',
-      en: 'Exit deliverable : an MVP (a Minimum Viable Product, the smallest scope ready to ship in agile) prioritised in user stories, signed off by Banking · IT · Legal · Marketing. What follows shows what played out at each step.'
-    },
-
-    /* STAR menu sticky guide — labels courts pour les 4 nodes */
-    'bnp.starMenu.s': { fr: 'Situation', nl: 'Situatie', en: 'Situation' },
-    'bnp.starMenu.t': { fr: 'Proposition', nl: 'Voorstel', en: 'Proposal' },
-    'bnp.starMenu.a': { fr: 'Démarche', nl: 'Aanpak', en: 'Approach' },
-    'bnp.starMenu.r': { fr: 'Résultat', nl: 'Resultaat', en: 'Result' },
-
-    'bnp.chapS.label': { fr: 'Situation · L\'observation', nl: 'Situation · De observatie', en: 'Situation · Observation' },
-    'bnp.chapS.title': { fr: 'L\'observation.', nl: 'De observatie.', en: 'Observation.' },
-    'bnp.chapS.lead': {
-      fr: 'Avant de proposer, comprendre. Le terrain enseigne ce que la donnée seule ne dit jamais : ce qu\'un commerçant choisit de faire avec ce qu\'il sait.',
-      nl: 'Eerst begrijpen, dan voorstellen. Het terrein leert wat de data alleen nooit zegt : wat een merchant kiest te doen met wat hij weet.',
-      en: 'Understand before proposing. The shop floor teaches what data alone never says : what a shopkeeper chooses to do with what he knows.'
-    },
-
-    /* ============== CHAPTER DIVIDERS (T/A/R — cinematic narrative structure) ============== */
-    'bnp.chap1.label': { fr: 'Task · La proposition', nl: 'Task · Het voorstel', en: 'Task · The proposal' },
-    'bnp.chap1.title': { fr: 'La proposition.', nl: 'Het voorstel.', en: 'The proposal.' },
-    'bnp.chap1.lead': {
-      fr: 'Le bon problème vaut la moitié de la solution. Reframer la donnée brute en service que le commerçant achète, parce qu\'il décide mieux avec.',
-      nl: 'Het juiste probleem is de helft van de oplossing. De ruwe data herkaderen tot een dienst die de merchant koopt, omdat hij er betere beslissingen mee neemt.',
-      en: 'The right problem is half the solution. Reframe raw data into a service the merchant buys, because it sharpens the calls he has to make.'
-    },
-    'bnp.chap2.label': { fr: 'Action · La démarche', nl: 'Action · De aanpak', en: 'Action · The approach' },
-    'bnp.chap2.title': { fr: 'La démarche.', nl: 'De aanpak.', en: 'The approach.' },
-    'bnp.chap2.lead': {
-      fr: 'Aligner quatre fonctions sur la même PME. Le double diamant tient le rythme : on diverge pour comprendre, on converge pour décider, deux fois.',
-      nl: 'Vier functies uitlijnen op dezelfde kmo. De double diamond houdt het ritme : divergeren om te begrijpen, convergeren om te beslissen, twee keer.',
-      en: 'Align four functions on the same SME. The double diamond holds the tempo : diverge to understand, converge to decide, twice.'
-    },
-    'bnp.chap3.label': { fr: 'Result · Le résultat', nl: 'Result · Het resultaat', en: 'Result · The outcome' },
-    'bnp.chap3.title': { fr: 'Le résultat.', nl: 'Het resultaat.', en: 'The outcome.' },
-    'bnp.chap3.lead': {
-      fr: 'Le résultat ne se déclare pas, il se prouve. Six PME testent, une dit oui par écrit, zéro refus chez les autres. Le sponsor a son signal.',
-      nl: 'Het resultaat verklaar je niet, je bewijst het. Zes kmo\'s testen, één zegt schriftelijk ja, nul weigeringen bij de anderen. De sponsor heeft zijn signaal.',
-      en: 'A result is not declared, it\'s proven. Six SMEs test, one signs yes in writing, zero refusals among the others. The sponsor has his signal.'
-    },
-    'bnp.chapBridge.label': { fr: 'Pont', nl: 'Brug', en: 'Bridge' },
-    'bnp.chapBridge.title': { fr: 'Vers Luminus.', nl: 'Naar Luminus.', en: 'To Luminus.' },
-    'bnp.chapBridge.lead': {
-      fr: 'Là où ce playbook bancaire rencontre la donnée énergétique.',
-      nl: 'Waar dit bank-playbook de energiedata ontmoet.',
-      en: 'Where this banking playbook meets energy data.'
+      fr: 'À la sortie · MVP prioritisé en user stories, signé Banking · IT · Legal · Marketing.',
+      nl: 'Aan de uitgang · MVP geprioriteerd in user stories, ondertekend door Banking · IT · Legal · Marketing.',
+      en: 'Exit deliverable · MVP prioritised in user stories, signed off by Banking · IT · Legal · Marketing.'
     },
 
     /* ============== STAR TL;DR STRIP (NEW) ============== */
@@ -1603,10 +703,12 @@
       nl: 'BNP verwerkte 30 % van de Bancontact-betalingen van het land. Geen enkele dienst valoriseerde deze data voor de handelaars die ze accepteerden.',
       en: 'BNP processed 30% of the country\'s Bancontact payments. No service was extracting value from this data for the merchants who accepted them.'
     },
+    /* CVE 2026-05-17 v2 · NNG · interprétation 4 phrases (Banking pensait X, IT pensait Y)
+       coupée. Factuel · les 4 fonctions, un scope à aligner. -17 mots. */
     'bnp.tldr.t2': {
-      fr: 'Quatre fonctions, quatre lectures légitimes. Banking pensait confiance carte. IT pensait MVP. Legal arbitrait la donnée. Marketing pensait brand. Quatre voix à faire converger sur un seul scope.',
-      nl: 'Vier functies, vier legitieme lezingen. Banking dacht kaartvertrouwen. IT dacht MVP. Legal arbitreerde de data. Marketing dacht brand. Vier stemmen om op één scope te laten samenkomen.',
-      en: 'Four functions, four legitimate readings. Banking thought card trust. IT thought MVP. Legal arbitrated the data. Marketing thought brand. Four voices to converge on a single scope.'
+      fr: 'Quatre fonctions internes à aligner sur un seul scope · Banking, IT, Legal, Marketing.',
+      nl: 'Vier interne functies om op één scope af te stemmen · Banking, IT, Legal, Marketing.',
+      en: 'Four internal functions to align on a single scope · Banking, IT, Legal, Marketing.'
     },
     'bnp.tldr.t3': {
       fr: 'Six mois en amont. Stakeholder Map, Customer Journey, Value Proposition Canvas. Six commerçants interviewés sur leur lieu de travail, dont Léonidas.',
@@ -1625,21 +727,29 @@
       nl: '30 % van de betalingen van het land liep via BNP.<br><span class="accent">Niemand verkocht ze.</span>',
       en: '30% of the country\'s payments ran through BNP.<br><span class="accent">No one was selling them.</span>'
     },
+    /* CVE 2026-05-17 v2 · NNG · pas de répétition du titre dans le texte.
+       Le titre dit déjà "30 %" et "BNP". Le lead1 ouvre sur ce que cette donnée DONNAIT
+       (l'angle d'analyse), puis le gap merchant chiffré (source Concept Report p9 ·
+       1500 ATOS / 901 EBB / 234 actifs / 15 % réguliers), puis le service manquant. */
     'bnp.brief.lead1': {
-      fr: 'BNP traitait près de 30 % des paiements Bancontact en Belgique, soit une vue privilégiée sur les habitudes d\'achat des consommateurs. Aucun service ne valorisait cette matière auprès des commerçants qui acceptaient ces paiements.',
-      nl: 'BNP verwerkte zo\'n 30 % van de Bancontact-betalingen in België, een bevoorrechte blik op het koopgedrag van consumenten. Geen enkele dienst valoriseerde die data bij de handelaars die de betalingen aanvaardden.',
-      en: 'BNP processed close to 30% of all Bancontact payments in Belgium, an unmatched view of consumer purchasing behaviour. No service was turning that data into value for the merchants accepting those payments.'
+      fr: 'Une vue inégalée sur le comportement d\'achat des consommateurs belges, accumulée sur le réseau Bancontact. Côté commerçant · 1500 retailers ATOS référencés, 901 inscrits sur Easy Banking Business, 234 actifs, seulement 15 % réguliers. Aucun service ne valorisait cette matière auprès de ceux qui acceptaient les paiements.',
+      nl: 'Een ongeëvenaard zicht op het koopgedrag van Belgische consumenten, opgebouwd op het Bancontact-netwerk. Aan handelaarszijde · 1500 retailers in ATOS opgelijst, 901 ingeschreven op Easy Banking Business, 234 actief, slechts 15 % regelmatig. Geen enkele dienst valoriseerde die data bij wie de betalingen aanvaardde.',
+      en: 'An unmatched view of Belgian consumer purchasing behaviour, accumulated on the Bancontact network. On the merchant side · 1500 retailers listed in ATOS, 901 registered on Easy Banking Business, 234 active, only 15% regular. No service was turning that data into value for those accepting the payments.'
     },
+    /* CVE 2026-05-17 v2 · stakes Acquirer Ideation Report p14 · 2e phrase coupée
+       (restate gap déjà dans lead1). NNG · pas de redondance entre paragraphes. */
     'bnp.brief.lead2': {
-      fr: 'Forte sur les cartes consommateurs, BNP restait peu visible auprès des PME qui les acceptaient. Le projet devait combler cet écart par un nouveau service B2B (de la banque vers ses entreprises clientes), sans entamer la confiance déjà installée.',
-      nl: 'Sterk op de consumentenkaarten, bleef BNP weinig zichtbaar bij de kmo\'s die ze aanvaardden. Het project moest die kloof dichten met een nieuwe B2B-dienst (van de bank naar haar zakelijke klanten), zonder het bestaande vertrouwen aan te tasten.',
-      en: 'Strong on the consumer card side, BNP remained little visible to the SMEs accepting them. The project had to close that gap with a new B2B service (from the bank to its business customers), without eroding the trust already in place.'
+      fr: 'BNP visait 2020 pour devenir Acquirer en propre · passer de 7 % à 20 % de marketshare POS, ouvrir dès Q2 2018 l\'acquiring aux large retailers via Corporate Banking. Le service à concevoir n\'était pas un gadget data, c\'était la pointe d\'une stratégie de position.',
+      nl: 'BNP mikte op 2020 om zelf Acquirer te worden · van 7 % naar 20 % POS-marktaandeel, en vanaf Q2 2018 acquiring openstellen voor grote retailers via Corporate Banking. De dienst die we moesten bedenken was geen data-gadget, het was de speerpunt van een positiestrategie.',
+      en: 'BNP was aiming for 2020 to become Acquirer in its own right · lifting POS marketshare from 7% to 20%, and opening acquiring to large retailers via Corporate Banking by Q2 2018. The service to design wasn\'t a data gadget, it was the spearhead of a positioning strategy.'
     },
-    /* CVE 2026-05-11 BNP v2 · mandat en 4 verbes secs (Brand Guardian + Content Creator) */
+    /* CVE 2026-05-17 v2 · mandate slim · NNG dedup · "Six mois" dans sizing chip,
+       "Lean Canvas + VPC" dans toolkitSignal. On garde ici les 4 verbes + qui est dans
+       la pièce + ce qui sort. -36 mots. */
     'bnp.brief.lead3': {
-      fr: 'Mon mandat tenait en quatre verbes · <strong>cadrer, tester, aligner, défendre</strong>. Six mois pour confronter l\'opportunité au terrain, mettre Banking, IT, Legal et Marketing dans la même pièce, et porter la recommandation jusqu\'au comité. Choix d\'entrée méthodologique · Lean Canvas pour cadrer l\'opportunité business avec le sponsor, puis Value Proposition Canvas pour aligner sur la voix du commerçant en atelier. Deux outils, deux moments, un même Design System.',
-      nl: 'Mijn opdracht in vier werkwoorden · <strong>kaderen, testen, aligneren, verdedigen</strong>. Zes maanden om de opportuniteit aan het terrein te toetsen, Banking, IT, Legal en Marketing in dezelfde ruimte te zetten, en de aanbeveling tot in het comité te dragen. Methodologische instap · Lean Canvas om de business-opportuniteit met de sponsor te kaderen, daarna Value Proposition Canvas om af te stemmen op de stem van de handelaar in workshop. Twee tools, twee momenten, één Design System.',
-      en: 'My mandate held in four verbs · <strong>frame, test, align, defend</strong>. Six months to confront the opportunity with the field, get Banking, IT, Legal and Marketing in the same room, and carry the recommendation up to the steering committee. Methodological entry · Lean Canvas to frame the business opportunity with the sponsor, then Value Proposition Canvas to align on the merchant\'s voice in workshops. Two tools, two moments, one Design System.'
+      fr: 'Mon mandat tenait en quatre verbes · <strong>cadrer, tester, aligner, défendre</strong>. Confronter l\'opportunité au terrain, mettre Banking, IT, Legal et Marketing dans la même pièce, porter la recommandation jusqu\'au comité.',
+      nl: 'Mijn opdracht in vier werkwoorden · <strong>kaderen, testen, aligneren, verdedigen</strong>. De opportuniteit aan het terrein toetsen, Banking, IT, Legal en Marketing in dezelfde ruimte zetten, de aanbeveling tot in het comité dragen.',
+      en: 'My mandate held in four verbs · <strong>frame, test, align, defend</strong>. Confront the opportunity with the field, get Banking, IT, Legal and Marketing in the same room, carry the recommendation up to the steering committee.'
     },
     'bnp.brief.sizing': {
       fr: '6 mois <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> 6 PME terrain <span class="dot">·</span> Service Designer freelance',
@@ -1652,186 +762,13 @@
       nl: 'Aan de aankomst · <strong class="accent"><span data-countup="6">6</span> kmo\'s getest</strong> <span class="brief-teaser__sep">→</span> <strong class="accent"><span data-countup="1">1</span> vaste aankoopbelofte</strong> <span class="brief-teaser__sep">·</span> <strong class="accent"><span data-countup="0">0</span> weigeringen</strong>. De sponsor heeft de investering goedgekeurd.',
       en: 'At the close · <strong class="accent"><span data-countup="6">6</span> SMEs tested</strong> <span class="brief-teaser__sep">→</span> <strong class="accent"><span data-countup="1">1</span> firm purchase commitment</strong> <span class="brief-teaser__sep">·</span> <strong class="accent"><span data-countup="0">0</span> refusals</strong>. The sponsor signed off the investment.'
     },
-    /* CVE 2026-05-08 · toolkit signal · transpire mastery · pattern « maturité → toolkit choisi » */
+    /* CVE 2026-05-17 v2 NNG · -15 mots · cut "pas pour ouvrir une page blanche" + "discipline du parcours" */
     'bnp.brief.toolkitSignal': {
-      fr: '<strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>, méthodologie native du département CXC. Toolkit calibré pour valider une hypothèse de revenu en B2B mature, pas pour ouvrir une page blanche. La discipline du parcours · <strong class="accent">Léonidas signé avant la première ligne de code</strong>.',
-      nl: '<strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>, de eigen methodologie van de CXC-afdeling. Toolkit afgestemd op het valideren van een omzet-hypothese in B2B-volwassen context, niet op het openen van een blanco pagina. De discipline van het traject · <strong class="accent">Léonidas getekend vóór de eerste coderegel</strong>.',
-      en: '<strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>, the native methodology of the CXC department. Toolkit calibrated to validate a revenue hypothesis in mature B2B, not to open a blank page. The discipline of the journey · <strong class="accent">Léonidas signed before the first line of code</strong>.'
+      fr: '<strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>, méthodologie native du département CXC. Toolkit calibré pour valider une hypothèse de revenu B2B mature. <strong class="accent">Léonidas signé avant la première ligne de code</strong>.',
+      nl: '<strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>, de eigen methodologie van de CXC-afdeling. Toolkit afgestemd op het valideren van een B2B-omzet-hypothese. <strong class="accent">Léonidas getekend vóór de eerste coderegel</strong>.',
+      en: '<strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>, the native methodology of the CXC department. Toolkit calibrated to validate a mature B2B revenue hypothesis. <strong class="accent">Léonidas signed before the first line of code</strong>.'
     },
 
-    'bnp.catalyst.eyebrow': { fr: 'Le catalyseur', nl: 'De aanleiding', en: 'The catalyst' },
-    'bnp.catalyst.title': {
-      fr: 'Marketing m\'a <span class="accent">appelé.</span>',
-      nl: 'Marketing <span class="accent">belde.</span>',
-      en: 'Marketing <span class="accent">called.</span>'
-    },
-    'bnp.catalyst.lead': {
-      fr: 'Leur premier prototype partait dans le mur. Trop centré sur la data brute, déconnecté du quotidien des commerçants visés. Ils m\'ont fait venir pour reprendre la question depuis le terrain. L\'enquête a démarré là.',
-      nl: 'Hun eerste prototype liep tegen de muur. Te veel op ruwe data gericht, los van het dagelijks leven van de beoogde handelaars. Ze haalden me erbij om de vraag opnieuw vanaf het terrein te benaderen. Daar begon het onderzoek.',
-      en: 'Their first prototype was heading nowhere. Too focused on raw data, disconnected from the day-to-day reality of the merchants they were targeting. They brought me in to take the question back to the ground. The investigation started there.'
-    },
-
-    /* STAR keys legacy — gardés mais plus utilisés en HTML */
-    'bnp.star.label': { fr: 'STAR · l\'histoire en trois temps', nl: 'STAR · het verhaal in drie tijden', en: 'STAR · the story in three beats' },
-
-    'bnp.star.s1.eyebrow': { fr: '01 · La situation', nl: '01 · De situatie', en: '01 · The situation' },
-    'bnp.star.s1.title': {
-      fr: '30 % des flux ne devenaient<br>jamais une <span class="accent">décision.</span>',
-      nl: '30 % van de flows werden<br>nooit een <span class="accent">beslissing.</span>',
-      en: '30% of the flows never<br>became a <span class="accent">decision.</span>'
-    },
-    'bnp.star.s1.lead': {
-      fr: 'BNP voyait passer chaque semaine des données de cartes consommateurs qui valaient de l\'or pour les commerçants. Personne ne les transformait en service. Tout restait au passif de la banque.',
-      nl: 'BNP zag elke week consumentenkaart-data passeren die goud waard was voor de winkeliers. Niemand zette ze om in een dienst. Alles bleef in het passief van de bank.',
-      en: 'BNP saw consumer-card data go by every week that was gold for merchants. No one was turning it into a service. Everything sat on the bank\'s liability side.'
-    },
-    'bnp.star.s1.p1': {
-      fr: 'L\'asymétrie : <strong>BNP voyait. Les PME ignoraient.</strong>',
-      nl: 'De asymmetrie : <strong>BNP zag. De kmo\'s wisten van niets.</strong>',
-      en: 'The asymmetry : <strong>BNP saw. SMEs didn\'t.</strong>'
-    },
-    'bnp.star.s1.p2': {
-      fr: 'L\'enjeu : qu\'un client réel signe une prévente sur le prototype final. Sans ce signal de traction, le sponsor n\'a rien pour valider l\'investissement build.',
-      nl: 'De inzet : dat een echte klant een pré-aankoop tekent op het finale prototype. Zonder dat tractie-signaal heeft de sponsor niets om de build-investering te valideren.',
-      en: 'The stake : a real client signs a pre-purchase on the final prototype. Without that traction signal, the sponsor has nothing to validate the build investment.'
-    },
-    'bnp.star.s1.p3': {
-      fr: 'Six commerçants, six objections. La même au fond : <em>« Pas la donnée. La décision. »</em>',
-      nl: 'Zes winkeliers, zes bezwaren. In de grond hetzelfde : <em>« Niet de data. De beslissing. »</em>',
-      en: 'Six merchants, six objections. Underneath, the same one : <em>"Not the data. The decision."</em>'
-    },
-
-    'bnp.star.s2.eyebrow': { fr: '02 · L\'action', nl: '02 · De actie', en: '02 · The action' },
-    'bnp.star.s2.title': {
-      fr: 'Pas un dashboard. Un<br>service qui <span class="accent">décide pour eux.</span>',
-      nl: 'Geen dashboard. Een dienst<br>die <span class="accent">voor hen beslist.</span>',
-      en: 'Not a dashboard. A service<br>that <span class="accent">decides for them.</span>'
-    },
-    'bnp.star.s2.lead': {
-      fr: 'J\'ai cadré un MVP sur trois lectures coachées par graphique, pas quarante-sept indicateurs. La donnée ne s\'achète pas. La décision si.',
-      nl: 'Ik kaderde een MVP op drie begeleide lezingen per diagram, geen zevenenveertig indicatoren. Data koop je niet. Beslissingen wel.',
-      en: 'I framed an MVP around three coached reads per chart, not forty-seven KPIs. Data isn\'t bought. Decisions are.'
-    },
-    'bnp.star.s2.p1': {
-      fr: 'Semaine 6. IT voulait démarrer le build. <strong class="accent">J\'ai bloqué.</strong> Pas avant le service blueprint.',
-      nl: 'Week 6. IT wilde met de build beginnen. <strong class="accent">Ik blokkeerde.</strong> Niet vóór het service blueprint.',
-      en: 'Week 6. IT wanted to start the build. <strong class="accent">I blocked it.</strong> Not before the service blueprint.'
-    },
-    'bnp.star.s2.p2': {
-      fr: 'Semaine 9. IT proposait 47 indicateurs. <strong class="accent">J\'ai dit non.</strong> Trois lectures coachées par graphique.',
-      nl: 'Week 9. IT stelde 47 indicatoren voor. <strong class="accent">Ik zei nee.</strong> Drie begeleide lezingen per diagram.',
-      en: 'Week 9. IT proposed 47 KPIs. <strong class="accent">I said no.</strong> Three coached reads per chart.'
-    },
-    'bnp.star.s2.p3': {
-      fr: 'Atelier. Marketing × IT recalibrés sur le commerçant : <em>« Que doit-il décider lundi matin ? »</em> Trois objectifs sont sortis. Les deux équipes ont co-signé.',
-      nl: 'Workshop. Marketing × IT herijkt op de winkelier : <em>« Wat moet hij maandagochtend beslissen ? »</em> Drie doelen kwamen eruit. Beide teams tekenden mee.',
-      en: 'Workshop. Marketing × IT recalibrated on the shopkeeper : <em>"What does he need to decide Monday morning?"</em> Three goals came out. Both teams signed.'
-    },
-    'bnp.star.s2.act.eyebrow': {
-      fr: 'Semaine 9 · MVP scope',
-      nl: 'Week 9 · MVP-scope',
-      en: 'Week 9 · MVP scope'
-    },
-    'bnp.star.s2.act.caption': {
-      fr: 'indicateurs <strong class="accent">→</strong> lectures coachées par graphique',
-      nl: 'indicatoren <strong class="accent">→</strong> begeleide lezingen per diagram',
-      en: 'KPIs <strong class="accent">→</strong> coached reads per chart'
-    },
-    'bnp.star.s2.act.t1': { fr: 'Sem. 6 · Bloqué', nl: 'Wk 6 · Geblokkeerd', en: 'Wk 6 · Blocked' },
-    'bnp.star.s2.act.t2': { fr: 'Sem. 9 · 47 → 3', nl: 'Wk 9 · 47 → 3', en: 'Wk 9 · 47 → 3' },
-    'bnp.star.s2.act.t3': { fr: 'Atelier · Recalibré', nl: 'Workshop · Herijkt', en: 'Workshop · Recalibrated' },
-
-    'bnp.star.s3.eyebrow': { fr: '03 · La traction', nl: '03 · De tractie', en: '03 · The traction' },
-    'bnp.star.s3.title': {
-      fr: 'Une PME a signé<br>une <span class="accent">prévente.</span>',
-      nl: 'Een kmo tekende<br>een <span class="accent">pré-aankoop.</span>',
-      en: 'An SME signed<br>a <span class="accent">pre-purchase.</span>'
-    },
-    'bnp.star.s3.lead': {
-      fr: 'Léonidas a accompagné les deux diamants. Itérations VPC, prototype final, ils ont vu chaque version. À la dernière, <strong class="accent">ils ont demandé eux-mêmes à signer une prévente.</strong> Avant le build.',
-      nl: 'Léonidas volgde beide diamanten. VPC-iteraties, finaal prototype, ze zagen elke versie. Bij de laatste <strong class="accent">vroegen ze zelf om een pré-aankoop te tekenen.</strong> Vóór de build.',
-      en: 'Léonidas walked both diamonds with us. VPC iterations, final prototype, they saw each version. On the last one, <strong class="accent">they asked themselves to sign a pre-purchase.</strong> Before the build.'
-    },
-    'bnp.star.s3.p1': {
-      fr: 'Le sponsor avait sa <strong class="accent">preuve de traction</strong>. Mon mandat se terminait là. La suite, je l\'ai laissée à l\'équipe.',
-      nl: 'De sponsor had zijn <strong class="accent">proof of traction</strong>. Mijn mandaat eindigde daar. Het vervolg, dat heb ik aan het team overgelaten.',
-      en: 'The sponsor had <strong class="accent">proof of traction</strong>. My mandate ended there. The follow-up, I left it to the team.'
-    },
-    'bnp.star.s3.p2': {
-      fr: '<strong class="accent">+80 % de revenu</strong> entre Wolluwé Saint-Pierre et Ixelles sur six mois, mêmes flux Bancontact, simplement lus différemment. Ce que le prototype a montré.',
-      nl: '<strong class="accent">+80 % omzet</strong> tussen Sint-Pieters-Woluwe en Elsene op zes maanden, dezelfde Bancontact-flows, gewoon anders gelezen. Wat het prototype liet zien.',
-      en: '<strong class="accent">+80% revenue</strong> between Wolluwé Saint-Pierre and Ixelles over six months, same Bancontact flows, simply read differently. What the prototype surfaced.'
-    },
-    'bnp.star.s3.p3': {
-      fr: 'Triple-Win signé Corporate Banking, IT, Legal et Marketing. <strong>Une seule promesse, trois oui simultanés.</strong>',
-      nl: 'Triple-Win goedgekeurd door Corporate Banking, IT, Legal en Marketing. <strong>Eén belofte, drie ja\'s tegelijk.</strong>',
-      en: 'Triple-Win signed off by Corporate Banking, IT, Legal and Marketing. <strong>One promise, three yeses at once.</strong>'
-    },
-
-    'bnp.glance.eyebrow': { fr: 'En un coup d\'œil', nl: 'In één oogopslag', en: 'At a glance' },
-    'bnp.glance.h2': {
-      fr: 'Les chiffres-clés,<br><span class="accent">avant l\'histoire.</span>',
-      nl: 'De kerncijfers,<br><span class="accent">vóór het verhaal.</span>',
-      en: 'The numbers,<br><span class="accent">before the story.</span>'
-    },
-    'bnp.glance.lead': {
-      fr: 'Six mois entre service design, stratégie business et aide à la décision. Quatre chiffres résument ce qui comptait.',
-      nl: 'Zes maanden tussen service design, bedrijfsstrategie en beslissingsondersteuning. Vier cijfers vatten samen wat telde.',
-      en: 'Six months at the intersection of service design, business strategy and decision support. Four numbers sum up what mattered.'
-    },
-    'bnp.glance.sizing': {
-      fr: '6 mois <span class="dot">·</span> 4 fonctions internes <span class="dot">·</span> 6 PME testées <span class="dot">·</span> 1 client pilote',
-      nl: '6 maanden <span class="dot">·</span> 4 interne functies <span class="dot">·</span> 6 kmo\'s getest <span class="dot">·</span> 1 pilootklant',
-      en: '6 months <span class="dot">·</span> 4 internal functions <span class="dot">·</span> 6 SMEs tested <span class="dot">·</span> 1 pilot client'
-    },
-    'bnp.glance.s1.label': {
-      fr: 'Flux carte conso · vus, pas convertis',
-      nl: 'Consumentenkaart-flows · gezien, niet omgezet',
-      en: 'Card flows seen, not turned to value'
-    },
-    'bnp.glance.s2.label': {
-      fr: 'CA promis aux PME · 4 rapports business',
-      nl: 'Beloofde omzetgroei kmo\'s · 4 business-rapporten',
-      en: 'Revenue uplift promised · 4 business-goal reports'
-    },
-    'bnp.glance.s3.label': {
-      fr: 'Personas B2B livrés · réutilisés downstream',
-      nl: 'B2B-personas opgeleverd · downstream herbruikt',
-      en: 'B2B personas delivered · reused downstream'
-    },
-    'bnp.glance.s4.label': {
-      fr: 'Promesse d\'achat · sur 6 PME testées · 0 refus',
-      nl: 'Aankoopbelofte · op 6 geteste kmo\'s · 0 weigeringen',
-      en: 'Pre-purchase commitment · across 6 SMEs tested · 0 refusals'
-    },
-
-    /* VP statement — Act T claim that opens the proposition (the "why merchants pay") */
-    'bnp.vp.eyebrow': {
-      fr: 'La proposition de valeur',
-      nl: 'De waardepropositie',
-      en: 'The value proposition'
-    },
-    'bnp.vp.claim': {
-      fr: '<span class="vp-claim__num">+15<span class="vp-claim__sep">–</span>25<span class="vp-claim__unit">%</span></span><span class="vp-claim__text">de chiffre d\'affaires<br>pour les PME qui suivent les rapports.</span>',
-      nl: '<span class="vp-claim__num">+15<span class="vp-claim__sep">–</span>25<span class="vp-claim__unit">%</span></span><span class="vp-claim__text">extra omzet<br>voor kmo\'s die de rapporten volgen.</span>',
-      en: '<span class="vp-claim__num">+15<span class="vp-claim__sep">–</span>25<span class="vp-claim__unit">%</span></span><span class="vp-claim__text">in revenue<br>for SMEs who act on the reports.</span>'
-    },
-    'bnp.vp.sub': {
-      fr: 'Quatre rapports orientés objectifs business — <em>qui cibler</em>, <em>où</em>, <em>quand</em>, <em>avec quels critères</em> — répondus par les données de la banque. Pas une exploration. Une décision par écran.',
-      nl: 'Vier doelgerichte business-rapporten — <em>wie targeten</em>, <em>waar</em>, <em>wanneer</em>, <em>met welke criteria</em> — beantwoord door de data van de bank. Geen exploratie. Eén beslissing per scherm.',
-      en: 'Four goal-oriented business reports — <em>who to target</em>, <em>where</em>, <em>when</em>, <em>by which criteria</em> — answered by the bank\'s data. Not an exploration. One decision per screen.'
-    },
-
-    'bnp.barriers.h3': {
-      fr: 'Six barrières réelles<br>identifiées en recherche.',
-      nl: 'Zes echte barrières,<br>uit het onderzoek.',
-      en: 'Six real barriers<br>we surfaced in research.'
-    },
-    'bnp.barriers.intro': {
-      fr: 'Pas des frictions génériques. Ce sont les préoccupations exactes des commerçants interviewés. Elles sont devenues les contraintes de design du MVP.',
-      nl: 'Geen generieke wrijving. Dit zijn de letterlijke zorgen van merchants in interviews. Ze werden de ontwerpbeperkingen voor de MVP.',
-      en: 'Not generic friction. These are the exact concerns merchants raised in interviews. They became the design constraints for the MVP.'
-    },
     'bnp.barriers.b1.h': { fr: '« Qu\'est-ce que j\'en ferais concrètement ? »', nl: '"Wat zou ik er concreet mee doen?"', en: '"What would I actually do with this?"' },
     'bnp.barriers.b1.p': {
       fr: 'Questions sur l\'<strong>utilité réelle</strong> de la donnée. Les commerçants voyaient les dashboards mais n\'imaginaient pas une décision qu\'ils prendraient différemment.',
@@ -1868,34 +805,6 @@
       nl: 'Aanhoudende <strong>vragen over return on investment</strong> tegenover de voorgestelde prijs. Elke merchant rekende hardop.',
       en: 'Persistent <strong>questions about return on investment</strong> against the proposed pricing. Every merchant did the math out loud.'
     },
-    'bnp.barriers.cap': {
-      fr: 'Artefact original · Rapport de découverte · Key Driver et 6 barrières clés',
-      nl: 'Origineel artefact · Discovery rapport · Key Driver en 6 sleutel-barrières',
-      en: 'Original artefact · Discovery report · Key Driver and 6 Key Barriers'
-    },
-
-    /* Barriers intro slide — transition typographique avant le horizontal pin */
-    'bnp.barriersIntro.eyebrow': {
-      fr: 'Recherche utilisateur · interviews qualitatives',
-      nl: 'Gebruikersonderzoek · kwalitatieve interviews',
-      en: 'User research · qualitative interviews'
-    },
-    'bnp.barriersIntro.title': {
-      fr: 'Six voix.<br><span class="accent">Une seule conviction.</span>',
-      nl: 'Zes stemmen.<br><span class="accent">Eén overtuiging.</span>',
-      en: 'Six voices.<br><span class="accent">One conviction.</span>'
-    },
-    'bnp.barriersIntro.lead': {
-      fr: 'On a interviewé Jean-Paul, CEO multi-shops, et cinq autres commerçants. Six fois, la même réticence, formulée différemment. <strong>Pas de la friction générique.</strong> Les phrases exactes qui sont sorties en interview, et qui sont devenues les six contraintes design du MVP.',
-      nl: 'We interviewden Jean-Paul, CEO multi-winkels, en vijf andere merchants. Zes keer dezelfde terughoudendheid, anders verwoord. <strong>Geen generieke wrijving.</strong> De letterlijke zinnen uit de interviews, die de zes ontwerpbeperkingen van de MVP werden.',
-      en: 'We interviewed Jean-Paul, multi-shop CEO, and five other merchants. Six times, the same reluctance, expressed differently. <strong>Not generic friction.</strong> The exact sentences from the interviews that became the six design constraints of the MVP.'
-    },
-    'bnp.barriersIntro.cue': {
-      fr: 'Faites défiler · les six voix prennent la parole',
-      nl: 'Scroll · de zes stemmen nemen het woord',
-      en: 'Scroll · the six voices speak'
-    },
-
     /* 6 barrières — horizontal pin section, voix unifiée Jean-Paul */
     'bnp.barriers.label': {
       fr: 'Jean-Paul, CEO multi-shops · six barrières en interviews',
@@ -1915,19 +824,6 @@
     'bnp.barriers.b5.eyebrow': { fr: 'Barrière 05 · Produits', nl: 'Barrière 05 · Producten', en: 'Barrier 05 · Products' },
     'bnp.barriers.b6.eyebrow': { fr: 'Barrière 06 · ROI', nl: 'Barrière 06 · ROI', en: 'Barrier 06 · ROI' },
 
-    /* Pull-quotes hero — extraits du Concept Report 2018, posés en respiration entre actes */
-    'bnp.pq1.eyebrow': { fr: 'Concept Report · mars 2018', nl: 'Concept Report · maart 2018', en: 'Concept Report · March 2018' },
-    'bnp.pq1.quote': {
-      fr: 'Pas de système exploratoire de métriques. <span class="accent">Des rapports orientés objectifs, avec des outcomes actionnables.</span>',
-      nl: 'Geen exploratief metrics-systeem. <span class="accent">Doelgerichte rapporten, met actiegerichte outcomes.</span>',
-      en: 'No exploratory metrics system. <span class="accent">Goals oriented reports, with actionable outcomes.</span>'
-    },
-    'bnp.pq2.eyebrow': { fr: 'Concept Report · mars 2018', nl: 'Concept Report · maart 2018', en: 'Concept Report · March 2018' },
-    'bnp.pq2.quote': {
-      fr: 'Un dashboard, ce n\'est pas pousser de la donnée. <span class="accent">C\'est raconter une histoire</span> qui aide le commerçant à décider.',
-      nl: 'Een dashboard, dat is geen data pushen. <span class="accent">Dat is een verhaal vertellen</span> dat de winkelier helpt beslissen.',
-      en: 'A dashboard isn\'t about pushing data. <span class="accent">It\'s about telling a story</span> that helps the shopkeeper decide.'
-    },
     'bnp.barriers.b1.constraint': {
       fr: 'Devenu règle de design : pas de data exploration. Chaque écran ouvre sur une décision possible.',
       nl: 'Werd ontwerpregel : geen data exploration. Elk scherm opent op een mogelijke beslissing.',
@@ -1959,172 +855,6 @@
       en: 'Became central to Triple-Win : merchant gains in decisions, bank creates a B2B revenue line, cardholder keeps privacy.'
     },
 
-    'bnp.steps.eyebrow': { fr: 'Les étapes · 3 / 3', nl: 'De stappen · 3 / 3', en: 'The Steps · 3 of 3' },
-    'bnp.steps.label': { fr: 'Six décisions, six livrables', nl: 'Zes beslissingen, zes deliverables', en: 'Six decisions, six deliverables' },
-
-    'bnp.steps.s1.eyebrow': { fr: 'Étape 01 · DISCOVER', nl: 'Stap 01 · DISCOVER', en: 'Step 01 · DISCOVER' },
-    'bnp.steps.s2.eyebrow': { fr: 'Étape 02 · DEFINE', nl: 'Stap 02 · DEFINE', en: 'Step 02 · DEFINE' },
-    'bnp.steps.s3.eyebrow': { fr: 'Étape 03 · DEFINE', nl: 'Stap 03 · DEFINE', en: 'Step 03 · DEFINE' },
-    'bnp.steps.s4.eyebrow': { fr: 'Étape 04 · DEVELOP', nl: 'Stap 04 · DEVELOP', en: 'Step 04 · DEVELOP' },
-    'bnp.steps.s5.eyebrow': { fr: 'Étape 05 · DEVELOP', nl: 'Stap 05 · DEVELOP', en: 'Step 05 · DEVELOP' },
-    'bnp.steps.s6.eyebrow': { fr: 'Étape 06 · DELIVER', nl: 'Stap 06 · DELIVER', en: 'Step 06 · DELIVER' },
-
-    'bnp.roadmap.eyebrow': { fr: 'La suite', nl: 'Het vervolg', en: 'What came next' },
-    'bnp.steps.h2': {
-      fr: 'Quelles étapes ai-je suivies<br>pour <span class="accent">obtenir le résultat ?</span>',
-      nl: 'Welke stappen heb ik gezet<br>om <span class="accent">het resultaat te bereiken?</span>',
-      en: 'What steps did I take<br>to <span class="accent">achieve the result?</span>'
-    },
-    'bnp.steps.lead': {
-      fr: 'Six mouvements concrets, chacun avec un livrable concret, chacun dé-risquant une pièce du puzzle. Voici les artefacts tels qu\'ils ont été produits.',
-      nl: 'Zes concrete bewegingen, elk met een concrete deliverable, elk een puzzelstuk dat risico vermindert. Hieronder de artefacten zoals ze daadwerkelijk werden gemaakt.',
-      en: 'Six concrete moves, each with a concrete deliverable, each de-risking one piece of the puzzle. Below, the artefacts as they actually shipped.'
-    },
-
-    'bnp.steps.s1.h': { fr: 'Recherche personas et segmentation B2B', nl: 'Persona-onderzoek en B2B-segmentatie', en: 'Persona research and B2B segmentation' },
-    'bnp.steps.s1.p': {
-      fr: 'L\'enquête démarre par la cartographie. Segmenter le marché PME selon BNP, puis interviewer des commerçants susceptibles d\'acheter de la donnée. Pas pour valider une vision, mais pour identifier leurs problèmes réels. Le benchmark a confirmé l\'angle stratégique : <strong class="accent">BNP voit 30 % des comptes via Bancontact</strong>, position quasi-monopolistique sur la donnée transactionnelle B2B. <strong>Mes findings ont sorti la réponse : ces gens ne sont pas data scientists.</strong> Une bibliothèque de neuf personas B2B est sortie de la phase, du libéral au CPBB, avec leur niveau d\'intérêt mappé.',
-      nl: 'Het onderzoek start met cartografie. De kmo-markt segmenteren zoals BNP die zag, dan merchants interviewen die mogelijk data zouden kopen. Niet om een visie te valideren, maar om hun reële problemen te identificeren. De benchmark bevestigde de strategische hoek : <strong class="accent">BNP ziet 30 % van de rekeningen via Bancontact</strong>, bijna-monopoliepositie op B2B-transactiedata. <strong>Mijn findings leverden het antwoord : deze mensen zijn geen data scientists.</strong> Een bibliotheek van negen B2B-persona\'s kwam uit de fase, van vrije beroepen tot CPBB, met hun interesseniveau in kaart gebracht.',
-      en: 'The investigation starts with mapping. Segment the SME market the way BNP saw it, then interview merchants likely to buy data. Not to validate a vision, but to identify their real problems. The benchmark confirmed the strategic angle : <strong class="accent">BNP sees 30% of accounts via Bancontact</strong>, near-monopoly on B2B transactional data. <strong>My findings gave the answer : these people aren\'t data scientists.</strong> A library of nine B2B personas came out of the phase, from liberal professions to CPBB, with their level of interest mapped.'
-    },
-    'bnp.steps.s1.deliv': { fr: 'Livrable · bibliothèque 9 personas · matrice Niveaux d\'intérêt', nl: 'Deliverable · 9-persona-bibliotheek · Interesseniveau-matrix', en: 'Deliverable · 9-persona library · Levels of Interest matrix' },
-    'bnp.steps.s1.cap': { fr: '9 personas B2B · validés par recherche', nl: '9 B2B-persona\'s · onderzoeksgebaseerd', en: '9 B2B personas · research-backed' },
-
-    'bnp.steps.s2.h': { fr: 'Value Proposition Canvas', nl: 'Value Proposition Canvas', en: 'Value Proposition Canvas' },
-    'bnp.steps.s2.p': {
-      fr: 'La question fondatrice tenait en une ligne, posée à chaque atelier : <em>« Comment transformer ce que la banque voit déjà en un service que les PME accepteraient de payer ? »</em> Le VPC a structuré la réponse en trois axes concrets, alignés sur les décisions hebdomadaires d\'un commerçant. <strong>Audience</strong> : qui est le bon client, où il habite, combien de kilomètres il parcourt. <strong>Trafic</strong> : à quelles heures les cartes passent, quand ouvrir et fermer. <strong>Marketing tout-boîte</strong> : depuis quelles communes les clients arrivent, donc où lancer une campagne ciblée. Trois colonnes, trois décisions hebdomadaires. Pas de data exploration. Des outputs actionnables.',
-      nl: 'De stichtingsvraag paste in één regel, gesteld in elke workshop : <em>« Hoe vertalen we wat de bank al ziet in een dienst waarvoor kmo\'s zouden willen betalen ? »</em> De VPC structureerde het antwoord in drie concrete assen, afgestemd op de wekelijkse beslissingen van een winkelier. <strong>Doelpubliek</strong> : wie is de goede klant, waar woont hij, hoeveel kilometer legt hij af. <strong>Verkeer</strong> : op welke uren passeren de kaarten, wanneer openen en sluiten. <strong>Marketing tout-boîte</strong> : uit welke gemeenten komen de klanten, dus waar een gerichte campagne lanceren. Drie kolommen, drie wekelijkse beslissingen. Geen data exploration. Enkel outputs.',
-      en: 'The founding question fit in one line, asked in every workshop : <em>« How do we turn what the bank already sees into a service SMEs would actually pay for ? »</em> The VPC structured the answer in three concrete axes, aligned to a shopkeeper\'s weekly decisions. <strong>Audience</strong> : who\'s the right customer, where they live, how many kilometers they travel. <strong>Traffic</strong> : at what hours the cards swipe, when to open and close. <strong>Tout-boîte marketing</strong> : from which communes customers come, so where to launch a targeted campaign. Three columns, three weekly decisions. No data exploration. Actionable outputs only.'
-    },
-    'bnp.steps.s2.deliv': { fr: 'Livrable · VPC · Pains / Gains / Jobs vers features MVP', nl: 'Deliverable · VPC · Pains / Gains / Jobs naar MVP-features', en: 'Deliverable · VPC · Pains / Gains / Jobs to MVP features' },
-    'bnp.steps.s2.cap': { fr: 'VPC · Besoins · Envies · Peurs vers offre MVP', nl: 'VPC · Behoeften · Wensen · Angsten naar MVP-aanbod', en: 'VPC · Needs · Wants · Fears to MVP offer' },
-
-    'bnp.steps.s3.h': { fr: 'Lean Canvas et cadrage MVP', nl: 'Lean Canvas en MVP-framing', en: 'Lean Canvas and MVP framing' },
-    'bnp.steps.s3.p': {
-      fr: 'Lean Canvas. Une page. Problème · Solution · UVP · Avantage déloyal · Segments · Canaux · Coûts · Revenus. La discipline d\'une page : ce qui ne tient pas dessus n\'est pas dans le MVP. <strong class="accent">L\'avantage déloyal</strong> tenait en une ligne défendable : profiling banking et données transactionnelles combinés ne sont disponibles nulle part ailleurs. Et le 30 % de part Bancontact rendait l\'échantillon statistiquement représentatif. Le scope MVP s\'est précisé : <strong>1 500 PME Corporate Banking en pilote, 901 dans EBB, 234 utilisateurs réguliers.</strong> Pas plus, pas moins.',
-      nl: 'Lean Canvas. Eén pagina. Probleem · Oplossing · UVP · Oneerlijk voordeel · Segmenten · Kanalen · Kosten · Omzet. De discipline van één pagina : wat er niet op past zit niet in de MVP. <strong class="accent">Het oneerlijk voordeel</strong> paste in één verdedigbare zin : banking profiling en transactionele data gecombineerd zijn nergens anders beschikbaar. En de 30 % Bancontact-marktaandeel maakte de sample statistisch representatief. De MVP-scope versmalde : <strong>1 500 Corporate Banking-kmo\'s in pilot, 901 in EBB, 234 reguliere gebruikers.</strong> Niet meer, niet minder.',
-      en: 'Lean Canvas. One page. Problem · Solution · UVP · Unfair Advantage · Segments · Channels · Cost · Revenue. The one-page discipline : what doesn\'t fit isn\'t in the MVP. <strong class="accent">The unfair advantage</strong> fit into one defensible line : banking profiling combined with transactional data isn\'t available anywhere else. And the 30% Bancontact market share made the sample statistically representative. The MVP scope sharpened : <strong>1 500 Corporate Banking SMEs in pilot, 901 in EBB, 234 regular users.</strong> No more, no less.'
-    },
-    'bnp.steps.s3.deliv': { fr: 'Livrable · Lean Canvas · scope MVP · 4 lentilles de données', nl: 'Deliverable · Lean Canvas · MVP-scope · 4 datalenzen', en: 'Deliverable · Lean Canvas · MVP scope · 4 data lenses' },
-    'bnp.steps.s3.cap': { fr: 'Lean Canvas · MVP Enterprise Intelligence', nl: 'Lean Canvas · Enterprise Intelligence MVP', en: 'Lean Canvas · Enterprise Intelligence MVP' },
-
-    'bnp.steps.s4.h': { fr: 'Service blueprint et customer journeys', nl: 'Service blueprint en customer journeys', en: 'Service blueprint and customer journeys' },
-    'bnp.steps.s4.p': {
-      fr: 'Semaine 6. IT voulait démarrer le build du dashboard. <strong class="accent">J\'ai bloqué.</strong> Pas avant le service blueprint. J\'ai dessiné cinq journeys « as-is » end-to-end, un pour chaque point d\'entrée : non-enregistré à la banque, enregistré mais nouveau dans EBB, utilisateur EBB existant via deep-link, via app launcher, et flux contract manager. Le journey du non-enregistré comptait à lui seul <strong class="accent">15 étapes étalées sur 1 à 3 jours</strong>. Ce constat a sorti l\'onboarding du backlog « plus tard » et l\'a remis dans le scope MVP, le jour même.',
-      nl: 'Week 6. IT wilde met de dashboardbouw beginnen. <strong class="accent">Ik blokkeerde.</strong> Niet vóór het service blueprint. Ik tekende vijf end-to-end "as-is" journeys, één per instappunt : niet-geregistreerd bij de bank, geregistreerd maar nieuw in EBB, bestaande EBB-gebruiker via deeplink, via app-launcher, en de contract-manager-flow. De journey van de niet-geregistreerde alleen al telde <strong class="accent">15 stappen verspreid over 1 tot 3 dagen</strong>. Die bevinding haalde de onboarding uit de "later"-backlog en zette die diezelfde dag terug in de MVP-scope.',
-      en: 'Week 6. IT wanted to start building the dashboard. <strong class="accent">I blocked it.</strong> Not before the service blueprint. I drew five end-to-end "as-is" journeys, one per entry point : unregistered with the bank, registered but new to EBB, existing EBB user via deep link, via app launcher, and the contract manager flow. The unregistered journey alone had <strong class="accent">15 steps spread over 1 to 3 days</strong>. That finding pulled onboarding out of the "later" backlog and back into MVP scope the same day.'
-    },
-    'bnp.steps.s4.deliv': { fr: 'Livrable · 5 blueprints de journey · refonte du flux d\'onboarding', nl: 'Deliverable · 5 journey blueprints · onboarding-flow herontworpen', en: 'Deliverable · 5 journey blueprints · Onboarding flow redesigned' },
-    'bnp.steps.s4.cap': { fr: 'Journey as-is · PME non-enregistrée · 15 étapes · 1–3 jours', nl: 'As-is journey · niet-geregistreerde kmo · 15 stappen · 1–3 dagen', en: 'As-is journey · Unregistered SME · 15 steps · 1-3 days' },
-
-    'bnp.steps.s5.h': { fr: 'Concept et prototypes dashboard', nl: 'Concept en dashboardprototypes', en: 'Concept and dashboard prototypes' },
-    'bnp.steps.s5.p': {
-      fr: 'Semaine 9. IT proposait un dashboard de <strong class="accent">47 indicateurs</strong> pour le MVP. <strong class="accent">J\'ai dit non.</strong> Les six barrières en interview disaient toutes la même chose : un commerçant ne sait pas quoi faire avec des chiffres bruts. J\'ai défendu trois lectures coachées par graphique. Le concept de service a pris la forme d\'un dashboard Spotfire avec trois objectifs : <em>Performance Analysis</em>, <em>Business Expansion</em>, <em>Evaluating Actions</em>. Le détail qui a tout changé : chaque graphique était entouré d\'une annotation <em>« What\'s important »</em> qui suggérait une décision concrète. Pas de la donnée. Une lecture coachée.',
-      nl: 'Week 9. IT stelde een dashboard met <strong class="accent">47 indicatoren</strong> voor in het MVP. <strong class="accent">Ik zei nee.</strong> De zes barrières uit de interviews zeiden allemaal hetzelfde : een winkelier weet niet wat te doen met ruwe cijfers. Ik verdedigde drie begeleide lezingen per diagram. Het serviceconcept werd een Spotfire-dashboard met drie doelen : <em>Performance Analysis</em>, <em>Business Expansion</em>, <em>Evaluating Actions</em>. Het detail dat alles veranderde : elk diagram was omkaderd met een <em>"What\'s important"</em>-annotatie die een concrete beslissing voorstelde. Geen data. Een begeleide lezing.',
-      en: 'Week 9. IT proposed a <strong class="accent">47-KPI dashboard</strong> for the MVP. <strong class="accent">I said no.</strong> The six barriers from the interviews all said the same thing : a shopkeeper doesn\'t know what to do with raw numbers. I defended three coached reads per chart. The service concept took the shape of a Spotfire dashboard with three goals : <em>Performance Analysis</em>, <em>Business Expansion</em>, <em>Evaluating Actions</em>. The detail that changed everything : each chart was wrapped with a <em>"What\'s important"</em> annotation that suggested a concrete decision. Not data. A coached read.'
-    },
-    'bnp.steps.s5.deliv': { fr: 'Livrable · Goals 1·2·3 · wireframes · dashboards POC', nl: 'Deliverable · Goals 1·2·3 · wireframes · POC-dashboards', en: 'Deliverable · Goals 1·2·3 · Wireframes · POC dashboards' },
-    'bnp.steps.s5.cap': { fr: 'Dashboard POC · module POS Turnover · prototype Spotfire', nl: 'POC-dashboard · POS Turnover-module · Spotfire-prototype', en: 'POC dashboard · POS Turnover module · Spotfire prototype' },
-
-    'bnp.steps.s6.h': { fr: 'Roadmap et dossier de décision exécutif', nl: 'Roadmap en executive beslissingspakket', en: 'Roadmap and executive decision pack' },
-    'bnp.steps.s6.p': {
-      fr: 'Tous les artefacts précédents (recherche, VPC, Lean Canvas, blueprints, prototypes) ont alimenté un seul livrable final : un dossier de décision exécutif. Roadmap séquencée Q1 2018 vers 2020. Registre des risques RGPD / faisabilité technique / défensibilité concurrentielle. <strong class="accent">Et la preuve commerciale en avance : six PME testées avec le prototype. Une promesse d\'achat ferme — le groupe Léonidas, sur décision de son manager général, qui s\'engageait à acheter à la sortie pour tous ses magasins. Aucun refus chez les cinq autres ; toutes prêtes à être dans les premières acheteuses.</strong> C\'était le signal qui manquait au sponsor pour passer en production. <strong class="accent">Construit pour être décidé, pas seulement lu.</strong>',
-      nl: 'Alle voorgaande artefacten (onderzoek, VPC, Lean Canvas, blueprints, prototypes) voedden één finaal deliverable : een executive decision document. Gefaseerde roadmap Q1 2018 naar 2020. Risicoregister GDPR / technische haalbaarheid / concurrentie-verdedigbaarheid. <strong class="accent">En het commerciële bewijs vooraf : zes kmo\'s testten het prototype. Eén harde aankoopbelofte — de Léonidas-groep, op beslissing van haar algemeen directeur, die zich engageerde om bij lancering aan te kopen voor al haar winkels. Geen weigering bij de vijf anderen ; allemaal bereid om bij de eerste kopers te zijn.</strong> Dat was het signaal dat de sponsor nodig had om in productie te gaan. <strong class="accent">Gebouwd om beslist te worden, niet enkel gelezen.</strong>',
-      en: 'Every prior artefact (research, VPC, Lean Canvas, blueprints, prototypes) fed into a single final deliverable : an executive decision pack. Sequenced roadmap Q1 2018 to 2020. Risk register GDPR / technical feasibility / competitive defensibility. <strong class="accent">And the commercial proof up-front : six SMEs tested the prototype. One firm pre-purchase commitment — the Léonidas group, by decision of its general manager, committing to buy on launch for all of its stores. No refusals among the other five ; all of them ready to be first-buyers.</strong> That was the signal the sponsor needed to push for production. <strong class="accent">Built to be decided on, not just reviewed.</strong>'
-    },
-    'bnp.steps.s6.deliv': { fr: 'Livrable · roadmap · registre des risques · dossier de décision', nl: 'Deliverable · roadmap · risicoregister · beslissingspakket', en: 'Deliverable · roadmap · Risk register · Decision pack' },
-    'bnp.steps.s6.cap': { fr: 'Principe de sélection temporelle · cadre de comparaison étagé', nl: 'Principe tijdselectie · gefaseerd vergelijkingskader', en: 'Time selection principle · Staged comparison frame' },
-
-    'bnp.roadmap.h3': { fr: 'La roadmap, en six temps.', nl: 'De roadmap, in zes zetten.', en: 'The roadmap, in six moves.' },
-    'bnp.roadmap.lead': {
-      fr: 'Six mois. De l\'observation du commerçant à la signature d\'un vrai contrat. À chaque étape, une décision claire pour la banque.',
-      nl: 'Zes maanden. Van shadowing op de winkelvloer tot een handtekening op een echt contract. Bij elke stap één duidelijke beslissing voor de bank.',
-      en: 'Six months. From shadowing the merchant to a signature on a real contract. Each step, one clear decision for the bank.'
-    },
-    'bnp.roadmap.r1.phase': { fr: 'Observer', nl: 'Observeren', en: 'Discover' },
-    'bnp.roadmap.r1.when': { fr: 'Q3 2017', nl: 'Q3 2017', en: 'Q3 2017' },
-    'bnp.roadmap.r1.h': { fr: 'À l\'écoute du terrain', nl: 'Luisteren op de winkelvloer', en: 'Listening on the shop floor' },
-    'bnp.roadmap.r1.p': {
-      fr: 'Entretiens PME, observation des points de vente, benchmark des outils existants (Barclays, Proximus, BBVA).',
-      nl: 'Kmo-interviews, shadowing van pos-locaties, benchmark van bestaande tools (Barclays, Proximus, BBVA).',
-      en: 'SME interviews, shadowing on sales floors, benchmark of existing tools (Barclays, Proximus, BBVA).'
-    },
-    'bnp.roadmap.r2.phase': { fr: 'Cadrer', nl: 'Kaderen', en: 'Define' },
-    'bnp.roadmap.r2.when': { fr: '30 oct. 2017', nl: '30 okt. 2017', en: 'Oct 30, 2017' },
-    'bnp.roadmap.r2.h': { fr: 'Lean Canvas posé', nl: 'Lean Canvas vastgelegd', en: 'Lean Canvas signed off' },
-    'bnp.roadmap.r2.p': {
-      fr: 'Value Proposition Canvas cartographié. Triple Win verrouillé : banque, commerçant, porteur de carte.',
-      nl: 'Value Proposition Canvas in kaart gebracht. Triple Win vastgelegd: bank, merchant, kaarthouder.',
-      en: 'Value Proposition Canvas mapped. Triple Win locked: bank, retailer, cardholder.'
-    },
-    'bnp.roadmap.r3.phase': { fr: 'Recadrer', nl: 'Herkaderen', en: 'Reframe' },
-    'bnp.roadmap.r3.when': { fr: 'Q4 2017', nl: 'Q4 2017', en: 'Q4 2017' },
-    'bnp.roadmap.r3.h': { fr: 'Pas un dashboard. Un service.', nl: 'Geen dashboard. Een dienst.', en: 'Not a dashboard. A service.' },
-    'bnp.roadmap.r3.p': {
-      fr: 'Reports orientés objectifs au lieu de tableaux de bord. La surcharge cognitive devient l\'ennemi.',
-      nl: 'Doelgerichte rapporten in plaats van data-dumps. Cognitieve overload wordt de vijand.',
-      en: 'Goal-oriented reports replace data-dump screens. Cognitive overload becomes the enemy.'
-    },
-    'bnp.roadmap.r4.phase': { fr: 'Concevoir', nl: 'Ontwerpen', en: 'Concept' },
-    'bnp.roadmap.r4.when': { fr: '1ᵉʳ mars 2018', nl: '1 maart 2018', en: 'Mar 1, 2018' },
-    'bnp.roadmap.r4.h': { fr: 'Quatre goals, un canal', nl: 'Vier goals, één kanaal', en: 'Four goals, one channel' },
-    'bnp.roadmap.r4.p': {
-      fr: 'Performance · Expansion · Actions · Comparaison. Le tout dans Easy Banking Business.',
-      nl: 'Performance · Expansion · Actions · Comparison. Alles binnen Easy Banking Business.',
-      en: 'Performance · Expansion · Actions · Comparison. All inside Easy Banking Business.'
-    },
-    'bnp.roadmap.r5.phase': { fr: 'Piloter', nl: 'Piloteren', en: 'Pilot' },
-    'bnp.roadmap.r5.when': { fr: 'Q2 2018', nl: 'Q2 2018', en: 'Q2 2018' },
-    'bnp.roadmap.r5.h': { fr: 'Léonidas signe', nl: 'Léonidas tekent', en: 'Léonidas signs' },
-    'bnp.roadmap.r5.p': {
-      fr: 'Co-création avec un client réel. Pont ATOS résolu. Le concept se valide en boutique.',
-      nl: 'Co-creatie met een echte klant. ATOS-brug opgelost. Het concept wordt in de winkel gevalideerd.',
-      en: 'Co-creation with a real merchant. ATOS bridge resolved. Concept validated on the shop floor.'
-    },
-    'bnp.roadmap.r6.phase': { fr: 'Étendre', nl: 'Schalen', en: 'Scale' },
-    'bnp.roadmap.r6.when': { fr: '2020 · Étoile polaire', nl: '2020 · Noordster', en: '2020 · North star' },
-    'bnp.roadmap.r6.h': { fr: 'De 7 % à 20 % de part acquirer', nl: 'Van 7 % naar 20 % acquirer-aandeel', en: 'From 7% to 20% acquirer share' },
-    'bnp.roadmap.r6.p': {
-      fr: 'Enterprise Intelligence comme différenciateur, sur 1 500 retailers corporate.',
-      nl: 'Enterprise Intelligence als differentiator, op 1 500 corporate retailers.',
-      en: 'Enterprise Intelligence as the differentiator, across 1,500 corporate retailers.'
-    },
-
-    'bnp.result.eyebrow': { fr: 'Le résultat', nl: 'Het resultaat', en: 'The Result' },
-    'bnp.result.h2': {
-      fr: 'Du concept à <span class="accent">une vraie PME qui dit oui.</span>',
-      nl: 'Van concept tot <span class="accent">een echte kmo die ja zegt.</span>',
-      en: 'From concept to <span class="accent">a real PME saying yes.</span>'
-    },
-
-    'bnp.tw.h3': { fr: 'Le frame <span class="accent">Triple-Win.</span>', nl: 'Het <span class="accent">Triple-Win</span>-frame.', en: 'The <span class="accent">Triple-Win</span> frame.' },
-    'bnp.tw.p': {
-      fr: 'Chaque feature était notée contre ce triangle. Une seule branche cassée, elle ne sortait pas.',
-      nl: 'Elke feature werd getoetst aan deze driehoek. Eén tak gebroken, dan niet live.',
-      en: 'Every feature was scored against this triangle. One branch broken, it didn\'t ship.'
-    },
-    'bnp.tw.w1.who': { fr: 'La banque', nl: 'De bank', en: 'The Bank' },
-    'bnp.tw.w1.h': { fr: 'BNP Paribas Fortis', nl: 'BNP Paribas Fortis', en: 'BNP Paribas Fortis' },
-    'bnp.tw.w1.p': {
-      fr: 'Nouvelle ligne B2B. Au service du 7 % → 20 % acquiring.',
-      nl: 'Nieuwe B2B-lijn. Ten dienste van 7 % → 20 % acquiring.',
-      en: 'New B2B revenue line. Serving the 7% → 20% acquirer goal.'
-    },
-    'bnp.tw.w2.who': { fr: 'Le commerçant', nl: 'De merchant', en: 'The Retailer' },
-    'bnp.tw.w2.h': { fr: 'PME commerçante', nl: 'Kmo-merchant', en: 'SME Merchant' },
-    'bnp.tw.w2.p': {
-      fr: 'Des décisions, pas des dashboards. Benchmarké sur la concurrence réelle.',
-      nl: 'Beslissingen, geen dashboards. Gebenchmarkt op de echte concurrentie.',
-      en: 'Decisions, not dashboards. Benchmarked on real competition.'
-    },
-    'bnp.tw.w3.who': { fr: 'Le porteur de carte', nl: 'De kaarthouder', en: 'The Cardholder' },
-    'bnp.tw.w3.h': { fr: 'Consommateur final', nl: 'Eindconsument', en: 'End Consumer' },
-    'bnp.tw.w3.p': {
-      fr: 'Statistiques agrégées seulement. Zéro donnée personnelle exposée.',
-      nl: 'Enkel geaggregeerde statistieken. Nul persoonlijke data blootgesteld.',
-      en: 'Aggregated statistics only. Zero personal data exposed.'
-    },
-
     /* ============== CONCEPT 4.b — Triple-Win frame autonome (CVE 2026-05-03) ============== */
     'bnp.triplewin.eyebrow': {
       fr: 'L\'arbitre de chaque décision',
@@ -2136,10 +866,12 @@
       nl: 'Bank · Retailer · Cardholder. <span class="accent">De driehoek die valse pistes verwierp.</span>',
       en: 'Bank · Retailer · Cardholder. <span class="accent">The triangle that rejected false leads.</span>'
     },
+    /* CVE 2026-05-17 NN-brutal · cut "Pas de compromis... Le triangle tranchait" ·
+       (le claim final le redit, et le title le porte déjà). -18 mots. */
     'bnp.triplewin.lead': {
-      fr: 'Le service ne tenait que si les trois sommets gagnaient. Une idée qui faisait gagner deux et perdre un était écartée. Pas de compromis, pas de moyenne. Le triangle tranchait.',
-      nl: 'De dienst hield enkel stand als de drie hoekpunten wonnen. Een idee dat er twee deed winnen en één verliezen werd terzijde gelegd. Geen compromis, geen gemiddelde. De driehoek besliste.',
-      en: 'The service only held if all three vertices won. An idea that made two win and one lose was set aside. No compromise, no average. The triangle decided.'
+      fr: 'Le service ne tenait que si les trois sommets gagnaient. Deux sur trois · écarté.',
+      nl: 'De dienst hield enkel stand als de drie hoekpunten wonnen. Twee op drie · weggelegd.',
+      en: 'The service only held if all three vertices won. Two out of three · dropped.'
     },
     'bnp.triplewin.c1.who': { fr: 'The Bank · BNP Paribas Fortis', nl: 'The Bank · BNP Paribas Fortis', en: 'The Bank · BNP Paribas Fortis' },
     'bnp.triplewin.c1.h':   { fr: 'Une nouvelle ligne de revenu B2B.', nl: 'Een nieuwe B2B-omzetlijn.', en: 'A new B2B revenue line.' },
@@ -2168,76 +900,11 @@
       en: 'Any idea that did not validate the <span class="accent">three vertices</span> was set aside. Three criteria, not an average.'
     },
 
-    'bnp.leo.lead1': {
-      fr: 'Test grandeur nature sur <strong class="accent">Léonidas</strong>. Six mois de données BNP. Deux boutiques bruxelloises : Wolluwé SP (test) vs Ixelles (control).',
-      nl: 'Test op ware grootte op <strong class="accent">Léonidas</strong>. Zes maanden BNP-data. Twee Brusselse boetieken : Wolluwé SP (test) vs Elsene (control).',
-      en: 'Live test on <strong class="accent">Léonidas</strong>. Six months of BNP data. Two Brussels boutiques : Wolluwé SP (test) vs Ixelles (control).'
-    },
-    'bnp.leo.lead2': {
-      fr: 'Une seule variable : Wolluwé a appliqué les rapports. Ixelles non. <strong class="accent">Le manager général Léonidas a décidé pour tous les magasins</strong> : promesse d\'achat à la sortie.',
-      nl: 'Eén variabele : Wolluwé paste de rapporten toe. Elsene niet. <strong class="accent">De algemeen directeur van Léonidas besliste voor al haar winkels</strong> : aankoopbelofte bij lancering.',
-      en: 'One variable : Wolluwé applied the reports. Ixelles didn\'t. <strong class="accent">The Léonidas general manager decided for all stores</strong> : pre-purchase commitment on launch.'
-    },
-    'bnp.leo.s1': { fr: 'Hausse de revenu', nl: 'Omzetstijging', en: 'Revenue increase' },
-    'bnp.leo.s2': { fr: 'Six mois', nl: 'Zes maanden', en: 'Six months' },
-    'bnp.leo.s3': { fr: 'Panier moyen', nl: 'Gemiddeld winkelmandje', en: 'Avg basket size' },
-    'bnp.leo.s4': { fr: 'Clients fidélisés', nl: 'Behouden klanten', en: 'Maintained customers' },
     'bnp.leo.quote': {
       fr: 'Wolluwé SP : <strong>35 %</strong> de part sectorielle. Ixelles : <strong>10 %</strong>. Même marque, même dataset. Une variable : les rapports appliqués.',
       nl: 'Wolluwé SP : <strong>35 %</strong> sectoraal aandeel. Elsene : <strong>10 %</strong>. Zelfde merk, zelfde dataset. Eén variabele : de rapporten toegepast.',
       en: 'Wolluwé SP : <strong>35%</strong> sector share. Ixelles : <strong>10%</strong>. Same brand, same dataset. One variable : the reports applied.'
     },
-    'bnp.leo.src': {
-      fr: 'Concept Report · Goal 2 / Business Expansion · Jan → Juin 2017',
-      nl: 'Concept Report · Goal 2 / Business Expansion · Jan → Juni 2017',
-      en: 'Concept Report · Goal 2 / Business Expansion · Jan → June 2017'
-    },
-    'bnp.leo.cap1': {
-      fr: 'Comparaison Boutiques · Wolluwé SP vs Ixelles · Concept Report BNP · juin 2017 · p54',
-      nl: 'Winkelvergelijking · Woluwe SP vs Elsene · Concept Report BNP · juni 2017 · p54',
-      en: 'Shop Comparison · Wolluwé SP vs Ixelles · Concept Report BNP · June 2017 · p54'
-    },
-    'bnp.leo.cap2': {
-      fr: 'Comparaison périodique · +80 % revenu · +10 % panier · Concept Report BNP · juin 2017 · p57',
-      nl: 'Periodevergelijking · +80 % omzet · +10 % winkelmandje · Concept Report BNP · juni 2017 · p57',
-      en: 'Period Comparison · +80% revenue · +10% basket · Concept Report BNP · June 2017 · p57'
-    },
-
-    'bnp.beyond.h3': {
-      fr: 'Ce que le projet a livré<br>au-delà du pilote.',
-      nl: 'Wat het project leverde<br>buiten de pilot.',
-      en: 'What the project delivered<br>beyond the pilot.'
-    },
-    'bnp.beyond.cap': {
-      fr: 'Pourquoi nos données sont pertinentes · Intersection BNP unique',
-      nl: 'Waarom onze data relevant is · Unieke BNP-intersectie',
-      en: 'Why our data is relevant · Unique BNP value intersection'
-    },
-    'bnp.beyond.summary': {
-      fr: 'MVP signé Banking + IT + Legal + Marketing. GDPR et qualité données dérisqués. <strong class="accent">9 personas B2B</strong> qui ont survécu au projet.',
-      nl: 'MVP ondertekend door Banking + IT + Legal + Marketing. GDPR en datakwaliteit gederisicood. <strong class="accent">9 B2B-persona\'s</strong> die het project overleefden.',
-      en: 'MVP signed by Banking + IT + Legal + Marketing. GDPR and data quality de-risked. <strong class="accent">9 B2B personas</strong> that outlived the project.'
-    },
-
-    /* TIMELINE INTRO — graphique synthétique avant l'histoire (entre star-bridge et Chapter S) */
-    'bnp.timeline.eyebrow': {
-      fr: 'Six mois · en un coup d\'œil',
-      nl: 'Zes maanden · in één oogopslag',
-      en: 'Six months · at a glance'
-    },
-    'bnp.timeline.t1.when': { fr: 'Q3 2017', nl: 'Q3 2017', en: 'Q3 2017' },
-    'bnp.timeline.t1.what': { fr: 'Brief reçu', nl: 'Briefing ontvangen', en: 'Brief received' },
-    'bnp.timeline.t2.when': { fr: 'Oct 2017', nl: 'Okt 2017', en: 'Oct 2017' },
-    'bnp.timeline.t2.what': { fr: 'VPC + Lean Canvas', nl: 'VPC + Lean Canvas', en: 'VPC + Lean Canvas' },
-    'bnp.timeline.t3.when': { fr: 'Nov–Déc 2017', nl: 'Nov–Dec 2017', en: 'Nov–Dec 2017' },
-    'bnp.timeline.t3.what': { fr: '6 PME interviewées', nl: '6 kmo\'s geïnterviewd', en: '6 SMEs interviewed' },
-    'bnp.timeline.t4.when': { fr: 'Q1 2018', nl: 'Q1 2018', en: 'Q1 2018' },
-    'bnp.timeline.t4.what': { fr: 'Blueprint + prototypes Spotfire', nl: 'Blueprint + Spotfire-prototypes', en: 'Blueprint + Spotfire prototypes' },
-    'bnp.timeline.t5.when': { fr: 'Mars 2018', nl: 'Maart 2018', en: 'March 2018' },
-    'bnp.timeline.t5.what': { fr: '6 testées · 1 promesse · 0 refus', nl: '6 getest · 1 belofte · 0 weigeringen', en: '6 tested · 1 commitment · 0 refusals' },
-    'bnp.timeline.t6.when': { fr: 'Q2 2018', nl: 'Q2 2018', en: 'Q2 2018' },
-    'bnp.timeline.t6.what': { fr: 'Sponsor go production', nl: 'Sponsor go productie', en: 'Sponsor go production' },
-
     /* FRICTIONS & ALIGNMENT — Act R chute marketing, 4 fonctions → bébé de tout le monde → empathie utilisateur */
     'bnp.alignment.eyebrow': {
       fr: 'Frictions stakeholders · Alignement',
@@ -2249,10 +916,12 @@
       nl: 'Hoe vier afdelingen uiteindelijk <span class="accent">hetzelfde project verdedigden.</span>',
       en: 'How four departments ended up <span class="accent">defending the same project.</span>'
     },
+    /* CVE 2026-05-17 NN-brutal · cut "Le Double Diamant a calé..." (méta-méthode) +
+       cut "scope MVP arrêté..." (déjà dit ailleurs). Friction = mécanisme. -42 mots. */
     'bnp.alignment.lead': {
-      fr: 'Chaque fonction arrivait avec sa friction propre. Le Double Diamant a servi à caler chaque conversation au moment où elle pouvait être tenue · pas avant, pas après. Le scope MVP a été arrêté au commerçant solo · la donnée tout-boîte (campagnes marketing) a été placée hors MVP, à la demande du sponsor, pour sécuriser un premier signal commercial avant d\'élargir.',
-      nl: 'Elke functie kwam met haar eigen wrijving. De Double Diamond diende om elk gesprek te plaatsen op het moment dat het gevoerd kon worden · niet eerder, niet later. De MVP-scope werd vastgelegd op de solo-handelaar · de all-in-one data (marketingcampagnes) werd buiten MVP geplaatst, op vraag van de sponsor, om een eerste commercieel signaal veilig te stellen vóór de uitbreiding.',
-      en: 'Each function showed up with its own friction. The Double Diamond served to place each conversation at the moment it could be held · not earlier, not later. The MVP scope was locked on the solo merchant · the all-in-one data (marketing campaigns) was placed out of MVP, at the sponsor\'s request, to secure a first commercial signal before broadening.'
+      fr: 'Chaque fonction, sa friction propre. Chaque conversation, tenue à son moment.',
+      nl: 'Elke functie, zijn eigen wrijving. Elk gesprek, gevoerd op zijn moment.',
+      en: 'Each function, its own friction. Each conversation, held at its moment.'
     },
 
     'bnp.alignment.f1.fn': { fr: 'Corporate Banking', nl: 'Corporate Banking', en: 'Corporate Banking' },
@@ -2287,56 +956,19 @@
       en: 'Friction · appetite for data richness. The six user barriers arbitrated in week 9 · three coached reads per chart, the rest in phase 2.'
     },
 
-    'bnp.alignment.pivotClaim': { fr: '', nl: '', en: '' },
-    /* CVE 2026-05-08 · toolkit signal · workshop choice = ateliers de cocréation (Service Design / DT) */
+    /* CVE 2026-05-17 NN-brutal · cut "Sortie · scope MVP clair..." (déjà dans outcome).
+       Fait substantiel = Marketing + IT à la même table. -14 mots. */
     'bnp.alignment.toolkitSignal': {
-      fr: '<strong>Marketing et IT à la même table d\'atelier</strong>, distants dans l\'org. Pas de Value Proposition défendable sans les deux qui la portent. Sortie · <strong class="accent">scope MVP clair, sprints priorisés</strong>, plus de débat sur le périmètre.',
-      nl: '<strong>Marketing en IT aan dezelfde workshoptafel</strong>, ver van elkaar in de org. Geen verdedigbare Value Proposition zonder beide die ze dragen. Uitkomst · <strong class="accent">duidelijke MVP-scope, geprioriteerde sprints</strong>, geen debat meer over het bereik.',
-      en: '<strong>Marketing and IT at the same workshop table</strong>, distant in the org chart. No defensible Value Proposition unless both carry it. Outcome · <strong class="accent">clear MVP scope, prioritised sprints</strong>, no more debate on perimeter.'
+      fr: '<strong>Marketing et IT à la même table d\'atelier.</strong> Pas de Value Proposition défendable sans les deux qui la portent.',
+      nl: '<strong>Marketing en IT aan dezelfde workshoptafel.</strong> Geen verdedigbare Value Proposition zonder beide die ze dragen.',
+      en: '<strong>Marketing and IT at the same workshop table.</strong> No defensible Value Proposition unless both carry it.'
     },
+    /* CVE 2026-05-17 NN-brutal · cut "pas le commerçant abstrait, le commerçant observé
+       sur sa caisse, dont on connaissait la phrase exacte" (parenthèse meta). Fait seul. -28 mots. */
     'bnp.alignment.pivotOutcome': {
-      fr: 'Quand les quatre fonctions ont vu la même PME au centre · pas le commerçant abstrait, le commerçant observé sur sa caisse, dont on connaissait la phrase exacte · le projet est devenu <strong class="accent">le bébé de tout le monde</strong>. Vision alignée. Aucune incompréhension sur où mettre le focus.',
-      nl: 'Toen de vier functies dezelfde kmo in het centrum zagen · niet de abstracte handelaar, de handelaar die we aan zijn kassa hadden geobserveerd, van wie we de exacte zin kenden · werd het project <strong class="accent">de baby van iedereen</strong>. Uitgelijnde visie. Geen misverstand over waar de focus moest liggen.',
-      en: 'When the four functions saw the same SME at the centre · not the abstract merchant, the merchant we had observed at his till, whose exact phrase we knew · the project became <strong class="accent">everyone\'s baby</strong>. Aligned vision. No misunderstanding on where to focus.'
-    },
-
-    /* CLIMAX STAT BLOCK 6 / 1 / 0 — fin du double diamant, signal sponsor */
-    'bnp.climax.eyebrow': {
-      fr: 'Fin du double diamant · Phase prototype',
-      nl: 'Einde van de double diamond · Prototype-fase',
-      en: 'End of double diamond · Prototype phase'
-    },
-    'bnp.climax.tested': {
-      fr: 'PME testées avec le prototype',
-      nl: 'kmo\'s die het prototype testten',
-      en: 'SMEs tested the prototype'
-    },
-    'bnp.climax.commit': {
-      fr: 'Promesse d\'achat ferme · groupe Léonidas',
-      nl: 'Harde aankoopbelofte · Léonidas-groep',
-      en: 'Firm pre-purchase commitment · Léonidas group'
-    },
-    'bnp.climax.refused': {
-      fr: 'Refus chez les cinq autres',
-      nl: 'Weigeringen bij de vijf anderen',
-      en: 'Refusals among the five others'
-    },
-    'bnp.climax.caption': {
-      fr: 'Le manager général de Léonidas a décidé pour tous ses magasins : promesse d\'achat à la sortie. Les cinq autres : « c\'est bien · prêts à acheter avant la sortie pour être les premiers. » Le signal qui manquait au sponsor pour passer en production.',
-      nl: 'De algemeen directeur van Léonidas besliste voor al haar winkels : aankoopbelofte bij lancering. De vijf anderen : « het is goed · klaar om voor lancering te kopen om bij de eersten te zijn. » Het signaal dat de sponsor nodig had om in productie te gaan.',
-      en: 'The general manager of Léonidas decided for all of its stores : pre-purchase commitment on launch. The other five : "it\'s good · ready to buy before launch to be among the first." The signal the sponsor needed to push for production.'
-    },
-
-    /* Double Diamond — methodology label + caption */
-    'bnp.dd.eyebrow': {
-      fr: 'Méthodologie · Design Council',
-      nl: 'Methodologie · Design Council',
-      en: 'Methodology · Design Council'
-    },
-    'bnp.dd.cap': {
-      fr: 'Diverger pour comprendre, converger pour décider — deux fois. La structure exacte des six mois BNP.',
-      nl: 'Divergeren om te begrijpen, convergeren om te beslissen — twee keer. De exacte structuur van de zes maanden BNP.',
-      en: 'Diverge to understand, converge to decide — twice. The exact shape of the six BNP months.'
+      fr: 'Quand les quatre fonctions ont vu la même PME au centre, le projet est devenu <strong class="accent">le bébé de tout le monde</strong>.',
+      nl: 'Toen de vier functies dezelfde kmo in het centrum zagen, werd het project <strong class="accent">de baby van iedereen</strong>.',
+      en: 'When the four functions saw the same SME at the centre, the project became <strong class="accent">everyone\'s baby</strong>.'
     },
 
     /* ============== OUTCOME — synthèse fin de parcours + note d'intégrité ============== */
@@ -2350,10 +982,12 @@
       nl: 'Geen intentie. <span class="accent">Een schriftelijk commercieel signaal.</span>',
       en: 'Not an intention. <span class="accent">A written commercial signal.</span>'
     },
+    /* CVE 2026-05-17 NN-brutal · cut "Pas un usability test poli, pas un oui de principe..."
+       (négation explicative). Fait seul. -22 mots. */
     'bnp.outcome.lead': {
-      fr: 'Six mois de cadrage amont refermés sur une promesse d\'achat ferme, signée avant la première ligne de code. Pas un usability test poli, pas un oui de principe en interview. Une intention écrite, datée, sur le bureau du sponsor.',
-      nl: 'Zes maanden voorafgaand kaderwerk afgesloten met een vaste aankoopbelofte, getekend vóór de eerste regel code. Geen beleefde usability test, geen ja-in-principe in een interview. Een geschreven intentie, gedateerd, op het bureau van de sponsor.',
-      en: 'Six months of upstream framing closed on a firm purchase commitment, signed before the first line of code. Not a polite usability test, not a yes-in-principle from an interview. A written intent, dated, on the sponsor\'s desk.'
+      fr: 'Une promesse d\'achat ferme, signée avant la première ligne de code. Écrite, datée, sur le bureau du sponsor.',
+      nl: 'Een vaste aankoopbelofte, getekend vóór de eerste regel code. Schriftelijk, gedateerd, op het bureau van de sponsor.',
+      en: 'A firm purchase commitment, signed before the first line of code. Written, dated, on the sponsor\'s desk.'
     },
     'bnp.outcome.d1.h': { fr: 'Concept Report signé',     nl: 'Concept Report ondertekend', en: 'Concept Report signed' },
     'bnp.outcome.d1.p': {
@@ -2362,10 +996,13 @@
       en: 'Four internal functions (Banking · IT · Legal · Marketing) aligned on a locked MVP scope. March 2018.'
     },
     'bnp.outcome.d2.h': { fr: 'Léonidas pré-signe',       nl: 'Léonidas tekent vooraf',     en: 'Léonidas pre-signs' },
+    /* CVE 2026-05-17 · Léonidas wireframe naming · source Concept Report p54 ·
+       "Leonidas Ixelles" + "Leonidas Wolluwé SP" nommés dans la maquette de comparaison
+       shops avant la pré-signature. Le design a anticipé le client. */
     'bnp.outcome.d2.p': {
-      fr: 'Une PME sur six testées s\'est engagée par écrit. Promesse d\'achat ferme, conditionnée à la mise en production. Le seul cas du projet.',
-      nl: 'Eén kmo van zes geteste heeft zich schriftelijk geëngageerd. Vaste aankoopbelofte, voorwaardelijk aan de productie. Het enige geval van het project.',
-      en: 'One SME out of the six tested signed a written commitment. Firm purchase commitment, conditional on go-live. The only such case in the project.'
+      fr: 'Léonidas Ixelles et Léonidas Woluwe-SP figuraient déjà nommés dans les wireframes du Concept Report, comme exemple de comparaison entre shops. La pré-signature a transformé un nom dans une maquette en promesse d\'achat ferme, conditionnée à la mise en production.',
+      nl: 'Léonidas Ixelles en Léonidas Woluwe-SP stonden al met naam in de wireframes van het Concept Report, als voorbeeld van vergelijking tussen shops. De voorondertekening heeft een naam in een maquette omgezet in een vaste aankoopbelofte, voorwaardelijk aan de productie.',
+      en: 'Léonidas Ixelles and Léonidas Woluwe-SP were already named in the Concept Report wireframes, as the example used for shop-to-shop comparison. The pre-signature turned a name in a mockup into a firm purchase commitment, conditional on go-live.'
     },
     'bnp.outcome.d3.h': { fr: 'Backlog prêt à coder',     nl: 'Backlog klaar om te coderen', en: 'Backlog ready to ship' },
     'bnp.outcome.d3.p': {
@@ -2373,88 +1010,12 @@
       nl: 'User stories geprioriteerd P1/P2, MVP-scope vastgelegd, klaar om in agile sprints te gaan aan de IT-zijde.',
       en: 'User stories prioritised P1/P2, MVP scope locked, ready to enter agile sprints on the IT side.'
     },
+    /* CVE 2026-05-17 NN-brutal · cut "Ce que je peux affirmer s'arrête ici..." (méta-narration
+       moralisante). Fait sec · départ + silence. -28 mots. */
     'bnp.outcome.integrity': {
-      fr: '<strong>Note d\'intégrité.</strong> J\'ai quitté BNP après la livraison du Concept Report pour rejoindre Belfius. Je n\'ai plus eu de nouvelles du projet. Ce que je peux affirmer s\'arrête ici · à la sortie du parcours, le signal commercial était documenté noir sur blanc.',
-      nl: '<strong>Integriteitsnota.</strong> Ik ben na de oplevering van het Concept Report bij BNP vertrokken om bij Belfius te beginnen. Ik heb geen nieuws meer gehad van het project. Wat ik met zekerheid kan zeggen stopt hier · aan het einde van het traject was het commerciële signaal zwart op wit gedocumenteerd.',
-      en: '<strong>Integrity note.</strong> I left BNP after the Concept Report was delivered, to join Belfius. I had no further news of the project. What I can assert stops here · at the close of the journey, the commercial signal was documented in black and white.'
-    },
-
-    'bnp.lessons.eyebrow': { fr: 'Si je refaisais le projet', nl: 'Als ik het opnieuw zou doen', en: 'If I did it again' },
-    'bnp.lessons.h2': {
-      fr: 'Ce que je referais <span class="accent">différemment.</span>',
-      nl: 'Wat ik <span class="accent">anders</span> zou doen.',
-      en: 'What I\'d do <span class="accent">differently.</span>'
-    },
-    'bnp.lessons.lead': {
-      fr: 'Sept ans après. Trois choix à refaire autrement.',
-      nl: 'Zeven jaar later. Drie keuzes om anders te maken.',
-      en: 'Seven years on. Three calls to make differently.'
-    },
-    'bnp.lessons.l1.h': {
-      fr: 'Mettre un prix sur la table dès la semaine 8.',
-      nl: 'Een prijs op tafel leggen vanaf week 8.',
-      en: 'Put a price on the table by week 8.'
-    },
-    'bnp.lessons.l1.p': {
-      fr: 'La promesse Léonidas restait conditionnelle au build. Aujourd\'hui : bons de commande fermes dès le prototype, accompagnement jusqu\'au marché.',
-      nl: 'De Léonidas-belofte bleef afhankelijk van de build. Vandaag : harde bestelbonnen vanaf het prototype, begeleiding tot in de markt.',
-      en: 'The Léonidas commitment stayed conditional on the build. Today : firm purchase orders from the prototype, engagement through to market.'
-    },
-    'bnp.lessons.l2.h': {
-      fr: 'Élargir l\'échantillon avant de figer la promesse.',
-      nl: 'Het sample uitbreiden voor je de value prop vastlegt.',
-      en: 'Widen the sample before locking the value prop.'
-    },
-    'bnp.lessons.l2.p': {
-      fr: '6 testeurs, 1 secteur. Signal fort, mono-vertical. Aujourd\'hui : 12 testeurs sur 3 verticales avant de bétonner.',
-      nl: '6 testers, 1 sector. Sterk signaal, mono-verticaal. Vandaag : 12 testers in 3 verticalen voor ik betonneer.',
-      en: '6 testers, 1 vertical. Strong signal, mono-vertical. Today : 12 testers across 3 verticals before locking.'
-    },
-    'bnp.lessons.l3.h': {
-      fr: 'Auditer la qualité de la donnée avant d\'écrire le service.',
-      nl: 'De datakwaliteit auditen vóór je de service schrijft.',
-      en: 'Audit data quality before writing the service.'
-    },
-    'bnp.lessons.l3.p': {
-      fr: 'Découvert mi-parcours : toutes les catégories transactionnelles n\'étaient pas également propres. Aujourd\'hui : audit qualité avant la value prop.',
-      nl: 'Halverwege ontdekt : niet alle transactiecategorieën waren even proper. Vandaag : kwaliteitsaudit vóór de value prop.',
-      en: 'Found mid-project : not all transaction categories were equally clean. Today : quality audit before the value prop.'
-    },
-
-    'bnp.qa.eyebrow': {
-      fr: 'Pont vers Luminus · à vous',
-      nl: 'Brug naar Luminus · aan u',
-      en: 'Bridge to Luminus · over to you'
-    },
-    'bnp.qa.h2': {
-      fr: 'Et chez <span class="accent">vous ?</span>',
-      nl: 'En bij <span class="accent">jullie ?</span>',
-      en: 'And on <span class="accent">your side ?</span>'
-    },
-    'bnp.qa.lead': {
-      fr: 'Quatre fils que j\'aimerais tirer en live, sur les ponts entre BNP et vos enjeux.',
-      nl: 'Vier draden die ik graag live oppak, op de bruggen tussen BNP en jullie uitdagingen.',
-      en: 'Four threads I\'d love to pull on live, on the bridges between BNP and your challenges.'
-    },
-    'bnp.qa.q1': {
-      fr: 'On entend parler côté énergie de signal compteur intelligent, données de flexibilité géo, comportement de recharge VE. Où en est Luminus aujourd\'hui sur la productisation de ces signaux, et où le service design intervient-il dans la décision ?',
-      nl: 'We horen veel aan de energiekant over smart-meter-signaal, geo-flexibiliteitsdata, EV-laadgedrag. Waar staat Luminus vandaag in het productiseren van die signalen, en waar past service design in die beslissing?',
-      en: 'We hear about smart-meter signal on the energy side, geo-flexibility data, EV-charging behaviour. Where is Luminus today on productising those signals, and where does service design fit in the decision?'
-    },
-    'bnp.qa.q2': {
-      fr: 'À quoi ressemblerait, pour Luminus, ce premier client B2B qui signerait une prévente sur un prototype, avant qu\'on engage toute la plateforme ?',
-      nl: 'Hoe zou voor Luminus die eerste B2B-klant eruitzien die een pré-aankoop tekent op een prototype, vóór we het hele platform bouwen?',
-      en: 'What would, for Luminus, that first B2B customer look like? The one who signs a pre-purchase on a prototype, before you commit to build the whole platform?'
-    },
-    'bnp.qa.q3': {
-      fr: 'Quelle couche de stakeholders est la plus dure à aligner aujourd\'hui : business, IT, légal et régulateur, ou client final ? L\'énergie ajoute le régulateur au-dessus de la contrainte compliance de BNP. J\'aimerais comparer nos retours.',
-      nl: 'Welke stakeholder-laag is vandaag het moeilijkst af te stemmen : business, IT, legal en regulator, of eindklant? Energie voegt de regulator toe boven op BNP\'s compliance-beperking. Graag wissel ik ervaringen uit.',
-      en: 'Which stakeholder layer is hardest to align right now : business, IT, legal and regulator, or end-customer? Energy adds the regulator on top of BNP\'s compliance constraint. I\'d love to compare notes.'
-    },
-    'bnp.qa.q4': {
-      fr: 'Périmètre senior service designer : comment voulez-vous équilibrer le rôle entre <strong>cadrage en amont</strong> (où je suis le plus à l\'aise) et <strong>UX en delivery</strong> sur les journeys existants ? Quel split réaliste pour les 90 premiers jours ?',
-      nl: 'Senior-service-designer-scope : hoe wilt u de rol balanceren tussen <strong>upstream framing</strong> (waar ik me het sterkst voel) en <strong>delivery-time UX</strong> op bestaande journeys? Wat is een realistische verdeling voor de eerste 90 dagen?',
-      en: 'Senior service designer scope : how do you want the role to balance <strong>upstream framing</strong> (where I sit naturally) with <strong>delivery-time UX</strong> on existing journeys? What\'s a realistic split for the first 90 days?'
+      fr: '<strong>Note d\'intégrité.</strong> J\'ai quitté BNP après la livraison du Concept Report pour rejoindre Belfius. Je n\'ai plus eu de nouvelles du projet.',
+      nl: '<strong>Integriteitsnota.</strong> Ik ben na de oplevering van het Concept Report bij BNP vertrokken om bij Belfius te beginnen. Ik heb geen nieuws meer gehad van het project.',
+      en: '<strong>Integrity note.</strong> I left BNP after the Concept Report was delivered, to join Belfius. I had no further news of the project.'
     },
 
     /* ============== /luminus.html (skeleton — content next) ============== */
@@ -2576,8 +1137,6 @@
       nl: 'De toolkit van een Service Designer kies je niet vooraf · je kiest hem afhankelijk van de maturiteit van de organisatie en de aard van het probleem. Bij BNP Paribas Fortis, een mature bank met te activeren data · <strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>. Bij SPEOS, een industrieel postbedrijf in transformatie · <strong>Stakeholder Map + Customer Journey AS-IS</strong>. Bij Ewon by HMS Networks, industrial IoT te herenigen · <strong>Customer Journey workshops + Heuristic Evaluation Nielsen + framework Relevance/Simplicity/Consistency</strong>. Drie verschillende toolkits, hetzelfde vak.',
       en: 'A Service Designer\'s toolkit is not chosen in advance · it is chosen based on the maturity of the organisation and the nature of the problem. At BNP Paribas Fortis, a mature bank with data to activate · <strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>. At SPEOS, an industrial postal player in transformation · <strong>Stakeholder Map + AS-IS Customer Journey</strong>. At Ewon by HMS Networks, industrial IoT to unify · <strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Relevance/Simplicity/Consistency framework</strong>. Three different toolkits, the same craft.'
     },
-    'home.openCases': { fr: 'Voir les deux cases →', nl: 'Bekijk beide cases →', en: 'See both cases →' },
-
     /* CVE 2026-05-04 v9 · home cards refonte sobre · subtitle court 1 phrase
        claim · outcomeLine 1 phrase toolkit→outcome · cta lien sobre. */
     'case.bnp.subtitle': {
@@ -2652,28 +1211,12 @@
       en: 'A different maturity, a different toolkit. Stakeholder Map, Customer Journey AS-IS and 10 Pain Points for an early-stage transformation, all the way to 6 pre-validating pilot customers including Luminus.'
     },
 
-    /* ============== SPEOS CASE STUDY · clés critiques ============== */
-    'speos.title': {
-      fr: 'SPEOS One-Stop Platform · Étude de cas Service Design par Christophe van Engelen',
-      nl: 'SPEOS One-Stop Platform · Service Design Case Study door Christophe van Engelen',
-      en: 'SPEOS One-Stop Platform · Service Design Case Study by Christophe van Engelen'
-    },
-    'speos.metaDesc': {
-      fr: 'Étude de cas en service design : installer une plateforme one-stop chez SPEOS, filiale bpost. 12 entretiens experts, 10 pain points, 5 Value Props MVP, 6 clients pilotes pré-validateurs dont Luminus.',
-      nl: 'Service design case study: een one-stop platform installeren bij SPEOS, een bpost-dochter. 12 expertinterviews, 10 pain points, 5 MVP Value Props, 6 pilootklanten waaronder Luminus.',
-      en: 'Service design case study: installing a one-stop platform at SPEOS, a bpost subsidiary. 12 expert interviews, 10 pain points, 5 MVP Value Props, 6 pre-validating pilot customers including Luminus.'
-    },
-
     'speos.chapResearch.overline': { fr: 'Discover · Observe &amp; Understand', nl: 'Discover · Observe &amp; Understand', en: 'Discover · Observe &amp; Understand' },
     'speos.chapResearch.label': { fr: 'Phase 01 · Research', nl: 'Fase 01 · Research', en: 'Phase 01 · Research' },
-    'speos.chapResearch.title': { fr: 'Le terrain enseigne.', nl: 'Het terrein leert.', en: 'The field teaches.' },
-    'speos.chapResearch.lead': { fr: 'Comprendre avant de proposer.', nl: 'Begrijpen voor je voorstelt.', en: 'Understand before you propose.' },
     'speos.chapResearch.ddCap': { fr: 'Vous êtes ici · Diamant 1 · moitié gauche · 4 jalons', nl: 'Hier ben je · Diamant 1 · linkerhelft · 4 mijlpalen', en: 'You are here · Diamond 1 · left half · 4 milestones' },
 
     'speos.chapAnalyse.overline': { fr: 'Discover · Define', nl: 'Discover · Define', en: 'Discover · Define' },
     'speos.chapAnalyse.label': { fr: 'Phase 02 · Analyse', nl: 'Fase 02 · Analyse', en: 'Phase 02 · Analyse' },
-    'speos.chapAnalyse.title': { fr: 'Le bon problème.', nl: 'Het juiste probleem.', en: 'The right problem.' },
-    'speos.chapAnalyse.lead': { fr: 'Reformuler avant de construire.', nl: 'Herformuleren voor je bouwt.', en: 'Reframe before you build.' },
     'speos.chapAnalyse.ddCap': { fr: 'Vous êtes ici · Diamant 1 · moitié droite · 4 jalons', nl: 'Hier ben je · Diamant 1 · rechterhelft · 4 mijlpalen', en: 'You are here · Diamond 1 · right half · 4 milestones' },
 
     'speos.chapIdeation.overline': { fr: 'Develop · ateliers co-créatifs · explorer les pistes', nl: 'Develop · co-creatieve workshops · pistes verkennen', en: 'Develop · co-creative workshops · exploring directions' },
@@ -2688,12 +1231,6 @@
       nl: 'Bij SPEOS ben ik niet gestart met een Lean Canvas. Ik startte met een Stakeholder Map en een Customer Journey AS-IS. De context bepaalt de tool, niet andersom. Een early-stage organisatie in digitale transformatie moet zien voor ze verzint. Een Value Proposition kristalliseert na observatie, niet bij de start van een sessie.',
       en: 'At SPEOS I didn\'t start with a Lean Canvas. I started with a Stakeholder Map and a Customer Journey AS-IS. Context dictates the tool, not the other way round. An early-stage organisation in digital transformation needs to see before it imagines. A Value Proposition crystallises after observation, not at the start of a session.'
     },
-    'speos.method.claim': {
-      fr: 'Strategyzer, Customer Journey, Service Blueprint, Design Sprint sont des outils du <strong class="accent">même Design System</strong>. La maîtrise, ce n\'est pas d\'en choisir un. C\'est de savoir lequel, à quel moment, avec qui dans la salle.',
-      nl: 'Strategyzer, Customer Journey, Service Blueprint en Design Sprint zijn tools van <strong class="accent">hetzelfde Design System</strong>. De expertise zit niet in er één kiezen. Maar weten welke, op welk moment, met wie in de kamer.',
-      en: 'Strategyzer, Customer Journey, Service Blueprint and Design Sprint are tools from the <strong class="accent">same Design System</strong>. Mastery isn\'t about picking one. It\'s about knowing which one, at which moment, with whom in the room.'
-    },
-
     /* Triple-Win SPEOS */
     'speos.triplewin.eyebrow': { fr: 'L\'arbitre de chaque décision', nl: 'De scheidsrechter van elke beslissing', en: 'The arbiter of every decision' },
     'speos.triplewin.h2': {
@@ -2732,11 +1269,6 @@
     'speos.fin.line': { fr: 'La méthode ne vaut rien tant qu\'elle ne décide rien.', nl: 'De methode is niets waard zolang ze niets beslist.', en: 'A method is worth nothing until it decides something.' },
     'speos.fin.signature': { fr: 'Christophe van Engelen · Service Designer · Bruxelles', nl: 'Christophe van Engelen · Service Designer · Brussel', en: 'Christophe van Engelen · Service Designer · Brussels' },
     'speos.fin.contact.eyebrow': { fr: 'Une conversation ?', nl: 'Een gesprek?', en: 'A conversation?' },
-
-    'speos.climax.eyebrow': { fr: 'Fin du double diamant · Phase prototype', nl: 'Einde dubbele diamant · Prototype-fase', en: 'End of the double diamond · Prototype phase' },
-    'speos.climax.tested': { fr: 'clients testés · 3 segments', nl: 'klanten getest · 3 segmenten', en: 'customers tested · 3 segments' },
-    'speos.climax.commit': { fr: 'sur 6 valident la direction one-stop', nl: 'op 6 valideren de one-stop richting', en: 'out of 6 validate the one-stop direction' },
-    'speos.climax.refused': { fr: 'référence forte · Luminus', nl: 'sterke referentie · Luminus', en: 'strong reference · Luminus' },
 
     /* Alignment SPEOS */
     'speos.alignment.eyebrow': { fr: 'Stakeholder Map · Alignement', nl: 'Stakeholder Map · Afstemming', en: 'Stakeholder Map · Alignment' },
@@ -2819,10 +1351,11 @@
     'bnp.prototype.homeKpiBasket': { fr: 'Average basket size', nl: 'Gemiddelde winkelmand', en: 'Average basket size' },
     'bnp.prototype.homeKpiRev': { fr: 'Revenue', nl: 'Omzet', en: 'Revenue' },
     'bnp.prototype.homeKpiTrans': { fr: 'Transactions', nl: 'Transacties', en: 'Transactions' },
+    /* CVE 2026-05-17 v2 NNG · -25 mots · "ne montre pas X, elle Y" simplifié */
     'bnp.prototype.homeLead': {
-      fr: 'La page d\'accueil ne montre pas un rapport, elle donne un panorama : trois KPI de performance en haut, trois indicateurs d\'amélioration en bas. Le commerçant voit en cinq secondes ce qui marche et ce qui glisse. C\'est le tableau de bord d\'entrée — chaque rapport détaillé se déclenche depuis ici.',
-      nl: 'De homepagina toont geen rapport, ze geeft een panorama: drie performance-KPI bovenaan, drie verbeterindicatoren onderaan. De handelaar ziet binnen vijf seconden wat werkt en wat afglijdt. Dit is het instapdashboard, elk detailrapport opent vanaf hier.',
-      en: 'The home page does not show a report, it gives a panorama: three performance KPIs on top, three improvement indicators below. In five seconds the shopkeeper sees what works and what slips. This is the entry dashboard, every detailed report opens from here.'
+      fr: 'Pas un rapport · un panorama. Trois KPI de performance en haut, trois indicateurs d\'amélioration en bas. Le commerçant voit en cinq secondes ce qui marche, ce qui glisse. Chaque rapport détaillé s\'ouvre depuis ici.',
+      nl: 'Geen rapport · een overzicht. Drie performance-KPI bovenaan, drie verbeterindicatoren onderaan. De handelaar ziet in vijf seconden wat werkt en wat afglijdt. Elk detailrapport opent vanaf hier.',
+      en: 'Not a report · a panorama. Three performance KPIs on top, three improvement indicators below. In five seconds the merchant sees what works, what slips. Each detailed report opens from here.'
     },
     'bnp.prototype.homePerformanceLab': { fr: 'Performance', nl: 'Prestaties', en: 'Performance' },
     'bnp.prototype.homeSourceLab': { fr: 'Voir le wireframe original', nl: 'Originele wireframe bekijken', en: 'See the original wireframe' },
@@ -2882,18 +1415,11 @@
       en: 'Bank for Entrepreneurs. MVP target for whom BNP has the most useful data.'
     },
     'bnp.research.perso9Name': { fr: 'B.F.E. Smaller Corporate', nl: 'B.F.E. Smaller Corporate', en: 'B.F.E. Smaller Corporate' },
-    'bnp.research.persoSource': {
-      fr: 'Source · BNPPF B2B Personas (23p) + Concept Report personas overview · 2018',
-      nl: 'Bron · BNPPF B2B Personas (23p) + Concept Report personas overview · 2018',
-      en: 'Source · BNPPF B2B Personas (23p) + Concept Report personas overview · 2018'
-    },
     'bnp.snm.p2a': { fr: 'Rapport 1 · Performance', nl: 'Rapport 1 · Performance', en: 'Report 1 · Performance' },
     'bnp.snm.p2b': { fr: 'Rapport 2 · Business Expansion', nl: 'Rapport 2 · Business Expansion', en: 'Report 2 · Business Expansion' },
     'bnp.snm.p2c': { fr: 'Rapport 3 · Evaluating Actions (ROI)', nl: 'Rapport 3 · Evaluating Actions (ROI)', en: 'Report 3 · Evaluating Actions (ROI)' },
     'bnp.snm.p2d': { fr: 'Market Research · phase 2 roadmap', nl: 'Market Research · fase 2 roadmap', en: 'Market Research · phase 2 roadmap' },
     'bnp.snm.p2home': { fr: 'Home · panorama d\'accueil', nl: 'Home · onthaalpanorama', en: 'Home · welcome panorama' },
-    'home.contact': { fr: 'hello@christophevanengelen.com', nl: 'hello@christophevanengelen.com', en: 'hello@christophevanengelen.com' },
-
     /* CVE 2026-05-04 S3.x · trust signals & conversion (sprint S3) */
     /* CVE 2026-05-11 Pack v4-final · pill scarcity sans date (Brand Guardian).
        "Un mandat à la fois" signale la rareté du senior, pas une fenêtre Q3. */
@@ -2961,21 +1487,6 @@
       en: 'I reply within 24h on business days. First call 30 min, free, no commitment, to qualify your need. Available for upstream service design assignments, user research, Business / IT alignment workshops in Brussels and remote.'
     },
     'home.footerCopy': { fr: '© Christophe van Engelen, 2026.', nl: '© Christophe van Engelen, 2026.', en: '© Christophe van Engelen, 2026.' },
-    'home.practice.p1': {
-      fr: 'Mon métier consiste à mettre les bonnes personnes autour d\'une table, écouter, recadrer le problème, puis dessiner un service qui tient en production. La méthode change selon le contexte. Strategyzer, Customer Journey Mapping, Service Blueprint, Design Sprint sont des outils du même système, pas des écoles concurrentes.',
-      nl: 'Mijn werk: de juiste mensen rond een tafel zetten, luisteren, het probleem herformuleren, en dan een dienst tekenen die het in productie houdt. De methode hangt af van de context. Strategyzer, Customer Journey Mapping, Service Blueprint, Design Sprint zijn tools van hetzelfde systeem, geen concurrerende scholen.',
-      en: 'My job is to put the right people around a table, listen, reframe the problem, then draw a service that holds in production. The method changes with the context. Strategyzer, Customer Journey Mapping, Service Blueprint, Design Sprint are tools of the same system, not competing schools.'
-    },
-    'home.practice.p2': {
-      fr: 'Je rentre par le métier, j\'installe avec l\'IT. Cette double allégeance est ce que mes clients viennent chercher. La donnée et la voix utilisateur tiennent la même place dans la salle.',
-      nl: 'Ik kom binnen langs Business en installeer met IT. Die dubbele loyaliteit is wat mijn klanten komen zoeken. Data en de stem van de gebruiker hebben dezelfde plaats in de zaal.',
-      en: 'I come in through Business and install with IT. That double allegiance is what my clients come looking for. Data and the user voice hold the same place in the room.'
-    },
-    'home.practice.p3': {
-      fr: 'Vingt ans dans des contextes très différents : banque retail et entreprise (BNP Paribas Fortis, Belfius), SaaS industriel (HMS Networks, SPEOS), legal-tech (WeJustice), produit digital (Unfold, Homerun), services financiers (DCY Dubai). Le fil rouge : aligner business, utilisateurs et delivery autour de solutions faisables.',
-      nl: 'Twintig jaar in heel verschillende contexten: retail en corporate banking (BNP Paribas Fortis, Belfius), industriële SaaS (HMS Networks, SPEOS), legal-tech (WeJustice), digitaal product (Unfold, Homerun), financiële diensten (DCY Dubai). De rode draad: business, gebruikers en delivery aligneren rond haalbare oplossingen.',
-      en: 'Twenty years in very different contexts: retail and corporate banking (BNP Paribas Fortis, Belfius), industrial SaaS (HMS Networks, SPEOS), legal-tech (WeJustice), digital product (Unfold, Homerun), financial services (DCY Dubai). The thread: aligning business, users and delivery around feasible solutions.'
-    },
     'home.practiceEyebrow': { fr: 'Practice', nl: 'Practice', en: 'Practice' },
     'home.practiceH2': { fr: 'Comment je travaille.', nl: 'Hoe ik werk.', en: 'How I work.' },
     'home.seeWork': { fr: 'Selected work ↓', nl: 'Selected work ↓', en: 'Selected work ↓' },
@@ -3060,18 +1571,21 @@
       en: 'Startup contest · funding round won for <strong>Unfold</strong>.'
     },
 
-    /* CVE 2026-05-04 audit i18n · BNP Value Proposition content section (30 clés) */
+    /* CVE 2026-05-17 NN-brutal · titre · cut "qui décide" (claim final répété) · -5 mots */
     'bnp.vp.title': {
-      fr: 'Un dashboard, ce n\'est pas <span class="accent">pousser de la donnée.</span><br>C\'est raconter une histoire qui décide.',
-      nl: 'Een dashboard is geen <span class="accent">data pushen.</span><br>Het is een verhaal vertellen dat beslist.',
-      en: 'A dashboard is not about <span class="accent">pushing data.</span><br>It\'s about telling a story that decides.'
+      fr: 'Un dashboard, ce n\'est pas <span class="accent">pousser de la donnée.</span><br>C\'est raconter une histoire.',
+      nl: 'Een dashboard is geen <span class="accent">data pushen.</span><br>Het is een verhaal vertellen.',
+      en: 'A dashboard is not about <span class="accent">pushing data.</span><br>It\'s about telling a story.'
     },
+    /* CVE 2026-05-17 NN-brutal · cut warmup "Avant la VP..." (Iron Imperative banni) ·
+       cut "Plus de cognitive overload..." (re-statement). Mécanisme seul. -38 mots. */
     'bnp.vp.lede': {
-      fr: 'Avant la VP, chaque fonction parlait sa propre langue. Après, une phrase tient debout dans la salle : <strong>l\'utilisateur a un objectif, on lui livre un rapport orienté objectif, point</strong>. Plus de cognitive overload, plus de visualisation pour la visualisation. Cette section est l\'alignement qui rend la suite légitime.',
-      nl: 'Vóór de VP sprak elke functie haar eigen taal. Erna staat één zin overeind in de zaal: <strong>de gebruiker heeft een doel, we leveren een doelgericht rapport, punt</strong>. Geen cognitieve overbelasting meer, geen visualisatie omwille van de visualisatie. Deze sectie is de uitlijning die de rest legitiem maakt.',
-      en: 'Before the VP, every function spoke its own language. After, one sentence holds in the room: <strong>the user has an objective, we deliver an objective-oriented report, period</strong>. No more cognitive overload, no more visualisation for visualisation\'s sake. This section is the alignment that makes the rest legitimate.'
+      fr: '<strong>L\'utilisateur a un objectif, on lui livre un rapport orienté objectif.</strong> Point.',
+      nl: '<strong>De gebruiker heeft een doel, we leveren een doelgericht rapport.</strong> Punt.',
+      en: '<strong>The user has an objective, we deliver an objective-oriented report.</strong> Period.'
     },
-    'bnp.vp.posture.h': { fr: 'La posture', nl: 'De houding', en: 'The posture' },
+    /* CVE 2026-05-17 NN-brutal · cut "La posture" (générique, redondant avec title) */
+    'bnp.vp.posture.h': { fr: 'Trois principes', nl: 'Drie principes', en: 'Three principles' },
     'bnp.vp.posture.claim': {
       fr: 'Pas une plateforme exploratoire. <span class="accent">Une narration outillée.</span>',
       nl: 'Geen exploratief platform. <span class="accent">Een verhaal met tools.</span>',
@@ -3173,10 +1687,12 @@
       nl: 'Aggregatie <strong>aangepast aan de producten</strong> van de handelaar',
       en: 'Aggregation <strong>customised to the merchant\'s products</strong>'
     },
+    /* CVE 2026-05-17 NN-brutal · cut "Sortie ·" warmup + cut "On n'arbitre plus..." (méta-narration) ·
+       garde le fait substantiel · 4 fonctions, même phrase. -22 mots. */
     'bnp.vp.bridgeText': {
-      fr: 'À la sortie de cette VP, <strong>Banking, IT, Legal et Marketing</strong> partagent la même phrase, le même utilisateur, les mêmes 5 livrables. C\'est ce <span class="accent">socle commun</span> qui rend l\'idéation légitime, on n\'arbitre plus sur le « quoi », on arbitre sur le « comment ».',
-      nl: 'Aan het eind van deze VP delen <strong>Banking, IT, Legal en Marketing</strong> dezelfde zin, dezelfde gebruiker, dezelfde 5 deliverables. Het is dit <span class="accent">gemeenschappelijke fundament</span> dat de ideation legitiem maakt: we arbitreren niet meer over het "wat", maar over het "hoe".',
-      en: 'At the end of this VP, <strong>Banking, IT, Legal and Marketing</strong> share the same sentence, the same user, the same 5 deliverables. It\'s this <span class="accent">common ground</span> that makes ideation legitimate: we no longer arbitrate on the "what", we arbitrate on the "how".'
+      fr: '<strong>Banking, IT, Legal et Marketing</strong> partagent la même phrase, le même utilisateur, les mêmes 5 livrables. <span class="accent">Socle commun.</span>',
+      nl: '<strong>Banking, IT, Legal en Marketing</strong> delen dezelfde zin, dezelfde gebruiker, dezelfde 5 deliverables. <span class="accent">Gemeenschappelijke basis.</span>',
+      en: '<strong>Banking, IT, Legal and Marketing</strong> share the same sentence, the same user, the same 5 deliverables. <span class="accent">Common ground.</span>'
     },
     'bnp.vp.bridgeNext': {
       fr: 'Suite logique <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 4 Goals identifiés en atelier',
@@ -3255,32 +1771,12 @@
     },
     'speos.alignment.f1.fn': { fr: 'Project Owner · Business', nl: 'Project Owner · Business', en: 'Project Owner · Business' },
     'speos.alignment.f1.h': { fr: '« Quel relais de croissance ? »', nl: '« Welke groeihefboom? »', en: '"Which growth driver?"' },
-    'speos.alignment.f1.p': {
-      fr: 'Friction · la rente print s\'érode pendant que les concurrents agiles capturent les PME. La Value Proposition multicanale et le pricing tiered ont ouvert l\'expansion et capturé le segment Easy2Mail.',
-      nl: 'Wrijving · de print-rente brokkelt af terwijl wendbare concurrenten de kmo\'s veroveren. De multichannel Value Proposition en de tiered pricing openden de expansie en veroverden het Easy2Mail-segment.',
-      en: 'Friction · the print rent erodes while agile competitors capture SMEs. The multichannel Value Proposition and the tiered pricing opened expansion and captured the Easy2Mail segment.'
-    },
     'speos.alignment.f2.fn': { fr: 'Project Manager · IT', nl: 'Project Manager · IT', en: 'Project Manager · IT' },
     'speos.alignment.f2.h': { fr: '« On peut builder demain. »', nl: '« We kunnen morgen bouwen. »', en: '"We can build tomorrow."' },
-    'speos.alignment.f2.p': {
-      fr: 'Friction · envie de coder avant d\'aligner. Le Customer Journey AS-IS posé sur les 12 expert interviews internes a fermé le débat · cinq systèmes déconnectés à orchestrer et 10 Pain Points cartographiés avant la moindre ligne MVP.',
-      nl: 'Wrijving · zin om te coderen voor er afgestemd is. De AS-IS Customer Journey, gebouwd op de 12 interne expertinterviews, sloot het debat · vijf losgekoppelde systemen te orkestreren en 10 Pain Points in kaart gebracht vóór de eerste MVP-regel.',
-      en: 'Friction · urge to code before aligning. The AS-IS Customer Journey, built on the 12 internal expert interviews, closed the debate · five disconnected systems to orchestrate and 10 Pain Points mapped before any MVP line.'
-    },
     'speos.alignment.f3.fn': { fr: 'Project Lead · arbitrage', nl: 'Project Lead · arbitrage', en: 'Project Lead · arbitration' },
     'speos.alignment.f3.h': { fr: '« L\'obligation 2026 ne bouge pas. »', nl: '« De verplichting 2026 schuift niet op. »', en: '"The 2026 deadline does not move."' },
-    'speos.alignment.f3.p': {
-      fr: 'Friction · tenir le calendrier face à la volonté de tout faire. Le scope MVP a tranché à 5 Value Props, le reste placé en roadmap phase 2. Une décision écrite, pas un compromis flou.',
-      nl: 'Wrijving · de planning houden tegenover de wil om alles te doen. De MVP-scope sneed op 5 Value Props, de rest geplaatst in fase 2 van de roadmap. Een schriftelijke beslissing, geen vaag compromis.',
-      en: 'Friction · holding the timeline against the wish to do everything. The MVP scope cut at 5 Value Props, the rest placed in phase 2 of the roadmap. A written decision, not a fuzzy compromise.'
-    },
     'speos.alignment.f4.fn': { fr: 'UI & UX · validation', nl: 'UI & UX · validatie', en: 'UI & UX · validation' },
     'speos.alignment.f4.h': { fr: '« Et l\'expérience ? »', nl: '« En de ervaring? »', en: '"And the experience?"' },
-    'speos.alignment.f4.p': {
-      fr: 'Friction · l\'expérience reste impensée si on découpe par fonctionnalité. Le persona-first onboarding et le test des 6 clients pilotes ont sécurisé le signal sponsor · Luminus parmi eux.',
-      nl: 'Wrijving · de ervaring blijft ondoordacht als je per feature snijdt. De persona-first onboarding en de test bij 6 pilootklanten stelden het sponsorvertrouwen veilig · Luminus als één van hen.',
-      en: 'Friction · experience stays unthought when we slice by feature. The persona-first onboarding and the 6 pilot client test secured the sponsor signal · Luminus among them.'
-    },
     /* CVE 2026-05-11 SPEOS Alignment 2×2 AVANT/APRÈS · UX Researcher reco */
     'speos.alignment.f1.avant': {
       fr: 'La rente print s\'érode pendant que les pure players capturent les PME.',
@@ -3330,9 +1826,9 @@
       en: 'The same Value Proposition <span class="accent">in the mouth of Business and IT.</span>'
     },
     'speos.shared.lead': {
-      fr: 'Pendant huit mois, Business et IT décrivaient le même produit avec deux vocabulaires différents. La phrase suivante a fini par sortir des deux côtés, mot pour mot, à l\'oral et dans le Concept Report. C\'est ce moment-là qui a débloqué le sponsor.',
-      nl: 'Acht maanden lang beschreven Business en IT hetzelfde product met twee verschillende vocabulaires. De onderstaande zin kwam uiteindelijk woord voor woord uit beide kanten, mondeling en in het Concept Report. Dat moment heeft de sponsor gedeblokkeerd.',
-      en: 'For eight months, Business and IT described the same product with two different vocabularies. The following sentence ended up coming out of both sides, word for word, in conversation and in the Concept Report. That moment unlocked the sponsor.'
+      fr: 'Business et IT décrivaient le même produit avec deux vocabulaires. La phrase ci-dessous est sortie des deux côtés, mot pour mot.',
+      nl: 'Business en IT beschreven hetzelfde product met twee vocabulaires. De onderstaande zin kwam uit beide kanten, woord voor woord.',
+      en: 'Business and IT described the same product with two vocabularies. The sentence below came out of both sides, word for word.'
     },
     'speos.shared.bizTag': { fr: 'Business voulait', nl: 'Business wou', en: 'Business wanted' },
     'speos.shared.bizText': {
@@ -3353,9 +1849,9 @@
       en: '"A one-stop platform with <strong>persona-driven onboarding</strong>, opening SMEs without destabilising key accounts, on a <strong>single production layer</strong> with public API."'
     },
     'speos.shared.consequence': {
-      fr: 'C\'est cette phrase, exacte, qui a fini sur la couverture du Concept Report présenté au sponsor. Plus aucun arbitrage de scope n\'a remis en cause la direction.',
-      nl: 'Deze exacte zin belandde op de cover van het Concept Report aan de sponsor. Geen enkele scope-afweging heeft de richting nadien nog ter discussie gesteld.',
-      en: 'That exact sentence ended up on the cover of the Concept Report presented to the sponsor. No scope arbitration questioned the direction afterwards.'
+      fr: 'Cette phrase a fini sur la couverture du Concept Report. Plus aucun arbitrage n\'a remis en cause la direction.',
+      nl: 'Deze zin belandde op de cover van het Concept Report. Geen enkele afweging heeft de richting nadien nog ter discussie gesteld.',
+      en: 'That sentence ended up on the cover of the Concept Report. No arbitration questioned the direction afterwards.'
     },
     /* CVE 2026-05-11 HMS L'antagoniste · Trend Researcher reco · stakes business IXON */
     'hms.antagonist.eyebrow': { fr: 'L\'antagoniste', nl: 'De antagonist', en: 'The antagonist' },
@@ -3385,15 +1881,14 @@
       en: 'The gap to close was not business · Ewon machines run in production on every continent. The gap was <strong>UX, UI and user-centric culture</strong>. That diagnosis justified, at the end of the mandate, the <strong class="accent">€2M secured in steering committee</strong> to bring the concept into production.'
     },
     'speos.alignment.lead': {
-      fr: 'Au démarrage, chaque rôle défendait sa lecture. Le Project Owner côté Business voulait des fonctionnalités vendables. Le Project Manager côté IT voulait une stack maintenable. Le Project Lead arbitrait sur le calendrier. <strong>Deux formats d\'atelier ont fait le pont.</strong> Des petits ateliers ciblés avec les Project Managers et les figures clés côté IT pour caler les arbitrages techniques. Des grands ateliers Customer Journey avec toutes les parties prenantes autour de la table, pour mettre le client au centre, pas l\'org chart.',
-      nl: 'Bij de start verdedigde elke rol zijn lezing. De Project Owner aan Business-zijde wou verkoopbare features. De Project Manager aan IT-zijde wou een onderhoudbare stack. De Project Lead bewaakte de planning. <strong>Twee workshopformats sloegen de brug.</strong> Kleine gerichte workshops met de Project Managers en de sleutelfiguren aan IT-zijde om de technische afwegingen vast te zetten. Grote Customer Journey workshops met alle stakeholders rond de tafel, om de klant centraal te zetten, niet het organigram.',
-      en: 'At the start, each role defended its reading. The Project Owner on Business side wanted sellable features. The Project Manager on IT side wanted a maintainable stack. The Project Lead arbitrated on the schedule. <strong>Two workshop formats bridged the gap.</strong> Small targeted workshops with the Project Managers and key IT figures to lock technical trade-offs. Large Customer Journey workshops with all stakeholders around the table, to put the customer at the centre, not the org chart.'
+      fr: 'Project Owner Business voulait des fonctionnalités vendables, Project Manager IT une stack maintenable, Project Lead arbitrait sur le calendrier. Deux formats d\'atelier ont fait le pont · petits ateliers IT, grands ateliers Customer Journey.',
+      nl: 'Project Owner Business wou verkoopbare features, Project Manager IT een onderhoudbare stack, Project Lead bewaakte de planning. Twee workshopformats sloegen de brug · kleine IT-workshops, grote Customer Journey workshops.',
+      en: 'Business Project Owner wanted sellable features, IT Project Manager a maintainable stack, Project Lead arbitrated the schedule. Two workshop formats bridged it · small IT workshops, large Customer Journey workshops.'
     },
-    'speos.alignment.pivotClaim': { fr: '', nl: '', en: '' },
     'speos.alignment.pivotOutcome': {
-      fr: 'Quand les quatre rôles ont vu les mêmes 6 clients pilotes au centre · pas le client abstrait, le client qu\'on avait observé, dont on connaissait la phrase exacte · le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Vision alignée. Plus de débat sur le « si », un débat structuré sur le « quand » et le « comment ».',
-      nl: 'Toen de vier rollen dezelfde 6 pilootklanten in het midden zagen · niet de abstracte klant, de klant die we hadden geobserveerd, van wie we de exacte zin kenden · werd het project <strong class="accent">het platform van iedereen</strong>. Visie afgestemd. Geen debat meer over het « als », een gestructureerd debat over het « wanneer » en « hoe ».',
-      en: 'When the four roles saw the same 6 pilot clients at the centre · not the abstract customer, the customer we had observed, whose exact phrase we knew · the project became <strong class="accent">everyone\'s platform</strong>. Aligned vision. No more debate on "if", a structured debate on "when" and "how".'
+      fr: 'Quand les quatre rôles ont vu les mêmes six clients pilotes au centre, le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Plus de débat sur le « si », arbitrage sur le « quand ».',
+      nl: 'Toen de vier rollen dezelfde zes pilootklanten in het midden zagen, werd het project <strong class="accent">het platform van iedereen</strong>. Geen debat meer over het « als », arbitrage over het « wanneer ».',
+      en: 'When the four roles saw the same six pilot clients at the centre, the project became <strong class="accent">everyone\'s platform</strong>. No more debate on "if", arbitration on "when".'
     },
     'speos.alignment.sourceLab': { fr: 'Voir la Stakeholder Map originale', nl: 'Originele Stakeholder Map bekijken', en: 'See the original Stakeholder Map' },
     'speos.alignment.sourceRef': { fr: 'Speos Design Thinking Roadmap 2024 · p11 · Stakeholder Map', nl: 'Speos Design Thinking Roadmap 2024 · p11 · Stakeholder Map', en: 'Speos Design Thinking Roadmap 2024 · p11 · Stakeholder Map' },
@@ -3404,9 +1899,9 @@
     },
     'speos.analyse.cjmEyebrow': { fr: 'Phase 02 · Define · Customer Journey AS-IS', nl: 'Fase 02 · Define · AS-IS Customer Journey', en: 'Phase 02 · Define · AS-IS Customer Journey' },
     'speos.analyse.cjmLead': {
-      fr: 'Pas un canvas hypothétique. Une journey réelle, suivie pas à pas avec les 12 experts internes et les 6 clients interviewés. Sur cette ligne, dix pain points ont émergé. Chacun épinglé là où il bloque vraiment. C\'est cette journey, pas un Lean Canvas, qui est devenue le langage commun de tous les départements.',
-      nl: 'Geen hypothetisch canvas. Een echte journey, stap voor stap gevolgd met de 12 interne experts en de 6 geïnterviewde klanten. Op die lijn kwamen tien pain points naar boven, elk vastgepind waar hij echt blokkeert. Het is die journey, geen Lean Canvas, die de gedeelde taal van alle departementen werd.',
-      en: 'Not a hypothetical canvas. A real journey, walked step by step with the 12 internal experts and the 6 interviewed customers. On that line, ten pain points emerged, each pinned where it actually blocks. It is that journey, not a Lean Canvas, that became the shared language across all departments.'
+      fr: 'Journey end-to-end. Dix pain points épinglés là où ils bloquent. Langage commun des départements.',
+      nl: 'End-to-end journey. Tien pain points geprikt waar ze blokkeren. Gedeelde taal voor de departementen.',
+      en: 'End-to-end journey. Ten pain points pinned where they block. Shared language across departments.'
     },
     'speos.analyse.cjmSource': {
       fr: '<span class="source-link__lab">Voir le Concept Report SPEOS complet</span>\n      <span class="source-link__ref">Speos Concept Report 2024 · 76 pages · Customer Journey AS-IS + 10 pain points cartographiés</span>\n      <span class="source-link__arrow" aria-hidden="true">↗</span>',
@@ -3420,16 +1915,11 @@
     },
     'speos.analyse.vpCliffhanger': { fr: 'Tout converge sur <span class="accent">une seule VP.</span>', nl: 'Alles komt samen in <span class="accent">één VP.</span>', en: 'Everything converges on <span class="accent">a single VP.</span>' },
     'speos.analyse.vpConvergeIntro': {
-      fr: 'Douze experts internes. Six clients interviewés. Dix personas testés terrain. Trois segments marché. Dix pain points cartographiés. Quatre ateliers cocréation. Tout converge. Pas vers un canvas, vers une phrase.',
-      nl: 'Twaalf interne experts. Zes geïnterviewde klanten. Tien persona\'s getest op het terrein. Drie marktsegmenten. Tien pain points in kaart. Vier co-creatie workshops. Alles komt samen. Niet in een canvas, in één zin.',
-      en: 'Twelve internal experts. Six interviewed customers. Ten personas tested in the field. Three market segments. Ten pain points mapped. Four co-creation workshops. Everything converges. Not into a canvas, into a sentence.'
+      fr: 'Quatre inputs Discovery + Analyse convergent vers une phrase, pas vers un canvas.',
+      nl: 'Vier Discovery + Analyse inputs komen samen in één zin, niet in een canvas.',
+      en: 'Four Discovery + Analysis inputs converge into one sentence, not into a canvas.'
     },
     'speos.analyse.vpEyebrow': { fr: 'Au bout du diamant 1', nl: 'Aan het einde van diamant 1', en: 'At the end of diamond 1' },
-    'speos.analyse.vpSource': {
-      fr: 'Source · SPEOS Concept Report 2024-2025 · synthèse Discovery + Analyse + ateliers cocréation',
-      nl: 'Bron · SPEOS Concept Report 2024-2025 · synthese Discovery + Analyse + co-creatie workshops',
-      en: 'Source · SPEOS Concept Report 2024-2025 · synthesis of Discovery + Analysis + co-creation workshops'
-    },
     'speos.analyse.ws1Desc': {
       fr: 'Project Owners et Project Managers à la même table. Chaque équipe construit l\'empathy map d\'une persona client, puis confronte sa lecture. Effet immédiat : on découvre qu\'on parle du même utilisateur, pas du même contrat.',
       nl: 'Project Owners en Project Managers aan dezelfde tafel. Elk team bouwt de empathy map van een klantpersona en confronteert dan zijn lezing. Onmiddellijk effect: men ontdekt dat men over dezelfde gebruiker praat, niet over hetzelfde contract.',
@@ -3472,14 +1962,9 @@
     },
     'speos.analyse.wsEyebrow': { fr: 'Phase 02 · Define · ateliers cocréation', nl: 'Fase 02 · Define · co-creatie workshops', en: 'Phase 02 · Define · co-creation workshops' },
     'speos.analyse.wsLead': {
-      fr: 'Pour aligner Business, IT et Operations sur la voix du client, il a fallu sortir des slides. <strong>Deux régimes d\'atelier</strong> ont rythmé la phase Analyse. Des <strong>petits ateliers ciblés</strong> avec les Project Managers et les figures clés côté IT pour caler les arbitrages techniques, en groupe restreint, au tableau. Des <strong>grands ateliers Customer Journey</strong> avec toutes les parties prenantes autour de la table : Business, IT, Operations, Customer Service. Pour mettre le client au centre, pas l\'org chart. Quatre formats au total, chacun avec un livrable concret. C\'est par ces ateliers que la VP est apparue, pas par un canvas théorique.',
-      nl: 'Om Business, IT en Operations rond de stem van de klant af te stemmen, moesten we uit de slides. <strong>Twee workshopregimes</strong> ritmeerden de Analysefase. <strong>Kleine gerichte workshops</strong> met de Project Managers en sleutelfiguren aan IT-zijde, om in beperkte groep aan het bord de technische afwegingen vast te zetten. <strong>Grote Customer Journey workshops</strong> met alle stakeholders rond de tafel, Business, IT, Operations, Customer Service, om de klant centraal te zetten, niet het organigram. Vier formats in totaal, elk met een concreet resultaat. Het is via die workshops dat de VP verscheen, niet via een theoretisch canvas.',
-      en: 'To align Business, IT and Operations on the customer voice, we had to leave the slides. <strong>Two workshop regimes</strong> paced the Analysis phase. <strong>Small targeted workshops</strong> with the Project Managers and key IT figures, in a tight group at the board, to lock technical trade-offs. <strong>Large Customer Journey workshops</strong> with all stakeholders around the table, Business, IT, Operations, Customer Service, to put the customer at the centre, not the org chart. Four formats in total, each with a concrete deliverable. It is through these workshops that the VP appeared, not through a theoretical canvas.'
-    },
-    'speos.analyse.wsSource': {
-      fr: 'Approche Service Design · Customer Journey + Pain Points overlay · adaptée à une organisation early-Agile en change management. Pas de Lean Canvas. La parole et l\'atelier comme outils.',
-      nl: 'Service Design aanpak · Customer Journey + Pain Points overlay · aangepast aan een early-Agile organisatie in change management. Geen Lean Canvas. Het gesprek en de workshop als tools.',
-      en: 'Service Design approach · Customer Journey + Pain Points overlay · adapted to an early-Agile organisation in change management. No Lean Canvas. Conversation and the workshop as tools.'
+      fr: 'Deux régimes · petits ateliers ciblés avec les Project Managers IT pour les arbitrages techniques, grands ateliers Customer Journey avec Business, IT, Operations et Customer Service. Quatre formats, quatre livrables.',
+      nl: 'Twee regimes · kleine gerichte workshops met de Project Managers IT voor de technische afwegingen, grote Customer Journey workshops met Business, IT, Operations en Customer Service. Vier formats, vier livrables.',
+      en: 'Two regimes · small targeted workshops with IT Project Managers for technical trade-offs, large Customer Journey workshops with Business, IT, Operations and Customer Service. Four formats, four deliverables.'
     },
     'speos.analyse.wsTitle': {
       fr: 'Le langage commun. <span class="accent">En atelier, pas en canvas.</span>',
@@ -3498,14 +1983,14 @@
       en: 'SPEOS, a postal subsidiary of the bpost group. Large-scale document production for key accounts in banking, insurance, telecoms and energy. The UX function did not exist as a dedicated department.'
     },
     'speos.brief.lead2': {
-      fr: 'Le pattern UX en département dédié est déployé depuis quinze ans aux États-Unis et dix ans en Europe dans les grands comptes belges (banking, energy, telecoms). SPEOS a souhaité l\'adopter à son tour, en cohérence avec l\'obligation B2G PEPPOL (facturation B2G obligatoire) au 1<sup>er</sup> janvier 2026 et la pression des acteurs nés sur le numérique.',
-      nl: 'Het patroon van een toegewijde UX-afdeling wordt al vijftien jaar in de Verenigde Staten en tien jaar in Europa toegepast in de grote Belgische accounts (banking, energy, telecoms). SPEOS heeft het op zijn beurt willen overnemen, in lijn met het B2G PEPPOL-mandaat van 1 januari 2026 en de concurrentiedruk van digital-first spelers.',
-      en: 'The pattern of a dedicated UX department has been deployed for fifteen years in the United States and ten years in Europe across large Belgian accounts (banking, energy, telecoms). SPEOS chose to adopt it in turn, in line with the B2G PEPPOL mandate of 1 January 2026 and the competitive pressure of digital-first players.'
+      fr: 'Le pattern UX en département dédié, déployé dans les grands comptes belges, SPEOS a souhaité l\'adopter. Catalyseur · mandate B2G PEPPOL au 1<sup>er</sup> janvier 2026 et pression des acteurs nés sur le numérique.',
+      nl: 'Het patroon van een toegewijde UX-afdeling, uitgerold in de grote Belgische accounts, wou SPEOS overnemen. Aanleiding · B2G PEPPOL-mandaat van 1 januari 2026 en de druk van digital-first spelers.',
+      en: 'The dedicated UX department pattern, deployed in large Belgian accounts, SPEOS chose to adopt. Catalyst · B2G PEPPOL mandate of 1 January 2026 and competitive pressure of digital-first players.'
     },
     'speos.brief.lead3': {
-      fr: 'À mon arrivée, deux initiatives produit étaient en cours. Archetype, refonte de la plateforme E2M, conduite en interne sur stack Angular. Communication Platform, née de l\'appel d\'offres Ethias, conduite avec des ressources externes sur stack React. Les deux s\'appuyaient sur le même back-end stream platform. La direction cherchait une vision produit unifiée pour la suite. L\'arrivée d\'un consultant UX a été inscrite au comité de direction du 21 novembre 2024.',
-      nl: 'Bij mijn aankomst waren twee productinitiatieven aan de gang. Archetype, refactoring van het E2M-platform, intern uitgevoerd op een Angular-stack. Communication Platform, voortgekomen uit de Ethias-tender, met externe resources op een React-stack. Beide bouwden op dezelfde stream platform back-end. De directie zocht een verenigde productvisie voor de volgende fase. De onboarding van een UX-consultant werd ingeschreven in de exec review van 21 november 2024.',
-      en: 'At my arrival, two product initiatives were under way. Archetype, the refactor of the E2M platform, run internally on an Angular stack. Communication Platform, born from the Ethias tender opportunity, run with external resources on a React stack. Both relied on the same stream platform back-end. The direction sought a unified product vision for the next stage. The onboarding of a UX consultant was registered in the exec review of 21 November 2024.'
+      fr: 'Deux initiatives en cours · Archetype (refonte E2M, Angular) et Communication Platform (issue de l\'appel d\'offres Ethias, React). Même back-end stream platform. La direction cherchait une vision produit unifiée · arrivée d\'un consultant UX inscrite au comité du 21 novembre 2024.',
+      nl: 'Twee initiatieven liepen · Archetype (refactoring E2M, Angular) en Communication Platform (uit Ethias-tender, React). Zelfde stream platform back-end. De directie zocht een verenigde productvisie · de onboarding van een UX-consultant werd ingeschreven in de exec review van 21 november 2024.',
+      en: 'Two initiatives were under way · Archetype (E2M refactor, Angular) and Communication Platform (out of the Ethias tender, React). Same stream platform back-end. The direction sought a unified product vision · UX consultant onboarding registered in the 21 November 2024 exec review.'
     },
     'speos.brief.sizing': {
       fr: 'Mission freelance <span class="dot">·</span> 12 mois <span class="dot">·</span> décembre 2024 → décembre 2025 <span class="dot">·</span> CX / UX / Service Design Consultant',
@@ -3539,9 +2024,9 @@
       en: 'Business was defending revenue. IT was building Agile in parallel. The UX function did not yet exist as a dedicated department. Three worlds to bring into the same conversation.'
     },
     'speos.tldr.t3': {
-      fr: 'Douze mois. 12 entretiens experts internes (CEO, CTO, R&amp;D, Operations). 6 clients pilotes interviewés, dont Luminus sur la facture énergie. Customer Journey workshop physique, persona Johnny au mur.',
-      nl: 'Twaalf maanden. 12 interne expert-interviews (CEO, CTO, R&amp;D, Operations). 6 pilootklanten geïnterviewd, waaronder Luminus voor de energiefactuur. Customer Journey workshop fysiek, persona Johnny aan de muur.',
-      en: 'Twelve months. 12 internal expert interviews (CEO, CTO, R&amp;D, Operations). 6 pilot customers interviewed, including Luminus on energy billing. Physical Customer Journey workshop, persona Johnny on the wall.'
+      fr: '12 entretiens experts internes (CEO, CTO, R&amp;D, Operations). 6 clients pilotes interviewés, dont Luminus sur la facture énergie. Customer Journey workshop physique, persona Johnny au mur.',
+      nl: '12 interne expert-interviews (CEO, CTO, R&amp;D, Operations). 6 pilootklanten geïnterviewd, waaronder Luminus voor de energiefactuur. Customer Journey workshop fysiek, persona Johnny aan de muur.',
+      en: '12 internal expert interviews (CEO, CTO, R&amp;D, Operations). 6 pilot customers interviewed, including Luminus on energy billing. Physical Customer Journey workshop, persona Johnny on the wall.'
     },
     'speos.tldr.t4': {
       fr: 'Concept Report 76 pages signé sponsor. 6 sur 6 clients valident. Trois segments marché (Large Accounts, Easy2Mail PME, API Integrators) priorisés en sprints SAFe. Équipe design intégrée à l\'organigramme.',
@@ -3645,9 +2130,9 @@
     },
     'speos.fin.ps.label': { fr: 'Postscript · références', nl: 'Postscript · referenties', en: 'Postscript · references' },
     'speos.fin.ps.text': {
-      fr: 'Quand un sponsor me demande la preuve, je donne un numéro. Toute personne avec qui j\'ai travaillé sur SPEOS, du CEO au tech lead en passant par les chefs d\'équipe Production et Customer Service, peut témoigner. <span class="accent">C\'est ça, la matière du Service Design : des gens qui te rappellent.</span>',
-      nl: 'Wanneer een sponsor om bewijs vraagt, geef ik een nummer. Iedereen waarmee ik op SPEOS heb gewerkt, van CEO tot tech lead, via de teamleads Productie en Customer Service, kan getuigen. <span class="accent">Dat is de stof van Service Design: mensen die je terugbellen.</span>',
-      en: 'When a sponsor asks for proof, I give a number. Anyone I worked with on SPEOS, from CEO to tech lead, through the Production and Customer Service team leads, can vouch for it. <span class="accent">That is the matter of Service Design: people who call you back.</span>'
+      fr: 'Toute personne avec qui j\'ai travaillé sur SPEOS, du CEO au tech lead, peut témoigner. <span class="accent">C\'est ça, la matière du Service Design : des gens qui te rappellent.</span>',
+      nl: 'Iedereen waarmee ik op SPEOS heb gewerkt, van CEO tot tech lead, kan getuigen. <span class="accent">Dat is de stof van Service Design: mensen die je terugbellen.</span>',
+      en: 'Anyone I worked with on SPEOS, from CEO to tech lead, can vouch for it. <span class="accent">That is the matter of Service Design: people who call you back.</span>'
     },
     'speos.hero.eyebrow': { fr: 'Étude de cas Service Design · case 02', nl: 'Service Design case study · case 02', en: 'Service Design case study · case 02' },
     /* CVE 2026-05-04 · copy original conservé · le wrap est géré par font-size
@@ -3678,38 +2163,10 @@
       en: 'At every tension, moving from argument to artefact unblocked the conversation: the journey map on the wall, the wireframe in hand, the pain point quoted in a customer\'s own words. The sponsor does not buy a method. He buys a validation signal. The toolkit exists to produce the artefact that makes the invisible visible.'
     },
     'speos.lessons.lead': {
-      fr: 'Six mois après la livraison, trois choix méthodologiques tiennent encore. <strong>Rien à rejouer autrement</strong> · la mission a tenu son contrat, le design a trouvé sa place dans le workflow et dans l\'organigramme.',
-      nl: 'Zes maanden na de oplevering houden drie methodologische keuzes nog stand. <strong>Niets anders te spelen</strong> · de opdracht heeft haar contract gehouden, design heeft zijn plaats gevonden in de workflow en in het organigram.',
-      en: 'Six months after delivery, three methodological choices still hold. <strong>Nothing to replay differently</strong> · the mission held its contract, design found its place in the workflow and in the org chart.'
+      fr: 'Six mois après livraison, trois choix tiennent. <strong>Rien à rejouer autrement.</strong> Le design a trouvé sa place dans le workflow et dans l\'organigramme.',
+      nl: 'Zes maanden na de oplevering houden drie keuzes stand. <strong>Niets anders te spelen.</strong> Design heeft zijn plaats gevonden in de workflow en in het organigram.',
+      en: 'Six months after delivery, three choices still hold. <strong>Nothing to replay differently.</strong> Design found its place in the workflow and in the org chart.'
     },
-    'speos.method.c1.h': { fr: 'Stakeholder Map · pour rendre la friction visible', nl: 'Stakeholder Map · om de wrijving zichtbaar te maken', en: 'Stakeholder Map · to make friction visible' },
-    'speos.method.c1.p': {
-      fr: 'Avant de proposer une solution, on a cartographié qui décide, qui exécute, qui valide, qui influence. Le Project Owner Business et le Project Manager IT n\'avaient jamais été assis dans la même salle avec un objet partagé. La Stakeholder Map a été cet objet.',
-      nl: 'Voor we een oplossing voorstelden, brachten we in kaart wie beslist, wie uitvoert, wie valideert, wie beïnvloedt. De Project Owner Business en de Project Manager IT hadden nooit in dezelfde zaal gezeten met een gedeeld object. De Stakeholder Map was dat object.',
-      en: 'Before proposing a solution, we mapped who decides, who executes, who validates, who influences. The Business Project Owner and the IT Project Manager had never sat in the same room with a shared object. The Stakeholder Map was that object.'
-    },
-    'speos.method.c1.src': { fr: 'Source · Service Design / Stickdorn & Schneider', nl: 'Bron · Service Design / Stickdorn & Schneider', en: 'Source · Service Design / Stickdorn & Schneider' },
-    'speos.method.c2.h': { fr: 'Customer Journey AS-IS / TO-BE · pour montrer le bordel', nl: 'Customer Journey AS-IS / TO-BE · om de chaos te tonen', en: 'Customer Journey AS-IS / TO-BE · to show the mess' },
-    'speos.method.c2.p': {
-      fr: 'La journey actuelle est posée sans accuser. Cinq phases, dix pain points épinglés là où ils font mal. La même journey, version cible, montre où on veut aller. Pas un argument. Une preuve visuelle posée sur un mur, qui résiste aux opinions.',
-      nl: 'De huidige journey wordt neergezet zonder beschuldiging. Vijf fasen, tien pain points geprikt waar ze pijn doen. Dezelfde journey, doelversie, toont waar we naartoe willen. Geen argument. Een visueel bewijs op een muur, dat opinies weerstaat.',
-      en: 'The current journey is laid out without accusation. Five phases, ten pain points pinned where they hurt. The same journey, target version, shows where we want to go. Not an argument. A visual proof on a wall, that resists opinion.'
-    },
-    'speos.method.c2.src': { fr: 'Source · Service Design Network · NN/G', nl: 'Bron · Service Design Network · NN/G', en: 'Source · Service Design Network · NN/G' },
-    'speos.method.c3.h': { fr: 'Pains / Gains / Tasks · pour entrer dans la peau', nl: 'Pains / Gains / Tasks · om in de huid te kruipen', en: 'Pains / Gains / Tasks · to step into the skin' },
-    'speos.method.c3.p': {
-      fr: 'Strategyzer entre dans le toolkit, pas comme entrée principale, comme outil d\'extraction. Pour chaque persona, on liste les jobs à faire, les pains à éviter, les gains attendus. Le canvas ne porte pas le projet, il prépare le terrain de la VP.',
-      nl: 'Strategyzer komt in de toolkit, niet als hoofdingang, als extractietool. Voor elke persona lijsten we de jobs to do, de pains te vermijden, de verwachte gains. Het canvas draagt het project niet, het bereidt het terrein van de VP voor.',
-      en: 'Strategyzer enters the toolkit, not as the main door, as an extraction tool. For each persona, we list the jobs to be done, the pains to avoid, the gains expected. The canvas does not carry the project, it prepares the ground for the VP.'
-    },
-    'speos.method.c3.src': { fr: 'Source · Strategyzer · Value Proposition Canvas', nl: 'Bron · Strategyzer · Value Proposition Canvas', en: 'Source · Strategyzer · Value Proposition Canvas' },
-    'speos.method.c4.h': { fr: 'Empathy Map + How Might We · pour reformuler', nl: 'Empathy Map + How Might We · om te herformuleren', en: 'Empathy Map + How Might We · to reframe' },
-    'speos.method.c4.p': {
-      fr: 'En atelier, chaque pain point se transforme en opportunité par la formule « how might we ». Les équipes votent, priorisent, jettent. Pas de débat sur le canvas, focus sur l\'action. C\'est ce qui produit le top 12 HMW qui devient le backlog VP.',
-      nl: 'In workshop wordt elke pain point een opportuniteit via « how might we ». De teams stemmen, prioriteren, gooien weg. Geen debat over het canvas, focus op de actie. Dat levert de top 12 HMW die het VP-backlog wordt.',
-      en: 'In workshop, every pain point becomes an opportunity through "how might we". Teams vote, prioritise, discard. No debate on the canvas, focus on the action. That produces the top 12 HMW that becomes the VP backlog.'
-    },
-    'speos.method.c4.src': { fr: 'Source · IDEO · Stanford d.school', nl: 'Bron · IDEO · Stanford d.school', en: 'Source · IDEO · Stanford d.school' },
     'speos.outcome.d1.h': { fr: 'Plus besoin de la rente seule.', nl: 'De rente alleen volstaat niet meer.', en: 'No longer dependent on the rent alone.' },
     'speos.outcome.d1.p': {
       fr: 'Le multicanal print et digital sans couture libère SPEOS de la dépendance au volume papier. Le pricing par canal et par typologie devient maîtrisable, là où la baisse structurelle de 8 pour cent par an du courrier belge l\'aurait rendu insoutenable.',
@@ -3728,21 +2185,15 @@
       nl: 'Tegenover digital-first spelers die op KMO mikken en internationale spelers die op SaaS line-of-business mikken, blijft SPEOS pionier in B2G-compliance en schaalt via API-hefboom. Positie geconsolideerd, niet uitgehold.',
       en: 'Against digital-first players targeting SMEs and international players targeting line-of-business SaaS, SPEOS remains a B2G compliance pioneer and scales through API leverage. Position consolidated, not eroded.'
     },
-    /* CVE 2026-05-08 · toolkit signal · outcome = compréhension d'intégration design (Agile SAFe + 5 IT teams) */
-    'speos.outcome.toolkitSignal': {
-      fr: '<strong>L\'outcome n\'est pas un chiffre, c\'est une compréhension.</strong> Une équipe design (UX, UI, Service Design) intégrée à l\'<strong class="accent">Agile SAFe</strong> et à une roadmap long terme priorisée en MVPs successifs. <strong class="accent">Cinq équipes IT alignées sur la même Value Proposition</strong>, valeur user en tête. Et cette fois · pas Strategyzer. L\'outil se choisit selon la maturité digital transformation et user-centric.',
-      nl: '<strong>De outcome is geen cijfer, het is een begrip.</strong> Een design team (UX, UI, Service Design) geïntegreerd in <strong class="accent">Agile SAFe</strong> en in een lange-termijn roadmap geprioriteerd in opeenvolgende MVPs. <strong class="accent">Vijf IT-teams uitgelijnd op dezelfde Value Proposition</strong>, gebruikerswaarde voor ogen. En deze keer · geen Strategyzer. Het instrument kiest zich naar de maturiteit van digitale transformatie en user-centric.',
-      en: '<strong>The outcome is not a number, it is an understanding.</strong> A design team (UX, UI, Service Design) integrated into <strong class="accent">Agile SAFe</strong> and into a long-term roadmap prioritised across successive MVPs. <strong class="accent">Five IT teams aligned on the same Value Proposition</strong>, user value at the front. And this time · not Strategyzer. The tool is chosen by the maturity of digital transformation and user-centric culture.'
-    },
     'speos.outcome.integrity': {
-      fr: '<strong>Note d\'intégrité.</strong> Le Concept Report a été remis et validé. Le rollout est passé en sprints Agile côté équipes SPEOS. Ce que je peux affirmer s\'arrête à la sortie de la phase Design Thinking · un livrable de 76 pages, six clients pilotes alignés, un triangle Customer · Business · Tech au vert. Le ROI exact post-rollout dépend des choix produit et go-to-market faits par les équipes internes après mon départ. Je ne peux pas le revendiquer.',
-      nl: '<strong>Integriteitsnota.</strong> Het Concept Report werd opgeleverd en gevalideerd. De rollout ging in Agile sprints langs de SPEOS-teams. Wat ik kan beweren stopt aan de uitgang van de Design Thinking-fase · een livrable van 76 pagina\'s, zes pilootklanten op één lijn, een driehoek Customer · Business · Tech in het groen. De exacte ROI na rollout hangt af van de product- en go-to-market-keuzes die de interne teams na mijn vertrek hebben gemaakt. Ik kan die niet opeisen.',
-      en: '<strong>Integrity note.</strong> The Concept Report was delivered and validated. The rollout moved into Agile sprints on the SPEOS teams. What I can claim stops at the exit of the Design Thinking phase · a 76-page deliverable, six aligned pilot clients, a Customer · Business · Tech triangle in the green. The exact ROI post-rollout depends on product and go-to-market choices made by the internal teams after my departure. I cannot claim it.'
+      fr: '<strong>Note d\'intégrité.</strong> Concept Report remis et validé. Rollout passé en sprints Agile côté SPEOS. Ce que j\'affirme s\'arrête à la sortie : livrable 76 pages, six clients alignés, triangle Customer · Business · Tech au vert.',
+      nl: '<strong>Integriteitsnota.</strong> Concept Report opgeleverd en gevalideerd. Rollout overgegaan in Agile sprints aan SPEOS-zijde. Wat ik beweer stopt aan de uitgang: livrable 76 pagina\'s, zes klanten op één lijn, driehoek Customer · Business · Tech in het groen.',
+      en: '<strong>Integrity note.</strong> Concept Report delivered and validated. Rollout moved into Agile sprints on the SPEOS side. What I claim stops at the exit: 76-page deliverable, six aligned clients, Customer · Business · Tech triangle in the green.'
     },
     'speos.outcome.lead': {
-      fr: 'Six mois de Design Thinking refermés sur un Concept Report de 76 pages signé par le sponsor. Six clients pilotes valident les trois segments marché. Une roadmap de Value Props priorisée, prête à entrer en sprints. Pas un usability test poli, pas un oui de principe. Une décision de production écrite.',
-      nl: 'Zes maanden Design Thinking afgesloten met een Concept Report van 76 pagina\'s getekend door de sponsor. Zes pilootklanten valideren de drie marktsegmenten. Een geprioriteerde Value Props roadmap, klaar voor sprints. Geen beleefde usability test, geen principieel ja. Een schriftelijke productiebeslissing.',
-      en: 'Six months of Design Thinking closed on a 76-page Concept Report signed by the sponsor. Six pilot clients validate the three market segments. A prioritised Value Props roadmap, ready for sprints. Not a polite usability test, not a yes in principle. A written production decision.'
+      fr: 'Concept Report signé sponsor. Six clients pilotes valident. Roadmap Value Props priorisée, prête en sprints SAFe. Décision de production écrite.',
+      nl: 'Concept Report getekend door sponsor. Zes pilootklanten valideren. Geprioriteerde Value Props roadmap, klaar in SAFe-sprints. Schriftelijke productiebeslissing.',
+      en: 'Concept Report signed by sponsor. Six pilot clients validate. Prioritised Value Props roadmap, ready in SAFe sprints. Written production decision.'
     },
     'speos.pp.p1.constraint': {
       fr: 'Devenue règle de design : automatiser l\'onboarding. Self-service guidé par objectif et besoins.',
@@ -3751,11 +2202,6 @@
     },
     'speos.pp.p1.eyebrow': { fr: 'Pain Point 01', nl: 'Pain Point 01', en: 'Pain Point 01' },
     'speos.pp.p1.h': { fr: '« L\'onboarding nous prend des mois. »', nl: '« Onze onboarding duurt maanden. »', en: '"Onboarding takes us months."' },
-    'speos.pp.p1.p': {
-      fr: 'Intégration de nouveaux clients qui s\'étire. Besoins urgents (campagnes, SLA) souvent ratés. Processus manuels qui ralentissent chaque déploiement.',
-      nl: 'Integratie van nieuwe klanten die uitloopt. Dringende noden (campagnes, SLA) worden vaak gemist. Manuele processen vertragen elke uitrol.',
-      en: 'Integration of new clients that drags on. Urgent needs (campaigns, SLAs) often missed. Manual processes that slow every rollout.'
-    },
     'speos.pp.p1.theme': { fr: 'Time-to-Market', nl: 'Time-to-Market', en: 'Time-to-Market' },
     'speos.pp.p10.constraint': {
       fr: 'Devenue argument MVP : capter les PME via Easy2Mail et le canal Integrators via API. Plus besoin de la poste comme béquille.',
@@ -3764,11 +2210,6 @@
     },
     'speos.pp.p10.eyebrow': { fr: 'Pain Point 10', nl: 'Pain Point 10', en: 'Pain Point 10' },
     'speos.pp.p10.h': { fr: '« On reste collé à nos comptes historiques. »', nl: '« We blijven kleven aan onze historische rekeningen. »', en: '"We stay glued to our historical accounts."' },
-    'speos.pp.p10.p': {
-      fr: 'Difficulté à ouvrir le marché PME et le canal Integrators. Force commerciale calibrée pour le grand-compte. Outillage non adapté aux petits volumes.',
-      nl: 'Moeite om de KMO-markt en het Integrators-kanaal te openen. Salesforce gekalibreerd op key accounts. Tooling niet aangepast aan kleine volumes.',
-      en: 'Difficulty opening the SME market and the Integrators channel. Sales force calibrated for the key account. Tooling unfit for small volumes.'
-    },
     'speos.pp.p10.theme': { fr: 'Expansion', nl: 'Expansion', en: 'Expansion' },
     'speos.pp.p2.constraint': {
       fr: 'Devenue règle : standardiser la base, customiser le dernier kilomètre par persona.',
@@ -3777,11 +2218,6 @@
     },
     'speos.pp.p2.eyebrow': { fr: 'Pain Point 02', nl: 'Pain Point 02', en: 'Pain Point 02' },
     'speos.pp.p2.h': { fr: '« Tout passe par des workflows manuels. »', nl: '« Alles loopt via manuele workflows. »', en: '"Everything goes through manual workflows."' },
-    'speos.pp.p2.p': {
-      fr: 'Erreurs en chaîne sur la facturation et le file handling. Customisations clients qui empêchent la scalabilité. APIs absentes ou outdated.',
-      nl: 'Kettingfouten in facturatie en file handling. Klantcustomisaties die schaalbaarheid blokkeren. API\'s afwezig of verouderd.',
-      en: 'Chained errors on billing and file handling. Client customisations that block scalability. APIs missing or outdated.'
-    },
     'speos.pp.p2.theme': { fr: 'Automation', nl: 'Automation', en: 'Automation' },
     'speos.pp.p3.constraint': {
       fr: 'Devenue règle : portail client one-stop avec suivi temps réel + actions self-service par persona.',
@@ -3790,11 +2226,6 @@
     },
     'speos.pp.p3.eyebrow': { fr: 'Pain Point 03', nl: 'Pain Point 03', en: 'Pain Point 03' },
     'speos.pp.p3.h': { fr: '« Le client doit nous appeler pour la moindre modif. »', nl: '« De klant moet ons bellen voor de minste wijziging. »', en: '"The client has to call us for the smallest change."' },
-    'speos.pp.p3.p': {
-      fr: 'Pas de self-service (configuration campagne, tracking temps réel). Interfaces non-intuitives pour les non-techs. Pas de portail transparent pour suivre l\'avancement.',
-      nl: 'Geen self-service (campagneconfiguratie, real-time tracking). Niet-intuïtieve interfaces voor niet-techs. Geen transparant portaal om de voortgang te volgen.',
-      en: 'No self-service (campaign configuration, real-time tracking). Non-intuitive interfaces for non-techs. No transparent portal to follow progress.'
-    },
     'speos.pp.p3.theme': { fr: 'Autonomy', nl: 'Autonomy', en: 'Autonomy' },
     'speos.pp.p4.constraint': {
       fr: 'Devenue règle : plateforme host commune, customisations par typologie au-dessus.',
@@ -3803,11 +2234,6 @@
     },
     'speos.pp.p4.eyebrow': { fr: 'Pain Point 04', nl: 'Pain Point 04', en: 'Pain Point 04' },
     'speos.pp.p4.h': { fr: '« Nos outils ne se parlent pas. »', nl: '« Onze tools praten niet met elkaar. »', en: '"Our tools do not talk to each other."' },
-    'speos.pp.p4.p': {
-      fr: 'Plateformes différentes par segment (Build-to-Mail, Easy2Mail, Integrators). Outils internes hétérogènes (TopDesk, Navision, Salesforce…). Connaissance tacite, peu documentée.',
-      nl: 'Verschillende platformen per segment (Build-to-Mail, Easy2Mail, Integrators). Heterogene interne tools (TopDesk, Navision, Salesforce…). Stilzwijgende kennis, weinig gedocumenteerd.',
-      en: 'Different platforms per segment (Build-to-Mail, Easy2Mail, Integrators). Heterogeneous internal tools (TopDesk, Navision, Salesforce…). Tacit knowledge, little documented.'
-    },
     'speos.pp.p4.theme': { fr: 'Fragmentation', nl: 'Fragmentation', en: 'Fragmentation' },
     'speos.pp.p5.constraint': {
       fr: 'Devenue règle : monitoring proactif, alertes côté client + côté SPEOS, communication push avant que le client ne demande.',
@@ -3816,11 +2242,6 @@
     },
     'speos.pp.p5.eyebrow': { fr: 'Pain Point 05', nl: 'Pain Point 05', en: 'Pain Point 05' },
     'speos.pp.p5.h': { fr: '« On apprend les problèmes par le client. »', nl: '« We horen problemen van de klant. »', en: '"We learn about problems from the client."' },
-    'speos.pp.p5.p': {
-      fr: 'Posture réactive sur les incidents. Pas d\'alerting préventif. Le client appelle, pas l\'inverse.',
-      nl: 'Reactieve houding bij incidenten. Geen preventieve alerting. De klant belt, niet omgekeerd.',
-      en: 'Reactive posture on incidents. No preventive alerting. The client calls, not the other way round.'
-    },
     'speos.pp.p5.theme': { fr: 'Proactivity', nl: 'Proactivity', en: 'Proactivity' },
     'speos.pp.p6.constraint': {
       fr: 'Devenue règle : combler les gaps via le portail one-stop + ouverture API pour les Integrators.',
@@ -3829,11 +2250,6 @@
     },
     'speos.pp.p6.eyebrow': { fr: 'Pain Point 06', nl: 'Pain Point 06', en: 'Pain Point 06' },
     'speos.pp.p6.h': { fr: '« Notre offre digitale n\'égale pas la concurrence. »', nl: '« Ons digitaal aanbod evenaart de concurrentie niet. »', en: '"Our digital offer does not match the competition."' },
-    'speos.pp.p6.p': {
-      fr: 'Concurrents 100 % digitaux (Easypost, Doccle…) qui mordent sur le marché historique. Manque de produits self-service et d\'API ouvertes.',
-      nl: '100% digitale concurrenten (Easypost, Doccle…) die de historische markt aanbijten. Tekort aan self-service producten en open API\'s.',
-      en: '100% digital competitors (Easypost, Doccle…) biting into the historical market. Lack of self-service products and open APIs.'
-    },
     'speos.pp.p6.theme': { fr: 'Digital gaps', nl: 'Digital gaps', en: 'Digital gaps' },
     'speos.pp.p7.constraint': {
       fr: 'Devenue règle : modulariser l\'offre. Chaque feature configurable indépendamment, sans rebuilds.',
@@ -3842,11 +2258,6 @@
     },
     'speos.pp.p7.eyebrow': { fr: 'Pain Point 07', nl: 'Pain Point 07', en: 'Pain Point 07' },
     'speos.pp.p7.h': { fr: '« Une fois en prod, plus personne ne touche. »', nl: '« Eens in prod raakt niemand het nog aan. »', en: '"Once in production, no one touches it any more."' },
-    'speos.pp.p7.p': {
-      fr: 'Setup client figé après onboarding. Évolutions vécues comme des projets lourds. Aucune logique d\'itération continue.',
-      nl: 'Klant-setup vastgepind na onboarding. Evoluties beleefd als zware projecten. Geen logica van continue iteratie.',
-      en: 'Client setup frozen after onboarding. Evolutions felt like heavy projects. No logic of continuous iteration.'
-    },
     'speos.pp.p7.theme': { fr: 'Rigidity', nl: 'Rigidity', en: 'Rigidity' },
     'speos.pp.p8.constraint': {
       fr: 'Devenue argument central : la VP doit défendre le leadership ET ouvrir un nouveau segment marché.',
@@ -3855,11 +2266,6 @@
     },
     'speos.pp.p8.eyebrow': { fr: 'Pain Point 08', nl: 'Pain Point 08', en: 'Pain Point 08' },
     'speos.pp.p8.h': { fr: '« Le marché bouge plus vite que notre offre. »', nl: '« De markt beweegt sneller dan ons aanbod. »', en: '"The market moves faster than our offer."' },
-    'speos.pp.p8.p': {
-      fr: 'Pression sur la position de leader. Plateformes digitales qui captent le segment PME. Risque de cantonnement aux grands comptes historiques.',
-      nl: 'Druk op de leiderspositie. Digitale platformen die het KMO-segment veroveren. Risico om vast te zitten in de historische key accounts.',
-      en: 'Pressure on the leadership position. Digital platforms capturing the SME segment. Risk of being confined to historical key accounts.'
-    },
     'speos.pp.p8.theme': { fr: 'Competition', nl: 'Competition', en: 'Competition' },
     'speos.pp.p9.constraint': {
       fr: 'Devenue règle : facturation lisible côté portail, breakdown par poste + dashboard suivi consommation.',
@@ -3868,11 +2274,6 @@
     },
     'speos.pp.p9.eyebrow': { fr: 'Pain Point 09', nl: 'Pain Point 09', en: 'Pain Point 09' },
     'speos.pp.p9.h': { fr: '« La facturation est opaque pour nos clients. »', nl: '« De facturatie is ondoorzichtig voor onze klanten. »', en: '"Billing is opaque for our clients."' },
-    'speos.pp.p9.p': {
-      fr: 'Modèles tarifaires complexes. Factures lourdes à décortiquer. Friction au moment du renew, perte de confiance.',
-      nl: 'Complexe tariefmodellen. Zware facturen om te ontleden. Wrijving bij vernieuwing, vertrouwensverlies.',
-      en: 'Complex pricing models. Heavy invoices to untangle. Friction at renewal, loss of trust.'
-    },
     'speos.pp.p9.theme': { fr: 'Billing', nl: 'Billing', en: 'Billing' },
     'speos.proposed.analyseLi1': { fr: 'Cartographie friction Project Owners ↔ Project Managers', nl: 'Frictiekaart Project Owners ↔ Project Managers', en: 'Friction map Project Owners ↔ Project Managers' },
     'speos.proposed.analyseLi2': { fr: 'AS-IS journey · processus séparés et bordéliques', nl: 'AS-IS journey · gescheiden, rommelige processen', en: 'AS-IS journey · separate, messy processes' },
@@ -3923,14 +2324,9 @@
     },
     'speos.prototype.directionEyebrow': { fr: 'Phase 03 · Develop · 2 directions explorées', nl: 'Fase 03 · Develop · 2 verkende richtingen', en: 'Phase 03 · Develop · 2 directions explored' },
     'speos.prototype.directionLead': {
-      fr: 'À la sortie des ateliers Customer Journey, deux pistes étaient sur la table. À gauche, conserver chaque produit dans son silo (easy2mail, built2mail, e-Invoicing, archive eIDAS, support) avec son propre login et son propre back-office. Solution rapide à livrer mais qui reproduit la fragmentation que les clients eux-mêmes pointaient. À droite, un host one-stop, avec un onboarding piloté par persona et par typologie de besoin, et des capacités API-isées en dessous. C\'est la deuxième direction qui a été retenue, validée par le sponsor, puis testée chez 6 clients pilotes. <strong>La direction silo aurait livré en 6 mois. La direction one-stop a doublé le temps de dev.</strong> Le sponsor a accepté le coût parce que le <strong class="accent">pricing tiered ouvre le segment PME laissé aux concurrents</strong>.',
-      nl: 'Uit de Customer Journey workshops kwamen twee pistes op tafel. Links, elk product in zijn silo houden (easy2mail, built2mail, e-Invoicing, archive eIDAS, support), met eigen login en eigen back-office. Snelle oplevering, maar die reproduceert de fragmentatie die de klanten zelf aanwezen. Rechts, een one-stop host, met onboarding gestuurd per persona en per noodtype, en API-iseerbare capaciteiten daaronder. De tweede richting werd weerhouden, gevalideerd door de sponsor, daarna getest bij 6 pilootklanten. <strong>De silo-richting had in 6 maanden geleverd. De one-stop richting heeft de ontwikkelingstijd verdubbeld.</strong> De sponsor accepteerde de kost omdat de <strong class="accent">tiered pricing het kmo-segment opent dat aan de concurrenten was overgelaten</strong>.',
-      en: 'Out of the Customer Journey workshops, two paths were on the table. On the left, keep each product in its silo (easy2mail, built2mail, e-Invoicing, eIDAS archive, support) with its own login and own back-office. Fast to ship, but it reproduces the fragmentation the clients were pointing at. On the right, a one-stop host, with onboarding driven by persona and need typology, and API-ised capabilities underneath. The second direction was retained, validated by the sponsor, then tested with 6 pilot clients. <strong>The silo direction would have shipped in 6 months. The one-stop direction doubled the dev time.</strong> The sponsor accepted the cost because the <strong class="accent">tiered pricing opens the SME segment left to the competitors</strong>.'
-    },
-    'speos.prototype.directionSource': {
-      fr: 'Source · Speos Concept Report 2024 · synthèse Discovery + ateliers cocréation, validée par CEO et CTO avant prototyping',
-      nl: 'Bron · Speos Concept Report 2024 · synthese Discovery + co-creatie workshops, gevalideerd door CEO en CTO voor prototyping',
-      en: 'Source · Speos Concept Report 2024 · synthesis Discovery + co-creation workshops, validated by CEO and CTO before prototyping'
+      fr: 'Deux pistes à la sortie des ateliers. Silo · chaque produit avec son login, livré en 6 mois mais reproduit la fragmentation. One-stop · host orchestré, onboarding par persona, capacités API-isées, temps de dev doublé. Sponsor retient la deuxième · <strong class="accent">le pricing tiered ouvre le segment PME laissé aux concurrents</strong>.',
+      nl: 'Twee pistes uit de workshops. Silo · elk product met eigen login, levering in 6 maanden maar reproduceert de fragmentatie. One-stop · georchestreerde host, persona-onboarding, API-iseerbare capaciteiten, dev-tijd verdubbeld. Sponsor weerhoudt de tweede · <strong class="accent">de tiered pricing opent het kmo-segment dat aan de concurrenten was overgelaten</strong>.',
+      en: 'Two paths out of the workshops. Silo · each product with its own login, shipped in 6 months but reproduces fragmentation. One-stop · orchestrated host, persona-driven onboarding, API-ised capabilities, dev time doubled. Sponsor picks the second · <strong class="accent">tiered pricing opens the SME segment left to competitors</strong>.'
     },
     'speos.prototype.directionTitle': {
       fr: 'Deux directions explorées. <span class="accent">Une retenue.</span>',
@@ -3939,14 +2335,9 @@
     },
     'speos.prototype.overviewEyebrow': { fr: 'Phase 03 · Develop · 5 Value Props priorisées MVP', nl: 'Fase 03 · Develop · 5 Value Props geprioriteerd MVP', en: 'Phase 03 · Develop · 5 Value Props prioritised MVP' },
     'speos.prototype.overviewLead': {
-      fr: 'Le pipeline canonique SPEOS : ingest → compose & enrich → distribute → archive. Sur ce squelette, les 12 entretiens experts internes et les 6 clients pilotes ont fait émerger cinq Value Props prioritaires. Chacune adresse une étape précise du cycle de vie client. Onboarding · Monitoring · Reports & Archives · Billing · Support. Une plateforme, cinq promesses cohérentes.',
-      nl: 'De canonieke SPEOS pipeline: ingest → compose & enrich → distribute → archive. Op dat skelet brachten de 12 interne expertinterviews en de 6 pilootklanten vijf prioritaire Value Props naar boven. Elk adresseert een precieze stap van de klantlevenscyclus. Onboarding · Monitoring · Reports & Archives · Billing · Support. Eén platform, vijf coherente beloftes.',
-      en: 'The canonical SPEOS pipeline: ingest → compose & enrich → distribute → archive. On that skeleton, the 12 internal expert interviews and the 6 pilot clients surfaced five priority Value Props. Each addresses a precise step in the client lifecycle. Onboarding · Monitoring · Reports & Archives · Billing · Support. One platform, five coherent promises.'
-    },
-    'speos.prototype.overviewSource': {
-      fr: 'Source · Speos Concept Report 2024 · 5 VP cartographiées sur le pipeline ingest → compose → distribute → archive (Roadmap p17)',
-      nl: 'Bron · Speos Concept Report 2024 · 5 VP in kaart op de pipeline ingest → compose → distribute → archive (Roadmap p17)',
-      en: 'Source · Speos Concept Report 2024 · 5 VPs mapped on the ingest → compose → distribute → archive pipeline (Roadmap p17)'
+      fr: 'Pipeline canonique · ingest → compose → distribute → archive. Cinq Value Props prioritaires sur ce squelette · Onboarding · Monitoring · Reports & Archives · Billing · Support.',
+      nl: 'Canonieke pipeline · ingest → compose → distribute → archive. Vijf prioritaire Value Props op dat skelet · Onboarding · Monitoring · Reports & Archives · Billing · Support.',
+      en: 'Canonical pipeline · ingest → compose → distribute → archive. Five priority Value Props on that skeleton · Onboarding · Monitoring · Reports & Archives · Billing · Support.'
     },
     'speos.prototype.overviewTitle': {
       fr: 'Du pipeline document <span class="accent">aux 5 Value Props.</span>',
@@ -3979,9 +2370,9 @@
     },
     'speos.prototype.utEyebrow': { fr: 'Phase 04 · Deliver · user test 6 clients pilotes', nl: 'Fase 04 · Deliver · user test 6 pilootklanten', en: 'Phase 04 · Deliver · user test 6 pilot clients' },
     'speos.prototype.utLead': {
-      fr: 'Le Concept Report est testé en présentation structurée chez 6 clients couvrant les 3 segments marché : Large Accounts (Build-to-Mail), PMEs (Easy2Mail), Integrators / Resellers. Les six valident la direction one-stop. <strong>L\'un d\'entre eux est Luminus.</strong> Référence energy belge qui sécurise le retour sponsor : la plateforme est rassurante avant même le développement.',
-      nl: 'Het Concept Report wordt in een gestructureerde presentatie getest bij 6 klanten die de 3 marktsegmenten dekken: Large Accounts (Build-to-Mail), KMO (Easy2Mail), Integrators / Resellers. De zes valideren de one-stop richting. <strong>Eén ervan is Luminus</strong>, een Belgische energiereferentie die het sponsorvertrouwen veilig stelt: het platform is geruststellend nog voor de ontwikkeling.',
-      en: 'The Concept Report is tested in a structured presentation with 6 clients covering the 3 market segments: Large Accounts (Build-to-Mail), SMEs (Easy2Mail), Integrators / Resellers. The six validate the one-stop direction. <strong>One of them is Luminus</strong>, a Belgian energy reference that secures the sponsor signal: the platform is reassuring even before development.'
+      fr: 'Concept Report présenté aux six pilotes. En parallèle, deux personas Énergie · Moustafa et Bogdan · testent trois scénarios prototype.',
+      nl: 'Concept Report gepresenteerd aan de zes piloten. Parallel testen twee Energie-persona\'s · Moustafa en Bogdan · drie prototype-scenario\'s.',
+      en: 'Concept Report presented to the six pilots. In parallel, two Energy personas · Moustafa and Bogdan · test three prototype scenarios.'
     },
     'speos.prototype.utName1': { fr: 'Luminus', nl: 'Luminus', en: 'Luminus' },
     'speos.prototype.utName2': { fr: 'Large Account · secteur réglementé', nl: 'Large Account · gereglementeerde sector', en: 'Large Account · regulated sector' },
@@ -4000,11 +2391,6 @@
     'speos.prototype.utSeg4': { fr: 'Easy2Mail', nl: 'Easy2Mail', en: 'Easy2Mail' },
     'speos.prototype.utSeg5': { fr: 'Integrators', nl: 'Integrators', en: 'Integrators' },
     'speos.prototype.utSeg6': { fr: 'Integrators', nl: 'Integrators', en: 'Integrators' },
-    'speos.prototype.utSource': {
-      fr: 'Tests menés en présentation directe et co-design chez les 6 clients pilotes · 3 segments couvrant Build-to-Mail, Easy2Mail et Integrators · Speos Concept Report 2024',
-      nl: 'Tests via directe presentatie en co-design bij de 6 pilootklanten · 3 segmenten Build-to-Mail, Easy2Mail en Integrators · Speos Concept Report 2024',
-      en: 'Tests run in direct presentation and co-design with the 6 pilot clients · 3 segments covering Build-to-Mail, Easy2Mail and Integrators · Speos Concept Report 2024'
-    },
     'speos.prototype.utStat1': { fr: 'Clients testés sur 3 segments', nl: 'Klanten getest op 3 segmenten', en: 'Clients tested across 3 segments' },
     'speos.prototype.utStat2': { fr: 'Valident la direction one-stop', nl: 'Valideren de one-stop richting', en: 'Validate the one-stop direction' },
     'speos.prototype.utStat3': { fr: 'Référence Luminus · sponsor go production', nl: 'Referentie Luminus · sponsor go productie', en: 'Luminus reference · sponsor go production' },
@@ -4140,11 +2526,6 @@
       nl: 'Tracen, archiveren, <span class="accent">correct factureren.</span>',
       en: 'Trace, archive, <span class="accent">bill right.</span>'
     },
-    'speos.prototype.vp4Statement': {
-      fr: '<span class="vp-statement__lab">Value Proposition Billing · verbatim Concept Report</span>\n          <p>Notre <strong>billing</strong> aide les mêmes équipes en délivrant un accès centralisé aux rapports structurés, preuves légales et archives d\'usage, réduisant le travail manuel et les processus error-prone.</p>',
-      nl: '<span class="vp-statement__lab">Value Proposition Billing · verbatim Concept Report</span>\n          <p>Onze <strong>billing</strong> helpt dezelfde teams door centrale toegang te bieden tot gestructureerde rapporten, juridische bewijzen en gebruiksarchieven, en verkleint manueel werk en foutgevoelige processen.</p>',
-      en: '<span class="vp-statement__lab">Value Proposition Billing · verbatim Concept Report</span>\n          <p>Our <strong>billing</strong> helps the same teams by providing centralised access to structured reports, legal proofs and usage archives, reducing manual work and error-prone processes.</p>'
-    },
     'speos.prototype.vp5Eyebrow': { fr: 'Phase 03 · Develop · VP 05 · Support', nl: 'Fase 03 · Develop · VP 05 · Support', en: 'Phase 03 · Develop · VP 05 · Support' },
     'speos.prototype.vp5F1h': { fr: 'Portail self-service', nl: 'Self-service portaal', en: 'Self-service portal' },
     'speos.prototype.vp5F1p': {
@@ -4201,11 +2582,6 @@
       fr: 'Trois logiques d\'achat distinctes. Les Large Accounts achètent des solutions complexes avec haute compliance. Les PMEs achètent du standard, du low-touch, de l\'autonomie. Les Integrators achètent une API et de la documentation. Une seule plateforme doit servir les trois sans dériver.',
       nl: 'Drie verschillende aankooplogica\'s. Large Accounts kopen complexe oplossingen met hoge compliance. KMO\'s kopen standaard, low-touch, autonomie. Integrators kopen een API en documentatie. Eén platform moet de drie bedienen zonder af te drijven.',
       en: 'Three distinct buying logics. Large Accounts buy complex solutions with high compliance. SMEs buy standard, low-touch, autonomy. Integrators buy an API and documentation. One platform must serve the three without drifting.'
-    },
-    'speos.research.benchSource': {
-      fr: 'Source · SPEOS Concept Report · pages 7-8 · 3 segments marché · 2024-2025. Concurrents observés en parallèle : Easypost, Doccle, plateformes de digital mail européennes.',
-      nl: 'Bron · SPEOS Concept Report · pagina\'s 7-8 · 3 marktsegmenten · 2024-2025. Concurrenten parallel geobserveerd: Easypost, Doccle, Europese digital mail platformen.',
-      en: 'Source · SPEOS Concept Report · pages 7-8 · 3 market segments · 2024-2025. Competitors observed in parallel: Easypost, Doccle, European digital mail platforms.'
     },
     'speos.research.benchTitle': {
       fr: 'Trois segments marché. <span class="accent">Trois logiques d\'achat.</span>',
@@ -4276,24 +2652,19 @@
     },
     'speos.research.itEyebrow': { fr: 'Phase 01 · Discover · interviews internes', nl: 'Fase 01 · Discover · interne interviews', en: 'Phase 01 · Discover · internal interviews' },
     'speos.research.itOutcome': {
-      fr: '12 entretiens experts internes <span class="brief-teaser__sep">·</span> 6 archétypes fonctionnels couverts <span class="brief-teaser__sep">·</span> Direction, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> menés sur les premières semaines de mission.',
-      nl: '12 interne expertinterviews <span class="brief-teaser__sep">·</span> 6 functionele archetypes gedekt <span class="brief-teaser__sep">·</span> Directie, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> gevoerd in de eerste weken van de opdracht.',
-      en: '12 internal expert interviews <span class="brief-teaser__sep">·</span> 6 functional archetypes covered <span class="brief-teaser__sep">·</span> Management, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> conducted in the first weeks of the mission.'
+      fr: 'Direction, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> 20+ ans d\'ancienneté.',
+      nl: 'Directie, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> 20+ jaar anciënniteit.',
+      en: 'Management, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> 20+ years seniority.'
     },
     'speos.research.itLead': {
-      fr: 'Direction, IT, opérations, experts métier 20+ ans d\'ancienneté. Objectif · comprendre l\'organisation telle qu\'elle est, le métier postal-mailing tel qu\'il se pratique au quotidien, et ce que chaque rôle attend d\'une plateforme unifiée. Pas pour vendre la méthode. Pour la fonder sur le terrain.',
-      nl: 'Directie, IT, operations, domeinexperts met 20+ jaar anciënniteit. Doel · de organisatie begrijpen zoals ze is, het postale mailing-vak zoals het dagelijks wordt beoefend, en wat elke rol verwacht van een verenigd platform. Niet om de methode te verkopen. Om haar op het terrein te funderen.',
-      en: 'Management, IT, operations, domain experts with 20+ years of seniority. Goal · understand the organisation as it is, the postal-mailing trade as practised daily, and what each role expects from a unified platform. Not to sell the method. To ground it on the field.'
-    },
-    'speos.research.itSource': {
-      fr: '12 expert interviews internes · CEO, CTO, Operations Director, ICT Operational Manager, Customer Service Manager, Production Manager, Marketing Director, Sales Director, Key Account Manager, IT Product Owner, IT Quality Assurance · noms cités dans le Concept Report (Vanhaeren, Damsin, Ide, Diederich, Roelands, Delcourt, D\'hooge, Germonpré, Tran…) · 2024',
-      nl: '12 interne expertinterviews · CEO, CTO, Operations Director, ICT Operational Manager, Customer Service Manager, Production Manager, Marketing Director, Sales Director, Key Account Manager, IT Product Owner, IT Quality Assurance · namen geciteerd in het Concept Report (Vanhaeren, Damsin, Ide, Diederich, Roelands, Delcourt, D\'hooge, Germonpré, Tran…) · 2024',
-      en: '12 internal expert interviews · CEO, CTO, Operations Director, ICT Operational Manager, Customer Service Manager, Production Manager, Marketing Director, Sales Director, Key Account Manager, IT Product Owner, IT Quality Assurance · names cited in the Concept Report (Vanhaeren, Damsin, Ide, Diederich, Roelands, Delcourt, D\'hooge, Germonpré, Tran…) · 2024'
+      fr: 'Comprendre comment SPEOS fait son métier, et ce que chaque rôle attend d\'une plateforme unifiée.',
+      nl: 'Begrijpen hoe SPEOS zijn vak uitoefent, en wat elke rol verwacht van een verenigd platform.',
+      en: 'Understand how SPEOS runs its business, and what each role expects of a unified platform.'
     },
     'speos.research.itTitle': {
-      fr: 'Première étape · <span class="accent">écouter ceux qui font tourner SPEOS.</span>',
-      nl: 'Eerste stap · <span class="accent">luisteren naar wie SPEOS draaiende houdt.</span>',
-      en: 'First step · <span class="accent">listen to those who run SPEOS.</span>'
+      fr: 'On écoute <span class="accent">avant de dessiner.</span>',
+      nl: 'Eerst luisteren <span class="accent">voor we tekenen.</span>',
+      en: 'Listen <span class="accent">before drawing.</span>'
     },
     'speos.research.perso1Desc': {
       fr: 'Le pivot multicanal. Veut de l\'automatisation, des API propres, un time-to-market raccourci.',
@@ -4345,19 +2716,14 @@
     'speos.research.perso8Name': { fr: 'Integrator & IT Partner', nl: 'Integrator & IT Partner', en: 'Integrator & IT Partner' },
     'speos.research.persoEyebrow': { fr: 'Phase 01 · Discover · personas', nl: 'Fase 01 · Discover · persona\'s', en: 'Phase 01 · Discover · personas' },
     'speos.research.persoLead': {
-      fr: 'Issues des 12 entretiens experts internes et des 10 personas testés terrain. Synthétisés en 8 archétypes dans le Concept Report. La carte qui a servi de boussole pour prioriser le MVP : à qui on parle, à quel moment du cycle, et avec quel ton.',
-      nl: 'Voortgekomen uit de 12 interne expertinterviews en de 10 op het terrein geteste persona\'s. Gesynthetiseerd in 8 archetypes in het Concept Report. De kaart die als kompas diende om het MVP te prioriteren: tegen wie spreken we, op welk moment in de cyclus, met welke toon.',
-      en: 'Drawn from the 12 internal expert interviews and the 10 field-tested personas. Synthesised into 8 archetypes in the Concept Report. The map that served as compass to prioritise the MVP: who we talk to, at what moment in the cycle, and with what tone.'
-    },
-    'speos.research.persoSource': {
-      fr: 'Source · Speos Concept Report 2024 · 8 archétypes « Potential Personas » synthétisés sur 12 entretiens experts internes + 10 personas testés terrain.',
-      nl: 'Bron · Speos Concept Report 2024 · 8 archetypes « Potential Personas » gesynthetiseerd uit 12 interne expertinterviews + 10 op het terrein geteste persona\'s.',
-      en: 'Source · Speos Concept Report 2024 · 8 "Potential Personas" archetypes synthesised from 12 internal expert interviews + 10 field-tested personas.'
+      fr: 'Synthétisés à partir des entretiens internes et terrain. La carte qui priorise le MVP, à qui on parle et à quel moment du cycle.',
+      nl: 'Gesynthetiseerd uit de interne en terreininterviews. De kaart die het MVP prioriteert, met wie we praten en op welk moment in de cyclus.',
+      en: 'Synthesised from the internal and field interviews. The map that prioritises the MVP, who we speak to and at which point in the cycle.'
     },
     'speos.research.persoTitle': {
-      fr: '12 experts. 10 personas testés terrain. <span class="accent">8 archétypes synthétisés.</span>',
-      nl: '12 experts. 10 op het terrein geteste persona\'s. <span class="accent">8 gesynthetiseerde archetypes.</span>',
-      en: '12 experts. 10 field-tested personas. <span class="accent">8 synthesised archetypes.</span>'
+      fr: 'Huit archétypes. <span class="accent">Deux personas illustratifs.</span>',
+      nl: 'Acht archetypes. <span class="accent">Twee illustratieve persona\'s.</span>',
+      en: 'Eight archetypes. <span class="accent">Two illustrative personas.</span>'
     },
     'speos.research.seg1Country': { fr: 'Segment 01 · Build-to-Mail', nl: 'Segment 01 · Build-to-Mail', en: 'Segment 01 · Build-to-Mail' },
     'speos.research.seg1Li1': { fr: 'Banques, assurances, télécoms', nl: 'Banken, verzekeringen, telecoms', en: 'Banks, insurance, telcos' },
@@ -4398,13 +2764,7 @@
     'speos.snm.intakeTip': { fr: 'Brief intake · cadre du projet', nl: 'Brief intake · projectkader', en: 'Brief intake · project frame' },
     'speos.snm.p1': { fr: 'Direction prototype · siloed vs one-stop', nl: 'Prototyperichting · siloed vs one-stop', en: 'Prototype direction · siloed vs one-stop' },
     'speos.snm.p2': { fr: '3 segments × 1 host commun · wall d\'atelier', nl: '3 segmenten × 1 gemeenschappelijke host · workshopmuur', en: '3 segments × 1 common host · workshop wall' },
-    'speos.snm.p2a': { fr: 'Segment 01 · Large Accounts (Build-to-Mail)', nl: 'Segment 01 · Large Accounts (Build-to-Mail)', en: 'Segment 01 · Large Accounts (Build-to-Mail)' },
-    'speos.snm.p2b': { fr: 'Segment 02 · PMEs (Easy2Mail)', nl: 'Segment 02 · KMO (Easy2Mail)', en: 'Segment 02 · SMEs (Easy2Mail)' },
-    'speos.snm.p2c': { fr: 'Segment 03 · Integrators (API)', nl: 'Segment 03 · Integrators (API)', en: 'Segment 03 · Integrators (API)' },
-    'speos.snm.p2d': { fr: 'Multicanal print → digital', nl: 'Multichannel print → digital', en: 'Multichannel print → digital' },
-    'speos.snm.p2home': { fr: 'Onboarding piloté objectif + persona', nl: 'Onboarding gestuurd doel + persona', en: 'Onboarding driven goal + persona' },
     'speos.snm.p4': { fr: 'User test 6 clients dont Luminus · go prod', nl: 'User test 6 klanten waaronder Luminus · go prod', en: 'User test 6 clients including Luminus · go prod' },
-    'speos.snm.pChap': { fr: 'Phase 04 · Prototype · ouverture validation', nl: 'Fase 04 · Prototype · opening validatie', en: 'Phase 04 · Prototype · validation opening' },
     'speos.snm.pVp1': { fr: 'VP 01 · Onboarding IT-less', nl: 'VP 01 · IT-less onboarding', en: 'VP 01 · IT-less onboarding' },
     'speos.snm.pVp2': { fr: 'VP 02 · Monitoring temps réel', nl: 'VP 02 · Real-time monitoring', en: 'VP 02 · Real-time monitoring' },
     'speos.snm.pVp3': { fr: 'VP 03 + 04 · Reports & Billing', nl: 'VP 03 + 04 · Reports & Billing', en: 'VP 03 + 04 · Reports & Billing' },
@@ -4446,9 +2806,9 @@
       en: 'A platform is not <span class="accent">five entry doors.</span><br>It is an orchestration that tunes itself to the persona in front of it.'
     },
     'speos.vp.lede': {
-      fr: 'Avant la VP, chaque rôle défendait sa lecture. Project Owners voulaient des features vendables. Project Managers voulaient une stack maintenable. Les clients juxtaposaient cinq logins. Après, une phrase tient debout : <strong>un host orchestré, des personas reconnus, dix douleurs traduites en cinq livrables MVP, six de plus en MVP++</strong>. C\'est cette VP qui rend l\'Ideation légitime.',
-      nl: 'Vóór de VP verdedigde elke rol zijn lezing. Project Owners wilden verkoopbare features. Project Managers wilden een onderhoudbare stack. De klanten jongleerden met vijf logins. Daarna staat één zin overeind: <strong>een georchestreerde host, herkende persona\'s, tien pijnen vertaald in vijf MVP-livrables, zes meer in MVP++</strong>. Het is die VP die de Ideation legitiem maakt.',
-      en: 'Before the VP, each role defended its reading. Project Owners wanted sellable features. Project Managers wanted a maintainable stack. Clients juggled five logins. After, one sentence stands: <strong>an orchestrated host, recognised personas, ten pains translated into five MVP deliverables, six more in MVP++</strong>. That VP is what makes Ideation legitimate.'
+      fr: 'Avant · POs voulaient des features, PMs une stack, les clients cinq logins. Après · <strong>un host orchestré · 10 douleurs → 5 livrables MVP + 6 MVP++</strong>.',
+      nl: 'Vóór · POs wilden features, PMs een stack, klanten vijf logins. Daarna · <strong>een georchestreerde host · 10 pijnen → 5 MVP-livrables + 6 MVP++</strong>.',
+      en: 'Before · POs wanted features, PMs a stack, clients five logins. After · <strong>an orchestrated host · 10 pains → 5 MVP deliverables + 6 MVP++</strong>.'
     },
     'speos.vp.posture.h': { fr: 'La posture', nl: 'De houding', en: 'The posture' },
     'speos.vp.posture.claim': {
@@ -4517,9 +2877,9 @@
       en: '<strong>MVP / MVP++ scope.</strong> 5 MVP deliverables cover the 6 phases of the Customer Lifecycle. The <em>Market Expansion</em> and <em>Marketplace API Integrators</em> opportunities are scoped <strong>MVP++ phase 2</strong>, post one-stop host validation.'
     },
     'speos.vp.bridgeText': {
-      fr: 'À la sortie de cette VP, <strong>Project Owners (Business), Project Managers (IT), Operations et Sales</strong> partagent la même phrase, les mêmes deux personas, la même traduction des dix douleurs en cinq livrables MVP. C\'est ce <span class="accent">socle commun</span> qui rend l\'Ideation légitime. On n\'arbitre plus sur le « quoi », on arbitre sur le « quand » et le « comment ».',
-      nl: 'Aan het einde van deze VP delen <strong>Project Owners (Business), Project Managers (IT), Operations en Sales</strong> dezelfde zin, dezelfde twee persona\'s, dezelfde vertaling van tien pijnen in vijf MVP-livrables. Het is die <span class="accent">gemeenschappelijke basis</span> die de Ideation legitiem maakt. Men arbitreert niet meer over het « wat », men arbitreert over het « wanneer » en het « hoe ».',
-      en: 'At the exit of this VP, <strong>Project Owners (Business), Project Managers (IT), Operations and Sales</strong> share the same sentence, the same two personas, the same translation of ten pains into five MVP deliverables. It is that <span class="accent">shared foundation</span> that makes Ideation legitimate. No more arbitration on the "what", arbitration on the "when" and "how".'
+      fr: 'Project Owners, Project Managers, Operations et Sales partagent la même phrase. <span class="accent">Socle commun signé.</span> L\'arbitrage passe du « quoi » au « quand ».',
+      nl: 'Project Owners, Project Managers, Operations en Sales delen dezelfde zin. <span class="accent">Gemeenschappelijke basis getekend.</span> De arbitrage verschuift van « wat » naar « wanneer ».',
+      en: 'Project Owners, Project Managers, Operations and Sales share the same sentence. <span class="accent">Shared foundation signed.</span> Arbitration moves from "what" to "when".'
     },
     'speos.vp.bridgeNext': {
       fr: 'Suite logique <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 directions explorées, une retenue',
@@ -4547,11 +2907,6 @@
       nl: 'Van de 10 op het terrein geteste, <span class="accent">twee die hardop spreken.</span>',
       en: 'Out of the 10 field-tested, <span class="accent">two that speak out loud.</span>'
     },
-    'speos.research.deepdiveLead': {
-      fr: 'Synthétiser huit archétypes est un acte d\'arbitrage. Pour ne pas perdre la voix, je garde deux personas en deep-dive, qui incarnent les archétypes #1 IT & Operations Manager et #3 Production Coordinator vus chez les grands comptes Énergie. Mêmes horaires, mêmes anxiétés, mêmes phrases dans la salle.',
-      nl: 'Acht archetypes synthetiseren is een arbitrage-act. Om de stem niet te verliezen, hou ik twee persona\'s in deep-dive, die de archetypes #1 IT & Operations Manager en #3 Production Coordinator belichamen zoals waargenomen bij de grote Energie-accounts. Zelfde uren, zelfde angsten, zelfde zinnen in de zaal.',
-      en: 'Synthesising eight archetypes is an act of arbitration. To not lose the voice, I keep two personas in deep-dive, embodying archetypes #1 IT & Operations Manager and #3 Production Coordinator observed in large Energy accounts. Same hours, same anxieties, same sentences in the room.'
-    },
     'speos.research.deepdiveP1Name': { fr: 'Nicolas · 45 ans', nl: 'Nicolas · 45 jaar', en: 'Nicolas · 45' },
     'speos.research.deepdiveP1Role': {
       fr: 'Responsable Opérations Documentaires · <span class="accent">grand compte Énergie</span>',
@@ -4567,7 +2922,6 @@
     'speos.research.deepdiveP1Pain2': { fr: '<strong>Drops sur &gt;10k volumes</strong> · le système qui lâche en gros volume', nl: '<strong>Drops bij &gt;10k volumes</strong> · het systeem haakt af in grote volumes', en: '<strong>Drops on &gt;10k volumes</strong> · system fails at high volume' },
     'speos.research.deepdiveP1Pain3': { fr: '<strong>Support lent matin</strong> · personne avant 8h, alors que ses batchs partent à 5h30', nl: '<strong>Trage ochtendsupport</strong> · niemand vóór 8u, terwijl zijn batches om 5u30 vertrekken', en: '<strong>Slow morning support</strong> · no one before 8am, while his batches leave at 5:30am' },
     'speos.research.deepdiveP1Pain4': { fr: '<strong>Erreurs génériques</strong> · debug à l\'aveugle, pas de message actionnable', nl: '<strong>Generieke fouten</strong> · blind debuggen, geen actionable bericht', en: '<strong>Generic errors</strong> · blind debug, no actionable message' },
-    'speos.research.deepdiveP1Src': { fr: 'Profil composite · 12 entretiens experts internes + 10 personas testés terrain · 2024-2025', nl: 'Samengesteld profiel · 12 interne expertinterviews + 10 op het terrein geteste persona\'s · 2024-2025', en: 'Composite profile · 12 internal expert interviews + 10 field-tested personas · 2024-2025' },
     'speos.research.deepdiveP2Name': { fr: 'Moustafa · 62 ans', nl: 'Moustafa · 62 jaar', en: 'Moustafa · 62' },
     'speos.research.deepdiveP2Role': {
       fr: 'Expert Impression &amp; Archivage · <span class="accent">grand compte Énergie</span>',
@@ -4583,9 +2937,6 @@
     'speos.research.deepdiveP2Pain2': { fr: '<strong>Anxiété 5h30</strong> · le support n\'est pas joignable quand ça plante', nl: '<strong>Angst om 5u30</strong> · de support is niet bereikbaar wanneer het crasht', en: '<strong>5:30am anxiety</strong> · support unreachable when it crashes' },
     'speos.research.deepdiveP2Pain3': { fr: '<strong>Batchs bloquants</strong> · pas de retraitement partiel d\'un fichier raté', nl: '<strong>Blokkerende batches</strong> · geen gedeeltelijke herwerking van een mislukt bestand', en: '<strong>Blocking batches</strong> · no partial reprocessing of a failed file' },
     'speos.research.deepdiveP2Pain4': { fr: '<strong>Changements lents</strong> · même pour un logo ou un gabarit, c\'est des semaines', nl: '<strong>Trage wijzigingen</strong> · zelfs voor een logo of template, het zijn weken', en: '<strong>Slow changes</strong> · even for a logo or template, it takes weeks' },
-    'speos.research.deepdiveP2Src': { fr: 'Profil composite · 12 entretiens experts internes + 10 personas testés terrain · 2024-2025', nl: 'Samengesteld profiel · 12 interne expertinterviews + 10 op het terrein geteste persona\'s · 2024-2025', en: 'Composite profile · 12 internal expert interviews + 10 field-tested personas · 2024-2025' },
-    'speos.research.deepdiveSource': { fr: 'Source · personna_speos.docx · Speos research 2024-2025 · 2 personas en deep-dive sur 10 testés terrain · 8 archétypes synthétisés dans le Concept Report.', nl: 'Bron · personna_speos.docx · Speos research 2024-2025 · 2 persona\'s in deep-dive op 10 op het terrein geteste · 8 gesynthetiseerde archetypes in het Concept Report.', en: 'Source · personna_speos.docx · Speos research 2024-2025 · 2 personas in deep-dive on 10 field-tested · 8 synthesised archetypes in the Concept Report.' },
-
     /* 11 Opportunities for Innovation */
     'speos.analyse.oppEyebrow': { fr: 'Phase 02 · Define · 11 opportunités', nl: 'Fase 02 · Define · 11 opportuniteiten', en: 'Phase 02 · Define · 11 opportunities' },
     'speos.analyse.oppTitle': {
@@ -4594,9 +2945,9 @@
       en: 'From pains <span class="accent">to chances.</span>'
     },
     'speos.analyse.oppLead': {
-      fr: 'Le passage des dix pain points aux <strong>onze opportunités</strong> est l\'arbitrage clé de la phase Analyse. Pas de raccourci : chaque douleur a été reformulée en chance d\'innover, sourcée verbatim dans le Concept Report. Ces onze pistes ne sont pas toutes scopées MVP. Cinq deviendront des Value Props livrables, six seront placées en MVP++ phase 2.',
-      nl: 'De overgang van de tien pain points naar de <strong>elf opportuniteiten</strong> is de sleutelarbitrage van de Analysefase. Geen kortere weg: elke pijn werd geherformuleerd als innovatiekans, verbatim gesourced in het Concept Report. Deze elf sporen zijn niet allemaal MVP-scoped. Vijf worden geleverde Value Props, zes worden geplaatst in MVP++ fase 2.',
-      en: 'The shift from the ten pain points to the <strong>eleven opportunities</strong> is the key arbitration of the Analysis phase. No shortcut: each pain was reformulated as a chance to innovate, sourced verbatim from the Concept Report. These eleven tracks are not all MVP-scoped. Five become delivered Value Props, six are placed in MVP++ phase 2.'
+      fr: '10 pain points reformulés en 11 opportunités. <strong>Cinq deviendront des Value Props livrables MVP, six placées MVP++ phase 2.</strong>',
+      nl: '10 pain points geherformuleerd als 11 opportuniteiten. <strong>Vijf worden geleverde MVP Value Props, zes geplaatst in MVP++ fase 2.</strong>',
+      en: '10 pain points reframed as 11 opportunities. <strong>Five become MVP Value Props, six placed in MVP++ phase 2.</strong>'
     },
     'speos.analyse.opp1Name': { fr: 'Enhanced Customer Experience', nl: 'Enhanced Customer Experience', en: 'Enhanced Customer Experience' },
     'speos.analyse.opp1Desc': { fr: 'Self-service, real-time tracking, personalized dashboards par segment.', nl: 'Self-service, real-time tracking, personalized dashboards per segment.', en: 'Self-service, real-time tracking, personalized dashboards per segment.' },
@@ -4620,16 +2971,9 @@
     'speos.analyse.opp10Desc': { fr: 'Tracking + billing + reporting + ticketing en un seul portail. Open API marketplace.', nl: 'Tracking + billing + reporting + ticketing in één portaal. Open API marketplace.', en: 'Tracking + billing + reporting + ticketing in one portal. Open API marketplace.' },
     'speos.analyse.opp11Name': { fr: 'Competitive Differentiation', nl: 'Competitive Differentiation', en: 'Competitive Differentiation' },
     'speos.analyse.opp11Desc': { fr: 'Advanced analytics, fallback mechanisms, positionnement « One Stop Shop ». <em>MVP++.</em>', nl: 'Advanced analytics, fallback mechanisms, positionering « One Stop Shop ». <em>MVP++.</em>', en: 'Advanced analytics, fallback mechanisms, "One Stop Shop" positioning. <em>MVP++.</em>' },
-    'speos.analyse.oppSource': { fr: 'Source · Speos Concept Report 2024 · « 11 Opportunities for Innovation » verbatim · synthèse des 12 expert interviews internes + 6 customer interviews.', nl: 'Bron · Speos Concept Report 2024 · « 11 Opportunities for Innovation » verbatim · synthese van 12 interne expertinterviews + 6 klanteninterviews.', en: 'Source · Speos Concept Report 2024 · "11 Opportunities for Innovation" verbatim · synthesis of 12 internal expert interviews + 6 customer interviews.' },
-
     /* Classic vs Best Practice tableau */
     'speos.method.compEyebrow': { fr: 'Le pitch initial · pourquoi un département UX', nl: 'De initiële pitch · waarom een UX-afdeling', en: 'The initial pitch · why a UX department' },
     'speos.method.compTitle': { fr: 'Classic <span class="accent">vs Best Practice.</span>', nl: 'Classic <span class="accent">vs Best Practice.</span>', en: 'Classic <span class="accent">vs Best Practice.</span>' },
-    'speos.method.compLead': {
-      fr: 'Le pitch que j\'ai porté à l\'arrivée pour justifier la mission : montrer comment les grands comptes belges (banking, energy, telecoms) ont structuré leur fonction UX, et où SPEOS se trouvait sur cette ligne. Trois rôles. Deux modes d\'organisation. Un choix d\'architecture.',
-      nl: 'De pitch die ik bij aankomst heb gevoerd om de missie te verantwoorden: tonen hoe de grote Belgische accounts (banking, energy, telecoms) hun UX-functie hebben gestructureerd, en waar SPEOS zich op die lijn bevond. Drie rollen. Twee organisatiewijzen. Eén architectuurkeuze.',
-      en: 'The pitch I carried on arrival to justify the mission: show how large Belgian accounts (banking, energy, telecoms) structured their UX function, and where SPEOS stood on that line. Three roles. Two organisation modes. One architectural choice.'
-    },
     'speos.method.comp.colDim': { fr: 'Dimension', nl: 'Dimensie', en: 'Dimension' },
     'speos.method.comp.colClassic': { fr: 'Classic approach', nl: 'Classic approach', en: 'Classic approach' },
     'speos.method.comp.colBest': { fr: 'Best Practice (grands comptes belges · banking, energy, telecoms)', nl: 'Best Practice (grote Belgische accounts · banking, energy, telecoms)', en: 'Best Practice (large Belgian accounts · banking, energy, telecoms)' },
@@ -4642,21 +2986,15 @@
     'speos.method.comp.r3Dim': { fr: '<strong>UX (Users)</strong>', nl: '<strong>UX (Users)</strong>', en: '<strong>UX (Users)</strong>' },
     'speos.method.comp.r3Classic': { fr: 'Rare or integrated into IT.', nl: 'Zeldzaam of in IT geïntegreerd.', en: 'Rare or integrated into IT.' },
     'speos.method.comp.r3Best': { fr: '<strong>Dedicated, cross-functional, strategic department.</strong>', nl: '<strong>Toegewijde, cross-functionele, strategische afdeling.</strong>', en: '<strong>Dedicated, cross-functional, strategic department.</strong>' },
-    'speos.method.compNote': {
-      fr: 'Le pattern Best Practice est <strong>déployé depuis 15+ ans</strong> aux États-Unis (Amazon, IBM, Capital One) et <strong>10+ ans</strong> en Europe dans les secteurs complexes (banking, energy, telecoms). À l\'arrivée chez SPEOS, je ne réinventais rien : je transposais un pattern industrialisé.',
-      nl: 'Het Best Practice-patroon is <strong>al 15+ jaar uitgerold</strong> in de Verenigde Staten (Amazon, IBM, Capital One) en <strong>10+ jaar</strong> in Europa in complexe sectoren (banking, energy, telecoms). Bij aankomst bij SPEOS herontdekte ik niets: ik transponeerde een geïndustrialiseerd patroon.',
-      en: 'The Best Practice pattern has been <strong>deployed for 15+ years</strong> in the United States (Amazon, IBM, Capital One) and <strong>10+ years</strong> in Europe in complex sectors (banking, energy, telecoms). On arrival at SPEOS, I was not reinventing anything: I was transposing an industrialised pattern.'
-    },
-    'speos.method.compSource': { fr: 'Source · pitch méthodologique CVE porté à l\'interne SPEOS · 2024.', nl: 'Bron · methodologische pitch CVE gevoerd intern bij SPEOS · 2024.', en: 'Source · CVE methodological pitch carried internally at SPEOS · 2024.' },
     'speos.research.custEyebrow': {
       fr: 'Phase 01 · Discover · 6 clients pilotes',
       nl: 'Fase 01 · Discover · 6 pilootklanten',
       en: 'Phase 01 · Discover · 6 pilot clients'
     },
     'speos.research.custTitle': {
-      fr: 'Six clients. <span class="accent">Trois segments. Une seule plateforme à la fin.</span>',
-      nl: 'Zes klanten. <span class="accent">Drie segmenten. Eén platform aan het einde.</span>',
-      en: 'Six clients. <span class="accent">Three segments. One platform at the end.</span>'
+      fr: 'Six clients. <span class="accent">Trois segments.</span>',
+      nl: 'Zes klanten. <span class="accent">Drie segmenten.</span>',
+      en: 'Six clients. <span class="accent">Three segments.</span>'
     },
     'speos.research.custOutcome': {
       fr: 'Build-to-Mail · Easy2Mail · Channel <span class="brief-teaser__sep">·</span> deux comptes par segment <span class="brief-teaser__sep">·</span> 22 questions, 6 thèmes',
@@ -4664,29 +3002,19 @@
       en: 'Build-to-Mail · Easy2Mail · Channel <span class="brief-teaser__sep">·</span> two accounts per segment <span class="brief-teaser__sep">·</span> 22 questions, 6 themes'
     },
     'speos.research.custLead': {
-      fr: 'Les douze experts internes lisent l\'organisation. Les six clients lisent le service tel qu\'il vit chez eux. C\'est cette double écoute qui révèle le vrai parcours · ce que SPEOS croit livrer face à ce que le client reçoit vraiment.',
-      nl: 'De twaalf interne experts lezen de organisatie. De zes klanten lezen de dienst zoals die bij hen leeft. Deze dubbele luisterhouding onthult het echte traject · wat SPEOS denkt te leveren tegenover wat de klant werkelijk ontvangt.',
-      en: 'The twelve internal experts read the organisation. The six clients read the service as they experience it. This dual listening reveals the true journey · what SPEOS believes it delivers versus what the client actually receives.'
+      fr: 'Les experts internes lisent l\'organisation. Les clients lisent le service tel qu\'il vit chez eux.',
+      nl: 'De interne experts lezen de organisatie. De klanten lezen de dienst zoals die bij hen leeft.',
+      en: 'Internal experts read the organisation. Clients read the service as they live it.'
     },
     'speos.research.custLead2': {
-      fr: '<strong>Les mêmes six reviennent en user test final.</strong> On referme la boucle avec ceux qui l\'ont ouverte. C\'est ce qui transforme une intention en signal mesurable.',
-      nl: '<strong>Dezelfde zes komen terug voor de finale user test.</strong> We sluiten de lus met wie hem geopend heeft. Dat is wat een intentie omzet in een meetbaar signaal.',
-      en: '<strong>The same six return for the final user test.</strong> We close the loop with those who opened it. That\'s what turns intent into measurable signal.'
-    },
-    'speos.research.custSource': {
-      fr: 'Source · Customer Interview Guide tenu en session · Concept Report SPEOS 2024 pour la cartographie 3 segments · les six mêmes clients reviennent en user test final.',
-      nl: 'Bron · Customer Interview Guide gehouden in sessie · Concept Report SPEOS 2024 voor de cartografie 3 segmenten · dezelfde zes klanten komen terug voor de finale user test.',
-      en: 'Source · Customer Interview Guide held in session · Concept Report SPEOS 2024 for the 3 segments mapping · the same six clients return for the final user test.'
+      fr: '<strong>Les six mêmes reviennent en user test final.</strong>',
+      nl: '<strong>Dezelfde zes komen terug voor de finale user test.</strong>',
+      en: '<strong>The same six return for the final user test.</strong>'
     },
     'speos.prototype.utOutcome': {
       fr: '<strong class="accent">6 / 6 valident</strong> la direction one-stop <span class="brief-teaser__sep">·</span> <strong class="accent">Score combiné 4,03 / 5</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong>',
       nl: '<strong class="accent">6 / 6 valideren</strong> de one-stop richting <span class="brief-teaser__sep">·</span> <strong class="accent">Gecombineerde score 4,03 / 5</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong>',
       en: '<strong class="accent">6 / 6 validate</strong> the one-stop direction <span class="brief-teaser__sep">·</span> <strong class="accent">Combined score 4.03 / 5</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong>'
-    },
-    'speos.prototype.utLead2': {
-      fr: 'En parallèle, deux personas Énergie — Moustafa et Bogdan — passent le SUPERQ sur trois scénarios prototype · Dashboard temps réel, Gestion des erreurs, Audit Trail.',
-      nl: 'Parallel doorlopen twee Energy-persona\'s — Moustafa en Bogdan — de SUPERQ op drie prototype-scenario\'s · Real-time Dashboard, Foutbeheer, Audit Trail.',
-      en: 'In parallel, two Energy personas — Moustafa and Bogdan — go through SUPERQ on three prototype scenarios · Real-time Dashboard, Error Handling, Audit Trail.'
     },
     'speos.prototype.utScenA': {
       fr: 'Dashboard temps réel',
@@ -4763,11 +3091,6 @@
       nl: 'Scenario · twee weken na verzending een bewijs van indiening leveren aan een juridische dienst',
       en: 'Scenario · produce a proof of submission to a legal department two weeks after sending'
     },
-    'speos.prototype.utLessons': {
-      fr: 'Le Dashboard et la Gestion des erreurs passent. L\'Audit Trail tient moins · Moustafa note la Réassurance 1 / 5 sur la valeur de preuve légale. Zone identifiée, sponsor informé, scope MVP++ ajusté.',
-      nl: 'Het Dashboard en het Foutbeheer slagen. De Audit Trail houdt minder stand · Moustafa scoort de Geruststelling 1 / 5 op de juridische bewijswaarde. Zone geïdentificeerd, sponsor geïnformeerd, MVP++ scope aangepast.',
-      en: 'The Dashboard and Error Handling pass. Audit Trail holds up less well · Moustafa rates Reassurance 1 / 5 on legal proof value. Area identified, sponsor informed, MVP++ scope adjusted.'
-    },
     'speos.prototype.utClientsHead': {
       fr: 'Les six clients pilotes en validation directionnelle',
       nl: 'De zes pilootklanten in directionele validatie',
@@ -4819,9 +3142,9 @@
       en: 'The brief'
     },
     'hms.brief.title': {
-      fr: 'Industrial IoT mondial. <span class="accent">Trois plateformes legacy à réunifier.</span>',
-      nl: 'Wereldwijde Industrial IoT. <span class="accent">Drie legacy-platformen om te verenigen.</span>',
-      en: 'Global Industrial IoT. <span class="accent">Three legacy platforms to unify.</span>'
+      fr: 'Industrial IoT mondial. <span class="accent">eCatcher, M2Web, Talk2M à réunifier.</span>',
+      nl: 'Wereldwijde Industrial IoT. <span class="accent">eCatcher, M2Web, Talk2M te verenigen.</span>',
+      en: 'Global Industrial IoT. <span class="accent">eCatcher, M2Web, Talk2M to unify.</span>'
     },
     /* CVE 2026-05-12 · TL;DR Hero · 4 questions du recruteur en 90 secondes (HMS) */
     'hms.tldr.eyebrow': { fr: 'En 90 secondes', nl: 'In 90 seconden', en: 'In 90 seconds' },
@@ -4855,14 +3178,9 @@
       en: 'Ewon by HMS Networks. Entity based in Nivelles, Belgium. Subsidiary of a Swedish industrial group (Halmstad), European leader in industrial communication. Four brands in total · Anybus, Ewon, Ixxat, Intesis.'
     },
     'hms.brief.lead2': {
-      fr: 'Trois plateformes legacy à réunifier · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pression d\'IXON, startup cloud-native néerlandaise, user-centric depuis le premier jour · self-onboarding, freemium, persona-driven. Chez Ewon · plateformes orientées back-office IT, sans self-onboarding ni design system encore en place. UX, UI et culture user-centric · trois fronts simultanés à activer.',
-      nl: 'Drie legacy-platformen om te verenigen · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Druk van IXON, Nederlandse cloud-native start-up, user-centric vanaf dag één · self-onboarding, freemium, persona-driven. Bij Ewon · platformen gericht op IT-backoffice, zonder self-onboarding of design system al opgezet. UX, UI en user-centric cultuur · drie gelijktijdige fronten om te activeren.',
-      en: 'Three legacy platforms to unify · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Pressure from IXON, a Dutch cloud-native start-up, user-centric from day one · self-onboarding, freemium, persona-driven. At Ewon · platforms built for IT back-office, with self-onboarding and a design system still to put in place. UX, UI and user-centric culture · three simultaneous fronts to activate.'
-    },
-    'hms.brief.lead3': {
-      fr: 'À l\'arrivée · des outils techniques solides, des clients fidèles dans le monde entier, et une vraie envie d\'évoluer. Ce qui restait à activer · une vision produit unifiée, des parcours utilisateurs cohérents et une culture user-centric installée durablement.',
-      nl: 'Bij aankomst · solide technische tools, trouwe klanten wereldwijd, en een echte wens om te evolueren. Wat nog te activeren bleef · een gebundelde productvisie, samenhangende gebruikerstrajecten en een duurzaam verankerde user-centric cultuur.',
-      en: 'On arrival · solid technical tools, loyal customers worldwide, and a real desire to evolve. What remained to activate · a unified product vision, coherent user journeys, and a sustainably embedded user-centric culture.'
+      fr: 'Trois plateformes legacy à réunifier · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Plateformes orientées back-office IT, sans self-onboarding ni design system en place. UX, UI et culture user-centric à installer en parallèle.',
+      nl: 'Drie legacy-platformen om te verenigen · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Platformen gericht op IT-backoffice, zonder self-onboarding of design system. UX, UI en user-centric cultuur parallel op te bouwen.',
+      en: 'Three legacy platforms to unify · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Platforms built for IT back-office, with no self-onboarding and no design system in place. UX, UI and user-centric culture to install in parallel.'
     },
     'hms.brief.lead4': {
       fr: 'Mandat · installer le Design Thinking, la culture utilisateur et la transformation numérique dans une organisation historiquement IT-first. Mettre tous les chefs de département autour de la table · R&D, produit, business · et faire émerger un Concept Report priorisé que le sponsor pouvait défendre devant le board.',
@@ -4878,11 +3196,6 @@
       fr: 'À la sortie · <strong class="accent">Concept Report priorisé</strong> validé sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system prêt pour la production</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">2 M€ débloqués</strong> pour la mise en prod.',
       nl: 'Bij vertrek · <strong class="accent">Geprioriteerd Concept Report</strong> goedgekeurd door sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system klaar voor productie</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">2 M€ vrijgemaakt</strong> voor productie.',
       en: 'On exit · <strong class="accent">Prioritised Concept Report</strong> sponsor-validated <span class="brief-teaser__sep">·</span> <strong class="accent">design system ready for production</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">€2M unlocked</strong> for production.'
-    },
-    'hms.brief.toolkitSignal': {
-      fr: '<strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Service Design Relevance · Simplicity · Consistency.</strong> Pas Strategyzer · le business model d\'Ewon existait. Pas Design Sprint · le mandat était l\'unification durable, pas un MVP en cinq jours.',
-      nl: '<strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Service Design Relevance · Simplicity · Consistency.</strong> Geen Strategyzer · het business model van Ewon bestond al. Geen Design Sprint · het mandaat was duurzame unificatie, geen vijfdaagse MVP.',
-      en: '<strong>Customer Journey workshops + Heuristic Evaluation Nielsen + Service Design Relevance · Simplicity · Consistency.</strong> No Strategyzer · Ewon\'s business model existed. No Design Sprint · the mandate was lasting unification, not a five-day MVP.'
     },
     'hms.chapResearch.label': {
       fr: 'Phase 01 · Research',
@@ -5025,14 +3338,9 @@
       en: 'Against IXON, the Dutch cloud-native player targeting the same industrial IoT segment, Ewon established a defensible user-centric posture. The toolkit moved from supplier of technical tools to platform editor. Position consolidated, not eroded.'
     },
     'hms.outcome.integrity': {
-      fr: '<strong>Note d\'intégrité.</strong> Le Concept Report a été remis, validé, et présenté en comité de direction par le sponsor qui m\'avait engagé. Le sponsor a obtenu 2 M€ de budget supplémentaire et une promotion personnelle. Le rollout en production est ensuite passé en sprints Agile côté équipes Ewon, après mon départ.',
-      nl: '<strong>Integriteitsnota.</strong> Het Concept Report werd opgeleverd, gevalideerd en gepresenteerd aan het directiecomité door de sponsor die mij had aangesteld. De sponsor verkreeg 2 M€ extra budget en een persoonlijke promotie. De productie-rollout liep daarna in Agile sprints aan de Ewon-zijde, na mijn vertrek.',
-      en: '<strong>Integrity note.</strong> The Concept Report was delivered, validated and presented to the executive committee by the sponsor who hired me. The sponsor secured €2M in additional budget and a personal promotion. The production rollout then ran in Agile sprints on the Ewon side, after my departure.'
-    },
-    'hms.outcome.toolkitSignal': {
-      fr: '<strong>Le succès n\'est pas qu\'un chiffre, c\'est un transfert de culture.</strong> Une société purement IT a accepté de mettre l\'utilisateur au centre. Customer Journey workshops, Heuristic Evaluation Nielsen, Service Design Relevance/Simplicity/Consistency · le toolkit a fait le travail parce qu\'il a été choisi selon la maturité Agile d\'Ewon, pas par dogme. Et le sponsor a décroché le budget pour que ce travail vive en production.',
-      nl: '<strong>Succes is niet enkel een cijfer, het is een cultuuroverdracht.</strong> Een puur IT-bedrijf heeft aanvaard om de gebruiker centraal te zetten. Customer Journey workshops, Heuristic Evaluation Nielsen, Service Design Relevance/Simplicity/Consistency · de toolkit deed het werk omdat hij gekozen werd volgens de Agile-rijpheid van Ewon, niet uit dogma. En de sponsor haalde het budget binnen om dit werk in productie te laten leven.',
-      en: '<strong>Success isn\'t just a number, it\'s a culture transfer.</strong> A pure IT company accepted to put the user at the centre. Customer Journey workshops, Heuristic Evaluation Nielsen, Service Design Relevance/Simplicity/Consistency · the toolkit did the work because it was chosen according to Ewon\'s Agile maturity, not from dogma. And the sponsor secured the budget for this work to live in production.'
+      fr: '<strong>Note d\'intégrité.</strong> Le rollout production est passé en sprints Agile côté Ewon après mon départ.',
+      nl: '<strong>Integriteitsnota.</strong> De productie-rollout liep in Agile sprints aan Ewon-zijde na mijn vertrek.',
+      en: '<strong>Integrity note.</strong> Production rollout ran in Agile sprints on the Ewon side after my departure.'
     },
     'hms.lessons.eyebrow': {
       fr: 'Ce qu\'Ewon m\'a appris',
@@ -5045,9 +3353,9 @@
       en: 'Three levers <span class="accent">I would replay.</span>'
     },
     'hms.lessons.lead': {
-      fr: 'Un an après la livraison, trois choix méthodologiques tiennent encore. <strong>Rien à rejouer autrement</strong> · la mission a tenu son contrat, le sponsor a décroché le budget pour la mise en prod, et l\'organisation a accepté l\'utilisateur comme boussole.',
-      nl: 'Eén jaar na oplevering houden drie methodologische keuzes stand. <strong>Niets om anders te doen</strong> · de opdracht heeft haar contract gehouden, de sponsor heeft het productie-budget binnengehaald, en de organisatie heeft de gebruiker als kompas aanvaard.',
-      en: 'One year after delivery, three methodological choices still hold. <strong>Nothing to replay differently</strong> · the engagement held its contract, the sponsor secured the production budget, and the organisation accepted the user as compass.'
+      fr: 'Trois choix méthodologiques tiennent encore un an après. Mission tenue, budget décroché, utilisateur installé comme boussole.',
+      nl: 'Drie methodologische keuzes houden één jaar later nog stand. Opdracht gehouden, budget binnen, gebruiker als kompas verankerd.',
+      en: 'Three methodological choices still hold one year later. Mission held, budget secured, user installed as compass.'
     },
     'hms.lessons.l1.h': {
       fr: 'Le toolkit, pas l\'école.',
@@ -5185,9 +3493,9 @@
       en: 'How Business and IT eventually <span class="accent">spoke the same language.</span>'
     },
     'hms.alignment.lead': {
-      fr: 'Au démarrage, chaque rôle défendait sa lecture. Le Project Owner côté Business voulait des fonctionnalités vendables. Le Project Manager côté IT voulait une stack maintenable. Le Project Lead arbitrait sur le calendrier. <strong>Deux formats d\'atelier ont fait le pont.</strong> Des petits ateliers ciblés avec les Project Managers et les figures clés côté IT pour caler les arbitrages techniques. Des grands ateliers Customer Journey avec toutes les parties prenantes autour de la table, pour mettre le client au centre, pas l\'org chart.',
-      nl: 'Bij de start verdedigde elk rol zijn eigen lezing. De Project Owner aan de Business-zijde wilde verkoopbare features. De Project Manager aan de IT-zijde wilde een onderhoudbare stack. De Project Lead arbitreerde over het tijdpad. <strong>Twee workshop-formaten hebben de brug geslagen.</strong> Kleine gerichte workshops met Project Managers en sleutelfiguren aan IT-zijde om de technische afwegingen vast te leggen. Grote Customer Journey workshops met alle stakeholders rond de tafel, om de klant centraal te zetten in plaats van het org chart.',
-      en: 'At the start, each role defended their own reading. The Project Owner on the Business side wanted sellable features. The Project Manager on the IT side wanted a maintainable stack. The Project Lead arbitrated the timeline. <strong>Two workshop formats bridged it.</strong> Small targeted workshops with Project Managers and key IT figures to lock down technical trade-offs. Large Customer Journey workshops with all stakeholders at the table, to put the customer at the centre, not the org chart.'
+      fr: '<strong>Deux formats d\'atelier ont fait le pont.</strong> Petits ateliers ciblés avec les Project Managers IT pour caler les arbitrages techniques. Grands ateliers Customer Journey avec toutes les parties prenantes pour mettre le client au centre, pas l\'org chart.',
+      nl: '<strong>Twee workshopformaten hebben de brug geslagen.</strong> Kleine gerichte workshops met de IT Project Managers voor de technische afwegingen. Grote Customer Journey workshops met alle stakeholders om de klant centraal te zetten in plaats van het org chart.',
+      en: '<strong>Two workshop formats bridged it.</strong> Small focused workshops with IT Project Managers to lock down technical trade-offs. Large Customer Journey workshops with all stakeholders to put the customer at the centre, not the org chart.'
     },
     'hms.alignment.f1.fn': {
       fr: 'Product Owner · Ewon Nivelles',
@@ -5265,14 +3573,14 @@
       en: 'The value contract'
     },
     'hms.vp.lede': {
-      fr: 'Avant la VP, chaque rôle défendait sa lecture. Project Owners voulaient des features vendables. Project Managers voulaient une stack maintenable. Les clients juxtaposaient cinq logins. Après, une phrase tient debout : <strong>un host orchestré, des personas reconnus, dix douleurs traduites en cinq livrables MVP, six de plus en MVP++</strong>. C\'est cette VP qui rend l\'Ideation légitime.',
-      nl: 'Voor de VP verdedigde elk rol zijn eigen lezing. Project Owners wilden verkoopbare features. Project Managers wilden een onderhoudbare stack. Klanten jongleerden met vijf logins. Daarna houdt één zin stand · <strong>een georkestreerde host, herkende persona\'s, tien pijnen vertaald in vijf MVP-leveringen, zes erbij in MVP++</strong>. Het is deze VP die de Ideation legitiem maakt.',
-      en: 'Before the VP, each role defended their reading. Project Owners wanted sellable features. Project Managers wanted a maintainable stack. Customers juggled five logins. After, one sentence stands · <strong>an orchestrated host, recognised personas, ten pains translated into five MVP deliverables, six more in MVP++</strong>. This VP is what makes the Ideation legitimate.'
+      fr: '<strong>Un host orchestré, deux personas reconnus, dix douleurs traduites en cinq livrables MVP, six en MVP++.</strong>',
+      nl: '<strong>Eén georkestreerde host, twee herkende persona\'s, tien pijnen vertaald in vijf MVP-leveringen, zes in MVP++.</strong>',
+      en: '<strong>An orchestrated host, two recognised personas, ten pains translated into five MVP deliverables, six more in MVP++.</strong>'
     },
     'hms.vp.bridgeText': {
-      fr: 'À la sortie de cette VP, <strong>Project Owners (Business), Project Managers (IT), Operations et Sales</strong> partagent la même phrase, les mêmes deux personas, la même traduction des dix douleurs en cinq livrables MVP. C\'est ce <span class="accent">socle commun</span> qui rend l\'Ideation légitime. On n\'arbitre plus sur le « quoi », on arbitre sur le « quand » et le « comment ».',
-      nl: 'Aan het einde van deze VP delen <strong>Project Owners (Business), Project Managers (IT), Operations en Sales</strong> dezelfde zin, dezelfde twee persona\'s, dezelfde vertaling van de tien pijnen in vijf MVP-leveringen. Dat is de <span class="accent">gemeenschappelijke basis</span> die de Ideation legitiem maakt. Er wordt niet meer afgewogen over het « wat », maar over het « wanneer » en het « hoe ».',
-      en: 'At the end of this VP, <strong>Project Owners (Business), Project Managers (IT), Operations and Sales</strong> share the same sentence, the same two personas, the same translation of the ten pains into five MVP deliverables. This <span class="accent">common foundation</span> is what makes the Ideation legitimate. We no longer arbitrate on the « what », we arbitrate on the « when » and the « how ».'
+      fr: '<strong>Project Owners, Project Managers IT, Operations, Sales</strong> partagent la même phrase. L\'arbitrage passe du « quoi » au « quand » et au « comment ».',
+      nl: '<strong>Project Owners, Project Managers IT, Operations, Sales</strong> delen dezelfde zin. Het arbitrage verschuift van het « wat » naar het « wanneer » en het « hoe ».',
+      en: '<strong>Project Owners, Project Managers IT, Operations, Sales</strong> share the same sentence. Arbitration shifts from the "what" to the "when" and the "how".'
     },
     'hms.vp.bridgeNext': {
       fr: 'Suite logique <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 directions explorées, une retenue',
@@ -5305,9 +3613,9 @@
       en: 'From Business ↔ IT friction to an MVP everyone signs. Four methodological acts, co-creation workshops as backbone, customer focus as shared compass.'
     },
     'hms.proposed.cap': {
-      fr: 'À la sortie : un MVP one-stop platform priorisé en user stories, signé Project Owners (Business) · Project Managers (IT) · Operations · Sales. Six clients de typologies différentes ont validé le concept. Sponsor go prod. Ce qui suit montre ce qui s\'est joué à chaque étape.',
-      nl: 'Bij de uitgang · een one-stop platform MVP geprioriteerd in user stories, ondertekend door Project Owners (Business) · Project Managers (IT) · Operations · Sales. Zes klanten van verschillende typologieën hebben het concept gevalideerd. Sponsor go prod. Wat volgt toont wat er bij elke stap is gebeurd.',
-      en: 'On exit · a one-stop platform MVP prioritised in user stories, signed by Project Owners (Business) · Project Managers (IT) · Operations · Sales. Six customers of different typologies validated the concept. Sponsor go prod. What follows shows what played out at each step.'
+      fr: 'MVP one-stop platform priorisé en user stories. Signé Project Owners, Project Managers IT, Operations, Sales. 8 machine builders valident. Sponsor go prod.',
+      nl: 'One-stop platform MVP geprioriteerd in user stories. Ondertekend door Project Owners, Project Managers IT, Operations, Sales. 8 machinebouwers valideren. Sponsor go prod.',
+      en: 'One-stop platform MVP prioritised in user stories. Signed by Project Owners, Project Managers IT, Operations, Sales. 8 machine builders validate. Sponsor go prod.'
     },
     'hms.proposed.storyEyebrow': {
       fr: 'Le fil conducteur · 4 phases × 4 jalons',
@@ -5497,11 +3805,6 @@
       nl: '3 segmenten · OEM Machine Builders · End-User Plants · Integrators / Resellers <span class="brief-teaser__sep">·</span> concurrenten · IXON, Welotec, Tosibox.',
       en: '3 segments · OEM Machine Builders · End-User Plants · Integrators / Resellers <span class="brief-teaser__sep">·</span> competitors · IXON, Welotec, Tosibox.'
     },
-    'hms.research.benchSource': {
-      fr: 'Source · Ewon by HMS Networks · benchmark concurrentiel 2021-2022. Concurrents · IXON (Pays-Bas), Welotec (DE), Tosibox (FI).',
-      nl: 'Bron · Ewon by HMS Networks · competitive benchmark 2021-2022. Concurrenten · IXON (Nederland), Welotec (DE), Tosibox (FI).',
-      en: 'Source · Ewon by HMS Networks · competitive benchmark 2021-2022. Competitors · IXON (Netherlands), Welotec (DE), Tosibox (FI).'
-    },
     'hms.research.benchTitle': {
       fr: 'Trois segments marché. <span class="accent">Trois logiques d\'achat.</span>',
       nl: 'Drie marktsegmenten. <span class="accent">Drie aankooplogica\'s.</span>',
@@ -5591,11 +3894,6 @@
       fr: 'Field Service Engineer · <span class="accent">End-User Plant Operator</span>',
       nl: 'Field Service Engineer · <span class="accent">End-User Plant Operator</span>',
       en: 'Field Service Engineer · <span class="accent">End-User Plant Operator</span>'
-    },
-    'hms.research.deepdiveSource': {
-      fr: 'Source · Phoenix AS-IS &amp; TO-BE Analysis HMS 2021-2022 · 6 expert interviews internes + 8 customer interviews internationaux · profils composites.',
-      nl: 'Bron · Phoenix AS-IS &amp; TO-BE Analysis HMS 2021-2022 · 6 interne expert interviews + 8 internationale customer interviews · composietprofielen.',
-      en: 'Source · Phoenix AS-IS &amp; TO-BE Analysis HMS 2021-2022 · 6 internal expert interviews + 8 international customer interviews · composite profiles.'
     },
     'hms.research.it1Context': {
       fr: 'Veut un produit qui défend la position de leader face à IXON cloud-native.',
@@ -5696,11 +3994,6 @@
       fr: 'Six chefs de département · R&amp;D, produit, business, service après-vente, support.',
       nl: 'Zes departementshoofden · R&amp;D, product, business, after-sales, support.',
       en: 'Six department heads · R&amp;D, product, business, after-sales, support.'
-    },
-    'hms.research.itSource': {
-      fr: '6 expert interviews Ewon &amp; HMS Halmstad, 2021. Noms anonymisés, disponibles sur demande.',
-      nl: '6 expert interviews Ewon &amp; HMS Halmstad, 2021. Namen geanonimiseerd, op aanvraag beschikbaar.',
-      en: '6 expert interviews Ewon &amp; HMS Halmstad, 2021. Names anonymised, available on request.'
     },
     'hms.research.itTitle': {
       fr: 'On écoute <span class="accent">avant de dessiner.</span>',
@@ -6117,19 +4410,14 @@
       en: 'Everything converges on <span class="accent">a single VP.</span>'
     },
     'hms.analyse.vpConvergeIntro': {
-      fr: 'Douze experts internes. Six clients interviewés. Dix personas testés terrain. Trois segments marché. Dix pain points cartographiés. Quatre ateliers cocréation. Tout converge. Pas vers un canvas, vers une phrase.',
-      nl: 'Twaalf interne experts. Zes geïnterviewde klanten. Tien personas getest in het veld. Drie marktsegmenten. Tien gecarteerde pain points. Vier co-creatie workshops. Alles convergeert. Niet naar een canvas, maar naar één zin.',
-      en: 'Twelve internal experts. Six customers interviewed. Ten personas field-tested. Three market segments. Ten pain points mapped. Four co-creation workshops. Everything converges. Not on a canvas, on one sentence.'
+      fr: 'Tout converge vers une phrase, pas vers un canvas.',
+      nl: 'Alles convergeert naar één zin, niet naar een canvas.',
+      en: 'Everything converges on one sentence, not on a canvas.'
     },
     'hms.analyse.vpEyebrow': {
       fr: 'Au bout du diamant 1',
       nl: 'Aan het einde van diamant 1',
       en: 'End of diamond 1'
-    },
-    'hms.analyse.vpSource': {
-      fr: 'Source · Strategic Process Proposal HMS 2021 · synthèse Discovery + Heuristic Evaluation Nielsen 29 slides + Customer Journey workshops worldwide.',
-      nl: 'Bron · Strategic Process Proposal HMS 2021 · synthese Discovery + Heuristic Evaluation Nielsen 29 slides + Customer Journey workshops worldwide.',
-      en: 'Source · Strategic Process Proposal HMS 2021 · Discovery synthesis + Heuristic Evaluation Nielsen 29 slides + Customer Journey workshops worldwide.'
     },
     'hms.analyse.ws1Desc': {
       fr: 'Project Owners et Project Managers à la même table. Chacun construit l\'empathy map d\'un persona, puis confronte sa lecture. On découvre qu\'on parle du même utilisateur.',
@@ -6841,11 +5129,6 @@
       fr: 'Integrator',
       nl: 'Integrator',
       en: 'Integrator'
-    },
-    'hms.prototype.utSource': {
-      fr: '8 machine builders · 5 fuseaux horaires Europe, US, Asie · Ewon HMS Concept Report 2022',
-      nl: '8 machine builders · 5 tijdzones Europa, US, Azië · Ewon HMS Concept Report 2022',
-      en: '8 machine builders · 5 time zones Europe, US, Asia · Ewon HMS Concept Report 2022'
     },
     'hms.prototype.utStat1': {
       fr: 'Machine builders valident',

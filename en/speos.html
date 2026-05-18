@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SPEOS One-Stop Platform · Service Design Case Study by Christophe van Engelen</title>
-<meta name="description" content="Service design case study: installing a one-stop platform at SPEOS, a bpost subsidiary. 12 expert interviews, 10 pain points, 5 MVP Value Props, 6 pre-validating pilot customers including Luminus." />
+<title>One-Stop Platform — SPEOS bpost group · Case Study Service Design</title>
+<meta name="description" content="Étude de cas Service Design · installer la fonction UX dans une filiale postale du groupe bpost. 12 entretiens experts internes, 6 clients pilotes sur 6 valident la direction, dont Luminus." />
 <meta name="author" content="Christophe van Engelen" />
 <meta name="theme-color" content="#0a1220" />
 <meta name="color-scheme" content="dark light" />
@@ -16,8 +16,8 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Christophe van Engelen" />
 <meta property="og:url" content="https://christophevanengelen.com/en/speos.html" />
-<meta property="og:title" content="SPEOS One-Stop Platform · Service Design Case Study by Christophe van Engelen" />
-<meta property="og:description" content="Service design case study: installing a one-stop platform at SPEOS, a bpost subsidiary. 12 expert interviews, 10 pain points, 5 MVP Value Props, 6 pre-validating pilot customers including Luminus." />
+<meta property="og:title" content="One-Stop Platform — SPEOS bpost group · Case Study" />
+<meta property="og:description" content="Douze mois pour installer la fonction UX dans une filiale postale du groupe bpost. 12 entretiens experts · 76 pages signées sponsor · 6 clients pilotes sur 6 valident la direction, dont Luminus." />
 <meta property="og:image" content="https://christophevanengelen.com/public/img/og/og-speos.jpg" />
 <meta property="og:image:type" content="image/webp" />
 <meta property="og:image:width" content="2048" />
@@ -35,8 +35,8 @@
 <meta property="article:tag" content="Digital Transformation" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="SPEOS One-Stop Platform · Service Design Case Study by Christophe van Engelen" />
-<meta name="twitter:description" content="Service design case study: installing a one-stop platform at SPEOS, a bpost subsidiary. 12 expert interviews, 10 pain points, 5 MVP Value Props, 6 pre-validating pilot customers including Luminus." />
+<meta name="twitter:title" content="One-Stop Platform — SPEOS bpost group · Case Study" />
+<meta name="twitter:description" content="J'ai installé le Service Design dans un postal industriel 100 % IT en pleine bascule Agile. 6 clients pilotes valident, dont Luminus." />
 <meta name="twitter:image" content="https://christophevanengelen.com/public/img/og/og-speos.jpg" />
 <meta name="twitter:image:alt" content="SPEOS bpost group — One-Stop Platform, étude de cas Service Design." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
      OBLIGATOIRE en premier · contient keyframes, custom properties, classes
      utilities. Cf MOTION-GRAMMAR-TEMPLATE.md à la racine pour clonage cases. -->
 <link rel="stylesheet" href="/assets/motion-tokens.css?v=v1">
-<link rel="stylesheet" href="/assets/style.css?v=20260504-s8">
+<link rel="stylesheet" href="/assets/style.css?v=20260517-s29">
 
 <!-- CVE 2026-05-04 S1.4 · Schema.org Article + BreadcrumbList -->
 <script type="application/ld+json">
@@ -113,15 +113,16 @@
     will-change: transform, opacity;
     /* CVE 2026-05-01 : zoom-in propre à l'arrivée pour embarquer émotionnellement.
        Doublé : démarre à 1.36 (très présent), résout à 1.06 (état neutre que le parallax reprend). */
-    animation: hcx-zoom-in 2.6s cubic-bezier(.22,.61,.36,1) both;
+    /* CVE 2026-05-17 · keyframe sans transform (GSAP gère scale + yPercent du parallax) */
+    animation: hcx-fade-in 1.6s cubic-bezier(.22,.61,.36,1) both;
   }
-  @keyframes hcx-zoom-in {
-    from { transform: scale(1.36); opacity: 0.30; filter: saturate(0.35) contrast(1.30) brightness(0.50) blur(5px); }
+  @keyframes hcx-fade-in {
+    from { opacity: 0.30; filter: saturate(0.35) contrast(1.30) brightness(0.50) blur(5px); }
     60%  { opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82) blur(0); }
-    to   { transform: scale(1.06); opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82); }
+    to   { opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .hcx__bg img { animation: none; transform: scale(1.06); }
+    .hcx__bg img { animation: none; }
   }
   .hcx__veil {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
@@ -165,6 +166,12 @@
   .hcx__client-name {
     font-size: 11px; font-weight: 700; letter-spacing: .20em; text-transform: uppercase;
     color: rgba(242,235,219,0.88);
+  }
+  .hcx__client-logo {
+    height: 26px;
+    width: auto;
+    display: block;
+    opacity: 0.92;
   }
   .hcx__client-period {
     font-size: 11px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase;
@@ -1235,7 +1242,7 @@
   <div class="hcx__grain"></div>
   <div class="hcx__grid">
     <div class="hcx__client">
-      <span class="hcx__client-name">SPEOS</span>
+      <img class="hcx__client-logo" src="/public/img/logos/clients/speos.svg" alt="SPEOS" width="100" height="28" loading="eager" decoding="async"/>
       <span class="hcx__client-period">2024 — 2025</span>
     </div>
     <div class="hcx__period">
@@ -1248,10 +1255,6 @@
         <span class="hcx__hl2" data-i18n="speos.hero.h1.alt">in a postal subsidiary of the bpost group.</span>
       </h1>
       <p class="hcx__lead" data-i18n="speos.hero.lead">Freelance mission of twelve months. Large-scale document production, key accounts in banking, insurance, telecoms, energy. Mandate · lay down the Service Design method, align Business and IT, deliver a sponsor-ready Concept Report and a prioritised MVP.</p>
-      <div class="hcx__role">
-        <span class="hcx__role-label" data-i18n="speos.hero.metaRole">CX / UX / Service Design Consultant · Freelance</span>
-        <span class="hcx__role-where" data-i18n="speos.hero.metaWhere">December 2024 · December 2025 · 12 months</span>
-      </div>
     </div>
   </div>
   <div class="hcx__scroll">
@@ -1318,7 +1321,7 @@
       <span class="tldr-label" data-i18n="speos.tldr.l2">The tension</span>
       <p class="tldr-text" data-i18n="speos.tldr.t2">Business was defending revenue. IT was building Agile in parallel. The UX function did not yet exist as a dedicated department. Three worlds to bring into the same conversation.</p>
       <span class="tldr-label" data-i18n="speos.tldr.l3">What I did</span>
-      <p class="tldr-text" data-i18n="speos.tldr.t3">Twelve months. 12 internal expert interviews (CEO, CTO, R&amp;D, Operations). 6 pilot customers interviewed, including Luminus on energy billing. Physical Customer Journey workshop, persona Johnny on the wall.</p>
+      <p class="tldr-text" data-i18n="speos.tldr.t3">12 internal expert interviews (CEO, CTO, R&amp;D, Operations). 6 pilot customers interviewed, including Luminus on energy billing. Physical Customer Journey workshop, persona Johnny on the wall.</p>
       <span class="tldr-label" data-i18n="speos.tldr.l4">What came out of it</span>
       <p class="tldr-text" data-i18n="speos.tldr.t4">76-page Concept Report signed by sponsor. 6 out of 6 customers validate. Three market segments (Large Accounts, Easy2Mail SMEs, API Integrators) prioritised in SAFe sprints. Design team integrated into the org chart.</p>
     </div>
@@ -1342,9 +1345,9 @@
 
     <p class="lead" style="max-width: 70ch;" data-i18n="speos.brief.lead1">SPEOS, a postal subsidiary of the bpost group. Large-scale document production for key accounts in banking, insurance, telecoms and energy. The UX function did not exist as a dedicated department.</p>
 
-    <p class="lead" style="max-width: 70ch;" data-i18n-html="speos.brief.lead2">The pattern of a dedicated UX department has been deployed for fifteen years in the United States and ten years in Europe across large Belgian accounts (banking, energy, telecoms). SPEOS chose to adopt it in turn, in line with the B2G PEPPOL mandate of 1 January 2026 and the competitive pressure of digital-first players.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n-html="speos.brief.lead2">The dedicated UX department pattern, deployed in large Belgian accounts, SPEOS chose to adopt. Catalyst · B2G PEPPOL mandate of 1 January 2026 and competitive pressure of digital-first players.</p>
 
-    <p class="lead" style="max-width: 70ch;" data-i18n="speos.brief.lead3">At my arrival, two product initiatives were under way. Archetype, the refactor of the E2M platform, run internally on an Angular stack. Communication Platform, born from the Ethias tender opportunity, run with external resources on a React stack. Both relied on the same stream platform back-end. The direction sought a unified product vision for the next stage. The onboarding of a UX consultant was registered in the exec review of 21 November 2024.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n="speos.brief.lead3">Two initiatives were under way · Archetype (E2M refactor, Angular) and Communication Platform (out of the Ethias tender, React). Same stream platform back-end. The direction sought a unified product vision · UX consultant onboarding registered in the 21 November 2024 exec review.</p>
   </div>
 </section>
 
@@ -1648,9 +1651,9 @@
 <section id="research-interviews" data-act="S" data-rail="vertical" data-frame="default" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="speos.research.itEyebrow">Phase 01 · Discover · internal interviews</span>
-    <h3 class="research-h3" data-reveal="title" data-i18n-html="speos.research.itTitle">First step · <span class="accent">listen to those who run SPEOS.</span></h3>
-    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.research.itOutcome">12 internal expert interviews <span class="brief-teaser__sep">·</span> 6 functional archetypes covered <span class="brief-teaser__sep">·</span> Management, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> conducted in the first weeks of the mission.</p>
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="speos.research.itLead">Management, IT, operations, domain experts with 20+ years of seniority. Goal · understand the organisation as it is, the postal-mailing trade as practised daily, and what each role expects from a unified platform. Not to sell the method. To ground it on the field.</p>
+    <h3 class="research-h3" data-reveal="title" data-i18n-html="speos.research.itTitle">Listen <span class="accent">before drawing.</span></h3>
+    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.research.itOutcome">Management, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> 20+ years seniority.</p>
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="speos.research.itLead">Understand how SPEOS runs its business, and what each role expects of a unified platform.</p>
 
     <ol class="it-grid" role="list">
       <li class="it-card">
@@ -1726,8 +1729,6 @@
         <p class="it-context" data-i18n="speos.research.it6Context">The arm of delivery. Direct visibility on what breaks on the end-client side.</p>
       </li>
     </ol>
-    <p class="research-source" data-i18n="speos.research.itSource">12 internal expert interviews · CEO, CTO, Operations Director, ICT Operational Manager, Customer Service Manager, Production Manager, Marketing Director, Sales Director, Key Account Manager, IT Product Owner, IT Quality Assurance · names cited in the Concept Report (Vanhaeren, Damsin, Ide, Diederich, Roelands, Delcourt, D'hooge, Germonpré, Tran…) · 2024</p>
-
   </div>
 </section>
 
@@ -1737,13 +1738,10 @@
 <section id="research-customers" data-act="S" data-rail="vertical" data-frame="default" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="speos.research.custEyebrow">Phase 01 · Discover · 6 pilot clients</span>
-    <h3 class="research-h3" data-reveal="title" data-i18n-html="speos.research.custTitle">Six clients. <span class="accent">Three segments. One platform at the end.</span></h3>
+    <h3 class="research-h3" data-reveal="title" data-i18n-html="speos.research.custTitle">Six clients. <span class="accent">Three segments.</span></h3>
     <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.research.custOutcome">Build-to-Mail · Easy2Mail · Channel <span class="brief-teaser__sep">·</span> two accounts per segment <span class="brief-teaser__sep">·</span> 22 questions, 6 themes</p>
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="speos.research.custLead">The twelve internal experts read the organisation. The six clients read the service as they experience it. This dual listening reveals the true journey · what SPEOS believes it delivers versus what the client actually receives.</p>
-    <p class="lead" style="max-width: 70ch;" data-i18n-html="speos.research.custLead2"><strong>The same six return for the final user test.</strong> We close the loop with those who opened it. That's what turns intent into measurable signal.</p>
-
-    <p class="research-source" style="margin-top: 32px;" data-i18n="speos.research.custSource">Source · Customer Interview Guide held in session · Concept Report SPEOS 2024 for the 3 segments mapping · the same six clients return for the final user test.</p>
-
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="speos.research.custLead">Internal experts read the organisation. Clients read the service as they live it.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n-html="speos.research.custLead2"><strong>The same six return for the final user test.</strong></p>
     <a class="source-link" href="/public/Speos_Customer_Interview_Guide.pdf" target="_blank" rel="noopener" style="margin-top:24px;">
       <span class="source-link__lab" data-i18n="speos.research.guideLab">See the customer interview guide used</span>
       <span class="source-link__ref" data-i18n="speos.research.guideRef">Customer Interview Guide · 22 questions · 6 themes (Background · Customer Journey · Pain Points · Automation · Billing · Recommendations)</span>
@@ -1817,7 +1815,6 @@
         </ul>
       </article>
     </div>
-    <p class="research-source" data-i18n="speos.research.benchSource">Source · SPEOS Concept Report · pages 7-8 · 3 market segments · 2024-2025. Competitors observed in parallel: Easypost, Doccle, European digital mail platforms.</p>
   </div>
 </section>
 
@@ -1825,8 +1822,11 @@
 <section id="research-personas" data-act="S" data-rail="vertical" data-frame="wide" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="speos.research.persoEyebrow">Phase 01 · Discover · personas</span>
-    <h3 class="research-h3" data-i18n-html="speos.research.persoTitle">12 experts. 10 field-tested personas. <span class="accent">8 synthesised archetypes.</span></h3>
-    <p class="lead" data-i18n="speos.research.persoLead">Drawn from the 12 internal expert interviews and the 10 field-tested personas. Synthesised into 8 archetypes in the Concept Report. The map that served as compass to prioritise the MVP: who we talk to, at what moment in the cycle, and with what tone.</p>
+    <h3 class="research-h3" data-i18n-html="speos.research.persoTitle">Eight archetypes. <span class="accent">Two illustrative personas.</span></h3>
+    <p class="lead" data-i18n="speos.research.persoLead">Synthesised from the internal and field interviews. The map that prioritises the MVP, who we speak to and at which point in the cycle.</p>
+
+    <!-- BNP→SPEOS sync 2026-05-17 v11 NN brutal cut -->
+
 
     <div class="personas-grid" role="list">
       <div class="persona-card" role="listitem">
@@ -1923,8 +1923,6 @@
         <p class="persona-card__desc" data-i18n="speos.research.perso8Desc">Embeds SPEOS in his offer. Stable APIs, clear doc, no integration friction.</p>
       </div>
     </div>
-    <p class="research-source" data-i18n="speos.research.persoSource">Source · Speos Concept Report 2024 · 8 "Potential Personas" archetypes synthesised from 12 internal expert interviews + 10 field-tested personas.</p>
-
     <!-- DEEP-DIVE · 2 personas illustratifs nominatifs -->
     <div class="personas-deepdive" style="margin-top:64px;padding-top:48px;border-top:1px solid var(--rule);">
       <span class="eyebrow" data-i18n="speos.research.deepdiveEyebrow">Deep-dive · 2 illustrative personas</span>
@@ -1957,8 +1955,6 @@
           </ul>
         </article>
       </div>
-
-      <p class="research-source" style="margin-top:32px;" data-i18n="speos.research.deepdiveSource">Source · personna_speos.docx · Speos research 2024-2025 · 2 personas in deep-dive on 10 field-tested · 8 synthesised archetypes in the Concept Report.</p>
     </div>
   </div>
 </section>
@@ -2000,7 +1996,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.analyse.cjmEyebrow">Phase 02 · Define · AS-IS Customer Journey</span>
     <h3 class="research-h3" data-reveal="title" data-i18n-html="speos.analyse.cjmTitle">An end-to-end journey. <span class="accent">Ten frictions mapped.</span></h3>
-    <p class="lead" data-i18n="speos.analyse.cjmLead">Not a hypothetical canvas. A real journey, walked step by step with the 12 internal experts and the 6 interviewed customers. On that line, ten pain points emerged, each pinned where it actually blocks. It is that journey, not a Lean Canvas, that became the shared language across all departments.</p>
+    <p class="lead" data-i18n="speos.analyse.cjmLead">End-to-end journey. Ten pain points pinned where they block. Shared language across departments.</p>
 
     <!-- CJM stage : 5 phases × sentiment line × 10 pain points overlaid -->
     <div class="cjm-board" role="img" aria-labelledby="cjm-title cjm-desc">
@@ -2297,7 +2293,9 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.analyse.oppEyebrow">Phase 02 · Define · 11 opportunities</span>
     <h3 class="research-h3" data-i18n-html="speos.analyse.oppTitle">From pains <span class="accent">to chances.</span></h3>
-    <p class="lead" data-i18n-html="speos.analyse.oppLead">The shift from the ten pain points to the <strong>eleven opportunities</strong> is the key arbitration of the Analysis phase. No shortcut: each pain was reformulated as a chance to innovate, sourced verbatim from the Concept Report. These eleven tracks are not all MVP-scoped. Five become delivered Value Props, six are placed in MVP++ phase 2.</p>
+    <p class="lead" data-i18n-html="speos.analyse.oppLead">10 pain points reframed as 11 opportunities. <strong>Five become MVP Value Props, six placed in MVP++ phase 2.</strong></p>
+    <!-- sync v11 -->
+
 
     <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:32px;list-style:none;padding:0;" role="list">
       <li class="ws-card" data-opp="01" style="padding:24px;">
@@ -2356,8 +2354,6 @@
         <p class="ws-desc" data-i18n-html="speos.analyse.opp11Desc">Advanced analytics, fallback mechanisms, "One Stop Shop" positioning. <em>MVP++.</em></p>
       </li>
     </ol>
-
-    <p class="research-source" data-i18n="speos.analyse.oppSource">Source · Speos Concept Report 2024 · "11 Opportunities for Innovation" verbatim · synthesis of 12 internal expert interviews + 6 customer interviews.</p>
   </div>
 </section>
 
@@ -2369,7 +2365,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.analyse.wsEyebrow">Phase 02 · Define · co-creation workshops</span>
     <h3 class="research-h3" data-i18n-html="speos.analyse.wsTitle">The shared language. <span class="accent">In workshop, not in canvas.</span></h3>
-    <p class="lead" data-i18n-html="speos.analyse.wsLead">To align Business, IT and Operations on the customer voice, we had to leave the slides. <strong>Two workshop regimes</strong> paced the Analysis phase. <strong>Small targeted workshops</strong> with the Project Managers and key IT figures, in a tight group at the board, to lock technical trade-offs. <strong>Large Customer Journey workshops</strong> with all stakeholders around the table, Business, IT, Operations, Customer Service, to put the customer at the centre, not the org chart. Four formats in total, each with a concrete deliverable. It is through these workshops that the VP appeared, not through a theoretical canvas.</p>
+    <p class="lead" data-i18n-html="speos.analyse.wsLead">Two regimes · small targeted workshops with IT Project Managers for technical trade-offs, large Customer Journey workshops with Business, IT, Operations and Customer Service. Four formats, four deliverables.</p>
 
     <ol class="ws-grid" role="list">
       <li class="ws-card" data-ws="01">
@@ -2433,8 +2429,6 @@
         <p class="ws-output" data-i18n="speos.analyse.ws4Output">Output: VP in one sentence · alignment signed · go for Diamond 2.</p>
       </li>
     </ol>
-
-    <p class="research-source" data-i18n="speos.analyse.wsSource">Service Design approach · Customer Journey + Pain Points overlay · adapted to an early-Agile organisation in change management. No Lean Canvas. Conversation and the workshop as tools.</p>
   </div>
 </section>
 
@@ -2479,8 +2473,6 @@
           </tr>
         </tbody>
       </table>
-
-      <p class="research-source" style="margin-top:16px;" data-i18n="speos.method.compSource">Source · CVE methodological pitch carried internally at SPEOS · 2024.</p>
     </div>
   </div>
 </section>
@@ -2494,7 +2486,7 @@
 
     <span class="eyebrow vp-eyebrow" data-i18n="speos.analyse.vpEyebrow">At the end of diamond 1</span>
     <h2 class="vp-cliffhanger" data-i18n-html="speos.analyse.vpCliffhanger">Everything converges on <span class="accent">a single VP.</span></h2>
-    <p class="vp-pyramid-intro" data-i18n="speos.analyse.vpConvergeIntro">Twelve internal experts. Six interviewed customers. Ten personas tested in the field. Three market segments. Ten pain points mapped. Four co-creation workshops. Everything converges. Not into a canvas, into a sentence.</p>
+    <p class="vp-pyramid-intro" data-i18n="speos.analyse.vpConvergeIntro">Four Discovery + Analysis inputs converge into one sentence, not into a canvas.</p>
 
     <!-- CONVERGENCE diagram · 4 inputs → 1 output (la VP) · pure CSS, narratif léger -->
     <div class="vp-converge" aria-hidden="true">
@@ -2514,8 +2506,6 @@
         <span class="vp-converge__output-hint">À découvrir juste en dessous.</span>
       </div>
     </div>
-
-    <p class="research-source" data-i18n="speos.analyse.vpSource">Source · SPEOS Concept Report 2024-2025 · synthesis of Discovery + Analysis + co-creation workshops</p>
   </div>
 </section>
 
@@ -2555,7 +2545,9 @@
   <div class="container vp-content">
     <span class="eyebrow vp-content__eyebrow" data-i18n="speos.vp.eyebrow">The value contract</span>
     <h2 class="vp-content__title" data-i18n-html="speos.vp.title">A platform is not <span class="accent">five entry doors.</span><br>It is an orchestration that tunes itself to the persona in front of it.</h2>
-    <p class="vp-content__lede" data-i18n-html="speos.vp.lede">Before the VP, each role defended its reading. Project Owners wanted sellable features. Project Managers wanted a maintainable stack. Clients juggled five logins. After, one sentence stands: <strong>an orchestrated host, recognised personas, ten pains translated into five MVP deliverables, six more in MVP++</strong>. That VP is what makes Ideation legitimate.</p>
+    <p class="vp-content__lede" data-i18n-html="speos.vp.lede">Before · POs wanted features, PMs a stack, clients five logins. After · <strong>an orchestrated host · 10 pains → 5 MVP deliverables + 6 MVP++</strong>.</p>
+    <!-- sync v11 vp -->
+
 
     <!-- TRIPTYQUE · 3 piliers : posture / 2 personas illustratifs / traduction 10→11→5 -->
     <div class="vp-content__grid">
@@ -2625,7 +2617,9 @@
 
     <!-- BAS DE PAGE · alignement obtenu + bascule Ideation -->
     <div class="vp-content__bridge">
-      <p class="vp-content__alignement" data-i18n-html="speos.vp.bridgeText">At the exit of this VP, <strong>Project Owners (Business), Project Managers (IT), Operations and Sales</strong> share the same sentence, the same two personas, the same translation of ten pains into five MVP deliverables. It is that <span class="accent">shared foundation</span> that makes Ideation legitimate. No more arbitration on the "what", arbitration on the "when" and "how".</p>
+      <p class="vp-content__alignement" data-i18n-html="speos.vp.bridgeText">Project Owners, Project Managers, Operations and Sales share the same sentence. <span class="accent">Shared foundation signed.</span> Arbitration moves from "what" to "when".</p>
+      <!-- sync v11 vp bridge -->
+
       <span class="vp-content__next" data-i18n-html="speos.vp.bridgeNext">Logical next <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 directions explored, one retained</span> <strong>Ideation</strong> · 2 directions, une retenue</span>
     </div>
   </div>
@@ -2665,7 +2659,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.prototype.directionEyebrow">Phase 03 · Develop · 2 directions explored</span>
     <h2 class="vp-hero__title" data-i18n-html="speos.prototype.directionTitle">Two directions explored. <span class="accent">One retained.</span></h2>
-    <p class="lead vp-hero__lead" data-i18n-html="speos.prototype.directionLead">Out of the Customer Journey workshops, two paths were on the table. On the left, keep each product in its silo (easy2mail, built2mail, e-Invoicing, eIDAS archive, support) with its own login and own back-office. Fast to ship, but it reproduces the fragmentation the clients were pointing at. On the right, a one-stop host, with onboarding driven by persona and need typology, and API-ised capabilities underneath. The second direction was retained, validated by the sponsor, then tested with 6 pilot clients. <strong>The silo direction would have shipped in 6 months. The one-stop direction doubled the dev time.</strong> The sponsor accepted the cost because the <strong class="accent">tiered pricing opens the SME segment left to the competitors</strong>.</p>
+    <p class="lead vp-hero__lead" data-i18n-html="speos.prototype.directionLead">Two paths out of the workshops. Silo · each product with its own login, shipped in 6 months but reproduces fragmentation. One-stop · orchestrated host, persona-driven onboarding, API-ised capabilities, dev time doubled. Sponsor picks the second · <strong class="accent">tiered pricing opens the SME segment left to competitors</strong>.</p>
 
     <div class="vp-compare">
       <article class="vp-compare__card vp-compare__card--bad">
@@ -2712,7 +2706,6 @@
     </div>
 
     <p class="vp-claim" data-i18n-html="speos.prototype.vpClaim">Not a suite of products each with its own door. <span class="accent">One orchestrated host, driven by persona and need typology.</span></p>
-    <p class="research-source" data-i18n="speos.prototype.directionSource">Source · Speos Concept Report 2024 · synthesis Discovery + co-creation workshops, validated by CEO and CTO before prototyping</p>
   </div>
 </section>
 
@@ -2722,7 +2715,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.prototype.overviewEyebrow">Phase 03 · Develop · 5 Value Props prioritised MVP</span>
     <h2 class="proto-overview__title" data-reveal="title" data-i18n-html="speos.prototype.overviewTitle">From the document pipeline <span class="accent">to the 5 Value Props.</span></h2>
-    <p class="lead proto-overview__lead" data-i18n="speos.prototype.overviewLead">The canonical SPEOS pipeline: ingest → compose & enrich → distribute → archive. On that skeleton, the 12 internal expert interviews and the 6 pilot clients surfaced five priority Value Props. Each addresses a precise step in the client lifecycle. Onboarding · Monitoring · Reports & Archives · Billing · Support. One platform, five coherent promises.</p>
+    <p class="lead proto-overview__lead" data-i18n="speos.prototype.overviewLead">Canonical pipeline · ingest → compose → distribute → archive. Five priority Value Props on that skeleton · Onboarding · Monitoring · Reports & Archives · Billing · Support.</p>
 
     <!-- Cycle 5 VP en boucle continue mappées au customer lifecycle -->
     <div class="proto-cycle proto-cycle--speos" role="img" aria-label="5 Value Props SPEOS reliées au cycle de vie client">
@@ -2787,8 +2780,6 @@
     <p class="proto-cycle__caption" data-i18n-html="speos.prototype.cycleCaption">Five Value Props forming <strong>a single experience loop</strong>. The client enters through onboarding, monitors continuously, archives proofs, pays for what they consume, and resolves incidents in self-service. The cycle loops back on the next product, the next volume, the next channel.</p>
 
     <p class="proto-cycle__phase2" data-i18n-html="speos.prototype.cyclePhase2"><strong>5 MVP deliverables out of 11 identified opportunities</strong> · the 6 others (notably <strong>Market Expansion</strong> international and <strong>Marketplace API</strong> Integrators) are scoped <strong>MVP++ phase 2</strong>, after one-stop host validation.</p>
-
-    <p class="research-source" data-i18n="speos.prototype.overviewSource">Source · Speos Concept Report 2024 · 5 VPs mapped on the ingest → compose → distribute → archive pipeline (Roadmap p17)</p>
   </div>
 </section>
 
@@ -3143,7 +3134,9 @@
 
     <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.prototype.utOutcome"><strong class="accent">6 / 6 validate</strong> the one-stop direction <span class="brief-teaser__sep">·</span> <strong class="accent">Combined score 4.03 / 5</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong></p>
 
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n-html="speos.prototype.utLead">The Concept Report is tested in a structured presentation with 6 clients covering the 3 market segments: Large Accounts (Build-to-Mail), SMEs (Easy2Mail), Integrators / Resellers. The six validate the one-stop direction. <strong>One of them is Luminus</strong>, a Belgian energy reference that secures the sponsor signal: the platform is reassuring even before development.</p>
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n-html="speos.prototype.utLead">Concept Report presented to the six pilots. In parallel, two Energy personas · Moustafa and Bogdan · test three prototype scenarios.</p>
+    <!-- sync v11 ut -->
+
 
     <ul class="ut-stats" role="list" style="margin-top: 32px;">
       <li class="ut-stat">
@@ -3192,9 +3185,6 @@
         </ul>
       </article>
     </div>
-
-    <p class="research-source" style="margin-top: 32px;" data-i18n="speos.prototype.utSource">Tests run in direct presentation and co-design with the 6 pilot clients · 3 segments covering Build-to-Mail, Easy2Mail and Integrators · Speos Concept Report 2024</p>
-
     <h4 class="research-h3" style="margin-top: 64px;" data-i18n-html="speos.prototype.utClientsHead">The six pilot clients in directional validation</h4>
 
     <div class="ut-clients" role="list">
@@ -3341,7 +3331,9 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.alignment.eyebrow">Stakeholder Map · Alignment</span>
     <h2 data-i18n-html="speos.alignment.h2">How Business and IT ended up <span class="accent">speaking the same language.</span></h2>
-    <p class="lead" data-i18n-html="speos.alignment.lead">At the start, each role defended its reading. The Project Owner on Business side wanted sellable features. The Project Manager on IT side wanted a maintainable stack. The Project Lead arbitrated on the schedule. <strong>Two workshop formats bridged the gap.</strong> Small targeted workshops with the Project Managers and key IT figures to lock technical trade-offs. Large Customer Journey workshops with all stakeholders around the table, to put the customer at the centre, not the org chart.</p>
+    <p class="lead" data-i18n-html="speos.alignment.lead">Business Project Owner wanted sellable features, IT Project Manager a maintainable stack, Project Lead arbitrated the schedule. Two workshop formats bridged it · small IT workshops, large Customer Journey workshops.</p>
+    <!-- sync v11 a -->
+
 
     <!-- CVE 2026-05-11 SPEOS Alignment 2×2 AVANT/APRÈS · UX Researcher reco (gain Marc +10) ·
          grille scannable en 8 secondes au lieu de prose dense -->
@@ -3393,7 +3385,7 @@
     </div>
 
     <div class="alignment-pivot">
-      <div class="alignment-pivot__outcome" data-i18n-html="speos.alignment.pivotOutcome">When the four roles saw the same 6 pilot clients at the centre · not the abstract customer, the customer we had observed, whose exact phrase we knew · the project became <strong class="accent">everyone's platform</strong>. Aligned vision. No more debate on "if", a structured debate on "when" and "how".</div>
+      <div class="alignment-pivot__outcome" data-i18n-html="speos.alignment.pivotOutcome">When the four roles saw the same six pilot clients at the centre, the project became <strong class="accent">everyone's platform</strong>. No more debate on "if", arbitration on "when".</div>
     </div>
 
     <a class="source-link" href="/public/decks/speos-roadmap/p-11.jpg" target="_blank" rel="noopener">
@@ -3410,7 +3402,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.shared.eyebrow">The artefact that tipped it</span>
     <h2 class="shared-language__h2" data-i18n-html="speos.shared.h2">The same Value Proposition <span class="accent">in the mouth of Business and IT.</span></h2>
-    <p class="lead shared-language__lead" data-i18n="speos.shared.lead">For eight months, Business and IT described the same product with two different vocabularies. The following sentence ended up coming out of both sides, word for word, in conversation and in the Concept Report. That moment unlocked the sponsor.</p>
+    <p class="lead shared-language__lead" data-i18n="speos.shared.lead">Business and IT described the same product with two vocabularies. The sentence below came out of both sides, word for word.</p>
 
     <div class="shared-language__grid">
       <div class="shared-language__col shared-language__col--biz">
@@ -3427,7 +3419,7 @@
       </div>
     </div>
 
-    <p class="shared-language__consequence" data-i18n="speos.shared.consequence">That exact sentence ended up on the cover of the Concept Report presented to the sponsor. No scope arbitration questioned the direction afterwards.</p>
+    <p class="shared-language__consequence" data-i18n="speos.shared.consequence">That sentence ended up on the cover of the Concept Report. No arbitration questioned the direction afterwards.</p>
   </div>
 </section>
 
@@ -3493,7 +3485,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.outcome.eyebrow">At the end of the journey</span>
     <h2 class="outcome-title" data-i18n-html="speos.outcome.title">Not an intention. <span class="accent">A platform ready to scale.</span></h2>
-    <p class="lead outcome-lead" data-i18n="speos.outcome.lead">Six months of Design Thinking closed on a 76-page Concept Report signed by the sponsor. Six pilot clients validate the three market segments. A prioritised Value Props roadmap, ready for sprints. Not a polite usability test, not a yes in principle. A written production decision.</p>
+    <p class="lead outcome-lead" data-i18n="speos.outcome.lead">Concept Report signed by sponsor. Six pilot clients validate. Prioritised Value Props roadmap, ready in SAFe sprints. Written production decision.</p>
 
     <ol class="outcome-deliverables" role="list">
       <li class="outcome-card">
@@ -3513,7 +3505,9 @@
       </li>
     </ol>
 
-    <p class="outcome-integrity" data-i18n-html="speos.outcome.integrity"><strong>Integrity note.</strong> The Concept Report was delivered and validated. The rollout moved into Agile sprints on the SPEOS teams. What I can claim stops at the exit of the Design Thinking phase · a 76-page deliverable, six aligned pilot clients, a Customer · Business · Tech triangle in the green. The exact ROI post-rollout depends on product and go-to-market choices made by the internal teams after my departure. I cannot claim it.</p>
+    <p class="outcome-integrity" data-i18n-html="speos.outcome.integrity"><strong>Integrity note.</strong> Concept Report delivered and validated. Rollout moved into Agile sprints on the SPEOS side. What I claim stops at the exit: 76-page deliverable, six aligned clients, Customer · Business · Tech triangle in the green.</p>
+    <!-- sync v11 outcome -->
+
   </div>
 </section>
 
@@ -3524,7 +3518,9 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.lessons.eyebrow">What SPEOS taught me</span>
     <h2 data-i18n-html="speos.lessons.h2">Three levers <span class="accent">I would replay.</span></h2>
-    <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n-html="speos.lessons.lead">Six months after delivery, three methodological choices still hold. <strong>Nothing to replay differently</strong> · the mission held its contract, design found its place in the workflow and in the org chart.</p>
+    <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n-html="speos.lessons.lead">Six months after delivery, three choices still hold. <strong>Nothing to replay differently.</strong> Design found its place in the workflow and in the org chart.</p>
+    <!-- sync v11 lessons -->
+
 
     <div class="lessons-grid">
       <div class="lesson-card">
@@ -3551,7 +3547,7 @@
 <section id="fin-royale" class="fin-royale" data-act="R" data-rail="vertical" data-frame="narrow" data-overflow="natural">
   <div class="fin-royale__postscript">
     <span class="fin-royale__ps-label" data-i18n="speos.fin.ps.label">Postscript · references</span>
-    <p class="fin-royale__ps-text" data-i18n-html="speos.fin.ps.text">When a sponsor asks for proof, I give a number. Anyone I worked with on SPEOS, from CEO to tech lead, through the Production and Customer Service team leads, can vouch for it. <span class="accent">That is the matter of Service Design: people who call you back.</span></p>
+    <p class="fin-royale__ps-text" data-i18n-html="speos.fin.ps.text">Anyone I worked with on SPEOS, from CEO to tech lead, can vouch for it. <span class="accent">That is the matter of Service Design: people who call you back.</span></p>
   </div>
 
   <div class="fin-royale__close">
@@ -3591,10 +3587,10 @@
   </div>
 </footer>
 
-<script src="/assets/i18n.js?v=20260504-s8"></script>
-<script src="/assets/theme.js?v=20260504-s8"></script>
-<script src="/assets/motion.js?v=20260504-s8"></script>
-<script src="/assets/deck.js?v=20260504-s8"></script>
-<script src="/assets/scroll-narrative.js?v=20260504-s8"></script>
+<script src="/assets/i18n.js?v=20260517-s29"></script>
+<script src="/assets/theme.js?v=20260517-s29"></script>
+<script src="/assets/motion.js?v=20260517-s29"></script>
+<script src="/assets/deck.js?v=20260517-s29"></script>
+<script src="/assets/scroll-narrative.js?v=20260517-s29"></script>
 </body>
 </html>

@@ -46,7 +46,7 @@
      OBLIGATOIRE en premier · contient keyframes, custom properties, classes
      utilities. Cf MOTION-GRAMMAR-TEMPLATE.md à la racine pour clonage cases. -->
 <link rel="stylesheet" href="assets/motion-tokens.css?v=v1">
-<link rel="stylesheet" href="assets/style.css?v=20260504-s8">
+<link rel="stylesheet" href="assets/style.css?v=20260517-s29">
 
 <!-- CVE 2026-05-04 S1.4 · Schema.org Article + BreadcrumbList -->
 <script type="application/ld+json">
@@ -113,15 +113,16 @@
     will-change: transform, opacity;
     /* CVE 2026-05-01 : zoom-in propre à l'arrivée pour embarquer émotionnellement.
        Doublé : démarre à 1.36 (très présent), résout à 1.06 (état neutre que le parallax reprend). */
-    animation: hcx-zoom-in 2.6s cubic-bezier(.22,.61,.36,1) both;
+    /* CVE 2026-05-17 · keyframe sans transform (GSAP gère scale + yPercent du parallax) */
+    animation: hcx-fade-in 1.6s cubic-bezier(.22,.61,.36,1) both;
   }
-  @keyframes hcx-zoom-in {
-    from { transform: scale(1.36); opacity: 0.30; filter: saturate(0.35) contrast(1.30) brightness(0.50) blur(5px); }
+  @keyframes hcx-fade-in {
+    from { opacity: 0.30; filter: saturate(0.35) contrast(1.30) brightness(0.50) blur(5px); }
     60%  { opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82) blur(0); }
-    to   { transform: scale(1.06); opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82); }
+    to   { opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .hcx__bg img { animation: none; transform: scale(1.06); }
+    .hcx__bg img { animation: none; }
   }
   .hcx__veil {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
@@ -165,6 +166,12 @@
   .hcx__client-name {
     font-size: 11px; font-weight: 700; letter-spacing: .20em; text-transform: uppercase;
     color: rgba(242,235,219,0.88);
+  }
+  .hcx__client-logo {
+    height: 26px;
+    width: auto;
+    display: block;
+    opacity: 0.92;
   }
   .hcx__client-period {
     font-size: 11px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase;
@@ -1235,7 +1242,7 @@
   <div class="hcx__grain"></div>
   <div class="hcx__grid">
     <div class="hcx__client">
-      <span class="hcx__client-name">SPEOS</span>
+      <img class="hcx__client-logo" src="public/img/logos/clients/speos.svg" alt="SPEOS" width="100" height="28" loading="eager" decoding="async"/>
       <span class="hcx__client-period">2024 — 2025</span>
     </div>
     <div class="hcx__period">
@@ -1248,10 +1255,6 @@
         <span class="hcx__hl2" data-i18n="speos.hero.h1.alt">Une fonction UX à installer.</span>
       </h1>
       <p class="hcx__lead" data-i18n="speos.hero.lead">Douze mois freelance pour installer le Service Design dans un postal industriel 100 % IT, en pleine bascule Agile.</p>
-      <div class="hcx__role">
-        <span class="hcx__role-label" data-i18n="speos.hero.metaRole">CX / UX / Service Design · Freelance</span>
-        <span class="hcx__role-where" data-i18n="speos.hero.metaWhere">12 mois · Bruxelles</span>
-      </div>
     </div>
   </div>
   <div class="hcx__scroll">
@@ -1318,7 +1321,7 @@
       <span class="tldr-label" data-i18n="speos.tldr.l2">La tension</span>
       <p class="tldr-text" data-i18n="speos.tldr.t2">Le Business défendait le revenu. L'IT bâtissait l'Agile en parallèle. La fonction UX n'existait pas encore en département dédié. Trois mondes à faire entrer dans la même conversation.</p>
       <span class="tldr-label" data-i18n="speos.tldr.l3">Ce que j'ai fait</span>
-      <p class="tldr-text" data-i18n="speos.tldr.t3">Douze mois. 12 entretiens experts internes (CEO, CTO, R&D, Operations). 6 clients pilotes interviewés, dont Luminus sur la facture énergie. Customer Journey workshop physique, persona Johnny au mur.</p>
+      <p class="tldr-text" data-i18n="speos.tldr.t3">12 entretiens experts internes (CEO, CTO, R&D, Operations). 6 clients pilotes interviewés, dont Luminus sur la facture énergie. Customer Journey workshop physique, persona Johnny au mur.</p>
       <span class="tldr-label" data-i18n="speos.tldr.l4">Ce qui en est sorti</span>
       <p class="tldr-text" data-i18n="speos.tldr.t4">Concept Report 76 pages signé sponsor. 6/6 clients valident. Trois segments marché (Large Accounts, Easy2Mail PMI, API Integrators) priorisés en sprints SAFe. Équipe design intégrée à l'organigramme.</p>
     </div>
@@ -1647,10 +1650,10 @@
      Pyramide inverse Minto : outcome de phase en haut, contexte ensuite (CVE 2026-05-08) -->
 <section id="research-interviews" data-act="S" data-rail="vertical" data-frame="default" data-overflow="natural">
   <div class="container">
-    <span class="eyebrow" data-i18n="speos.research.itEyebrow">Phase 01 · Discover · 12 expert interviews</span>
+    <span class="eyebrow" data-i18n="speos.research.itEyebrow">Phase 01 · Discover · interviews internes</span>
     <h3 class="research-h3" data-reveal="title" data-i18n-html="speos.research.itTitle">On écoute <span class="accent">avant de dessiner.</span></h3>
-    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.research.itOutcome">Douze experts internes <span class="brief-teaser__sep">·</span> Direction, IT, Operations, Production, Customer Service, Sales, Marketing <span class="brief-teaser__sep">·</span> 20+ ans d'ancienneté.</p>
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="speos.research.itLead">Pour comprendre comment SPEOS fait son métier, et ce que chaque rôle attend d'une plateforme unifiée.</p>
+    <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.research.itOutcome">Direction, IT, Operations, Customer Service, Production, Sales, Marketing <span class="brief-teaser__sep">·</span> 20+ ans d'ancienneté.</p>
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="speos.research.itLead">Comprendre comment SPEOS fait son métier, et ce que chaque rôle attend d'une plateforme unifiée.</p>
 
     <ol class="it-grid" role="list">
       <li class="it-card">
@@ -1726,8 +1729,6 @@
         <p class="it-context" data-i18n="speos.research.it6Context">Bras armé de la livraison. Voit ce qui casse côté client.</p>
       </li>
     </ol>
-    <p class="research-source" data-i18n="speos.research.itSource">12 expert interviews · CEO, CTO, Operations, IT, Customer Service, Production, Marketing, Sales, KAM, Product Owner, QA · noms cités dans le Concept Report (Vanhaeren, Damsin, Ide, Diederich, Roelands, Delcourt, D'hooge, Germonpré, Tran) · 2024.</p>
-
   </div>
 </section>
 
@@ -1739,11 +1740,8 @@
     <span class="eyebrow" data-i18n="speos.research.custEyebrow">Phase 01 · Discover · 6 clients pilotes</span>
     <h3 class="research-h3" data-reveal="title" data-i18n-html="speos.research.custTitle">Six clients. <span class="accent">Trois segments.</span></h3>
     <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.research.custOutcome">Build-to-Mail · Easy2Mail · Channel <span class="brief-teaser__sep">·</span> deux comptes par segment <span class="brief-teaser__sep">·</span> 22 questions, 6 thèmes.</p>
-    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="speos.research.custLead">Les experts internes lisent l'organisation. Les clients lisent le service tel qu'il vit chez eux. Double écoute, vrai parcours.</p>
-    <p class="lead" style="max-width: 70ch;" data-i18n-html="speos.research.custLead2"><strong>Les mêmes six reviennent en user test final.</strong> Boucle fermée · signal sponsor.</p>
-
-    <p class="research-source" style="margin-top: 32px;" data-i18n="speos.research.custSource">Source · Customer Interview Guide · Concept Report SPEOS 2024.</p>
-
+    <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="speos.research.custLead">Les experts internes lisent l'organisation. Les clients lisent le service tel qu'il vit chez eux.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n-html="speos.research.custLead2"><strong>Les six mêmes reviennent en user test final.</strong></p>
     <a class="source-link" href="public/Speos_Customer_Interview_Guide.pdf" target="_blank" rel="noopener" style="margin-top:24px;">
       <span class="source-link__lab" data-i18n="speos.research.guideLab">Voir le guide d'entretien client utilisé</span>
       <span class="source-link__ref" data-i18n="speos.research.guideRef">Customer Interview Guide · 22 questions · 6 thèmes (Background · Customer Journey · Pain Points · Automation · Billing · Recommendations)</span>
@@ -1817,7 +1815,6 @@
         </ul>
       </article>
     </div>
-    <p class="research-source" data-i18n="speos.research.benchSource">Source · Concept Report p7-8 · 3 segments · 2024-2025. Concurrents observés · Easypost, Doccle, digital mail européens.</p>
   </div>
 </section>
 
@@ -1827,6 +1824,9 @@
     <span class="eyebrow" data-i18n="speos.research.persoEyebrow">Phase 01 · Discover · personas</span>
     <h3 class="research-h3" data-i18n-html="speos.research.persoTitle">Huit archétypes. <span class="accent">Deux personas illustratifs.</span></h3>
     <p class="lead" data-i18n="speos.research.persoLead">Synthétisés à partir des entretiens internes et terrain. La carte qui priorise le MVP, à qui on parle et à quel moment du cycle.</p>
+
+    <!-- BNP→SPEOS sync 2026-05-17 v11 NN brutal cut -->
+
 
     <div class="personas-grid" role="list">
       <div class="persona-card" role="listitem">
@@ -1923,8 +1923,6 @@
         <p class="persona-card__desc" data-i18n="speos.research.perso8Desc">Embarque SPEOS dans son offre · API stables · doc claire.</p>
       </div>
     </div>
-    <p class="research-source" data-i18n="speos.research.persoSource">Source · Speos Concept Report 2024 · 8 archétypes synthétisés sur 12 entretiens experts + 6 customer interviews.</p>
-
     <!-- DEEP-DIVE · 2 personas illustratifs nominatifs -->
     <div class="personas-deepdive" style="margin-top:64px;padding-top:48px;border-top:1px solid var(--rule);">
       <span class="eyebrow" data-i18n="speos.research.deepdiveEyebrow">Deep-dive · 2 personas illustratifs</span>
@@ -1957,8 +1955,6 @@
           </ul>
         </article>
       </div>
-
-      <p class="research-source" style="margin-top:32px;" data-i18n="speos.research.deepdiveSource">Profils composites · Speos research 2024-2025.</p>
     </div>
   </div>
 </section>
@@ -2300,6 +2296,8 @@
     <span class="eyebrow" data-i18n="speos.analyse.oppEyebrow">Analyse · 11 opportunités</span>
     <h3 class="research-h3" data-i18n-html="speos.analyse.oppTitle">Des douleurs <span class="accent">aux chances.</span></h3>
     <p class="lead" data-i18n-html="speos.analyse.oppLead">10 pain points reformulés en 11 opportunités. <strong>Cinq deviendront des Value Props livrables MVP, six placées MVP++ phase 2.</strong></p>
+    <!-- sync v11 -->
+
 
     <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:32px;list-style:none;padding:0;" role="list">
       <li class="ws-card" data-opp="01" style="padding:24px;">
@@ -2358,8 +2356,6 @@
         <p class="ws-desc" data-i18n-html="speos.analyse.opp11Desc">Advanced analytics · fallback · positionnement « One Stop Shop ». <em>MVP++.</em></p>
       </li>
     </ol>
-
-    <p class="research-source" data-i18n="speos.analyse.oppSource">Source · Concept Report 2024 · « 11 Opportunities for Innovation » verbatim.</p>
   </div>
 </section>
 
@@ -2435,8 +2431,6 @@
         <p class="ws-output" data-i18n="speos.analyse.ws4Output">Output · VP en 1 phrase · alignement signé.</p>
       </li>
     </ol>
-
-    <p class="research-source" data-i18n="speos.analyse.wsSource">Customer Journey + Pain Points overlay · adapté à une organisation early-Agile en change management.</p>
   </div>
 </section>
 
@@ -2481,8 +2475,6 @@
           </tr>
         </tbody>
       </table>
-
-      <p class="research-source" style="margin-top:16px;" data-i18n="speos.method.compSource">Pattern Best Practice déployé 15+ ans aux US, 10+ ans en Europe grands comptes. Pitch CVE porté à l'interne SPEOS · 2024.</p>
     </div>
   </div>
 </section>
@@ -2496,7 +2488,7 @@
 
     <span class="eyebrow vp-eyebrow" data-i18n="speos.analyse.vpEyebrow">Au bout du diamant 1</span>
     <h2 class="vp-cliffhanger" data-i18n-html="speos.analyse.vpCliffhanger">Tout converge sur <span class="accent">une seule VP.</span></h2>
-    <p class="vp-pyramid-intro" data-i18n="speos.analyse.vpConvergeIntro">Douze experts internes. Six clients interviewés. Dix personas testés terrain. Trois segments marché. Dix pain points cartographiés. Quatre ateliers cocréation. Tout converge. Pas vers un canvas, vers une phrase.</p>
+    <p class="vp-pyramid-intro" data-i18n="speos.analyse.vpConvergeIntro">Quatre inputs Discovery + Analyse convergent vers une phrase, pas vers un canvas.</p>
 
     <!-- CONVERGENCE diagram · 4 inputs → 1 output (la VP) · pure CSS, narratif léger -->
     <div class="vp-converge" aria-hidden="true">
@@ -2516,8 +2508,6 @@
         <span class="vp-converge__output-hint">À découvrir juste en dessous.</span>
       </div>
     </div>
-
-    <p class="research-source" data-i18n="speos.analyse.vpSource">Source · SPEOS Concept Report 2024-2025 · synthèse Discovery + Analyse + ateliers cocréation</p>
   </div>
 </section>
 
@@ -2562,6 +2552,8 @@
     <span class="eyebrow vp-content__eyebrow" data-i18n="speos.vp.eyebrow">Le contrat de valeur</span>
     <h2 class="vp-content__title" data-i18n-html="speos.vp.title">Pas cinq portes. <span class="accent">Une orchestration par persona.</span></h2>
     <p class="vp-content__lede" data-i18n-html="speos.vp.lede">Avant · POs voulaient des features, PMs une stack, les clients cinq logins. Après · <strong>un host orchestré · 10 douleurs → 5 livrables MVP + 6 MVP++</strong>.</p>
+    <!-- sync v11 vp -->
+
 
     <!-- TRIPTYQUE · 3 piliers : posture / 2 personas illustratifs / traduction 10→11→5 -->
     <div class="vp-content__grid">
@@ -2638,6 +2630,8 @@
     <!-- BAS DE PAGE · alignement obtenu + bascule Ideation -->
     <div class="vp-content__bridge">
       <p class="vp-content__alignement" data-i18n-html="speos.vp.bridgeText">Project Owners, Project Managers, Operations et Sales partagent la même phrase. <span class="accent">Socle commun signé.</span> L'arbitrage passe du « quoi » au « quand ».</p>
+      <!-- sync v11 vp bridge -->
+
       <span class="vp-content__next" data-i18n-html="speos.vp.bridgeNext">Suite <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · 2 directions, une retenue</span>
     </div>
   </div>
@@ -2677,7 +2671,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.prototype.directionEyebrow">Prototype · premiers drafts</span>
     <h2 class="vp-hero__title" data-i18n-html="speos.prototype.directionTitle">Deux directions. <span class="accent">Une retenue.</span></h2>
-    <p class="lead vp-hero__lead" data-i18n-html="speos.prototype.directionLead">Deux pistes à la sortie des ateliers. Silo · chaque produit avec son login (easy2mail, built2mail, e-Invoicing, archive, support), livré en 6 mois mais reproduit la fragmentation. One-stop · host orchestré, onboarding par persona, capacités API-isées, temps de dev doublé. Sponsor retient la deuxième · <strong class="accent">le pricing tiered ouvre le segment PME laissé aux concurrents</strong>.</p>
+    <p class="lead vp-hero__lead" data-i18n-html="speos.prototype.directionLead">Deux pistes à la sortie des ateliers. Silo · chaque produit avec son login, livré en 6 mois mais reproduit la fragmentation. One-stop · host orchestré, onboarding par persona, capacités API-isées, temps de dev doublé. Sponsor retient la deuxième · <strong class="accent">le pricing tiered ouvre le segment PME laissé aux concurrents</strong>.</p>
 
     <div class="vp-compare">
       <article class="vp-compare__card vp-compare__card--bad">
@@ -2724,7 +2718,6 @@
     </div>
 
     <p class="vp-claim" data-i18n-html="speos.prototype.vpClaim">Pas une suite avec une porte chacun. <span class="accent">Un host orchestré, piloté persona + typologie.</span></p>
-    <p class="research-source" data-i18n="speos.prototype.directionSource">Source · Concept Report 2024 · validation CEO + CTO avant prototyping.</p>
   </div>
 </section>
 
@@ -2799,8 +2792,6 @@
     <p class="proto-cycle__caption" data-i18n-html="speos.prototype.cycleCaption">Cinq Value Props · <strong>une boucle d'expérience</strong>. Entrée par l'onboarding, monitoring continu, archives, paiement à l'usage, support self-service. Le cycle reboucle sur le prochain volume.</p>
 
     <p class="proto-cycle__phase2" data-i18n-html="speos.prototype.cyclePhase2"><strong>5 livrables MVP sur 11 opportunités</strong> · les 6 autres (Market Expansion · Marketplace API) en <strong>MVP++ phase 2</strong>.</p>
-
-    <p class="research-source" data-i18n="speos.prototype.overviewSource">Source · Speos Concept Report 2024 · Roadmap p17.</p>
   </div>
 </section>
 
@@ -3164,6 +3155,8 @@
     <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="speos.prototype.utOutcome"><strong class="accent">6 / 6 valident</strong> la direction one-stop <span class="brief-teaser__sep">·</span> <strong class="accent">4,03 / 5</strong> score combiné, 81% <span class="brief-teaser__sep">·</span> <strong class="accent">NPS 9 / 10</strong> <span class="brief-teaser__sep">·</span> Luminus parmi les six.</p>
 
     <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n-html="speos.prototype.utLead">Concept Report présenté aux six pilotes. En parallèle, deux personas Énergie · Moustafa et Bogdan · testent trois scénarios prototype.</p>
+    <!-- sync v11 ut -->
+
 
     <ul class="ut-stats" role="list" style="margin-top: 32px;">
       <li class="ut-stat">
@@ -3212,9 +3205,6 @@
         </ul>
       </article>
     </div>
-
-    <p class="research-source" style="margin-top: 32px;" data-i18n="speos.prototype.utSource">Sources · Speos Concept Report 2024 · Engie User Test Session 2025 · testeurs Moustafa et Bogdan.</p>
-
     <h4 class="research-h3" style="margin-top: 64px;" data-i18n-html="speos.prototype.utClientsHead">Les six clients pilotes</h4>
 
     <div class="ut-clients" role="list">
@@ -3366,6 +3356,8 @@
     <span class="eyebrow" data-i18n="speos.alignment.eyebrow">Stakeholder Map · Alignement</span>
     <h2 data-i18n-html="speos.alignment.h2">Business et IT, <span class="accent">la même langue.</span></h2>
     <p class="lead" data-i18n-html="speos.alignment.lead">Project Owner Business voulait des fonctionnalités vendables, Project Manager IT une stack maintenable, Project Lead arbitrait sur le calendrier. Deux formats d'atelier ont fait le pont · petits ateliers IT, grands ateliers Customer Journey.</p>
+    <!-- sync v11 a -->
+
 
     <!-- CVE 2026-05-11 SPEOS Alignment 2×2 AVANT/APRÈS · UX Researcher reco (gain Marc +10) ·
          grille scannable en 8 secondes au lieu de prose dense -->
@@ -3417,7 +3409,7 @@
     </div>
 
     <div class="alignment-pivot">
-      <div class="alignment-pivot__outcome" data-i18n-html="speos.alignment.pivotOutcome">Quand les quatre rôles ont vu les mêmes 6 clients pilotes au centre, le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Plus de débat sur le « si », arbitrage sur le « quand ».</div>
+      <div class="alignment-pivot__outcome" data-i18n-html="speos.alignment.pivotOutcome">Quand les quatre rôles ont vu les mêmes six clients pilotes au centre, le projet est devenu <strong class="accent">la plateforme de tout le monde</strong>. Plus de débat sur le « si », arbitrage sur le « quand ».</div>
     </div>
 
     <a class="source-link" href="public/decks/speos-roadmap/p-11.jpg" target="_blank" rel="noopener">
@@ -3434,7 +3426,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.shared.eyebrow">L'artefact qui a fait basculer</span>
     <h2 class="shared-language__h2" data-i18n-html="speos.shared.h2">La même VP <span class="accent">dans la bouche de Business et IT.</span></h2>
-    <p class="lead shared-language__lead" data-i18n="speos.shared.lead">Pendant huit mois, Business et IT décrivaient le même produit avec deux vocabulaires. La phrase ci-dessous est sortie des deux côtés, mot pour mot. Le sponsor a basculé.</p>
+    <p class="lead shared-language__lead" data-i18n="speos.shared.lead">Business et IT décrivaient le même produit avec deux vocabulaires. La phrase ci-dessous est sortie des deux côtés, mot pour mot.</p>
 
     <div class="shared-language__grid">
       <div class="shared-language__col shared-language__col--biz">
@@ -3451,7 +3443,7 @@
       </div>
     </div>
 
-    <p class="shared-language__consequence" data-i18n="speos.shared.consequence">Cette phrase exacte a fini sur la couverture du Concept Report. Plus aucun arbitrage n'a remis en cause la direction.</p>
+    <p class="shared-language__consequence" data-i18n="speos.shared.consequence">Cette phrase a fini sur la couverture du Concept Report. Plus aucun arbitrage n'a remis en cause la direction.</p>
   </div>
 </section>
 
@@ -3517,7 +3509,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="speos.outcome.eyebrow">À la sortie du parcours</span>
     <h2 class="outcome-title" data-i18n-html="speos.outcome.title">Pas une intention. <span class="accent">Une plateforme prête à monter en charge.</span></h2>
-    <p class="lead outcome-lead" data-i18n="speos.outcome.lead">Concept Report 76 pages signé sponsor. Six clients pilotes valident. Roadmap Value Props priorisée, prête en sprints SAFe. Décision de production écrite.</p>
+    <p class="lead outcome-lead" data-i18n="speos.outcome.lead">Concept Report signé sponsor. Six clients pilotes valident. Roadmap Value Props priorisée, prête en sprints SAFe. Décision de production écrite.</p>
 
     <ol class="outcome-deliverables" role="list">
       <li class="outcome-card">
@@ -3538,6 +3530,8 @@
     </ol>
 
     <p class="outcome-integrity" data-i18n-html="speos.outcome.integrity"><strong>Note d'intégrité.</strong> Concept Report remis et validé. Rollout passé en sprints Agile côté SPEOS. Ce que j'affirme s'arrête à la sortie : livrable 76 pages, six clients alignés, triangle Customer · Business · Tech au vert.</p>
+    <!-- sync v11 outcome -->
+
   </div>
 </section>
 
@@ -3549,6 +3543,8 @@
     <span class="eyebrow" data-i18n="speos.lessons.eyebrow">Ce que SPEOS m'a appris</span>
     <h2 data-i18n-html="speos.lessons.h2">Trois leviers <span class="accent">que je rejouerais.</span></h2>
     <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n-html="speos.lessons.lead">Six mois après livraison, trois choix tiennent. <strong>Rien à rejouer autrement.</strong> Le design a trouvé sa place dans le workflow et dans l'organigramme.</p>
+    <!-- sync v11 lessons -->
+
 
     <div class="lessons-grid">
       <div class="lesson-card">
@@ -3575,7 +3571,7 @@
 <section id="fin-royale" class="fin-royale" data-act="R" data-rail="vertical" data-frame="narrow" data-overflow="natural">
   <div class="fin-royale__postscript">
     <span class="fin-royale__ps-label" data-i18n="speos.fin.ps.label">Postscript · références</span>
-    <p class="fin-royale__ps-text" data-i18n-html="speos.fin.ps.text">Quand un sponsor me demande la preuve, je donne un numéro. Toute personne avec qui j'ai travaillé sur SPEOS, du CEO au tech lead en passant par les chefs d'équipe Production et Customer Service, peut témoigner. <span class="accent">C'est ça, la matière du Service Design : des gens qui te rappellent.</span></p>
+    <p class="fin-royale__ps-text" data-i18n-html="speos.fin.ps.text">Toute personne avec qui j'ai travaillé sur SPEOS, du CEO au tech lead, peut témoigner. <span class="accent">C'est ça, la matière du Service Design : des gens qui te rappellent.</span></p>
   </div>
 
   <div class="fin-royale__close">
@@ -3615,10 +3611,10 @@
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=20260504-s8"></script>
-<script src="assets/theme.js?v=20260504-s8"></script>
-<script src="assets/motion.js?v=20260504-s8"></script>
-<script src="assets/deck.js?v=20260504-s8"></script>
-<script src="assets/scroll-narrative.js?v=20260504-s8"></script>
+<script src="assets/i18n.js?v=20260517-s29"></script>
+<script src="assets/theme.js?v=20260517-s29"></script>
+<script src="assets/motion.js?v=20260517-s29"></script>
+<script src="assets/deck.js?v=20260517-s29"></script>
+<script src="assets/scroll-narrative.js?v=20260517-s29"></script>
 </body>
 </html>

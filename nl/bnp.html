@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Enterprise Intelligence bij BNP Paribas Fortis · Service Design Case Study door Christophe van Engelen</title>
-<meta name="description" content="Service design case study : de transactiedata van een bank wordt een betalende dienst voor kmo's. Echt onderzoek, echte wireframes, echte Léonidas-resultaten." />
+<title>Enterprise Intelligence — BNP Paribas Fortis · Case Study Service Design</title>
+<meta name="description" content="Étude de cas Service Design · 30 % des paiements du pays passaient par BNP. Personne ne les vendait. Six mois de cadrage amont · Léonidas a signé avant la première ligne de code." />
 <meta name="author" content="Christophe van Engelen" />
 <meta name="theme-color" content="#0a1220" />
 <meta name="color-scheme" content="dark light" />
@@ -16,8 +16,8 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Christophe van Engelen" />
 <meta property="og:url" content="https://christophevanengelen.com/nl/bnp.html" />
-<meta property="og:title" content="Enterprise Intelligence bij BNP Paribas Fortis · Service Design Case Study door Christophe van Engelen" />
-<meta property="og:description" content="Service design case study : de transactiedata van een bank wordt een betalende dienst voor kmo's. Echt onderzoek, echte wireframes, echte Léonidas-resultaten." />
+<meta property="og:title" content="Enterprise Intelligence — BNP Paribas Fortis · Case Study" />
+<meta property="og:description" content="30 % des paiements du pays passaient par BNP. Personne ne les vendait. Six mois de cadrage amont · Léonidas a signé avant la première ligne de code." />
 <meta property="og:image" content="https://christophevanengelen.com/public/img/og/og-bnp.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
@@ -35,8 +35,8 @@
 <meta property="article:tag" content="Lean Canvas" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Enterprise Intelligence bij BNP Paribas Fortis · Service Design Case Study door Christophe van Engelen" />
-<meta name="twitter:description" content="Service design case study : de transactiedata van een bank wordt een betalende dienst voor kmo's. Echt onderzoek, echte wireframes, echte Léonidas-resultaten." />
+<meta name="twitter:title" content="Enterprise Intelligence — BNP Paribas Fortis · Case Study" />
+<meta name="twitter:description" content="30 % des paiements du pays passaient par BNP. Personne ne les vendait. 6 mois · Léonidas a signé avant la première ligne de code." />
 <meta name="twitter:image" content="https://christophevanengelen.com/public/img/og/og-bnp.jpg" />
 <meta name="twitter:image:alt" content="BNP Paribas Fortis — Enterprise Intelligence, étude de cas Service Design." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
      OBLIGATOIRE en premier · contient keyframes, custom properties, classes
      utilities. Cf MOTION-GRAMMAR-TEMPLATE.md à la racine pour clonage cases. -->
 <link rel="stylesheet" href="/assets/motion-tokens.css?v=v1">
-<link rel="stylesheet" href="/assets/style.css?v=20260504-s8">
+<link rel="stylesheet" href="/assets/style.css?v=20260517-s29">
 
 <!-- CVE 2026-05-04 S1.4 · Schema.org Article + BreadcrumbList ·
      LLMs et Google rich results pour les case studies. -->
@@ -114,15 +114,17 @@
     will-change: transform, opacity;
     /* CVE 2026-05-01 : zoom-in propre à l'arrivée pour embarquer émotionnellement.
        Doublé : démarre à 1.36 (très présent), résout à 1.06 (état neutre que le parallax reprend). */
-    animation: hcx-zoom-in 2.6s cubic-bezier(.22,.61,.36,1) both;
+    /* CVE 2026-05-17 · keyframe sans transform (GSAP gère scale + yPercent du parallax)
+       Garde fade-in opacity/blur · pas de conflit transform. */
+    animation: hcx-fade-in 1.6s cubic-bezier(.22,.61,.36,1) both;
   }
-  @keyframes hcx-zoom-in {
-    from { transform: scale(1.36); opacity: 0.30; filter: saturate(0.35) contrast(1.30) brightness(0.50) blur(5px); }
+  @keyframes hcx-fade-in {
+    from { opacity: 0.30; filter: saturate(0.35) contrast(1.30) brightness(0.50) blur(5px); }
     60%  { opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82) blur(0); }
-    to   { transform: scale(1.06); opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82); }
+    to   { opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .hcx__bg img { animation: none; transform: scale(1.06); }
+    .hcx__bg img { animation: none; }
   }
   .hcx__veil {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
@@ -166,6 +168,13 @@
   .hcx__client-name {
     font-size: 11px; font-weight: 700; letter-spacing: .20em; text-transform: uppercase;
     color: rgba(242,235,219,0.88);
+  }
+  /* CVE 2026-05-17 · logo client SVG remplace texte · hauteur calée sur la baseline */
+  .hcx__client-logo {
+    height: 22px;
+    width: auto;
+    display: block;
+    opacity: 0.92;
   }
   .hcx__client-period {
     font-size: 11px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase;
@@ -1220,7 +1229,7 @@
   <div class="hcx__grain"></div>
   <div class="hcx__grid">
     <div class="hcx__client">
-      <span class="hcx__client-name">BNP Paribas Fortis</span>
+      <img class="hcx__client-logo" src="/public/img/logos/clients/bnp-paribas-fortis.svg" alt="BNP Paribas Fortis" width="120" height="25" loading="eager" decoding="async"/>
       <span class="hcx__client-period">2018 — 2019</span>
     </div>
     <div class="hcx__period">
@@ -1232,12 +1241,7 @@
         <span class="hcx__hl1" data-i18n="bnp.hero.h1.start">Enterprise</span>
         <span class="hcx__hl2" data-i18n="bnp.hero.h1.alt">Intelligence.</span>
       </h1>
-      <p class="hcx__lead" data-i18n="bnp.hero.lead">Zes maanden service design vooraan bij BNP Paribas Fortis. De transactiedata sluimerde op de servers · aan het einde wilden handelaars-kmo's betalen om er toegang toe te krijgen, nog vóór de eerste regel code.</p>
-      <p class="hcx__attribution" data-i18n="bnp.hero.attribution">Lead Service Designer · direct mandaat BNPPF-sponsor · juni 2018 → januari 2019</p>
-      <div class="hcx__role">
-        <span class="hcx__role-label" data-i18n="bnp.hero.metaRole">Service Designer · Freelance</span>
-        <span class="hcx__role-where" data-i18n="bnp.hero.metaWhere">6 maanden · upstream strategisch kaderwerk</span>
-      </div>
+      <p class="hcx__lead" data-i18n="bnp.hero.lead">De transactiedata sluimerde op de servers. Aan het einde wilden handelaars-kmo's betalen om er toegang toe te krijgen, nog vóór de eerste regel code.</p>
     </div>
   </div>
   <div class="hcx__scroll">
@@ -1302,7 +1306,7 @@
       <span class="tldr-label" data-i18n="bnp.tldr.l1">Het probleem</span>
       <p class="tldr-text" data-i18n="bnp.tldr.t1">BNP verwerkte 30 % van de Bancontact-betalingen van het land. Geen enkele dienst valoriseerde deze data voor de handelaars die ze accepteerden.</p>
       <span class="tldr-label" data-i18n="bnp.tldr.l2">De spanning</span>
-      <p class="tldr-text" data-i18n="bnp.tldr.t2">Vier functies, vier legitieme lezingen. Banking dacht kaartvertrouwen. IT dacht MVP. Legal arbitreerde de data. Marketing dacht brand. Vier stemmen om op één scope te laten samenkomen.</p>
+      <p class="tldr-text" data-i18n="bnp.tldr.t2">Vier interne functies om op één scope af te stemmen · Banking, IT, Legal, Marketing.</p>
       <span class="tldr-label" data-i18n="bnp.tldr.l3">Wat ik gedaan heb</span>
       <p class="tldr-text" data-i18n="bnp.tldr.t3">Zes maanden vooraf. Stakeholder Map, Customer Journey, Value Proposition Canvas. Zes handelaars geïnterviewd op hun werkplek, waaronder Léonidas.</p>
       <span class="tldr-label" data-i18n="bnp.tldr.l4">Wat eruit kwam</span>
@@ -1318,9 +1322,9 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.brief.eyebrow">De opdracht</span>
     <h2 data-i18n-html="bnp.brief.title">30 % van de betalingen van het land liep via BNP.<br><span class="accent">Niemand verkocht ze.</span></h2>
-    <p class="lead" style="margin-top: 22px; max-width: 70ch;" data-i18n="bnp.brief.lead1">BNP verwerkte zo'n 30 % van de Bancontact-betalingen in België, een bevoorrechte blik op het koopgedrag van consumenten. Geen enkele dienst valoriseerde die data bij de handelaars die de betalingen aanvaardden.</p>
-    <p class="lead" style="max-width: 70ch;" data-i18n="bnp.brief.lead2">Sterk op de consumentenkaarten, bleef BNP weinig zichtbaar bij de kmo's die ze aanvaardden. Het project moest die kloof dichten met een nieuwe B2B-dienst (van de bank naar haar zakelijke klanten), zonder het bestaande vertrouwen aan te tasten.</p>
-    <p class="lead" style="max-width: 70ch;" data-i18n="bnp.brief.lead3">Mijn opdracht in vier werkwoorden · <strong>kaderen, testen, aligneren, verdedigen</strong>. Zes maanden om de opportuniteit aan het terrein te toetsen, Banking, IT, Legal en Marketing in dezelfde ruimte te zetten, en de aanbeveling tot in het comité te dragen. Methodologische instap · Lean Canvas om de business-opportuniteit met de sponsor te kaderen, daarna Value Proposition Canvas om af te stemmen op de stem van de handelaar in workshop. Twee tools, twee momenten, één Design System.</p>
+    <p class="lead" style="margin-top: 22px; max-width: 70ch;" data-i18n="bnp.brief.lead1">Een ongeëvenaard zicht op het koopgedrag van Belgische consumenten, opgebouwd op het Bancontact-netwerk. Aan handelaarszijde · 1500 retailers in ATOS opgelijst, 901 ingeschreven op Easy Banking Business, 234 actief, slechts 15 % regelmatig. Geen enkele dienst valoriseerde die data bij wie de betalingen aanvaardde.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n="bnp.brief.lead2">BNP mikte op 2020 om zelf Acquirer te worden · van 7 % naar 20 % POS-marktaandeel, en vanaf Q2 2018 acquiring openstellen voor grote retailers via Corporate Banking. De dienst die we moesten bedenken was geen data-gadget, het was de speerpunt van een positiestrategie.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n-html="bnp.brief.lead3">Mijn opdracht in vier werkwoorden · <strong>kaderen, testen, aligneren, verdedigen</strong>. De opportuniteit aan het terrein toetsen, Banking, IT, Legal en Marketing in dezelfde ruimte zetten, de aanbeveling tot in het comité dragen.</p>
     <p class="glance-sizing" data-i18n-html="bnp.brief.sizing">6 maanden <span class="dot">·</span> 4 interne functies <span class="dot">·</span> 6 kmo's op het terrein <span class="dot">·</span> Service Designer freelance</p>
 
     <!-- TEASER OUTCOME · CVE 2026-05-03 v9 · UX audit recommend : remonter le climax
@@ -1329,7 +1333,7 @@
     <p class="brief-teaser" data-i18n-html="bnp.brief.teaser">Aan de aankomst · <strong class="accent"><span data-countup="6">6</span> kmo's getest</strong> <span class="brief-teaser__sep">→</span> <strong class="accent"><span data-countup="1">1</span> vaste aankoopbelofte</strong> <span class="brief-teaser__sep">·</span> <strong class="accent"><span data-countup="0">0</span> weigeringen</strong>. De sponsor heeft de investering goedgekeurd.</p>
 
     <!-- CVE 2026-05-08 · toolkit signal · transpire mastery (cf playbook_case_inheritance + feedback_transpire_mastery_toolkit) -->
-    <p class="lead toolkit-signal" style="max-width: 70ch; margin-top: 22px;" data-i18n-html="bnp.brief.toolkitSignal"><strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>, de eigen methodologie van de CXC-afdeling. Toolkit afgestemd op het valideren van een omzet-hypothese in B2B-volwassen context, niet op het openen van een blanco pagina. De discipline van het traject · <strong class="accent">Léonidas getekend vóór de eerste coderegel</strong>.</p>
+    <p class="lead toolkit-signal" style="max-width: 70ch; margin-top: 22px;" data-i18n-html="bnp.brief.toolkitSignal"><strong>Strategyzer · Lean Canvas + Value Proposition Canvas</strong>, de eigen methodologie van de CXC-afdeling. Toolkit afgestemd op het valideren van een B2B-omzet-hypothese. <strong class="accent">Léonidas getekend vóór de eerste coderegel</strong>.</p>
   </div>
 </section>
 
@@ -1414,7 +1418,7 @@
           <li data-i18n="bnp.proposed.researchLi1">Kmo-interviews</li>
           <li data-i18n="bnp.proposed.researchLi2">Benchmark</li>
           <li data-i18n="bnp.proposed.researchLi3">B2B-segmenten</li>
-          <li data-i18n="bnp.proposed.researchLi4">Personas</li>
+          <li data-i18n="bnp.proposed.researchLi4">B2B-segmenten</li>
         </ul>
       </div>
       <span class="proposed-col__sep" aria-hidden="true">›</span>
@@ -1494,7 +1498,7 @@
           <span class="snm-group__name" data-i18n="bnp.snm.gResearch">Research</span>
           <span class="snm-progress" aria-hidden="true"></span>
           <ol class="snm-group__nodes">
-            <li class="snm-node" data-anchor="#research-personas"><span class="snm-dot"></span><span class="snm-tip" data-i18n="bnp.snm.r4">9 B2B-personas opgeleverd</span></li>
+            <li class="snm-node" data-anchor="#research-personas"><span class="snm-dot"></span><span class="snm-tip" data-i18n="bnp.snm.r4">9 B2B-segmenten geïdentificeerd</span></li>
             <li class="snm-node" data-anchor="#research-interviews"><span class="snm-dot"></span><span class="snm-tip" data-i18n="bnp.snm.r1">6 kmo-interviews op het terrein</span></li>
             <li class="snm-node" data-anchor="#research-benchmark"><span class="snm-dot"></span><span class="snm-tip" data-i18n="bnp.snm.r2">Benchmark concurrenten (Barclays, Proximus, BBVA)</span></li>
           </ol>
@@ -1594,7 +1598,7 @@
       </ol>
     </nav>
 
-    <p class="proposed-cap" data-i18n="bnp.proposed.cap">Aan de uitgang : een MVP (een Minimum Viable Product, de minimale scope klaar om in agile uitgerold te worden) geprioriteerd in user stories, ondertekend door Banking · IT · Legal · Marketing. Wat volgt toont wat er bij elke stap gespeeld werd.</p>
+    <p class="proposed-cap" data-i18n="bnp.proposed.cap">Aan de uitgang · MVP geprioriteerd in user stories, ondertekend door Banking · IT · Legal · Marketing.</p>
   </div>
 </section>
 
@@ -1628,9 +1632,9 @@
 <!-- RESEARCH 01 — 9 personas B2B identifiés en amont (Concept Report p35-44) -->
 <section id="research-personas" data-act="S" data-frame="wide" data-overflow="natural">
   <div class="container">
-    <span class="eyebrow" data-i18n="bnp.research.persoEyebrow">Research · Personas</span>
-    <h3 class="research-h3" data-i18n-html="bnp.research.persoTitle">Negen B2B-personas, <span class="accent">geen één meer.</span></h3>
-    <p class="lead" data-i18n="bnp.research.persoLead">Van Liberal Pro tot Corporate Banking SME. Een bibliotheek gebouwd op de interviews + segmentatiematrices, die het project overleefde en werd gebruikt door andere BNP B2B-initiatieven.</p>
+    <span class="eyebrow" data-i18n="bnp.research.persoEyebrow">Research · B2B-segmenten</span>
+    <h3 class="research-h3" data-i18n-html="bnp.research.persoTitle">Negen segmenten. <span class="accent">Eén key target.</span></h3>
+    <p class="lead" data-i18n-html="bnp.research.persoLead">Van Liberal Pro tot Corporate Banking SME. Cartografie gebouwd op de interviews + de Levels of Interest-matrix (Ideation Report, okt. 2017) · het weerhouden key target voor het concept · <strong>B2C multi-shops zonder interne datasupport</strong>.</p>
 
     <div class="personas-grid" role="list">
       <div class="persona-card" role="listitem">
@@ -1742,7 +1746,6 @@
         <p class="persona-card__desc" data-i18n="bnp.research.perso9Desc">Bank for Entrepreneurs. MVP-doel voor wie BNP de meest bruikbare data heeft.</p>
       </div>
     </div>
-    <p class="research-source" data-i18n="bnp.research.persoSource">Bron · BNPPF B2B Personas (23p) + Concept Report personas overview · 2018</p>
   </div>
 </section>
 
@@ -1750,8 +1753,8 @@
 <section id="research-interviews" data-act="S" data-frame="default" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.research.itEyebrow">Research · kmo-interviews op het terrein</span>
-    <h3 class="research-h3" data-reveal="title" data-i18n-html="bnp.research.itTitle">Zes ondernemers. <span class="accent">Zes winkels. Zes ochtenden.</span></h3>
-    <p class="lead" data-i18n="bnp.research.itLead">Geen online enquête. Geen focusgroep. Zes merchants ontmoet op hun werkvloer — chocolatier, restaurateur, mode-retailer, vrij beroep, multi-shop franchisenemer, BFE smaller corporate. Anderhalf uur elk, achter de toonbank, om te observeren wat er echt op een dag beslist wordt.</p>
+    <h3 class="research-h3" data-reveal="title" data-i18n-html="bnp.research.itTitle">Zes handelaars op hun werkvloer. <span class="accent">Léonidas onder hen.</span></h3>
+    <p class="lead" data-i18n="bnp.research.itLead">Anderhalf uur elk, achter de toonbank, om te observeren wat er op een dag beslist wordt.</p>
 
     <ol class="it-grid" role="list">
       <li class="it-card">
@@ -1832,7 +1835,6 @@
         <p class="it-context" data-i18n="bnp.research.it6Context">BFE smaller corporate, 40 werknemers. Tools bestaan maar passen niet bij de operationele terrein-manager.</p>
       </li>
     </ol>
-    <p class="research-source" data-i18n="bnp.research.itSource">Zes kwalitatieve interviews · 1u30 elk · juni-augustus 2017 · transcripts gevalideerd in peer review</p>
   </div>
 </section>
 
@@ -1841,7 +1843,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.research.benchEyebrow">Research · Benchmark</span>
     <h3 class="research-h3" data-i18n-html="bnp.research.benchTitle">Drie <span class="accent">live</span> benchmarks.</h3>
-    <p class="lead" data-i18n="bnp.research.benchLead">Wat werkt elders ? Drie spelers bestudeerd. Drie onderscheidende handtekeningen — elk gericht op hun sterkste hoek.</p>
+    <p class="lead" data-i18n="bnp.research.benchLead">Drie spelers bestudeerd, drie onderscheidende handtekeningen · elk gericht op hun sterkste hoek.</p>
 
     <div class="bm-grid">
       <article class="bm-card">
@@ -1895,7 +1897,6 @@
         </ul>
       </article>
     </div>
-    <p class="research-source" data-i18n="bnp.research.benchSource">Bron · Ideation Report · pagina's 3-4 · 30 oktober 2017</p>
   </div>
 </section>
 
@@ -1942,13 +1943,17 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.analyse.dataEyebrow">Analyse · Datatypologie</span>
     <h3 class="research-h3" data-i18n-html="bnp.analyse.dataTitle">Drie databronnen. <span class="accent">Een grondstof om te kruisen.</span></h3>
-    <p class="lead" data-i18n-html="bnp.analyse.dataLead">BNP had <strong>drie families gegevens</strong> over haar handelaars : Bancontact-transacties, kaartprofielen van consumenten, bankrekeningen. Ruw waren ze waardeloos voor een handelaar. Het vereiste organiseren op drie leesbare assen, kwaliteit controleren, combineren. De aggregatie deed zes actionable lezingen verschijnen, elk afgestemd op een type persona.</p>
+    <p class="lead" data-i18n-html="bnp.analyse.dataLead"><strong>Drie families gegevens</strong> over de handelaars · Bancontact-transacties, kaartprofielen van consumenten, bankrekeningen. Ruw zijn ze waardeloos. Gekruist leveren ze zes bruikbare lezingen op, elk afgestemd op een type persona.</p>
 
     <div class="venn-stage" role="img" aria-labelledby="venn-title venn-desc">
       <h4 id="venn-title" class="visually-hidden" data-i18n="bnp.analyse.dataSvgTitle">Venn-diagram — BNP-datatypologie gecombineerd in zes actionable inzichten</h4>
       <p id="venn-desc" class="visually-hidden" data-i18n="bnp.analyse.dataSvgDesc">Drie overlappende cirkels Customers, Area, Sector — hun overlappingen produceren zes actionable inzichten.</p>
 
-      <svg class="venn-svg" viewBox="0 0 880 640" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <!-- CVE 2026-05-17 · Venn redessiné · viewBox élargi 1100×800 pour englober tags +
+           cercles + lignes pointillées dans le même espace SVG. Connecteurs maintenant
+           dessinés en SVG <line> avec coordonnées explicites (zone centroid → tag anchor),
+           plus de ::before CSS hardcoded angles. Source Concept Report p32-34. -->
+      <svg class="venn-svg" viewBox="0 0 1100 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
         <defs>
           <radialGradient id="venn-grad-c" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stop-color="var(--amber)" stop-opacity="0.18"/>
@@ -1964,16 +1969,43 @@
           </radialGradient>
         </defs>
 
-        <circle class="venn-circle venn-circle--customers" cx="320" cy="270" r="200"
+        <!-- 3 cercles centrés dans viewBox 1100×800, r=200, espacement 240 = 80 % d'overlap -->
+        <circle class="venn-circle venn-circle--customers" cx="430" cy="340" r="200"
                 fill="url(#venn-grad-c)" stroke="var(--amber)" stroke-width="1.25" stroke-opacity="0.55"/>
-        <circle class="venn-circle venn-circle--area" cx="560" cy="270" r="200"
+        <circle class="venn-circle venn-circle--area" cx="670" cy="340" r="200"
                 fill="url(#venn-grad-a)" stroke="var(--amber)" stroke-width="1.25" stroke-opacity="0.65"/>
-        <circle class="venn-circle venn-circle--sector" cx="440" cy="450" r="200"
+        <circle class="venn-circle venn-circle--sector" cx="550" cy="520" r="200"
                 fill="url(#venn-grad-s)" stroke="var(--amber)" stroke-width="1.25" stroke-opacity="0.75"/>
 
-        <text class="venn-axis-label" x="240" y="200" text-anchor="middle" data-i18n="bnp.analyse.dataAxisCustomers">CUSTOMERS</text>
-        <text class="venn-axis-label" x="640" y="200" text-anchor="middle" data-i18n="bnp.analyse.dataAxisArea">AREA</text>
-        <text class="venn-axis-label" x="440" y="555" text-anchor="middle" data-i18n="bnp.analyse.dataAxisSector">SECTOR</text>
+        <!-- Axis labels · AU CENTRE de chaque cercle (cx,cy exacts) · pure zone seule -->
+        <text class="venn-axis-label" x="430" y="340" text-anchor="middle" data-i18n="bnp.analyse.dataAxisCustomers">CUSTOMERS</text>
+        <text class="venn-axis-label" x="670" y="340" text-anchor="middle" data-i18n="bnp.analyse.dataAxisArea">AREA</text>
+        <text class="venn-axis-label" x="550" y="520" text-anchor="middle" data-i18n="bnp.analyse.dataAxisSector">SECTOR</text>
+
+        <!-- Connecteurs dotted · zone centroid → tag anchor (tags positionnés en % de stage,
+             ici convertis en coords SVG viewBox 1100×800).
+             Tag anchor = bord du tag le plus proche du Venn.
+             Style stroke-dasharray='4 3' pour pointillé propre. -->
+        <g class="venn-connectors" stroke="var(--amber)" stroke-width="1" stroke-opacity="0.45" stroke-dasharray="4 3" fill="none">
+          <!-- Connecteurs zone-centroid (numéro) → tag-anchor près du card -->
+          <line x1="270" y1="285" x2="180" y2="320"/>      <!-- 01 → tag left -->
+          <line x1="550" y1="265" x2="550" y2="95"/>       <!-- 02 → tag top -->
+          <line x1="830" y1="285" x2="920" y2="320"/>      <!-- 03 → tag right -->
+          <line x1="540" y1="438" x2="200" y2="620"/>      <!-- 04 → tag bottom-left -->
+          <line x1="438" y1="478" x2="550" y2="720"/>      <!-- 05 → tag bottom-center -->
+          <line x1="662" y1="478" x2="900" y2="620"/>      <!-- 06 → tag bottom-right -->
+        </g>
+
+        <!-- Numéros à l'intérieur des zones · positions ajustées pour éviter collision
+             avec les labels CUSTOMERS (430,340) / AREA (670,340) / SECTOR (550,520) au centre des cercles. -->
+        <g class="venn-zone-num" font-family="Manrope" font-size="14" font-weight="700" fill="var(--amber)" text-anchor="middle" opacity="0.7">
+          <text x="280" y="280">01</text>
+          <text x="550" y="270">02</text>
+          <text x="820" y="280">03</text>
+          <text x="550" y="430">04</text>
+          <text x="440" y="470">05</text>
+          <text x="660" y="470">06</text>
+        </g>
       </svg>
 
       <ol class="venn-tags" role="list">
@@ -2015,8 +2047,6 @@
         </li>
       </ol>
     </div>
-
-    <p class="research-source" data-i18n="bnp.analyse.dataSource">Interne referentie · Concept Report maart 2018, p24 — typologie hertekend in de folio-stijl</p>
   </div>
 </section>
 
@@ -2134,7 +2164,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.analyse.vpcEyebrow">Analyse · Value Proposition Canvas</span>
     <h3 class="research-h3" data-i18n-html="bnp.analyse.vpcTitle">De <span class="accent">Jobs · Pains · Gains</span> van de merchant in kaart brengen.</h3>
-    <p class="lead" data-i18n="bnp.analyse.vpcLead">Voor de oplossing, de wrijving. De Value Proposition Canvas zet de jobs van de merchant (klanten beter kennen, acties kalibreren) tegenover het BNP-aanbod. Elke MVP-feature moet minstens één Pain Reliever of Gain Creator afvinken. Anders verlaat ze de scope.</p>
+    <p class="lead" data-i18n="bnp.analyse.vpcLead">De Value Proposition Canvas zet de jobs van de handelaar (klanten beter kennen, acties kalibreren) tegenover het BNP-aanbod. Elke MVP-feature moet minstens één Pain Reliever of Gain Creator afvinken. Anders buiten scope.</p>
 
     <div class="vpc-grid" role="group" aria-label="Value Proposition Canvas — deux faces : profil client (gauche) × value map BNP (droite)">
       <article class="vpc-side vpc-side--customer">
@@ -2198,7 +2228,7 @@
          CVE 2026-05-03 : zéro doublon, suspension narrative pure. -->
     <span class="eyebrow vp-eyebrow" data-i18n="bnp.analyse.vpEyebrow">Aan het einde van diamant 1</span>
     <h2 class="vp-cliffhanger" data-i18n-html="bnp.analyse.vpCliffhanger">Eén overtuiging <span class="accent">komt naar voren.</span></h2>
-    <p class="vp-pyramid-intro" data-i18n="bnp.analyse.vpPyramidIntro">De transformatie, in beeld : links het klassieke dashboard dat data pusht. Rechts het doelgerichte rapport, dat actionable insights produceert.</p>
+    <p class="vp-pyramid-intro" data-i18n="bnp.analyse.vpPyramidIntro">Links · klassiek dashboard dat data pusht. Rechts · doelgericht rapport dat actionable insights produceert.</p>
 
     <!-- PYRAMID EVOLUTION : deux triangles strictement identiques en silhouette
          (240×220, mêmes vertices). Seule la subdivision change : 2 strates pour
@@ -2274,8 +2304,6 @@
         <figcaption class="vp-pyramid__cap vp-pyramid__cap--good" data-i18n="bnp.analyse.vpPyrAfter">De Enterprise Intelligence-aanpak. Data afgestemd op persona, omgezet in gepersonaliseerde informatie, die de inzicht produceert.</figcaption>
       </figure>
     </div>
-
-    <p class="research-source" data-i18n="bnp.analyse.vpSource">Bron · Concept Report maart 2018, p27-31 — value proposition Enterprise Intelligence</p>
   </div>
 </section>
 
@@ -2286,7 +2314,7 @@
   <div class="chap-v2__stage">
     <div class="chap-v2__bg" aria-hidden="true">
       <div class="chap-v2__roman chap-v2__roman--prev">A</div>
-      <div class="chap-v2__roman chap-v2__roman--curr">V</div>
+      <div class="chap-v2__roman chap-v2__roman--curr">VP</div>
       <div class="chap-v2__rule"></div>
       <div class="chap-v2__progress"><span></span></div>
     </div>
@@ -2308,14 +2336,14 @@
 <section id="valueprop-content" data-act="bridge" data-frame="default" data-overflow="natural" data-rail="vertical">
   <div class="container vp-content">
     <span class="eyebrow vp-content__eyebrow">Le contrat de valeur</span>
-    <h2 class="vp-content__title" data-i18n-html="bnp.vp.title">Een dashboard is geen <span class="accent">data pushen.</span><br>Het is een verhaal vertellen dat beslist.</h2>
-    <p class="vp-content__lede" data-i18n-html="bnp.vp.lede">Vóór de VP sprak elke functie haar eigen taal. Erna staat één zin overeind in de zaal: <strong>de gebruiker heeft een doel, we leveren een doelgericht rapport, punt</strong>. Geen cognitieve overbelasting meer, geen visualisatie omwille van de visualisatie. Deze sectie is de uitlijning die de rest legitiem maakt.</p>
+    <h2 class="vp-content__title" data-i18n-html="bnp.vp.title">Een dashboard is geen <span class="accent">data pushen.</span><br>Het is een verhaal vertellen.</h2>
+    <p class="vp-content__lede" data-i18n-html="bnp.vp.lede"><strong>De gebruiker heeft een doel, we leveren een doelgericht rapport.</strong> Punt.</p>
 
     <!-- TRIPTYQUE · 3 piliers de la VP : posture / persona / livrables -->
     <div class="vp-content__grid">
       <article class="vp-pillar vp-pillar--posture">
         <div class="vp-pillar__num">01</div>
-        <h3 class="vp-pillar__title" data-i18n="bnp.vp.posture.h">De houding</h3>
+        <h3 class="vp-pillar__title" data-i18n="bnp.vp.posture.h">Drie principes</h3>
         <p class="vp-pillar__claim" data-i18n-html="bnp.vp.posture.claim">Geen exploratief platform. <span class="accent">Een verhaal met tools.</span></p>
         <ul class="vp-pillar__list">
           <li data-i18n-html="bnp.vp.posture.l1"><strong>Geen</strong> data-push via decoratieve grafieken.</li>
@@ -2370,7 +2398,7 @@
 
     <!-- BAS DE PAGE · alignement obtenu + bascule Ideation -->
     <div class="vp-content__bridge">
-      <p class="vp-content__alignement" data-i18n-html="bnp.vp.bridgeText">Aan het eind van deze VP delen <strong>Banking, IT, Legal en Marketing</strong> dezelfde zin, dezelfde gebruiker, dezelfde 5 deliverables. Het is dit <span class="accent">gemeenschappelijke fundament</span> dat de ideation legitiem maakt: we arbitreren niet meer over het "wat", maar over het "hoe".</p>
+      <p class="vp-content__alignement" data-i18n-html="bnp.vp.bridgeText"><strong>Banking, IT, Legal en Marketing</strong> delen dezelfde zin, dezelfde gebruiker, dezelfde 5 deliverables. <span class="accent">Gemeenschappelijke basis.</span></p>
       <span class="vp-content__next" data-i18n-html="bnp.vp.bridgeNext">Logisch vervolg <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 4 Goals geïdentificeerd in workshop</span> <strong>Ideation</strong> · 4 Goals identifiés en atelier</span>
     </div>
   </div>
@@ -2380,7 +2408,7 @@
 <section class="chapter-divider chapter-divider--v2" id="chap-ideation" data-chapter="I" data-from-letter="V">
   <div class="chap-v2__stage">
     <div class="chap-v2__bg" aria-hidden="true">
-      <div class="chap-v2__roman chap-v2__roman--prev">V</div>
+      <div class="chap-v2__roman chap-v2__roman--prev">VP</div>
       <div class="chap-v2__roman chap-v2__roman--curr">I</div>
       <div class="chap-v2__rule"></div>
       <div class="chap-v2__progress"><span></span></div>
@@ -2410,15 +2438,15 @@
      concrète du concept VP qui ferme le diamant 1. CVE 2026-05-03. -->
 <section id="prototype-direction" data-act="A" data-frame="wide" data-overflow="natural">
   <div class="container">
-    <span class="eyebrow" data-i18n="bnp.prototype.directionEyebrow">Prototype · eerste drafts</span>
-    <h2 class="vp-hero__title" data-i18n-html="bnp.prototype.directionTitle">Twee richtingen verkend. <span class="accent">Eén weerhouden.</span></h2>
-    <p class="lead vp-hero__lead" data-i18n="bnp.prototype.directionLead">De eerste wireframes hebben het concept in twee tegenovergestelde richtingen gematerialiseerd. Links pusht ruwe data via grafieken en filters : cognitive overload gegarandeerd, de handelaar moet zijn eigen lezing bouwen. Rechts plaatst vier KPI's afgestemd op vier business-doelen : één lezing, één beslissing. Het is die tweede richting die voor het Spotfire-prototype is weerhouden.</p>
+    <span class="eyebrow" data-i18n="bnp.prototype.directionEyebrow">Prototype · arbitrage na POC</span>
+    <h2 class="vp-hero__title" data-i18n-html="bnp.prototype.directionTitle">De Marketing-POC verworpen. <span class="accent">De VP heeft heroriënteerd.</span></h2>
+    <p class="lead vp-hero__lead" data-i18n="bnp.prototype.directionLead">Marketing droeg een eerste data-exploration-POC. Verworpen door pilotklanten en SteerCo. De VP heeft heroriënteerd · één lezing, één beslissing.</p>
 
     <!-- COMPARISON SIDE-BY-SIDE : Data exploration ❌ vs Goal-oriented ✓ -->
     <div class="vp-compare">
       <article class="vp-compare__card vp-compare__card--bad">
-        <span class="vp-compare__verdict vp-compare__verdict--bad" data-i18n="bnp.analyse.vpBadVerdict">Cognitive overload</span>
-        <h3 class="vp-compare__name" data-i18n="bnp.analyse.vpBadName">Data exploration</h3>
+        <span class="vp-compare__verdict vp-compare__verdict--bad" data-i18n="bnp.analyse.vpBadVerdict">Verworpen in SteerCo</span>
+        <h3 class="vp-compare__name" data-i18n="bnp.analyse.vpBadName">POC Marketing · Data exploration</h3>
         <div class="vp-mock vp-mock--bad" aria-hidden="true">
           <div class="vp-mock__nav">
             <span>TURNOVER</span><span>TRAFIC</span><span>PROFILE</span><span>GEOLOCAL</span><span>COMPARAISON</span>
@@ -2434,12 +2462,12 @@
             </div>
           </div>
         </div>
-        <p class="vp-compare__note" data-i18n="bnp.analyse.vpBadNote">Contextuele filters + 5 demografische dimensies. De handelaar moet zelf zijn lezing bouwen. Niemand doet dat twee keer.</p>
+        <p class="vp-compare__note" data-i18n="bnp.analyse.vpBadNote">Eerste POC gedragen door Marketing · contextuele filters + 5 demografische dimensies. Getest bij pilotklanten, verworpen door de SteerCo. De handelaar moest zelf zijn lezing bouwen.</p>
       </article>
 
       <article class="vp-compare__card vp-compare__card--good">
-        <span class="vp-compare__verdict vp-compare__verdict--good" data-i18n="bnp.analyse.vpGoodVerdict">Focused information</span>
-        <h3 class="vp-compare__name" data-i18n="bnp.analyse.vpGoodName">Goal-oriented report</h3>
+        <span class="vp-compare__verdict vp-compare__verdict--good" data-i18n="bnp.analyse.vpGoodVerdict">Goedgekeurd door klanten</span>
+        <h3 class="vp-compare__name" data-i18n="bnp.analyse.vpGoodName">VP heroriënteerd · Goal-oriented report</h3>
         <div class="vp-mock vp-mock--good" aria-hidden="true">
           <div class="vp-mock__nav vp-mock__nav--small">
             <span>SHOP NAME ▾</span><span>MONTH ▾</span>
@@ -2451,12 +2479,10 @@
             <div class="vp-mock__kpi vp-mock__kpi--good"><span class="vp-mock__kpi-label">KPI</span><span class="vp-mock__goal">GOAL 4</span></div>
           </div>
         </div>
-        <p class="vp-compare__note" data-i18n="bnp.analyse.vpGoodNote">Vier KPI's afgestemd op vier business-doelen. Het rood vraagt onmiddellijk een beslissing. Het oranje signaleert een aandachtspunt. Het groen bevestigt wat werkt. Eén lezing, één beslissing.</p>
+        <p class="vp-compare__note" data-i18n="bnp.analyse.vpGoodNote">Herkadering na VP · vier KPI's op vier businessdoelen. Rood · beslissing nu. Oranje · aandachtspunt. Groen · wat werkt. Eén lezing, één beslissing.</p>
       </article>
     </div>
 
-    <p class="vp-claim" data-i18n-html="bnp.analyse.vpClaim">Geen verkennend metrieksysteem. <span class="accent">Doelgerichte rapporten met actionable outcomes.</span></p>
-    <p class="research-source" data-i18n="bnp.prototype.directionSource">Bron · Concept Report maart 2018, p30-31 — eerste wireframes Enterprise Intelligence</p>
   </div>
 </section>
 
@@ -2465,9 +2491,9 @@
      la slide p-37 brute est plus forte qu'un redesign. -->
 <section id="prototype-overview" data-act="A" data-frame="wide" data-overflow="natural">
   <div class="container">
-    <span class="eyebrow" data-i18n="bnp.prototype.overviewEyebrow">Prototype · 4 doelen geïdentificeerd</span>
-    <h2 class="proto-overview__title" data-reveal="title" data-i18n-html="bnp.prototype.overviewTitle">Van de werkmuur <span class="accent">naar de 4 geprioriteerde rapporten.</span></h2>
-    <p class="lead proto-overview__lead" data-i18n="bnp.prototype.overviewLead">De muur hieronder is het moment waarop alle kandidaat-features werden uitgespreid en gegroepeerd in grote intenties. Elk rapport komt overeen met een business-doel van de handelaar, met eigen relevante data. Drie weerhouden voor de MVP, één geplaatst in roadmap fase 2.</p>
+    <span class="eyebrow" data-i18n="bnp.prototype.overviewEyebrow">Prototype · Goals-workshop met Marketing</span>
+    <h2 class="proto-overview__title" data-reveal="title" data-i18n-html="bnp.prototype.overviewTitle">Na de VP · <span class="accent">Goals-workshop met Marketing.</span></h2>
+    <p class="lead proto-overview__lead" data-i18n="bnp.prototype.overviewLead">Achttien kandidaat-features aan de muur. Tien weerhouden voor MVP (groen), acht buiten MVP (grijs). Geconsolideerd in drie rapporten + één in fase 2.</p>
 
     <a class="proto-wall" href="/public/decks/concept-report/p-37.jpg" target="_blank" rel="noopener" aria-label="Ouvrir la slide originale du wall en taille réelle">
       <img class="proto-wall__img" loading="lazy" decoding="async" src="/public/decks/concept-report/p-37.jpg" alt="Wall d'atelier · 4 goals identifiés sur le mur de la salle, post-it stickers et bulles vertes/grises pour MVP scope vs phase 2"/>
@@ -2478,59 +2504,84 @@
          CVE 2026-05-03 v2 — refonte avec coordinate system unique.
          3 goals en triangle reliés par des courbes Bézier propres, ancrées sur
          les bords des rectangles. Aucun mismatch de positionnement possible. -->
+    <!-- CVE 2026-05-17 · cycle goals redesign · cartes plus larges, gradient subtil,
+         accent amber sur GOAL N, typo display Cormorant pour le nom, arrows solides
+         amber 2.5px avec arrowheads slim. Ring guide central + label CYCLE. -->
     <div class="proto-cycle" role="img" aria-label="Cycle de décision · 3 goals reliés en boucle">
-      <svg class="proto-cycle__svg" viewBox="0 0 1000 540" preserveAspectRatio="xMidYMid meet">
+      <svg class="proto-cycle__svg" viewBox="0 0 1200 660" preserveAspectRatio="xMidYMid meet">
         <defs>
-          <marker id="proto-cycle-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse">
-            <path d="M0 0L10 5L0 10z" fill="var(--amber)"/>
+          <marker id="proto-cycle-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="11" markerHeight="11" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0 0L12 6L0 12L3 6Z" fill="var(--amber)"/>
           </marker>
+          <linearGradient id="proto-cycle-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%"  stop-color="color-mix(in srgb, #4fa66f 18%, var(--card))"/>
+            <stop offset="100%" stop-color="color-mix(in srgb, #4fa66f 8%,  var(--card))"/>
+          </linearGradient>
           <filter id="proto-cycle-shadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.18"/>
+            <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.30"/>
           </filter>
         </defs>
 
-        <!-- Arrows (drawn first, behind nodes) -->
-        <!-- 1 → 2 : right edge of G1 (650,100) curves to top edge of G2 (830,370) -->
-        <path d="M 650 100 C 830 100, 830 200, 830 370" fill="none" stroke="var(--amber)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 7" marker-end="url(#proto-cycle-arrow)" opacity="0.85"/>
-        <!-- 2 → 3 : left edge of G2 (680,440) curves to right edge of G3 (320,440) -->
-        <path d="M 680 440 C 600 540, 400 540, 320 440" fill="none" stroke="var(--amber)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 7" marker-end="url(#proto-cycle-arrow)" opacity="0.85"/>
-        <!-- 3 → 1 : top edge of G3 (170,370) curves to left edge of G1 (350,100) -->
-        <path d="M 170 370 C 170 200, 170 100, 350 100" fill="none" stroke="var(--amber)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 7" marker-end="url(#proto-cycle-arrow)" opacity="0.85"/>
+        <!-- Ring guide central · cercle subtil pour ancrer le cycle visuellement -->
+        <circle cx="600" cy="330" r="200" fill="none" stroke="color-mix(in srgb, var(--amber) 18%, transparent)" stroke-width="1" stroke-dasharray="2 5" opacity="0.45"/>
 
-        <!-- Goal 1 (top-center) -->
+        <!-- Label cycle au centre -->
+        <text x="600" y="318" text-anchor="middle" font-family="Manrope" font-size="10" font-weight="700" letter-spacing="3.5" fill="color-mix(in srgb, var(--amber) 70%, var(--fg-muted))" opacity="0.65">BUSINESS PILOTING</text>
+        <text x="600" y="346" text-anchor="middle" font-family="Cormorant Garamond" font-size="22" font-weight="300" font-style="italic" fill="var(--fg-muted)" opacity="0.55">une boucle de décision</text>
+
+        <!-- Arrows · solides, amber, courbes Bézier propres, ancrées sur bords des cards -->
+        <!-- 1 → 2 : bord-droit G1 vers bord-haut G2 -->
+        <path d="M 760 130 C 1000 130, 1000 280, 990 400" fill="none" stroke="var(--amber)" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.78" marker-end="url(#proto-cycle-arrow)"/>
+        <!-- 2 → 3 : bord-gauche G2 vers bord-droit G3 -->
+        <path d="M 820 510 C 700 620, 500 620, 380 510" fill="none" stroke="var(--amber)" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.78" marker-end="url(#proto-cycle-arrow)"/>
+        <!-- 3 → 1 : bord-haut G3 vers bord-gauche G1 -->
+        <path d="M 210 400 C 200 280, 200 130, 440 130" fill="none" stroke="var(--amber)" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.78" marker-end="url(#proto-cycle-arrow)"/>
+
+        <!-- Goal 1 · top-center -->
         <g class="proto-cycle__node-svg" filter="url(#proto-cycle-shadow)">
-          <rect x="350" y="30" width="300" height="140" rx="12" class="proto-cycle__rect"/>
-          <text class="proto-cycle__svg-num"   x="500" y="58"  text-anchor="middle">GOAL 1</text>
-          <text class="proto-cycle__svg-phase" x="500" y="80"  text-anchor="middle">CONTROL BUSINESS STATE</text>
-          <text class="proto-cycle__svg-name"  x="500" y="115" text-anchor="middle">Performance Analysis</text>
-          <text class="proto-cycle__svg-q"     x="500" y="148" text-anchor="middle">« Comment je performe ce mois-ci ? »</text>
+          <rect x="440" y="40" width="320" height="180" rx="14" fill="url(#proto-cycle-grad)" stroke="color-mix(in srgb, #4fa66f 45%, transparent)" stroke-width="1.2"/>
+          <line x1="465" y1="64" x2="500" y2="64" stroke="var(--amber)" stroke-width="2"/>
+          <text class="proto-cycle__svg-num"   x="600" y="75"  text-anchor="middle">GOAL 1</text>
+          <text class="proto-cycle__svg-phase" x="600" y="100" text-anchor="middle">CONTROL BUSINESS STATE</text>
+          <text class="proto-cycle__svg-name"  x="600" y="145" text-anchor="middle">Performance Analysis</text>
+          <text class="proto-cycle__svg-q"     x="600" y="190" text-anchor="middle">« Comment je performe ce mois-ci ? »</text>
         </g>
 
-        <!-- Goal 2 (bottom-right) -->
+        <!-- Goal 2 · bottom-right -->
         <g class="proto-cycle__node-svg" filter="url(#proto-cycle-shadow)">
-          <rect x="680" y="370" width="300" height="140" rx="12" class="proto-cycle__rect"/>
-          <text class="proto-cycle__svg-num"   x="830" y="398" text-anchor="middle">GOAL 2</text>
-          <text class="proto-cycle__svg-phase" x="830" y="420" text-anchor="middle">LEARN &amp; TAKE ACTIONS</text>
-          <text class="proto-cycle__svg-name"  x="830" y="455" text-anchor="middle">Business Expansion</text>
-          <text class="proto-cycle__svg-q"     x="830" y="488" text-anchor="middle">« Comment j'agrandis mon business ? »</text>
+          <rect x="820" y="400" width="320" height="180" rx="14" fill="url(#proto-cycle-grad)" stroke="color-mix(in srgb, #4fa66f 45%, transparent)" stroke-width="1.2"/>
+          <line x1="845" y1="424" x2="880" y2="424" stroke="var(--amber)" stroke-width="2"/>
+          <text class="proto-cycle__svg-num"   x="980" y="435" text-anchor="middle">GOAL 2</text>
+          <text class="proto-cycle__svg-phase" x="980" y="460" text-anchor="middle">LEARN &amp; TAKE ACTIONS</text>
+          <text class="proto-cycle__svg-name"  x="980" y="505" text-anchor="middle">Business Expansion</text>
+          <text class="proto-cycle__svg-q"     x="980" y="550" text-anchor="middle">« Comment j'agrandis mon business ? »</text>
         </g>
 
-        <!-- Goal 3 (bottom-left) -->
+        <!-- Goal 3 · bottom-left -->
         <g class="proto-cycle__node-svg" filter="url(#proto-cycle-shadow)">
-          <rect x="20" y="370" width="300" height="140" rx="12" class="proto-cycle__rect"/>
-          <text class="proto-cycle__svg-num"   x="170" y="398" text-anchor="middle">GOAL 3</text>
-          <text class="proto-cycle__svg-phase" x="170" y="420" text-anchor="middle">OBSERVE IMPACT OF ACTIONS</text>
-          <text class="proto-cycle__svg-name"  x="170" y="455" text-anchor="middle">Evaluating Actions</text>
-          <text class="proto-cycle__svg-q"     x="170" y="488" text-anchor="middle">« L'action que j'ai prise, elle a marché ? »</text>
+          <rect x="60" y="400" width="320" height="180" rx="14" fill="url(#proto-cycle-grad)" stroke="color-mix(in srgb, #4fa66f 45%, transparent)" stroke-width="1.2"/>
+          <line x1="85" y1="424" x2="120" y2="424" stroke="var(--amber)" stroke-width="2"/>
+          <text class="proto-cycle__svg-num"   x="220" y="435" text-anchor="middle">GOAL 3</text>
+          <text class="proto-cycle__svg-phase" x="220" y="460" text-anchor="middle">OBSERVE IMPACT OF ACTIONS</text>
+          <text class="proto-cycle__svg-name"  x="220" y="505" text-anchor="middle">Evaluating Actions</text>
+          <text class="proto-cycle__svg-q"     x="220" y="550" text-anchor="middle">« L'action que j'ai prise, elle a marché ? »</text>
         </g>
       </svg>
     </div>
 
-    <p class="proto-cycle__caption" data-i18n-html="bnp.prototype.cycleCaption">Drie rapporten die <strong>één enkele beslissingsloop</strong> vormen. De handelaar stapt in via de vraag die hem die dag bezighoudt — en elk rapport brengt hem terug naar de actie, dan naar de meting. Geen big data om te verkennen : drie gecoachte lezingen, één beslissingsstroom.</p>
+    <!-- Goal 4 phase 2 · card grise dédiée (semantic · grey = hors MVP, cf. Concept Report wall).
+         Pas de data-i18n-html sur le wrapper · enfants i18n individuels. -->
+    <div class="proto-cycle__phase2-card">
+      <span class="proto-cycle__phase2-badge" data-i18n="bnp.prototype.phase2Badge">FASE 2</span>
+      <div class="proto-cycle__phase2-body">
+        <span class="proto-cycle__phase2-num">GOAL 4</span>
+        <h4 class="proto-cycle__phase2-name" data-i18n="bnp.prototype.phase2Name">Marktonderzoek</h4>
+        <p class="proto-cycle__phase2-q" data-i18n="bnp.prototype.phase2Q">« Waar open ik de volgende winkel? »</p>
+      </div>
+      <span class="proto-cycle__phase2-note" data-i18n="bnp.prototype.phase2Note">Buiten MVP · roadmap fase 2.</span>
+    </div>
 
-    <p class="proto-cycle__phase2" data-i18n-html="bnp.prototype.cyclePhase2"><strong>Doel 4 · Market Research</strong> — « Waar open ik mijn volgende winkel? » — geïdentificeerd buiten MVP-scope, geplaatst in roadmap fase 2.</p>
-
-    <p class="research-source" data-i18n="bnp.prototype.overviewSource">Referentie · Concept Report maart 2018, p37 — originele werkmuur</p>
+    <p class="proto-cycle__caption" data-i18n-html="bnp.prototype.cycleCaption">Drie rapporten, <strong>één beslissingsloop</strong>. Vraag van de dag · actie · meting.</p>
   </div>
 </section>
 
@@ -2569,7 +2620,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.prototype.homeEyebrow">Prototype · Home · onthaalpanorama</span>
     <h3 class="goal-section__title" data-i18n-html="bnp.prototype.homeTitle">Voor de rapporten, <span class="accent">het panorama.</span></h3>
-    <p class="lead" data-i18n="bnp.prototype.homeLead">De homepagina toont geen rapport, ze geeft een panorama: drie performance-KPI bovenaan, drie verbeterindicatoren onderaan. De handelaar ziet binnen vijf seconden wat werkt en wat afglijdt. Dit is het instapdashboard, elk detailrapport opent vanaf hier.</p>
+    <p class="lead" data-i18n="bnp.prototype.homeLead">Geen rapport · een overzicht. Drie performance-KPI bovenaan, drie verbeterindicatoren onderaan. De handelaar ziet in vijf seconden wat werkt en wat afglijdt. Elk detailrapport opent vanaf hier.</p>
 
     <div class="dash-mock" aria-hidden="true">
       <div class="dash-mock__bar">
@@ -2671,9 +2722,9 @@
       <div class="goal-section__intro">
         <span class="eyebrow" data-i18n="bnp.prototype.g1Eyebrow">Doel 1 · Performance Analysis · cycle position : Control</span>
         <h3 class="goal-section__title" data-i18n-html="bnp.prototype.g1Title">Hoe presteer ik <span class="accent">deze maand?</span></h3>
-        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g1Lead">De handelaar opent het dashboard, in vijf seconden heeft hij zijn maandlezing : drie KPI's in één oogopslag, zijn winkel vergeleken met de andere van het netwerk, het verschil vs N-1 in beeld gebracht. Geen filters te manipuleren, geen grafiek te bouwen. De data spreekt, hij beslist.</p>
+        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g1Lead">Vijf seconden voor de maandlezing · drie KPI's, zijn winkel vergeleken met het netwerk, het verschil vs N-1 belicht. Geen filters, geen grafiek te bouwen. De data spreekt, hij beslist.</p>
 
-        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g1ValueProp"><strong>De belofte :</strong> wat een analist in 30 minuten zou doen (extraheren, kruisen, visualiseren, N-1 vergelijken, conclusie schrijven), heeft de handelaar in 5 seconden. Geen data-vaardigheid vereist.</p>
+        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g1ValueProp"><strong>De belofte :</strong> 5 seconden voor wat een analist in 30 minuten zou doen. Geen data-vaardigheid vereist.</p>
       </div>
 
       <!-- Dashboard mockup natif · charte folio · onglet Performance actif -->
@@ -2831,9 +2882,9 @@
       <div class="goal-section__intro">
         <span class="eyebrow" data-i18n="bnp.prototype.g2Eyebrow">Doel 2 · Business Expansion · cycle position : Learn</span>
         <h3 class="goal-section__title" data-i18n-html="bnp.prototype.g2Title">Hoe laat ik <span class="accent">mijn business groeien?</span></h3>
-        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g2Lead">Eens de foto van de business genomen, gaat de handelaar in actiemodus. Vijf gecoachte lezingen helpen hem concreet te beslissen wat te veranderen : wie zijn mijn echte klanten, wanneer kopen ze, wie komt terug, wie vertrekt, wanneer ben ik open. Elke feature wijst naar een concrete beslissing.</p>
+        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g2Lead">Actiemodus · vijf begeleide lezingen om te beslissen wat te veranderen. Wie zijn mijn echte klanten, wanneer kopen ze, wie komt terug, wie vertrekt, wanneer open ik. Elke feature wijst naar een beslissing.</p>
 
-        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g2ValueProp"><strong>De belofte :</strong> in plaats van 20 demografische segmenten te verkennen, toont het rapport alleen de 3 die ertoe doen — en zegt welke afhaakt. De handelaar hoeft niet te weten wat een cohort is.</p>
+        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g2ValueProp"><strong>De belofte :</strong> in plaats van 20 demografische segmenten te verkennen, toont het rapport alleen de 3 die ertoe doen — en zegt welke afhaakt.</p>
       </div>
 
       <!-- Dashboard mockup natif · charte folio · onglet Improvement actif -->
@@ -2943,9 +2994,9 @@
       <div class="goal-section__intro">
         <span class="eyebrow" data-i18n="bnp.prototype.g3Eyebrow">Doel 3 · Evaluating Actions · cycle position : Observe</span>
         <h3 class="goal-section__title" data-i18n-html="bnp.prototype.g3Title">De actie die ik heb genomen, <span class="accent">heeft die gewerkt?</span></h3>
-        <p class="lead goal-section__lead" data-i18n-html="bnp.prototype.g3Lead">Om een actie te evalueren, moet je vergelijken. Het concept legt drie tijdsvensters vast : <strong>zelfde periode N-1</strong>, <strong>vorige periode</strong>, <strong>zelfde lopende periode (multi-shops)</strong>. Op die basis heeft de co-design met Léonidas de beslissende test gelegd.</p>
+        <p class="lead goal-section__lead" data-i18n-html="bnp.prototype.g3Lead">Om een actie te evalueren, moet je vergelijken. Drie tijdsvensters · <strong>zelfde periode N-1</strong>, <strong>vorige periode</strong>, <strong>zelfde lopende periode (multi-shops)</strong>. Co-design met Léonidas op die basis.</p>
 
-        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g3ValueProp"><strong>De belofte :</strong> geen mentaal rekenwerk. Het verschil tussen twee periodes wordt aan serverzijde berekend, in duidelijke cijfers rechts van elke grafiek getoond. De handelaar leest het resultaat, niet de formule.</p>
+        <p class="goal-section__valueprop" data-i18n-html="bnp.prototype.g3ValueProp"><strong>De belofte :</strong> geen mentaal rekenwerk. Het verschil wordt aan serverzijde berekend, rechts van elke grafiek getoond.</p>
       </div>
 
       <!-- Dashboard mockup natif · charte folio · onglet Comparison actif -->
@@ -3127,7 +3178,7 @@
       <div class="goal-section__intro">
         <span class="eyebrow eyebrow--phase2" data-i18n="bnp.prototype.g4Eyebrow">Doel 4 · Market Research · Fase 2 roadmap</span>
         <h3 class="goal-section__title" data-i18n-html="bnp.prototype.g4Title">Waar open ik <span class="accent">de volgende winkel?</span></h3>
-        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g4Lead">Het vierde doel mikt op een meer strategische beslissing : waar een nieuwe winkel openen, in welke verticale de keten uitbreiden. Buiten MVP-scope — de data is er, maar de dienst vraagt een trapje extra maturiteit aan sponsor-zijde. Geïdentificeerd als expansie-as fase 2, horizon 2020.</p>
+        <p class="lead goal-section__lead" data-i18n="bnp.prototype.g4Lead">Strategische beslissing · waar een nieuwe winkel openen, in welke verticale uitbreiden. Buiten MVP-scope · de data is er, de dienst vraagt een extra maturiteit aan sponsorzijde. Fase 2, horizon 2020.</p>
       </div>
 
       <div class="g4-roadmap">
@@ -3152,7 +3203,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.prototype.utEyebrow">Prototype · User test 6 kmo's</span>
     <h3 class="research-h3" data-i18n-html="bnp.prototype.utTitle">Zes merchants. <span class="accent">Eén harde aankoopbelofte.</span></h3>
-    <p class="lead" data-i18n-html="bnp.prototype.utLead">Het Spotfire-prototype wordt getest met zes kmo's. Alle zes lezen hun dashboard zonder hulp. Vijf zeggen ja tegen een pilot. <strong>Eén — de Léonidas-groep — tekent een harde aankoopbelofte.</strong> Geen beleefde usability test. Een commerciële validatie.</p>
+    <p class="lead" data-i18n-html="bnp.prototype.utLead">Zes kmo's testen het Spotfire-prototype zonder hulp. <strong>Eén — de Léonidas-groep — tekent een vaste aankoopbelofte.</strong></p>
 
     <ul class="ut-stats" role="list">
       <li class="ut-stat">
@@ -3170,8 +3221,6 @@
     </ul>
 
     <blockquote class="ut-quote" data-i18n-html="bnp.prototype.utQuote">De sponsor heeft getekend. Zes kmo's zijn getest · één heeft zich geëngageerd, vijf hebben geweigerd. De go-productie werd genomen op basis van het schriftelijke engagement van de groep Léonidas, gedateerd vóór de ontwikkeling.</blockquote>
-
-    <p class="research-source" data-i18n="bnp.prototype.utSource">Tests uitgevoerd in co-design met de Léonidas-groep · januari-juni 2018</p>
   </div>
 </section>
 
@@ -3183,7 +3232,7 @@
   <div class="chap-v2__stage">
     <div class="chap-v2__bg" aria-hidden="true">
       <div class="chap-v2__roman chap-v2__roman--prev">P</div>
-      <div class="chap-v2__roman chap-v2__roman--curr">C</div>
+      <div class="chap-v2__roman chap-v2__roman--curr">CR</div>
       <div class="chap-v2__rule"></div>
       <div class="chap-v2__progress"><span></span></div>
     </div>
@@ -3269,7 +3318,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.alignment.eyebrow">Stakeholder-frictions · Alignering</span>
     <h2 data-i18n-html="bnp.alignment.h2">Hoe vier afdelingen uiteindelijk <span class="accent">hetzelfde project verdedigden.</span></h2>
-    <p class="lead" data-i18n="bnp.alignment.lead">Elke functie kwam met haar eigen wrijving. De Double Diamond diende om elk gesprek te plaatsen op het moment dat het gevoerd kon worden · niet eerder, niet later. De MVP-scope werd vastgelegd op de solo-handelaar · de all-in-one data (marketingcampagnes) werd buiten MVP geplaatst, op vraag van de sponsor, om een eerste commercieel signaal veilig te stellen vóór de uitbreiding.</p>
+    <p class="lead" data-i18n="bnp.alignment.lead">Elke functie, zijn eigen wrijving. Elk gesprek, gevoerd op zijn moment.</p>
 
     <div class="alignment-grid">
       <div class="align-card" data-fn="banking">
@@ -3307,10 +3356,10 @@
     </div>
 
     <!-- CVE 2026-05-08 · toolkit signal · workshop choice as Service Design tool -->
-    <p class="lead toolkit-signal" style="max-width: 70ch; margin-top: 32px;" data-i18n-html="bnp.alignment.toolkitSignal"><strong>Marketing en IT aan dezelfde workshoptafel</strong>, ver van elkaar in de org. Geen verdedigbare Value Proposition zonder beide die ze dragen. Uitkomst · <strong class="accent">duidelijke MVP-scope, geprioriteerde sprints</strong>, geen debat meer over het bereik.</p>
+    <p class="lead toolkit-signal" style="max-width: 70ch; margin-top: 32px;" data-i18n-html="bnp.alignment.toolkitSignal"><strong>Marketing en IT aan dezelfde workshoptafel.</strong> Geen verdedigbare Value Proposition zonder beide die ze dragen.</p>
 
     <div class="alignment-pivot">
-      <div class="alignment-pivot__outcome" data-i18n-html="bnp.alignment.pivotOutcome">Toen de vier functies dezelfde kmo in het centrum zagen · niet de abstracte handelaar, de handelaar die we aan zijn kassa hadden geobserveerd, van wie we de exacte zin kenden · werd het project <strong class="accent">de baby van iedereen</strong>. Uitgelijnde visie. Geen misverstand over waar de focus moest liggen.</div>
+      <div class="alignment-pivot__outcome" data-i18n-html="bnp.alignment.pivotOutcome">Toen de vier functies dezelfde kmo in het centrum zagen, werd het project <strong class="accent">de baby van iedereen</strong>.</div>
     </div>
   </div>
 </section>
@@ -3323,7 +3372,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.triplewin.eyebrow">De scheidsrechter van elke beslissing</span>
     <h2 class="triplewin-title" data-i18n-html="bnp.triplewin.h2">Bank · Retailer · Cardholder. <span class="accent">De driehoek die valse pistes verwierp.</span></h2>
-    <p class="lead triplewin-lead" data-i18n="bnp.triplewin.lead">De dienst hield enkel stand als de drie hoekpunten wonnen. Een idee dat er twee deed winnen en één verliezen werd terzijde gelegd. Geen compromis, geen gemiddelde. De driehoek besliste.</p>
+    <p class="lead triplewin-lead" data-i18n="bnp.triplewin.lead">De dienst hield enkel stand als de drie hoekpunten wonnen. Twee op drie · weggelegd.</p>
 
     <div class="triplewin-grid">
       <div class="triplewin-frame" aria-hidden="true">
@@ -3381,7 +3430,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="bnp.outcome.eyebrow">Aan het einde van het traject</span>
     <h2 class="outcome-title" data-i18n-html="bnp.outcome.title">Geen intentie. <span class="accent">Een schriftelijk commercieel signaal.</span></h2>
-    <p class="lead outcome-lead" data-i18n="bnp.outcome.lead">Zes maanden voorafgaand kaderwerk afgesloten met een vaste aankoopbelofte, getekend vóór de eerste regel code. Geen beleefde usability test, geen ja-in-principe in een interview. Een geschreven intentie, gedateerd, op het bureau van de sponsor.</p>
+    <p class="lead outcome-lead" data-i18n="bnp.outcome.lead">Een vaste aankoopbelofte, getekend vóór de eerste regel code. Schriftelijk, gedateerd, op het bureau van de sponsor.</p>
 
     <ol class="outcome-deliverables" role="list">
       <li class="outcome-card">
@@ -3392,7 +3441,7 @@
       <li class="outcome-card outcome-card--accent">
         <span class="outcome-card__num">02</span>
         <h3 class="outcome-card__h" data-i18n="bnp.outcome.d2.h">Léonidas tekent vooraf</h3>
-        <p class="outcome-card__p" data-i18n="bnp.outcome.d2.p">Eén kmo van zes geteste heeft zich schriftelijk geëngageerd. Vaste aankoopbelofte, voorwaardelijk aan de productie. Het enige geval van het project.</p>
+        <p class="outcome-card__p" data-i18n="bnp.outcome.d2.p">Léonidas Ixelles en Léonidas Woluwe-SP stonden al met naam in de wireframes van het Concept Report, als voorbeeld van vergelijking tussen shops. De voorondertekening heeft een naam in een maquette omgezet in een vaste aankoopbelofte, voorwaardelijk aan de productie.</p>
       </li>
       <li class="outcome-card">
         <span class="outcome-card__num">03</span>
@@ -3401,7 +3450,7 @@
       </li>
     </ol>
 
-    <p class="outcome-integrity" data-i18n-html="bnp.outcome.integrity"><strong>Integriteitsnota.</strong> Ik ben na de oplevering van het Concept Report bij BNP vertrokken om bij Belfius te beginnen. Ik heb geen nieuws meer gehad van het project. Wat ik met zekerheid kan zeggen stopt hier · aan het einde van het traject was het commerciële signaal zwart op wit gedocumenteerd.</p>
+    <p class="outcome-integrity" data-i18n-html="bnp.outcome.integrity"><strong>Integriteitsnota.</strong> Ik ben na de oplevering van het Concept Report bij BNP vertrokken om bij Belfius te beginnen. Ik heb geen nieuws meer gehad van het project.</p>
   </div>
 </section>
 
@@ -3412,7 +3461,7 @@
 <section id="fin-royale" class="fin-royale" data-act="R" data-frame="narrow" data-overflow="natural">
   <div class="fin-royale__postscript">
     <span class="fin-royale__ps-label" data-i18n="bnp.fin.ps.label">Postscriptum · zeven jaar later</span>
-    <p class="fin-royale__ps-text" data-i18n-html="bnp.fin.ps.text">Ik haal dit dossier weer boven wanneer een sponsor me vraagt wat een upstream-project waard is. Het antwoord zit in de driehoek : winnen de drie hoekpunten, dan houden we het. Zo niet, weg ermee. <span class="accent">De rest is ruis.</span></p>
+    <p class="fin-royale__ps-text" data-i18n-html="bnp.fin.ps.text">Ik haal dit dossier weer boven wanneer een sponsor me vraagt wat een upstream-project waard is. Het antwoord zit in de driehoek : <span class="accent">winnen de drie hoekpunten, dan houden we het. Zo niet, weg ermee.</span></p>
   </div>
 
   <div class="fin-royale__close">
@@ -3423,7 +3472,7 @@
     <a href="mailto:hello@christophevanengelen.com" class="fin-royale__path">
       <span class="fin-royale__path-eyebrow" data-i18n="bnp.fin.contact.eyebrow">Een gesprek?</span>
       <h3 class="fin-royale__path-title">hello@christophevanengelen.com</h3>
-      <p class="fin-royale__path-sub" data-i18n="bnp.fin.contact.sub">Freelance service designer · Brussel · beschikbaar voor opdrachten upstream service design, user research, scoping-workshops.</p>
+      <p class="fin-royale__path-sub" data-i18n="bnp.fin.contact.sub">Freelance service designer · Brussel · upstream framing.</p>
       <span class="fin-royale__path-arrow" aria-hidden="true">→</span>
     </a>
   </div>
@@ -3452,10 +3501,10 @@
   </div>
 </footer>
 
-<script src="/assets/i18n.js?v=20260504-s8"></script>
-<script src="/assets/theme.js?v=20260504-s8"></script>
-<script src="/assets/motion.js?v=20260504-s8"></script>
-<script src="/assets/deck.js?v=20260504-s8"></script>
-<script src="/assets/scroll-narrative.js?v=20260504-s8"></script>
+<script src="/assets/i18n.js?v=20260517-s29"></script>
+<script src="/assets/theme.js?v=20260517-s29"></script>
+<script src="/assets/motion.js?v=20260517-s29"></script>
+<script src="/assets/deck.js?v=20260517-s29"></script>
+<script src="/assets/scroll-narrative.js?v=20260517-s29"></script>
 </body>
 </html>

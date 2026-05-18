@@ -48,7 +48,7 @@
      OBLIGATOIRE en premier · contient keyframes, custom properties, classes
      utilities. Cf MOTION-GRAMMAR-TEMPLATE.md à la racine pour clonage cases. -->
 <link rel="stylesheet" href="/assets/motion-tokens.css?v=v1">
-<link rel="stylesheet" href="/assets/style.css?v=20260504-s8">
+<link rel="stylesheet" href="/assets/style.css?v=20260517-s29">
 
 <!-- CVE 2026-05-04 S1.4 · Schema.org Article + BreadcrumbList -->
 <script type="application/ld+json">
@@ -116,15 +116,16 @@
     will-change: transform, opacity;
     /* CVE 2026-05-01 : zoom-in propre à l'arrivée pour embarquer émotionnellement.
        Doublé : démarre à 1.36 (très présent), résout à 1.06 (état neutre que le parallax reprend). */
-    animation: hcx-zoom-in 2.6s cubic-bezier(.22,.61,.36,1) both;
+    /* CVE 2026-05-17 · keyframe sans transform (GSAP gère scale + yPercent du parallax) */
+    animation: hcx-fade-in 1.6s cubic-bezier(.22,.61,.36,1) both;
   }
-  @keyframes hcx-zoom-in {
-    from { transform: scale(1.36); opacity: 0.30; filter: saturate(0.35) contrast(1.30) brightness(0.50) blur(5px); }
+  @keyframes hcx-fade-in {
+    from { opacity: 0.30; filter: saturate(0.35) contrast(1.30) brightness(0.50) blur(5px); }
     60%  { opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82) blur(0); }
-    to   { transform: scale(1.06); opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82); }
+    to   { opacity: 1; filter: saturate(0.88) contrast(1.10) brightness(0.82); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .hcx__bg img { animation: none; transform: scale(1.06); }
+    .hcx__bg img { animation: none; }
   }
   .hcx__veil {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
@@ -168,6 +169,12 @@
   .hcx__client-name {
     font-size: 11px; font-weight: 700; letter-spacing: .20em; text-transform: uppercase;
     color: rgba(242,235,219,0.88);
+  }
+  .hcx__client-logo {
+    height: 28px;
+    width: auto;
+    display: block;
+    opacity: 0.92;
   }
   .hcx__client-period {
     font-size: 11px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase;
@@ -1251,7 +1258,7 @@
   <div class="hcx__grain"></div>
   <div class="hcx__grid">
     <div class="hcx__client">
-      <span class="hcx__client-name">Ewon by HMS</span>
+      <img class="hcx__client-logo" src="/public/img/logos/clients/hms-networks.svg" alt="Ewon by HMS" width="120" height="32" loading="eager" decoding="async"/>
       <span class="hcx__client-period">2021 · 2022</span>
     </div>
     <div class="hcx__period">
@@ -1264,12 +1271,6 @@
         <span class="hcx__hl2" data-i18n="hms.hero.h1.alt">Eén cultuur om te installeren.</span>
       </h1>
       <p class="hcx__lead" data-i18n="hms.hero.lead">Eén jaar freelance om eCatcher, M2Web en Talk2M te verenigen onder één enkele ervaring. Bij vertrek · 2 M€ vrijgemaakt voor productie, en de sponsor stijgt een rang.</p>
-      <!-- CVE 2026-05-11 HMS v2 · attribution stripe (UX Researcher reco · gain Sophie + Marc) -->
-      <p class="hcx__attribution" data-i18n="hms.hero.attribution">Service Design + UX/UI Consultant · mandaat één jaar · 2021 → 2022</p>
-      <div class="hcx__role">
-        <span class="hcx__role-label" data-i18n="hms.hero.metaRole">Service Design + UX/UI · Freelance</span>
-        <span class="hcx__role-where" data-i18n="hms.hero.metaWhere">12 maanden · Nijvel + remote</span>
-      </div>
     </div>
   </div>
   <div class="hcx__scroll">
@@ -1349,7 +1350,7 @@
 <section id="brief" data-act="S" data-frame="narrow" data-overflow="natural">
   <div class="container">
     <span class="eyebrow" data-i18n="hms.brief.eyebrow">De brief</span>
-    <h2 data-i18n-html="hms.brief.title">Wereldwijde Industrial IoT. <span class="accent">Drie legacy-platformen om te verenigen.</span></h2>
+    <h2 data-i18n-html="hms.brief.title">Wereldwijde Industrial IoT. <span class="accent">eCatcher, M2Web, Talk2M te verenigen.</span></h2>
 
     <p class="brief-teaser" style="margin-top: 22px;" data-i18n-html="hms.brief.teaser">Bij vertrek · <strong class="accent">Geprioriteerd Concept Report</strong> goedgekeurd door sponsor <span class="brief-teaser__sep">·</span> <strong class="accent">design system klaar voor productie</strong> <span class="brief-teaser__sep">·</span> <strong class="accent">2 M€ vrijgemaakt</strong> voor productie.</p>
 
@@ -1357,7 +1358,7 @@
 
     <p class="lead" style="margin-top: 32px; max-width: 70ch;" data-i18n="hms.brief.lead1">Ewon by HMS Networks. Entiteit gevestigd in Nijvel, België. Dochteronderneming van een Zweedse industriële groep (Halmstad), Europese leider in industriële communicatie. Vier merken in totaal · Anybus, Ewon, Ixxat, Intesis.</p>
 
-    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead2">Drie legacy-platformen om te verenigen · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Druk van IXON, Nederlandse cloud-native start-up, user-centric vanaf dag één · self-onboarding, freemium, persona-driven. Bij Ewon · platformen gericht op IT-backoffice, zonder self-onboarding of design system al opgezet. UX, UI en user-centric cultuur · drie gelijktijdige fronten om te activeren.</p>
+    <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead2">Drie legacy-platformen om te verenigen · eCatcher (desktop), M2Web (web), Talk2M (cloud SaaS). Platformen gericht op IT-backoffice, zonder self-onboarding of design system. UX, UI en user-centric cultuur parallel op te bouwen.</p>
 
     <p class="lead" style="max-width: 70ch;" data-i18n="hms.brief.lead4">Mandaat · Design Thinking, gebruikerscultuur en digitale transformatie installeren in een historisch IT-first organisatie. Alle afdelingshoofden rond de tafel brengen · R&D, product, business · en een geprioriteerd Concept Report doen ontstaan dat de sponsor voor het bestuur kon verdedigen.</p>
   </div>
@@ -1627,7 +1628,7 @@
       </ol>
     </nav>
 
-    <p class="proposed-cap" data-i18n="hms.proposed.cap">Bij de uitgang · een one-stop platform MVP geprioriteerd in user stories, ondertekend door Project Owners (Business) · Project Managers (IT) · Operations · Sales. Zes klanten van verschillende typologieën hebben het concept gevalideerd. Sponsor go prod. Wat volgt toont wat er bij elke stap is gebeurd.</p>
+    <p class="proposed-cap" data-i18n="hms.proposed.cap">One-stop platform MVP geprioriteerd in user stories. Ondertekend door Project Owners, Project Managers IT, Operations, Sales. 8 machinebouwers valideren. Sponsor go prod.</p>
   </div>
 </section>
 
@@ -1773,8 +1774,6 @@
         <p class="it-context" data-i18n="hms.research.it6Context">Directe zichtbaarheid op wat stuk gaat aan de eindklantkant.</p>
       </li>
     </ol>
-    <p class="research-source" data-i18n="hms.research.itSource">6 expert interviews Ewon &amp; HMS Halmstad, 2021. Namen geanonimiseerd, op aanvraag beschikbaar.</p>
-
   </div>
 </section>
 
@@ -1867,7 +1866,6 @@
         </ul>
       </article>
     </div>
-    <p class="research-source" data-i18n="hms.research.benchSource">Bron · Ewon by HMS Networks · competitive benchmark 2021-2022. Concurrenten · IXON (Nederland), Welotec (DE), Tosibox (FI).</p>
   </div>
 </section>
 
@@ -1903,8 +1901,6 @@
         </ul>
       </article>
     </div>
-
-    <p class="research-source" style="margin-top:32px;" data-i18n="hms.research.deepdiveSource">Bron · Phoenix AS-IS &amp; TO-BE Analysis HMS 2021-2022 · 6 interne expert interviews + 8 internationale customer interviews · composietprofielen.</p>
   </div>
 </section>
 
@@ -2379,7 +2375,7 @@
 
     <span class="eyebrow vp-eyebrow" data-i18n="hms.analyse.vpEyebrow">Aan het einde van diamant 1</span>
     <h2 class="vp-cliffhanger" data-i18n-html="hms.analyse.vpCliffhanger">Alles convergeert naar <span class="accent">één enkele VP.</span></h2>
-    <p class="vp-pyramid-intro" data-i18n="hms.analyse.vpConvergeIntro">Twaalf interne experts. Zes geïnterviewde klanten. Tien personas getest in het veld. Drie marktsegmenten. Tien gecarteerde pain points. Vier co-creatie workshops. Alles convergeert. Niet naar een canvas, maar naar één zin.</p>
+    <p class="vp-pyramid-intro" data-i18n="hms.analyse.vpConvergeIntro">Alles convergeert naar één zin, niet naar een canvas.</p>
 
     <!-- CONVERGENCE diagram · 4 inputs → 1 output (la VP) · pure CSS, narratif léger -->
     <div class="vp-converge" aria-hidden="true">
@@ -2399,8 +2395,6 @@
         <span class="vp-converge__output-hint">À découvrir juste en dessous.</span>
       </div>
     </div>
-
-    <p class="research-source" data-i18n="hms.analyse.vpSource">Bron · Strategic Process Proposal HMS 2021 · synthese Discovery + Heuristic Evaluation Nielsen 29 slides + Customer Journey workshops worldwide.</p>
   </div>
 </section>
 
@@ -2433,7 +2427,7 @@
   <div class="container vp-content">
     <span class="eyebrow vp-content__eyebrow" data-i18n="hms.vp.eyebrow">Het waardecontract</span>
     <h2 class="vp-content__title" data-i18n-html="hms.vp.title">Een platform is geen <span class="accent">vijf voordeuren.</span><br>Het is een orchestratie die zich afstemt op de persona die voor haar staat.</h2>
-    <p class="vp-content__lede" data-i18n-html="hms.vp.lede">Voor de VP verdedigde elk rol zijn eigen lezing. Project Owners wilden verkoopbare features. Project Managers wilden een onderhoudbare stack. Klanten jongleerden met vijf logins. Daarna houdt één zin stand · <strong>een georkestreerde host, herkende persona's, tien pijnen vertaald in vijf MVP-leveringen, zes erbij in MVP++</strong>. Het is deze VP die de Ideation legitiem maakt.</p>
+    <p class="vp-content__lede" data-i18n-html="hms.vp.lede"><strong>Eén georkestreerde host, twee herkende persona's, tien pijnen vertaald in vijf MVP-leveringen, zes in MVP++.</strong></p>
 
     <!-- TRIPTYQUE · 3 piliers : posture / 2 personas illustratifs / traduction 10→11→5 -->
     <div class="vp-content__grid">
@@ -2503,7 +2497,7 @@
 
     <!-- BAS DE PAGE · alignement obtenu + bascule Ideation -->
     <div class="vp-content__bridge">
-      <p class="vp-content__alignement" data-i18n-html="hms.vp.bridgeText">Aan het einde van deze VP delen <strong>Project Owners (Business), Project Managers (IT), Operations en Sales</strong> dezelfde zin, dezelfde twee persona's, dezelfde vertaling van de tien pijnen in vijf MVP-leveringen. Dat is de <span class="accent">gemeenschappelijke basis</span> die de Ideation legitiem maakt. Er wordt niet meer afgewogen over het « wat », maar over het « wanneer » en het « hoe ».</p>
+      <p class="vp-content__alignement" data-i18n-html="hms.vp.bridgeText"><strong>Project Owners, Project Managers IT, Operations, Sales</strong> delen dezelfde zin. Het arbitrage verschuift van het « wat » naar het « wanneer » en het « hoe ».</p>
       <span class="vp-content__next" data-i18n-html="hms.vp.bridgeNext">Logische volgende stap <span class="vp-content__arrow">→</span> <strong>Ideation</strong> · Develop · 2 verkende richtingen, één weerhouden</span> <strong>Ideation</strong> · 2 directions explorées, une retenue</span>
     </div>
   </div>
@@ -3066,8 +3060,6 @@
     </div>
 
     <blockquote class="ut-quote" data-i18n-html="hms.prototype.utQuote">« Voor het eerst hadden we een klantsignaal voor de ontwikkeling. De sponsor vroeg zich niet meer af of de richting klopte, hij vroeg zich af wanneer de rollout begint. »</blockquote>
-
-    <p class="research-source" data-i18n="hms.prototype.utSource">8 machine builders · 5 tijdzones Europa, US, Azië · Ewon HMS Concept Report 2022</p>
   </div>
 </section>
 
@@ -3278,7 +3270,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.alignment.eyebrow">Stakeholder Map · Afstemming</span>
     <h2 data-i18n-html="hms.alignment.h2">Hoe Business en IT uiteindelijk <span class="accent">dezelfde taal spraken.</span></h2>
-    <p class="lead" data-i18n-html="hms.alignment.lead">Bij de start verdedigde elk rol zijn eigen lezing. De Project Owner aan de Business-zijde wilde verkoopbare features. De Project Manager aan de IT-zijde wilde een onderhoudbare stack. De Project Lead arbitreerde over het tijdpad. <strong>Twee workshop-formaten hebben de brug geslagen.</strong> Kleine gerichte workshops met Project Managers en sleutelfiguren aan IT-zijde om de technische afwegingen vast te leggen. Grote Customer Journey workshops met alle stakeholders rond de tafel, om de klant centraal te zetten in plaats van het org chart.</p>
+    <p class="lead" data-i18n-html="hms.alignment.lead"><strong>Twee workshopformaten hebben de brug geslagen.</strong> Kleine gerichte workshops met de IT Project Managers voor de technische afwegingen. Grote Customer Journey workshops met alle stakeholders om de klant centraal te zetten in plaats van het org chart.</p>
 
     <div class="alignment-grid">
       <div class="align-card" data-fn="banking">
@@ -3405,7 +3397,7 @@
       </li>
     </ol>
 
-    <p class="outcome-integrity" data-i18n-html="hms.outcome.integrity"><strong>Integriteitsnota.</strong> Het Concept Report werd opgeleverd, gevalideerd en gepresenteerd aan het directiecomité door de sponsor die mij had aangesteld. De sponsor verkreeg 2 M€ extra budget en een persoonlijke promotie. De productie-rollout liep daarna in Agile sprints aan de Ewon-zijde, na mijn vertrek.</p>
+    <p class="outcome-integrity" data-i18n-html="hms.outcome.integrity"><strong>Integriteitsnota.</strong> De productie-rollout liep in Agile sprints aan Ewon-zijde na mijn vertrek.</p>
   </div>
 </section>
 
@@ -3416,7 +3408,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="hms.lessons.eyebrow">Wat Ewon me geleerd heeft</span>
     <h2 data-i18n-html="hms.lessons.h2">Drie hefbomen <span class="accent">die ik opnieuw zou inzetten.</span></h2>
-    <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n-html="hms.lessons.lead">Eén jaar na oplevering houden drie methodologische keuzes stand. <strong>Niets om anders te doen</strong> · de opdracht heeft haar contract gehouden, de sponsor heeft het productie-budget binnengehaald, en de organisatie heeft de gebruiker als kompas aanvaard.</p>
+    <p class="lead" style="margin-top: 18px; max-width: 70ch;" data-i18n-html="hms.lessons.lead">Drie methodologische keuzes houden één jaar later nog stand. Opdracht gehouden, budget binnen, gebruiker als kompas verankerd.</p>
 
     <div class="lessons-grid">
       <div class="lesson-card">
@@ -3483,10 +3475,10 @@
   </div>
 </footer>
 
-<script src="/assets/i18n.js?v=20260504-s8"></script>
-<script src="/assets/theme.js?v=20260504-s8"></script>
-<script src="/assets/motion.js?v=20260504-s8"></script>
-<script src="/assets/deck.js?v=20260504-s8"></script>
-<script src="/assets/scroll-narrative.js?v=20260504-s8"></script>
+<script src="/assets/i18n.js?v=20260517-s29"></script>
+<script src="/assets/theme.js?v=20260517-s29"></script>
+<script src="/assets/motion.js?v=20260517-s29"></script>
+<script src="/assets/deck.js?v=20260517-s29"></script>
+<script src="/assets/scroll-narrative.js?v=20260517-s29"></script>
 </body>
 </html>

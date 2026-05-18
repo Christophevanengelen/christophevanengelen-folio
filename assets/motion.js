@@ -848,58 +848,25 @@
        Entrance fait : scale 1.18 → 1.04 (zoom-out posant le décor).
        CVE 2026-05-01 (calibré douceur) : amplitude visible, mais lissée par scrub
        long. Scale start = 1.06 = scale fin d'intro → zéro saut au passage. */
+    /* CVE 2026-05-17 v2 · parallax bg agressif · GSAP est le seul à toucher transform de l'img
+       (CSS keyframe hcx-zoom-in remplacé par hcx-fade-in sans transform).
+       yPercent 0 → 80 (image descend de 80 % de sa hauteur pendant que la section sort),
+       scale 1.06 → 1.55 (zoom-in cinéma), scrub 0.6 (très réactif). */
     if (hcxBg) {
       gsap.fromTo(hcxBg,
         { scale: 1.06, yPercent: 0 },
         {
-          scale: 1.26, yPercent: 26, ease: 'none',
-          immediateRender: false,
+          scale: 1.55, yPercent: 80, ease: 'none',
+          immediateRender: true,
           scrollTrigger: {
             trigger: hcxSection, start: 'top top', end: 'bottom top',
-            scrub: 2.2, invalidateOnRefresh: true,
+            scrub: 0.6, invalidateOnRefresh: true,
           },
         },
       );
     }
-    if (hcxHead) {
-      gsap.fromTo(hcxHead,
-        { yPercent: 0 },
-        {
-          yPercent: -10, ease: 'none',
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: hcxSection, start: 'top top', end: 'bottom top',
-            scrub: 1.6, invalidateOnRefresh: true,
-          },
-        },
-      );
-    }
-    if (hcxKpis) {
-      gsap.fromTo(hcxKpis,
-        { yPercent: 0, scale: 1 },
-        {
-          yPercent: -5, scale: 0.96, ease: 'none',
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: hcxSection, start: 'top top', end: 'bottom top',
-            scrub: 1.4, invalidateOnRefresh: true,
-          },
-        },
-      );
-    }
-    if (hcxClient) {
-      gsap.fromTo(hcxClient,
-        { yPercent: 0, opacity: 1 },
-        {
-          yPercent: -14, opacity: 0.45, ease: 'none',
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: hcxSection, start: 'top top', end: 'bottom top',
-            scrub: 1.8, invalidateOnRefresh: true,
-          },
-        },
-      );
-    }
+    /* CVE 2026-05-17 · parallax désactivé sur les éléments TEXTE (hcxHead, hcxKpis, hcxClient).
+       Seule l'image de fond (hcxBg) doit faire le parallax. Le texte reste fixe. */
   }
 
   /* ════════════════════════════════════════════════════════════════════════
