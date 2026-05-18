@@ -128,21 +128,25 @@ async function notifyEmail(record) {
 }
 
 /**
- * Auto-welcome email · CVE 2026-05-18 · via Resend.com.
- * No-op si RESEND_API_KEY ou WELCOME_FROM_EMAIL absent · CVE peut activer plus tard.
+ * Auto-welcome email · CVE 2026-05-18 · via Gmail SMTP (Google Workspace hello@).
+ * No-op si GMAIL_USER ou GMAIL_APP_PASSWORD absent · CVE peut activer plus tard.
  *
- * Setup CVE ·
- *   1. Compte resend.com · gratuit 100 emails/jour · 3000/mois
- *   2. Vérifier le domaine christophevanengelen.com (DKIM + SPF DNS records)
- *   3. Créer API key
- *   4. Set env vars · vercel env add RESEND_API_KEY / WELCOME_FROM_EMAIL=hello@christophevanengelen.com
+ * Setup CVE (Google Workspace hello@christophevanengelen.com) ·
+ *   1. Activer 2-step verification dans Google Account (obligatoire)
+ *   2. Créer App Password · myaccount.google.com/apppasswords
+ *      → "App: Mail", "Device: Other (Vercel API)"
+ *      → Copier le password 16-caractères
+ *   3. Set env vars sur Vercel ·
+ *      vercel env add GMAIL_USER             (= hello@christophevanengelen.com)
+ *      vercel env add GMAIL_APP_PASSWORD     (= les 16 caractères copiés)
  *
- * Si Resend pas dispo · fallback silencieux. L'inscription reste enregistrée.
+ * Limite Gmail · 500 emails/jour outbound (largement suffisant pour newsletter).
+ * Si Gmail pas configuré · fallback silencieux. L'inscription reste enregistrée.
  */
 async function sendWelcomeEmail(email, lang) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const fromEmail = process.env.WELCOME_FROM_EMAIL;
-  if (!apiKey || !fromEmail) return; /* not configured · noop */
+  const user = process.env.GMAIL_USER;
+  const pass = process.env.GMAIL_APP_PASSWORD;
+  if (!user || !pass) return; /* not configured · noop */
 
   const messages = {
     fr: {
@@ -185,23 +189,20 @@ Christophe`,
 
   const msg = messages[lang] || messages.fr;
 
-  const r = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: fromEmail,
-      to: email,
-      subject: msg.subject,
-      text: msg.body,
-    }),
+  /* Lazy-load nodemailer · serverless cold-start friendly */
+  const { default: nodemailer } = await import('nodemailer');
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: { user, pass },
   });
 
-  if (!r.ok) {
-    const errBody = await r.text().catch(() => '');
-    throw new Error(`Resend returned ${r.status}: ${errBody.slice(0, 200)}`);
-  }
-  return r.json().catch(() => ({}));
+  await transporter.sendMail({
+    from: `"Christophe van Engelen" <${user}>`,
+    to: email,
+    replyTo: user,
+    subject: msg.subject,
+    text: msg.body,
+  });
 }
