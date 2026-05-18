@@ -356,56 +356,29 @@
   <!-- TAB · ANALYTICS                                               -->
   <!-- ============================================================ -->
   <section id="tab-analytics" data-tab-content="analytics" class="hidden">
-    <div id="an-config-warn" class="config-warn hidden"></div>
-
-    <div class="kpis">
-      <div class="kpi">
-        <span class="kpi-label">Visiteurs uniques · 30j</span>
-        <span class="kpi-value" id="an-visitors">—</span>
-      </div>
-      <div class="kpi">
-        <span class="kpi-label">Pages vues · 30j</span>
-        <span class="kpi-value" id="an-pageviews">—</span>
-      </div>
-      <div class="kpi">
-        <span class="kpi-label">Période</span>
-        <span class="kpi-value" style="font-size:14px;" id="an-range">—</span>
-      </div>
-    </div>
-
-    <div class="two-col">
-      <div class="panel">
-        <h2>Top pages</h2>
-        <ul class="top-list" id="an-pages"><li class="loading">—</li></ul>
-      </div>
-      <div class="panel">
-        <h2>Top referrers</h2>
-        <ul class="top-list" id="an-refs"><li class="loading">—</li></ul>
+    <div class="panel" style="text-align:center; padding: 48px 24px;">
+      <h2 style="margin-bottom:8px;">Vercel Web Analytics</h2>
+      <p style="font-size:14px; color:var(--fg-muted); max-width:60ch; margin:0 auto 24px;">
+        Vercel n'expose pas d'API publique pour lire les KPIs Web Analytics.
+        Le dashboard officiel reste le seul endroit pour consulter les données ·
+        visiteurs uniques, pages vues, top pages, referrers, devices, countries.
+      </p>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/analytics" target="_blank" rel="noopener" class="btn">
+          📊 Web Analytics →
+        </a>
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/speed-insights" target="_blank" rel="noopener" class="btn secondary">
+          ⚡ Speed Insights →
+        </a>
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/logs" target="_blank" rel="noopener" class="btn secondary">
+          📜 Logs →
+        </a>
       </div>
     </div>
 
-    <div class="two-col">
-      <div class="panel">
-        <h2>Top countries</h2>
-        <ul class="top-list" id="an-countries"><li class="loading">—</li></ul>
-      </div>
-      <div class="panel">
-        <h2>Devices</h2>
-        <ul class="top-list" id="an-devices"><li class="loading">—</li></ul>
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>Répartition langue · trafic</h2>
-      <div class="lang-bar" id="an-lang-bar"></div>
-      <div class="lang-legend" id="an-lang-legend"></div>
-    </div>
-
-    <div class="panel">
-      <h2>Visiteurs · 30 jours</h2>
-      <div class="spark-wrap">
-        <svg class="spark" id="an-spark" viewBox="0 0 300 60" preserveAspectRatio="none"></svg>
-      </div>
+    <div class="panel" id="an-status-panel">
+      <h2>État de la collecte</h2>
+      <p class="status" id="an-status">Vérification en cours...</p>
     </div>
   </section>
 
@@ -553,54 +526,28 @@
   }
 
   /* ============================================================
-     ANALYTICS · fetch + render
+     ANALYTICS · juste un status (deep-link only · cf API)
      ============================================================ */
   async function loadAnalytics() {
-    const warn = $('#an-config-warn');
-    warn.classList.add('hidden');
+    const status = $('#an-status');
+    status.textContent = 'Vérification en cours...';
+    status.className = 'status';
     try {
       const res = await fetch('/api/admin/analytics', {
         headers: { 'Authorization': 'Bearer ' + pwd },
       });
+      const data = await res.json().catch(() => ({}));
       if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        warn.classList.remove('hidden');
-        warn.innerHTML = `<strong>Erreur · ${res.status}</strong> · ${esc(data.error || data.detail || 'inconnue')}`;
+        status.textContent = 'Erreur · ' + (data.error || res.status);
+        status.className = 'status err';
         return;
       }
-      const data = await res.json();
-      if (!data.configured) {
-        warn.classList.remove('hidden');
-        warn.innerHTML = `<strong>Setup requis</strong> · ${esc(data.hint)} <br><br>
-          Env vars à ajouter sur Vercel · <code>VERCEL_TOKEN</code> · <code>VERCEL_PROJECT_ID</code> · <code>VERCEL_TEAM_ID</code>.<br>
-          Token · vercel.com/account/tokens → Create · scope Read Analytics.`;
-        return;
-      }
-      if (!data.enabled) {
-        warn.classList.remove('hidden');
-        warn.innerHTML = `<strong>Web Analytics pas activé</strong> · ${esc(data.hint)}<br>
-          ${data.debug ? '<br><code>' + esc(data.debug) + '</code>' : ''}`;
-        return;
-      }
-      renderAnalytics(data);
+      status.innerHTML = `Collecte active · script <code>/_vercel/insights/script.js</code> servi sur les 4 pages (home + 3 cases). Les données apparaissent dans le dashboard Vercel ci-dessus.`;
+      status.className = 'status ok';
     } catch (e) {
-      warn.classList.remove('hidden');
-      warn.innerHTML = `<strong>Erreur réseau</strong> · ${esc(e.message)}`;
+      status.textContent = 'Erreur réseau · ' + e.message;
+      status.className = 'status err';
     }
-  }
-
-  function renderAnalytics(d) {
-    $('#an-visitors').textContent = formatNum(d.visitors);
-    $('#an-pageviews').textContent = formatNum(d.pageviews);
-    if (d.range) {
-      $('#an-range').textContent = formatShortDate(d.range.from) + ' → ' + formatShortDate(d.range.to);
-    }
-    renderTopList('#an-pages', d.topPages, 'path');
-    renderTopList('#an-refs', d.topReferrers, 'host');
-    renderTopList('#an-countries', d.countries, 'name');
-    renderTopList('#an-devices', d.devices, 'name');
-    renderLangBar('#an-lang-bar', '#an-lang-legend', d.langSplit);
-    renderSparkline('#an-spark', d.daily);
   }
 
   /* ============================================================
