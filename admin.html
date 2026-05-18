@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,299 +7,529 @@
 <meta name="robots" content="noindex, nofollow" />
 <style>
   :root {
+    color-scheme: dark;
     --bg: #0a1220;
     --bg-soft: #131c2e;
     --bg-card: #182236;
+    --bg-elev: #1f2a40;
     --fg: #f2ebdb;
     --fg-muted: #b0aa9d;
     --fg-dim: #8a8579;
     --amber: #c76941;
-    --amber-soft: rgba(199, 105, 65, 0.12);
+    --amber-soft: rgba(199, 105, 65, 0.14);
+    --amber-glow: rgba(199, 105, 65, 0.35);
     --green: #6BCB77;
+    --green-soft: rgba(107, 203, 119, 0.15);
     --coral: #E27D60;
-    --border: rgba(242, 235, 219, 0.12);
+    --coral-soft: rgba(226, 125, 96, 0.15);
+    --blue: #5B7DB1;
+    --border: rgba(242, 235, 219, 0.10);
     --border-strong: rgba(242, 235, 219, 0.22);
+    --shadow-glass: 0 1px 0 rgba(255,255,255,0.04) inset, 0 24px 60px rgba(0,0,0,0.35);
+    --r: 14px;
   }
+  [data-theme="light"] {
+    color-scheme: light;
+    --bg: #f7f3e9;
+    --bg-soft: #ffffff;
+    --bg-card: #ffffff;
+    --bg-elev: #fcf8ec;
+    --fg: #1a1f2e;
+    --fg-muted: #5b6171;
+    --fg-dim: #7a7f8c;
+    --border: rgba(26, 31, 46, 0.10);
+    --border-strong: rgba(26, 31, 46, 0.22);
+    --shadow-glass: 0 1px 0 rgba(255,255,255,0.6) inset, 0 16px 40px rgba(26,31,46,0.10);
+  }
+
   * { box-sizing: border-box; }
+  html, body { background: var(--bg); }
   body {
     margin: 0;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
     color: var(--fg);
     padding: 24px;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
+    transition: background 220ms ease, color 220ms ease;
   }
-  .wrap { max-width: 1180px; margin: 0 auto; }
+  .wrap { max-width: 1240px; margin: 0 auto; }
+  a { color: var(--amber); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--bg-elev); padding: 2px 6px; border-radius: 5px;
+    font-size: 12px; font-family: ui-monospace, monospace;
+  }
 
-  /* Header */
-  .head {
+  /* ==================== AUTH GATE ==================== */
+  .auth-card {
+    max-width: 460px; margin: 80px auto; padding: 36px;
+    background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--r);
+    box-shadow: var(--shadow-glass);
+  }
+  .auth-card .brand-mark {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+  }
+  .auth-card .brand-dot {
+    width: 10px; height: 10px; border-radius: 50%; background: var(--amber);
+    box-shadow: 0 0 14px var(--amber-glow);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+  .auth-card h1 { font-weight: 300; font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .auth-card .sub { color: var(--fg-muted); font-size: 13px; margin: 0 0 28px; }
+
+  input[type="password"], input[type="text"], textarea {
+    width: 100%; padding: 12px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-radius: 10px;
+    color: var(--fg); font: inherit; font-size: 14px;
+    transition: border-color 180ms, box-shadow 180ms;
+  }
+  input:focus, textarea:focus {
+    outline: none; border-color: var(--amber);
+    box-shadow: 0 0 0 3px var(--amber-soft);
+  }
+  textarea { min-height: 140px; resize: vertical; line-height: 1.55; }
+
+  .btn {
+    padding: 10px 18px; background: var(--amber); color: #fff;
+    border: none; border-radius: 10px; font: inherit; font-weight: 600;
+    cursor: pointer; transition: all 200ms;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 22px var(--amber-soft); }
+  .btn:active { transform: translateY(0); }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn.secondary {
+    background: transparent; color: var(--fg);
+    border: 1px solid var(--border-strong);
+  }
+  .btn.secondary:hover { border-color: var(--amber); color: var(--amber); box-shadow: none; }
+  .btn.danger { background: var(--coral); color: #fff; }
+
+  /* ==================== APP HEADER ==================== */
+  .topbar {
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap; gap: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
-  .head h1 {
-    font-weight: 300; font-size: 26px; letter-spacing: -0.01em;
-    margin: 0;
+  .topbar h1 {
+    font-weight: 300; font-size: 22px; letter-spacing: -0.01em; margin: 0;
+    display: flex; align-items: center; gap: 10px;
   }
-  .head .sub { color: var(--fg-muted); font-size: 13px; margin-top: 2px; }
-  .head-meta { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--fg-dim); }
-  .head-meta button {
-    background: transparent; border: 1px solid var(--border); color: var(--fg-muted);
-    padding: 6px 10px; border-radius: 6px; font-size: 12px; cursor: pointer;
+  .topbar h1 .brand-dot {
+    width: 9px; height: 9px; border-radius: 50%; background: var(--amber);
+    box-shadow: 0 0 14px var(--amber-glow);
   }
-  .head-meta button:hover { color: var(--fg); border-color: var(--border-strong); }
+  .topbar h1 .brand-dot.live { animation: pulse 2.4s ease-in-out infinite; }
+  .topbar .sub { color: var(--fg-muted); font-size: 12px; margin-top: 2px; }
+  .topbar-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 
-  /* Tabs */
+  .icon-btn {
+    background: transparent; border: 1px solid var(--border);
+    color: var(--fg-muted); padding: 7px 12px; border-radius: 8px;
+    font: inherit; font-size: 12px; cursor: pointer;
+    transition: all 180ms;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .icon-btn:hover { color: var(--fg); border-color: var(--border-strong); background: var(--bg-elev); }
+  .icon-btn.active { color: var(--amber); border-color: var(--amber); }
+  .icon-btn .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--fg-dim); }
+  .icon-btn.active .dot { background: var(--amber); box-shadow: 0 0 8px var(--amber-glow); animation: pulse 1.6s infinite; }
+
+  /* ==================== TABS ==================== */
   .tabs {
-    display: flex; gap: 4px; border-bottom: 1px solid var(--border);
-    margin-bottom: 24px;
+    display: flex; gap: 0; border-bottom: 1px solid var(--border);
+    margin-bottom: 28px; position: relative;
   }
   .tab {
-    background: transparent; border: 0; padding: 12px 18px;
+    background: transparent; border: 0; padding: 14px 22px;
     color: var(--fg-muted); font: inherit; font-size: 14px; font-weight: 500;
-    cursor: pointer; border-bottom: 2px solid transparent;
-    transition: color 200ms, border-color 200ms;
+    cursor: pointer; position: relative;
+    transition: color 180ms;
   }
   .tab:hover { color: var(--fg); }
-  .tab.is-active { color: var(--amber); border-bottom-color: var(--amber); }
+  .tab.is-active { color: var(--amber); }
+  .tab.is-active::after {
+    content: ''; position: absolute; left: 16px; right: 16px; bottom: -1px;
+    height: 2px; background: var(--amber);
+    border-radius: 2px 2px 0 0;
+  }
+  .tab .kbd {
+    font-size: 10px; opacity: 0.6; padding: 1px 5px; border-radius: 3px;
+    background: var(--bg-elev); margin-left: 6px;
+  }
 
-  /* Panel + section */
+  /* ==================== PANELS ==================== */
   .panel {
     background: var(--bg-soft);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
+    border-radius: var(--r);
+    padding: 22px;
     margin-bottom: 16px;
+    box-shadow: var(--shadow-glass);
+    transition: border-color 220ms, transform 220ms;
   }
   .panel h2 {
-    font-weight: 500; font-size: 13px; margin: 0 0 16px;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber);
+    font-weight: 500; font-size: 12px; margin: 0 0 16px;
+    letter-spacing: 0.10em; text-transform: uppercase; color: var(--amber);
   }
-  .panel-row {
-    display: flex; gap: 12px; align-items: center;
-    flex-wrap: wrap; margin-bottom: 16px;
-  }
+  .panel h2 .h2-meta { color: var(--fg-dim); font-weight: 400; letter-spacing: 0.04em; text-transform: none; margin-left: 8px; }
+  .panel-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 
-  /* Auth */
-  .auth-card {
-    max-width: 480px; margin: 80px auto; padding: 32px;
-    background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px;
-  }
-  .auth-card h1 { font-weight: 300; font-size: 22px; margin: 0 0 6px; }
-  .auth-card .sub { color: var(--fg-muted); font-size: 13px; margin: 0 0 24px; }
-  input[type="password"], input[type="text"], textarea {
-    width: 100%; padding: 12px 14px;
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px solid var(--border); border-radius: 8px;
-    color: var(--fg); font: inherit; font-size: 14px;
-  }
-  input:focus, textarea:focus { outline: none; border-color: var(--amber); }
-  textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
-  .btn {
-    padding: 10px 18px; background: var(--amber); color: var(--bg);
-    border: none; border-radius: 8px; font: inherit; font-weight: 600;
-    cursor: pointer; transition: opacity 200ms;
-  }
-  .btn:hover { opacity: 0.85; }
-  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
-  .btn.secondary {
-    background: transparent; color: var(--fg); border: 1px solid var(--border);
-  }
-  .btn.secondary:hover { border-color: var(--amber); color: var(--amber); }
-
-  /* KPI grid */
+  /* ==================== KPI CARDS ==================== */
   .kpis {
     display: grid; gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    margin-bottom: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin-bottom: 18px;
   }
   .kpi {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 10px; padding: 16px 18px;
-    display: flex; flex-direction: column; gap: 4px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex; flex-direction: column; gap: 6px;
+    position: relative; overflow: hidden;
+    transition: border-color 200ms;
   }
+  .kpi:hover { border-color: var(--border-strong); }
+  .kpi::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+    opacity: 0; transition: opacity 220ms;
+  }
+  .kpi:hover::before { opacity: 1; }
   .kpi-label {
-    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--fg-dim); font-weight: 500;
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--fg-dim); font-weight: 600;
   }
   .kpi-value {
-    font-size: 28px; font-weight: 300; letter-spacing: -0.01em;
+    font-size: 32px; font-weight: 200; letter-spacing: -0.015em;
     color: var(--fg); line-height: 1;
+    font-variant-numeric: tabular-nums;
   }
-  .kpi-delta { font-size: 12px; color: var(--fg-muted); }
+  .kpi-delta { font-size: 12px; color: var(--fg-muted); display: flex; align-items: center; gap: 4px; }
   .kpi-delta.up { color: var(--green); }
   .kpi-delta.down { color: var(--coral); }
 
-  /* Two-column grid for breakdowns */
-  .two-col {
-    display: grid; gap: 16px;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 16px;
+  /* Skeleton loading */
+  .skel {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--bg-elev) 0%, var(--bg-card) 50%, var(--bg-elev) 100%);
+    background-size: 200% 100%; animation: skel 1.4s ease-in-out infinite;
+    border-radius: 4px;
   }
-  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+  .kpi-value.skel { height: 28px; width: 60%; }
+  @keyframes skel { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
-  /* Lang split bar */
+  /* ==================== STATUS PILL ==================== */
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
+    background: var(--bg-elev); color: var(--fg-muted);
+    border: 1px solid var(--border);
+  }
+  .status-pill.ok { background: var(--green-soft); color: var(--green); border-color: var(--green); }
+  .status-pill.err { background: var(--coral-soft); color: var(--coral); border-color: var(--coral); }
+  .status-pill.warn { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); }
+  .status-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+  /* ==================== TWO COL ==================== */
+  .two-col { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; margin-bottom: 16px; }
+  .three-col { display: grid; gap: 16px; grid-template-columns: 1fr 1fr 1fr; margin-bottom: 16px; }
+  @media (max-width: 860px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ==================== LANG BAR ==================== */
   .lang-bar {
-    display: flex; height: 32px; border-radius: 8px; overflow: hidden;
-    background: rgba(0,0,0,0.25);
-    margin-bottom: 12px;
+    display: flex; height: 34px; border-radius: 8px; overflow: hidden;
+    background: var(--bg-elev); margin-bottom: 14px;
   }
   .lang-bar > div {
     display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 600; color: var(--bg);
-    transition: width 600ms cubic-bezier(.16,1,.3,1);
+    font-size: 11px; font-weight: 700; color: #fff;
+    transition: width 700ms cubic-bezier(.22,1,.36,1);
   }
   .lang-fr { background: var(--amber); }
   .lang-nl { background: var(--green); }
-  .lang-en { background: #5B7DB1; }
+  .lang-en { background: var(--blue); }
   .lang-other { background: var(--fg-dim); }
-  .lang-legend { display: flex; gap: 16px; font-size: 12px; color: var(--fg-muted); flex-wrap: wrap; }
+  .lang-legend { display: flex; gap: 14px; font-size: 12px; color: var(--fg-muted); flex-wrap: wrap; }
   .lang-legend span { display: inline-flex; align-items: center; gap: 6px; }
   .lang-legend .dot { width: 10px; height: 10px; border-radius: 2px; }
 
-  /* Top list (referrers, pages, countries) */
+  /* ==================== TOP LIST ==================== */
   .top-list { list-style: none; padding: 0; margin: 0; }
   .top-list li {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding: 8px 0; border-bottom: 1px solid var(--border);
-    font-size: 13px;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 9px 0; border-bottom: 1px solid var(--border);
+    font-size: 13px; gap: 12px;
   }
   .top-list li:last-child { border-bottom: none; }
   .top-list .name {
-    color: var(--fg); font-family: ui-monospace, monospace;
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-    flex: 1; padding-right: 12px;
+    color: var(--fg); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    flex: 1; padding-right: 12px; font-family: ui-monospace, monospace;
   }
-  .top-list .count { color: var(--amber); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .top-list .count {
+    color: var(--amber); font-weight: 700; font-variant-numeric: tabular-nums;
+    display: inline-flex; align-items: center; gap: 8px;
+    flex-shrink: 0;
+  }
+  .top-list .bar {
+    display: inline-block; width: 60px; height: 6px; border-radius: 999px;
+    background: var(--bg-elev); position: relative; overflow: hidden;
+  }
+  .top-list .bar::after {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    background: linear-gradient(90deg, var(--amber-soft), var(--amber));
+    width: var(--w, 0%); transition: width 700ms cubic-bezier(.22,1,.36,1);
+  }
 
-  /* Sparkline */
-  .spark-wrap { padding: 8px 0; }
-  .spark { width: 100%; height: 60px; display: block; }
-  .spark path { fill: var(--amber-soft); }
-  .spark .line { fill: none; stroke: var(--amber); stroke-width: 1.5; }
-  .spark-meta { display: flex; justify-content: space-between; font-size: 11px; color: var(--fg-dim); margin-top: 8px; }
+  /* ==================== SPARKLINE ==================== */
+  .spark-wrap { padding: 8px 0; position: relative; }
+  .spark { width: 100%; height: 80px; display: block; }
+  .spark path.area { fill: var(--amber-soft); }
+  .spark path.line { fill: none; stroke: var(--amber); stroke-width: 1.8; }
+  .spark .dot { fill: var(--amber); stroke: var(--bg); stroke-width: 2; opacity: 0; }
+  .spark:hover .dot { opacity: 1; }
+  .spark-meta { display: flex; justify-content: space-between; font-size: 11px; color: var(--fg-dim); margin-top: 6px; }
 
-  /* Table subscribers */
-  table {
-    width: 100%; border-collapse: collapse;
-    margin-top: 12px; font-size: 13px;
+  /* ==================== HEATMAP ==================== */
+  .heatmap {
+    display: grid;
+    grid-template-columns: 28px repeat(24, 1fr);
+    grid-gap: 2px;
+    font-size: 9px; color: var(--fg-dim);
   }
-  th, td {
-    padding: 10px 12px; text-align: left;
-    border-bottom: 1px solid var(--border);
+  .heatmap .h-row-label { padding-right: 6px; align-self: center; }
+  .heatmap .h-cell {
+    height: 16px; border-radius: 3px;
+    background: var(--bg-elev);
+    transition: transform 140ms;
+    cursor: default;
   }
-  th {
-    font-weight: 500; text-transform: uppercase;
-    letter-spacing: 0.04em; font-size: 10px; color: var(--fg-dim);
+  .heatmap .h-cell:hover { transform: scale(1.4); z-index: 2; outline: 1px solid var(--amber); }
+  .heatmap .h-axis {
+    grid-column: 2 / -1; display: grid; grid-template-columns: repeat(24, 1fr);
+    margin-top: 4px; font-size: 9px; color: var(--fg-dim); text-align: center;
   }
-  td.email { font-family: ui-monospace, monospace; color: var(--fg); }
+
+  /* ==================== TIMELINE ==================== */
+  .timeline { padding: 0; margin: 0; list-style: none; position: relative; }
+  .timeline::before {
+    content: ''; position: absolute; left: 9px; top: 6px; bottom: 6px;
+    width: 1px; background: var(--border);
+  }
+  .timeline li {
+    position: relative; padding-left: 32px; padding-bottom: 16px;
+    font-size: 13px;
+  }
+  .timeline li::before {
+    content: ''; position: absolute; left: 5px; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--bg-card); border: 2px solid var(--amber);
+    box-shadow: 0 0 0 3px var(--bg-soft);
+  }
+  .timeline li.tl-deploy::before { border-color: var(--green); }
+  .timeline li.tl-error::before { border-color: var(--coral); }
+  .timeline .tl-time { font-size: 11px; color: var(--fg-dim); }
+  .timeline .tl-body { color: var(--fg); margin-top: 2px; line-height: 1.45; }
+  .timeline .tl-tag {
+    font-size: 10px; padding: 1px 5px; border-radius: 3px;
+    background: var(--bg-elev); color: var(--fg-muted); margin-right: 6px;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+
+  /* ==================== TABLES ==================== */
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 10px; color: var(--fg-dim); }
+  td.email { font-family: ui-monospace, monospace; color: var(--fg); font-size: 12px; }
   td.ts { color: var(--fg-muted); font-size: 12px; white-space: nowrap; }
-  td.lang { color: var(--fg-muted); text-transform: uppercase; font-size: 10px; }
+  td.lang { color: var(--fg-muted); text-transform: uppercase; font-size: 10px; font-weight: 600; }
 
-  /* Status / empty / loading */
-  .status { margin-top: 12px; font-size: 13px; min-height: 1.4em; }
-  .status.ok { color: var(--green); }
-  .status.err { color: var(--coral); }
-  .empty { color: var(--fg-muted); font-style: italic; padding: 24px 0; text-align: center; }
-  .loading { color: var(--fg-muted); padding: 12px 0; font-size: 13px; }
-  .config-warn {
-    background: rgba(226, 125, 96, 0.08); border: 1px solid rgba(226, 125, 96, 0.3);
-    border-radius: 8px; padding: 16px; margin-bottom: 16px;
-    font-size: 13px; color: var(--fg);
+  /* ==================== TOASTS ==================== */
+  .toasts {
+    position: fixed; bottom: 24px; right: 24px;
+    display: flex; flex-direction: column-reverse; gap: 8px;
+    z-index: 9999; pointer-events: none;
   }
-  .config-warn code {
-    background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;
-    font-size: 12px;
+  .toast {
+    background: var(--bg-soft); border: 1px solid var(--border-strong);
+    color: var(--fg); padding: 12px 18px; border-radius: 10px;
+    font-size: 13px; min-width: 220px; pointer-events: auto;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.30);
+    animation: toast-in 280ms cubic-bezier(.16,1,.3,1);
   }
+  .toast.ok { border-left: 3px solid var(--green); }
+  .toast.err { border-left: 3px solid var(--coral); }
+  @keyframes toast-in { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .toast.fade-out { animation: toast-out 220ms ease forwards; }
+  @keyframes toast-out { to { transform: translateY(8px); opacity: 0; } }
 
-  /* Hidden helper */
+  /* ==================== HELPERS ==================== */
   .hidden { display: none !important; }
+  .empty { color: var(--fg-muted); font-style: italic; padding: 20px 0; text-align: center; font-size: 13px; }
+  .grid-gap { display: grid; gap: 10px; }
+  .row-flex { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .meta-line { font-size: 12px; color: var(--fg-muted); }
+  .text-mono { font-family: ui-monospace, monospace; font-size: 12px; }
+  .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-  /* Details/code */
-  details { margin-top: 12px; font-size: 12px; color: var(--fg-muted); }
-  details summary { cursor: pointer; user-select: none; }
-  details pre {
-    background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px;
-    overflow-x: auto; font-size: 11px; margin-top: 8px;
+  /* Keyboard shortcuts overlay */
+  .kb-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10000; backdrop-filter: blur(8px);
+  }
+  .kb-overlay .kb-card {
+    background: var(--bg-soft); padding: 24px 28px;
+    border: 1px solid var(--border-strong); border-radius: var(--r);
+    max-width: 380px; width: 90%;
+  }
+  .kb-overlay h3 { margin: 0 0 14px; font-weight: 500; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); }
+  .kb-row { display: flex; justify-content: space-between; padding: 7px 0; font-size: 13px; border-bottom: 1px solid var(--border); }
+  .kb-row:last-of-type { border-bottom: none; }
+  .kb-row kbd {
+    background: var(--bg-elev); padding: 2px 8px; border-radius: 5px;
+    font-size: 11px; font-family: ui-monospace, monospace; color: var(--amber);
   }
 
+  /* ==================== RESPONSIVE ==================== */
   @media (max-width: 640px) {
-    body { padding: 16px; }
-    .head h1 { font-size: 22px; }
+    body { padding: 14px; }
+    .topbar h1 { font-size: 19px; }
     .panel { padding: 18px; }
-    .kpi-value { font-size: 24px; }
+    .kpi-value { font-size: 26px; }
+    .tab { padding: 10px 14px; font-size: 13px; }
+    .tab .kbd { display: none; }
+    .heatmap { font-size: 8px; grid-template-columns: 24px repeat(24, 1fr); }
+    .heatmap .h-cell { height: 12px; }
   }
 </style>
 </head>
 <body>
 
-<!-- Auth gate -->
+<!-- ==================== AUTH GATE ==================== -->
 <div id="auth" class="auth-card">
-  <h1>Admin</h1>
-  <p class="sub">Newsletter subscribers + analytics traffic</p>
-  <div class="panel-row">
-    <input type="password" id="pwd" placeholder="Admin password" autocomplete="off" autofocus />
+  <div class="brand-mark"><span class="brand-dot"></span><strong>Admin</strong></div>
+  <h1>Christophe van Engelen</h1>
+  <p class="sub">Newsletter · operations · analytics</p>
+  <input type="password" id="pwd" placeholder="Admin password" autocomplete="off" autofocus />
+  <div style="margin-top:14px;">
+    <button id="login" class="btn">Déverrouiller →</button>
   </div>
-  <div class="panel-row">
-    <button id="login" class="btn">Déverrouiller</button>
-  </div>
-  <p class="status" id="auth-status"></p>
-  <details>
-    <summary>Setup env vars</summary>
-    <p>Password env var <code>ADMIN_PASSWORD</code> sur Vercel.</p>
-    <p>Pour l'onglet Analytics · <code>VERCEL_TOKEN</code>, <code>VERCEL_PROJECT_ID</code>, <code>VERCEL_TEAM_ID</code>.</p>
-    <p>Pour les welcome emails (Gmail SMTP) · <code>GMAIL_USER</code> + <code>GMAIL_APP_PASSWORD</code> (App Password Google 16 chars).</p>
-    <p>Set via <code>vercel env add</code> ou dashboard Vercel → Project Settings → Environment Variables.</p>
-  </details>
+  <p id="auth-status" style="margin-top:12px; font-size:13px; min-height:1.4em;"></p>
 </div>
 
-<!-- Main app · hidden until auth -->
+<!-- ==================== APP ==================== -->
 <div id="app" class="wrap hidden">
 
-  <div class="head">
+  <div class="topbar">
     <div>
-      <h1>Admin · folio</h1>
-      <p class="sub">Newsletter + analytics · <span id="last-updated">jamais rafraîchi</span></p>
+      <h1><span id="brand-dot" class="brand-dot live"></span>Admin · folio</h1>
+      <div class="sub" id="topbar-sub">—</div>
     </div>
-    <div class="head-meta">
-      <button id="refresh-all">↻ Tout rafraîchir</button>
-      <button id="logout">Logout</button>
+    <div class="topbar-actions">
+      <button id="theme-btn" class="icon-btn" title="Toggle theme">🌙</button>
+      <button id="autorefresh-btn" class="icon-btn" title="Auto-refresh">
+        <span class="dot"></span> Auto-refresh: off
+      </button>
+      <button id="refresh-btn" class="icon-btn" title="Refresh (r)">↻ Refresh</button>
+      <button id="kb-btn" class="icon-btn" title="Keyboard shortcuts (?)">?</button>
+      <button id="logout" class="icon-btn">Logout</button>
     </div>
   </div>
 
-  <!-- Tabs -->
   <div class="tabs" role="tablist">
-    <button class="tab is-active" data-tab="newsletter" role="tab">Newsletter</button>
-    <button class="tab" data-tab="analytics" role="tab">Analytics</button>
+    <button class="tab is-active" data-tab="overview">Overview <span class="kbd">1</span></button>
+    <button class="tab" data-tab="newsletter">Newsletter <span class="kbd">2</span></button>
+    <button class="tab" data-tab="operations">Operations <span class="kbd">3</span></button>
   </div>
+
+  <!-- ============================================================ -->
+  <!-- TAB · OVERVIEW                                                -->
+  <!-- ============================================================ -->
+  <section data-tab-content="overview">
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">Subscribers total</span>
+        <span class="kpi-value" data-counter id="ov-subs-total"><span class="skel"></span></span>
+        <span class="kpi-delta" id="ov-subs-detail">—</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Subs · 30 jours</span>
+        <span class="kpi-value" data-counter id="ov-subs-30"><span class="skel"></span></span>
+        <span class="kpi-delta" id="ov-subs-growth">—</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Deploys · 7 jours</span>
+        <span class="kpi-value" data-counter id="ov-deploys-7"><span class="skel"></span></span>
+        <span class="kpi-delta" id="ov-deploys-detail">—</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Statut prod</span>
+        <span class="kpi-value" id="ov-status" style="font-size: 18px;"><span class="skel"></span></span>
+        <span class="kpi-delta" id="ov-status-detail">—</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <h2>Activité récente</h2>
+        <ul class="timeline" id="ov-timeline"><li class="empty">Chargement...</li></ul>
+      </div>
+      <div class="panel">
+        <h2>Santé du système</h2>
+        <div class="grid-gap" id="ov-health">
+          <div class="row-flex"><span class="status-pill" data-h="kv">KV</span><span class="meta-line" id="ov-kv-meta">—</span></div>
+          <div class="row-flex"><span class="status-pill" data-h="vercel">Vercel API</span><span class="meta-line" id="ov-vercel-meta">—</span></div>
+          <div class="row-flex"><span class="status-pill" data-h="prod">Production</span><span class="meta-line" id="ov-prod-meta">—</span></div>
+          <div class="row-flex"><span class="status-pill" data-h="gmail">Gmail SMTP</span><span class="meta-line" id="ov-gmail-meta">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Newsletter · 30 derniers jours</h2>
+      <div class="spark-wrap">
+        <svg class="spark" id="ov-spark" viewBox="0 0 300 80" preserveAspectRatio="none"></svg>
+        <div class="spark-meta">
+          <span id="ov-spark-from">—</span>
+          <span id="ov-spark-to">—</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============================================================ -->
   <!-- TAB · NEWSLETTER                                              -->
   <!-- ============================================================ -->
-  <section id="tab-newsletter" data-tab-content="newsletter">
-    <!-- KPI cards -->
+  <section data-tab-content="newsletter" class="hidden">
     <div class="kpis">
       <div class="kpi">
-        <span class="kpi-label">Total inscrits</span>
-        <span class="kpi-value" id="nl-total">—</span>
+        <span class="kpi-label">Total</span>
+        <span class="kpi-value" data-counter id="nl-total"><span class="skel"></span></span>
       </div>
       <div class="kpi">
-        <span class="kpi-label">7 derniers jours</span>
-        <span class="kpi-value" id="nl-last7">—</span>
+        <span class="kpi-label">7 jours</span>
+        <span class="kpi-value" data-counter id="nl-last7"><span class="skel"></span></span>
       </div>
       <div class="kpi">
-        <span class="kpi-label">30 derniers jours</span>
-        <span class="kpi-value" id="nl-last30">—</span>
+        <span class="kpi-label">30 jours</span>
+        <span class="kpi-value" data-counter id="nl-last30"><span class="skel"></span></span>
       </div>
       <div class="kpi">
         <span class="kpi-label">Croissance m/m</span>
-        <span class="kpi-value" id="nl-growth">—</span>
-        <span class="kpi-delta" id="nl-growth-detail"></span>
+        <span class="kpi-value" id="nl-growth"><span class="skel"></span></span>
+        <span class="kpi-delta" id="nl-growth-detail">—</span>
       </div>
     </div>
 
-    <!-- Two col · lang + referrers -->
     <div class="two-col">
       <div class="panel">
         <h2>Répartition langue</h2>
@@ -307,16 +537,32 @@
         <div class="lang-legend" id="nl-lang-legend"></div>
       </div>
       <div class="panel">
-        <h2>Top referrers</h2>
-        <ul class="top-list" id="nl-top-refs"><li class="loading">—</li></ul>
+        <h2>Top domaines email</h2>
+        <ul class="top-list" id="nl-domains"><li class="empty">—</li></ul>
       </div>
     </div>
 
-    <!-- Sparkline 30j -->
+    <div class="two-col">
+      <div class="panel">
+        <h2>Top referrers <span class="h2-meta">d'où viennent-ils</span></h2>
+        <ul class="top-list" id="nl-top-refs"><li class="empty">—</li></ul>
+      </div>
+      <div class="panel">
+        <h2>Top source pages <span class="h2-meta">page d'inscription</span></h2>
+        <ul class="top-list" id="nl-source-pages"><li class="empty">—</li></ul>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Heatmap · jour × heure (UTC)</h2>
+      <div class="heatmap" id="nl-heatmap"></div>
+      <p class="meta-line" style="margin-top: 10px;">Lundi en haut · saturation = volume d'inscriptions.</p>
+    </div>
+
     <div class="panel">
       <h2>Inscriptions · 30 jours</h2>
       <div class="spark-wrap">
-        <svg class="spark" id="nl-spark" viewBox="0 0 300 60" preserveAspectRatio="none"></svg>
+        <svg class="spark" id="nl-spark" viewBox="0 0 300 80" preserveAspectRatio="none"></svg>
         <div class="spark-meta">
           <span id="nl-spark-from">—</span>
           <span id="nl-spark-to">—</span>
@@ -324,65 +570,74 @@
       </div>
     </div>
 
-    <!-- Subscribers list + actions -->
     <div class="panel">
       <h2>Subscribers · 50 derniers</h2>
-      <div class="panel-row">
-        <button id="nl-export-csv" class="btn secondary">⬇ Export CSV (tous)</button>
-        <button id="nl-copy-bcc" class="btn secondary">📋 Copier BCC</button>
-        <button id="nl-compose" class="btn secondary">📧 Compose newsletter</button>
+      <div class="panel-row" style="margin-bottom: 12px;">
+        <button id="nl-export-csv" class="icon-btn">⬇ Export CSV</button>
+        <button id="nl-copy-bcc" class="icon-btn">📋 BCC</button>
+        <button id="nl-compose" class="icon-btn">📧 Compose</button>
       </div>
-      <div id="nl-list"></div>
-      <p class="status" id="nl-list-status"></p>
+      <div id="nl-list"><p class="empty">—</p></div>
     </div>
 
-    <!-- Compose mailto · modal-ish dans la même section -->
     <div class="panel hidden" id="compose-panel">
-      <h2>Compose newsletter (Gmail compose)</h2>
-      <p style="font-size: 13px; color: var(--fg-muted); margin: 0 0 12px;">
-        Ouvre Gmail avec tous les abonnés en BCC + sujet + brouillon. Tu termines dans Gmail.
-      </p>
+      <h2>Compose newsletter (Gmail BCC)</h2>
+      <p class="meta-line" style="margin-bottom:12px;">Ouvre Gmail avec tous les abonnés en BCC + sujet + brouillon.</p>
       <input type="text" id="compose-subject" placeholder="Sujet" style="margin-bottom: 12px;" />
-      <textarea id="compose-body" placeholder="Corps de l'email (plain text)"></textarea>
+      <textarea id="compose-body" placeholder="Corps email (plain text)"></textarea>
       <div class="panel-row" style="margin-top: 12px;">
         <button id="compose-send" class="btn">📧 Ouvrir Gmail</button>
         <button id="compose-close" class="btn secondary">Annuler</button>
       </div>
-      <p class="status" id="compose-status"></p>
     </div>
   </section>
 
   <!-- ============================================================ -->
-  <!-- TAB · ANALYTICS                                               -->
+  <!-- TAB · OPERATIONS                                              -->
   <!-- ============================================================ -->
-  <section id="tab-analytics" data-tab-content="analytics" class="hidden">
-    <div class="panel" style="text-align:center; padding: 48px 24px;">
-      <h2 style="margin-bottom:8px;">Vercel Web Analytics</h2>
-      <p style="font-size:14px; color:var(--fg-muted); max-width:60ch; margin:0 auto 24px;">
-        Vercel n'expose pas d'API publique pour lire les KPIs Web Analytics.
-        Le dashboard officiel reste le seul endroit pour consulter les données ·
-        visiteurs uniques, pages vues, top pages, referrers, devices, countries.
-      </p>
-      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/analytics" target="_blank" rel="noopener" class="btn">
-          📊 Web Analytics →
-        </a>
-        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/speed-insights" target="_blank" rel="noopener" class="btn secondary">
-          ⚡ Speed Insights →
-        </a>
-        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/logs" target="_blank" rel="noopener" class="btn secondary">
-          📜 Logs →
-        </a>
+  <section data-tab-content="operations" class="hidden">
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">Deploys · 7j</span>
+        <span class="kpi-value" data-counter id="op-deploys-7"><span class="skel"></span></span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Deploys · 30j</span>
+        <span class="kpi-value" data-counter id="op-deploys-30"><span class="skel"></span></span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Avg build</span>
+        <span class="kpi-value" id="op-avg-build" style="font-size: 22px;"><span class="skel"></span></span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">Success rate</span>
+        <span class="kpi-value" id="op-success-rate" style="font-size: 22px;"><span class="skel"></span></span>
       </div>
     </div>
 
-    <div class="panel" id="an-status-panel">
-      <h2>État de la collecte</h2>
-      <p class="status" id="an-status">Vérification en cours...</p>
+    <div class="panel">
+      <h2>Derniers deploys <span class="h2-meta">depuis Vercel API</span></h2>
+      <div id="op-deploys-list"><p class="empty">Chargement...</p></div>
+    </div>
+
+    <div class="panel">
+      <h2>Liens Vercel</h2>
+      <div class="row-flex">
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio" target="_blank" rel="noopener" class="btn secondary">📦 Project →</a>
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/analytics" target="_blank" rel="noopener" class="btn secondary">📊 Web Analytics →</a>
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/speed-insights" target="_blank" rel="noopener" class="btn secondary">⚡ Speed Insights →</a>
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/logs" target="_blank" rel="noopener" class="btn secondary">📜 Logs →</a>
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/deployments" target="_blank" rel="noopener" class="btn secondary">🚀 Deploys →</a>
+        <a href="https://vercel.com/vanengelenchristophe-6584s-projects/folio/settings/environment-variables" target="_blank" rel="noopener" class="btn secondary">⚙ Env vars →</a>
+      </div>
+      <p class="meta-line" style="margin-top: 12px;">L'API publique Vercel ne donne pas accès aux KPIs Web Analytics · le dashboard officiel reste le seul point d'accès.</p>
     </div>
   </section>
 
 </div><!-- /#app -->
+
+<!-- Toasts container -->
+<div class="toasts" id="toasts"></div>
 
 <script>
 (function () {
@@ -390,8 +645,26 @@
   const $ = (s) => document.querySelector(s);
   const $$ = (s) => document.querySelectorAll(s);
   const STORAGE_KEY = 'cve_admin_pwd';
+  const THEME_KEY = 'cve_admin_theme';
   let pwd = sessionStorage.getItem(STORAGE_KEY) || '';
-  let statsCache = null;
+  let autoRefreshInt = null;
+  let autoRefreshMode = 'off';
+  let dataCache = { stats: null, deploys: null, health: null };
+
+  /* ============================================================
+     THEME
+     ============================================================ */
+  function applyTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    localStorage.setItem(THEME_KEY, t);
+    const btn = $('#theme-btn');
+    if (btn) btn.textContent = t === 'light' ? '☀️' : '🌙';
+  }
+  function initTheme() {
+    const saved = localStorage.getItem(THEME_KEY);
+    applyTheme(saved || 'dark');
+  }
+  initTheme();
 
   /* ============================================================
      AUTH
@@ -399,33 +672,27 @@
   function bindAuth() {
     $('#login').addEventListener('click', login);
     $('#pwd').addEventListener('keydown', (e) => { if (e.key === 'Enter') login(); });
-    $('#logout').addEventListener('click', logout);
-
-    if (pwd) {
-      $('#pwd').value = pwd;
-      login();
-    }
+    $('#logout')?.addEventListener('click', logout);
+    if (pwd) { $('#pwd').value = pwd; login(true); }
   }
 
-  async function login() {
+  async function login(silent) {
     const password = $('#pwd').value.trim();
     if (!password) return;
     const status = $('#auth-status');
-    status.textContent = 'Connexion...';
-    status.className = 'status';
+    if (!silent) { status.textContent = 'Connexion...'; status.style.color = 'var(--fg-muted)'; }
     try {
       const res = await fetch('/api/admin/stats', {
         headers: { 'Authorization': 'Bearer ' + password },
       });
       if (res.status === 401) {
-        status.textContent = 'Password incorrect';
-        status.className = 'status err';
+        status.textContent = 'Password incorrect'; status.style.color = 'var(--coral)';
         return;
       }
       if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        status.textContent = 'Erreur · ' + (data.error || res.status);
-        status.className = 'status err';
+        const d = await res.json().catch(() => ({}));
+        status.textContent = 'Erreur · ' + (d.error || res.status);
+        status.style.color = 'var(--coral)';
         return;
       }
       const stats = await res.json();
@@ -433,18 +700,22 @@
       sessionStorage.setItem(STORAGE_KEY, pwd);
       $('#auth').classList.add('hidden');
       $('#app').classList.remove('hidden');
-      renderNewsletter(stats);
-      statsCache = stats;
-      updateLastRefreshed();
+      dataCache.stats = stats;
+      renderAll();
+      loadDeploys();
+      loadHealth();
+      updateTopbarTimestamp();
     } catch (e) {
       status.textContent = 'Erreur réseau · ' + e.message;
-      status.className = 'status err';
+      status.style.color = 'var(--coral)';
     }
   }
 
   function logout() {
     sessionStorage.removeItem(STORAGE_KEY);
     pwd = '';
+    if (autoRefreshInt) { clearInterval(autoRefreshInt); autoRefreshInt = null; }
+    autoRefreshMode = 'off';
     $('#app').classList.add('hidden');
     $('#auth').classList.remove('hidden');
     $('#pwd').value = '';
@@ -455,231 +726,373 @@
      TABS
      ============================================================ */
   function bindTabs() {
-    $$('.tab').forEach((btn) => {
-      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
-    });
+    $$('.tab').forEach((b) => b.addEventListener('click', () => switchTab(b.dataset.tab)));
   }
-
   function switchTab(name) {
     $$('.tab').forEach((b) => b.classList.toggle('is-active', b.dataset.tab === name));
     $$('[data-tab-content]').forEach((s) => s.classList.toggle('hidden', s.dataset.tabContent !== name));
-    if (name === 'analytics' && !window.__analyticsLoaded) {
-      loadAnalytics();
-      window.__analyticsLoaded = true;
-    }
   }
 
   /* ============================================================
-     NEWSLETTER · render KPIs + lang + refs + sparkline + list
+     LOADERS
      ============================================================ */
-  function renderNewsletter(s) {
-    $('#nl-total').textContent = formatNum(s.total);
-    $('#nl-last7').textContent = formatNum(s.last7);
-    $('#nl-last30').textContent = formatNum(s.last30);
+  async function loadStats() {
+    try {
+      const r = await fetch('/api/admin/stats', { headers: { 'Authorization': 'Bearer ' + pwd } });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      dataCache.stats = await r.json();
+      renderAll();
+      updateTopbarTimestamp();
+    } catch (e) { toast('Stats échec · ' + e.message, 'err'); }
+  }
 
-    const growth = $('#nl-growth');
-    const growthDetail = $('#nl-growth-detail');
-    growth.textContent = (s.growthPct > 0 ? '+' : '') + s.growthPct + '%';
-    growth.className = 'kpi-value';
-    if (s.growthPct > 0) {
-      growth.style.color = 'var(--green)';
-      growthDetail.className = 'kpi-delta up';
-    } else if (s.growthPct < 0) {
-      growth.style.color = 'var(--coral)';
-      growthDetail.className = 'kpi-delta down';
-    } else {
-      growth.style.color = 'var(--fg)';
-      growthDetail.className = 'kpi-delta';
-    }
-    growthDetail.textContent = `${s.last30} ce mois · ${s.prev30} mois précédent`;
+  async function loadDeploys() {
+    try {
+      const r = await fetch('/api/admin/deployments', { headers: { 'Authorization': 'Bearer ' + pwd } });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      dataCache.deploys = await r.json();
+      renderDeploys();
+      renderOverviewCards();
+      renderTimeline();
+    } catch (e) { /* silent */ }
+  }
+
+  async function loadHealth() {
+    try {
+      const r = await fetch('/api/admin/health', { headers: { 'Authorization': 'Bearer ' + pwd } });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      dataCache.health = await r.json();
+      renderHealth();
+    } catch (e) { /* silent */ }
+  }
+
+  function refreshAll() {
+    loadStats();
+    loadDeploys();
+    loadHealth();
+    toast('Rafraîchi', 'ok', 1400);
+  }
+
+  /* ============================================================
+     RENDER · NEWSLETTER
+     ============================================================ */
+  function renderAll() {
+    const s = dataCache.stats;
+    if (!s) return;
+    // Overview KPIs (subs side)
+    setCounter('#ov-subs-total', s.total);
+    setCounter('#ov-subs-30', s.last30);
+    $('#ov-subs-detail').textContent = s.latestSub ? 'dernier · ' + formatRel(s.latestSub.ts) : 'aucun';
+    const g = $('#ov-subs-growth');
+    g.textContent = (s.growthPct >= 0 ? '+' : '') + s.growthPct + '% m/m';
+    g.className = 'kpi-delta ' + (s.growthPct > 0 ? 'up' : s.growthPct < 0 ? 'down' : '');
+
+    // Newsletter tab
+    setCounter('#nl-total', s.total);
+    setCounter('#nl-last7', s.last7);
+    setCounter('#nl-last30', s.last30);
+    const ng = $('#nl-growth');
+    ng.innerHTML = (s.growthPct >= 0 ? '+' : '') + s.growthPct + '%';
+    ng.className = 'kpi-value';
+    if (s.growthPct > 0) ng.style.color = 'var(--green)';
+    else if (s.growthPct < 0) ng.style.color = 'var(--coral)';
+    else ng.style.color = 'var(--fg)';
+    $('#nl-growth-detail').textContent = s.last30 + ' ce mois · ' + s.prev30 + ' précédent';
 
     renderLangBar('#nl-lang-bar', '#nl-lang-legend', s.langSplit);
+    renderTopList('#nl-domains', s.emailDomains, 'domain');
     renderTopList('#nl-top-refs', s.topReferrers, 'host');
+    renderTopList('#nl-source-pages', s.topSourcePages, 'path');
     renderSparkline('#nl-spark', s.daily);
-
-    if (s.daily && s.daily.length) {
-      $('#nl-spark-from').textContent = formatShortDate(s.daily[0].date);
-      $('#nl-spark-to').textContent = formatShortDate(s.daily[s.daily.length - 1].date);
+    renderSparkline('#ov-spark', s.daily);
+    if (s.daily?.length) {
+      const f = formatShortDate(s.daily[0].date), t = formatShortDate(s.daily.at(-1).date);
+      $('#nl-spark-from').textContent = f; $('#nl-spark-to').textContent = t;
+      $('#ov-spark-from').textContent = f; $('#ov-spark-to').textContent = t;
     }
-
+    renderHeatmap(s.dowHours);
     renderRecentList(s.recent || []);
   }
 
   function renderRecentList(records) {
-    const wrap = $('#nl-list');
-    if (!records.length) {
-      wrap.innerHTML = '<p class="empty">Aucun inscrit pour le moment.</p>';
-      return;
-    }
+    const w = $('#nl-list');
+    if (!records.length) { w.innerHTML = '<p class="empty">Aucun inscrit.</p>'; return; }
     const rows = records.map((r) => {
       const ts = r.ts ? new Date(r.ts).toLocaleString('fr-BE', { dateStyle: 'medium', timeStyle: 'short' }) : '—';
+      return `<tr><td class="email">${esc(r.email)}</td><td class="ts">${esc(ts)}</td><td class="lang">${esc(r.lang || '')}</td></tr>`;
+    }).join('');
+    w.innerHTML = `<table><thead><tr><th>Email</th><th>Date</th><th>Lang</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }
+
+  /* ============================================================
+     RENDER · DEPLOYS
+     ============================================================ */
+  function renderDeploys() {
+    const d = dataCache.deploys;
+    if (!d || !d.configured) return;
+    setCounter('#op-deploys-7', d.counts.total7d);
+    setCounter('#op-deploys-30', d.counts.total30d);
+    $('#op-avg-build').textContent = d.avgDurationMs ? formatDuration(d.avgDurationMs) : '—';
+    const totalCompleted = d.counts.ready + d.counts.error;
+    const rate = totalCompleted > 0 ? Math.round((d.counts.ready / totalCompleted) * 100) : 100;
+    const r = $('#op-success-rate');
+    r.textContent = rate + '%';
+    r.style.color = rate >= 90 ? 'var(--green)' : rate >= 70 ? 'var(--amber)' : 'var(--coral)';
+
+    const list = $('#op-deploys-list');
+    if (!d.deployments.length) { list.innerHTML = '<p class="empty">Aucun deploy.</p>'; return; }
+    const rows = d.deployments.map((dep) => {
+      const pill = statusPill(dep.status);
+      const dur = dep.durationMs ? formatDuration(dep.durationMs) : '—';
+      const when = formatRel(new Date(dep.createdAt).toISOString());
+      const link = dep.inspectorUrl ? `<a href="${esc(dep.inspectorUrl)}" target="_blank" rel="noopener" class="text-mono">${esc(dep.sha)}</a>` : `<span class="text-mono">${esc(dep.sha)}</span>`;
       return `<tr>
-        <td class="email">${esc(r.email)}</td>
-        <td class="ts">${esc(ts)}</td>
-        <td class="lang">${esc(r.lang || '')}</td>
+        <td>${pill}</td>
+        <td>${link}</td>
+        <td class="truncate" style="max-width: 340px;" title="${esc(dep.subject)}">${esc(dep.subject)}</td>
+        <td class="ts">${esc(dep.branch)}</td>
+        <td class="ts">${esc(dur)}</td>
+        <td class="ts">${esc(when)}</td>
       </tr>`;
     }).join('');
-    wrap.innerHTML = `<table>
-      <thead><tr><th>Email</th><th>Date</th><th>Lang</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>`;
+    list.innerHTML = `<table><thead><tr><th>État</th><th>SHA</th><th>Commit</th><th>Branch</th><th>Durée</th><th>Quand</th></tr></thead><tbody>${rows}</tbody></table>`;
   }
 
-  /* ============================================================
-     ANALYTICS · juste un status (deep-link only · cf API)
-     ============================================================ */
-  async function loadAnalytics() {
-    const status = $('#an-status');
-    status.textContent = 'Vérification en cours...';
-    status.className = 'status';
-    try {
-      const res = await fetch('/api/admin/analytics', {
-        headers: { 'Authorization': 'Bearer ' + pwd },
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        status.textContent = 'Erreur · ' + (data.error || res.status);
-        status.className = 'status err';
-        return;
-      }
-      status.innerHTML = `Collecte active · script <code>/_vercel/insights/script.js</code> servi sur les 4 pages (home + 3 cases). Les données apparaissent dans le dashboard Vercel ci-dessus.`;
-      status.className = 'status ok';
-    } catch (e) {
-      status.textContent = 'Erreur réseau · ' + e.message;
-      status.className = 'status err';
+  function renderOverviewCards() {
+    const d = dataCache.deploys;
+    if (d?.configured) {
+      setCounter('#ov-deploys-7', d.counts.total7d);
+      const last = d.latestSuccess;
+      $('#ov-deploys-detail').textContent = last ? 'dernier · ' + (last.subject || '').slice(0, 40) : '—';
     }
   }
 
+  function statusPill(state) {
+    if (state === 'READY') return '<span class="status-pill ok"><span class="dot"></span>READY</span>';
+    if (state === 'ERROR' || state === 'CANCELED') return '<span class="status-pill err"><span class="dot"></span>' + state + '</span>';
+    if (state === 'BUILDING' || state === 'QUEUED') return '<span class="status-pill warn"><span class="dot"></span>' + state + '</span>';
+    return '<span class="status-pill"><span class="dot"></span>' + (state || '?') + '</span>';
+  }
+
   /* ============================================================
-     RENDER HELPERS · langBar / topList / sparkline
+     RENDER · TIMELINE
      ============================================================ */
-  function renderLangBar(barSel, legendSel, split) {
-    const bar = $(barSel);
-    const legend = $(legendSel);
-    const total = (split.fr || 0) + (split.nl || 0) + (split.en || 0) + (split.other || 0);
-    bar.innerHTML = '';
-    legend.innerHTML = '';
-    if (!total) {
-      bar.innerHTML = '<div style="width:100%;background:rgba(255,255,255,0.06);color:var(--fg-muted);">(aucune donnée)</div>';
-      return;
+  function renderTimeline() {
+    const ul = $('#ov-timeline');
+    const events = [];
+    const s = dataCache.stats, d = dataCache.deploys;
+    if (s && s.recent) {
+      s.recent.slice(0, 5).forEach((r) => events.push({
+        when: r.ts ? Date.parse(r.ts) : 0, type: 'sub',
+        text: '<span class="tl-tag">SUB</span><strong>' + esc(r.email) + '</strong>' + (r.lang ? ' · ' + esc(r.lang.toUpperCase()) : ''),
+      }));
     }
-    const langs = [
-      { key: 'fr', cls: 'lang-fr', name: 'FR' },
-      { key: 'nl', cls: 'lang-nl', name: 'NL' },
-      { key: 'en', cls: 'lang-en', name: 'EN' },
-      { key: 'other', cls: 'lang-other', name: 'Autre' },
+    if (d && d.deployments) {
+      d.deployments.slice(0, 5).forEach((dep) => events.push({
+        when: dep.createdAt, type: dep.status === 'READY' ? 'deploy' : 'error',
+        text: '<span class="tl-tag">' + (dep.status === 'READY' ? 'DEPLOY' : dep.status) + '</span><span class="text-mono">' + esc(dep.sha) + '</span> ' + esc(dep.subject.slice(0, 70)),
+      }));
+    }
+    events.sort((a, b) => b.when - a.when);
+    if (!events.length) { ul.innerHTML = '<li class="empty">Aucune activité.</li>'; return; }
+    ul.innerHTML = events.slice(0, 10).map((e) => `
+      <li class="tl-${e.type}">
+        <div class="tl-time">${formatRel(new Date(e.when).toISOString())}</div>
+        <div class="tl-body">${e.text}</div>
+      </li>
+    `).join('');
+  }
+
+  /* ============================================================
+     RENDER · HEALTH
+     ============================================================ */
+  function renderHealth() {
+    const h = dataCache.health;
+    if (!h) return;
+    setHealthPill('kv', h.kv.ok, h.kv.ok ? h.kv.latencyMs + 'ms · ' + (h.kv.count || 0) + ' subs' : (h.kv.error || 'down'));
+    setHealthPill('vercel', h.vercel.ok, h.vercel.ok ? h.vercel.latencyMs + 'ms · node ' + (h.vercel.nodeVersion || '?') : (h.vercel.configured === false ? 'env vars manquants' : 'down'));
+    setHealthPill('prod', h.prod.ok, h.prod.ok ? h.prod.latencyMs + 'ms · HTTP ' + h.prod.status : (h.prod.error || 'down'));
+    setHealthPill('gmail', h.gmail.configured, h.gmail.configured ? 'env vars set' : 'pas configuré');
+    const allOk = h.kv.ok && h.prod.ok;
+    $('#ov-status').textContent = allOk ? 'Tout va bien' : 'À vérifier';
+    $('#ov-status').style.color = allOk ? 'var(--green)' : 'var(--coral)';
+    $('#ov-status-detail').textContent = allOk ? 'KV · prod · tout up' : 'check les pills à droite';
+  }
+
+  function setHealthPill(name, ok, meta) {
+    const pill = document.querySelector(`[data-h="${name}"]`);
+    if (!pill) return;
+    pill.classList.remove('ok', 'err', 'warn');
+    if (ok === true) pill.classList.add('ok');
+    else if (ok === false) pill.classList.add('err');
+    pill.innerHTML = '<span class="dot"></span>' + pill.dataset.h.toUpperCase();
+    const metaEl = $('#ov-' + name + '-meta');
+    if (metaEl) metaEl.textContent = meta;
+  }
+
+  /* ============================================================
+     LANG BAR / TOP LIST / SPARKLINE / HEATMAP
+     ============================================================ */
+  function renderLangBar(barSel, legSel, split) {
+    const bar = $(barSel), leg = $(legSel);
+    const t = (split.fr || 0) + (split.nl || 0) + (split.en || 0) + (split.other || 0);
+    bar.innerHTML = ''; leg.innerHTML = '';
+    if (!t) { bar.innerHTML = '<div style="width:100%;background:var(--bg-elev);color:var(--fg-muted);">(aucune donnée)</div>'; return; }
+    const cfgs = [
+      { k: 'fr', cls: 'lang-fr', n: 'FR' },
+      { k: 'nl', cls: 'lang-nl', n: 'NL' },
+      { k: 'en', cls: 'lang-en', n: 'EN' },
+      { k: 'other', cls: 'lang-other', n: 'Autre' },
     ];
-    langs.forEach((l) => {
-      const v = split[l.key] || 0;
-      if (!v) return;
-      const pct = Math.round((v / total) * 100);
-      const div = document.createElement('div');
-      div.className = l.cls;
-      div.style.width = pct + '%';
-      div.textContent = pct >= 8 ? pct + '%' : '';
+    cfgs.forEach((c) => {
+      const v = split[c.k] || 0; if (!v) return;
+      const p = Math.round((v / t) * 100);
+      const div = document.createElement('div'); div.className = c.cls; div.style.width = p + '%';
+      div.textContent = p >= 8 ? p + '%' : '';
       bar.appendChild(div);
-
-      const item = document.createElement('span');
-      item.innerHTML = `<span class="dot ${l.cls}"></span>${l.name} · <strong>${v}</strong> (${pct}%)`;
-      legend.appendChild(item);
+      const li = document.createElement('span');
+      li.innerHTML = `<span class="dot ${c.cls}"></span>${c.n} · <strong>${v}</strong> (${p}%)`;
+      leg.appendChild(li);
     });
   }
 
-  function renderTopList(sel, items, nameKey) {
-    const ul = $(sel);
-    ul.innerHTML = '';
-    if (!items || !items.length) {
-      ul.innerHTML = '<li class="empty">(aucune donnée)</li>';
-      return;
-    }
+  function renderTopList(sel, items, key) {
+    const ul = $(sel); ul.innerHTML = '';
+    if (!items?.length) { ul.innerHTML = '<li class="empty">(aucune donnée)</li>'; return; }
+    const max = Math.max(...items.map((it) => it.count));
     items.forEach((it) => {
       const li = document.createElement('li');
-      const name = it[nameKey] || it.name || '(direct)';
-      li.innerHTML = `<span class="name" title="${esc(name)}">${esc(name)}</span><span class="count">${formatNum(it.count)}</span>`;
+      const name = it[key] || it.name || '(direct)';
+      const pct = max ? Math.round((it.count / max) * 100) : 0;
+      li.innerHTML = `<span class="name" title="${esc(name)}">${esc(name)}</span>
+        <span class="count"><span class="bar" style="--w:${pct}%;"></span>${formatNum(it.count)}</span>`;
       ul.appendChild(li);
     });
   }
 
   function renderSparkline(sel, daily) {
-    const svg = $(sel);
-    svg.innerHTML = '';
-    if (!daily || !daily.length) return;
-    const W = 300, H = 60, PAD = 4;
-    const maxVal = Math.max(1, ...daily.map((d) => d.count));
-    const stepX = (W - 2 * PAD) / Math.max(1, daily.length - 1);
+    const svg = $(sel); svg.innerHTML = '';
+    if (!daily?.length) return;
+    const W = 300, H = 80, PAD = 4;
+    const max = Math.max(1, ...daily.map((d) => d.count));
+    const dx = (W - 2 * PAD) / Math.max(1, daily.length - 1);
     const pts = daily.map((d, i) => [
-      PAD + i * stepX,
-      H - PAD - (d.count / maxVal) * (H - 2 * PAD),
+      PAD + i * dx,
+      H - PAD - (d.count / max) * (H - 2 * PAD),
     ]);
-    const linePath = pts.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
-    const areaPath = linePath + ` L${pts[pts.length - 1][0].toFixed(1)},${H - PAD} L${pts[0][0].toFixed(1)},${H - PAD} Z`;
+    const line = pts.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+    const area = line + ` L${pts.at(-1)[0].toFixed(1)},${H - PAD} L${pts[0][0].toFixed(1)},${H - PAD} Z`;
     const ns = 'http://www.w3.org/2000/svg';
-    const area = document.createElementNS(ns, 'path');
-    area.setAttribute('d', areaPath);
-    svg.appendChild(area);
-    const line = document.createElementNS(ns, 'path');
-    line.setAttribute('d', linePath);
-    line.setAttribute('class', 'line');
-    svg.appendChild(line);
+    const a = document.createElementNS(ns, 'path'); a.setAttribute('d', area); a.setAttribute('class', 'area');
+    svg.appendChild(a);
+    const l = document.createElementNS(ns, 'path'); l.setAttribute('d', line); l.setAttribute('class', 'line');
+    svg.appendChild(l);
+  }
+
+  function renderHeatmap(dowHours) {
+    const w = $('#nl-heatmap');
+    w.innerHTML = '';
+    if (!dowHours) return;
+    const days = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
+    let max = 0;
+    dowHours.forEach((row) => row.forEach((v) => { if (v > max) max = v; }));
+    days.forEach((day, di) => {
+      const lab = document.createElement('div');
+      lab.className = 'h-row-label'; lab.textContent = day;
+      w.appendChild(lab);
+      for (let h = 0; h < 24; h++) {
+        const v = dowHours[di]?.[h] || 0;
+        const cell = document.createElement('div');
+        cell.className = 'h-cell';
+        if (v > 0 && max > 0) {
+          const intensity = Math.min(1, v / max);
+          cell.style.background = `color-mix(in srgb, var(--amber) ${Math.round(intensity * 90)}%, var(--bg-elev))`;
+        }
+        cell.title = `${day} ${String(h).padStart(2,'0')}h · ${v} inscription${v > 1 ? 's' : ''}`;
+        w.appendChild(cell);
+      }
+    });
+    // Axis row
+    const axisLabel = document.createElement('div'); w.appendChild(axisLabel);
+    for (let h = 0; h < 24; h += 1) {
+      const a = document.createElement('div');
+      a.style.textAlign = 'center'; a.style.color = 'var(--fg-dim)'; a.style.fontSize = '8px';
+      a.textContent = h % 4 === 0 ? h + 'h' : '';
+      w.appendChild(a);
+    }
+  }
+
+  /* ============================================================
+     ANIMATED COUNTERS
+     ============================================================ */
+  function setCounter(sel, value) {
+    const el = $(sel); if (!el) return;
+    el.innerHTML = '';
+    const startTs = performance.now();
+    const start = 0, end = Number(value) || 0;
+    const dur = 700;
+    function tick(now) {
+      const t = Math.min(1, (now - startTs) / dur);
+      const ease = 1 - Math.pow(1 - t, 3);
+      const v = Math.round(start + (end - start) * ease);
+      el.textContent = formatNum(v);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* ============================================================
+     AUTO-REFRESH
+     ============================================================ */
+  function toggleAutoRefresh() {
+    autoRefreshMode = autoRefreshMode === 'off' ? '30s' : autoRefreshMode === '30s' ? '5min' : 'off';
+    const btn = $('#autorefresh-btn');
+    btn.classList.toggle('active', autoRefreshMode !== 'off');
+    btn.innerHTML = '<span class="dot"></span> Auto-refresh: ' + autoRefreshMode;
+    if (autoRefreshInt) { clearInterval(autoRefreshInt); autoRefreshInt = null; }
+    if (autoRefreshMode === '30s') autoRefreshInt = setInterval(refreshAll, 30000);
+    else if (autoRefreshMode === '5min') autoRefreshInt = setInterval(refreshAll, 300000);
+    toast('Auto-refresh · ' + autoRefreshMode, 'ok', 1400);
   }
 
   /* ============================================================
      ACTIONS · CSV / BCC / Compose
      ============================================================ */
-  function bindNewsletterActions() {
-    $('#nl-export-csv').addEventListener('click', exportCsv);
-    $('#nl-copy-bcc').addEventListener('click', copyBcc);
-    $('#nl-compose').addEventListener('click', () => $('#compose-panel').classList.toggle('hidden'));
-    $('#compose-close').addEventListener('click', () => $('#compose-panel').classList.add('hidden'));
-    $('#compose-send').addEventListener('click', composeSend);
-    $('#refresh-all').addEventListener('click', refreshAll);
+  async function fetchAllRecords() {
+    const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
+    const data = await res.json();
+    return data.records || [];
   }
-
   async function exportCsv() {
-    /* Fetch all records via /api/admin (legacy endpoint returns full list) */
     try {
-      const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
-      const data = await res.json();
-      const records = data.records || [];
-      const csv = ['email,ts,lang,ref,ip']
-        .concat(records.map((r) => [
-          r.email, r.ts || '', r.lang || '', r.ref || '', r.ip || ''
-        ].map((v) => '"' + String(v).replace(/"/g, '""') + '"').join(',')))
-        .join('\n');
+      const records = await fetchAllRecords();
+      const csv = ['email,ts,lang,ref,ip'].concat(records.map((r) => [
+        r.email, r.ts || '', r.lang || '', r.ref || '', r.ip || ''
+      ].map((v) => '"' + String(v).replace(/"/g, '""') + '"').join(','))).join('\n');
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'newsletter-subscribers-' + new Date().toISOString().slice(0, 10) + '.csv';
-      a.click();
+      const a = document.createElement('a'); a.href = url;
+      a.download = 'subs-' + new Date().toISOString().slice(0, 10) + '.csv'; a.click();
       URL.revokeObjectURL(url);
-      flash('#nl-list-status', records.length + ' lignes exportées', 'ok');
-    } catch (e) {
-      flash('#nl-list-status', 'Export échoué · ' + e.message, 'err');
-    }
+      toast(records.length + ' lignes exportées', 'ok');
+    } catch (e) { toast('Export échec · ' + e.message, 'err'); }
   }
-
   async function copyBcc() {
     try {
-      const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
-      const data = await res.json();
-      const emails = (data.records || []).map((r) => r.email).join(', ');
+      const records = await fetchAllRecords();
+      const emails = records.map((r) => r.email).join(', ');
       await navigator.clipboard.writeText(emails);
-      flash('#nl-list-status', (data.records || []).length + ' emails copiés', 'ok');
-    } catch (e) {
-      flash('#nl-list-status', 'Copie échouée · ' + e.message, 'err');
-    }
+      toast(records.length + ' emails copiés', 'ok');
+    } catch (e) { toast('Copie échec · ' + e.message, 'err'); }
   }
-
+  async function composeOpen() { $('#compose-panel').classList.toggle('hidden'); }
   async function composeSend() {
     const subject = $('#compose-subject').value.trim();
     const body = $('#compose-body').value;
-    if (!subject) return flash('#compose-status', 'Sujet manquant', 'err');
+    if (!subject) return toast('Sujet manquant', 'err');
     try {
-      const res = await fetch('/api/admin', { headers: { 'Authorization': 'Bearer ' + pwd } });
-      const data = await res.json();
-      const records = data.records || [];
-      if (!records.length) return flash('#compose-status', 'Aucun abonné', 'err');
+      const records = await fetchAllRecords();
+      if (!records.length) return toast('Aucun abonné', 'err');
       const bcc = records.map((r) => r.email).join(',');
       const url = 'https://mail.google.com/mail/?view=cm&fs=1'
         + '&to=' + encodeURIComponent('hello@christophevanengelen.com')
@@ -687,28 +1100,69 @@
         + '&su=' + encodeURIComponent(subject)
         + '&body=' + encodeURIComponent(body);
       window.open(url, '_blank', 'noopener');
-      flash('#compose-status', 'Gmail ouvert · ' + records.length + ' destinataires en BCC', 'ok');
-    } catch (e) {
-      flash('#compose-status', 'Erreur · ' + e.message, 'err');
-    }
-  }
-
-  async function refreshAll() {
-    try {
-      const res = await fetch('/api/admin/stats', { headers: { 'Authorization': 'Bearer ' + pwd } });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const stats = await res.json();
-      renderNewsletter(stats);
-      statsCache = stats;
-      if (window.__analyticsLoaded) loadAnalytics();
-      updateLastRefreshed();
-    } catch (e) {
-      flash('#nl-list-status', 'Refresh échoué · ' + e.message, 'err');
-    }
+      toast('Gmail ouvert · ' + records.length + ' BCC', 'ok');
+    } catch (e) { toast('Erreur · ' + e.message, 'err'); }
   }
 
   /* ============================================================
-     UTIL
+     TOAST
+     ============================================================ */
+  function toast(msg, type, dur) {
+    const c = $('#toasts'); if (!c) return;
+    const t = document.createElement('div');
+    t.className = 'toast ' + (type || '');
+    t.textContent = msg;
+    c.appendChild(t);
+    setTimeout(() => {
+      t.classList.add('fade-out');
+      setTimeout(() => t.remove(), 240);
+    }, dur || 2500);
+  }
+
+  /* ============================================================
+     KEYBOARD SHORTCUTS
+     ============================================================ */
+  function bindKeyboard() {
+    document.addEventListener('keydown', (e) => {
+      if (e.target.matches('input, textarea')) return;
+      if ($('#app').classList.contains('hidden')) return;
+      switch (e.key) {
+        case '1': switchTab('overview'); break;
+        case '2': switchTab('newsletter'); break;
+        case '3': switchTab('operations'); break;
+        case 'r': refreshAll(); break;
+        case '?': showShortcuts(); break;
+        case 't': toggleTheme(); break;
+        case 'Escape': hideShortcuts(); break;
+      }
+    });
+  }
+  function showShortcuts() {
+    if ($('.kb-overlay')) return;
+    const ov = document.createElement('div');
+    ov.className = 'kb-overlay';
+    ov.innerHTML = `<div class="kb-card">
+      <h3>Raccourcis clavier</h3>
+      <div class="kb-row"><span>Overview</span><kbd>1</kbd></div>
+      <div class="kb-row"><span>Newsletter</span><kbd>2</kbd></div>
+      <div class="kb-row"><span>Operations</span><kbd>3</kbd></div>
+      <div class="kb-row"><span>Refresh</span><kbd>r</kbd></div>
+      <div class="kb-row"><span>Toggle theme</span><kbd>t</kbd></div>
+      <div class="kb-row"><span>Aide</span><kbd>?</kbd></div>
+      <div class="kb-row"><span>Fermer</span><kbd>Esc</kbd></div>
+    </div>`;
+    ov.addEventListener('click', (e) => { if (e.target === ov) hideShortcuts(); });
+    document.body.appendChild(ov);
+  }
+  function hideShortcuts() { $('.kb-overlay')?.remove(); }
+
+  function toggleTheme() {
+    const cur = document.documentElement.getAttribute('data-theme');
+    applyTheme(cur === 'light' ? 'dark' : 'light');
+  }
+
+  /* ============================================================
+     UTILS
      ============================================================ */
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({
@@ -721,19 +1175,34 @@
   }
   function formatShortDate(d) {
     if (!d) return '';
-    const dt = new Date(d);
-    if (isNaN(dt)) return d;
+    const dt = new Date(d); if (isNaN(dt)) return d;
     return dt.toLocaleDateString('fr-BE', { day: '2-digit', month: 'short' });
   }
-  function flash(sel, text, cls) {
-    const el = $(sel);
-    if (!el) return;
-    el.textContent = text;
-    el.className = 'status ' + (cls || '');
+  function formatRel(iso) {
+    if (!iso) return '—';
+    const t = new Date(iso).getTime();
+    if (isNaN(t)) return '—';
+    const diff = Date.now() - t;
+    const s = Math.round(diff / 1000);
+    if (s < 60) return 'il y a ' + s + 's';
+    const m = Math.round(s / 60);
+    if (m < 60) return 'il y a ' + m + 'min';
+    const h = Math.round(m / 60);
+    if (h < 24) return 'il y a ' + h + 'h';
+    const d = Math.round(h / 24);
+    if (d < 7) return 'il y a ' + d + 'j';
+    return formatShortDate(iso);
   }
-  function updateLastRefreshed() {
-    const el = $('#last-updated');
-    el.textContent = 'rafraîchi à ' + new Date().toLocaleTimeString('fr-BE');
+  function formatDuration(ms) {
+    if (!ms) return '—';
+    const s = Math.round(ms / 1000);
+    if (s < 60) return s + 's';
+    const m = Math.floor(s / 60);
+    const rs = s % 60;
+    return m + 'm' + (rs > 0 ? ' ' + rs + 's' : '');
+  }
+  function updateTopbarTimestamp() {
+    $('#topbar-sub').textContent = 'Mis à jour à ' + new Date().toLocaleTimeString('fr-BE');
   }
 
   /* ============================================================
@@ -741,7 +1210,16 @@
      ============================================================ */
   bindAuth();
   bindTabs();
-  bindNewsletterActions();
+  bindKeyboard();
+  $('#theme-btn')?.addEventListener('click', toggleTheme);
+  $('#autorefresh-btn')?.addEventListener('click', toggleAutoRefresh);
+  $('#refresh-btn')?.addEventListener('click', refreshAll);
+  $('#kb-btn')?.addEventListener('click', showShortcuts);
+  $('#nl-export-csv')?.addEventListener('click', exportCsv);
+  $('#nl-copy-bcc')?.addEventListener('click', copyBcc);
+  $('#nl-compose')?.addEventListener('click', composeOpen);
+  $('#compose-close')?.addEventListener('click', () => $('#compose-panel').classList.add('hidden'));
+  $('#compose-send')?.addEventListener('click', composeSend);
 })();
 </script>
 </body>
