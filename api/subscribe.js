@@ -68,14 +68,13 @@ export default async function handler(req, res) {
       kv.lpush('subscribers:records', JSON.stringify(record)),
     ]);
 
-    /* Email notification · forward to hello@ inbox via Formsubmit.
-       Best-effort · si fail, on retourne quand même OK car KV a réussi.
-       Formsubmit demande une confirmation 1-clic la première fois. */
-    notifyEmail(record).catch((e) => console.warn('email notify fail', e && e.message));
-
-    /* Auto-welcome email · CVE 2026-05-18 · via Resend si configuré.
-       Best-effort, silencieux si pas de RESEND_API_KEY · pas de fail subscribe. */
-    sendWelcomeEmail(email, lang).catch((e) => console.warn('welcome email fail', e && e.message));
+    /* Notif + welcome · CVE 2026-05-18 · await les deux pour garantir
+       l'envoi (fire-and-forget peut être tronqué par serverless). On
+       wrap chacun en .catch pour ne pas fail le subscribe si un échoue. */
+    await Promise.allSettled([
+      notifyEmail(record).catch((e) => console.warn('email notify fail', e && e.message)),
+      sendWelcomeEmail(email, lang).catch((e) => console.warn('welcome email fail', e && e.message)),
+    ]);
 
     return res.status(200).json({ ok: true });
   } catch (err) {
