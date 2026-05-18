@@ -1412,14 +1412,7 @@
     'bnp.snm.p2c': { fr: 'Rapport 3 · Evaluating Actions (ROI)', nl: 'Rapport 3 · Evaluating Actions (ROI)', en: 'Report 3 · Evaluating Actions (ROI)' },
     'bnp.snm.p2d': { fr: 'Market Research · phase 2 roadmap', nl: 'Market Research · fase 2 roadmap', en: 'Market Research · phase 2 roadmap' },
     'bnp.snm.p2home': { fr: 'Home · panorama d\'accueil', nl: 'Home · onthaalpanorama', en: 'Home · welcome panorama' },
-    /* CVE 2026-05-04 S3.x · trust signals & conversion (sprint S3) */
-    /* CVE 2026-05-11 Pack v4-final · pill scarcity sans date (Brand Guardian).
-       "Un mandat à la fois" signale la rareté du senior, pas une fenêtre Q3. */
-    'home.statusAvailability': {
-      fr: 'Disponible · briefs sérieux · un mandat à la fois.',
-      nl: 'Beschikbaar · serieuze briefs · één opdracht tegelijk.',
-      en: 'Available · serious briefs · one engagement at a time.'
-    },
+    /* CVE 2026-05-18 · home.statusAvailability supprimée · pill bas-de-gamme retirée */
     'home.trustEyebrow': {
       fr: 'Travaillé avec',
       nl: 'Gewerkt met',
@@ -1474,9 +1467,9 @@
        paramètres clairs (réponse 24h, premier call gratuit, sans engagement) ·
        boost conversion freelance +30-50% selon benchmarks. */
     'home.contactNote': {
-      fr: 'Je réponds en 24h ouvrées. Premier call 30 min, gratuit, sans engagement, pour qualifier votre besoin. Disponible pour des missions service design en amont, recherche utilisateur, ateliers d\'alignement Business / IT à Bruxelles et en remote.',
-      nl: 'Ik antwoord binnen 24u (werkdagen). Eerste call 30 min, gratis, zonder verbintenis, om uw behoefte te kwalificeren. Beschikbaar voor opdrachten upstream service design, gebruikersonderzoek, alignment workshops Business / IT in Brussel en remote.',
-      en: 'I reply within 24h on business days. First call 30 min, free, no commitment, to qualify your need. Available for upstream service design assignments, user research, Business / IT alignment workshops in Brussels and remote.'
+      fr: 'Je réponds en 24h ouvrées.',
+      nl: 'Ik antwoord binnen 24u (werkdagen).',
+      en: 'I reply within 24h on business days.'
     },
     'home.footerCopy': { fr: '© Christophe van Engelen, 2026.', nl: '© Christophe van Engelen, 2026.', en: '© Christophe van Engelen, 2026.' },
     'home.practiceEyebrow': { fr: 'Practice', nl: 'Practice', en: 'Practice' },
