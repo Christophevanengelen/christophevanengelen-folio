@@ -248,9 +248,9 @@
       en: 'At the end of diamond 1'
     },
     'bnp.analyse.vpCliffhanger': {
-      fr: 'Une seule conviction <span class="accent">émerge.</span>',
-      nl: 'Eén overtuiging <span class="accent">komt naar voren.</span>',
-      en: 'A single conviction <span class="accent">emerges.</span>'
+      fr: 'Une seule <span class="accent">conviction.</span>',
+      nl: 'Eén enkele <span class="accent">overtuiging.</span>',
+      en: 'A single <span class="accent">conviction.</span>'
     },
     /* CVE 2026-05-17 v2 NNG · -10 mots */
     'bnp.analyse.vpPyramidIntro': {
@@ -905,9 +905,9 @@
       en: 'Stakeholder frictions · Alignment'
     },
     'bnp.alignment.h2': {
-      fr: 'Comment quatre départements ont fini par <span class="accent">défendre le même projet.</span>',
-      nl: 'Hoe vier afdelingen uiteindelijk <span class="accent">hetzelfde project verdedigden.</span>',
-      en: 'How four departments ended up <span class="accent">defending the same project.</span>'
+      fr: 'Quatre départements. <span class="accent">Un projet à défendre.</span>',
+      nl: 'Vier afdelingen. <span class="accent">Eén project om te verdedigen.</span>',
+      en: 'Four departments. <span class="accent">One project to defend.</span>'
     },
     /* CVE 2026-05-17 NN-brutal · cut "Le Double Diamant a calé..." (méta-méthode) +
        cut "scope MVP arrêté..." (déjà dit ailleurs). Friction = mécanisme. -42 mots. */
@@ -1775,9 +1775,9 @@
     /* CVE 2026-05-11 SPEOS Shared Language Artefact · Trend Researcher reco */
     'speos.shared.eyebrow': { fr: 'L\'artefact qui a fait basculer', nl: 'Het artefact dat de kanteling bracht', en: 'The artefact that tipped it' },
     'speos.shared.h2': {
-      fr: 'La même Value Proposition <span class="accent">dans la bouche de Business et IT.</span>',
-      nl: 'Dezelfde Value Proposition <span class="accent">uit de mond van Business en IT.</span>',
-      en: 'The same Value Proposition <span class="accent">in the mouth of Business and IT.</span>'
+      fr: 'La même Value Proposition. <span class="accent">Côté Business, côté IT.</span>',
+      nl: 'Dezelfde Value Proposition. <span class="accent">Aan Business-kant, aan IT-kant.</span>',
+      en: 'The same Value Proposition. <span class="accent">Business side, IT side.</span>'
     },
     'speos.shared.lead': {
       fr: 'Business et IT décrivaient le même produit avec deux vocabulaires. La phrase ci-dessous est sortie des deux côtés, mot pour mot.',
@@ -3433,9 +3433,9 @@
       en: 'Stakeholder Map · Alignment'
     },
     'hms.alignment.h2': {
-      fr: 'Comment Business et IT ont fini par <span class="accent">parler la même langue.</span>',
-      nl: 'Hoe Business en IT uiteindelijk <span class="accent">dezelfde taal spraken.</span>',
-      en: 'How Business and IT eventually <span class="accent">spoke the same language.</span>'
+      fr: 'Business et IT. <span class="accent">La même langue.</span>',
+      nl: 'Business en IT. <span class="accent">Dezelfde taal.</span>',
+      en: 'Business and IT. <span class="accent">The same language.</span>'
     },
     'hms.alignment.lead': {
       fr: '<strong>Deux formats d\'atelier ont fait le pont.</strong> Petits ateliers ciblés avec les Project Managers IT pour caler les arbitrages techniques. Grands ateliers Customer Journey avec toutes les parties prenantes pour mettre le client au centre, pas l\'org chart.',
@@ -4699,9 +4699,9 @@
       en: 'Source · Strategic Process Proposal HMS 2021 · Relevance · Simplicity · Consistency'
     },
     'hms.vp.title': {
-      fr: 'Une plateforme, ce n\'est pas <span class="accent">cinq portes d\'entrée.</span><br>C\'est une orchestration qui se règle sur le persona devant elle.',
-      nl: 'Een platform is geen <span class="accent">vijf voordeuren.</span><br>Het is een orchestratie die zich afstemt op de persona die voor haar staat.',
-      en: 'A platform is not <span class="accent">five front doors.</span><br>It is an orchestration that tunes itself to the persona in front of it.'
+      fr: 'Une plateforme, ce n\'est pas <span class="accent">cinq portes.</span><br>C\'est une orchestration par persona machine builder.',
+      nl: 'Een platform is geen <span class="accent">vijf deuren.</span><br>Het is een orchestratie per machinebouwer-persona.',
+      en: 'A platform is not <span class="accent">five doors.</span><br>It is an orchestration tuned to each machine builder persona.'
     },
     'hms.vp.translate.claim': {
       fr: '<span class="accent">5 livrables scopés MVP, 6 placés MVP++.</span>',
