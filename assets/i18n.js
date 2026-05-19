@@ -34,9 +34,9 @@
       en: 'Align stakeholders around the value proposition.<br><span class="alt">Deliver an experience that stands out and delights.</span>'
     },
     'home.lead': {
-      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics ci-dessous.',
-      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding. Drie publieke cases hieronder.',
-      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases below.'
+      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable.',
+      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding.',
+      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide. In short engagements or long-term partnerships.'
     },
     'home.casesEyebrow': { fr: 'Travaux sélectionnés', nl: 'Geselecteerd werk', en: 'Selected work' },
     /* Deck flipper UI */
@@ -1116,9 +1116,9 @@
       en: 'Service Design · UX · CX freelance in Brussels. Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide.'
     },
     'home.lead': {
-      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics ci-dessous.',
-      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding. Drie publieke cases hieronder.',
-      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide. In short engagements or long-term partnerships. Three public cases below.'
+      fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable.',
+      nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding.',
+      en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide. In short engagements or long-term partnerships.'
     },
     'home.casesH2': {
       fr: 'Trois missions. <span class="accent">Trois décisions de production signées.</span>',
@@ -1473,16 +1473,16 @@
     },
     'home.footerCopy': { fr: '© Christophe van Engelen, 2026.', nl: '© Christophe van Engelen, 2026.', en: '© Christophe van Engelen, 2026.' },
     'home.practiceEyebrow': { fr: 'Practice', nl: 'Practice', en: 'Practice' },
-    'home.practiceH2': { fr: 'Comment je travaille.', nl: 'Hoe ik werk.', en: 'How I work.' },
+    'home.practiceH2': { fr: 'Le métier en trois temps.', nl: 'Het vak in drie bewegingen.', en: 'The craft in three movements.' },
     'home.seeWork': { fr: 'Selected work ↓', nl: 'Selected work ↓', en: 'Selected work ↓' },
     'home.trackEyebrow': { fr: 'Track record', nl: 'Track record', en: 'Track record' },
     'home.trackH2': { fr: 'Vingt ans, douze missions.', nl: 'Twintig jaar, twaalf opdrachten.', en: 'Twenty years, twelve assignments.' },
     'home.trackSource': { fr: 'Références sur demande.', nl: 'Referenties op aanvraag.', en: 'References on request.' },
     /* CVE 2026-05-04 S4.2 · 3 one-liners punchy remplacent les 3 paragraphes p1/p2/p3 */
     'home.practice.l1': {
-      fr: '<strong>De la friction stakeholder au scope MVP signé.</strong><span class="home-practice__sub">Faire converger Business, IT et utilisateur autour d\'une décision défendable. C\'est mon métier.</span>',
-      nl: '<strong>Van stakeholder-frictie tot ondertekende MVP-scope.</strong><span class="home-practice__sub">Business, IT en gebruiker laten samenkomen rond een verdedigbare beslissing. Dat is mijn vak.</span>',
-      en: '<strong>From stakeholder friction to signed MVP scope.</strong><span class="home-practice__sub">Bringing Business, IT and the user together around a defensible decision. That\'s my craft.</span>'
+      fr: '<strong>De la friction stakeholder au scope MVP signé.</strong><span class="home-practice__sub">Faire converger Business, IT et utilisateur autour d\'une décision défendable.</span>',
+      nl: '<strong>Van stakeholder-frictie tot ondertekende MVP-scope.</strong><span class="home-practice__sub">Business, IT en gebruiker laten samenkomen rond een verdedigbare beslissing.</span>',
+      en: '<strong>From stakeholder friction to signed MVP scope.</strong><span class="home-practice__sub">Bringing Business, IT and the user together around a defensible decision.</span>'
     },
     'home.practice.l2': {
       fr: '<strong>Le bon outil au bon moment.</strong><span class="home-practice__sub">Strategyzer, Customer Journey, Heuristic Evaluation, Service Blueprint, Design Sprint. Le contexte change, le métier reste.</span>',
@@ -1505,9 +1505,9 @@
     /* CVE 2026-05-04 audit i18n · 35 clés HTML manquantes maintenant trilingual */
     'home.awardsEyebrow': { fr: 'Reconnaissances', nl: 'Erkenningen', en: 'Recognitions' },
     'home.awardsH2': {
-      fr: 'Quelques signaux extérieurs.',
-      nl: 'Enkele externe signalen.',
-      en: 'A few external signals.'
+      fr: 'Signaux extérieurs.',
+      nl: 'Externe signalen.',
+      en: 'External signals.'
     },
     'home.awards.fwa': {
       fr: 'Site Dragonne et plusieurs autres projets · My Media Is Rich · Creative Director.',
@@ -1656,11 +1656,11 @@
 
     /* CVE 2026-05-04 S8.2 · About / Bio dense factuelle pour LLM citations */
     'home.aboutEyebrow': { fr: 'À propos', nl: 'Over mij', en: 'About' },
-    'home.aboutH2': { fr: 'Bio en clair.', nl: 'Bio in het kort.', en: 'Bio in plain words.' },
+    'home.aboutH2': { fr: 'Bio.', nl: 'Bio.', en: 'Bio.' },
     'home.about.p1': {
-      fr: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer + Design Thinking practitioner</span>, freelance à <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Bruxelles</span>, <span itemprop="addressCountry">Belgique</span></span>. Vingt ans à simplifier des écosystèmes digitaux complexes. Trilingue FR / NL / EN.',
-      nl: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer + Design Thinking practitioner</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Ukkel</span>, <span itemprop="addressRegion">Brussel</span>, <span itemprop="addressCountry">België</span></span>. Twintig jaar complexe digitale ecosystemen vereenvoudigen. Drietalig FR / NL / EN.',
-      en: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer + Design Thinking practitioner</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Brussels</span>, <span itemprop="addressCountry">Belgium</span></span>. Twenty years simplifying complex digital ecosystems. Trilingual FR / NL / EN.'
+      fr: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer · Service Design senior</span>, freelance à <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Bruxelles</span>, <span itemprop="addressCountry">Belgique</span></span>. Vingt ans à simplifier des écosystèmes digitaux complexes. Trilingue FR / NL / EN.',
+      nl: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer · Service Design senior</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Ukkel</span>, <span itemprop="addressRegion">Brussel</span>, <span itemprop="addressCountry">België</span></span>. Twintig jaar complexe digitale ecosystemen vereenvoudigen. Drietalig FR / NL / EN.',
+      en: '<strong itemprop="name">Christophe van Engelen</strong>. <span itemprop="jobTitle">Senior UX Designer · Service Design senior</span>, freelance in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Uccle</span>, <span itemprop="addressRegion">Brussels</span>, <span itemprop="addressCountry">Belgium</span></span>. Twenty years simplifying complex digital ecosystems. Trilingual FR / NL / EN.'
     },
     'home.about.p2': {
       fr: '<strong>Banque, postal industriel, industrial IoT, legal-tech, produit digital.</strong> Le contexte change, le métier reste. Cinq industries, douze missions, trois cases en ligne.',
@@ -1673,9 +1673,9 @@
       en: '<strong>The right tool at the right moment.</strong> Strategyzer, Customer Journey, Heuristic Evaluation, Service Blueprint, Design Sprint · tools of the same Design System. Mastery · knowing which one, when, with whom in the room.'
     },
     'home.about.p4': {
-      fr: '<strong>À l\'écoute des projets qui ont du sens.</strong> Premier call 30 min, gratuit, sans engagement. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.',
-      nl: '<strong>Open voor projecten met betekenis.</strong> Eerste call 30 min, gratis, zonder verbintenis. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.',
-      en: '<strong>Listening for projects that matter.</strong> First call 30 min, free, no commitment. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.'
+      fr: 'Premier call 30 min, gratuit, sans engagement. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.',
+      nl: 'Eerste call 30 min, gratis, zonder verbintenis. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.',
+      en: 'First call 30 min, free, no commitment. <a href="mailto:hello@christophevanengelen.com?utm_source=portfolio&utm_medium=about" data-event="mailto-cve" data-event-source="about">hello@christophevanengelen.com</a>.'
     },
 
     /* CVE 2026-05-04 S8.1 · FAQ avec Schema FAQPage · 7 Q&A pour featured snippet */
@@ -1693,7 +1693,7 @@
       nl: '<p><strong>De toolkit is niet de school.</strong> Strategyzer, Customer Journey, Heuristic Evaluation Nielsen, Service Blueprint, Design Sprint · tools van hetzelfde Design System. Ik kies welke volgens de Agile-maturiteit, de user-centric cultuur, en de openheid van de sponsor.</p>',
       en: '<p><strong>The toolkit is not the school.</strong> Strategyzer, Customer Journey, Heuristic Evaluation Nielsen, Service Blueprint, Design Sprint · tools of the same Design System. I pick which one based on Agile maturity, user-centric culture, and sponsor openness.</p>'
     },
-    'home.faq.q3': { fr: 'Tu travailles aussi avec des startups ?', nl: 'Werk je ook met startups?', en: 'Do you also work with startups?' },
+    'home.faq.q3': { fr: 'Tu travailles avec des startups ?', nl: 'Werk je met startups?', en: 'Do you work with startups?' },
     'home.faq.a3': {
       fr: '<p><strong>Oui · Unfold, WeJustice, Cezzam.</strong> Le rythme startup, je le connais · décisions vite, ressources limitées, validation utilisateur permanente.</p>',
       nl: '<p><strong>Ja · Unfold, WeJustice, Cezzam.</strong> Het startup-ritme ken ik · snelle beslissingen, beperkte middelen, permanente gebruikersvalidatie.</p>',
@@ -1701,9 +1701,9 @@
     },
     'home.faq.q4': { fr: 'Combien de temps avant de pouvoir démarrer ?', nl: 'Hoe lang voor je kan starten?', en: 'How long before you can start?' },
     'home.faq.a4': {
-      fr: '<p><strong>Cela dépend du projet et de la valeur en jeu.</strong> Réponse en 24h ouvrées. Premier call 30 min gratuit. Si l\'enjeu est cadré et l\'agenda urgent, je peux faire bouger les choses · démarrage habituel en 2 à 4 semaines.</p>',
-      nl: '<p><strong>Hangt af van het project en de waarde die op het spel staat.</strong> Antwoord binnen 24u (werkdagen). Eerste call 30 min gratis. Als de inzet helder en de agenda dringend is, kan ik dingen in beweging brengen · gewoonlijke start in 2 tot 4 weken.</p>',
-      en: '<p><strong>It depends on the project and the value at stake.</strong> Reply within 24h business days. First call 30 min free. If the stake is framed and the agenda urgent, I can move things forward · usual start in 2 to 4 weeks.</p>'
+      fr: '<p><strong>Cela dépend du projet et de la valeur en jeu.</strong> Réponse en 24h ouvrées. Premier call 30 min gratuit. Si l\'enjeu est cadré et l\'agenda urgent, je peux accélérer · démarrage habituel en 2 à 4 semaines.</p>',
+      nl: '<p><strong>Hangt af van het project en de waarde die op het spel staat.</strong> Antwoord binnen 24u (werkdagen). Eerste call 30 min gratis. Als de inzet helder en de agenda dringend is, kan ik versnellen · gewoonlijke start in 2 tot 4 weken.</p>',
+      en: '<p><strong>It depends on the project and the value at stake.</strong> Reply within 24h business days. First call 30 min free. If the stake is framed and the agenda urgent, I can accelerate · usual start in 2 to 4 weeks.</p>'
     },
     'home.faq.q5': { fr: 'Tarifs et modèle de facturation ?', nl: 'Tarieven en facturatiemodel?', en: 'Rates and billing model?' },
     'home.faq.a5': {
@@ -1711,7 +1711,7 @@
       nl: '<p><strong>Ik factureer de geleverde waarde, niet de uren.</strong> Vast forfait voor gekaderde scope (CX-audit, workshop 2 dagen, coaching). Onderhandeld dagtarief voor langlopend 3-12 maanden. Offerte binnen 48u na het eerste gesprek.</p>',
       en: '<p><strong>I bill the value delivered, not the hours.</strong> Fixed fee for scoped assignments (CX audit, 2-day workshop, coaching). Negotiated day rate for long-term 3-12 months. Quote within 48h after the first call.</p>'
     },
-    'home.faq.q6': { fr: 'Tu fais de l\'execution ou seulement du strategy ?', nl: 'Doe je executie of alleen strategy?', en: 'Do you do execution or only strategy?' },
+    'home.faq.q6': { fr: 'Exécution ou stratégie ?', nl: 'Uitvoering of strategie?', en: 'Execution or strategy?' },
     'home.faq.a6': {
       fr: '<p><strong>Les deux.</strong> J\'arrive par le Business, je reste avec l\'IT. Mon focus · que la stratégie tienne en production, pas en slide deck. Figma, user stories, sprint planning.</p>',
       nl: '<p><strong>Beide.</strong> Ik kom binnen langs Business, ik blijf bij IT. Mijn focus · dat de strategie in productie staat, niet in een slide deck. Figma, user stories, sprint planning.</p>',
