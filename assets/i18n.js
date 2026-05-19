@@ -29,9 +29,9 @@
       en: 'Service Design · UX · CX · Brussels'
     },
     'home.h1': {
-      fr: 'Aligner les parties prenantes sur la value proposition.<br><span class="alt">Livrer une expérience que les utilisateurs adorent.</span>',
-      nl: 'Stakeholders uitlijnen op de value proposition.<br><span class="alt">Een ervaring leveren waar gebruikers van houden.</span>',
-      en: 'Align stakeholders around the value proposition.<br><span class="alt">Deliver an experience users love.</span>'
+      fr: 'Aligner les parties prenantes sur la value proposition.<br><span class="alt">Livrer une expérience qui attire et qui retient.</span>',
+      nl: 'Stakeholders uitlijnen op de value proposition.<br><span class="alt">Een ervaring leveren die aantrekt en die bindt.</span>',
+      en: 'Align stakeholders around the value proposition.<br><span class="alt">Deliver an experience that attracts and retains.</span>'
     },
     'home.lead': {
       fr: 'Vingt ans dans des écosystèmes complexes · banque, postal industriel, SaaS, legal-tech. Du grand groupe international à la start-up. J\'écoute, je cadre, je tranche. En mission courte ou en accompagnement durable. Trois cases publics ci-dessous.',
