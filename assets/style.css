@@ -8234,10 +8234,9 @@ select:focus-visible {
   width: max-content;
   animation: home-trust-marquee 60s linear infinite;
 }
-.home-trust__scroller:hover .home-trust__track,
-.home-trust__scroller:focus-within .home-trust__track {
-  animation-play-state: paused;
-}
+/* CVE 2026-05-18 · plus de pause sur hover/tap · défilement continu.
+   Click/hover/tap d'un logo révèle sa couleur native (cf. .home-trust__item--logo)
+   mais le marquee continue de défiler sans interruption. */
 .home-trust__list {
   list-style: none;
   margin: 0;
