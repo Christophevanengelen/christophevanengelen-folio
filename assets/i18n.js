@@ -1459,9 +1459,9 @@
       en: 'Or via direct channels:'
     },
     'home.floatingCta': {
-      fr: 'Premier call · 30 min',
-      nl: 'Eerste call · 30 min',
-      en: 'First call · 30 min'
+      fr: 'Pour parler d\'un projet',
+      nl: 'Om over een project te praten',
+      en: 'To talk about a project'
     },
     /* CVE 2026-05-04 S3.5 · friction-removal sur Contact ·
        paramètres clairs (réponse 24h, premier call gratuit, sans engagement) ·
