@@ -38,7 +38,7 @@
       nl: 'Twintig jaar in complexe ecosystemen · banking, industriële post, SaaS, legal-tech. Van internationaal concern tot start-up. Ik luister, ik kadreer, ik beslis. In korte opdracht of in duurzame begeleiding.',
       en: 'Twenty years in complex ecosystems · banking, industrial postal, SaaS, legal-tech. From global corporate to start-up. I listen, I frame, I decide. In short engagements or long-term partnerships.'
     },
-    'home.casesEyebrow': { fr: 'Travaux sélectionnés', nl: 'Geselecteerd werk', en: 'Selected work' },
+    'home.casesEyebrow': { fr: 'Trois cases', nl: 'Drie cases', en: 'Three cases' },
     /* Deck flipper UI */
     'deck.cta': { fr: 'Parcourir le deck source', nl: 'Bron-deck doorbladeren', en: 'Browse the source deck' },
     'deck.prev': { fr: 'Précédent', nl: 'Vorige', en: 'Previous' },
@@ -1474,7 +1474,7 @@
     'home.footerCopy': { fr: '© Christophe van Engelen, 2026.', nl: '© Christophe van Engelen, 2026.', en: '© Christophe van Engelen, 2026.' },
     'home.practiceEyebrow': { fr: 'Practice', nl: 'Practice', en: 'Practice' },
     'home.practiceH2': { fr: 'Le métier en trois temps.', nl: 'Het vak in drie bewegingen.', en: 'The craft in three movements.' },
-    'home.seeWork': { fr: 'Selected work ↓', nl: 'Selected work ↓', en: 'Selected work ↓' },
+    'home.seeWork': { fr: 'Trois cases ↓', nl: 'Drie cases ↓', en: 'Three cases ↓' },
     'home.trackEyebrow': { fr: 'Track record', nl: 'Track record', en: 'Track record' },
     'home.trackH2': { fr: 'Vingt ans, douze missions.', nl: 'Twintig jaar, twaalf opdrachten.', en: 'Twenty years, twelve assignments.' },
     'home.trackSource': { fr: 'Références sur demande.', nl: 'Referenties op aanvraag.', en: 'References on request.' },
@@ -1679,8 +1679,8 @@
     },
 
     /* CVE 2026-05-04 S8.1 · FAQ avec Schema FAQPage · 7 Q&A pour featured snippet */
-    'home.faqEyebrow': { fr: 'Questions fréquentes', nl: 'Veelgestelde vragen', en: 'Frequently asked questions' },
-    'home.faqH2': { fr: 'Ce qu\'on me demande le plus.', nl: 'Wat me het meest gevraagd wordt.', en: 'What I get asked the most.' },
+    'home.faqEyebrow': { fr: 'FAQ', nl: 'FAQ', en: 'FAQ' },
+    'home.faqH2': { fr: 'Le plus demandé.', nl: 'Het meest gevraagd.', en: 'Most asked.' },
     'home.faq.q1': { fr: 'Tu interviens dans quels secteurs ?', nl: 'In welke sectoren werk je?', en: 'Which sectors do you work in?' },
     'home.faq.a1': {
       fr: '<p><strong>Banking, postal industriel, industrial IoT, legal-tech, produit digital, services financiers.</strong> Le contexte change. Le défi reste · des produits complexes, des stakeholders multiples, et un besoin d\'aligner Business et IT autour de l\'utilisateur.</p>',
