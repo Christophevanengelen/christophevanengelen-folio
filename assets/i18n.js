@@ -1844,8 +1844,7 @@
       nl: 'Toen de vier rollen dezelfde zes pilootklanten in het midden zagen, werd het project <strong class="accent">het platform van iedereen</strong>. Geen debat meer over het « als », arbitrage over het « wanneer ».',
       en: 'When the four roles saw the same six pilot clients at the centre, the project became <strong class="accent">everyone\'s platform</strong>. No more debate on "if", arbitration on "when".'
     },
-    'speos.alignment.sourceLab': { fr: 'Voir la Stakeholder Map originale', nl: 'Originele Stakeholder Map bekijken', en: 'See the original Stakeholder Map' },
-    'speos.alignment.sourceRef': { fr: 'Speos Design Thinking Roadmap 2024 · p11 · Stakeholder Map', nl: 'Speos Design Thinking Roadmap 2024 · p11 · Stakeholder Map', en: 'Speos Design Thinking Roadmap 2024 · p11 · Stakeholder Map' },
+    /* CVE 2026-05-20 · speos.alignment.sourceLab + sourceRef supprimées · link retiré */
     'speos.analyse.cjmArtefactCaption': {
       fr: 'L\'artefact original. Persona Johnny au centre, stickers de pain points et d\'opportunités posés en atelier par toutes les parties prenantes. C\'est ce mur qui a remplacé les slides PowerPoint comme langage commun.',
       nl: 'Het originele artefact. Persona Johnny in het midden, stickers van pain points en opportuniteiten geplakt in workshop door alle stakeholders. Deze muur verving de PowerPoint-slides als gedeelde taal.',
