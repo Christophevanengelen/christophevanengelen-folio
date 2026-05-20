@@ -269,12 +269,13 @@
       if (!heroEl) return;
       const heroBottom = heroEl.getBoundingClientRect().bottom;
       const shouldStick = heroBottom < (topNavH + 4);
-      /* Désactive seulement si l'user a scrollé tout en bas de fin-royale ET
-         que le bas de fin-royale est dans le viewport (= close lue). */
+      /* CVE 2026-05-20 · storyline maintenant en bas du viewport · cache-la
+         dès que fin-royale ENTRE en vue (au lieu de quand elle SORT), sinon
+         overlap visuel avec le next-case card en bas de page. */
       let pastClose = false;
       if (finRoyaleEl) {
-        const finBottom = finRoyaleEl.getBoundingClientRect().bottom;
-        pastClose = finBottom < window.innerHeight * 0.5;  /* fin-royale.bottom au-dessus du milieu du viewport */
+        const finTop = finRoyaleEl.getBoundingClientRect().top;
+        pastClose = finTop < window.innerHeight * 0.7;  /* fin-royale.top entré dans les 70% supérieurs */
       }
       const target = shouldStick && !pastClose;
       if (target !== storyNav.classList.contains('is-stuck')) {
