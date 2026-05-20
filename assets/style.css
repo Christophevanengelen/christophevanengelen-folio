@@ -4698,12 +4698,12 @@ html.theme-light .goal-cycle__lab--active { fill: #ffffff; }
    magique (.storyline__underline) qui voyage entre pills avec spring transition. */
 .storyline.is-stuck {
   position: fixed;
-  /* CVE 2026-05-04 v7 · gap 12px entre top nav (77px) et storyline pour éviter
-     l'écrasement visuel. La barre respire et se distingue de la nav principale. */
-  top: calc(var(--top-nav-h, 77px) + 12px);
+  /* CVE 2026-05-20 · sticky nav repositionnée en bas · pattern Stripe/Linear ·
+     moins agressive qu'en haut, libère le top pour le contenu, plus discrète. */
+  bottom: 20px;
   left: 0; right: 0;
   margin-inline: auto;
-  transform-origin: center top;
+  transform-origin: center bottom;
   padding: 6px 18px;
   max-width: 1280px;
   width: calc(100% - 32px);
